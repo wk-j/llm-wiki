@@ -4,28 +4,30 @@ Last updated: 2026-04-12
 
 ## Wiki state
 
-- **1 source ingested**, **4 concept pages**, **0 entity pages**, **0 analysis pages**
-- Topic so far: UI/UX design styles taxonomy
+- **2 sources ingested**, **5 concept pages**, **1 entity page**, **0 analysis pages**
+- Topics: UI/UX design styles, LLM knowledge base pattern (meta)
 
 ## Recent activity
 
-- Initialized wiki structure: `raw/`, `wiki/` with subdirs (sources, entities, concepts, analysis)
-- Ingested "UI Style Categories" — a clipped Claude conversation cataloging ~40+ UI styles across 11 categories
-- Created pages: `ui-style-categories` (source), `diegetic-ui`, `glassmorphism`, `brutalism`, `retro-futurism` (concepts)
-- Dangling wikilinks exist for: neumorphism, claymorphism, cyberpunk-neon, vaporwave, synthwave, y2k-aesthetic, memphis-design, art-deco, blobmorphism, anti-design — these will become pages when relevant sources arrive
+- Ingested "UI Style Categories" — taxonomy of ~40+ UI styles across 11 categories
+- Ingested "LLM Knowledge Bases Thread by @karpathy" — the original Twitter thread describing this wiki pattern
+- Created entity page for Andrej Karpathy
+- Created meta concept page for LLM Knowledge Bases (what this wiki implements)
+- Dangling wikilinks for UI styles: neumorphism, claymorphism, cyberpunk-neon, vaporwave, synthwave, y2k-aesthetic, memphis-design, art-deco, blobmorphism, anti-design
 
 ## Directory layout
 
 ```
 raw/                    # Immutable source documents
   UI style categories.md
+  LLM Knowledge Bases Thread by @karpathy.md
 wiki/
   index.md              # Page catalog by type
   log.md                # Chronological operation log
-  sources/              # One summary per ingested source
-  entities/             # People, orgs, products
-  concepts/             # Ideas, frameworks, themes
-  analysis/             # Saved query results
+  sources/              # One summary per ingested source (2 pages)
+  entities/             # People, orgs, products (1 page)
+  concepts/             # Ideas, frameworks, themes (5 pages)
+  analysis/             # Saved query results (0 pages)
 CLAUDE.md               # Schema and workflows
 hotcache.md             # This file — read first each session
 ```
