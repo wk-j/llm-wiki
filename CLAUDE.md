@@ -1,5 +1,7 @@
 # Second Brain — LLM Wiki Schema
 
+**Start every session by reading `hotcache.md`.** It contains a summary of the current wiki state, recent activity, and key context — so you can act immediately without browsing files. Update `hotcache.md` at the end of every session or after significant changes (ingest, major query, lint).
+
 This is a personal knowledge base maintained by an LLM. The human curates sources and asks questions. The LLM writes and maintains all wiki content.
 
 ## Directory structure
