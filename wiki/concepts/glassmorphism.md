@@ -24,5 +24,6 @@ Evolved from Apple's use of translucency in iOS 7+ and macOS. Popularized as a n
 
 ## See also
 
+- [[holographic-ui]]
 - [[diegetic-ui]]
 - [[ui-style-categories]]

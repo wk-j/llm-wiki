@@ -19,7 +19,7 @@ Diegetic UI is one of the [[four-horsemen-game-ui|four types of game UI]], class
 |---|---|---|
 | **HUD Overlay** | Iron Man JARVIS | Cyan `#00d4ff` on dark, arc meters, scan lines |
 | **Embedded Physical** | Dead Space health bar | Amber `#ef9f27`, industrial, attached to objects |
-| **Holographic Projection** | Minority Report | Semi-transparent blue glow, floating panels |
+| **[[holographic-ui\|Holographic Projection]]** | Minority Report | Semi-transparent blue glow, floating panels |
 | **Military/Combat** | Cockpit displays | Cyan + Amber + Red alert semantic colors |
 | **Neural/Bio-tech** | Alien biotech | Purple `#a78bfa` + Mint, organic shapes |
 
@@ -59,5 +59,6 @@ Diegetic UI is one of the [[four-horsemen-game-ui|four types of game UI]], class
 - [[spatial-ui]]
 - [[meta-ui]]
 - [[four-horsemen-game-ui]]
+- [[holographic-ui]]
 - [[ui-style-categories]]
 - [[retro-futurism]]

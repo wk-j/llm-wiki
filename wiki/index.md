@@ -7,8 +7,11 @@
 - [[retro-futuristic-ui-design]] — Complete retro-futurism UI design system with five subgenres, palettes, and implementation patterns
 - [[gitnexus|GitNexus source]] — README for GitNexus, the zero-server code intelligence engine using knowledge graphs and MCP
 - [[soviet-cosmism-ui-style]] — Soviet Cosmism as a UI design language: philosophy, visual DNA, and UI patterns
+- [[soviet-cosmism-philosophy]] — Deep dive: Soviet Cosmism philosophy, three color palettes, animation vocabulary, CSS foundation, component library
 - [[helix-release-25-07]] — Helix 25.07 release: file explorer, LSP document colors, command mode rewrite, Tree-house
 - [[four-horsemen-game-ui]] — Four types of game UI: diegetic, non-diegetic, spatial, meta — classified by world presence and character awareness
+- [[imetomi-retro-futuristic-ui]] — Open-source React/CSS component library implementing cassette futurism CRT and LCD effects
+- [[holographic-ui|Holographic UI source]] — Complete holographic UI design system: 5 variants, rendering techniques, animations, components, layout patterns
 
 ## Entities
 
@@ -16,6 +19,11 @@
 - [[gitnexus]] — Open-source code intelligence engine that indexes codebases into knowledge graphs for AI agents
 - [[akon-labs]] — Company behind GitNexus enterprise (SaaS and self-hosted)
 - [[helix]] — Post-modern modal text editor with built-in tree-sitter, LSP, and multiple selections
+- [[imetomi]] — GitHub developer behind the retro-futuristic-ui-design React component library
+- [[nathan-david-jones]] — Concept artist whose retro-futuristic UI work is a key visual reference for cassette futurism
+- [[nikolai-fedorov]] — Russian philosopher, originator of Soviet Cosmism and the resurrection imperative
+- [[konstantin-tsiolkovsky]] — Rocket science pioneer, key Soviet Cosmist thinker
+- [[vladimir-vernadsky]] — Mineralogist/geochemist, creator of the noosphere concept
 
 ## Concepts
 
@@ -34,8 +42,10 @@
 - [[atompunk]] — 1950s–60s retro-futurism subgenre: atomic age optimism, Fallout aesthetic
 - [[raygun-gothic]] — 1930s–50s retro-futurism subgenre: streamlined chrome, art deco geometry meets space age
 
-- [[soviet-cosmism]] — 1960s–80s retro-futurism subgenre: constructivist geometry, Soviet space program aesthetics, collectivist utopianism
+- [[soviet-cosmism]] — 1960s–80s retro-futurism subgenre: constructivist geometry, Soviet space program aesthetics, collectivist utopianism, three canonical palettes
+- [[noosphere]] — Vernadsky's concept of Earth's collective thinking layer; bridges Cosmism and modern collective intelligence
 - [[tree-sitter]] — Framework for generating fast, error-tolerant parsers; used by editors, diff tools, and GitHub
 - [[tree-house]] — Helix's ground-up tree-sitter integration crate with injection tree architecture
+- [[holographic-ui]] — Light-projected interface design: 5 color variants, glass panel primitives, mandatory animations, layout patterns
 
 ## Analysis

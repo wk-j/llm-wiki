@@ -30,7 +30,7 @@ A comprehensive taxonomy of UI/UX design styles, compiled from a Claude conversa
 ## Sci-Fi sub-styles (detailed)
 
 - **Diegetic HUD** — Iron Man / JARVIS. Cyan on dark, arc meters, scan lines, bracket targeting.
-- **Holographic UI** — Minority Report. Semi-transparent panels, floating particles, projected-light feel.
+- **[[holographic-ui|Holographic UI]]** — Minority Report. Semi-transparent panels, floating particles, projected-light feel.
 - **Brutalist Futurism** — Raw data, heavy type, sharp borders, red accents. Confrontational.
 - **Retro-Futurism** — 80s sci-fi aesthetic. CRT scan lines, pixel fonts, neon pink/purple/green.
 

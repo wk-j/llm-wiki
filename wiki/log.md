@@ -54,3 +54,28 @@ Source: Helix editor release notes (2025-07-15). Created 4 wiki pages:
 - `entities/helix.md` — post-modern modal text editor with built-in tree-sitter/LSP
 - `concepts/tree-sitter.md` — parsing framework: incremental, error-tolerant, query-based
 - `concepts/tree-house.md` — Helix's new tree-sitter integration crate with injection tree architecture
+
+## [2026-04-14] ingest | Soviet Cosmism Philosophy
+Source: Claude conversation building a comprehensive Soviet Cosmism UI skill with deep philosophical grounding. Created/updated 7 wiki pages:
+- `sources/soviet-cosmism-philosophy.md` — new: full source summary with five pillars, three palettes, animation vocabulary, CSS foundation, component library
+- `entities/nikolai-fedorov.md` — new: originator of Cosmism, resurrection philosophy
+- `entities/konstantin-tsiolkovsky.md` — new: rocket pioneer, key Cosmist thinker
+- `entities/vladimir-vernadsky.md` — new: noosphere creator
+- `concepts/noosphere.md` — new: Earth's collective thinking layer, bridges Cosmism and modern collective intelligence
+- `concepts/soviet-cosmism.md` — major update: added five pillars, three canonical palettes, typography hierarchy, iconographic vocabulary, animation vocabulary, layout principles, components, philosophical quotes
+
+## [2026-04-14] ingest | Holographic UI
+Source: Claude conversation defining a complete Holographic UI design skill. Created/updated 5 wiki pages:
+- `sources/holographic-ui.md` — new: source summary with 5 variants, rendering techniques, animation library, component recipes, layout patterns, 10 design rules
+- `concepts/holographic-ui.md` — new: holographic UI as a distinct design language bridging glassmorphism and diegetic UI
+- `concepts/diegetic-ui.md` — updated: wikilinked Holographic Projection sub-style, added holographic-ui to See Also
+- `concepts/glassmorphism.md` — updated: added holographic-ui to See Also
+- `sources/ui-style-categories.md` — updated: wikilinked Holographic UI in sci-fi sub-styles
+
+## [2026-04-14] ingest | Imetomi/retro-futuristic-ui-design
+Source: GitHub README for open-source React + TypeScript CRT/LCD component library. Created/updated 6 wiki pages:
+- `sources/imetomi-retro-futuristic-ui.md` — new: source summary with CSS layering technique, color palettes, component breakdown
+- `entities/imetomi.md` — new: developer behind the project
+- `entities/nathan-david-jones.md` — new: concept artist whose work inspired the components
+- `concepts/cassette-futurism.md` — updated: added CSS CRT technique section with implementation details
+- `concepts/retro-futurism.md` — updated: added link to Imetomi implementation in See Also

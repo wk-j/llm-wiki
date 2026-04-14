@@ -3,8 +3,8 @@ title: Retro-Futurism
 type: concept
 tags: [ui, design, sci-fi, retro, design-system]
 created: 2026-04-12
-updated: 2026-04-13
-sources: [UI style categories.md, Retro futuristic UI design.md, Retro futuristic UI design 2.md]
+updated: 2026-04-14
+sources: [UI style categories.md, Retro futuristic UI design.md, Retro futuristic UI design 2.md, "Imetomiretro-futuristic-ui-design Creating web-based retro effects is quite hard, use this for inspiration.md"]
 ---
 
 # Retro-Futurism
@@ -76,6 +76,7 @@ These overlap significantly but differ in mood and cultural reference. Retro-fut
 ## See also
 
 - [[retro-futuristic-ui-design]] — full design system source
+- [[imetomi-retro-futuristic-ui]] — open-source React implementation of CRT/LCD effects
 - [[diegetic-ui]]
 - [[brutalism]]
 - [[ui-style-categories]]

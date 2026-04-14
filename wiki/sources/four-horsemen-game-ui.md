@@ -16,10 +16,10 @@ Corporation Pop article classifying video game UI into four types based on two a
 
 | Type | In game world? | Character aware? | Example |
 |---|---|---|---|
-| **[[diegetic-ui\|Diegetic]]** | Yes | Yes | Dead Space health spine, in-world holograms |
-| **[[non-diegetic-ui\|Non-diegetic]]** | No | No | Health bars, score counters, menus |
-| **[[spatial-ui\|Spatial]]** | Yes | No | Pathfinding lines, enemy nameplates, interaction prompts |
-| **[[meta-ui\|Meta]]** | No | Yes (implicitly) | Screen blood, blur, shake, dirt accumulation |
+| **Diegetic** ([[diegetic-ui]]) | Yes | Yes | Dead Space health spine, in-world holograms |
+| **Non-diegetic** ([[non-diegetic-ui]]) | No | No | Health bars, score counters, menus |
+| **Spatial** ([[spatial-ui]]) | Yes | No | Pathfinding lines, enemy nameplates, interaction prompts |
+| **Meta** ([[meta-ui]]) | No | Yes (implicitly) | Screen blood, blur, shake, dirt accumulation |
 
 ## Key Insights
 
