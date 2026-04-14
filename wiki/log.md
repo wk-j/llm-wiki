@@ -79,3 +79,10 @@ Source: GitHub README for open-source React + TypeScript CRT/LCD component libra
 - `entities/nathan-david-jones.md` — new: concept artist whose work inspired the components
 - `concepts/cassette-futurism.md` — updated: added CSS CRT technique section with implementation details
 - `concepts/retro-futurism.md` — updated: added link to Imetomi implementation in See Also
+
+## [2026-04-14] ingest | forrestchang/andrej-karpathy-skills (Karpathy Guidelines)
+Source: `SKILL.md` from forrestchang's Claude Code skills repo, packaging Karpathy's observations on LLM coding pitfalls into four behavioral rules. Created/updated 4 wiki pages:
+- `sources/karpathy-guidelines.md` — new: source summary with the four principles and their rules
+- `concepts/llm-coding-pitfalls.md` — new: meta-concept cataloging hidden confusion, overcomplication, scope drift, weak success criteria
+- `entities/forrestchang.md` — new: developer who packaged the skill
+- `entities/andrej-karpathy.md` — updated: added coding-pitfalls observations alongside the knowledge-bases pattern; noted both use lightweight markdown schemas

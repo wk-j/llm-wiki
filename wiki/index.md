@@ -12,10 +12,12 @@
 - [[four-horsemen-game-ui]] — Four types of game UI: diegetic, non-diegetic, spatial, meta — classified by world presence and character awareness
 - [[imetomi-retro-futuristic-ui]] — Open-source React/CSS component library implementing cassette futurism CRT and LCD effects
 - [[holographic-ui|Holographic UI source]] — Complete holographic UI design system: 5 variants, rendering techniques, animations, components, layout patterns
+- [[karpathy-guidelines]] — Claude Code skill packaging Karpathy's four behavioral rules: think before coding, simplicity, surgical changes, goal-driven execution
 
 ## Entities
 
-- [[andrej-karpathy]] — AI researcher, originator of the LLM knowledge bases pattern
+- [[andrej-karpathy]] — AI researcher, originator of the LLM knowledge bases pattern and LLM coding pitfalls observations
+- [[forrestchang]] — GitHub developer who packaged Karpathy's coding observations into the `andrej-karpathy-skills` Claude Code skill
 - [[gitnexus]] — Open-source code intelligence engine that indexes codebases into knowledge graphs for AI agents
 - [[akon-labs]] — Company behind GitNexus enterprise (SaaS and self-hosted)
 - [[helix]] — Post-modern modal text editor with built-in tree-sitter, LSP, and multiple selections
