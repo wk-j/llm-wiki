@@ -1,15 +1,17 @@
 ---
 title: Diegetic UI
 type: concept
-tags: [ui, design, sci-fi, hud]
+tags: [ui, design, game-design, sci-fi, hud, immersion]
 created: 2026-04-12
-updated: 2026-04-12
-sources: [UI style categories.md]
+updated: 2026-04-14
+sources: [UI style categories.md, The four horsemen of game UI design.md]
 ---
 
 # Diegetic UI
 
-UI that exists "within the world" of the content — characters or users can see and interact with it as part of the narrative or environment. Borrowed from film terminology where "diegetic" means existing within the story world.
+UI that exists "within the world" of the content — both the player and the characters can see and interact with it as part of the narrative or environment. Borrowed from film terminology where "diegetic" means existing within the story world.
+
+Diegetic UI is one of the [[four-horsemen-game-ui|four types of game UI]], classified as: **exists in the game world** and **character is aware of it**.
 
 ## Sub-styles
 
@@ -21,18 +23,41 @@ UI that exists "within the world" of the content — characters or users can see
 | **Military/Combat** | Cockpit displays | Cyan + Amber + Red alert semantic colors |
 | **Neural/Bio-tech** | Alien biotech | Purple `#a78bfa` + Mint, organic shapes |
 
-## Key characteristics
+## Key Characteristics
 
 - UI elements are justified by the fictional world — not just overlaid for the player/viewer
 - Often uses scan lines, bracket targeting, real-time data readouts
 - Color carries semantic meaning: cyan = normal, amber = caution, red = critical
+- Maximizes immersion by reducing screen clutter and keeping the player "in the world"
+- Particularly popular in games emphasizing realism (Dead Space, Metro series)
 
-## Contrast with non-diegetic UI
+## Examples
 
-Most game/app UI is **non-diegetic** — health bars, minimaps, and menus that only the player sees. Diegetic UI removes that fourth wall: the health indicator is on the character's suit, the map is a hologram they're looking at.
+- A holographic HUD the character projects and interacts with
+- A phone or watch on the character's wrist showing time or health
+- A wounded character limping instead of showing a health bar
+- In-world maps, terminals, and readouts the character physically uses
+
+## Limitations
+
+- **Accessibility**: diegetic UI is the least accessible of the four types — not designed for novices
+- **Scale**: in-world elements (e.g., a vehicle speedometer) may be too small to read comfortably
+- **Workarounds**: some games let players toggle diegetic elements to a full-screen [[non-diegetic-ui|non-diegetic]] view
+
+## Contrast with Other Types
+
+| Type | In world? | Character sees it? |
+|---|---|---|
+| **Diegetic** | Yes | Yes |
+| [[non-diegetic-ui\|Non-diegetic]] | No | No |
+| [[spatial-ui\|Spatial]] | Yes | No |
+| [[meta-ui\|Meta]] | No | Implicitly |
 
 ## See also
 
+- [[non-diegetic-ui]]
+- [[spatial-ui]]
+- [[meta-ui]]
+- [[four-horsemen-game-ui]]
 - [[ui-style-categories]]
 - [[retro-futurism]]
-- [[glassmorphism]]
