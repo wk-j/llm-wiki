@@ -86,3 +86,10 @@ Source: `SKILL.md` from forrestchang's Claude Code skills repo, packaging Karpat
 - `concepts/llm-coding-pitfalls.md` — new: meta-concept cataloging hidden confusion, overcomplication, scope drift, weak success criteria
 - `entities/forrestchang.md` — new: developer who packaged the skill
 - `entities/andrej-karpathy.md` — updated: added coding-pitfalls observations alongside the knowledge-bases pattern; noted both use lightweight markdown schemas
+
+## [2026-04-15] ingest | What's new in C# 14
+Source: Microsoft Learn article by Bill Wagner covering C# 14 (ships with .NET 10). Created 4 wiki pages:
+- `sources/csharp-14-whats-new.md` — new: full feature list with code samples for all nine additions
+- `entities/csharp.md` — new: C# language entity, anchored to C# 14 as current release
+- `concepts/extension-members.md` — new: `extension<T>(Receiver)` block syntax generalizing extension methods to properties, static members, and operators
+- `concepts/field-keyword.md` — new: contextual `field` keyword inside property accessors for compiler-synthesized backing fields

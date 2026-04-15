@@ -13,7 +13,7 @@ Russian-Ukrainian mineralogist and geochemist (1863–1945), the third major fig
 
 ## Key concepts
 
-- **[[Noosphere]]** (Ноосфера) — the envelope of collective thought surrounding Earth, an evolution beyond biosphere
+- **[[noosphere|Noosphere]]** (Ноосфера) — the envelope of collective thought surrounding Earth, an evolution beyond biosphere
 - **Biosphere as geological force** — living matter as an active agent in planetary chemistry
 - **Cosmic perspective on life** — life as a cosmic phenomenon, not an isolated terrestrial accident
 

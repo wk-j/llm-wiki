@@ -13,6 +13,7 @@
 - [[imetomi-retro-futuristic-ui]] — Open-source React/CSS component library implementing cassette futurism CRT and LCD effects
 - [[holographic-ui|Holographic UI source]] — Complete holographic UI design system: 5 variants, rendering techniques, animations, components, layout patterns
 - [[karpathy-guidelines]] — Claude Code skill packaging Karpathy's four behavioral rules: think before coding, simplicity, surgical changes, goal-driven execution
+- [[csharp-14-whats-new]] — Microsoft Learn overview of C# 14 (ships with .NET 10): extension members, `field` keyword, null-conditional assignment, and six other features
 
 ## Entities
 
@@ -26,10 +27,12 @@
 - [[nikolai-fedorov]] — Russian philosopher, originator of Soviet Cosmism and the resurrection imperative
 - [[konstantin-tsiolkovsky]] — Rocket science pioneer, key Soviet Cosmist thinker
 - [[vladimir-vernadsky]] — Mineralogist/geochemist, creator of the noosphere concept
+- [[csharp]] — Microsoft's statically-typed .NET language; C# 14 is the current release
 
 ## Concepts
 
 - [[llm-knowledge-bases]] — The pattern of LLM-maintained personal wikis (what this wiki implements)
+- [[llm-coding-pitfalls]] — Karpathy's four observations on LLM code-editing failure modes: hidden confusion, overcomplication, scope drift, weak success criteria
 - [[code-knowledge-graphs]] — Knowledge graphs built from codebase structure for AI agent awareness
 - [[graph-rag]] — Retrieval-Augmented Generation using knowledge graphs instead of vector stores
 - [[model-context-protocol]] — Open protocol (MCP) for connecting AI agents to external tools and data
@@ -49,5 +52,7 @@
 - [[tree-sitter]] — Framework for generating fast, error-tolerant parsers; used by editors, diff tools, and GitHub
 - [[tree-house]] — Helix's ground-up tree-sitter integration crate with injection tree architecture
 - [[holographic-ui]] — Light-projected interface design: 5 color variants, glass panel primitives, mandatory animations, layout patterns
+- [[extension-members]] — C# 14 `extension` blocks: properties, static members, and operators alongside extension methods
+- [[field-keyword]] — C# 14 `field` keyword: compiler-synthesized backing field referenced inside property accessors
 
 ## Analysis

@@ -1,16 +1,16 @@
 # Hotcache
 
-Last updated: 2026-04-14 (Karpathy guidelines ingest)
+Last updated: 2026-04-15 (C# 14 ingest)
 
 ## Wiki state
 
-- **11 sources ingested**, **20 concept pages**, **10 entity pages**, **0 analysis pages**
-- Topics: UI/UX design styles, retro-futurism design system (5 subgenres), cassette futurism CSS implementation, game UI taxonomy (diegetic/non-diegetic/spatial/meta), holographic UI (5 variants, rendering techniques, animations, components), LLM knowledge base pattern (meta), LLM coding pitfalls / Karpathy guidelines (meta), code intelligence / knowledge graphs, text editors / parsing (Helix, tree-sitter), Soviet Cosmism philosophy (Fedorov, Tsiolkovsky, Vernadsky, noosphere)
+- **12 sources ingested**, **22 concept pages**, **11 entity pages**, **0 analysis pages**
+- Topics: UI/UX design styles, retro-futurism design system (5 subgenres), cassette futurism CSS implementation, game UI taxonomy (diegetic/non-diegetic/spatial/meta), holographic UI (5 variants, rendering techniques, animations, components), LLM knowledge base pattern (meta), LLM coding pitfalls / Karpathy guidelines (meta), code intelligence / knowledge graphs, text editors / parsing (Helix, tree-sitter), Soviet Cosmism philosophy (Fedorov, Tsiolkovsky, Vernadsky, noosphere), C# 14 language features (extension members, `field` keyword)
 
 ## Recent activity
 
-- Ingested forrestchang/andrej-karpathy-skills — new source (karpathy-guidelines), new concept (llm-coding-pitfalls), new entity (forrestchang), updated andrej-karpathy entity
-- Previous: Holographic UI, Soviet Cosmism philosophy, Imetomi/retro-futuristic-ui-design, Four Horsemen of Game UI, Helix 25.07
+- Ingested Microsoft Learn "What's new in C# 14" — new source (csharp-14-whats-new), new entity (csharp), new concepts (extension-members, field-keyword)
+- Previous: forrestchang/andrej-karpathy-skills, Holographic UI, Soviet Cosmism philosophy, Imetomi/retro-futuristic-ui-design, Four Horsemen of Game UI
 - Dangling wikilinks: neumorphism, claymorphism, cyberpunk-neon, vaporwave, synthwave, y2k-aesthetic, memphis-design, art-deco, blobmorphism, anti-design, kakoune, brutalist-futurism
 
 ## Directory layout
