@@ -93,3 +93,12 @@ Source: Microsoft Learn article by Bill Wagner covering C# 14 (ships with .NET 1
 - `entities/csharp.md` — new: C# language entity, anchored to C# 14 as current release
 - `concepts/extension-members.md` — new: `extension<T>(Receiver)` block syntax generalizing extension methods to properties, static members, and operators
 - `concepts/field-keyword.md` — new: contextual `field` keyword inside property accessors for compiler-synthesized backing fields
+
+## [2026-04-16] ingest | Karpathy's LLM Wiki: The Complete Guide to His Idea File
+Source: antigravity.codes deep dive into Karpathy's LLM Wiki GitHub gist (Apr 4 2026). Created 4 new pages, updated 2:
+- `sources/karpathy-llm-wiki-idea-file.md` — new: full summary covering idea file concept, wiki vs RAG comparison, three-layer architecture, three operations, tool stack (qmd, Web Clipper, Marp, Dataview, Git), Memex connection, community patterns
+- `concepts/idea-file.md` — new: Karpathy's concept of sharing abstract patterns for LLM agents to instantiate rather than sharing code
+- `concepts/memex.md` — new: Vannevar Bush's 1945 Memex as ideological ancestor of LLM wikis; the maintenance problem LLMs solve
+- `entities/vannevar-bush.md` — new: Bush biography, "As We May Think," influence on Engelbart/Nelson/Berners-Lee
+- `concepts/llm-knowledge-bases.md` — updated: added explicit RAG vs wiki comparison table, compounding loop, qmd tool, Memex connection, schema co-evolution
+- `entities/andrej-karpathy.md` — updated: added vibe coding coinage, idea file gist, Memex reference, research wiki scale details

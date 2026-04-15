@@ -14,6 +14,7 @@
 - [[holographic-ui|Holographic UI source]] — Complete holographic UI design system: 5 variants, rendering techniques, animations, components, layout patterns
 - [[karpathy-guidelines]] — Claude Code skill packaging Karpathy's four behavioral rules: think before coding, simplicity, surgical changes, goal-driven execution
 - [[csharp-14-whats-new]] — Microsoft Learn overview of C# 14 (ships with .NET 10): extension members, `field` keyword, null-conditional assignment, and six other features
+- [[karpathy-llm-wiki-idea-file]] — Deep dive into Karpathy's LLM Wiki idea file gist: idea file concept, wiki vs RAG, three-layer architecture, tool stack, Memex connection
 
 ## Entities
 
@@ -28,6 +29,7 @@
 - [[konstantin-tsiolkovsky]] — Rocket science pioneer, key Soviet Cosmist thinker
 - [[vladimir-vernadsky]] — Mineralogist/geochemist, creator of the noosphere concept
 - [[csharp]] — Microsoft's statically-typed .NET language; C# 14 is the current release
+- [[vannevar-bush]] — MIT engineer, 1945 "As We May Think" essay, originator of the Memex concept and the hypertext lineage
 
 ## Concepts
 
@@ -54,5 +56,7 @@
 - [[holographic-ui]] — Light-projected interface design: 5 color variants, glass panel primitives, mandatory animations, layout patterns
 - [[extension-members]] — C# 14 `extension` blocks: properties, static members, and operators alongside extension methods
 - [[field-keyword]] — C# 14 `field` keyword: compiler-synthesized backing field referenced inside property accessors
+- [[idea-file]] — Karpathy's concept: sharing abstract patterns for LLM agents to instantiate, rather than sharing code implementations
+- [[memex]] — Vannevar Bush's 1945 hypothetical personal knowledge device with associative trails; ideological ancestor of LLM wikis
 
 ## Analysis
