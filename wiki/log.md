@@ -102,3 +102,36 @@ Source: antigravity.codes deep dive into Karpathy's LLM Wiki GitHub gist (Apr 4 
 - `entities/vannevar-bush.md` — new: Bush biography, "As We May Think," influence on Engelbart/Nelson/Berners-Lee
 - `concepts/llm-knowledge-bases.md` — updated: added explicit RAG vs wiki comparison table, compounding loop, qmd tool, Memex connection, schema co-evolution
 - `entities/andrej-karpathy.md` — updated: added vibe coding coinage, idea file gist, Memex reference, research wiki scale details
+
+## [2026-04-16] ingest | The Advisor Strategy: Give Agents an Intelligence Boost
+Source: Anthropic blog post (2026-04-09) introducing the advisor strategy and `advisor_20260301` API tool. Created 2 new pages, updated 1:
+- `sources/advisor-strategy.md` — new: source summary with core idea (inverted orchestrator-worker), benchmark results (SWE-bench, BrowseComp, Terminal-Bench), API shape, pricing, cost controls
+- `concepts/advisor-strategy.md` — new: advisor pattern as agent architecture — cheap executor escalates to expensive advisor only at hard decisions; comparison table vs orchestrator-worker; when to use
+- `concepts/ai-orchestrator.md` — updated: added "The advisor inversion" section with wikilink to advisor-strategy
+
+## [2026-04-16] ingest | I Made a Terminal Pager — Leo Robinovitch
+Source: theleo.zone blog post on building a reusable Go viewport component and lore terminal pager. Created 4 new pages, updated 1:
+- `sources/leo-robinovitch-terminal-pager.md` — new: viewport architecture (item/viewport/filterableviewport), Unicode terminal-width handling, $PAGER mechanism, lore pager, kl/wander TUIs
+- `entities/leo-robinovitch.md` — new: Go TUI developer; viewport, lore, kl, wander
+- `concepts/tui.md` — new: Terminal User Interfaces — alt screen, keyboard-driven, grid-cell constraint, Bubble Tea/Ratatui frameworks
+- `concepts/terminal-pager.md` — new: $PAGER programs — less, bat, delta, lore; how programs invoke pagers; pager vs TUI distinction
+- `entities/helix.md` — updated: added [[tui]] to See Also
+
+## [2026-04-16] ingest | Using Claude Code: Session Management & 1M Context
+Source: Twitter/X thread by @trq212 (2026-04-16) on Claude Code session management against the 1M token context window. Created 3 new pages, updated 2:
+- `sources/claude-code-session-management.md` — new: full guide summary — context rot threshold, five branching options per turn, rewind habit, compact vs clear, bad compacts, subagents for context isolation
+- `concepts/context-rot.md` — new: model performance degradation as context fills; ~300–400k token threshold; mitigations table
+- `concepts/compaction.md` — new: /compact mechanism, manual vs autocompact, what causes bad compacts, compact vs /clear comparison table, steering instructions
+- `concepts/ai-orchestrator.md` — updated: added "Subagents as context management" section linking context-rot and compaction
+- `wiki/index.md` — updated: added new source and two new concepts
+
+## [2026-04-16] ingest | Introducing Claude Opus 4.7
+Source: Anthropic announcement blog (2026-04-16) for Claude Opus 4.7. Created 6 new pages, updated 5:
+- `sources/claude-opus-4-7-announcement.md` — new: full summary — SWE gains, self-verification, 2576px vision, file-system memory, xhigh effort, /ultrareview, auto mode, tokenizer migration (1.0–1.35×), Project Glasswing cyber posture
+- `entities/anthropic.md` — new: company entity; products, platform distribution, originated patterns (advisor, MCP, effort levels, compaction)
+- `entities/claude.md` — new: model family entity; Opus/Sonnet/Haiku/Mythos table, capabilities, surfaces
+- `entities/claude-opus-4-7.md` — new: flagship model entity; improvements, regressions, new controls, cyber posture, availability
+- `entities/claude-code.md` — new: Anthropic's CLI coding agent; session architecture, commands, subagents, skills, hooks, auto mode
+- `concepts/effort-levels.md` — new: medium/high/xhigh/max tiers and their effect on token usage; cost controls
+- `wiki/index.md` — updated: 1 new source, 4 new entities, 1 new concept
+- Inbound linking: advisor-strategy (source + concept), claude-code-session-management (source), context-rot, compaction updated to reference new entities

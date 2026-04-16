@@ -15,10 +15,18 @@
 - [[karpathy-guidelines]] — Claude Code skill packaging Karpathy's four behavioral rules: think before coding, simplicity, surgical changes, goal-driven execution
 - [[csharp-14-whats-new]] — Microsoft Learn overview of C# 14 (ships with .NET 10): extension members, `field` keyword, null-conditional assignment, and six other features
 - [[karpathy-llm-wiki-idea-file]] — Deep dive into Karpathy's LLM Wiki idea file gist: idea file concept, wiki vs RAG, three-layer architecture, tool stack, Memex connection
+- [[advisor-strategy|Advisor Strategy source]] — Anthropic blog: advisor strategy pairs Opus advisor with Sonnet/Haiku executor for near-Opus intelligence at fraction of cost
+- [[leo-robinovitch-terminal-pager]] — Leo Robinovitch on building a reusable Go viewport component and lore terminal pager: ANSI/Unicode, search, Bubble Tea
+- [[claude-code-session-management]] — @trq212 guide to Claude Code session management: context rot, compaction, rewind, subagents as context tools
+- [[claude-opus-4-7-announcement]] — Anthropic announcement of Claude Opus 4.7: SWE gains, 3× vision, xhigh effort, /ultrareview, auto mode, tokenizer change
 
 ## Entities
 
 - [[andrej-karpathy]] — AI researcher, originator of the LLM knowledge bases pattern and LLM coding pitfalls observations
+- [[anthropic]] — AI safety lab; creator of Claude model family, Claude Code, MCP, advisor strategy
+- [[claude]] — Anthropic's model family: Opus, Sonnet, Haiku, and Mythos preview
+- [[claude-opus-4-7]] — Flagship Anthropic model (2026-04-16); SWE-focused upgrade to Opus 4.6
+- [[claude-code]] — Anthropic's terminal-based coding agent (CLI, desktop, web, IDE extensions)
 - [[forrestchang]] — GitHub developer who packaged Karpathy's coding observations into the `andrej-karpathy-skills` Claude Code skill
 - [[gitnexus]] — Open-source code intelligence engine that indexes codebases into knowledge graphs for AI agents
 - [[akon-labs]] — Company behind GitNexus enterprise (SaaS and self-hosted)
@@ -30,6 +38,7 @@
 - [[vladimir-vernadsky]] — Mineralogist/geochemist, creator of the noosphere concept
 - [[csharp]] — Microsoft's statically-typed .NET language; C# 14 is the current release
 - [[vannevar-bush]] — MIT engineer, 1945 "As We May Think" essay, originator of the Memex concept and the hypertext lineage
+- [[leo-robinovitch]] — Go TUI developer; author of viewport component, lore pager, kl (k8s logs), wander (Nomad)
 
 ## Concepts
 
@@ -58,5 +67,12 @@
 - [[field-keyword]] — C# 14 `field` keyword: compiler-synthesized backing field referenced inside property accessors
 - [[idea-file]] — Karpathy's concept: sharing abstract patterns for LLM agents to instantiate, rather than sharing code implementations
 - [[memex]] — Vannevar Bush's 1945 hypothetical personal knowledge device with associative trails; ideological ancestor of LLM wikis
+
+- [[advisor-strategy]] — Inversion of orchestrator-worker: cheap executor model escalates to expensive advisor model only at hard decisions
+- [[tui]] — Terminal User Interfaces: alt-screen, keyboard-driven apps composed of viewport/list/input components
+- [[terminal-pager]] — Programs for navigating multi-page text via $PAGER; less, bat, delta, lore
+- [[context-rot]] — Model performance degradation as context window fills; attention spread, irrelevant noise; observable ~300–400k tokens in 1M-context models
+- [[compaction]] — Session summarization technique: /compact replaces history with AI-generated summary to shed context weight while continuing a task
+- [[effort-levels]] — Claude's reasoning/latency parameter: medium / high / xhigh (new in 4.7) / max
 
 ## Analysis

@@ -35,6 +35,7 @@ Helix's tree-sitter integration has gone through several stages:
 
 ## See also
 
+- [[tui]]
 - [[tree-sitter]]
 - [[tree-house]]
 - [[helix-release-25-07]]

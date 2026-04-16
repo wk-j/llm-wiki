@@ -125,3 +125,4 @@ Brief description of what was done and what pages were created/updated.
 - Keep summaries concise but complete. Prefer structured sections over walls of text.
 - When new information contradicts existing wiki content, note the contradiction explicitly and update the page with the current best understanding.
 - Tags should be lowercase, general enough to cluster related pages (e.g. `psychology`, `productivity`, `ai`), but specific enough to be useful.
+- In markdown **tables**, escape the `|` inside wikilink aliases as `\|` (e.g. `[[claude-code\|Claude Code]]`), or drop the alias entirely (`[[claude-code]]`). An unescaped pipe inside a table cell is parsed as a column separator and breaks the row.
