@@ -7,43 +7,43 @@ updated: 2026-04-18
 sources: [forrestchangandrej-karpathy-skills A single CLAUDE.md file to improve Claude Code behavior, derived from Andrej Karpathy's observations on LLM coding pitfalls..md, llm-era-computer-engineering-nattee.md]
 ---
 
-# LLM Coding Pitfalls
+# LLM Coding Pitfalls / กับดักของ LLM ตอนเขียนโค้ด
 
-Recurring failure modes that LLMs exhibit when editing code, as observed by [[andrej-karpathy]] and codified into the [[karpathy-guidelines]] skill. The pitfalls are behavioral, not capability-limited: the model *can* do the right thing but defaults to the wrong one unless instructed otherwise.
+ชุดพฤติกรรมผิด ๆ ที่ LLM มักทำซ้ำเวลาแก้โค้ด — [[andrej-karpathy]] เป็นคนสังเกตแล้วรวบเป็นแนวทาง [[karpathy-guidelines]] เอาไว้ใช้เป็น skill ประเด็นสำคัญคือ กับดักพวกนี้เป็นเรื่อง *พฤติกรรม* ไม่ใช่ขีดจำกัดของโมเดล พูดง่าย ๆ คือโมเดล *ทำถูกได้* แต่ถ้าไม่สั่งอะไรเพิ่ม มันจะเลือกทางผิดก่อนเป็นปกติ
 
-## The four pitfalls
+## กับดักสี่แบบ
 
-| Pitfall | What it looks like | Corrective principle |
+| กับดัก | หน้าตาตอนเกิด | หลักแก้ |
 |---|---|---|
-| **Hidden confusion** | Silently picking one of several interpretations; fabricating assumptions rather than asking | Surface assumptions; ask when uncertain |
-| **Overcomplication** | Adding speculative abstractions, flags, error handlers for impossible states, 200 lines where 50 suffice | Minimum code that solves the problem |
-| **Scope drift** | "Improving" adjacent code, reformatting, refactoring unrelated sections, deleting pre-existing dead code | Surgical changes — every line traces to the request |
-| **Weak success criteria** | Declaring "done" without verification; treating "make it work" as sufficient | Goal-driven execution with verifiable checks |
+| **Hidden confusion** | เจอคำสั่งกำกวมแล้วเดาเอาเองเงียบ ๆ แทนที่จะถาม | เปิดสมมติฐานออกมา ไม่แน่ใจให้ถาม |
+| **Overcomplication** | ใส่ abstraction เผื่อไว้ ใส่ flag ใส่ error handler กันสถานะที่ไม่มีทางเกิด เขียน 200 บรรทัดในที่ที่ 50 บรรทัดก็พอ | เอาเท่าที่แก้ปัญหาได้จริง |
+| **Scope drift** | ไป "ปรับปรุง" โค้ดข้างเคียง จัดฟอร์แมตใหม่ รีแฟกเตอร์ส่วนที่ไม่เกี่ยว ลบ dead code ที่มีอยู่ก่อน | แก้แบบศัลยแพทย์ — ทุกบรรทัดต้องโยงกลับไปที่สิ่งที่สั่ง |
+| **Weak success criteria** | ประกาศว่า "เสร็จแล้ว" โดยไม่ตรวจ เข้าใจว่ารันผ่านก็พอ | ต้องมีเป้าชัดและมีจุดที่ตรวจซ้ำได้ |
 
-## Why they happen
+## ทำไมถึงเกิด
 
-LLMs are trained on code that often contains defensive handling, abstractions, and cleanup commits. They pattern-match toward "what good code looks like" instead of "what this specific task requires." They also want to appear competent — which rewards silent interpretation over asking, and broad activity over narrow precision.
+LLM ถูกเทรนบนโค้ดที่เต็มไปด้วย defensive handling, abstraction, และ commit เก็บงาน พอถึงเวลาทำงานจริง มันเลยไปจับภาพ "โค้ดที่ดูดี" แทนที่จะโฟกัสกับ "โค้ดที่ตรงโจทย์ตรงหน้า" อีกมุมคือโมเดลก็อยากดูเก่ง แปลว่ามันจะได้คะแนนมากกว่าถ้าเดาแล้วตอบเลยแทนที่จะถามก่อน และทำกว้าง ๆ แทนที่จะทำให้แม่นแต่แคบ
 
-## Countermeasure pattern
+## วิธีแก้
 
-The countermeasure in [[karpathy-guidelines]] isn't model tuning — it's an instruction file (`SKILL.md`, `CLAUDE.md`, `AGENTS.md`) read at session start. The same lightweight-schema approach Karpathy uses for [[llm-knowledge-bases]]: behavior steered by a shared markdown contract rather than tooling.
+ทางแก้ใน [[karpathy-guidelines]] ไม่ได้ไปแก้ที่ตัวโมเดล แต่ใช้ไฟล์คำสั่ง (`SKILL.md`, `CLAUDE.md`, `AGENTS.md`) ที่ให้อ่านตอนเริ่ม session วิธีคิดเดียวกับที่ Karpathy ใช้ใน [[llm-knowledge-bases]] — เอา schema แบบเบา ๆ ในรูป markdown มาเป็น "สัญญาร่วม" ที่ทั้งคนและโมเดลยึดตาม ไม่ต้องพึ่ง tooling หนัก ๆ
 
-Tradeoff: these guidelines bias toward caution over speed. For trivial tasks, they may be overkill.
+ข้อแลกคือแนวทางพวกนี้จะดันโมเดลไปทางระวังมากกว่าเร็ว ถ้าเป็น task เล็ก ๆ ก็อาจเกินจำเป็น
 
-## War story — the authorization bug (Nattee, 2026-04-17)
+## เรื่องเล่าจากหน้างาน — บั๊ก authorization (Nattee, 2026-04-17)
 
-A concrete case from [[nattee-niparnan|Nattee Niparnan]]'s Ep. 2 PoC Web App illustrates how multiple pitfalls compound into a silent but dangerous outcome:
+เคสจริงจาก Ep. 2 ของ [[nattee-niparnan|Nattee Niparnan]] ตอนทำ PoC Web App เป็นภาพชัดว่ากับดักหลายตัวประกอบกันแล้วอันตรายแค่ไหน
 
-- Each endpoint **passed its unit tests** — individually they looked correct
-- **Integration testing revealed** that a Buyer could delete a Seller's resource
-- Root cause: no one — human or agent — treated authorization as a **system-wide concern**; each endpoint was built in isolation
-- Once told, the Agent fixed the whole system in one commit without difficulty
+- ทุก endpoint **ผ่าน unit test** ดูทีละอันก็ไม่มีปัญหา
+- แต่พอถึง **integration test** กลับเจอว่า Buyer ลบ resource ของ Seller ได้
+- สาเหตุคือไม่มีใคร — ไม่ว่าคนหรือ Agent — มอง authorization เป็นเรื่องระดับ **ทั้งระบบ** แต่ละ endpoint ถูกสร้างขึ้นมาแบบแยกขาดจากกัน
+- พอสั่งให้แก้ ตัว Agent ก็จัดการทั้งระบบจบในคอมมิตเดียว ไม่มีปัญหาอะไร
 
-This is *scope drift* inverted: rather than the Agent wandering beyond the request, it stayed **too narrowly inside** each request and missed the cross-cutting invariant. Combined with *weak success criteria* ("unit tests pass") and *hidden confusion* (it chose a per-endpoint interpretation of authorization without asking), the result was code that looked correct in every local view and failed globally.
+นี่คือ *scope drift* แบบกลับด้าน — ไม่ใช่ Agent ออกนอกคำสั่ง แต่ **ยึดคำสั่งแคบเกินไป** จนพลาด invariant ระดับข้ามโมดูล พอบวกกับ *weak success criteria* ที่ถือว่า "unit test ผ่านก็พอ" และ *hidden confusion* ตรงที่โมเดลเลือกตีความ authorization แบบต่างคนต่างทำโดยไม่ถาม ผลที่ออกมาคือโค้ดที่มองทีละจุดก็ไม่มีปัญหา แต่พอต่อเข้าด้วยกันกลับพัง
 
 > "Agent มันไม่รู้หรอกว่าต้องแก้เรื่องนี้ ถ้าเราไม่สั่ง" — Nattee
 
-Lesson for the pitfalls model: the failure modes aren't independent. Narrow scope + passing-test success criterion + unchallenged default interpretation = confident-looking output that silently breaks a cross-cutting property. The corrective isn't fixing one pitfall — it's asking the Agent explicitly about the *system*, not just the part. This is also the clearest reason the [[taste-paradox]] matters: you can't review for a property your training never taught you to look for.
+บทเรียนคือ failure mode ของ LLM ไม่ได้อยู่แยกกันทีละตัว ขอบเขตแคบ + เกณฑ์ผ่านที่หละหลวม + การตีความ default ที่ไม่เคยถูกท้าทาย รวมกันกลายเป็น output ที่ดูมั่นใจแต่พัง property แบบ cross-cutting อย่างเงียบ ๆ ทางออกจึงไม่ใช่การไล่แก้กับดักตัวใดตัวหนึ่ง แต่ต้องชวน Agent คุยเรื่องภาพรวมของระบบ ไม่ใช่แค่ส่วนย่อยที่สั่ง และนี่คือเหตุผลที่ชัดที่สุดว่าทำไม [[taste-paradox]] ถึงสำคัญ — เรา review property ที่ตัวเองไม่เคยถูกสอนให้มองหาไม่ได้
 
 ## See also
 
