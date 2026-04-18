@@ -3,7 +3,7 @@ title: Engineering Role Shift
 type: concept
 tags: [ai, software-engineering, career, roles]
 created: 2026-04-15
-updated: 2026-04-15
+updated: 2026-04-18
 sources: [software-engineer-role-ai-era.md]
 ---
 
@@ -68,5 +68,7 @@ The shift produces six new role archetypes (per the source):
 - [[software-engineer-role-ai-era]]
 - [[ai-orchestrator]]
 - [[domain-to-ai-translator]]
+- [[judgement-vs-automation]]
+- [[ai-3d-workflow]]
 - [[llm-coding-pitfalls]]
 - [[llm-knowledge-bases]]

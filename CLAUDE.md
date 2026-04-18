@@ -126,3 +126,38 @@ Brief description of what was done and what pages were created/updated.
 - When new information contradicts existing wiki content, note the contradiction explicitly and update the page with the current best understanding.
 - Tags should be lowercase, general enough to cluster related pages (e.g. `psychology`, `productivity`, `ai`), but specific enough to be useful.
 - In markdown **tables**, escape the `|` inside wikilink aliases as `\|` (e.g. `[[claude-code\|Claude Code]]`), or drop the alias entirely (`[[claude-code]]`). An unescaped pipe inside a table cell is parsed as a column separator and breaks the row.
+
+## Bilingual content (Thai + English)
+
+**Per page type:**
+
+- **Concept pages (`wiki/concepts/`) — Thai is the primary body language.** Write narrative prose in Thai. Keep English for technical terms, proper nouns, product/tool/library names, and direct quotes from English sources. Use English glosses where they help anchor a concept.
+- **Source, entity, analysis pages** — default to English. Switch to Thai if the source is Thai, or the user asks for it.
+
+**Always in English (tooling stability, all page types):**
+
+- Filenames (`wiki/concepts/ai-3d-workflow.md`) — lowercase, hyphens
+- Wikilink targets (`[[ai-3d-workflow]]`) — use alias for Thai display: `[[ai-3d-workflow|เวิร์กโฟลว์ AI + 3D]]` (inside tables, escape the pipe: `[[ai-3d-workflow\|เวิร์กโฟลว์ AI + 3D]]`)
+- Frontmatter `title:` and `tags:`
+- Entries in `wiki/index.md` (keeps the index scannable with `grep`)
+
+**What counts as a "technical term" (stays English in Thai-primary body):**
+
+- Product / tool / library / model names: `Blender`, `ComfyUI`, `Flux.1 Depth`, `Meshy`, `MCP`, `DLSS`, `Opus 4.7`
+- Domain jargon with no established Thai rendering: `depth map`, `mesh`, `lookdev`, `block-in`, `text-to-image`, `render`, `pipeline`, `embedding`
+- File extensions, CLI flags, code identifiers, API names
+
+Thai transliterations (e.g. `เรนเดอร์`, `ไปป์ไลน์`) are fine when they read naturally; prefer whichever a Thai developer would actually say out loud.
+
+**Body patterns:**
+
+- **Bilingual H1** — `# AI + 3D Workflow / เวิร์กโฟลว์ AI + 3D` (English first aligns the H1 with the filename and frontmatter)
+- **Thai section headings** when body is Thai-primary — e.g. `## แก่นความคิด`. Add a `/ English` suffix only where it aids navigation
+- **Parenthetical gloss** on first mention — `block-in (วางโครง)` or `วางโครง (block-in)` depending on which language is primary
+- **Inline gloss** after a key sentence when the other language captures it more crisply
+- **Parallel prose** — a paragraph in the other language when one framing is stronger
+- **Parallel table columns** (`| English | ไทย | Notes |`) — only when the table stays readable
+
+**Primary-source quotes:** keep verbatim in the source language and gloss alongside. Do not silently translate.
+
+See `wiki/concepts/ai-3d-workflow.md` for a worked Thai-primary example.

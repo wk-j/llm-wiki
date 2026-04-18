@@ -19,6 +19,9 @@
 - [[leo-robinovitch-terminal-pager]] — Leo Robinovitch on building a reusable Go viewport component and lore terminal pager: ANSI/Unicode, search, Bubble Tea
 - [[claude-code-session-management]] — @trq212 guide to Claude Code session management: context rot, compaction, rewind, subagents as context tools
 - [[claude-opus-4-7-announcement]] — Anthropic announcement of Claude Opus 4.7: SWE gains, 3× vision, xhigh effort, /ultrareview, auto mode, tokenizer change
+- [[vim-pack-guide]] — Evgeni Chasnovski's guide to vim.pack, Neovim 0.12's built-in plugin manager: API, lockfile, hooks, lazy loading, migration from mini.deps/lazy.nvim
+- [[software-engineer-role-ai-era]] — Thai blog post on engineering role shift in the AI era: upstream/downstream expand, middle hollows out; six new role archetypes
+- [[will-ai-replace-3d-software]] — Andrew Price X thread: AI + 3D complementarity, moon-base workflow (Blender → Flux.1 Depth → Meshy), judgement-vs-automation skill framework
 
 ## Entities
 
@@ -39,6 +42,12 @@
 - [[csharp]] — Microsoft's statically-typed .NET language; C# 14 is the current release
 - [[vannevar-bush]] — MIT engineer, 1945 "As We May Think" essay, originator of the Memex concept and the hypertext lineage
 - [[leo-robinovitch]] — Go TUI developer; author of viewport component, lore pager, kl (k8s logs), wander (Nomad)
+- [[neovim]] — Lua-embedded modern fork of Vim; 0.12 ships vim.pack as built-in plugin manager
+- [[evgeni-chasnovski]] — Neovim plugin author; creator of mini.nvim and mini.deps, vim.pack design influence
+- [[andrew-price]] — 3D artist (Blender Guru); advocate of hybrid AI + 3D workflows
+- [[blender]] — Open-source 3D creation suite; pipeline anchor for AI + 3D workflows
+- [[comfyui]] — Open-source node-based UI for diffusion image-generation workflows
+- [[flux]] — Black Forest Labs image diffusion family; Flux.1 Depth enables geometry-conditioned generation
 
 ## Concepts
 
@@ -74,5 +83,13 @@
 - [[context-rot]] — Model performance degradation as context window fills; attention spread, irrelevant noise; observable ~300–400k tokens in 1M-context models
 - [[compaction]] — Session summarization technique: /compact replaces history with AI-generated summary to shed context weight while continuing a task
 - [[effort-levels]] — Claude's reasoning/latency parameter: medium / high / xhigh (new in 4.7) / max
+- [[vim-pack]] — Neovim 0.12's built-in plugin manager: three-function API, lockfile, autocmd hooks, no declarative lazy DSL
+- [[plugin-manager]] — The general pattern: fetch/load/update/pin/hook extensions; Neovim landscape and trade-offs
+
+- [[engineering-role-shift]] — Bimodal shift of engineering work: upstream/downstream expand, middle hollows out
+- [[ai-orchestrator]] — Engineer-as-pipeline-director; senior-developer role redefined for the AI era
+- [[domain-to-ai-translator]] — Engineer role: convert ambiguous business requirements into AI-executable specs
+- [[ai-3d-workflow]] — Hybrid pipeline: AI ideates/renders variants; 3D controls precise placement (Andrew Price)
+- [[judgement-vs-automation]] — "If you can predict it, you can train it": predictable tasks automate, judgement tasks don't
 
 ## Analysis

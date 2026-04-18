@@ -13,7 +13,7 @@ A post-modern modal text editor written in Rust. Built-in support for multiple s
 
 ## Key design choices
 
-- **No plugin system** — features are built-in rather than requiring plugins (contrast with Neovim/Vim)
+- **No plugin system** — features are built-in rather than requiring plugins (contrast with [[neovim|Neovim]]/Vim and its [[plugin-manager|plugin managers]] like [[vim-pack]])
 - **Multiple selections** as a first-class editing primitive (inspired by [[kakoune]])
 - **Tree-sitter native** — syntax highlighting, indentation, textobjects all powered by [[tree-sitter]] queries
 - **LSP native** — code actions, completions, diagnostics, document colors all built-in
@@ -39,3 +39,4 @@ Helix's tree-sitter integration has gone through several stages:
 - [[tree-sitter]]
 - [[tree-house]]
 - [[helix-release-25-07]]
+- [[neovim]] — contrasting plugin-extensible modal editor

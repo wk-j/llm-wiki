@@ -135,3 +135,26 @@ Source: Anthropic announcement blog (2026-04-16) for Claude Opus 4.7. Created 6 
 - `concepts/effort-levels.md` — new: medium/high/xhigh/max tiers and their effect on token usage; cost controls
 - `wiki/index.md` — updated: 1 new source, 4 new entities, 1 new concept
 - Inbound linking: advisor-strategy (source + concept), claude-code-session-management (source), context-rot, compaction updated to reference new entities
+
+## [2026-04-17] ingest | A Guide to vim.pack
+Source: Blog post by Evgeni Chasnovski (2026-03-13) on Neovim 0.12's built-in plugin manager. Created 5 new pages, updated 2:
+- `sources/vim-pack-guide.md` — new: full summary — API, lockfile, autocmd hooks, lazy-loading patterns, migration from mini.deps/lazy.nvim, limitations
+- `concepts/vim-pack.md` — new: Neovim 0.12 built-in plugin manager; three-function API, all-opt design, trade-offs vs lazy.nvim, hook ordering gotcha
+- `concepts/plugin-manager.md` — new: general pattern; five core responsibilities, Neovim manager landscape, transparent-vs-declarative trade-off, lockfiles
+- `entities/neovim.md` — new: Lua-embedded Vim fork; runtime conventions, 0.12 plugin manager milestone, position vs Helix/VS Code
+- `entities/evgeni-chasnovski.md` — new: mini.nvim and mini.deps author; design influence on vim.pack; moderate lazy-loading philosophy
+- `entities/helix.md` — updated: added cross-links to neovim, plugin-manager, vim-pack in plugin-system contrast
+- `wiki/index.md` — updated: 1 new source, 2 new entities, 2 new concepts
+
+## [2026-04-18] ingest | Will AI Replace 3D Software? — Andrew Price
+Source: Andrew Price X thread (2026-04-17) answering top three questions from North American Blender Conference on AI + 3D. Created 7 new pages, updated 2, and closed prior index lint gap:
+- `sources/will-ai-replace-3d-software.md` — new: thread summary with three Q&As (AI won't replace 3D; hybrid artist wins; judgement-heavy skills survive) plus moon-base workflow walkthrough
+- `entities/andrew-price.md` — new: Blender Guru; AI + 3D advocate
+- `entities/blender.md` — new: open-source 3D creation suite; anchor tool for the workflow
+- `entities/comfyui.md` — new: node-based diffusion workflow UI; hosts Flux.1 Depth template
+- `entities/flux.md` — new: Black Forest Labs diffusion family; Flux.1 Depth supports geometry-conditioned generation
+- `concepts/ai-3d-workflow.md` — new: hybrid pipeline — AI for ideation/rendering, 3D for precision/control; canonical moon-base example
+- `concepts/judgement-vs-automation.md` — new: "if you can predict it, you can train it" skill framework; generalizes to software via engineering-role-shift
+- `concepts/engineering-role-shift.md` — updated: added judgement-vs-automation and ai-3d-workflow to See also
+- `wiki/index.md` — updated: added 1 new source, 4 new entities, 2 new concepts; closed prior lint gap by indexing `software-engineer-role-ai-era`, `engineering-role-shift`, `ai-orchestrator`, `domain-to-ai-translator`
+- Meshy (image-to-3D service) folded into source and ai-3d-workflow prose rather than a standalone entity page — narrow-scope tool, one-off mention
