@@ -24,6 +24,8 @@
 - [[will-ai-replace-3d-software]] — Andrew Price X thread: AI + 3D complementarity, moon-base workflow (Blender → Flux.1 Depth → Meshy), judgement-vs-automation skill framework
 - [[harness-engineering-panutat]] — Panutat Tejasen's Thai Facebook post: teach "Harness Engineering" (pipeline of AI review/test/audit agents) rather than teaching students to review AI output
 - [[llm-era-computer-engineering-nattee]] — Nattee Niparnan's Thai Facebook series (Ep. 1 + Ep. 2): LLM in grader/exam pedagogy, $140 PoC with Coding Agent, "taste paradox," core theory matters more not less
+- [[alex-ker-harnesses-optimize]] — Alex Ker (@thealexker): harness as scaffolding; lean human-written CLAUDE.md, progressive disclosure, R.P.I. prompt pattern, subagent patterns, commit-to-one-harness
+- [[claude-code-subagents-docs]] — Anthropic official docs: Claude Code subagent mechanics — file format, scopes, tools/permissions, persistent memory, hooks, foreground/background, `--agent` flag
 
 ## Entities
 
@@ -52,6 +54,10 @@
 - [[flux]] — Black Forest Labs image diffusion family; Flux.1 Depth enables geometry-conditioned generation
 - [[panutat-tejasen]] — Thai practitioner; proposed "Harness Engineering" as curriculum response to capable AI coding agents
 - [[nattee-niparnan]] — Chula CEDT faculty; cafe-grader maintainer; author of the "วิศวฯคอมจะอยู่อย่างไรในยุค LLM ครองเมือง" series; originator of the "taste paradox" framing
+- [[alex-ker]] — Engineer (@thealexker, GitHub AlexKer); author of "Harnesses are everything"; contributor to Roo Code / DeepAgent CLI / HumanLayer; ex-Baseten gpt-oss-swarm
+- [[humanlayer]] — Open-source harness company; cited source for the "dumb zone" instruction-budget framing and the R.P.I. prompt framework
+- [[openai-codex]] — OpenAI's coding harness; converges with Claude Code on skills progressive disclosure, diverges on MCP handling
+- [[opencode]] — Open-source coding harness; loads all MCP tool definitions at startup; docs warn users to limit server count
 
 ## Concepts
 
@@ -97,5 +103,9 @@
 - [[judgement-vs-automation]] — "If you can predict it, you can train it": predictable tasks automate, judgement tasks don't
 - [[harness-engineering]] — Panutat Tejasen: teach orchestration of review/test/audit agents, not manual review of AI output; human's role is harness design
 - [[taste-paradox]] — Nattee Niparnan: Agent lets you skip practice, but practice is what builds the judgment needed to control the Agent; core tension for Agent-era curriculum
+- [[coding-harness]] — Alex Ker: the harness (Claude Code, Codex, OpenCode, Cursor) as the `while` loop around the LLM; where human engineering judgment lives; includes R.P.I. prompt framework
+- [[instruction-budget]] — The "dumb zone" past a few hundred instructions; attention runs out even if total tokens are modest; distinct from context-rot
+- [[progressive-disclosure]] — Lazy-load pattern for agent context: CLIs (--help discovery), Skills (name+description only), MCP tools (Claude Code tool-search 85% context reduction)
+- [[subagent-patterns]] — Parallel fan-out (breadth) vs sequential pipeline (depth); pipeline pattern parallels Panutat's review-agent harness at a different layer
 
 ## Analysis

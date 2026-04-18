@@ -127,6 +127,22 @@ Brief description of what was done and what pages were created/updated.
 - Tags should be lowercase, general enough to cluster related pages (e.g. `psychology`, `productivity`, `ai`), but specific enough to be useful.
 - In markdown **tables**, escape the `|` inside wikilink aliases as `\|` (e.g. `[[claude-code\|Claude Code]]`), or drop the alias entirely (`[[claude-code]]`). An unescaped pipe inside a table cell is parsed as a column separator and breaks the row.
 
+## Concept page writing style
+
+Concept pages (`wiki/concepts/`) are re-read more than any other page type — they get linked from sources, entities, and each other. Write them so a reader who hasn't seen the source can still follow along. Applies equally to Thai-primary and English concept pages.
+
+**Easy language.** Short sentences. Spoken register, not textbook. Prefer plain verbs over nominalizations. Name the thing before using an acronym. In Thai, this compounds with the translationese rule under `## Bilingual content` below.
+
+**Enough context to stand alone.**
+
+- Open each section with a plain-language sentence that says what the section is about and why it matters, before going into mechanics.
+- The first time a term, person, tool, or acronym appears on the page, give a one-clause gloss inline — even when it's already a `[[wikilink]]`. The reader shouldn't need to click through to follow the paragraph. Example: `[[alex-ker|Alex Ker]] (engineer ที่เขียนเรื่อง harness optimization)` rather than just `[[alex-ker|Alex Ker]]`.
+- Prefer concrete examples over abstract summary. "พอ alert ลั่น main agent คิดสมมติฐาน 3 ข้อ แล้วเปิด subagent ข้อละตัว" beats "main agent dispatches subagents for parallel investigation."
+- Break compound English-structured sentences into shorter ones.
+- At the end of each mechanics section, summarize the payoff in one line (`ได้อะไร` / `ผลคือ` / `Why this helps`). Don't make the reader derive it.
+
+Source, entity, and analysis pages follow their own norms — this section is specifically for concept pages.
+
 ## Bilingual content (Thai + English)
 
 **Per page type:**

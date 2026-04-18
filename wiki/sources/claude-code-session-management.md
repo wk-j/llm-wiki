@@ -3,7 +3,7 @@ title: "Using Claude Code: Session Management & 1M Context"
 type: source
 tags: [ai, claude-code, context-management, agents, productivity]
 created: 2026-04-16
-updated: 2026-04-16
+updated: 2026-04-18
 sources: [Using Claude Code Session Management & 1M Context.md]
 ---
 
@@ -65,3 +65,7 @@ Explicit subagent invocations:
 - [[advisor-strategy]]
 - [[ai-orchestrator]]
 - [[effort-levels]]
+- [[coding-harness]]
+- [[subagent-patterns]]
+- [[progressive-disclosure]]
+- [[instruction-budget]]

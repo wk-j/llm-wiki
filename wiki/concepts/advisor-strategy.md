@@ -3,8 +3,8 @@ title: Advisor Strategy
 type: concept
 tags: [ai, agents, cost-optimization, architecture]
 created: 2026-04-16
-updated: 2026-04-16
-sources: [advisor-strategy.md, Introducing Claude Opus 4.7.md]
+updated: 2026-04-18
+sources: [advisor-strategy.md, Introducing Claude Opus 4.7.md, alex-ker-harnesses-optimize.md]
 ---
 
 # Advisor Strategy
@@ -41,10 +41,16 @@ Counter-intuitively, adding a more expensive advisor can *reduce* total cost. Th
 
 With [[claude-opus-4-7|Opus 4.7]] (released 2026-04-16), the natural advisor model upgrades from `claude-opus-4-6` to `claude-opus-4-7` — same API shape and pricing. Executor-side, Sonnet 4.6 and Haiku 4.5 remain the typical choices.
 
+## Advisor as pipeline judge
+
+A natural place to drop an advisor into a [[subagent-patterns|subagent pipeline]] is at the final consolidation step: three or four subagents in parallel fan-out each return summaries; a frontier advisor consolidates them into the final answer. [[alex-ker|Alex Ker]] (2026-04-18) calls out exactly this pattern — "you could use a frontier model as a judge to consolidate the responses and ensure the desired behavior is achieved with higher confidence." The executor-drives / advisor-at-the-hard-step structure still holds; the advisor is just invoked at synthesis rather than mid-task.
+
 ## See also
 
 - [[ai-orchestrator]]
 - [[harness-engineering]]
+- [[coding-harness]]
+- [[subagent-patterns]]
 - [[llm-coding-pitfalls]]
 - [[model-context-protocol]]
 - [[claude-opus-4-7]]

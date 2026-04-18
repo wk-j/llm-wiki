@@ -4,7 +4,7 @@ type: concept
 tags: [ai, software-engineering, agents, roles]
 created: 2026-04-15
 updated: 2026-04-18
-sources: [software-engineer-role-ai-era.md, Using Claude Code Session Management & 1M Context.md, llm-era-computer-engineering-nattee.md]
+sources: [software-engineer-role-ai-era.md, Using Claude Code Session Management & 1M Context.md, llm-era-computer-engineering-nattee.md, alex-ker-harnesses-optimize.md]
 ---
 
 # AI Orchestrator
@@ -45,6 +45,12 @@ Orchestration builds on the tooling layer that the AI Tool Builder role produces
 
 The [[advisor-strategy]] explicitly inverts the orchestrator-worker pattern: instead of a large model decomposing and delegating, a small model drives end-to-end and escalates to a large model only at hard decision points. This can be cheaper than the small model running solo because advisory guidance prevents expensive dead-end tool loops.
 
+## R.P.I. — a prompt-level discipline that mirrors orchestration
+
+[[humanlayer|HumanLayer]]'s **R.P.I. framework** — `Research` → `Plan` → `Implement` — expresses the same orchestration discipline at the single-harness level. Each prompt does exactly one of the three; a human reviews the plan before implementation starts. Seniority-flavored, day-one work: see the R.P.I. section in [[coding-harness]] and the source page [[alex-ker-harnesses-optimize]].
+
+This is the orchestration skill applied to a single agent across turns, rather than across multiple agents in a subagent pipeline (see [[subagent-patterns]]).
+
 ## Downward pressure on seniority requirements
 
 [[nattee-niparnan|Nattee Niparnan]] (Ep. 2, 2026-04-17) points out a side effect of orchestration: **high-level design decisions are getting pushed down to juniors, not up to seniors**. Framework choice, library evaluation, cross-cutting concerns like authorization — historically these were Senior-developer decisions, made while juniors built out implementation. Agents now do the implementation, so the junior's first real task is an orchestration-level question: *"Which framework does this Agent produce stable code in? Which library does it hallucinate less on? What compromises does this pipeline force?"*
@@ -57,6 +63,8 @@ Implication for curricula: orchestration is no longer an advanced topic to sprin
 
 - [[advisor-strategy]]
 - [[harness-engineering]]
+- [[coding-harness]]
+- [[subagent-patterns]]
 - [[engineering-role-shift]]
 - [[domain-to-ai-translator]]
 - [[model-context-protocol]]
@@ -66,3 +74,5 @@ Implication for curricula: orchestration is no longer an advanced topic to sprin
 - [[taste-paradox]]
 - [[nattee-niparnan]]
 - [[llm-era-computer-engineering-nattee]]
+- [[alex-ker]]
+- [[humanlayer]]

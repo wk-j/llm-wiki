@@ -182,3 +182,29 @@ Source: Two-part Thai Facebook series by Nattee Niparnan (Chula CEDT). Ep. 1 (20
 - `concepts/ai-orchestrator.md` — updated: added "Downward pressure on seniority requirements" section — orchestration work lands on juniors before they've built the judgment it requires
 - `concepts/llm-coding-pitfalls.md` — updated: added authorization-bug war story as concrete multi-pitfall illustration (scope kept too narrowly per-endpoint + weak success criterion + unchallenged default interpretation = silent cross-cutting failure)
 - `wiki/index.md` — updated: 1 new source, 1 new entity, 1 new concept
+
+## [2026-04-18] ingest | Harnesses are everything — Alex Ker (@thealexker)
+Source: X post (2026-04-18) by Alex Ker synthesizing harness-optimization advice: lean human-written CLAUDE.md, progressive disclosure (CLIs / Skills / MCP), R.P.I. prompt pattern, subagent patterns (parallel fan-out vs pipeline), commit-to-one-harness. Introduces a second sense of the word "harness" — the scaffolding tool (Claude Code, Codex, OpenCode, Cursor) — distinct from Panutat's curriculum sense. Created 9 new pages, updated 5:
+- `sources/alex-ker-harnesses-optimize.md` — new (English body, source is English): full post summary with key claims attributed
+- `entities/alex-ker.md` — new: GitHub handle `AlexKer`, Twitter `@thealexker`, contributor to Roo Code / DeepAgent CLI / HumanLayer, formerly Baseten (gpt-oss-swarm)
+- `entities/humanlayer.md` — new: company cited as source for the "dumb zone" instruction-budget framing and the R.P.I. framework
+- `entities/openai-codex.md` — new: OpenAI coding harness; converges with Claude Code on skills progressive disclosure but diverges on MCP handling
+- `entities/opencode.md` — new: open-source harness; loads all MCP tool definitions at startup (docs warn users to limit server count)
+- `concepts/coding-harness.md` — new (Thai-primary): the harness as scaffolding layer; while-loop + context-mgmt + tool-wiring; Alex Ker's three levers (lean config, R.P.I., subagents); "commit to one harness" rationale. R.P.I. section folded in here rather than a separate page
+- `concepts/instruction-budget.md` — new (Thai-primary): the "dumb zone" past few-hundred instructions; explicit disambiguation table vs context-rot (instruction count vs total token count — different cause, similar symptom)
+- `concepts/progressive-disclosure.md` — new (Thai-primary): lazy-loading pattern with three illustrations — CLIs (--help discovery), Skills (name+description only, body on demand), MCP tools (Claude Code tool search 85% context reduction vs Codex/OpenCode load-all)
+- `concepts/subagent-patterns.md` — new (Thai-primary): parallel fan-out (breadth, investigation) vs pipeline (depth, multi-lens review); explicit parallel to Panutat's review-agent pipeline — same pattern, productivity vs pedagogy lens
+- `concepts/harness-engineering.md` — updated: added disambiguation note pointing to `coding-harness` for Alex Ker's sense; added section "เชื่อมกับ subagent-patterns ของ Alex Ker" framing Panutat's pipeline as the same pattern Alex Ker calls a pipeline subagent
+- `concepts/ai-orchestrator.md` — updated: added "R.P.I. — a prompt-level discipline that mirrors orchestration" section
+- `concepts/advisor-strategy.md` — updated: added "Advisor as pipeline judge" section (frontier model consolidating subagent fan-out output)
+- `entities/claude-code.md` — updated: MCP tool-search (~85% context reduction) added to feature description; See also expanded
+- `sources/claude-code-session-management.md` — updated: cross-links to coding-harness / subagent-patterns / progressive-disclosure / instruction-budget
+- `wiki/index.md` — updated: 1 new source, 4 new entities, 4 new concepts
+
+## [2026-04-18] ingest | Claude Code Subagents Docs (code.claude.com/docs/en/sub-agents.md)
+Source: Anthropic's official Claude Code subagent reference. Canonical mechanics complement Alex Ker's design patterns and Panutat's harness-engineering framing.
+- `raw/Create custom subagents - Claude Code Docs.md` — raw fetched doc
+- `sources/claude-code-subagents-docs.md` — new source summary: built-in agents (Explore/Plan/general-purpose), full frontmatter field table, scope priority, persistent memory scopes, hooks (frontmatter + SubagentStart/Stop), invocation (natural / @-mention / `--agent`), foreground vs background, resumption via SendMessage, cross-links to existing concept pages
+- `entities/claude-code.md` — updated: subagent bullet expanded with concrete mechanics (built-in list, frontmatter fields, invocation modes, nested-spawn constraint)
+- `concepts/subagent-patterns.md` — updated: new "Mechanics ใน Claude Code" section mapping fan-out/pipeline to Claude Code primitives (`Explore`, `.claude/agents/`, `model: haiku`, `memory: project`)
+- `wiki/index.md` — updated: 1 new source entry
