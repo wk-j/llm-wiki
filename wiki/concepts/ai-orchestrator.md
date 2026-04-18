@@ -3,8 +3,8 @@ title: AI Orchestrator
 type: concept
 tags: [ai, software-engineering, agents, roles]
 created: 2026-04-15
-updated: 2026-04-15
-sources: [software-engineer-role-ai-era.md, Using Claude Code Session Management & 1M Context.md]
+updated: 2026-04-18
+sources: [software-engineer-role-ai-era.md, Using Claude Code Session Management & 1M Context.md, llm-era-computer-engineering-nattee.md]
 ---
 
 # AI Orchestrator
@@ -45,11 +45,24 @@ Orchestration builds on the tooling layer that the AI Tool Builder role produces
 
 The [[advisor-strategy]] explicitly inverts the orchestrator-worker pattern: instead of a large model decomposing and delegating, a small model drives end-to-end and escalates to a large model only at hard decision points. This can be cheaper than the small model running solo because advisory guidance prevents expensive dead-end tool loops.
 
+## Downward pressure on seniority requirements
+
+[[nattee-niparnan|Nattee Niparnan]] (Ep. 2, 2026-04-17) points out a side effect of orchestration: **high-level design decisions are getting pushed down to juniors, not up to seniors**. Framework choice, library evaluation, cross-cutting concerns like authorization — historically these were Senior-developer decisions, made while juniors built out implementation. Agents now do the implementation, so the junior's first real task is an orchestration-level question: *"Which framework does this Agent produce stable code in? Which library does it hallucinate less on? What compromises does this pipeline force?"*
+
+The promotion path inverts: instead of juniors learning implementation first and later growing into design, they are **dropped into design choices before they've accumulated the taste to make them**. This feeds directly into the [[taste-paradox]] — senior-level decision-making is now entry-level work, but the judgment it requires hasn't moved.
+
+Implication for curricula: orchestration is no longer an advanced topic to sprinkle into a senior capstone; it's a day-one skill.
+
 ## See also
 
 - [[advisor-strategy]]
+- [[harness-engineering]]
 - [[engineering-role-shift]]
 - [[domain-to-ai-translator]]
 - [[model-context-protocol]]
 - [[llm-coding-pitfalls]]
 - [[software-engineer-role-ai-era]]
+- [[panutat-tejasen]]
+- [[taste-paradox]]
+- [[nattee-niparnan]]
+- [[llm-era-computer-engineering-nattee]]

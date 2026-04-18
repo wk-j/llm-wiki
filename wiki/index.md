@@ -22,6 +22,8 @@
 - [[vim-pack-guide]] — Evgeni Chasnovski's guide to vim.pack, Neovim 0.12's built-in plugin manager: API, lockfile, hooks, lazy loading, migration from mini.deps/lazy.nvim
 - [[software-engineer-role-ai-era]] — Thai blog post on engineering role shift in the AI era: upstream/downstream expand, middle hollows out; six new role archetypes
 - [[will-ai-replace-3d-software]] — Andrew Price X thread: AI + 3D complementarity, moon-base workflow (Blender → Flux.1 Depth → Meshy), judgement-vs-automation skill framework
+- [[harness-engineering-panutat]] — Panutat Tejasen's Thai Facebook post: teach "Harness Engineering" (pipeline of AI review/test/audit agents) rather than teaching students to review AI output
+- [[llm-era-computer-engineering-nattee]] — Nattee Niparnan's Thai Facebook series (Ep. 1 + Ep. 2): LLM in grader/exam pedagogy, $140 PoC with Coding Agent, "taste paradox," core theory matters more not less
 
 ## Entities
 
@@ -48,6 +50,8 @@
 - [[blender]] — Open-source 3D creation suite; pipeline anchor for AI + 3D workflows
 - [[comfyui]] — Open-source node-based UI for diffusion image-generation workflows
 - [[flux]] — Black Forest Labs image diffusion family; Flux.1 Depth enables geometry-conditioned generation
+- [[panutat-tejasen]] — Thai practitioner; proposed "Harness Engineering" as curriculum response to capable AI coding agents
+- [[nattee-niparnan]] — Chula CEDT faculty; cafe-grader maintainer; author of the "วิศวฯคอมจะอยู่อย่างไรในยุค LLM ครองเมือง" series; originator of the "taste paradox" framing
 
 ## Concepts
 
@@ -91,5 +95,7 @@
 - [[domain-to-ai-translator]] — Engineer role: convert ambiguous business requirements into AI-executable specs
 - [[ai-3d-workflow]] — Hybrid pipeline: AI ideates/renders variants; 3D controls precise placement (Andrew Price)
 - [[judgement-vs-automation]] — "If you can predict it, you can train it": predictable tasks automate, judgement tasks don't
+- [[harness-engineering]] — Panutat Tejasen: teach orchestration of review/test/audit agents, not manual review of AI output; human's role is harness design
+- [[taste-paradox]] — Nattee Niparnan: Agent lets you skip practice, but practice is what builds the judgment needed to control the Agent; core tension for Agent-era curriculum
 
 ## Analysis

@@ -44,6 +44,7 @@ With [[claude-opus-4-7|Opus 4.7]] (released 2026-04-16), the natural advisor mod
 ## See also
 
 - [[ai-orchestrator]]
+- [[harness-engineering]]
 - [[llm-coding-pitfalls]]
 - [[model-context-protocol]]
 - [[claude-opus-4-7]]

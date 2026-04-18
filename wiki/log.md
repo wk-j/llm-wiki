@@ -158,3 +158,27 @@ Source: Andrew Price X thread (2026-04-17) answering top three questions from No
 - `concepts/engineering-role-shift.md` — updated: added judgement-vs-automation and ai-3d-workflow to See also
 - `wiki/index.md` — updated: added 1 new source, 4 new entities, 2 new concepts; closed prior lint gap by indexing `software-engineer-role-ai-era`, `engineering-role-shift`, `ai-orchestrator`, `domain-to-ai-translator`
 - Meshy (image-to-3D service) folded into source and ai-3d-workflow prose rather than a standalone entity page — narrow-scope tool, one-off mention
+
+## [2026-04-18] convention | Bilingual Thai+English for concept pages
+Added `## Bilingual content` section to CLAUDE.md. First iteration allowed general mixing with English-primary default; same-day revision tightened the rule per-page-type: concept pages default to Thai-primary body with English kept for technical terms, product/tool/library names, code identifiers, and direct English-source quotes; source/entity/analysis pages default to English (source pages switch to Thai when the source is Thai). Tooling stays English (filenames, wikilink targets, frontmatter `title:`/`tags:`, index.md entries). `wiki/concepts/ai-3d-workflow.md` rewritten as the Thai-primary reference demo. Existing 36 other concept pages NOT retrofitted — pending user confirmation.
+
+## [2026-04-18] ingest | Harness Engineering — Panutat Tejasen
+Source: Thai Facebook post (2026-04-18) by Panutat Tejasen arguing against teaching students to "review" or "advise" AI coding agents and proposing "Harness Engineering" as the curriculum alternative. First concept page written as Thai-primary from scratch. Created 4 new pages, updated 2:
+- `sources/harness-engineering-panutat.md` — new (Thai body): post summary, core claims, verbatim quote of the central proposal, links to related concepts
+- `entities/panutat-tejasen.md` — new (English, minimal): scoped to what the source reveals — author of the Harness Engineering proposal
+- `concepts/harness-engineering.md` — new (Thai-primary): harness = pipeline of AI agents for Review, Inspection, Test Cases, E2E Testing, Security Audit; human role shifts to harness design; comparisons with advisor-strategy and ai-orchestrator; open questions on model diversity in pipelines
+- `concepts/ai-orchestrator.md` — updated: added harness-engineering and panutat-tejasen to See also; bumped `updated` date
+- `concepts/engineering-role-shift.md` — updated: added harness-engineering and panutat-tejasen to See also
+- `wiki/index.md` — updated: 1 new source, 1 new entity, 1 new concept
+
+## [2026-04-18] ingest | วิศวฯคอมจะอยู่อย่างไรในยุค LLM ครองเมือง (Ep. 1 + Ep. 2) — Nattee Niparnan
+Source: Two-part Thai Facebook series by Nattee Niparnan (Chula CEDT). Ep. 1 (2026-04-10) catalogs pedagogy experiments (LLM-in-grader with Socratic-only prompt + −10 pts/click cost capping at 70 after 3 clicks, chat-log-as-submission, อ. สมชาย's prompt-as-exam, flip classroom find-the-bug). Ep. 2 (~2026-04-17) introduces the "taste paradox" via a $140 PoC Web App (Claude Code + Antigravity + Figma Make) that replaced 3–4 RAs; includes an authorization war story where every endpoint passed unit tests but Buyer could delete Seller's resources. Created 3 new pages, updated 5:
+- `sources/llm-era-computer-engineering-nattee.md` — new (Thai body): both episodes summarized; Ep. 1 pedagogy enumerated as a table (not blurred into prose); Ep. 2 PoC story with dollar figures and the taste-paradox lead-in; explicit Nattee–Panutat dialogue
+- `entities/nattee-niparnan.md` — new (English, minimal): Chula CEDT faculty, cafe-grader maintainer (from Jittat + Pramook), series author; faculty name-drops catalogued without dedicated entity pages
+- `concepts/taste-paradox.md` — new (Thai-primary): recursive skill-acquisition loop; side-by-side comparison with harness-engineering (Panutat = scope of reviewability vs. Nattee = origin of the reviewer); open curricular questions on depth threshold and anchor-domain choice
+- `concepts/engineering-role-shift.md` — updated: added "Core theory becomes more important, not less" section (DS/Algo/Discrete Math as AI-verification substrate); added "Design choices pushed down to juniors" section; new source in frontmatter
+- `concepts/harness-engineering.md` — updated: added "ดูควบคู่กับ taste-paradox" comparison section framing the two as complementary at different layers (technology vs pedagogy); new source in frontmatter
+- `concepts/judgement-vs-automation.md` — updated: added "The compromise criteria rotate" section with Nattee's framework-selection table (pre-Agent "team fluency / dev speed" vs Agent-era "Agent stability / token cost"); added "Entry-level hiring signal" ($140 vs 3–4 RAs) section
+- `concepts/ai-orchestrator.md` — updated: added "Downward pressure on seniority requirements" section — orchestration work lands on juniors before they've built the judgment it requires
+- `concepts/llm-coding-pitfalls.md` — updated: added authorization-bug war story as concrete multi-pitfall illustration (scope kept too narrowly per-endpoint + weak success criterion + unchallenged default interpretation = silent cross-cutting failure)
+- `wiki/index.md` — updated: 1 new source, 1 new entity, 1 new concept

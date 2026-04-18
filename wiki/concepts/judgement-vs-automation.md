@@ -4,7 +4,7 @@ type: concept
 tags: [ai, automation, skills, work, future-of-work]
 created: 2026-04-18
 updated: 2026-04-18
-sources: ["Will AI replace 3D software?.md"]
+sources: ["Will AI replace 3D software?.md", llm-era-computer-engineering-nattee.md]
 ---
 
 # Judgement vs. Automation
@@ -40,6 +40,25 @@ Price's examples are all from 3D/visual art, but the rule generalizes cleanly:
 - **Writing** — template filler vs. argument construction.
 - **Research** — literature summarization vs. novel framing.
 
+## The compromise criteria rotate — a concrete illustration
+
+Judgement doesn't disappear when automation arrives; its *inputs* rotate. [[nattee-niparnan|Nattee Niparnan]]'s Ep. 2 PoC (2026-04-17) gives a crisp example from framework-selection:
+
+| Era | Questions that drove the choice |
+|---|---|
+| **Pre-Agent** | "What is the team fluent in?" "Which stack writes fastest?" |
+| **With Agent** | "Which framework does the Agent write *most stably* in?" "Which one burns fewer tokens?" |
+
+> "คำถามที่เมื่อ 2 ปีที่แล้วไม่มีในสมองเลย" — Nattee
+
+The act of weighing tradeoffs is unchanged — that's still judgment. But the *resources* being weighed (agent stability, token cost) are new, and a senior who ignores them will make stale choices. The judgment-heavy quadrant is not a fixed list of tasks; it's whichever tasks still require *choosing under current constraints*, and the constraints shift.
+
+See [[taste-paradox]] for the companion worry: acquiring the judgment needed to make these new tradeoffs may itself be harder in the Agent era, because hands-on practice gets skipped.
+
+## Entry-level hiring signal
+
+Price's prediction is general ("judgement survives, predictable tasks go"). Nattee surfaces the labor-market implication from the buyer side: a consulting PoC that would have hired **3–4 RAs** now hires **zero** and spends $140 on tools instead. Whatever corporate arguments exist for keeping junior pipelines alive ("someone has to grow into Senior"), the buy-side incentive to hire fewer entry-level engineers is sharpening fast. This is the pragmatic fallout of the "predictable tasks get automated" rule — junior-level work is, by definition, still predictable.
+
 ## See also
 
 - [[will-ai-replace-3d-software]]
@@ -47,4 +66,8 @@ Price's examples are all from 3D/visual art, but the rule generalizes cleanly:
 - [[andrew-price]]
 - [[engineering-role-shift]]
 - [[ai-orchestrator]]
+- [[harness-engineering]]
 - [[domain-to-ai-translator]]
+- [[taste-paradox]]
+- [[nattee-niparnan]]
+- [[llm-era-computer-engineering-nattee]]
