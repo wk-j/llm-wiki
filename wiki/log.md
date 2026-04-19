@@ -1,5 +1,63 @@
 # Log
 
+## [2026-04-20] ingest | Auto mode for Claude Code (Anthropic blog, 2026-03-24)
+Source: Anthropic blog post announcing **auto mode** — a new permission mode in [[claude-code|Claude Code]] where a classifier reviews each tool call before it runs (auto-approves safe, blocks risky like mass delete / exfiltration / malicious exec, redirects Claude, prompts user only if Claude keeps insisting). Middle path between default (ask every action) and `--dangerously-skip-permissions`. Launched as research preview on Team plan with Sonnet/Opus 4.6; later extended to Claude Code Max users with Opus 4.7 launch (already referenced in existing 4.7 announcement). Created/updated:
+- `raw/Auto mode for Claude Code.md` — saved raw
+- `sources/claude-code-auto-mode.md` — new source; how it works, classifier block list, caveats, enablement paths
+- `concepts/auto-mode.md` — new Thai-primary concept; permission-mode spectrum table (default / auto / dangerously-skip), classifier mechanics, when not to enable, cross-links to delegation-mindset / coding-harness / subagent-patterns
+- `entities/claude-code.md` — fleshed out the one-liner Auto mode bullet into full mechanics + dates + enablement commands
+- `entities/claude-opus-4-7.md` — clarified that auto mode itself shipped earlier (2026-03-24); 4.7 launch extended it to Max
+- `concepts/delegation-mindset.md` — linked auto-mode concept from the Pachaar "three moves" section
+- `index.md` — indexed new source + new concept
+
+Notable: this source predates [[claude-opus-4-7|Opus 4.7]] by ~3 weeks — auto mode is a harness-level feature tied to plan tier, not to model version. Works with Sonnet 4.6 + Opus 4.6 at launch. Classifier-gate pattern parallels harness-side [[subagent-patterns|pipeline subagents]] at a lower layer: the harness inserts the reviewer, not the user.
+
+## [2026-04-20] ingest | Claude Opus 4.7 Isn't a Drop-in Replacement for 4.6 (Akshay Pachaar)
+Source: third-party migration guide by @akshay_pachaar (X, 2026-04-20). Most content confirms the two existing Anthropic sources; net-new value is reframing the official behavior-change list as workflow problems with concrete prompt fixes. Created/updated:
+- `raw/Claude Opus 4.7 Isn't a Drop-in Replacement for 4.6.md` — saved raw
+- `sources/claude-opus-4-7-migration-pachaar.md` — new source; explicit "net-new vs. Anthropic sources" table
+- `concepts/delegation-mindset.md` — new Thai-primary concept: 4.7 triggers reasoning every user turn → front-load context in turn 1 (intent / constraints / acceptance criteria / paths); batch questions; auto mode (Shift+Tab) for trusted tasks
+- `concepts/find-vs-filter.md` — new Thai-primary concept: split code review into coverage-first find + downstream filter; concrete prompt with confidence+severity metadata; generalizes to security audit / moderation / triage; links to subagent-patterns (pipeline) and advisor-strategy (executor finds, advisor filters)
+- `entities/claude-opus-4-7.md` — added prefilled-response deprecation (starting 4.6; 400 on Mythos Preview), turn-triggers-reasoning note, literal-following-drops-code-review-recall note
+- `effort-levels.md` — noted `low` tier as third-party unverified claim; added mid-task effort toggling pattern (xhigh design → high impl → max debug)
+- `index.md` — indexed new source and two new concepts
+
+Explicit contradiction recorded: Pachaar lists 5 effort tiers (low/medium/high/xhigh/max); Anthropic docs list 4 (medium/high/xhigh/max). Flagged in source page + effort-levels.
+
+## [2026-04-19] ingest | Moving OpenCode Desktop to Electron (@brendonovich primary source)
+Source: @brendonovich's canonical X writeup (2026-03-25) — the primary source behind the earlier Grok summary. Created/updated:
+- `raw/Moving OpenCode Desktop to Electron.md` — saved raw
+- `sources/opencode-desktop-electron-brendonovich.md` — new source
+- `entities/tauri.md` — added WebKit-on-macOS/Linux caveat, CEF effort, Rust-heavy-core sweet spot
+- `entities/electron.md` — folded in WebKit-vs-Chromium parity + Bun→Node framing + bundle-size trade-off
+- `entities/opencode.md` — restructured desktop-shell section with 3 combined reasons; noted Bun-API plugin breakage deferred to OpenCode 2.0
+- `sources/opencode-tauri-to-electron.md` — added cross-reference note pointing to the primary source
+- `index.md` — indexed new source
+
+Net-new beyond the earlier Grok summary: (1) **WebKit rendering perf + style parity** on macOS/Linux was a first-class reason, not just "Chromium is more consistent"; Tauri has a CEF effort but stabilization timing is uncertain. (2) **Bun → Node migration** was underway for other reasons and unlocked the in-process architecture — it's a cascading cause, not just a consequence. (3) **Plugin fallout:** Bun-specific-API plugins stop working; full story deferred to OpenCode 2.0. (4) Tauri-fit condition stated crisply: "Rust heavy core" (Cap video encoding is the canonical fit); shell-only Rust doesn't move the needle.
+
+## [2026-04-19] ingest | What's new in Claude Opus 4.7 (Anthropic docs)
+Source: Anthropic developer docs page for Opus 4.7 — developer-facing companion to the earlier marketing announcement. Created/updated:
+- `raw/Whats new in Claude Opus 4.7 - Anthropic Docs.md` — saved raw
+- `sources/claude-opus-4-7-whats-new-docs.md` — new source (API breaking changes, behavior changes, migration)
+- `concepts/task-budgets.md` — new Thai-primary concept (beta feature; model-aware countdown; distinct from `max_tokens`)
+- `concepts/adaptive-thinking.md` — new Thai-primary concept (only thinking-on mode on 4.7; off by default; thinking content also hidden by default)
+- `entities/claude-opus-4-7.md` — added API breaking changes + behavior changes sections; linked new concepts
+- `concepts/effort-levels.md` — added 4.7 recommendation (start xhigh for coding); added "Relation to adaptive thinking" section
+- `index.md` — indexed new source + 2 new concepts
+
+Key additions beyond what the announcement covered: `thinking.budget_tokens` → 400 error (extended thinking budgets removed); non-default `temperature`/`top_p`/`top_k` → 400 error; thinking content omitted by default (silent change — streaming products will see a long pause before output); `task_budget` is advisory/model-aware while `max_tokens` is a hidden hard cap; adaptive thinking is OFF by default on 4.7.
+
+## [2026-04-18] ingest | OpenCode: Tauri to Electron switch reasons
+Source: Grok chat summarizing @brendonovich's explanation for OpenCode's desktop shell migration. Created/updated:
+- `sources/opencode-tauri-to-electron.md` — new source
+- `entities/tauri.md` — new entity (Rust desktop framework, native webviews)
+- `entities/electron.md` — new entity (Chromium + Node.js desktop framework)
+- `entities/opencode.md` — added "Desktop shell: Tauri → Electron" section + cross-links
+- `index.md` — indexed new source and two new entities
+
+Key point: not a Tauri-vs-Electron verdict; pick the shell whose main-process runtime matches where your app's heavy logic already lives. OpenCode's `opencode serve` is a JS/Bun server — Electron hosts it in-process; Tauri required a sidecar with IPC overhead and cross-platform reliability issues (especially Windows/Linux).
+
 ## [2026-04-12] init | Wiki initialized
 Set up directory structure, CLAUDE.md schema, index, and log.
 

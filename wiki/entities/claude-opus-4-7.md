@@ -3,8 +3,8 @@ title: Claude Opus 4.7
 type: entity
 tags: [ai, models, anthropic, claude, opus]
 created: 2026-04-16
-updated: 2026-04-16
-sources: [Introducing Claude Opus 4.7.md]
+updated: 2026-04-20
+sources: [Introducing Claude Opus 4.7.md, Whats new in Claude Opus 4.7 - Anthropic Docs.md, Claude Opus 4.7 Isn't a Drop-in Replacement for 4.6.md]
 ---
 
 # Claude Opus 4.7
@@ -41,9 +41,27 @@ sources: [Introducing Claude Opus 4.7.md]
 ## New controls launched alongside
 
 - **`xhigh` effort level** — see [[effort-levels]]
-- **Task budgets** (API, public beta) — token-spend ceilings across longer runs
+- **[[task-budgets|Task budgets]]** (API, public beta; beta header `task-budgets-2026-03-13`) — advisory token target across a full agentic loop; distinct from `max_tokens`
 - **`/ultrareview`** slash command in [[claude-code|Claude Code]]
-- **Auto mode** extended to Claude Code Max users
+- **[[auto-mode|Auto mode]]** extended to Claude Code Max users (the permission mode itself shipped earlier, 2026-03-24, for Team plan — see [[claude-code-auto-mode]])
+
+## API breaking changes (Messages API; Managed Agents unaffected)
+
+- **Extended thinking budgets removed** — `thinking.budget_tokens` → 400. [[adaptive-thinking|Adaptive thinking]] is the only thinking-on mode. Off by default on 4.7 — must opt in explicitly.
+- **Sampling parameters removed** — non-default `temperature` / `top_p` / `top_k` → 400. Prompt for the behavior instead.
+- **Thinking content omitted by default** — silent change; `thinking` field is empty unless `display: "summarized"` set. Product that streams reasoning to users will show a long pause.
+- **New tokenizer** — same text uses ~1.0–1.35× tokens; raise `max_tokens` headroom, revisit compaction triggers. 1M context at standard pricing (no long-context premium).
+- **Prefilled assistant responses deprecated** (starting Claude 4.6). Returns **400 error on Mythos Preview**. Redesign prompts that relied on assistant prefills to steer output shape. (Source: [[claude-opus-4-7-migration-pachaar|Pachaar migration guide]].)
+
+## Behavior changes (prompt-level)
+
+- More literal instruction following (especially at lower effort)
+- Response length calibrates to task complexity
+- Fewer tool calls and fewer subagents by default (raise effort / prompt to increase)
+- More direct, opinionated tone; fewer emoji than 4.6
+- More regular progress updates during long agentic traces — drop scaffolding added to force interim status
+- **Every user turn triggers reasoning** — multi-turn chatty prompting inflates tokens on 4.7 where it was cheap on 4.6. Front-load context into turn 1; see [[delegation-mindset]].
+- **Literal-following can drop code-review recall** when harness says "conservative" or "only high-severity" — model finds bugs, then filters them out itself. Fix: [[find-vs-filter]] — separate discovery from triage.
 
 ## Cyber posture
 

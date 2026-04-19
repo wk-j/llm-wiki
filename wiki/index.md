@@ -26,6 +26,11 @@
 - [[llm-era-computer-engineering-nattee]] — Nattee Niparnan's Thai Facebook series (Ep. 1 + Ep. 2): LLM in grader/exam pedagogy, $140 PoC with Coding Agent, "taste paradox," core theory matters more not less
 - [[alex-ker-harnesses-optimize]] — Alex Ker (@thealexker): harness as scaffolding; lean human-written CLAUDE.md, progressive disclosure, R.P.I. prompt pattern, subagent patterns, commit-to-one-harness
 - [[claude-code-subagents-docs]] — Anthropic official docs: Claude Code subagent mechanics — file format, scopes, tools/permissions, persistent memory, hooks, foreground/background, `--agent` flag
+- [[opencode-tauri-to-electron]] — OpenCode's lead engineer @brendonovich on why the desktop shell moved from Tauri to Electron: JS/Bun server runs in-process instead of as a sidecar
+- [[opencode-desktop-electron-brendonovich]] — Primary-source @brendonovich writeup of the same move: adds WebKit vs Chromium rendering, Bun → Node migration, Bun-API plugin breakage
+- [[claude-opus-4-7-whats-new-docs]] — Anthropic developer docs for Opus 4.7: API breaking changes (no thinking budgets / no sampling params / thinking content hidden), new `task_budget` beta, tokenizer change, behavior shifts
+- [[claude-opus-4-7-migration-pachaar]] — Akshay Pachaar third-party migration guide: turn-cost reasoning, delegation mindset, find-vs-filter for code review, mid-task effort toggling, multi-context-window workflow, prefilled-response deprecation
+- [[claude-code-auto-mode]] — Anthropic blog announcing auto mode (2026-03-24): classifier-gated middle path between default permission prompts and `--dangerously-skip-permissions`
 
 ## Entities
 
@@ -58,6 +63,8 @@
 - [[humanlayer]] — Open-source harness company; cited source for the "dumb zone" instruction-budget framing and the R.P.I. prompt framework
 - [[openai-codex]] — OpenAI's coding harness; converges with Claude Code on skills progressive disclosure, diverges on MCP handling
 - [[opencode]] — Open-source coding harness; loads all MCP tool definitions at startup; docs warn users to limit server count
+- [[tauri]] — Rust-based desktop app framework using OS-native webviews; small bundles, strong security; struggles when app's heavy logic lives in a non-Rust runtime
+- [[electron]] — Chromium + Node.js desktop app framework; wins when app logic is already JS/Node/Bun (runs in-process, no sidecar)
 
 ## Concepts
 
@@ -107,5 +114,10 @@
 - [[instruction-budget]] — The "dumb zone" past a few hundred instructions; attention runs out even if total tokens are modest; distinct from context-rot
 - [[progressive-disclosure]] — Lazy-load pattern for agent context: CLIs (--help discovery), Skills (name+description only), MCP tools (Claude Code tool-search 85% context reduction)
 - [[subagent-patterns]] — Parallel fan-out (breadth) vs sequential pipeline (depth); pipeline pattern parallels Panutat's review-agent harness at a different layer
+- [[task-budgets]] — Opus 4.7 beta: advisory token target across a full agentic loop; model-aware (unlike `max_tokens`); min 20k; skip for open-ended quality-critical work
+- [[adaptive-thinking]] — The only thinking-on mode on Opus 4.7; off by default; thinking content also hidden by default unless `display: "summarized"` is set
+- [[delegation-mindset]] — Opus 4.7 triggers reasoning every user turn; front-load intent/constraints/criteria/paths in turn 1 instead of chatty multi-turn guidance
+- [[find-vs-filter]] — Code-review prompting pattern: separate discovery from triage so literal-following models don't silently drop findings below your bar
+- [[auto-mode]] — Claude Code permission mode between default-prompt-every-action and `--dangerously-skip-permissions`; classifier reviews each tool call, auto-approves safe, blocks risky
 
 ## Analysis

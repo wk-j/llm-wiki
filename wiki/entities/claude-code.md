@@ -30,7 +30,7 @@ These exist because of [[context-rot]] — model quality degrades as context fil
 - **Subagents** — spawned via the Agent tool; fresh context window per agent. Markdown files with YAML frontmatter in `.claude/agents/` (project), `~/.claude/agents/` (user), or plugin-provided. Built-in set: **Explore** (Haiku, read-only), **Plan** (read-only, used in plan mode), **general-purpose** (all tools), plus helper agents like **statusline-setup** and **Claude Code Guide**. Configurable per-agent: `tools` / `disallowedTools`, `model`, `permissionMode`, `skills` (injected at startup), `mcpServers` (scoped to the subagent), `memory: user|project|local` for a persistent `MEMORY.md` directory, `background: true`, `isolation: worktree`, lifecycle `hooks`. Invoke via natural language, `@agent-<name>` mention, or `claude --agent <name>` to run a whole session on that system prompt. Subagents cannot spawn other subagents. See [[claude-code-subagents-docs]] and [[subagent-patterns]].
 - **Skills** — packaged prompts/instructions (e.g., [[forrestchang]]'s [[llm-coding-pitfalls|karpathy-guidelines]])
 - **Hooks** — shell commands triggered by harness events (configured in `settings.json`)
-- **Auto mode** — permissions option where Claude decides on the user's behalf for longer autonomous runs (extended to Max users with Opus 4.7)
+- **[[auto-mode|Auto mode]]** — middle-path permission mode: a classifier reviews each tool call and auto-approves safe ones, blocks risky ones (mass deletion, exfiltration, malicious exec), redirects Claude, and only prompts the user if Claude insists on a blocked action. Launched 2026-03-24 (Team plan research preview, Sonnet/Opus 4.6); extended to Max users with [[claude-opus-4-7|Opus 4.7]]. Admins disable via `"disableAutoMode": "disable"` in managed settings. CLI: `claude --enable-auto-mode` then **Shift+Tab**. Source: [[claude-code-auto-mode]].
 - **MCP servers** — integrate external tools via [[model-context-protocol]]; Claude Code ships a built-in MCP tool-search index so only tool names load at session start and schemas load on demand (Anthropic reports ~85% context reduction vs. harnesses that load every MCP tool definition upfront). See [[progressive-disclosure]].
 - **Fast mode** — `/fast` toggles a faster-output variant (available on Opus 4.6)
 
@@ -55,3 +55,4 @@ Enables long autonomous tasks (full-stack build in one session) but exposes [[co
 - [[progressive-disclosure]]
 - [[instruction-budget]]
 - [[subagent-patterns]]
+- [[auto-mode]]
