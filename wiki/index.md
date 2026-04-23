@@ -39,6 +39,7 @@
 - [[cyril-xbt-claude-md-guide]] — @cyrilXBT X-post (2026-04-21): opinionated 7-section CLAUDE.md template (Overview / Stack / Conventions / Never Do This / File Structure / Current Sprint / Context), global vs project layering, composition with slash commands
 - [[claude-mythos-preview-red-anthropic]] — Anthropic red.anthropic.com (2026-04): Mythos Preview autonomously finds/exploits zero-days in every major OS and browser; cyber capabilities emerged without explicit training; thousands of vulns under coordinated disclosure; Project Glasswing restricts release
 - [[google-cloud-long-running-agent-patterns]] — Google Cloud Tech (Addy Osmani + Shubham Saboo, 2026-04-22): 5 design patterns for 7-day long-running agents on Agent Runtime — Checkpoint-and-Resume / Delegated Approval / Memory-Layered Context / Ambient Processing / Fleet Orchestration; governance triad (Identity/Registry/Gateway)
+- [[stop-slop-source]] — A skill for removing AI tells from prose
 
 ## Entities
 
@@ -82,6 +83,7 @@
 - [[project-glasswing]] — Anthropic initiative using Mythos Preview to secure critical software before Mythos-class models become broadly available; coordinated vulnerability disclosure
 - [[google-cloud]] — Google's enterprise cloud division; ships Gemini Enterprise Agent Platform; Cloud Next '26 introduced 7-day long-running Agent Runtime
 - [[gemini-enterprise-agent-platform]] — Google Cloud managed agent platform: Agent Runtime (7-day state), ADK, Mission Control, Memory Bank/Profiles, Agent Identity/Registry/Gateway, Observability, BYOC
+- [[hardik-pandya]] — Creator of the Stop Slop skill
 
 ## Concepts
 
@@ -144,5 +146,6 @@
 - [[claude-md]] — Claude Code's project-level markdown file as persistent system prompt: 3-location hierarchy, cyrilXBT 7-section template, tension with [[instruction-budget]] (Cyril's volume vs Alex Ker's minimalism), composition with slash commands
 - [[model-cyber-capability-emergence]] — Offensive cyber capability as inevitable side effect of general model improvement; Mythos Preview case study; friction-based defense weakens; hard barriers (KASLR, W^X) remain critical
 - [[long-running-agents]] — 5 design patterns for agents that stay alive for hours to days: Checkpoint-and-Resume, Delegated Approval (pause-in-place HITL), Memory-Layered Context (with memory-drift governance), Ambient Processing, Fleet Orchestration
+- [[stop-slop-concept]] — Technique for making AI writing more human-like
 
 ## Analysis

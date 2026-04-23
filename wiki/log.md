@@ -1,5 +1,16 @@
 # Log
 
+## [2026-04-23] ingest | Stop Slop
+
+Ingested the "Stop Slop" GitHub repository by Hardik Pandya. This is a skill for LLMs to avoid "AI tells" and write more human-like prose.
+
+- Created source page: `[[stop-slop-source]]`
+- Created concept page: `[[stop-slop-concept]]`
+- Created entity page: `[[hardik-pandya]]`
+- Updated `[[index]]`
+
+
+
 ## [2026-04-23] convention | Thai-primary rewrite of all concept and entity pages
 
 In accordance with the new bilingual content policy, rewrote all existing concept (56) and entity (40) pages to be Thai-primary. Source summary pages remain in English. This completes the migration of the core wiki content to Thai.
