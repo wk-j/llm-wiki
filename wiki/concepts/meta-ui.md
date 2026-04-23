@@ -3,40 +3,40 @@ title: Meta UI
 type: concept
 tags: [ui, game-design, immersion, feedback]
 created: 2026-04-14
-updated: 2026-04-14
+updated: 2026-04-23
 sources: [The four horsemen of game UI design.md]
 ---
 
 # Meta UI
 
-UI elements that are contextual to the game narrative and tied to the character's condition, but not represented within the game environment. They create an emotional and physiological link between player and character through screen-level effects.
+UI elements ที่เชื่อมโยงกับเรื่องราวในเกมและผูกกับสภาวะของตัวละคร แต่ไม่ได้แสดงผลอยู่ภายในสภาพแวดล้อมของเกมโดยตรง มันสร้างการเชื่อมโยงทางอารมณ์และสรีรวิทยาระหว่างผู้เล่นและตัวละครผ่านเอฟเฟกต์บนหน้าจอ
 
-## Characteristics
+## ลักษณะเฉพาะ
 
-- Not part of the 3D world — applied as screen effects (overlays, post-processing)
-- Tied to the character's physical or mental state rather than abstract game stats
-- Character is usually unaware of these effects, though they reflect the character's condition
-- Creates empathy by making the player "feel" what the character feels
+-   ไม่ได้เป็นส่วนหนึ่งของโลก 3D — แต่ถูกนำมาใช้เป็นเอฟเฟกต์บนหน้าจอ (overlays, post-processing)
+-   ผูกกับสภาวะทางร่างกายหรือจิตใจของตัวละคร มากกว่าค่าสถิติที่เป็นนามธรรมของเกม
+-   โดยปกติแล้วตัวละครจะไม่รับรู้ถึงเอฟเฟกต์เหล่านี้ แม้ว่ามันจะสะท้อนถึงสภาวะของตัวละครก็ตาม
+-   สร้างความเห็นอกเห็นใจโดยทำให้ผู้เล่น "รู้สึก" ถึงสิ่งที่ตัวละครกำลังรู้สึก
 
-## Common Examples
+## ตัวอย่างที่พบบ่อย
 
-- Blood splatters or red screen edges indicating low health
-- Screen blur or shake showing exhaustion or impact
-- Dirt accumulation on the "camera" in racing games
-- Color desaturation as the character nears death
-- Flashing or pulsing screen borders signaling danger
+-   รอยเลือดกระเซ็นหรือขอบหน้าจอสีแดงที่บ่งบอกว่าพลังชีวิตเหลือน้อย
+-   หน้าจอเบลอหรือสั่นเพื่อแสดงความเหนื่อยล้าหรือผลกระทบจากการโจมตี
+-   คราบสกปรกที่สะสมบน "กล้อง" ในเกมแข่งรถ
+-   สีของหน้าจอที่ซีดลงเมื่อตัวละครใกล้ตาย
+-   ขอบหน้าจอที่กระพริบหรือเป็นจังหวะเพื่อส่งสัญญาณอันตราย
 
-## Trade-offs
+## ข้อดีและข้อเสีย
 
-| Strength | Limitation |
+| จุดแข็ง | ข้อจำกัด |
 |---|---|
-| Emotionally immersive — player feels character's state | Can be vague and hard to interpret precisely |
-| Non-intrusive, doesn't permanently obstruct the screen | Accessibility concerns: blur/shake/flash problematic for some players |
-| Enhances narrative connection | Novice players may miss the cues entirely |
+| สร้างความดื่มด่ำทางอารมณ์ — ผู้เล่นรู้สึกถึงสภาวะของตัวละคร | อาจมีความคลุมเครือและตีความได้ยากอย่างแม่นยำ |
+| ไม่รบกวนสายตา, ไม่บดบังหน้าจออย่างถาวร | ข้อกังวลด้าน Accessibility: การเบลอ/สั่น/กระพริบอาจเป็นปัญหาสำหรับผู้เล่นบางคน |
+| เสริมสร้างการเชื่อมโยงกับเรื่องราว | ผู้เล่นใหม่อาจไม่ทันสังเกตเห็นสัญญาณเหล่านี้ |
 
-Games should offer options to disable meta UI effects for accessibility (motion sensitivity, epilepsy, color blindness).
+เกมควรมีตัวเลือกให้ปิดเอฟเฟกต์ของ meta UI เพื่อ accessibility (สำหรับผู้ที่ไวต่อการเคลื่อนไหว, โรคลมบ้าหมู, หรือตาบอดสี)
 
-## See also
+## ดูเพิ่มเติม
 
 - [[diegetic-ui]]
 - [[non-diegetic-ui]]

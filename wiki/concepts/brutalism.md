@@ -3,30 +3,30 @@ title: Brutalism
 type: concept
 tags: [ui, design, retro, bold]
 created: 2026-04-12
-updated: 2026-04-12
-sources: [UI style categories.md]
+updated: 2026-04-23
+sources: [ui-style-categories]
 ---
 
 # Brutalism
 
-A UI style inspired by Brutalist architecture — raw, unpolished, deliberately stripped of decorative convention. Prioritizes function and stark visual impact over polish.
+**Brutalism** ใน UI design คือสไตล์ที่ได้รับแรงบันดาลใจจากสถาปัตยกรรมแบบ Brutalist — เน้นความดิบ, ไม่ขัดเกลา, และจงใจละทิ้งการตกแต่งที่สวยงาม เพื่อให้ความสำคัญกับฟังก์ชันการใช้งานและสร้างผลกระทบทางสายตาที่ชัดเจนและรุนแรง
 
-## Visual characteristics
+## ลักษณะทางภาพ (Visual Characteristics)
 
-- Bold, heavy typography (often monospace or display fonts)
-- Sharp borders, no border-radius
-- High contrast, limited color palette
-- Minimal or no hover effects, transitions, or animations
-- Deliberately "ugly" or anti-aesthetic — rejects design trends
+- **Typography:** ตัวอักษรหนา, หนักแน่น (มักเป็นฟอนต์ Monospace หรือ Display)
+- **Borders:** เส้นขอบที่คมชัด, ไม่มีการใช้ `border-radius` (ไม่มีขอบมน)
+- **Color:** คอนทราสต์สูง, ใช้สีในวงจำกัด
+- **Effects:** มี hover effects, transitions, หรือ animations น้อยมากหรือไม่มีเลย
+- **Aesthetic:** จงใจให้ดู "น่าเกลียด" หรือต่อต้านความสวยงาม (anti-aesthetic) — ปฏิเสธเทรนด์การออกแบบกระแสหลัก
 
-## Variants
+## รูปแบบย่อย (Variants)
 
-- **Web Brutalism** — raw HTML aesthetic, visible structure, default browser styling
-- **Brutalist Futurism** — brutalist rawness applied to sci-fi contexts: heavy type, sharp borders, red accents, blinking indicators. Confrontational by design.
+- **Web Brutalism:** สไตล์ที่ดูเหมือน HTML ดิบๆ, โชว์โครงสร้างอย่างชัดเจน, และใช้สไตล์พื้นฐานของเบราว์เซอร์
+- **Brutalist Futurism:** การนำความดิบของ Brutalism ไปใช้ในบริบท sci-fi: ตัวอักษรหนัก, ขอบคม, มีสีแดงเป็น accent, และไฟกระพริบเพื่อบ่งบอกสถานะ เป็นการออกแบบที่จงใจให้ดูแข็งกร้าวและท้าทาย
 
-## Related styles
+## สไตล์ที่เกี่ยวข้อง
 
-Brutalism sits on a spectrum with [[anti-design]] and maximalism. Where minimalism removes to achieve elegance, brutalism removes to achieve directness.
+Brutalism อยู่บนสเปกตรัมเดียวกับ **Anti-Design** และ **Maximalism** ในขณะที่ Minimalism คือการ "เอาออก" เพื่อให้ได้ความสง่างาม, Brutalism คือการ "เอาออก" เพื่อให้ได้ความตรงไปตรงมา
 
 ## See also
 

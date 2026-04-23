@@ -3,79 +3,79 @@ title: Engineering Role Shift
 type: concept
 tags: [ai, software-engineering, career, roles]
 created: 2026-04-15
-updated: 2026-04-18
+updated: 2026-04-23
 sources: [software-engineer-role-ai-era.md, llm-era-computer-engineering-nattee.md]
 ---
 
 # Engineering Role Shift / การเปลี่ยนขั้วของบทบาทวิศวกร
 
-ข้อเสนอหลัก คือ AI ไม่ได้ "ลบ" งานวิศวกรรมซอฟต์แวร์ทิ้ง แต่ **กระจายงานออกจากตรงกลาง** ของ pipeline การพัฒนา ไปยังสองปลายแทน
+ข้อเสนอหลักคือ AI ไม่ได้ "ลบ" งานวิศวกรรมซอฟต์แวร์ทิ้ง แต่เป็นการ **กระจายงานออกจากส่วนกลาง** ของ pipeline การพัฒนาไปยังสองปลายทางแทน
 
-## โครงสร้างทวิขั้ว (the bimodal shift)
+## โครงสร้างทวิขั้ว (The Bimodal Shift)
 
-งานวิศวกรรมซอฟต์แวร์แบ่งเป็นสามโซนที่แยกทิศทางกันภายใต้ AI:
+งานวิศวกรรมซอฟต์แวร์แบ่งออกเป็นสามโซนที่เปลี่ยนแปลงไปในทิศทางที่ต่างกันภายใต้อิทธิพลของ AI:
 
-- **ต้นน้ำ (upstream) — ขยาย:** งาน requirements gathering, architectural decisions, problem framing, domain analysis เวลาที่ใช้ในโซนนี้ *เพิ่มขึ้น* เพราะ AI จะทำงานได้ดีแค่ไหนขึ้นอยู่กับ spec ที่มันได้รับ
-- **ตรงกลาง (middle) — หด:** งาน boilerplate, CRUD scaffolding, routine logic, การจำ syntax, refactor ซ้ำ ๆ AI ทำให้ได้หมด
-- **ปลายน้ำ (downstream) — ขยาย:** งาน code review, evaluation, verification, security auditing, การควบคุม output ของ AI เวลาที่ใช้ในโซนนี้ *เพิ่มขึ้น* เพราะ output ของ AI "ดูมั่นใจแต่พังเงียบ ๆ"
+-   **ต้นน้ำ (Upstream) — ขยายตัว:** งานที่เกี่ยวข้องกับการรวบรวม requirements, การตัดสินใจทางสถาปัตยกรรม, การกำหนดขอบเขตของปัญหา, และการวิเคราะห์โดเมน เวลาที่ใช้ในโซนนี้ *เพิ่มขึ้น* เนื่องจากประสิทธิภาพของ AI ขึ้นอยู่กับ spec ที่ได้รับ
+-   **ตรงกลาง (Middle) — หดตัว:** งาน boilerplate, CRUD scaffolding, logic ทั่วไป, การจำ syntax, และการ refactor ที่ซ้ำซาก AI สามารถทำทั้งหมดนี้ได้
+-   **ปลายน้ำ (Downstream) — ขยายตัว:** งาน code review, การประเมินผล, การตรวจสอบ, security auditing, และการควบคุมผลลัพธ์ของ AI เวลาที่ใช้ในโซนนี้ *เพิ่มขึ้น* เพราะผลลัพธ์ของ AI "ดูน่าเชื่อถือแต่อาจมีข้อผิดพลาดซ่อนอยู่"
 
-ความสนใจของวิศวกรถูกดึงไปสองปลายพร้อมกัน
+ความสนใจของวิศวกรจึงถูกดึงไปยังสองปลายทางนี้พร้อมกัน
 
-## ทำไมตรงกลางถึงหาย
+## ทำไมส่วนกลางถึงหายไป
 
-ตรงกลางของงานซอฟต์แวร์คือส่วนที่:
+ส่วนกลางของงานซอฟต์แวร์คือส่วนที่:
 
-1. **Volume สูงและซ้ำ ๆ** — LLM เก่งกับความถี่ของ pattern
-2. **Spec ชัดเจน** — แค่ ticket หรือ function signature ก็มี context พอ
-3. **Verify ง่าย** — tests, compilers, type checkers จับ error ส่วนใหญ่ได้
+1.  **มีปริมาณงานสูงและซ้ำซาก** — LLM เก่งในการจัดการกับ pattern ที่เกิดซ้ำๆ
+2.  **มี spec ที่ชัดเจน** — เพียงแค่ ticket หรือ function signature ก็มี context เพียงพอ
+3.  **ตรวจสอบได้ง่าย** — tests, compilers, type checkers สามารถจับข้อผิดพลาดส่วนใหญ่ได้
 
-เงื่อนไขสามข้อนี้พอดีกับสภาวะที่ LLM ให้คำตอบถูกต้องได้เร็วกว่ามนุษย์
+เงื่อนไขสามข้อนี้เหมาะสมกับสภาวะที่ LLM สามารถให้คำตอบที่ถูกต้องได้เร็วกว่ามนุษย์
 
-## ทำไมสองปลายถึงขยาย
+## ทำไมสองปลายทางถึงขยายตัว
 
-สองปลายต้าน automation ได้เพราะ:
+สองปลายทางนี้ต้านทาน automation ได้เพราะ:
 
-- **ต้นน้ำ** ต้องเจรจากับความกำกวม (ambiguity) กับคน เข้าใจ business context ที่ไม่ได้พูดออกมา และตัดสินใจ tradeoff ภายใต้ข้อมูลไม่ครบ
-- **ปลายน้ำ** ต้องสังเกต *สิ่งที่ไม่ได้อยู่ตรงนั้น* — silent bug, architectural misfit, ช่องโหว่ security งานแบบนี้ยากกว่าการ generate เพราะต้องมี mental model ที่ AI อาจจะไม่มี
+-   **ต้นน้ำ** ต้องจัดการกับความกำกวม (ambiguity) และสื่อสารกับคน, เข้าใจ business context ที่ไม่ได้ระบุไว้, และทำการตัดสินใจ tradeoff ภายใต้ข้อมูลที่ไม่ครบถ้วน
+-   **ปลายน้ำ** ต้องสังเกต *สิ่งที่ไม่ได้ปรากฏอยู่* — silent bug, architectural misfit, ช่องโหว่ด้านความปลอดภัย งานประเภทนี้ยากกว่าการ generate เพราะต้องใช้ mental model ที่ AI อาจไม่มี
 
-ดู [[llm-coding-pitfalls]] สำหรับ taxonomy ของ [[andrej-karpathy|Karpathy]] ว่าทำไม output ของ AI ถึงพังเงียบ ๆ — งาน Quality Gatekeeper ดำรงอยู่ได้ก็เพราะ failure mode พวกนี้
+ดู [[llm-coding-pitfalls]] สำหรับ taxonomy ของ [[andrej-karpathy|Karpathy]] เกี่ยวกับสาเหตุที่ผลลัพธ์ของ AI อาจมีข้อผิดพลาดซ่อนอยู่ — งาน Quality Gatekeeper ยังคงมีความสำคัญเพราะ failure mode เหล่านี้
 
 ## การประเมินค่าทักษะใหม่
 
 | ทักษะที่มูลค่าลดลง | ทักษะที่มูลค่าเพิ่มขึ้น |
 |---|---|
-| Writing boilerplate | System design |
-| Memorizing syntax | Problem analysis |
-| Basic CRUD | Domain knowledge |
-| Repetitive refactoring | Architectural judgment |
-| Routine test writing | Debugging complex issues |
+| การเขียน boilerplate | System design |
+| การจำ syntax | การวิเคราะห์ปัญหา |
+| Basic CRUD | ความรู้ในโดเมน |
+| การ refactor ที่ซ้ำซาก | วิจารณญาณทางสถาปัตยกรรม |
+| การเขียน routine test | การดีบักปัญที่ซับซ้อน |
 
-เส้นเชื่อมร่วมกัน คือ **judgment** และ **taste** ทบต้น ส่วน **recall** และ **throughput** เฟ้อลงเรื่อย ๆ
+เส้นเชื่อมร่วมกันคือ **judgment** และ **taste** ซึ่งมีมูลค่าเพิ่มขึ้น ในขณะที่ **recall** และ **throughput** มีมูลค่าลดลง
 
-## ทฤษฎีแกนยิ่งสำคัญมากขึ้น ไม่ใช่น้อยลง
+## ทฤษฎีหลักยิ่งมีความสำคัญมากขึ้น
 
-ข้อสังเกตที่พลาดง่ายจาก [[nattee-niparnan|Nattee Niparnan]] (Ep. 2, 2026-04-17): วิชาแกนพื้นฐาน — **Data Structure, Algorithm, Discrete Math** — **มูลค่าเพิ่มขึ้น** ในยุค Agent ไม่ใช่ลดลง เหตุผลคือ วิชาพวกนี้จะเลิกเป็น "ทฤษฎีบนกระดาน" และกลายเป็น **substrate สำหรับ verify output ของ AI** คุณจะ "ต่อมเอ๊ะ" กับตัวเลือก algorithm ของ Agent ไม่ได้เลย ถ้าไม่เคยเรียนว่าทำไม Dijkstra ถึงใช้กับ negative weight ไม่ได้
+ข้อสังเกตจาก [[nattee-niparnan|Nattee Niparnan]] (Ep. 2, 2026-04-17): วิชาพื้นฐาน — **Data Structure, Algorithm, Discrete Math** — **มีมูลค่าเพิ่มขึ้น** ในยุคของ Agent ไม่ใช่ลดลง เหตุผลคือวิชาเหล่านี้จะไม่ได้เป็นเพียง "ทฤษฎีบนกระดาน" แต่จะกลายเป็น **พื้นฐานในการตรวจสอบผลลัพธ์ของ AI** คุณจะไม่สามารถ "ตั้งคำถาม" กับ algorithm ที่ Agent เลือกได้เลยหากไม่เคยเรียนว่าทำไม Dijkstra ถึงใช้กับ negative weight ไม่ได้
 
 > "ยิ่งมี Agent ยิ่งต้องแม่นเรื่องพวกนี้มากขึ้น ไม่ใช่น้อยลง" — Nattee
 
-นี่คือภาพกระจกของตรงกลางที่หายไป — ทักษะ *throughput* เฟ้อ ทักษะ *verification* เพิ่มมูลค่า และสิ่งที่ปลดล็อก verification ได้คือทฤษฎี [[taste-paradox]] อธิบายต่อว่า *ทำไม* ต้องเรียนด้วยวิธีเดิมอยู่ดี ทั้งที่ Agent รับงานระดับผิวไปแล้ว
+นี่คือภาพสะท้อนของส่วนกลางที่หายไป — ทักษะ *throughput* มีมูลค่าลดลง ในขณะที่ทักษะ *verification* มีมูลค่าเพิ่มขึ้น และสิ่งที่ปลดล็อกการ verification ได้คือความรู้ทางทฤษฎี [[taste-paradox]] อธิบายเพิ่มเติมว่า *ทำไม* ยังต้องเรียนด้วยวิธีเดิม แม้ว่า Agent จะเข้ามาทำงานในระดับผิวเผินแล้วก็ตาม
 
-## Design choices ถูกดันลงสู่จูเนียร์
+## Design choices ถูกผลักดันไปยัง junior
 
-ข้อสังเกตที่สองจาก Nattee: การตัดสินใจแบบ *"เลือก framework ไหน ใช้ library ไหน ทำไมต้อง abstract แบบนี้"* เคยเป็นงานของ Senior Engineer แต่ Agent เข้ามายึด implementation layer ดังนั้น **บัณฑิตใหม่ถูกดันขึ้นไปตัดสินใจเรื่อง architecture ที่สมัยก่อนกว่าจะได้แตะต้องต้องผ่านงานหลายปี** ส่วนที่ขยายของต้นน้ำจึงไปตกที่วิศวกรที่มีประสบการณ์น้อยที่สุด ซึ่งทำให้ปัญหา [[taste-paradox]] ทบเข้าไปอีก — เด็กใหม่ต้องใช้ judgment ที่ยังสะสมไม่ทัน ดู [[ai-orchestrator]] สำหรับ framing ระดับระบบของแรงดันขึ้นนี้
+ข้อสังเกตที่สองจาก Nattee: การตัดสินใจเช่น *"เลือก framework ไหน ใช้ library อะไร ทำไมต้อง abstract แบบนี้"* เคยเป็นงานของ Senior Engineer แต่เมื่อ Agent เข้ามาจัดการ implementation layer **บัณฑิตใหม่จึงถูกผลักดันให้ต้องตัดสินใจเรื่อง architecture ที่ในอดีตต้องใช้เวลาหลายปีกว่าจะได้ทำ** ส่วนที่ขยายของต้นน้ำจึงตกเป็นภาระของวิศวกรที่มีประสบการณ์น้อยที่สุด ซึ่งทำให้ปัญหา [[taste-paradox]] รุนแรงขึ้น — เด็กใหม่ต้องใช้วิจารณญาณที่ยังสะสมไม่เพียงพอ ดู [[ai-orchestrator]] สำหรับกรอบความคิดเกี่ยวกับแรงกดดันนี้ในระดับระบบ
 
 ## บทบาทใหม่ที่เกิดขึ้น
 
-การเปลี่ยนขั้วนี้ก่อให้เกิดบทบาทใหม่หกแบบ (ตามต้นทาง):
+การเปลี่ยนแปลงนี้ก่อให้เกิดบทบาทใหม่หกแบบ (ตามแหล่งข้อมูล):
 
-- [[ai-orchestrator]] — คุม pipeline ของ AI agents (นิยาม senior developer ใหม่)
-- Systems Architect — เจ้าของคำถาม *what* และ *why*
-- Quality Gatekeeper — จับสิ่งที่ AI พลาด
-- [[domain-to-ai-translator]] — เปลี่ยน requirement ฟุ้ง ๆ ให้กลายเป็น spec ที่ execute ได้
-- AI Tool Builder — สร้าง RAG, agent framework, [[model-context-protocol|MCP]] server, evals
-- Governance & Safety Owner — compliance และ risk สำหรับระบบ AI
+-   [[ai-orchestrator]] — ผู้ควบคุม pipeline ของ AI agents (นิยามใหม่ของ senior developer)
+-   Systems Architect — ผู้รับผิดชอบคำถาม *what* และ *why*
+-   Quality Gatekeeper — ผู้ค้นหาสิ่งที่ AI พลาด
+-   [[domain-to-ai-translator]] — ผู้เปลี่ยน requirement ที่คลุมเครือให้เป็น spec ที่สามารถ execute ได้
+-   AI Tool Builder — ผู้สร้าง RAG, agent framework, [[model-context-protocol|MCP]] server, evals
+-   Governance & Safety Owner — ผู้รับผิดชอบ compliance และ risk สำหรับระบบ AI
 
-## See also
+## ดูเพิ่มเติม
 
 - [[software-engineer-role-ai-era]]
 - [[ai-orchestrator]]

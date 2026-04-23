@@ -3,32 +3,33 @@ title: Model Context Protocol (MCP)
 type: concept
 tags: [mcp, ai-agents, developer-tools, protocols]
 created: 2026-04-13
-updated: 2026-04-13
+updated: 2026-04-23
 sources: [abhigyanpatwariGitNexus GitNexus The Zero-Server Code Intelligence Engine.md]
 ---
 
 # Model Context Protocol (MCP)
 
-An open protocol for connecting AI agents to external tools, data sources, and services. MCP provides a standardized interface so that tools built once can be used by any compatible AI agent — Claude Code, Cursor, Codex, Windsurf, OpenCode, and others.
+เป็น protocol แบบเปิดสำหรับเชื่อมต่อ AI agents เข้ากับเครื่องมือ, แหล่งข้อมูล, และบริการภายนอก MCP มี interface ที่เป็นมาตรฐาน เพื่อให้เครื่องมือที่สร้างขึ้นครั้งเดียวสามารถใช้งานได้กับ AI agent ใดๆ ที่เข้ากันได้ — เช่น Claude Code, Cursor, Codex, Windsurf, OpenCode, และอื่นๆ
 
-## How it works
+## การทำงาน
 
-An MCP server exposes:
-- **Tools** — callable functions the agent can invoke (e.g., search, analyze, rename)
-- **Resources** — readable data the agent can access (e.g., schema definitions, statistics)
-- **Prompts** — guided workflow templates for common tasks
+MCP server จะเปิดเผย:
 
-The server communicates via stdio (for local CLI tools) or HTTP. The AI agent discovers available tools and calls them as needed during its reasoning process.
+-   **Tools** — ฟังก์ชันที่ agent สามารถเรียกใช้ได้ (เช่น search, analyze, rename)
+-   **Resources** — ข้อมูลที่ agent สามารถเข้าถึงเพื่ออ่านได้ (เช่น schema definitions, statistics)
+-   **Prompts** — workflow templates สำหรับงานทั่วไป
 
-## Why it matters
+เซิร์ฟเวอร์สื่อสารผ่าน stdio (สำหรับเครื่องมือ CLI ในเครื่อง) หรือ HTTP AI agent จะค้นพบเครื่องมือที่มีอยู่และเรียกใช้ตามความจำเป็นในระหว่างกระบวนการ reasoning
 
-Without MCP, every tool integration is a custom adapter per editor/agent. With MCP, a tool like [[gitnexus]] implements one server and works across all compatible agents. This creates an ecosystem where tool developers build once and agent developers consume freely.
+## ความสำคัญ
 
-## Example: GitNexus MCP integration
+หากไม่มี MCP, การรวมเครื่องมือทุกครั้งจะเป็นการสร้าง custom adapter สำหรับแต่ละ editor/agent แต่ด้วย MCP, เครื่องมืออย่าง [[gitnexus]] สามารถ implement server เพียงครั้งเดียวและทำงานได้กับ agent ทั้งหมดที่เข้ากันได้ ซึ่งสร้าง ecosystem ที่นักพัฒนาเครื่องมือสร้างเพียงครั้งเดียว และนักพัฒนา agent สามารถนำไปใช้ได้อย่างอิสระ
 
-[[gitnexus]] exposes 16 tools via MCP including `query`, `context`, `impact`, `detect_changes`, `rename`, and `cypher`. It also provides resource URIs for repo metadata and prompts for guided workflows. Claude Code gets the deepest integration with additional hooks (PreToolUse/PostToolUse) that enrich searches with graph context and auto-reindex after commits.
+## ตัวอย่าง: การรวม GitNexus MCP
 
-## See also
+[[gitnexus]] เปิดเผยเครื่องมือ 16 อย่างผ่าน MCP รวมถึง `query`, `context`, `impact`, `detect_changes`, `rename`, และ `cypher` นอกจากนี้ยังให้ resource URIs สำหรับ metadata ของ repo และ prompts สำหรับ workflow ที่มีคำแนะนำ Claude Code มีการรวมที่ลึกที่สุดด้วย hooks เพิ่มเติม (PreToolUse/PostToolUse) ที่เพิ่มประสิทธิภาพการค้นหาด้วย graph context และทำการ re-index อัตโนมัติหลังจากการ commit
+
+## ดูเพิ่มเติม
 
 - [[gitnexus]]
 - [[code-knowledge-graphs]]

@@ -1,5 +1,13 @@
 # Log
 
+## [2026-04-23] convention | Thai-primary rewrite of all concept and entity pages
+
+In accordance with the new bilingual content policy, rewrote all existing concept (56) and entity (40) pages to be Thai-primary. Source summary pages remain in English. This completes the migration of the core wiki content to Thai.
+
+- Updated `CLAUDE.md` to reflect the new Thai-primary writing style.
+- Rewrote all 56 files in `wiki/concepts/` to Thai.
+- Rewrote all 40 files in `wiki/entities/` to Thai.
+
 ## [2026-04-23] ingest | 5 Agent Design Patterns for Long-running AI Agents (Google Cloud Tech, Addy Osmani + Shubham Saboo)
 
 Source: <https://x.com/GoogleCloudTech/status/2046989964077146490> — 2026-04-22 X post + Google Cloud blog by Addy Osmani (@addyosmani) and Shubham Saboo (@Saboo_Shubham_). Announces Cloud Next '26 feature: Agent Runtime now supports 7-day long-running agent state. Created/updated:

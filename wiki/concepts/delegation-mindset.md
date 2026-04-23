@@ -3,65 +3,65 @@ title: Delegation Mindset
 type: concept
 tags: [ai, prompting, claude, claude-code, coding-harness, workflow]
 created: 2026-04-20
-updated: 2026-04-20
+updated: 2026-04-23
 sources: [Claude Opus 4.7 Isn't a Drop-in Replacement for 4.6.md]
 ---
 
 # Delegation Mindset / วิธีคิดแบบมอบงาน
 
-แนวคิดการคุยกับ [[claude-opus-4-7|Opus 4.7]] เหมือนมอบงานให้ **engineer ที่เก่งและอยู่ห่าง** ไม่ใช่คู่ pair programming ที่นั่งข้างกัน ที่มา: [[claude-opus-4-7-migration-pachaar|Akshay Pachaar]] สังเกตว่าพอ upgrade จาก 4.6 มา 4.7 แล้วค่า token พุ่งขึ้นเป็นเท่าตัวทั้ง ๆ ที่ prompt เหมือนเดิม ปัญหาไม่ได้อยู่ที่ model แต่อยู่ที่ **สไตล์การคุย**.
+แนวคิดการสื่อสารกับ [[claude-opus-4-7|Opus 4.7]] เสมือนการมอบหมายงานให้ **วิศวกรที่เก่งแต่อยู่ห่างไกล** ไม่ใช่คู่ pair programming ที่นั่งอยู่ข้างๆ ที่มาของแนวคิดนี้คือ [[claude-opus-4-7-migration-pachaar|Akshay Pachaar]] ซึ่งสังเกตว่าเมื่ออัปเกรดจาก 4.6 เป็น 4.7 ค่า token พุ่งสูงขึ้นเป็นเท่าตัวทั้งที่ใช้ prompt เหมือนเดิม ปัญหานี้ไม่ได้อยู่ที่ตัว model แต่อยู่ที่ **สไตล์การสื่อสาร**
 
-## ทำไมสไตล์เดิมเจ๊ง
+## ทำไมสไตล์เดิมถึงไม่ได้ผล
 
-บน 4.6 คุณแชทเป็นรอบ ๆ ได้สบาย — ถาม 2 คำ ตอบ 2 คำ ใส่ constraint เพิ่มทีหลัง ไม่เสียหาย
+บน 4.6, คุณสามารถแชทแบบสั้นๆ ไปมาได้สบายๆ — ถามสองคำ ตอบสองคำ แล้วค่อยเพิ่มข้อจำกัดทีหลังได้โดยไม่มีปัญหา
 
-บน 4.7 ทุก user turn = ทริกเกอร์ reasoning รอบใหม่ ([[adaptive-thinking]]). model คิดลึกทุกครั้งที่เราพิมพ์อะไรเข้าไป ไม่ว่า turn นั้นจะสมควรคิดลึกหรือไม่ พอคุยเป็นรอบเล็ก ๆ หลาย turn ก็เลยเสีย token reasoning ซ้ำแล้วซ้ำเล่าโดยไม่ได้คุณภาพเพิ่มตามสัดส่วน
+บน 4.7, ทุก user turn จะกระตุ้นให้เกิด reasoning รอบใหม่ ([[adaptive-thinking]]) model จะคิดอย่างลึกซึ้งทุกครั้งที่เราพิมพ์อะไรเข้าไป ไม่ว่า turn นั้นจะสมควรต้องคิดลึกหรือไม่ก็ตาม ดังนั้น เมื่อเราคุยเป็นรอบเล็กๆ หลายๆ turn จะทำให้เสีย token reasoning ไปซ้ำแล้วซ้ำเล่าโดยที่คุณภาพไม่ได้เพิ่มขึ้นตามสัดส่วน
 
-พูดง่าย ๆ: **ต้นทุนต่อ user turn แพงขึ้น คุณภาพต่อ turn ก็ไม่ได้เพิ่มตาม** ถ้ายังเน้นถี่ ๆ สั้น ๆ เหมือนเดิม ได้ขาดทุนแน่นอน
+พูดง่ายๆ คือ: **ต้นทุนต่อ user turn แพงขึ้น แต่คุณภาพต่อ turn ไม่ได้เพิ่มขึ้นตาม** หากยังคงเน้นการสื่อสารที่สั้นและบ่อยเหมือนเดิม จะทำให้ขาดทุนแน่นอน
 
-## สามท่าหลักที่ Pachaar แนะนำ
+## สามเทคนิคหลักที่ Pachaar แนะนำ
 
-### 1) ยัดทุกอย่างไว้ใน turn แรก
+### 1) รวมทุกอย่างไว้ใน turn แรก
 
-เขียน prompt เดียวที่ครบทั้ง:
+เขียน prompt เดียวที่ครอบคลุมทุกอย่าง:
 
-- **intent** — อยากได้อะไรจริง ๆ
-- **constraints** — ข้อจำกัด (เทคโนโลยี, สไตล์, performance)
-- **acceptance criteria** — จบงานเมื่อไหร่ถึงเรียกว่าผ่าน
-- **file paths** — ชี้ไฟล์ที่เกี่ยวข้องให้ชัด
+-   **Intent** — สิ่งที่ต้องการจริงๆ
+-   **Constraints** — ข้อจำกัด (เทคโนโลยี, สไตล์, performance)
+-   **Acceptance criteria** — งานจะเสร็จเมื่อไหร่ถึงจะเรียกว่าผ่าน
+-   **File paths** — ระบุไฟล์ที่เกี่ยวข้องให้ชัดเจน
 
-prompt สั้นแบบคลุมเครือที่ค่อย ๆ เติม context หลาย turn = แพงและคุณภาพตก ทั้งคู่
+prompt ที่สั้นและคลุมเครือแล้วค่อยๆ เติม context ในหลายๆ turn จะทำให้สิ้นเปลืองและคุณภาพงานลดลง
 
-### 2) รวมคำถามเป็นชุด (batch)
+### 2) รวมคำถามเป็นชุด (Batch)
 
-ถ้ามี 3 คำถามเกี่ยวกัน อย่าถามทีละข้อ รวมเป็น message เดียว model มี context พอเดินต่อเองโดยไม่ต้อง check-in กับเราทุกก้าว
+หากมี 3 คำถามที่เกี่ยวข้องกัน อย่าถามทีละข้อ ให้รวมเป็น message เดียว เพื่อให้ model มี context เพียงพอที่จะทำงานต่อได้เองโดยไม่ต้องคอยเช็คอินกับเราทุกขั้นตอน
 
-### 3) ใช้ [[auto-mode|auto mode]] (Shift+Tab) สำหรับงานที่ไว้ใจได้
+### 3) ใช้ [[auto-mode|auto mode]] (Shift+Tab) สำหรับงานที่เชื่อถือได้
 
-ใน [[claude-code|Claude Code]] มี [[auto-mode|auto mode]] — permission mode ที่มี classifier คั่นกลาง auto-approve action ปลอดภัย block action เสี่ยง เหมาะกับงาน long-running ที่ไว้ใจได้ ตัดการถามยืนยันที่ไม่จำเป็นออก ลด cycle time (รายละเอียดและข้อจำกัดอยู่ในหน้า concept)
+ใน [[claude-code|Claude Code]] มี [[auto-mode]] ซึ่งเป็น permission mode ที่มี classifier คั่นกลางเพื่ออนุมัติ action ที่ปลอดภัยและบล็อก action ที่เสี่ยงโดยอัตโนมัติ เหมาะสำหรับงาน long-running ที่เชื่อถือได้ ซึ่งจะช่วยลดการถามยืนยันที่ไม่จำเป็นและลด cycle time (ดูรายละเอียดและข้อจำกัดในหน้า concept)
 
-เสริมได้อีกว่าให้ Claude ส่งเสียงเมื่อจบงาน (มันจะสร้าง hook เอง) เราไม่ต้องนั่งเฝ้าหน้าจอ
+นอกจากนี้ ยังสามารถให้ Claude แจ้งเตือนเมื่อทำงานเสร็จได้ (โดยมันจะสร้าง hook ขึ้นมาเอง) ทำให้เราไม่ต้องคอยเฝ้าหน้าจอ
 
-**ผลคือ** reasoning overhead เกิดหนเดียวที่ turn แรก ไม่เกิดซ้ำทุก turn ถัด ๆ ไป — ต้นทุน token ลด คุณภาพเพิ่ม เพราะ model ได้เห็นภาพรวมครบตั้งแต่ต้น
+**ผลลัพธ์:** reasoning overhead จะเกิดขึ้นเพียงครั้งเดียวที่ turn แรก และไม่เกิดขึ้นซ้ำในทุกๆ turn ถัดไป — ทำให้ต้นทุน token ลดลงและคุณภาพงานเพิ่มขึ้น เพราะ model ได้เห็นภาพรวมทั้งหมดตั้งแต่เริ่มต้น
 
 ## ความเชื่อมโยงกับแนวคิดอื่น
 
-- **[[instruction-budget]]** — Alex Ker เตือนว่าอย่ายัด instruction เกินไม่กี่ร้อยข้อ *Delegation mindset ไม่ขัดกับข้อนี้ — หมายถึงใส่ context (ไฟล์, intent, criteria) ให้ครบ ไม่ใช่ใส่ rule เป็นร้อย ๆ ข้อ*
-- **[[coding-harness]]** — R.P.I. framework (Role / Purpose / Instructions) เป็นวิธีเขียน turn-1 ที่ครบแบบมีโครง
-- **[[ai-orchestrator]]** — บทบาท orchestrator เป็น delegation mindset ที่ scale ขึ้นไปอีกชั้น: สั่ง subagent/pipeline ทำงาน ไม่ใช่ทำเอง
-- **[[harness-engineering]]** — Panutat มอง reviewer agent เป็นตัวรับมอบงาน ไม่ใช่ให้คนไปรีวิวตรง ๆ ทิศเดียวกัน
+-   **[[instruction-budget]]** — Alex Ker เตือนว่าไม่ควรใส่ instruction เกินสองสามร้อยข้อ *Delegation mindset ไม่ขัดแย้งกับข้อนี้ — หมายถึงการใส่ context (ไฟล์, intent, criteria) ให้ครบถ้วน ไม่ใช่การใส่ rule เป็นร้อยๆ ข้อ*
+-   **[[coding-harness]]** — R.P.I. framework (Role / Purpose / Instructions) เป็นวิธีการเขียน turn-1 ที่มีโครงสร้างและครบถ้วน
+-   **[[ai-orchestrator]]** — บทบาทของ orchestrator คือ delegation mindset ที่ขยายสเกลขึ้นไปอีกระดับ: การสั่งให้ subagent/pipeline ทำงานแทนที่จะทำเอง
+-   **[[harness-engineering]]** — Panutat มองว่า reviewer agent คือผู้รับมอบหมายงาน ไม่ใช่ให้คนไปรีวิวโดยตรง ซึ่งเป็นไปในทิศทางเดียวกัน
 
-## เมื่อไหร่ไม่ควรใช้ท่านี้
+## เมื่อไหร่ที่ไม่ควรใช้เทคนิคนี้
 
-- งาน exploratory ที่ยังไม่รู้ตัวเองว่าต้องการอะไร — การคุยเป็น turn ย่อย ๆ อาจคุ้มเพราะคำตอบรอบแรกช่วย shape คำถามรอบต่อไป
-- debugging ที่ต้องการ feedback สด ๆ ต่อ tool output
-- งานสั้นมาก ๆ ที่ไม่ได้เสีย reasoning นานอยู่แล้ว
+-   งาน exploratory ที่ยังไม่แน่ใจว่าต้องการอะไร — การคุยเป็น turn ย่อยๆ อาจคุ้มค่ากว่า เพราะคำตอบในรอบแรกจะช่วยกำหนดคำถามในรอบถัดไป
+-   Debugging ที่ต้องการ feedback แบบทันทีต่อ tool output
+-   งานที่สั้นมากๆ และไม่ได้ใช้ reasoning นานอยู่แล้ว
 
 ## ที่มาของสำนวน
 
-Pachaar: *"Treat Claude like a capable engineer you delegate to, not a pair programmer you guide line by line."* (คำเดิมจาก source)
+Pachaar: *"Treat Claude like a capable engineer you delegate to, not a pair programmer you guide line by line."* (คำพูดเดิมจาก source)
 
-## See also
+## ดูเพิ่มเติม
 
 - [[claude-opus-4-7]]
 - [[claude-opus-4-7-migration-pachaar]]
@@ -70,3 +70,4 @@ Pachaar: *"Treat Claude like a capable engineer you delegate to, not a pair prog
 - [[instruction-budget]]
 - [[ai-orchestrator]]
 - [[harness-engineering]]
+
