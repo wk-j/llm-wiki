@@ -3,35 +3,35 @@ title: Noosphere
 type: concept
 tags: [philosophy, cosmism, consciousness, systems-thinking]
 created: 2026-04-14
-updated: 2026-04-14
+updated: 2026-04-23
 sources: [Soviet Cosmism philosophy.md]
 ---
 
-# Noosphere
+# Noosphere / ทรงกลมแห่งเหตุผล
 
-The noosphere (Ноосфера) is the "sphere of reason" — a concept from [[vladimir-vernadsky]] describing Earth's thinking layer, a planetary-scale envelope of collective human consciousness that emerges from and transforms the biosphere. The term was also used independently by Pierre Teilhard de Chardin.
+Noosphere (Ноосфера) คือ "ทรงกลมแห่งเหตุผล" (sphere of reason) — แนวคิดจาก [[vladimir-vernadsky]] ที่อธิบายถึงชั้นแห่งความคิดของโลก ซึ่งเป็นเปลือกหุ้มของจิตสำนึกร่วมของมนุษย์ในระดับดาวเคราะห์ ที่เกิดขึ้นจากและเปลี่ยนแปลงชีวมณฑล (biosphere) คำนี้ยังถูกใช้อย่างอิสระโดย Pierre Teilhard de Chardin ด้วย
 
-## Core idea
+## แนวคิดหลัก
 
-Just as the biosphere is the layer of living matter surrounding the planet, the noosphere is the layer of thought. As human knowledge, technology, and communication grow, the noosphere thickens — transforming the planet through conscious action rather than blind geological process. It's an optimistic, materialist framework: thought is a physical force with planetary consequences.
+เช่นเดียวกับที่ชีวมณฑลเป็นชั้นของสิ่งมีชีวิตที่ล้อมรอบโลก, noosphere ก็เป็นชั้นของความคิด เมื่อความรู้, เทคโนโลยี, และการสื่อสารของมนุษย์เติบโตขึ้น, noosphere ก็จะหนาขึ้น — เปลี่ยนแปลงโลกผ่านการกระทำที่ใช้สติปัญญา แทนที่จะเป็นกระบวนการทางธรณีวิทยาที่ไร้ทิศทาง เป็นกรอบความคิดเชิงวัตถุนิยมที่มองโลกในแง่ดี: ความคิดเป็นพลังทางกายภาพที่มีผลกระทบระดับดาวเคราะห์
 
-## Relationship to Soviet Cosmism
+## ความสัมพันธ์กับ Soviet Cosmism
 
-The noosphere is one of the five pillars of [[soviet-cosmism]]. Where [[nikolai-fedorov]]'s resurrection and [[konstantin-tsiolkovsky]]'s space colonization are about humanity's *destiny*, the noosphere is about humanity's *current state* — the idea that we are already becoming a collective intelligence, and that this is a cosmic-scale phenomenon.
+Noosphere เป็นหนึ่งในห้าเสาหลักของ [[soviet-cosmism]] ในขณะที่การฟื้นคืนชีพของ [[nikolai-fedorov]] และการตั้งอาณานิคมในอวกาศของ [[konstantin-tsiolkovsky]] เป็นเรื่องเกี่ยวกับ *โชคชะตา* ของมนุษยชาติ, noosphere เป็นเรื่องเกี่ยวกับ *สถานะปัจจุบัน* ของมนุษยชาติ — แนวคิดที่ว่าเรากำลังกลายเป็นสติปัญญารวม (collective intelligence) และนี่คือปรากฏการณ์ระดับจักรวาล
 
-## Modern resonance
+## ความสอดคล้องกับยุคใหม่
 
-The noosphere anticipates several modern concepts:
-- **The internet** — a literal global network of thought
-- **Collective intelligence** — Wikipedia, open-source software, crowdsourced knowledge
-- **[[llm-knowledge-bases]]** — LLM-maintained knowledge wikis as miniature noospheres
+Noosphere คาดการณ์ถึงแนวคิดสมัยใหม่หลายอย่าง:
+- **อินเทอร์เน็ต** — เครือข่ายความคิดระดับโลกอย่างแท้จริง
+- **Collective intelligence** — Wikipedia, ซอฟต์แวร์โอเพนซอร์ส, ความรู้ที่รวบรวมจากฝูงชน
+- **[[llm-knowledge-bases]]** — wiki ความรู้ที่ดูแลโดย LLM เปรียบเสมือน noosphere ขนาดเล็ก
 
-## UI design expression
+## การแสดงออกในการออกแบบ UI
 
-In [[soviet-cosmism]] UI, the noosphere manifests as network webs, radiating brainwave patterns, and the geodesic wireframe globe motif. It has its own color palette — Noosphere Green (background `#040d08`, primary `#1a7a3a`, phosphor accent `#00ff7f`) — evoking organic intelligence and terminal phosphor.
+ใน UI แบบ [[soviet-cosmism]], noosphere จะแสดงออกมาในรูปแบบของใยเครือข่าย, รูปแบบคลื่นสมองที่แผ่ออกไป, และลวดลายลูกโลกโครงตาข่าย geodesic มันมีจานสีเป็นของตัวเอง — Noosphere Green (พื้นหลัง `#040d08`, สีหลัก `#1a7a3a`, สีเน้นฟอสเฟอร์ `#00ff7f`) — ซึ่งทำให้นึกถึงความฉลาดแบบออร์แกนิกและแสงฟอสเฟอร์ของเทอร์มินัล
 
-## See also
+## ดูเพิ่ม
 
-- [[vladimir-vernadsky]] — originator of the concept
-- [[soviet-cosmism]] — the philosophical movement
-- [[llm-knowledge-bases]] — a modern echo of collective intelligence
+- [[vladimir-vernadsky]] — ผู้ริเริ่มแนวคิด
+- [[soviet-cosmism]] — กระแสปรัชญา
+- [[llm-knowledge-bases]] — เสียงสะท้อนของ collective intelligence ในยุคใหม่

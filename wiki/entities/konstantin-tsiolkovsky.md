@@ -3,29 +3,29 @@ title: Konstantin Tsiolkovsky
 type: entity
 tags: [philosophy, cosmism, soviet, space, rocketry]
 created: 2026-04-14
-updated: 2026-04-14
+updated: 2026-04-23
 sources: [Soviet Cosmism philosophy.md, Soviet Cosmism UI style.md]
 ---
 
 # Konstantin Tsiolkovsky
 
-Russian rocket science pioneer (1857–1935) and key figure in [[soviet-cosmism|Soviet Cosmism]]. Known as the father of theoretical astronautics, he connected [[nikolai-fedorov]]'s resurrection philosophy to practical space exploration — humanity needs to colonize the cosmos to house all resurrected ancestors.
+ผู้บุกเบิกวิทยาการจรวดชาวรัสเซีย (1857–1935) และบุคคลสำคัญใน [[soviet-cosmism|Soviet Cosmism]] เป็นที่รู้จักในฐานะบิดาแห่งนักบินอวกาศเชิงทฤษฎี เขาได้เชื่อมโยงปรัชญาการฟื้นคืนชีพของ [[nikolai-fedorov]] เข้ากับการสำรวจอวกาศในทางปฏิบัติ — โดยเชื่อว่ามนุษยชาติต้องตั้งอาณานิคมในจักรวาลเพื่อเป็นที่อยู่ให้กับบรรพบุรุษที่ฟื้นคืนชีพทั้งหมด
 
-## Key quotes
+## คำพูดสำคัญ
 
-- "Земля — колыбель разума, но нельзя вечно жить в колыбели." *(Earth is the cradle of reason, but one cannot live in the cradle forever.)*
-- "Невозможное сегодня станет возможным завтра." *(The impossible today will become possible tomorrow.)*
+- "Земля — колыбель разума, но нельзя вечно жить в колыбели." *(โลกคือเปลของเหตุผล แต่เราไม่สามารถอยู่ในเปลได้ตลอดไป / Earth is the cradle of reason, but one cannot live in the cradle forever.)*
+- "Невозможное сегодня станет возможным завтра." *(สิ่งที่เป็นไปไม่ได้ในวันนี้ จะกลายเป็นสิ่งที่เป็นไปได้ในวันพรุ่งนี้ / The impossible today will become possible tomorrow.)*
 
-## Significance
+## ความสำคัญ
 
-Tsiolkovsky bridges philosophy and engineering. He derived the rocket equation, proposed multi-stage rockets and space stations, and theorized about space colonization — all motivated by Cosmist philosophy rather than pure engineering interest.
+Tsiolkovsky เป็นสะพานเชื่อมระหว่างปรัชญาและวิศวกรรม เขาได้สร้างสมการจรวด, เสนอแนวคิดจรวดหลายท่อนและสถานีอวกาศ, และตั้งทฤษฎีเกี่ยวกับการตั้งอาณานิคมในอวกาศ — ทั้งหมดนี้มีแรงจูงใจมาจากปรัชญา Cosmist มากกว่าความสนใจทางวิศวกรรมล้วนๆ
 
-## UI design expression
+## การแสดงออกในการออกแบบ UI
 
-In [[soviet-cosmism]] UI, Tsiolkovsky's quotes appear in data tickers and headers. His rocket trajectory mathematics inspire parabolic arc motifs, and his vision of space stations and orbital mechanics informs the orbital clock and telemetry panel components.
+ใน UI แบบ [[soviet-cosmism]], คำพูดของ Tsiolkovsky จะปรากฏใน data ticker และ header คณิตศาสตร์เกี่ยวกับวิถีโคจรของจรวดของเขาเป็นแรงบันดาลใจให้กับลวดลายเส้นโค้งพาราโบลา และวิสัยทัศน์ของเขาเกี่ยวกับสถานีอวกาศและกลศาสตร์วงโคจรได้ให้ข้อมูลในการออกแบบส่วนประกอบนาฬิกาอวกาศ (orbital clock) และแผงข้อมูล telemetry
 
-## See also
+## ดูเพิ่ม
 
-- [[soviet-cosmism]] — the philosophical movement
-- [[nikolai-fedorov]] — the philosopher who inspired him
-- [[vladimir-vernadsky]] — fellow Cosmist thinker
+- [[soviet-cosmism]] — กระแสปรัชญา
+- [[nikolai-fedorov]] — นักปรัชญาผู้เป็นแรงบันดาลใจให้เขา
+- [[vladimir-vernadsky]] — นักคิด Cosmist อีกคน

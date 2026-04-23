@@ -1,5 +1,105 @@
 # Log
 
+## [2026-04-23] ingest | 5 Agent Design Patterns for Long-running AI Agents (Google Cloud Tech, Addy Osmani + Shubham Saboo)
+
+Source: <https://x.com/GoogleCloudTech/status/2046989964077146490> — 2026-04-22 X post + Google Cloud blog by Addy Osmani (@addyosmani) and Shubham Saboo (@Saboo_Shubham_). Announces Cloud Next '26 feature: Agent Runtime now supports 7-day long-running agent state. Created/updated:
+
+- `sources/google-cloud-long-running-agent-patterns.md` — new source; covers all 5 patterns + governance triad + composition heuristic; flags as vendor blog (patterns general, implementations Google-specific)
+- `entities/google-cloud.md` — new entity
+- `entities/gemini-enterprise-agent-platform.md` — new entity; catalogs Agent Runtime / ADK / Mission Control / Memory Bank / Memory Profiles / Agent Identity / Agent Registry / Agent Gateway / Agent Observability / BYOC / Batch + Event-Driven Agents
+- `concepts/long-running-agents.md` — new Thai-primary concept; explains request-handler vs server-process framing, walks through each of the 5 patterns, calls out memory drift as a net-new failure mode, cross-links to subagent-patterns / agent-runtime-untrusted / auto-mode / agent-swarm / advisor-strategy
+- `concepts/subagent-patterns.md` — added "Fleet Orchestration" section positioning Google's Pattern 5 as the cross-process, cross-container sibling of fan-out/pipeline
+- `concepts/agent-runtime-untrusted.md` — added Agent Gateway as the product-form of APTS-SC-020 (out-of-model allowlist)
+- `wiki/index.md` — indexed new source, 2 entities, 1 concept
+
+Net-new vocabulary: **memory drift** (agent behavior warps via accumulated atypical experience), **pause-in-place HITL** (vs serialize → webhook → rehydrate), **governance triad** (Identity / Registry / Gateway as IAM + service discovery + API gateway for agents), ambient agents as first-class category, 7-day state as platform capability. Composes with existing [[agent-swarm]] (Kimi K2.6 scale-out) and [[subagent-patterns]] (in-session fan-out) as three scale tiers of the same coordinator/worker shape.
+
+## [2026-04-22] ingest | Claude Mythos Preview — Cybersecurity Capabilities (Anthropic red.anthropic.com)
+
+Source: <https://red.anthropic.com/2026/mythos-preview/> — Nicholas Carlini et al. Full assessment of [[claude-mythos-preview|Claude Mythos Preview]]'s cybersecurity capabilities. Created/updated:
+
+- `raw/Claude Mythos Preview /Claude Mythos Preview.md` — saved verbatim
+- `sources/claude-mythos-preview-red-anthropic.md` — new source; headline claims (zero-days in every major OS/browser, fully autonomous, not explicitly trained for security), scaffold methodology, 7 case studies (OpenBSD SACK 27yr, FFmpeg H.264 16yr, FreeBSD NFS RCE CVE-2026-4747, Linux kernel priv esc chains, browser JIT heap sprays, memory-safe VMM guest-to-host, crypto lib weaknesses), N-day exploit walkthroughs (ipset PTE flip, unix socket OOB UAF → root), scale of findings (thousands, 89% human severity agreement, zero false positives), defensive recommendations, SHA-3 commitments
+- `entities/claude-mythos-preview.md` — new entity; full profile: restricted release, capabilities table, Opus 4.6 benchmark comparison, how capabilities emerged, notable findings, cost, relationship to Opus 4.7, Cyber Verification Program
+- `entities/project-glasswing.md` — new entity; what it does, coordinated disclosure process, scale, defensive posture, future plans
+- `concepts/model-cyber-capability-emergence.md` — new Thai-primary concept; "offensive = defensive = same side effect of general capability"; Mythos numbers; patterns (vuln chaining, low cost, friction-based defense weakens); cross-links to agent-runtime-untrusted / graduated-autonomy / auto-mode / advisor-strategy; "memory-safe ≠ 100% safe" note
+- `concepts/agent-runtime-untrusted.md` — added Mythos Preview case study section (full-scale validation of APTS hypothesis; model that can root machines autonomously in a container = why you scope by construction); added sources + see-also
+- `entities/anthropic.md` — updated Project Glasswing bullet with detail; expanded Cyber strategy section with Mythos findings scale (thousands, 89% agreement, zero FP)
+- `entities/claude.md` — updated Mythos Preview table row with concrete detail
+- `entities/claude-opus-4-7.md` — updated Mythos comparison bullet (cyber capabilities differentially reduced in Opus 4.7)
+- `index.md` — indexed new source, 2 entities, 1 concept
+
+Net-new value: (1) **Emergence as framing** — cyber capability is not a feature you build; it's a side effect you must manage. First in-wiki source to demonstrate this with production-scale evidence. (2) **Validates [[agent-runtime-untrusted]]** — APTS says "don't rely on model restraint"; Mythos is the "why": a model that can autonomously root machines cannot be trusted to restrain itself. (3) **Cost asymmetry** — <$50 per successful zero-day, <$1000 per N-day exploit, <1 day. Orders of magnitude cheaper/faster than human experts. (4) **Project Glasswing as release strategy** — Anthropic voluntarily restricts their most capable model, acknowledging attacker advantage in the short term. No contradictions with prior wiki content. `claude-opus-4-7` already had "cyber capabilities differentially reduced" — this source provides the *reason* (Mythos-class capabilities exist and are too dangerous for broad release).
+
+## [2026-04-22] ingest | cyrilXBT — CLAUDE.md Guide (X post)
+Source: https://x.com/cyrilXBT/status/2046589854776009208 (2026-04-21) — opinionated how-to for structuring `CLAUDE.md` in Claude Code. Created/updated:
+- `raw/How to Build a CLAUDE.md File That Makes Claude Code Actually Listen to You - FULL GUIDE.md` — saved verbatim
+- `sources/cyril-xbt-claude-md-guide.md` — new source; 3 file locations (project root / monorepo subdir / global `~/.claude/CLAUDE.md`), 7-section anatomy (Project Overview / Tech Stack / Coding Conventions / **Never Do This** / File Structure / Current Sprint Goals / Important Context), global preference layer, non-code usage (writing/content), 5 common mistakes (vague / never-updated / goals-vs-context / no-NEVER / no-global), composition with `.claude/commands/*.md` slash commands; explicit tension section vs Alex Ker's [[instruction-budget]] (agree on human-written + specific; disagree on volume)
+- `entities/cyril-xbt.md` — new minimal entity; solo builder on X; crypto signal bot (Next.js + Supabase + Binance) as paid Gumroad product; uses CLAUDE.md for content projects too
+- `concepts/claude-md.md` — new Thai-primary concept; location table, 7-section anatomy with "ได้อะไร" summary, global layer, non-code usage, tension table vs instruction-budget (Cyril ยอม rule cost / Alex Ker กลัว dumb zone), "How to apply" for frontier models (Opus 4.7), 5 common mistakes, composition with slash commands, positioning ("instance ของ [[coding-harness]] configuration")
+- `concepts/instruction-budget.md` — added cross-link bullet to `[[claude-md]]` with explicit Cyril-vs-Alex-Ker tension framing; added `[[claude-md]]` + `[[cyril-xbt-claude-md-guide]]` to See also
+- `entities/claude-code.md` — added **CLAUDE.md** bullet to Features section (3 layers + 7-section template + instruction-budget link); added source to frontmatter
+- `index.md` — indexed new source, entity, concept
+
+Net-new value: (1) first dedicated `claude-md` concept page consolidating the user-facing mechanics of Claude Code's flagship config file across canonical docs (3 locations) + opinionated template (Cyril 7 sections); (2) crystallizes a **real disagreement** between two in-wiki authorities — Cyril (volume-pays-back) vs Alex Ker (volume-kills-attention) — with a reconciliation heuristic rather than picking a side; (3) surfaces the "Never Do This" section as highest-leverage (Cyril's claim) while cautioning it's the section most likely to push instruction-budget; (4) confirms CLAUDE.md ≠ TODO list framing (goals live only in Current Sprint; rest is stable briefing context). No contradictions flagged — Cyril's mechanics overlap with canonical docs; the template is opinionated but not incorrect.
+
+## [2026-04-21] ingest | Kimi K2.6 Tech Blog (Moonshot AI)
+Source: https://www.kimi.com/blog/kimi-k2-6 — Moonshot AI's launch post for **Kimi K2.6**, open-source flagship for coding + long-horizon agents (262k context). Created/updated:
+- `raw/Kimi K2.6 Tech Blog Advancing Open-Source Coding.md` — saved verbatim
+- `sources/kimi-k2-6-tech-blog.md` — new source; headline claims (long-horizon coding / agent swarm / Claw Groups / coding-driven design / proactive agents), benchmark comparison table (K2.6 vs GPT-5.4 xhigh / Opus 4.6 max / Gemini 3.1 Pro thinking-high — note: Opus 4.7 excluded), two long-horizon showcases (Qwen3.5 Zig port, exchange-core overhaul), Kimi Design Bench / Claw Bench / Kimi Code Bench internal suites
+- `entities/moonshot-ai.md` — new entity; surfaces (Kimi.com / App / API / Kimi Code / Agent Swarm / Claw Groups / KVV), internal eval suites, positioning (open-source challenger on coding + agentic, not reasoning/vision)
+- `entities/kimi-k2-6.md` — new entity; capabilities, API details (262,144 token ctx, temp 1.0 / top-p 1.0, 10-run avg on coding), benchmark highlights (SWE-Bench Pro 58.6 leads Opus 4.6 53.4; HLE-tools leads; BrowseComp-swarm unique axis; trails on AIME/GPQA/vision), ecosystem (CodeBuddy, Ollama, OpenCode, Qoder, Hermes, KiloClaw, OpenClaw)
+- `concepts/agent-swarm.md` — new Thai-primary concept; "scaling out, not up" axis vs subagent-patterns (300 sub-agents × 4000 steps vs K2.5's 100 × 1500); comparison table with fan-out at subagent-pattern scale; Document-to-Skill structural/stylistic DNA extraction; Claw Groups BYO-Agents extension; cautions (marketing vs measurable, latency vs cost, oversight → harness-engineering + graduated-autonomy, blast radius → agent-runtime-untrusted); scale-up vs scale-out framing (Opus 4.7 = scale-up, K2.6 = scale-out)
+- `concepts/subagent-patterns.md` — added "ขยายขึ้นไปอีกระดับ — Agent Swarm" subsection linking the two patterns at different scales; source list updated
+- `index.md` — indexed new source, 2 entities, 1 concept
+
+Net-new value: (1) explicit **scale-out axis** as distinct from scale-up — first model launch in wiki to pitch on subagent count rather than model size; (2) Document-to-Skill (auto-extracted structural DNA) extends Claude Code's hand-authored Skills pattern; (3) open-source coding parity claim — SWE-Bench Pro 58.6 beats Opus 4.6 53.4, directional signal that open-source caught up on coding specifically (not reasoning/vision); (4) Claw Groups BYO-Agents is a new org pattern — heterogeneous multi-vendor agents + humans as peers with K2.6 as adaptive coordinator, distinct from owned-fleet swarm; (5) **contradiction flag**: launch excludes Claude Opus 4.7 from comparison despite being released 2026-04-16, 5 days before this ingest — treat benchmarks as curated by Moonshot.
+
+## [2026-04-21] ingest | Somkiat — Model Choice by Domain Expertise (FB screenshot)
+Source: short Thai Facebook post by Somkiat Khitwongwattana (2026-04-21), saved verbatim. Two-case heuristic: (1) Domain Expert lần code เอง → Claude Sonnet 4.5 เพียงพอกับงานส่วนใหญ่, model ใหม่กว่าเกือบไม่จำเป็น; (2) Vibe โดยไม่มี knowledge → จ่าย model ใหม่เพื่อ "ความมั่นใจในผลลัพธ์". Created/updated:
+- `raw/Somkiat - Model Choice by Expertise.md` — saved Thai text verbatim
+- `sources/somkiat-model-choice-by-expertise.md` — new source; two-case framing + verbatim Thai quote; cross-links to taste-paradox / judgement-vs-automation / effort-levels / delegation-mindset
+- `entities/somkiat-khitwongwattana.md` — new entity (Thai SE blogger, somkiat.cc)
+- `concepts/model-choice-by-expertise.md` — new Thai-primary concept; framework = คุณภาพงาน = *คน × model*; model ใหม่ = premium ที่จ่ายให้ "ต่อมเอ๊ะ ของ model"; side-by-side with taste-paradox (Somkiat = runtime; Nattee = origin); axis table vs effort-levels / task-budgets / delegation-mindset / auto-mode
+- `entities/claude.md` — added Claude Sonnet 4.5 row ("good-enough baseline for dev work by domain experts")
+- `concepts/taste-paradox.md` — new section "ฝั่งคู่กัน: เมื่อ *มี* taste แล้วเลือก model ยังไง" linking Somkiat's heuristic as the complement question
+- `index.md` — indexed new source + entity + concept
+
+Net-new value: (1) explicit inversion of the "newer model always better" default — model upgrade = *compensation for taste the user lacks*, not a universal gain; (2) connects cleanly to the existing Nattee taste-paradox (origin of taste) and Andrew Price judgement-vs-automation (what taste looks like across domains), giving the wiki a three-way framing around *taste*: *where it comes from* (Nattee) × *what it looks like* (Andrew) × *how to monetize what you have* (Somkiat); (3) surfaces Sonnet 4.5 explicitly as the "good-enough baseline" — previously the wiki only tracked 4.6+.
+
+## [2026-04-21] ingest | Claude Code Remote Control docs
+Source: https://code.claude.com/docs/en/remote-control.md (Anthropic docs). Feature landed in CC v2.1.51; mobile push in v2.1.110; VS Code `/remote-control` in v2.1.79. Created/updated:
+- `raw/Remote Control - Claude Code Docs.md` — saved verbatim
+- `sources/claude-code-remote-control-docs.md` — new source; local+relay architecture, three CLI modes + VS Code, server-mode flags (`--spawn same-dir|worktree|session`, `--capacity`, `--sandbox`), connect-from-device flow, push notifications, limitations (Ultraplan conflict, ~10min timeout, local-only pickers), auth disqualifiers (API key / setup-token / Bedrock / Vertex / Foundry), five-way comparison table
+- `concepts/claude-code-remote-surfaces.md` — new Thai-primary concept; two-axis framing (local vs cloud execution × human vs event trigger) covering Remote Control / Dispatch / Channels / Slack / Scheduled / CC on the web / Ultraplan; deep dive on RC's local+relay model; cross-links to auto-mode / agent-runtime-untrusted / subagent-patterns
+- `entities/claude-code.md` — added Remote Control bullet under Features with full mechanics; new "Remote surfaces" section with comparison table; see-also updated; source list updated
+- `index.md` — indexed new source + new concept
+
+Net-new value: (1) canonical "work away from terminal" taxonomy — the wiki had `/ultrareview`, auto mode, subagents but no organizing framework for mobile/web/chat/cron access; (2) architectural point that RC is **local execution + Anthropic relay** (outbound-HTTPS-only, short-lived credentials) — session never leaves the machine; contrasts cleanly with CC-on-the-web; (3) `--spawn worktree` for RC server mode connects to the existing fan-out pattern at a new layer (session rather than subagent); (4) Ultraplan-vs-RC conflict and local-only picker commands are explicit interop constraints worth remembering. Dangling wikilinks added to watchlist: `claude-code-on-the-web`, `ultraplan` (mentioned but no page).
+
+## [2026-04-20] ingest | OWASP APTS v0.1.0 (Autonomous Penetration Testing Standard)
+Source: OWASP Incubator project at github.com/OWASP/APTS (CC BY-SA 4.0). Governance standard, not a testing methodology — 173 tier-required requirements across 8 domains (SE / SC / HO / AL / AR / MR / TP / RP), plus 10 advisory practices. Three cumulative tiers (Foundation 72 / Verified 157 / Comprehensive 173). Created/updated:
+- `raw/OWASP APTS.md` — saved README + Introduction verbatim
+- `sources/owasp-apts.md` — new source; full domain + tier tables, L1–L4 table, capability-frontier requirements map, relationship-to-other-standards, prescriptive-value interpretation rules
+- `entities/owasp.md` — new entity; OWASP Foundation with references to APTS, WSTG, ASVS, Top 10, Agentic Apps Top 10 (2026)
+- `concepts/graduated-autonomy.md` — new Thai-primary concept; four-level autonomy framework (Assisted/Supervised/Semi-Autonomous/Autonomous); explicit Tier-vs-Level distinction; controls that must be added at each level; cross-links to auto-mode / subagent-patterns / advisor-strategy / harness-engineering / delegation-mindset
+- `concepts/agent-runtime-untrusted.md` — new Thai-primary concept; architectural stance that agent runtime is untrusted; fail-by-construction vs verify-alignment split; maps the stance to seven specific APTS requirements (SC-019, SC-020, MR-023, AR-020, AL-028, TP-021/022, SE-026); cross-link to auto-mode / subagent-patterns / harness-engineering
+- `concepts/auto-mode.md` — added see-also links to graduated-autonomy and agent-runtime-untrusted (classifier-outside-the-model = APTS-SC-020 at harness layer)
+- `index.md` — indexed 1 source + 1 entity + 2 concepts
+
+Net-new value beyond what the wiki already had: (1) APTS supplies a governance vocabulary (L1–L4) that crystallizes patterns the wiki had been circling — [[auto-mode]] / [[subagent-patterns]] / [[advisor-strategy]] / [[harness-engineering]] all fit into it. (2) The "Capability Frontier and Containment Assumptions" section states the **fail-by-construction vs. verify-alignment** split cleanly — a stance the wiki had implied but never named. (3) Explicit architectural requirements (sandbox kernel-enforced, allowlist external to model, audit trail on unreachable host, re-assess on model change) give concrete anchor points to cite against vendor hand-waving.
+
+## [2026-04-20] ingest | OpenCode vs Claude Code (Morph, 2026-02-28)
+Source: Morph vendor blog comparing [[opencode|OpenCode]] and [[claude-code|Claude Code]] ~3 weeks after the Anthropic OAuth block. Treated as directional not audited. Created/updated:
+- `raw/OpenCode vs Claude Code (2026) Open Source Freedom vs Anthropic Polish.md` — saved raw
+- `sources/opencode-vs-claude-code-morph.md` — new source; OAuth block timeline, Black/Zen gateways, SST→Anomaly rebrand, GitHub metrics, benchmarks (SWE-bench Pro 57.5%, ARC-AGI-2 68.8% with WarpGrep v2), system-prompt token extraction, interactivity axis (Tab/@mention/HTTP API), explicit contradiction with later Tauri→Electron move
+- `entities/opencode.md` — added repo/rebrand/metrics line; new "Interactivity" subsection; new "Anthropic OAuth block (2026-01-09)" section covering Black/Zen gateways and OpenAI counter-positioning
+- `entities/claude-code.md` — added "Adoption and benchmarks" section (4% of GitHub commits, VS Code install count, WarpGrep v2 benchmarks, system-prompt token counts)
+- `entities/anthropic.md` — added business-metrics line ($380B valuation, $14B ARR, "Claude Code Moment") and OpenCode OAuth block section
+- `index.md` — indexed new source
+
+Net-new value despite vendor framing: (1) OAuth block event and OpenCode's Black/Zen response were not in the wiki; (2) Tab/@mention/HTTP-API interactivity axis for OpenCode complements the provider-breadth/shell-architecture framing from earlier sources; (3) system-prompt token extractions (core 2896, Plan 633, Explore 516, Task 294) ground the abstract subagent discussion. Contradiction noted: source says OpenCode desktop is Tauri — stale as of 2026-03-25, see [[opencode-desktop-electron-brendonovich]].
+
 ## [2026-04-20] ingest | Auto mode for Claude Code (Anthropic blog, 2026-03-24)
 Source: Anthropic blog post announcing **auto mode** — a new permission mode in [[claude-code|Claude Code]] where a classifier reviews each tool call before it runs (auto-approves safe, blocks risky like mass delete / exfiltration / malicious exec, redirects Claude, prompts user only if Claude keeps insisting). Middle path between default (ask every action) and `--dangerously-skip-permissions`. Launched as research preview on Team plan with Sonnet/Opus 4.6; later extended to Claude Code Max users with Opus 4.7 launch (already referenced in existing 4.7 announcement). Created/updated:
 - `raw/Auto mode for Claude Code.md` — saved raw

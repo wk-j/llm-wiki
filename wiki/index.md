@@ -31,6 +31,14 @@
 - [[claude-opus-4-7-whats-new-docs]] — Anthropic developer docs for Opus 4.7: API breaking changes (no thinking budgets / no sampling params / thinking content hidden), new `task_budget` beta, tokenizer change, behavior shifts
 - [[claude-opus-4-7-migration-pachaar]] — Akshay Pachaar third-party migration guide: turn-cost reasoning, delegation mindset, find-vs-filter for code review, mid-task effort toggling, multi-context-window workflow, prefilled-response deprecation
 - [[claude-code-auto-mode]] — Anthropic blog announcing auto mode (2026-03-24): classifier-gated middle path between default permission prompts and `--dangerously-skip-permissions`
+- [[opencode-vs-claude-code-morph]] — Morph vendor blog (2026-02-28): post-OAuth-block comparison; Black/Zen gateways; 112K vs 71K stars; 4% of GitHub commits; SWE-bench Pro 57.5%; interactivity axis (Tab/@mention/HTTP API)
+- [[owasp-apts]] — OWASP Autonomous Penetration Testing Standard v0.1.0 (Incubator, 2026): governance for autonomous pentest platforms; 173 reqs / 8 domains / 3 tiers; L1–L4 graduated autonomy; agent-runtime-as-untrusted architectural stance
+- [[claude-code-remote-control-docs]] — Anthropic docs for Remote Control (v2.1.51+): drive a local CC session from claude.ai/code or mobile; outbound-HTTPS relay; server/interactive/from-existing/VS Code modes; `--spawn worktree`; push notifications; five-way comparison table
+- [[somkiat-model-choice-by-expertise]] — Somkiat Khitwongwattana (FB, 2026-04-21): Domain Expert + code review = Sonnet 4.5 is enough; Vibe + no knowledge = pay for newer model as confidence proxy
+- [[kimi-k2-6-tech-blog]] — Moonshot AI launch post for Kimi K2.6 (2026-04): open-source SOTA coding claim, 12h+ / 4000+ tool-call long-horizon runs, 300-subagent swarm, Claw Groups BYO-Agents preview, benchmark table vs GPT-5.4 / Opus 4.6 / Gemini 3.1 Pro
+- [[cyril-xbt-claude-md-guide]] — @cyrilXBT X-post (2026-04-21): opinionated 7-section CLAUDE.md template (Overview / Stack / Conventions / Never Do This / File Structure / Current Sprint / Context), global vs project layering, composition with slash commands
+- [[claude-mythos-preview-red-anthropic]] — Anthropic red.anthropic.com (2026-04): Mythos Preview autonomously finds/exploits zero-days in every major OS and browser; cyber capabilities emerged without explicit training; thousands of vulns under coordinated disclosure; Project Glasswing restricts release
+- [[google-cloud-long-running-agent-patterns]] — Google Cloud Tech (Addy Osmani + Shubham Saboo, 2026-04-22): 5 design patterns for 7-day long-running agents on Agent Runtime — Checkpoint-and-Resume / Delegated Approval / Memory-Layered Context / Ambient Processing / Fleet Orchestration; governance triad (Identity/Registry/Gateway)
 
 ## Entities
 
@@ -65,6 +73,15 @@
 - [[opencode]] — Open-source coding harness; loads all MCP tool definitions at startup; docs warn users to limit server count
 - [[tauri]] — Rust-based desktop app framework using OS-native webviews; small bundles, strong security; struggles when app's heavy logic lives in a non-Rust runtime
 - [[electron]] — Chromium + Node.js desktop app framework; wins when app logic is already JS/Node/Bun (runs in-process, no sidecar)
+- [[owasp]] — OWASP Foundation; publisher of APTS, WSTG, ASVS, Top 10, and the 2026 Agentic Apps Top 10
+- [[somkiat-khitwongwattana]] — Thai software engineer a.k.a. **Akexorcist** (akexorcist.dev); long-time Android dev; writes in Thai on practice and LLM/Agent workflow
+- [[moonshot-ai]] — Chinese AI lab behind the Kimi family; open-source coding challenger; runs Kimi Code, Agent Swarm, Claw Groups surfaces
+- [[kimi-k2-6]] — Moonshot AI's 2026-04 open-source flagship: 262k context, agent swarm to 300 sub-agents, positioned vs GPT-5.4 / Opus 4.6 / Gemini 3.1 Pro on coding
+- [[cyril-xbt]] — X content creator (@cyrilXBT); author of the opinionated 7-section CLAUDE.md guide; solo builder on AI + crypto + productivity
+- [[claude-mythos-preview]] — Anthropic frontier-preview model; most capable overall; autonomously finds/exploits zero-days in every major OS and browser; release restricted via Project Glasswing
+- [[project-glasswing]] — Anthropic initiative using Mythos Preview to secure critical software before Mythos-class models become broadly available; coordinated vulnerability disclosure
+- [[google-cloud]] — Google's enterprise cloud division; ships Gemini Enterprise Agent Platform; Cloud Next '26 introduced 7-day long-running Agent Runtime
+- [[gemini-enterprise-agent-platform]] — Google Cloud managed agent platform: Agent Runtime (7-day state), ADK, Mission Control, Memory Bank/Profiles, Agent Identity/Registry/Gateway, Observability, BYOC
 
 ## Concepts
 
@@ -119,5 +136,13 @@
 - [[delegation-mindset]] — Opus 4.7 triggers reasoning every user turn; front-load intent/constraints/criteria/paths in turn 1 instead of chatty multi-turn guidance
 - [[find-vs-filter]] — Code-review prompting pattern: separate discovery from triage so literal-following models don't silently drop findings below your bar
 - [[auto-mode]] — Claude Code permission mode between default-prompt-every-action and `--dangerously-skip-permissions`; classifier reviews each tool call, auto-approves safe, blocks risky
+- [[graduated-autonomy]] — OWASP APTS L1–L4 framework: Assisted / Supervised / Semi-Autonomous / Autonomous; Tier ≠ Level; vocabulary for matching oversight to autonomy across harnesses
+- [[agent-runtime-untrusted]] — APTS architectural stance: treat agent runtime as untrusted; make scope-exceeding attempts fail by construction (sandbox, external allowlist, unreachable audit trail), not by model restraint
+- [[claude-code-remote-surfaces]] — Two-axis map (local vs cloud execution × human vs event trigger) of the seven ways to drive Claude Code away from your terminal: Remote Control, Dispatch, Channels, Slack, Scheduled, web, Ultraplan
+- [[model-choice-by-expertise]] — Somkiat heuristic: Domain Expert reviewing code = older/cheaper model (Sonnet 4.5) is enough; vibe-coding = pay for newer model as a "rented taste" confidence proxy; complement to [[taste-paradox]]
+- [[agent-swarm]] — Scaling *out* (100–300 sub-agents coordinated by an agent) vs scaling up (bigger model); Kimi K2.6's headline pattern; heterogeneous domain-specialized sub-agents; Claw Groups = BYO-Agents extension
+- [[claude-md]] — Claude Code's project-level markdown file as persistent system prompt: 3-location hierarchy, cyrilXBT 7-section template, tension with [[instruction-budget]] (Cyril's volume vs Alex Ker's minimalism), composition with slash commands
+- [[model-cyber-capability-emergence]] — Offensive cyber capability as inevitable side effect of general model improvement; Mythos Preview case study; friction-based defense weakens; hard barriers (KASLR, W^X) remain critical
+- [[long-running-agents]] — 5 design patterns for agents that stay alive for hours to days: Checkpoint-and-Resume, Delegated Approval (pause-in-place HITL), Memory-Layered Context (with memory-drift governance), Ambient Processing, Fleet Orchestration
 
 ## Analysis

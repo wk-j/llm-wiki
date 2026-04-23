@@ -3,34 +3,34 @@ title: C#
 type: entity
 tags: [csharp, dotnet, programming-languages, microsoft]
 created: 2026-04-15
-updated: 2026-04-15
+updated: 2026-04-23
 sources: [csharp-14-whats-new.md]
 ---
 
 # C#
 
-C# is Microsoft's statically-typed, object-oriented programming language for the .NET platform. Release cadence is annual, with each version tied to a corresponding .NET release.
+C# (ซีชาร์ป) เป็นภาษาโปรแกรมแบบ statically-typed, object-oriented ของ Microsoft สำหรับแพลตฟอร์ม .NET มีรอบการออกเวอร์ชันใหม่ทุกปี โดยแต่ละเวอร์ชันจะผูกกับ .NET release ที่สอดคล้องกัน
 
-## Current version
+## เวอร์ชันปัจจุบัน
 
-**C# 14** — latest release, ships with **.NET 10**, supported in Visual Studio 2026 and the .NET 10 SDK. See [[csharp-14-whats-new]] for the full feature list.
+**C# 14** — เวอร์ชันล่าสุด มาพร้อมกับ **.NET 10**, รองรับใน Visual Studio 2026 และ .NET 10 SDK ดูรายการฟีเจอร์ทั้งหมดได้ที่ [[csharp-14-whats-new]]
 
-## C# 14 headline additions
+## ฟีเจอร์เด่นใน C# 14
 
 - [[extension-members]] — generalized extensions: properties, static members, operators
-- [[field-keyword]] — `field` inside property accessors for auto-synthesized backing fields
+- [[field-keyword]] — `field` keyword ภายใน property accessor สำหรับ backing field ที่สร้างขึ้นโดยอัตโนมัติ
 - Null-conditional assignment (`customer?.Order = ...`)
-- First-class implicit conversions for `Span<T>` / `ReadOnlySpan<T>`
-- Lambda parameter modifiers (`ref`, `out`, `scoped`...) without explicit types
-- `partial` constructors and events
+- First-class implicit conversions สำหรับ `Span<T>` / `ReadOnlySpan<T>`
+- Lambda parameter modifiers (`ref`, `out`, `scoped`...) โดยไม่ต้องระบุ type อย่างชัดเจน
+- `partial` constructors และ events
 - User-defined compound assignment operators
-- `nameof` with unbound generics (`nameof(List<>)`)
+- `nameof` กับ unbound generics (`nameof(List<>)`)
 
-## Versioning notes
+## หมายเหตุเรื่องเวอร์ชัน
 
-Each C# version targets a specific .NET base class library. C# 14 requires .NET 10; older frameworks remain on earlier language versions. Configurable via `<LangVersion>` in the project file.
+C# แต่ละเวอร์ชันจะ target .NET base class library ที่เฉพาะเจาะจง C# 14 ต้องการ .NET 10; framework ที่เก่ากว่าจะยังคงใช้ภาษาเวอร์ชันก่อนหน้า สามารถตั้งค่าได้ผ่าน `<LangVersion>` ในไฟล์โปรเจกต์
 
-## See also
+## ดูเพิ่ม
 
 - [[csharp-14-whats-new]]
 - [[extension-members]]

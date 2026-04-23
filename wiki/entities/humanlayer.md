@@ -3,28 +3,28 @@ title: HumanLayer
 type: entity
 tags: [ai, companies, harness, tools, prompt-engineering]
 created: 2026-04-18
-updated: 2026-04-18
+updated: 2026-04-23
 sources: [alex-ker-harnesses-optimize.md]
 ---
 
 # HumanLayer
 
-Company building an open-source agent harness — one of the three harnesses that [[alex-ker|Alex Ker]] cites as his working set alongside Roo Code and DeepAgent CLI. Website: [humanlayer.dev](https://www.humanlayer.dev/).
+บริษัทที่สร้าง agent harness แบบ open-source — เป็นหนึ่งในสาม harness ที่ [[alex-ker|Alex Ker]] อ้างถึงว่าเป็นชุดเครื่องมือที่เขาใช้งานอยู่ ควบคู่ไปกับ Roo Code และ DeepAgent CLI. เว็บไซต์: [humanlayer.dev](https://www.humanlayer.dev/)
 
-## Why it shows up in this wiki
+## เหตุผลที่ปรากฏใน wiki นี้
 
-HumanLayer is the attributed source for two framings that travel through the harness-engineering discourse:
+HumanLayer เป็นแหล่งที่มาของสองแนวคิดที่ถูกพูดถึงในวงการ harness-engineering:
 
-- **[[instruction-budget|The "dumb zone"]]** — Kyle (HumanLayer) is cited by Alex Ker for the observation that frontier thinking LLMs can only follow "a few hundred" instructions before their attention spreads and they start missing relevant instructions amid the bloat. Blog post referenced: *"skill-issue-harness-engineering-for-coding-agents"* on humanlayer.dev.
-- **R.P.I. framework** — `Research` → `Plan` → `Implement`. Each prompt should do exactly one of the three. See the R.P.I. section in [[coding-harness]].
+- **[[instruction-budget|The "dumb zone"]]** — [[alex-ker|Alex Ker]] อ้างถึง Kyle (จาก HumanLayer) สำหรับข้อสังเกตที่ว่า LLM ที่มีความสามารถในการคิดระดับ frontier สามารถทำตามคำสั่งได้เพียง "ไม่กี่ร้อย" คำสั่งเท่านั้น ก่อนที่ความสนใจของมันจะกระจายออกไปและเริ่มพลาดคำสั่งที่เกี่ยวข้องท่ามกลางความฟุ้งเฟ้อของข้อมูล อ้างอิงจากบทความ: *"skill-issue-harness-engineering-for-coding-agents"* บน humanlayer.dev
+- **R.P.I. framework** — `Research` → `Plan` → `Implement` แต่ละ prompt ควรทำหน้าที่เพียงอย่างใดอย่างหนึ่งจากสามอย่างนี้ ดูส่วน R.P.I. ใน [[coding-harness]]
 
-Both framings are now standard vocabulary in harness-optimization posts.
+ปัจจุบัน ทั้งสองแนวคิดนี้ได้กลายเป็นคำศัพท์มาตรฐานในโพสต์ที่เกี่ยวกับการปรับแต่ง harness
 
-## Position in the harness landscape
+## ตำแหน่งในภูมิทัศน์ของ Harness
 
-HumanLayer's own branding frames harness choice as a *skill issue* — the harness you commit to and iterate on matters more than which harness is nominally best. This aligns with Alex Ker's "commit to one harness" takeaway.
+การสร้างแบรนด์ของ HumanLayer เองมองว่าการเลือก harness เป็น *skill issue* — harness ที่คุณยึดมั่นและปรับปรุงอยู่เสมอมีความสำคัญมากกว่าการเลือก harness ที่ดีที่สุดในนาม ซึ่งสอดคล้องกับข้อสรุปของ Alex Ker ที่ว่า "ให้ยึดมั่นกับ harness ตัวเดียว"
 
-## See also
+## ดูเพิ่ม
 
 - [[alex-ker]]
 - [[alex-ker-harnesses-optimize]]

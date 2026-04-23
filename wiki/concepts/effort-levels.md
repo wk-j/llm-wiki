@@ -3,55 +3,55 @@ title: Effort Levels
 type: concept
 tags: [ai, claude, claude-code, performance, cost-optimization]
 created: 2026-04-16
-updated: 2026-04-20
+updated: 2026-04-23
 sources: [Introducing Claude Opus 4.7.md, Whats new in Claude Opus 4.7 - Anthropic Docs.md, Claude Opus 4.7 Isn't a Drop-in Replacement for 4.6.md]
 ---
 
-# Effort Levels
+# Effort Levels / ระดับความพยายาม
 
-[[anthropic|Anthropic]]'s explicit parameter for trading **reasoning quality against latency and token cost** on [[claude|Claude]] models. The caller picks a tier; the model allocates more or less thinking time accordingly.
+พารามิเตอร์ที่ [[anthropic|Anthropic]] สร้างขึ้นมาเพื่อให้ผู้ใช้สามารถแลกเปลี่ยนระหว่าง **คุณภาพการให้เหตุผล (reasoning quality) กับ latency และค่า token** บนโมเดล [[claude|Claude]] ผู้เรียกใช้จะเลือกระดับ (tier) และโมเดลจะจัดสรรเวลาในการคิดให้ตามนั้น
 
-## Tiers (as of Opus 4.7)
+## ระดับต่างๆ (ณ Opus 4.7)
 
-| Level | Position | When to use |
+| ระดับ | ตำแหน่ง | ควรใช้เมื่อไหร่ |
 |---|---|---|
-| `medium` | Low | Simple tasks, quick responses |
-| `high` | Mid-high | Recommended starting point for coding / agentic use |
-| **`xhigh`** | New with Opus 4.7 | Extra reasoning for hard problems; default in [[claude-code\|Claude Code]] |
-| `max` | Top | Hardest problems; highest latency and token cost |
+| `medium` | ต่ำ | งานง่ายๆ, ต้องการคำตอบเร็ว |
+| `high` | กลาง-สูง | จุดเริ่มต้นที่แนะนำสำหรับงาน coding / agentic |
+| **`xhigh`** | ใหม่ใน Opus 4.7 | การให้เหตุผลเพิ่มเติมสำหรับปัญหายากๆ; เป็นค่าเริ่มต้นใน [[claude-code\|Claude Code]] |
+| `max` | สูงสุด | ปัญหาที่ยากที่สุด; latency และค่า token สูงสุด |
 
-`xhigh` was introduced with [[claude-opus-4-7|Opus 4.7]] to give finer-grained control between `high` and `max`.
+`xhigh` ถูกเพิ่มเข้ามาพร้อมกับ [[claude-opus-4-7|Opus 4.7]] เพื่อให้สามารถควบคุมระหว่าง `high` และ `max` ได้ละเอียดขึ้น
 
-**Third-party claim:** [[claude-opus-4-7-migration-pachaar|Pachaar's migration guide]] describes five tiers (adding `low` below `medium`) for "latency-sensitive, tightly scoped work." Anthropic's official docs list only the four above. Treat `low` as unverified until Anthropic confirms.
+**คำกล่าวอ้างจากบุคคลที่สาม:** [[claude-opus-4-7-migration-pachaar|คู่มือการย้ายระบบของ Pachaar]] อธิบายว่ามี 5 ระดับ (เพิ่ม `low` เข้ามาต่ำกว่า `medium`) สำหรับ "งานที่ latency-sensitive และมีขอบเขตจำกัด" แต่เอกสารทางการของ Anthropic ระบุเพียง 4 ระดับข้างต้น ให้ถือว่า `low` ยังไม่ได้รับการยืนยันจนกว่า Anthropic จะยืนยัน
 
-## Mid-task effort toggling
+## การสลับ effort ระหว่างทำงาน
 
-Effort is not a set-once knob. Pachaar's pattern: **raise and lower effort across phases of the same task** to control token spend.
+Effort ไม่ใช่ปุ่มที่ตั้งค่าครั้งเดียวแล้วจบ รูปแบบของ Pachaar คือ: **เพิ่มและลด effort ในแต่ละช่วงของงานเดียวกัน** เพื่อควบคุมการใช้ token
 
-- `xhigh` for the design/planning phase (hardest reasoning, picks architecture)
-- `high` for straightforward implementation once the plan is set
-- `max` briefly for a stubborn debugging moment, then back down
+- `xhigh` สำหรับช่วงออกแบบ/วางแผน (การให้เหตุผลที่ยากที่สุด, การเลือกสถาปัตยกรรม)
+- `high` สำหรับการ implement ที่ตรงไปตรงมาเมื่อมีแผนแล้ว
+- `max` ชั่วครู่สำหรับช่วง debugging ที่ติดปัญหาหนักๆ แล้วค่อยลดกลับลงมา
 
-Opus 4.7 respects effort more strictly than 4.6 — if `low`/`medium` feels under-thought, raise effort instead of padding the prompt with "think harder" language.
+Opus 4.7 เคารพ effort อย่างเคร่งครัดกว่า 4.6 — หาก `low`/`medium` รู้สึกว่าคิดน้อยเกินไป ให้เพิ่ม effort แทนที่จะเติม prompt ด้วยคำว่า "คิดให้หนักขึ้น"
 
-**Opus 4.7 recommendation** (from the docs): start with `xhigh` for coding and agentic use cases; use a minimum of `high` for most intelligence-sensitive use cases. Messages API only — Claude Managed Agents picks effort automatically.
+**คำแนะนำสำหรับ Opus 4.7** (จากเอกสาร): เริ่มต้นด้วย `xhigh` สำหรับ use case ที่เป็น coding และ agentic; ใช้ขั้นต่ำ `high` สำหรับ use case ส่วนใหญ่ที่ต้องการความฉลาดสูง Messages API เท่านั้น — Claude Managed Agents จะเลือก effort โดยอัตโนมัติ
 
-## Relation to adaptive thinking
+## ความสัมพันธ์กับ adaptive thinking
 
-Effort ≠ thinking. [[adaptive-thinking|Adaptive thinking]] is a separate on/off-and-display setting that controls whether the model is allowed to reason before replying. On 4.7, thinking is off by default — `effort` alone won't turn it on; caller must pass `thinking: {type: "adaptive"}` explicitly.
+Effort ≠ thinking. [[adaptive-thinking|Adaptive thinking]] เป็นการตั้งค่าเปิด/ปิดและการแสดงผลที่แยกต่างหาก ซึ่งควบคุมว่าโมเดลได้รับอนุญาตให้คิดก่อนตอบหรือไม่ ใน 4.7, thinking จะปิดเป็นค่าเริ่มต้น — `effort` อย่างเดียวไม่สามารถเปิดมันได้; ผู้เรียกใช้ต้องส่ง `thinking: {type: "adaptive"}` อย่างชัดเจน
 
-## Effect on token usage
+## ผลกระทบต่อการใช้ token
 
-Higher effort means more thinking — especially on later turns in agentic settings. Combined with [[claude-opus-4-7|Opus 4.7]]'s updated tokenizer (input maps to 1.0–1.35× more tokens), migrations need real-traffic measurement. Anthropic's internal coding eval shows favorable tokens-per-result across all effort levels after the upgrade.
+Effort ที่สูงขึ้นหมายถึงการคิดที่มากขึ้น — โดยเฉพาะใน turn หลังๆ ของการตั้งค่าแบบ agentic เมื่อรวมกับ tokenizer ที่อัปเดตของ [[claude-opus-4-7|Opus 4.7]] (input เดียวกันใช้ token มากขึ้น 1.0–1.35 เท่า) การย้ายระบบจำเป็นต้องมีการวัดผลจากการใช้งานจริง การประเมินผล coding ภายในของ Anthropic แสดงให้เห็นว่า tokens-per-result โดยรวมดีขึ้นในทุกระดับ effort หลังจากการอัปเกรด
 
-## Controlling cost
+## การควบคุมค่าใช้จ่าย
 
-- Lower effort for simpler tasks
-- **Task budgets** (API, public beta) — ceiling on token spend per run
-- Prompt the model to be more concise
-- Use the [[advisor-strategy]] — keep the executor on a modest effort, escalate to an Opus advisor only at hard decisions
+- ลด effort สำหรับงานที่ง่ายกว่า
+- **[[task-budgets|Task budgets]]** (API, public beta) — เพดานการใช้ token ต่อการรันหนึ่งครั้ง
+- Prompt ให้โมเดลตอบให้กระชับขึ้น
+- ใช้ [[advisor-strategy]] — ให้ executor ทำงานที่ effort ไม่สูงมาก และ escalate ไปหา Opus advisor เฉพาะเมื่อเจอการตัดสินใจที่ยาก
 
-## See also
+## ดูเพิ่ม
 
 - [[claude-opus-4-7]]
 - [[claude-code]]

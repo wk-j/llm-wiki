@@ -3,24 +3,24 @@ title: Panutat Tejasen
 type: entity
 tags: [person, thai, education, ai, software-engineering]
 created: 2026-04-18
-updated: 2026-04-18
+updated: 2026-04-23
 sources: [harness-engineering-panutat.md]
 ---
 
-# Panutat Tejasen
+# ภานุทัต เตชะเสน
 
-Thai practitioner who proposed **[[harness-engineering|Harness Engineering]]** as the curriculum response to capable AI coding agents — in a short Facebook post dated 2026-04-18.
+ผู้ประกอบการชาวไทยผู้เสนอแนวคิด **[[harness-engineering|Harness Engineering]]** เพื่อเป็นแนวทางตอบสนองของหลักสูตรการศึกษาต่อการมาถึงของ AI coding agent ที่มีความสามารถสูง — ผ่านโพสต์สั้นๆ บน Facebook เมื่อวันที่ 18 เมษายน 2026
 
-## Positions (from the post)
+## จุดยืน (จากโพสต์)
 
-- Humans can no longer usefully "review" or "advise" an AI Agent on framework/library selection — the agent's knowledge exceeds the human's.
-- Forcing that review collapses the AI's 10× productivity gain into a 1/100× regression; the human becomes the bottleneck.
-- Education should target the *harness* around the agent: code-review, inspection, test-generation, E2E-testing, and security-audit agents, orchestrated into a pipeline.
-- Delivery is explicitly low-key: "อย่าดราม่านะครับ แค่ความเห็นส่วนตัว" — framed as personal observation from real agent-assisted coding, not a prescription.
+- มนุษย์ไม่สามารถ "รีวิว" หรือ "แนะนำ" AI Agent ในการเลือก framework/library ได้อย่างมีประโยชน์อีกต่อไป — เพราะความรู้ของ agent นั้นมีมากกว่าของมนุษย์
+- การบังคับให้มีการรีวิวนั้น จะทำให้ประสิทธิภาพ 10 เท่าของ AI ลดลงเหลือ 1/100 เท่า; มนุษย์จะกลายเป็นคอขวดเสียเอง
+- การศึกษาควรตั้งเป้าไปที่ *harness* ที่อยู่รอบๆ agent: เช่น code-review agent, inspection agent, test-generation agent, E2E-testing agent, และ security-audit agent ที่ถูกจัดเรียงเป็น pipeline
+- การนำเสนอเป็นไปอย่างเรียบง่าย: "อย่าดราม่านะครับ แค่ความเห็นส่วนตัว" — วางกรอบว่าเป็นเพียงข้อสังเกตส่วนตัวจากการใช้ agent ช่วยเขียนโค้ดจริงๆ ไม่ใช่การสั่งสอน
 
-Further detail on the argument lives in [[harness-engineering]] and [[harness-engineering-panutat]].
+รายละเอียดเพิ่มเติมของแนวคิดนี้อยู่ใน [[harness-engineering]] และ [[harness-engineering-panutat]]
 
-## See also
+## ดูเพิ่ม
 
 - [[harness-engineering]]
 - [[harness-engineering-panutat]]

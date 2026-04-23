@@ -8,7 +8,11 @@
       "WebFetch(domain:echasnovski.com)",
       "WebFetch(domain:x.com)",
       "Bash(git commit *)",
-      "Read(//Users/wk/.agents/skills/grill-me/**)"
+      "Read(//Users/wk/.agents/skills/grill-me/**)",
+      "Bash(git push *)",
+      "Bash(gh issue *)",
+      "Bash(gh repo *)",
+      "Bash(gh api *)"
     ]
   }
 }

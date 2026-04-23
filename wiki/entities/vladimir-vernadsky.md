@@ -3,31 +3,31 @@ title: Vladimir Vernadsky
 type: entity
 tags: [philosophy, cosmism, soviet, science, noosphere]
 created: 2026-04-14
-updated: 2026-04-14
+updated: 2026-04-23
 sources: [Soviet Cosmism philosophy.md, Soviet Cosmism UI style.md]
 ---
 
 # Vladimir Vernadsky
 
-Russian-Ukrainian mineralogist and geochemist (1863–1945), the third major figure of [[soviet-cosmism|Soviet Cosmism]]. His primary contribution was the concept of the [[noosphere]] — Earth's "thinking layer," a sphere of collective human consciousness that emerges from the biosphere as reason transforms the planet.
+นักแร่วิทยาและนักธรณีเคมีชาวรัสเซีย-ยูเครน (1863–1945) เป็นบุคคลสำคัญลำดับที่สามของ [[soviet-cosmism|Soviet Cosmism]] ผลงานหลักของเขาคือแนวคิดเรื่อง [[noosphere]] — "ชั้นแห่งความคิด" ของโลก ซึ่งเป็นขอบเขตของจิตสำนึกร่วมของมนุษย์ที่เกิดขึ้นจากชีวมณฑล (biosphere) เมื่อเหตุผลได้เปลี่ยนแปลงโลก
 
-## Key concepts
+## แนวคิดหลัก
 
-- **[[noosphere|Noosphere]]** (Ноосфера) — the envelope of collective thought surrounding Earth, an evolution beyond biosphere
-- **Biosphere as geological force** — living matter as an active agent in planetary chemistry
-- **Cosmic perspective on life** — life as a cosmic phenomenon, not an isolated terrestrial accident
+- **[[noosphere|Noosphere]]** (Ноосфера) — เปลือกหุ้มของความคิดร่วม (collective thought) ที่ล้อมรอบโลก เป็นวิวัฒนาการที่เหนือกว่าชีวมณฑล
+- **ชีวมณฑลในฐานะพลังทางธรณีวิทยา** — สิ่งมีชีวิตเป็นตัวกระทำ (active agent) ในเคมีของดาวเคราะห์
+- **มุมมองต่อชีวิตในระดับจักรวาล** — ชีวิตเป็นปรากฏการณ์ของจักรวาล ไม่ใช่แค่อุบัติเหตุที่เกิดขึ้นบนโลกโดยโดดเดี่ยว
 
-## Significance
+## ความสำคัญ
 
-Vernadsky grounded Cosmist philosophy in earth science. Where [[nikolai-fedorov]] was mystical and [[konstantin-tsiolkovsky]] was engineering-focused, Vernadsky brought systems-level scientific thinking — the idea that consciousness itself is a planetary-scale phenomenon with material effects.
+Vernadsky ได้วางรากฐานปรัชญา Cosmist ด้วยวิทยาศาสตร์โลก ในขณะที่ [[nikolai-fedorov]] เน้นไปทางความลี้ลับ และ [[konstantin-tsiolkovsky]] เน้นไปที่วิศวกรรม, Vernadsky ได้นำการคิดเชิงระบบทางวิทยาศาสตร์เข้ามา — แนวคิดที่ว่าจิตสำนึกเองก็เป็นปรากฏการณ์ระดับดาวเคราะห์ที่มีผลกระทบทางวัตถุ
 
-## UI design expression
+## การแสดงออกในการออกแบบ UI
 
-In [[soviet-cosmism]] UI, Vernadsky's noosphere inspires the geodesic wireframe globe motif, network web visualizations, and radiating brainwave patterns. The Noosphere Green palette (`#1a7a3a` primary, `#00ff7f` phosphor accent) is named for his concept. His "noosphere metrics" appear in data ticker components.
+ใน UI แบบ [[soviet-cosmism]], noosphere ของ Vernadsky เป็นแรงบันดาลใจให้กับลวดลายลูกโลกโครงตาข่าย geodesic, การแสดงภาพเว็บเครือข่าย, และรูปแบบคลื่นสมองที่แผ่ออกไป จานสี Noosphere Green (สีหลัก `#1a7a3a`, สีเน้น phosphor `#00ff7f`) ก็ตั้งชื่อตามแนวคิดของเขา "noosphere metrics" ของเขาก็ปรากฏในส่วนประกอบ data ticker
 
-## See also
+## ดูเพิ่ม
 
-- [[noosphere]] — his signature concept
-- [[soviet-cosmism]] — the philosophical movement
-- [[nikolai-fedorov]] — originator of Cosmism
-- [[konstantin-tsiolkovsky]] — fellow Cosmist thinker
+- [[noosphere]] — แนวคิดที่เป็นเอกลักษณ์ของเขา
+- [[soviet-cosmism]] — กระแสปรัชญา
+- [[nikolai-fedorov]] — ผู้ริเริ่ม Cosmism
+- [[konstantin-tsiolkovsky]] — นักคิด Cosmist อีกคน

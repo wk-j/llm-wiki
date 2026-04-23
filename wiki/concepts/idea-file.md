@@ -3,51 +3,51 @@ title: Idea File
 type: concept
 tags: [llm, ai-agents, knowledge-sharing, open-source]
 created: 2026-04-16
-updated: 2026-04-16
+updated: 2026-04-23
 sources: ["Karpathy's LLM Wiki The Complete Guide to His Idea File.md"]
 ---
 
 # Idea File
 
-A document that describes a *pattern* or *system* at a conceptual level — not code, not an app — intended to be given to an LLM agent that will then instantiate a version customized to the user's environment, tools, and preferences. Coined by [[andrej-karpathy]] in April 2026 alongside his LLM Wiki gist.
+เอกสารที่อธิบาย *รูปแบบ (pattern)* หรือ *ระบบ* ในระดับแนวคิด — ไม่ใช่โค้ด, ไม่ใช่แอป — มีไว้เพื่อให้ LLM agent นำไปสร้างเป็นเวอร์ชันที่ปรับแต่งให้เข้ากับสภาพแวดล้อม, เครื่องมือ, และความชอบของผู้ใช้แต่ละคน บัญญัติศัพท์โดย [[andrej-karpathy]] ในเดือนเมษายน 2026 พร้อมกับ gist เรื่อง LLM Wiki ของเขา
 
-## The core idea
+## แนวคิดหลัก
 
-In the pre-agent era, sharing a useful tool meant sharing the *implementation*: a GitHub repo, an npm package, a Docker image. The recipient clones, configures, and runs it. In a world where everyone has an LLM agent (Claude Code, Codex, Cursor, OpenCode), sharing the *idea* is often more valuable than sharing the code.
+ในยุคก่อน agent, การแบ่งปันเครื่องมือที่มีประโยชน์หมายถึงการแบ่งปัน *implementation*: GitHub repo, npm package, Docker image ผู้รับจะ clone, กำหนดค่า, และรันมัน ในโลกที่ทุกคนมี LLM agent (Claude Code, Codex, Cursor, OpenCode), การแบ่งปัน *แนวคิด* มักจะมีค่ามากกว่าการแบ่งปันโค้ด
 
-Karpathy's exact words:
-> "In this era of LLM agents, there is less of a point/need of sharing the specific code/app, you just share the idea, then the other person's agent customizes & builds it for your specific needs."
+คำพูดของ Karpathy:
+> "ในยุคของ LLM agent นี้, การแบ่งปันโค้ด/แอปที่เฉพาะเจาะจงมีความจำเป็น/สำคัญน้อยลง คุณแค่แบ่งปันแนวคิด จากนั้น agent ของอีกคนจะปรับแต่งและสร้างมันขึ้นมาเพื่อความต้องการเฉพาะของคุณ"
 
-Why the shift:
-- **Portability** — an idea works across any tool stack; code is specific to one
-- **Customization** — your agent builds it for your exact setup, not the author's
-- **Intentional vagueness** — the gist is "intentionally kept a little bit abstract/vague because there are so many directions to take this in"
+เหตุผลที่เปลี่ยนไป:
+- **Portability** — แนวคิดใช้ได้กับทุก tool stack; แต่โค้ดจะเฉพาะเจาะจงกับ stack เดียว
+- **Customization** — agent ของคุณจะสร้างมันขึ้นมาสำหรับ setup ของคุณโดยเฉพาะ ไม่ใช่ของผู้เขียน
+- **Intentional vagueness** — gist นั้น "ถูกทำให้เป็นนามธรรม/คลุมเครือเล็กน้อยโดยเจตนา เพราะมีทิศทางมากมายที่จะนำไปต่อยอดได้"
 
-## How to use one
+## วิธีใช้งาน
 
-1. Copy the idea file (a markdown gist or document)
-2. Paste it into your LLM agent's context
-3. Tell the agent: "Set up a [system] based on this idea file for [your topic]"
-4. The agent creates the directory structure, schema, and walks you through first use
+1.  คัดลอก idea file (gist หรือเอกสาร markdown)
+2.  วางลงใน context ของ LLM agent ของคุณ
+3.  บอก agent ว่า: "ตั้งค่า [ระบบ] ตาม idea file นี้สำหรับ [หัวข้อของคุณ]"
+4.  agent จะสร้างโครงสร้างไดเรกทอรี, schema, และแนะนำคุณในการใช้งานครั้งแรก
 
-## Format characteristics
+## ลักษณะของรูปแบบ
 
-- Written in markdown
-- Describes architecture, operations, and conventions — not implementation
-- Contains worked examples but no runnable code
-- Ends with something like: "The document's only job is to communicate the pattern. Your LLM can figure out the rest."
-- Optionally has a Discussion tab (GitHub gist) for community contributions — "open ideas" rather than open source
+- เขียนด้วย markdown
+- อธิบายสถาปัตยกรรม, การดำเนินงาน, และธรรมเนียมปฏิบัติ — ไม่ใช่ implementation
+- มีตัวอย่างที่ทำสำเร็จแล้ว แต่ไม่มีโค้ดที่รันได้
+- จบด้วยข้อความทำนองว่า: "หน้าที่เดียวของเอกสารนี้คือการสื่อสารรูปแบบ ที่เหลือ LLM ของคุณสามารถคิดต่อได้เอง"
+- อาจมีแท็บ Discussion (ใน GitHub gist) สำหรับการมีส่วนร่วมของชุมชน — เป็น "open ideas" มากกว่า open source
 
-## Relationship to open source
+## ความสัมพันธ์กับ open source
 
-Traditional open source: share code → others fork/adapt. Idea files: share a pattern → each agent builds a custom version. This is **open ideas** — the collaborative space is around refining the concept, not merging PRs. The Discussion tab on Karpathy's gist embodies this: people adjust the idea or contribute their own, without needing to agree on implementation details.
+Open source แบบดั้งเดิม: แบ่งปันโค้ด → คนอื่น fork/ปรับแก้ Idea files: แบ่งปันรูปแบบ → แต่ละ agent สร้างเวอร์ชันที่ปรับแต่งเอง นี่คือ **open ideas** — พื้นที่ทำงานร่วมกันคือการปรับปรุงแนวคิด ไม่ใช่การ merge PR แท็บ Discussion ใน gist ของ Karpathy สะท้อนสิ่งนี้: ผู้คนปรับแก้แนวคิดหรือมีส่วนร่วมกับแนวคิดของตนเอง โดยไม่จำเป็นต้องตกลงกันเรื่องรายละเอียด implementation
 
-## Notable examples
+## ตัวอย่างที่น่าสนใจ
 
-- Karpathy's "LLM Wiki" gist — describes the [[llm-knowledge-bases]] pattern; what this wiki was built from
-- The CLAUDE.md / AGENTS.md schema inside any LLM wiki is itself an idea file for the LLM to follow
+- gist "LLM Wiki" ของ Karpathy — อธิบายรูปแบบ [[llm-knowledge-bases]]; สิ่งที่ wiki นี้สร้างขึ้นมา
+- schema ของ CLAUDE.md / AGENTS.md ภายใน LLM wiki ใดๆ ก็เป็น idea file สำหรับให้ LLM ทำตามเช่นกัน
 
-## See also
+## ดูเพิ่ม
 
 - [[andrej-karpathy]]
 - [[llm-knowledge-bases]]

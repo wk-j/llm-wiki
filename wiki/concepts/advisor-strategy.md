@@ -3,49 +3,49 @@ title: Advisor Strategy
 type: concept
 tags: [ai, agents, cost-optimization, architecture]
 created: 2026-04-16
-updated: 2026-04-18
+updated: 2026-04-23
 sources: [advisor-strategy.md, Introducing Claude Opus 4.7.md, alex-ker-harnesses-optimize.md]
 ---
 
 # Advisor Strategy
 
-An agent architecture where a **cheaper, faster model** (the executor) drives a task end-to-end, escalating to a **stronger, more expensive model** (the advisor) only at decision points it cannot resolve alone. The advisor provides plans, corrections, or stop signals but never calls tools or produces user-facing output.
+สถาปัตยกรรมของ agent ที่ให้ **โมเดลที่ถูกและเร็วกว่า** (the executor) ขับเคลื่อนงานตั้งแต่ต้นจนจบ และจะขอความช่วยเหลือจาก **โมเดลที่เก่งและแพงกว่า** (the advisor) เฉพาะเมื่อเจอจุดตัดสินใจที่ตัวเองแก้ไม่ได้เท่านั้น advisor จะให้แผน, การแก้ไข, หรือสัญญาณให้หยุด แต่จะไม่เรียก tool หรือสร้างผลลัพธ์ให้ผู้ใช้โดยตรง
 
-## How it differs from orchestrator-worker
+## แตกต่างจาก orchestrator-worker อย่างไร
 
-The traditional [[ai-orchestrator|orchestrator-worker pattern]] uses a large model to decompose work and delegate subtasks to smaller workers. The advisor strategy inverts this:
+รูปแบบ [[ai-orchestrator|orchestrator-worker]] แบบดั้งเดิมจะใช้โมเดลขนาดใหญ่เพื่อแตกงานและมอบหมายงานย่อยให้ worker ที่เล็กกว่า แต่ advisor strategy จะกลับด้านกัน:
 
 | | Orchestrator-worker | Advisor strategy |
 |---|---|---|
-| **Who drives** | Large model | Small model |
-| **Who does tool calls** | Workers (small) | Executor (small) |
-| **Role of large model** | Decompose, dispatch, merge | Advise on demand |
-| **When large model runs** | Every step | Only at escalation |
-| **Cost profile** | High (large model always active) | Low (large model intermittent) |
+| **ใครขับเคลื่อน** | โมเดลใหญ่ | โมเดลเล็ก |
+| **ใครเรียก tool** | Workers (เล็ก) | Executor (เล็ก) |
+| **บทบาทของโมเดลใหญ่** | แตกงาน, มอบหมาย, รวมผล | ให้คำแนะนำเมื่อถูกเรียก |
+| **โมเดลใหญ่ทำงานเมื่อไหร่** | ทุกขั้นตอน | เฉพาะเมื่อมีการ escalate |
+| **โปรไฟล์ค่าใช้จ่าย** | สูง (โมเดลใหญ่ทำงานตลอด) | ต่ำ (โมเดลใหญ่ทำงานเป็นครั้งคราว) |
 
-The executor avoids the overhead of decomposition, a worker pool, and orchestration logic. Frontier-level reasoning applies only when needed.
+executor จะหลีกเลี่ยง overhead ของการแตกงาน, การจัดการ worker pool, และ logic การควบคุม (orchestration) การใช้เหตุผลระดับ frontier จะเกิดขึ้นเมื่อจำเป็นเท่านั้น
 
-## Why it can be cheaper than the executor alone
+## ทำไมถึงถูกกว่าการใช้ executor เพียงอย่างเดียวได้
 
-Counter-intuitively, adding a more expensive advisor can *reduce* total cost. The advisor's short guidance (400–700 tokens) steers the executor away from expensive dead-end tool loops that would otherwise burn many executor turns.
+อาจจะดูขัดกับสัญชาตญาณ แต่การเพิ่ม advisor ที่แพงกว่าเข้ามาอาจ*ลด*ค่าใช้จ่ายโดยรวมได้ คำแนะนำสั้นๆ (400–700 tokens) ของ advisor สามารถชี้นำ executor ให้ออกจาก tool loop ที่ไม่มีทางออกซึ่งอาจจะเผาผลาญ turn ของ executor ไปหลายรอบได้
 
-## When to use
+## ควรใช้เมื่อไหร่
 
-- High-volume agentic workloads where cost matters but quality cannot drop below a threshold.
-- Tasks where the executor handles 80%+ of decisions competently — the advisor covers the hard 20%.
-- Scenarios where latency of a full Opus run is unacceptable but occasional Opus consultation is fine.
+- Agentic workload ที่มีปริมาณสูง ซึ่งค่าใช้จ่ายเป็นเรื่องสำคัญแต่คุณภาพต้องไม่ต่ำกว่าเกณฑ์
+- งานที่ executor สามารถตัดสินใจเองได้ 80%+ อย่างมีประสิทธิภาพ — advisor จะเข้ามาช่วยใน 20% ที่ยาก
+- สถานการณ์ที่ latency ของการรัน Opus แบบเต็มๆ เป็นสิ่งที่ยอมรับไม่ได้ แต่การปรึกษา Opus เป็นครั้งคราวยังพอรับได้
 
-## API support
+## การรองรับใน API
 
-[[anthropic|Anthropic]] ships the `advisor_20260301` tool type in the Messages API. The executor model decides when to invoke it; handoff happens within a single API request.
+[[anthropic|Anthropic]] ได้เพิ่ม `advisor_20260301` tool type เข้ามาใน Messages API โมเดล executor จะตัดสินใจเองว่าจะเรียกใช้เมื่อไหร่; การส่งมอบงานจะเกิดขึ้นภายในการเรียก API เพียงครั้งเดียว
 
-With [[claude-opus-4-7|Opus 4.7]] (released 2026-04-16), the natural advisor model upgrades from `claude-opus-4-6` to `claude-opus-4-7` — same API shape and pricing. Executor-side, Sonnet 4.6 and Haiku 4.5 remain the typical choices.
+ด้วย [[claude-opus-4-7|Opus 4.7]] (เปิดตัว 16 เม.ย. 2026), advisor model โดยธรรมชาติได้อัปเกรดจาก `claude-opus-4-6` เป็น `claude-opus-4-7` — โดยมี API shape และราคาเท่าเดิม ในฝั่ง executor, Sonnet 4.6 และ Haiku 4.5 ยังคงเป็นตัวเลือกที่นิยมใช้
 
-## Advisor as pipeline judge
+## Advisor ในฐานะผู้พิพากษาของ pipeline
 
-A natural place to drop an advisor into a [[subagent-patterns|subagent pipeline]] is at the final consolidation step: three or four subagents in parallel fan-out each return summaries; a frontier advisor consolidates them into the final answer. [[alex-ker|Alex Ker]] (2026-04-18) calls out exactly this pattern — "you could use a frontier model as a judge to consolidate the responses and ensure the desired behavior is achieved with higher confidence." The executor-drives / advisor-at-the-hard-step structure still holds; the advisor is just invoked at synthesis rather than mid-task.
+จุดที่เหมาะสมในการนำ advisor เข้ามาใน [[subagent-patterns|subagent pipeline]] คือในขั้นตอนการรวบรวมสุดท้าย: subagent สามหรือสี่ตัวใน parallel fan-out จะส่ง summary กลับมา; advisor ระดับ frontier จะรวบรวม summary เหล่านั้นเป็นคำตอบสุดท้าย [[alex-ker|Alex Ker]] (18 เม.ย. 2026) ได้กล่าวถึงรูปแบบนี้อย่างชัดเจน — "คุณสามารถใช้ frontier model เป็นผู้พิพากษาเพื่อรวบรวมคำตอบและรับประกันว่าจะได้พฤติกรรมที่ต้องการด้วยความมั่นใจที่สูงขึ้น" โครงสร้างที่ executor ขับเคลื่อน / advisor ช่วยในขั้นตอนที่ยากยังคงเดิม; แค่ advisor ถูกเรียกใช้ตอนสังเคราะห์ผลลัพธ์แทนที่จะเป็นระหว่างทำงาน
 
-## See also
+## ดูเพิ่ม
 
 - [[ai-orchestrator]]
 - [[harness-engineering]]

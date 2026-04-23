@@ -3,60 +3,60 @@ title: Nattee Niparnan
 type: entity
 tags: [person, thai, education, ai, software-engineering]
 created: 2026-04-18
-updated: 2026-04-18
+updated: 2026-04-23
 sources: [llm-era-computer-engineering-nattee.md]
 ---
 
-# Nattee Niparnan
+# ณัฐที นิภาชน์
 
-Faculty member at the Department of Computer Engineering (CEDT), Chulalongkorn University. Author of the ongoing Facebook series *"วิศวฯคอมจะอยู่อย่างไรในยุค LLM ครองเมือง"* ("How will Computer Engineering survive in the LLM era") — a working notebook on pedagogy and practice in the LLM/Agent era.
+อาจารย์ประจำภาควิชาวิศวกรรมคอมพิวเตอร์ (CEDT) จุฬาลงกรณ์มหาวิทยาลัย เป็นผู้เขียนซีรีส์บน Facebook ที่กำลังดำเนินอยู่ชื่อ *"วิศวฯคอมจะอยู่อย่างไรในยุค LLM ครองเมือง"* — ซึ่งเปรียบเสมือนสมุดบันทึกเกี่ยวกับแนวทางการสอนและการปฏิบัติในยุค LLM/Agent
 
-## Teaching focus
+## การสอน
 
-- Data Structure, Algorithm Design, and related core-CE courses — the "bitter pill" foundation classes at Chula CEDT.
-- Self-described role as a "เป็ด" (generalist): teaching, research, procurement, software development, deployment, sysadmin, even running LAN cables. Breadth of exposure feeds the series.
+- วิชาหลักๆ ของภาควิชาคอมฯ เช่น Data Structure, Algorithm Design — ซึ่งเป็นวิชาพื้นฐานที่เปรียบเหมือน "ยาขม" ที่ Chula CEDT
+- นิยามบทบาทตัวเองว่าเป็น "เป็ด" (generalist): สอน, ทำวิจัย, จัดซื้อ, พัฒนาซอฟต์แวร์, deploy, เป็น sysadmin, หรือแม้กระทั่งเดินสาย LAN เอง ความรู้ที่หลากหลายนี้เป็นวัตถุดิบให้กับซีรีส์ของเขา
 
-## cafe-grader maintainership
+## การดูแล cafe-grader
 
-Current maintainer of [`cafe-grader`](https://github.com/nattee/cafe-grader-web) — the department's automated judging system where students submit code and get test-case results. Originated by อ. มะนาว **Jittat Fakcharoenphol** and อ. โป้ง **Pramook Khungurn**; Nattee took over maintenance.
+ปัจจุบันเป็นผู้ดูแล [`cafe-grader`](https://github.com/nattee/cafe-grader-web) — ระบบตรวจงานอัตโนมัติของภาควิชาที่ให้นิสิตส่งโค้ดและรับผลการทดสอบ test case ระบบนี้ริเริ่มโดย อ. มะนาว **Jittat Fakcharoenphol** และ อ. โป้ง **Pramook Khungurn**; อ. ณัฐทีรับช่วงดูแลต่อ
 
-Most notable recent modification: embedded an LLM "ขอ hint" button into the grader with a Socratic-only prompt and a scoring cost (−10 points per click, 70 points max after 3 clicks in-exam). See [[llm-era-computer-engineering-nattee]] for details.
+การปรับปรุงล่าสุดที่น่าสนใจคือ: การฝังปุ่ม "ขอ hint" ที่ใช้ LLM เข้าไปใน grader โดยใช้ prompt ที่เน้นการสอนแบบ Socratic และมีต้นทุนในการกด (−10 คะแนนต่อคลิก, ได้คะแนนสูงสุด 70 หลังกด 3 ครั้งในข้อสอบ) ดูรายละเอียดที่ [[llm-era-computer-engineering-nattee]]
 
-## The series
+## ซีรีส์บทความ
 
-Two parts ingested to date:
+มี 2 ตอนที่ถูกนำเข้า wiki แล้ว:
 
-| Ep. | Date | Theme |
+| ตอนที่ | วันที่ | หัวข้อหลัก |
 |---|---|---|
-| **Ep. 1** | 2026-04-10 | LLM in the classroom and exam room — grader integration, chat-log-as-submission, prompt-as-exam experiments |
-| **Ep. 2** | ~2026-04-17 | Coding Agent on a real consulting PoC — $140 in tools, no RAs hired, authorization bug war story, introduction of the "taste paradox" |
+| **Ep. 1** | 10 เม.ย. 2026 | LLM ในห้องเรียนและห้องสอบ — การ integrate เข้ากับ grader, การส่ง chat-log แทนงาน, การทดลองใช้ prompt เป็นข้อสอบ |
+| **Ep. 2** | ~17 เม.ย. 2026 | การใช้ Coding Agent ในงาน PoC ให้คำปรึกษาจริง — ค่า tool $140, ไม่ต้องจ้าง RA, เรื่องเล่าจากหน้างานเรื่อง authorization bug, และการนำเสนอแนวคิด "taste paradox" |
 
-Ep. 2 promises a future installment on *using Claude Code across the full SDLC*.
+ในตอนที่ 2 ได้เกริ่นไว้ว่าจะมีตอนต่อไปเกี่ยวกับ *การใช้ Claude Code ตลอดทั้ง SDLC*
 
-## Central contribution to the wiki
+## ส่วนร่วมหลักใน wiki นี้
 
-- **[[taste-paradox]]** — the recursive loop where Agent-skipped practice is the same practice that builds the judgment needed to control the Agent. Nattee's most-cited original framing.
-- Empirical war stories: the authorization bug, $140 vs. 3–4 RAs, the −10/click economics of help-asking during exams.
-- Explicit claim that **core theory (DS/Algo/Discrete Math) becomes more important, not less** in the Agent era.
+- **[[taste-paradox]]** — วงจรย้อนกลับที่ว่าการฝึกฝนที่ถูก Agent ข้ามไป คือการฝึกฝนเดียวกันกับที่จำเป็นต่อการสร้างวิจารณญาณที่ต้องใช้ในการควบคุม Agent นั่นเอง นี่คือแนวคิดดั้งเดิมของ อ. ณัฐที ที่ถูกอ้างอิงมากที่สุด
+- เรื่องเล่าจากหน้างานเชิงประจักษ์: authorization bug, $140 เทียบกับ RA 3–4 คน, เศรษฐศาสตร์ของการขอความช่วยเหลือระหว่างสอบที่ -10 คะแนน/คลิก
+- การยืนยันอย่างชัดเจนว่า **ทฤษฎีหลัก (DS/Algo/Discrete Math) จะยิ่งมีความสำคัญมากขึ้น, ไม่ใช่น้อยลง** ในยุคของ Agent
 
-## Stance
+## จุดยืน
 
-Consistent throughout both episodes: *"คิดมาเป็นปีแล้วก็ยังคิดไม่ตกครับ"* — the series is explicitly framed as working-out-in-public, not prescription. Invites responses from working engineers. Complementary counterpart to [[panutat-tejasen|Panutat Tejasen]]'s [[harness-engineering]] framing (see [[taste-paradox]] for the dialogue).
+สม่ำเสมอตลอดทั้งสองตอน: *"คิดมาเป็นปีแล้วก็ยังคิดไม่ตกครับ"* — ซีรีส์นี้ถูกวางกรอบอย่างชัดเจนว่าเป็นการคิดและทำงานไปพร้อมๆ กับการเผยแพร่ (working-out-in-public) ไม่ใช่การสั่งสอน และเปิดรับความคิดเห็นจากวิศวกรที่ทำงานจริง เป็นแนวคิดที่ส่งเสริมซึ่งกันและกันกับ [[harness-engineering]] ของ [[panutat-tejasen|คุณภานุทัต เตชะเสน]] (ดูบทสนทนาได้ที่ [[taste-paradox]])
 
-## Colleagues mentioned in the series
+## เพื่อนร่วมงานที่กล่าวถึงในซีรีส์
 
-Faculty name-dropped in passing (no dedicated entity pages for these):
+รายชื่อคณาจารย์ที่ถูกเอ่ยถึง (ยังไม่มีหน้า entity เฉพาะ):
 
-- Jittat Fakcharoenphol (อ. มะนาว) — cafe-grader co-originator
-- Pramook Khungurn (อ. โป้ง) — cafe-grader co-originator
-- Ekapol Chuangsuwanich (อ. เอก) — helps source tool funding for students; referenced อ. สมชาย's prompt-as-exam format
-- Dittaya Wanvarie — co-coordinates tool-cost support for students
-- Mock Suwannatat (อ. ม๊อค) — workshop lead on guided-learning LLM usage and NotebookLM
-- Nuttapong Chentanez (อ. ชิน) — Claude Code skill author for lecture materials
-- Piyalitt Ittichaiwong (อ. อ๋า) — referenced as a pace-of-AI-progress tracker
-- *"อ. สมชาย"* — Intro to Com Prog instructor using prompt-as-exam format
+- Jittat Fakcharoenphol (อ. มะนาว) — ผู้ร่วมริเริ่ม cafe-grader
+- Pramook Khungurn (อ. โป้ง) — ผู้ร่วมริเริ่ม cafe-grader
+- Ekapol Chuangsuwanich (อ. เอก) — ช่วยหาทุนค่า tool ให้นิสิต; อ้างอิงถึงรูปแบบข้อสอบแบบ prompt ของ อ. สมชาย
+- Dittaya Wanvarie — ผู้ร่วมประสานงานสนับสนุนค่า tool ให้นิสิต
+- Mock Suwannatat (อ. ม๊อค) — ผู้นำ workshop เรื่องการใช้ LLM แบบ guided-learning และ NotebookLM
+- Nuttapong Chentanez (อ. ชิน) — ผู้เขียน skill ของ Claude Code สำหรับเนื้อหาการบรรยาย
+- Piyalitt Ittichaiwong (อ. อ๋า) — ถูกอ้างอิงในฐานะผู้ติดตามความก้าวหน้าของ AI
+- *"อ. สมชาย"* — อาจารย์วิชา Intro to Com Prog ที่ใช้รูปแบบข้อสอบเป็น prompt
 
-## See also
+## ดูเพิ่ม
 
 - [[llm-era-computer-engineering-nattee]]
 - [[taste-paradox]]

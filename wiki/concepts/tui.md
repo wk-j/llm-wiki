@@ -3,43 +3,43 @@ title: TUI (Terminal User Interface)
 type: concept
 tags: [terminal, tui, ui, software-engineering]
 created: 2026-04-16
-updated: 2026-04-16
+updated: 2026-04-23
 sources: [leo-robinovitch-terminal-pager.md]
 ---
 
-# TUI (Terminal User Interface)
+# TUI (Terminal User Interface) / ส่วนติดต่อผู้ใช้บนเทอร์มินัล
 
-Terminal applications that behave like interactive graphical applications, but run entirely within a terminal. TUIs use the **alt screen** to temporarily take over the full terminal display and present components: title bars, sidebars, text viewports, lists, input fields.
+แอปพลิเคชันบน Terminal ที่ทำงานเหมือนแอปพลิเคชันกราฟิกแบบ interactive แต่รันทั้งหมดภายใน terminal TUI ใช้ **alt screen** เพื่อยึดครองการแสดงผลของ terminal ทั้งหมดชั่วคราวและนำเสนอส่วนประกอบต่างๆ: title bars, sidebars, text viewports, lists, input fields
 
-## Distinguishing characteristics
+## ลักษณะเด่น
 
 | | Pager / CLI | TUI |
 |---|---|---|
-| **Screen** | Inline (scrollback) | Alt screen (full takeover) |
-| **Components** | One text stream | Multiple composed components |
-| **Input** | Minimal | Rich keyboard-driven navigation |
+| **Screen** | Inline (scrollback) | Alt screen (ยึดทั้งหน้าจอ) |
+| **Components** | Text stream เดียว | ส่วนประกอบหลายชิ้นประกอบกัน |
+| **Input** | น้อย | การนำทางด้วยคีย์บอร์ดที่หลากหลาย |
 | **Smallest unit** | Character / line | Terminal grid cell |
 
-The grid-cell constraint forces TUIs to be minimal and hierarchical. Each screen shows exactly what's needed, with keyboard shortcuts to drill in or pivot — rather than one sprawling scrollable page.
+ข้อจำกัดของ grid-cell บังคับให้ TUI ต้องเรียบง่ายและเป็นลำดับชั้น แต่ละหน้าจอจะแสดงเฉพาะสิ่งที่จำเป็น พร้อมด้วย keyboard shortcut เพื่อเจาะลึกหรือเปลี่ยนมุมมอง — แทนที่จะเป็นหน้าเดียวที่เลื่อนได้ยาวๆ
 
-## Common components
+## ส่วนประกอบทั่วไป
 
-- **Viewport** — scrollable, searchable text region (the most fundamental TUI component)
-- **List/picker** — selectable item collections
-- **Input field** — text entry
-- **Status bar / help line** — contextual key hints
+- **Viewport** — พื้นที่ข้อความที่เลื่อนและค้นหาได้ (ส่วนประกอบพื้นฐานที่สุดของ TUI)
+- **List/picker** — ชุดรายการที่เลือกได้
+- **Input field** — การป้อนข้อความ
+- **Status bar / help line** — คำใบ้ปุ่มตามบริบท
 
 ## Frameworks
 
-- **[Bubble Tea](https://github.com/charmbracelet/bubbletea)** (Go) — Elm-inspired model-update-view architecture; used by [[leo-robinovitch]] for lore, kl, wander
-- **Ratatui** (Rust) — used widely in the Rust ecosystem; used by [[helix]] conceptually (Helix has its own rendering layer)
+- **[Bubble Tea](https://github.com/charmbracelet/bubbletea)** (Go) — สถาปัตยกรรมแบบ model-update-view ที่ได้รับแรงบันดาลใจจาก Elm; [[leo-robinovitch]] ใช้สำหรับ lore, kl, wander
+- **Ratatui** (Rust) — ใช้กันอย่างแพร่หลายใน ecosystem ของ Rust; [[helix]] ใช้ในเชิงแนวคิด (Helix มี rendering layer ของตัวเอง)
 
-## Examples in this wiki
+## ตัวอย่างใน wiki นี้
 
-- [[helix]] — modal text editor, written in Rust
-- [[leo-robinovitch-terminal-pager|lore, kl, wander]] — Leo Robinovitch's Go TUIs
+- [[helix]] — modal text editor, เขียนด้วย Rust
+- [[leo-robinovitch-terminal-pager|lore, kl, wander]] — TUI ที่เขียนด้วย Go ของ Leo Robinovitch
 
-## See also
+## ดูเพิ่ม
 
 - [[terminal-pager]]
 - [[helix]]

@@ -3,32 +3,32 @@ title: Vannevar Bush
 type: entity
 tags: [person, history-of-computing, knowledge-management]
 created: 2026-04-16
-updated: 2026-04-16
+updated: 2026-04-23
 sources: ["Karpathy's LLM Wiki The Complete Guide to His Idea File.md"]
 ---
 
 # Vannevar Bush
 
-American engineer (1890–1974). MIT engineer who directed the US Office of Scientific Research and Development during WWII. Best known in computing history for the 1945 *Atlantic* essay "As We May Think," which described the [[memex]] — a hypothetical personal knowledge device.
+วิศวกรชาวอเมริกัน (1890–1974) วิศวกรจาก MIT ผู้ดำรงตำแหน่งผู้อำนวยการ US Office of Scientific Research and Development ในช่วงสงครามโลกครั้งที่ 2 เป็นที่รู้จักดีที่สุดในประวัติศาสตร์คอมพิวเตอร์จากบทความ "As We May Think" ในนิตยสาร *Atlantic* ปี 1945 ซึ่งอธิบายถึง [[memex]] — อุปกรณ์ความรู้ส่วนบุคคลในจินตนาการ
 
 ## "As We May Think" (1945)
 
-Published in *The Atlantic*, July 1945. Bush envisioned a device he called the **Memex** (memory + index): a desk-sized machine where a person could store all their books, records, and communications and navigate them through *associative trails* — linked sequences of documents with annotations, following human associative thought rather than hierarchical filing.
+ตีพิมพ์ใน *The Atlantic* เดือนกรกฎาคม 1945 Bush ได้จินตนาการถึงอุปกรณ์ที่เขาเรียกว่า **Memex** (memory + index): เครื่องจักรขนาดเท่าโต๊ะที่คนคนหนึ่งสามารถเก็บหนังสือ, บันทึก, และการสื่อสารทั้งหมดของตนเองไว้ และท่องไปในข้อมูลเหล่านั้นผ่าน *associative trails* — ลำดับของเอกสารที่เชื่อมโยงกันพร้อมคำอธิบายประกอบ โดยเป็นไปตามความคิดแบบเชื่อมโยงของมนุษย์ แทนที่จะเป็นการจัดเก็บแบบลำดับชั้น
 
-His famous quote: "Wholly new forms of encyclopedias will appear, ready-made with a mesh of associative trails running through them."
+คำพูดที่มีชื่อเสียงของเขา: "สารานุกรมรูปแบบใหม่ทั้งหมดจะปรากฏขึ้น พร้อมด้วยตาข่ายของ associative trails ที่ร้อยเรียงผ่านมัน"
 
-## Influence on computing
+## อิทธิพลต่อวงการคอมพิวเตอร์
 
-The essay directly inspired three foundational figures:
-- **Douglas Engelbart** — read it, "became infected with the idea," invented the computer mouse and the concept of personal computing
-- **Ted Nelson** — coined "hypertext" (1965) and "hypermedia" directly from the Memex concept
-- **Tim Berners-Lee** — the World Wide Web (1989) implemented hypertext at global scale
+บทความนี้เป็นแรงบันดาลใจโดยตรงให้กับบุคคลสำคัญ 3 ท่าน:
+- **Douglas Engelbart** — ได้อ่านบทความ, "ติดเชื้อจากแนวคิดนี้," และได้ประดิษฐ์เมาส์คอมพิวเตอร์และแนวคิดเรื่องคอมพิวเตอร์ส่วนบุคคล (personal computing)
+- **Ted Nelson** — บัญญัติศัพท์ "hypertext" (1965) และ "hypermedia" โดยตรงจากแนวคิด Memex
+- **Tim Berners-Lee** — World Wide Web (1989) ได้นำ hypertext มาใช้งานในระดับโลก
 
-## Connection to LLM wikis
+## ความเชื่อมโยงกับ LLM wikis
 
-[[andrej-karpathy]] cites Bush when describing the [[llm-knowledge-bases]] pattern: the Memex imagined private, curated, associatively linked personal knowledge — closer to the LLM Wiki than to what the web became. Bush couldn't solve who would do the maintenance. LLMs solve that.
+[[andrej-karpathy]] อ้างถึง Bush เมื่ออธิบายรูปแบบ [[llm-knowledge-bases]]: Memex ได้จินตนาการถึงความรู้ส่วนบุคคลที่เป็นส่วนตัว, ผ่านการคัดสรร, และเชื่อมโยงกันแบบ associative — ซึ่งใกล้เคียงกับ LLM Wiki มากกว่าสิ่งที่เว็บได้กลายเป็นในปัจจุบัน Bush ไม่สามารถแก้ปัญหาได้ว่าใครจะเป็นผู้ดูแลรักษา แต่ LLM สามารถแก้ปัญหานั้นได้
 
-## See also
+## ดูเพิ่ม
 
 - [[memex]]
 - [[llm-knowledge-bases]]

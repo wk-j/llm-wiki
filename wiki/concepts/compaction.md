@@ -3,45 +3,45 @@ title: Compaction
 type: concept
 tags: [ai, context-management, claude-code, productivity]
 created: 2026-04-16
-updated: 2026-04-16
+updated: 2026-04-23
 sources: [Using Claude Code Session Management & 1M Context.md]
 ---
 
-# Compaction
+# Compaction / การย่อประวัติการสนทนา
 
-A session management technique where a **long conversation is summarized into a shorter representation**, replacing the full history with that summary so work can continue on top of it. In [[claude-code|Claude Code]], triggered with `/compact` or automatically when approaching the context limit.
+เทคนิคการจัดการ session ที่ **บทสนทนาที่ยาวจะถูกสรุปให้เป็นตัวแทนที่สั้นลง** โดยแทนที่ประวัติทั้งหมดด้วยบทสรุปนั้นเพื่อให้สามารถทำงานต่อจากบนนั้นได้ ใน [[claude-code|Claude Code]] สามารถเรียกใช้ได้ด้วยคำสั่ง `/compact` หรือทำงานโดยอัตโนมัติเมื่อใกล้ถึงขีดจำกัดของ context
 
-## How it works
+## วิธีการทำงาน
 
-Claude reads the current session history, generates a summary of what happened (decisions made, files read, approaches tried, current state), and replaces the message history with that summary. The summary is typically far fewer tokens than the original — shedding weight while (ideally) preserving the task-relevant signal.
+Claude จะอ่านประวัติ session ปัจจุบัน, สร้างบทสรุปของสิ่งที่เกิดขึ้น (การตัดสินใจที่ทำไป, ไฟล์ที่อ่าน, แนวทางที่ลอง, สถานะปัจจุบัน), และแทนที่ประวัติข้อความด้วยบทสรุปนั้น บทสรุปโดยทั่วไปจะมี token น้อยกว่าต้นฉบับมาก — เป็นการลดน้ำหนักในขณะที่ (ตามหลักการ) ยังคงรักษาสัญญาณที่เกี่ยวข้องกับงานไว้
 
-## Manual vs. autocompact
+## Manual vs. Autocompact
 
-**Manual (`/compact`):** Human triggers it deliberately. Can pass instructions to steer what gets kept: `/compact focus on the auth refactor, drop the test debugging`. Produces a more targeted summary.
+**Manual (`/compact`):** มนุษย์เป็นผู้เรียกใช้โดยเจตนา สามารถส่งคำสั่งเพื่อชี้นำว่าจะเก็บอะไรไว้ได้: `/compact focus on the auth refactor, drop the test debugging` ทำให้ได้บทสรุปที่ตรงเป้าหมายมากขึ้น
 
-**Autocompact:** Fires automatically when the context window nears its limit. The model is at its *weakest* at this point (peak [[context-rot]]). Direction is inferred without instruction — summary quality depends on how predictable the work has been.
+**Autocompact:** ทำงานโดยอัตโนมัติเมื่อ context window ใกล้จะเต็ม ณ จุดนี้โมเดลจะอยู่ในช่วงที่*อ่อนแอที่สุด* (เกิด [[context-rot]] สูงสุด) ทิศทางจะถูกอนุมานโดยไม่มีคำสั่ง — คุณภาพของบทสรุปขึ้นอยู่กับว่างานที่ผ่านมาคาดเดาได้ง่ายเพียงใด
 
-## What causes bad compacts
+## อะไรทำให้การย่อไม่ดี
 
-A compact fails when the model can't predict what will matter next. Classic example: autocompact fires after a long debugging session; the next message references "that other warning in bar.ts." The model dropped it because the session's weight was on debugging, not warnings. The fix is to **compact proactively** — before the window forces it — and tell Claude explicitly what matters.
+การย่อจะล้มเหลวเมื่อโมเดลไม่สามารถคาดเดาได้ว่าอะไรจะมีความสำคัญต่อไป ตัวอย่างคลาสสิก: autocompact ทำงานหลังจาก session การดีบักที่ยาวนาน; ข้อความถัดไปอ้างถึง "that other warning in bar.ts" โมเดลได้ทิ้งมันไปเพราะน้ำหนักของ session อยู่ที่การดีบัก ไม่ใช่คำเตือน วิธีแก้คือ **ย่อเชิงรุก** — ก่อนที่ window จะบังคับ — และบอก Claude อย่างชัดเจนว่าอะไรสำคัญ
 
-## Compact vs. clear
+## Compact vs. Clear
 
-Compaction and `/clear` both shed context weight but differ in who does the work:
+Compaction และ `/clear` ทั้งคู่ลดน้ำหนักของ context แต่ต่างกันที่ใครเป็นคนทำงาน:
 
 | | `/compact` | `/clear` |
 |---|---|---|
-| **Who summarizes** | Claude | Human |
-| **What's kept** | What Claude judges relevant | What human chose to write down |
-| **Effort** | Low | Higher |
-| **Fidelity** | Lossy; model's judgment | Precise; human's judgment |
-| **Best for** | Continuing same task | Starting distinct task; high-stakes handoffs |
+| **ใครสรุป** | Claude | มนุษย์ |
+| **สิ่งที่เก็บไว้** | สิ่งที่ Claude ตัดสินว่าเกี่ยวข้อง | สิ่งที่มนุษย์เลือกที่จะเขียนลงไป |
+| **ความพยายาม** | ต่ำ | สูงกว่า |
+| **ความแม่นยำ** | สูญเสียข้อมูล; ขึ้นอยู่กับวิจารณญาณของ model | แม่นยำ; ขึ้นอยู่กับวิจารณญาณของมนุษย์ |
+| **เหมาะสำหรับ** | การทำงานเดิมต่อ | การเริ่มงานใหม่ที่แตกต่าง; การส่งมอบงานที่สำคัญ |
 
-## Steering a compact
+## การชี้นำการย่อ
 
-Pass instructions inline: `/compact focus on X, ignore Y`. Useful for suppressing large volumes of irrelevant tool output (test run logs, file read dumps) while preserving the decisions and current state.
+ส่งคำสั่งแบบ inline: `/compact focus on X, ignore Y` มีประโยชน์ในการตัด output ของ tool ที่ไม่เกี่ยวข้องจำนวนมาก (เช่น log การรันเทส, dump การอ่านไฟล์) ในขณะที่ยังคงรักษาการตัดสินใจและสถานะปัจจุบันไว้
 
-## See also
+## ดูเพิ่ม
 
 - [[context-rot]]
 - [[claude-code-session-management]]

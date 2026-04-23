@@ -3,21 +3,21 @@ title: ComfyUI
 type: entity
 tags: [ai, image-generation, workflow, open-source]
 created: 2026-04-18
-updated: 2026-04-18
+updated: 2026-04-23
 sources: ["Will AI replace 3D software?.md"]
 ---
 
 # ComfyUI
 
-Open-source, node-based UI for building diffusion-model image-generation pipelines. Each node is a step (load model, encode prompt, apply conditioning, sample, decode, save); users wire them into a graph that is saved and shared as a reusable **workflow**. Commonly used as the orchestration layer around Stable Diffusion, [[flux|Flux]], and various ControlNet / LoRA variants.
+UI แบบ node-based และ open-source สำหรับสร้าง pipeline การสร้างภาพด้วย diffusion-model แต่ละ node คือหนึ่งขั้นตอน (เช่น โหลดโมเดล, encode prompt, ใส่ conditioning, sample, decode, บันทึก); ผู้ใช้จะเชื่อมต่อ node เหล่านี้เข้าด้วยกันเป็นกราฟ ซึ่งจะถูกบันทึกและแชร์เป็น **workflow** ที่ใช้ซ้ำได้ มักใช้เป็นชั้น orchestration สำหรับ Stable Diffusion, [[flux|Flux]], และ ControlNet / LoRA เวอร์ชันต่างๆ
 
-## In the AI + 3D workflow
+## ใน AI + 3D workflow
 
-Hosts the **Flux.1 Depth template**, which takes a depth-map pass exported from [[blender|Blender]] plus a text prompt and generates variants that conform to the input geometry. See [[ai-3d-workflow]] for the full pipeline.
+ComfyUI เป็นที่สำหรับรัน **Flux.1 Depth template** ซึ่งรับ depth-map pass ที่ export มาจาก [[blender|Blender]] พร้อมกับ text prompt และสร้างภาพเวอร์ชันต่างๆ ที่สอดคล้องกับรูปทรงเรขาคณิตของ input ดู pipeline ทั้งหมดได้ที่ [[ai-3d-workflow]]
 
-The node-based design is what makes the depth-conditioned handoff practical: the depth map drops into a single input socket, and swapping in a different controlling signal (normal map, canny edge, pose) is a matter of rewiring.
+การออกแบบที่เป็น node-based นี้คือสิ่งที่ทำให้การส่งต่อข้อมูลแบบ depth-conditioned เป็นไปได้จริงในทางปฏิบัติ: depth map จะถูกป้อนเข้าไปใน input socket เพียงช่องเดียว และการเปลี่ยนไปใช้ signal ควบคุมแบบอื่น (เช่น normal map, canny edge, pose) ก็เป็นเพียงแค่การต่อสายใหม่เท่านั้น
 
-## See also
+## ดูเพิ่ม
 
 - [[flux]]
 - [[will-ai-replace-3d-software]]

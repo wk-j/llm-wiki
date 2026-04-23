@@ -3,63 +3,63 @@ title: Judgement vs. Automation
 type: concept
 tags: [ai, automation, skills, work, future-of-work]
 created: 2026-04-18
-updated: 2026-04-18
+updated: 2026-04-23
 sources: ["Will AI replace 3D software?.md", llm-era-computer-engineering-nattee.md]
 ---
 
-# Judgement vs. Automation
+# Judgement vs. Automation / วิจารณญาณ ปะทะ ระบบอัตโนมัติ
 
-A heuristic for predicting which skills get automated: **predictable outputs get automated; judgement-heavy outputs with unpredictable results don't.** Stated succinctly by [[andrew-price|Andrew Price]]: *"If you can predict it, you can train it."*
+Heuristic สำหรับทำนายว่าทักษะใดจะถูกทำให้เป็นอัตโนมัติ: **output ที่คาดเดาได้จะถูกทำให้เป็นอัตโนมัติ; output ที่ต้องใช้วิจารณญาณสูงและมีผลลัพธ์ที่คาดเดาไม่ได้ จะไม่ถูกแทนที่** [[andrew-price|Andrew Price]] กล่าวไว้อย่างกระชับว่า: *"ถ้าคุณคาดเดามันได้ คุณก็เทรนมันได้"*
 
-## The 100-artist test
+## แบบทดสอบศิลปิน 100 คน
 
-Ask the same task of 100 practitioners. How much does the output vary?
+ลองมอบหมายงานเดียวกันให้กับผู้ปฏิบัติงาน 100 คน แล้วดูว่าผลลัพธ์แตกต่างกันมากน้อยเพียงใด
 
-| Variance | Category | Example (3D/creative) | Automation risk |
+| ความแปรปรวน | ประเภท | ตัวอย่าง (3D/สร้างสรรค์) | ความเสี่ยงที่จะถูก automate |
 |---|---|---|---|
-| Low (similar outputs) | Predictable | Retopology, rig weight-painting, clean-up passes | **High** — trainable |
-| High (100 different results) | Judgement-heavy | Layout, lighting, color, design, narrative, worldbuilding | **Low** — taste is the product |
+| ต่ำ (ผลลัพธ์คล้ายกัน) | คาดเดาได้ | Retopology, rig weight-painting, clean-up passes | **สูง** — train ได้ |
+| สูง (ผลลัพธ์ต่างกัน 100 แบบ) | ต้องใช้วิจารณญาณสูง | Layout, lighting, color, design, narrative, worldbuilding | **ต่ำ** — taste คือตัวผลิตภัณฑ์ |
 
-The thought experiment is the whole rule.
+การทดลองทางความคิดนี้คือกฎทั้งหมด
 
-## Why this framing is useful
+## ทำไมกรอบความคิดนี้จึงมีประโยชน์
 
-- **Personal career bet.** Shifts the question from "will my job be automated?" to "which parts of my day are predictable, and which hinge on taste?"
-- **Team portfolio.** Lean headcount toward the judgement tasks; pair junior/predictable work with AI-assisted pipelines.
-- **Learning priorities.** Train the parts of your craft that resist automation. Predictable skills are still learnable, but they are not a defensible moat.
+- **การวางเดิมพันอาชีพส่วนตัว** เปลี่ยนคำถามจาก "งานของฉันจะถูก automate หรือไม่?" เป็น "ส่วนไหนของงานในแต่ละวันที่คาดเดาได้ และส่วนไหนที่ขึ้นอยู่กับ taste?"
+- **พอร์ตโฟลิโอของทีม** จัดสรรกำลังคนไปที่งานที่ต้องใช้วิจารณญาณ; จับคู่งาน junior/ที่คาดเดาได้กับ pipeline ที่มี AI ช่วย
+- **ลำดับความสำคัญในการเรียนรู้** ฝึกฝนในส่วนของฝีมือที่ต่อต้านระบบอัตโนมัติ ทักษะที่คาดเดาได้ยังคงเรียนรู้ได้ แต่ไม่ใช่คูเมืองที่ป้องกันได้
 
-## Complementary thesis: hybrid practitioners win
+## วิทยานิพนธ์เสริม: ผู้ปฏิบัติงานแบบไฮบริดจะชนะ
 
-Price pairs the judgement rule with a replacement thesis: *"An artist who uses AI will [replace you]."* The artist with judgement *plus* an AI-augmented pipeline dominates both the pure-AI generalist (no taste) and the pure-3D specialist (too slow). See [[ai-3d-workflow]] for the concrete pipeline. His plumber analogy applies across domains: refusing a tool at 10× the cost is not a viable long-term position.
+Price จับคู่กฎแห่งวิจารณญาณกับวิทยานิพนธ์เรื่องการแทนที่: *"ศิลปินที่ใช้ AI จะ [มาแทนที่คุณ]"* ศิลปินที่มีวิจารณญาณ *บวกกับ* pipeline ที่เสริมด้วย AI จะเอาชนะทั้ง pure-AI generalist (ไม่มี taste) และ pure-3D specialist (ช้าเกินไป) ดู pipeline ที่เป็นรูปธรรมได้ที่ [[ai-3d-workflow]] อุปมาเรื่องช่างประปาของเขาสามารถใช้ได้กับทุกโดเมน: การปฏิเสธเครื่องมือที่มีต้นทุนสูงกว่า 10 เท่าไม่ใช่จุดยืนที่ยั่งยืนในระยะยาว
 
-## Scope — generalizes beyond 3D
+## ขอบเขต — ใช้ได้ทั่วไปนอกเหนือจาก 3D
 
-Price's examples are all from 3D/visual art, but the rule generalizes cleanly:
+ตัวอย่างของ Price ทั้งหมดมาจากงานศิลปะ 3D/ภาพ แต่กฎนี้สามารถนำไปใช้ได้ทั่วไปอย่างหมดจด:
 
-- **Software engineering** — boilerplate/CRUD (predictable, automatable) vs. architectural decisions, requirements negotiation, and code review (judgement-heavy). This is exactly the split described in [[engineering-role-shift]]: the middle hollows out while [[ai-orchestrator]]-style upstream and downstream roles expand.
-- **Writing** — template filler vs. argument construction.
-- **Research** — literature summarization vs. novel framing.
+- **วิศวกรรมซอฟต์แวร์** — boilerplate/CRUD (คาดเดาได้, automate ได้) เทียบกับการตัดสินใจทางสถาปัตยกรรม, การเจรจาต่อรอง requirements, และ code review (ต้องใช้วิจารณญาณสูง) นี่คือการแบ่งแยกเดียวกันกับที่อธิบายไว้ใน [[engineering-role-shift]]: ส่วนกลางจะหายไปในขณะที่บทบาทต้นน้ำและปลายน้ำแบบ [[ai-orchestrator]] จะขยายตัวขึ้น
+- **การเขียน** — การเติมข้อความใน template เทียบกับการสร้างข้อโต้แย้ง
+- **การวิจัย** — การสรุปวรรณกรรม เทียบกับการสร้างกรอบความคิดใหม่
 
-## The compromise criteria rotate — a concrete illustration
+## เกณฑ์การประนีประนอมเปลี่ยนไป — ภาพประกอบที่เป็นรูปธรรม
 
-Judgement doesn't disappear when automation arrives; its *inputs* rotate. [[nattee-niparnan|Nattee Niparnan]]'s Ep. 2 PoC (2026-04-17) gives a crisp example from framework-selection:
+วิจารณญาณไม่ได้หายไปเมื่อมีระบบอัตโนมัติเข้ามา; แต่ *input* ของมันเปลี่ยนไป PoC ของ [[nattee-niparnan|อ.ณัฐที]] ใน Ep. 2 (17 เม.ย. 2026) ให้ตัวอย่างที่ชัดเจนจากการเลือก framework:
 
-| Era | Questions that drove the choice |
+| ยุค | คำถามที่ขับเคลื่อนการตัดสินใจ |
 |---|---|
-| **Pre-Agent** | "What is the team fluent in?" "Which stack writes fastest?" |
-| **With Agent** | "Which framework does the Agent write *most stably* in?" "Which one burns fewer tokens?" |
+| **ก่อนยุค Agent** | "ทีมมีความถนัดในเรื่องอะไร?" "stack ไหนเขียนได้เร็วที่สุด?" |
+| **กับ Agent** | "Agent เขียนโค้ดใน framework ไหนได้*เสถียรที่สุด*?" "ตัวไหนเผา token น้อยกว่า?" |
 
-> "คำถามที่เมื่อ 2 ปีที่แล้วไม่มีในสมองเลย" — Nattee
+> "คำถามที่เมื่อ 2 ปีที่แล้วไม่มีในสมองเลย" — อ.ณัฐที
 
-The act of weighing tradeoffs is unchanged — that's still judgment. But the *resources* being weighed (agent stability, token cost) are new, and a senior who ignores them will make stale choices. The judgment-heavy quadrant is not a fixed list of tasks; it's whichever tasks still require *choosing under current constraints*, and the constraints shift.
+การชั่งน้ำหนักข้อดีข้อเสียยังคงเหมือนเดิม — นั่นยังคงเป็นวิจารณญาณ แต่ *ทรัพยากร* ที่ถูกชั่งน้ำหนัก (ความเสถียรของ agent, ค่า token) เป็นสิ่งใหม่ และ senior ที่เพิกเฉยต่อสิ่งเหล่านี้จะทำการตัดสินใจที่ล้าสมัย quadrant ที่ต้องใช้วิจารณญาณสูงไม่ใช่รายการงานที่ตายตัว; แต่เป็นงานใดก็ตามที่ยังคงต้อง *เลือกภายใต้ข้อจำกัดในปัจจุบัน* และข้อจำกัดก็เปลี่ยนไป
 
-See [[taste-paradox]] for the companion worry: acquiring the judgment needed to make these new tradeoffs may itself be harder in the Agent era, because hands-on practice gets skipped.
+ดู [[taste-paradox]] สำหรับความกังวลที่มาคู่กัน: การได้มาซึ่งวิจารณญาณที่จำเป็นในการชั่งน้ำหนักข้อดีข้อเสียใหม่อาจยากขึ้นในยุค Agent เพราะการฝึกฝนด้วยมือถูกข้ามไป
 
-## Entry-level hiring signal
+## สัญญาณการจ้างงานระดับ entry-level
 
-Price's prediction is general ("judgement survives, predictable tasks go"). Nattee surfaces the labor-market implication from the buyer side: a consulting PoC that would have hired **3–4 RAs** now hires **zero** and spends $140 on tools instead. Whatever corporate arguments exist for keeping junior pipelines alive ("someone has to grow into Senior"), the buy-side incentive to hire fewer entry-level engineers is sharpening fast. This is the pragmatic fallout of the "predictable tasks get automated" rule — junior-level work is, by definition, still predictable.
+การทำนายของ Price เป็นเรื่องทั่วไป ("วิจารณญาณอยู่รอด, งานที่คาดเดาได้หายไป") อ.ณัฐทีเผยให้เห็นผลกระทบในตลาดแรงงานจากฝั่งผู้ซื้อ: PoC ของบริษัทที่ปรึกษาที่เคยจะจ้าง **RA 3–4 คน** ตอนนี้จ้าง **ศูนย์** และใช้เงิน $140 กับเครื่องมือแทน ไม่ว่าองค์กรจะมีเหตุผลใดในการรักษา pipeline ของ junior ไว้ ("ต้องมีคนเติบโตไปเป็น Senior") แต่แรงจูงใจฝั่งผู้ซื้อที่จะจ้างวิศวกรระดับ entry-level น้อยลงกำลังแหลมคมขึ้นอย่างรวดเร็ว นี่คือผลกระทบในทางปฏิบัติของกฎ "งานที่คาดเดาได้จะถูก automate" — งานระดับ junior โดยนิยามแล้ว ยังคงคาดเดาได้
 
-## See also
+## ดูเพิ่ม
 
 - [[will-ai-replace-3d-software]]
 - [[ai-3d-workflow]]

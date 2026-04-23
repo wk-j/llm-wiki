@@ -3,57 +3,57 @@ title: Diegetic UI
 type: concept
 tags: [ui, design, game-design, sci-fi, hud, immersion]
 created: 2026-04-12
-updated: 2026-04-14
+updated: 2026-04-23
 sources: [UI style categories.md, The four horsemen of game UI design.md]
 ---
 
 # Diegetic UI
 
-UI that exists "within the world" of the content — both the player and the characters can see and interact with it as part of the narrative or environment. Borrowed from film terminology where "diegetic" means existing within the story world.
+UI ที่มีอยู่ "ภายในโลก" ของเนื้อหา — ทั้งผู้เล่นและตัวละครสามารถเห็นและโต้ตอบกับมันได้ในฐานะส่วนหนึ่งของเรื่องราวหรือสภาพแวดล้อม เป็นคำที่ยืมมาจากศัพท์ภาพยนตร์ที่ "diegetic" หมายถึงการมีอยู่ภายในโลกของเรื่องราว
 
-Diegetic UI is one of the [[four-horsemen-game-ui|four types of game UI]], classified as: **exists in the game world** and **character is aware of it**.
+Diegetic UI เป็นหนึ่งใน [[four-horsemen-game-ui|UI เกมสี่ประเภท]] ซึ่งจำแนกได้ดังนี้: **มีอยู่ในโลกของเกม** และ **ตัวละครรับรู้ถึงมัน**
 
-## Sub-styles
+## สไตล์ย่อย
 
-| Sub-style | Reference | Visual signature |
+| สไตล์ย่อย | อ้างอิง | ลักษณะเด่น |
 |---|---|---|
-| **HUD Overlay** | Iron Man JARVIS | Cyan `#00d4ff` on dark, arc meters, scan lines |
-| **Embedded Physical** | Dead Space health bar | Amber `#ef9f27`, industrial, attached to objects |
-| **[[holographic-ui\|Holographic Projection]]** | Minority Report | Semi-transparent blue glow, floating panels |
-| **Military/Combat** | Cockpit displays | Cyan + Amber + Red alert semantic colors |
-| **Neural/Bio-tech** | Alien biotech | Purple `#a78bfa` + Mint, organic shapes |
+| **HUD Overlay** | Iron Man JARVIS | สีฟ้า Cyan `#00d4ff` บนพื้นมืด, เกจวัดทรงโค้ง, scan lines |
+| **Embedded Physical** | แถบพลังชีวิตใน Dead Space | สีเหลืองอำพัน Amber `#ef9f27`, สไตล์อุตสาหกรรม, ติดอยู่กับวัตถุ |
+| **[[holographic-ui\|Holographic Projection]]** | Minority Report | แสงสีน้ำเงินกึ่งโปร่งใส, panel ลอย |
+| **Military/Combat** | หน้าจอในห้องนักบิน | สีฟ้า Cyan + เหลืองอำพัน Amber + สีแดง Red สำหรับเตือนภัย ตามความหมาย |
+| **Neural/Bio-tech** | เทคโนโลยีชีวภาพของเอเลี่ยน | สีม่วง Purple `#a78bfa` + สีมิ้นท์ Mint, รูปทรงออร์แกนิก |
 
-## Key Characteristics
+## ลักษณะสำคัญ
 
-- UI elements are justified by the fictional world — not just overlaid for the player/viewer
-- Often uses scan lines, bracket targeting, real-time data readouts
-- Color carries semantic meaning: cyan = normal, amber = caution, red = critical
-- Maximizes immersion by reducing screen clutter and keeping the player "in the world"
-- Particularly popular in games emphasizing realism (Dead Space, Metro series)
+- องค์ประกอบ UI มีเหตุผลรองรับตามโลกสมมติ — ไม่ใช่แค่ซ้อนทับไว้สำหรับผู้เล่น/ผู้ชม
+- มักใช้ scan lines, การกำหนดเป้าหมายด้วยวงเล็บ, การแสดงข้อมูลแบบเรียลไทม์
+- สีมีความหมายเชิง semantic: cyan = ปกติ, amber = ระวัง, red = วิกฤต
+- เพิ่มความดื่มด่ำสูงสุดโดยการลดความยุ่งเหยิงบนหน้าจอและทำให้ผู้เล่น "อยู่ในโลก"
+- เป็นที่นิยมโดยเฉพาะในเกมที่เน้นความสมจริง (ซีรีส์ Dead Space, Metro)
 
-## Examples
+## ตัวอย่าง
 
-- A holographic HUD the character projects and interacts with
-- A phone or watch on the character's wrist showing time or health
-- A wounded character limping instead of showing a health bar
-- In-world maps, terminals, and readouts the character physically uses
+- HUD โฮโลแกรมที่ตัวละครฉายและโต้ตอบด้วย
+- โทรศัพท์หรือนาฬิกาบนข้อมือของตัวละครที่แสดงเวลาหรือพลังชีวิต
+- ตัวละครที่บาดเจ็บเดินกะเผลกแทนที่จะแสดงแถบพลังชีวิต
+- แผนที่, เทอร์มินัล, และการแสดงผลในโลกที่ตัวละครใช้งานจริง
 
-## Limitations
+## ข้อจำกัด
 
-- **Accessibility**: diegetic UI is the least accessible of the four types — not designed for novices
-- **Scale**: in-world elements (e.g., a vehicle speedometer) may be too small to read comfortably
-- **Workarounds**: some games let players toggle diegetic elements to a full-screen [[non-diegetic-ui|non-diegetic]] view
+- **Accessibility**: diegetic UI เป็นประเภทที่เข้าถึงได้น้อยที่สุดในสี่ประเภท — ไม่ได้ออกแบบมาสำหรับผู้เล่นใหม่
+- **Scale**: องค์ประกอบในโลก (เช่น มาตรวัดความเร็วของยานพาหนะ) อาจเล็กเกินไปที่จะอ่านได้สะดวก
+- **Workarounds**: บางเกมให้ผู้เล่นสลับองค์ประกอบ diegetic ไปเป็นมุมมอง [[non-diegetic-ui|non-diegetic]] แบบเต็มจอได้
 
-## Contrast with Other Types
+## การเปรียบเทียบกับประเภทอื่น
 
-| Type | In world? | Character sees it? |
+| ประเภท | ในโลก? | ตัวละครเห็น? |
 |---|---|---|
-| **Diegetic** | Yes | Yes |
-| [[non-diegetic-ui\|Non-diegetic]] | No | No |
-| [[spatial-ui\|Spatial]] | Yes | No |
-| [[meta-ui\|Meta]] | No | Implicitly |
+| **Diegetic** | ใช่ | ใช่ |
+| [[non-diegetic-ui\|Non-diegetic]] | ไม่ | ไม่ |
+| [[spatial-ui\|Spatial]] | ใช่ | ไม่ |
+| [[meta-ui\|Meta]] | ไม่ | โดยนัย |
 
-## See also
+## ดูเพิ่ม
 
 - [[non-diegetic-ui]]
 - [[spatial-ui]]

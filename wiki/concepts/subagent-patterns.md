@@ -3,8 +3,8 @@ title: Subagent Patterns
 type: concept
 tags: [ai, agents, subagents, harness, orchestration, architecture]
 created: 2026-04-18
-updated: 2026-04-18
-sources: [alex-ker-harnesses-optimize.md, Using Claude Code Session Management & 1M Context.md, Create custom subagents - Claude Code Docs.md]
+updated: 2026-04-23
+sources: [alex-ker-harnesses-optimize.md, Using Claude Code Session Management & 1M Context.md, Create custom subagents - Claude Code Docs.md, Kimi K2.6 Tech Blog Advancing Open-Source Coding.md]
 ---
 
 # Subagent Patterns / รูปแบบการใช้ subagent
@@ -77,6 +77,14 @@ Pipeline ตรงนี้คือแบบเดียวกันกับ [
 - **Panutat** มองจาก pedagogy (การสอน) — pipeline คือสิ่งที่หลักสูตรต้องสอน เพราะมนุษย์ตรวจ code ตามไม่ทัน agent แล้ว
 
 เรื่องเดียวกัน มองจากคนละชั้น
+
+### ขยายข้ามเวลา — Fleet Orchestration
+
+ถ้าเปลี่ยนจาก subagent ใน session เดียวมาเป็น agent แยก process คนละ container รันต่อเนื่องคนละหลายวัน จะได้ **Fleet Orchestration** — pattern ที่ 5 ใน [[long-running-agents]] coordinator กับ specialist เหมือนเดิม แต่แต่ละตัวมี Identity/policy/registry entry ของตัวเอง, deploy update อิสระ, พังก็พังเฉพาะตัว ไม่ cascade. Pattern เดียวกัน ต่างที่ lifetime กับ isolation
+
+### ขยายขึ้นไปอีกระดับ — Agent Swarm
+
+ถ้าเอา fan-out มาขยายจาก 3–5 ตัวเป็น 100–300 ตัว โดย coordinator agent ตัดสินใจเองว่าจะแตกกี่ทาง จะได้ [[agent-swarm]] — pattern ที่ [[kimi-k2-6|Kimi K2.6]] ของ [[moonshot-ai|Moonshot AI]] ดันเป็นจุดขาย เหมาะกับงานที่ output เป็น artifact จำนวนมาก (100 resume, 30 landing page) มากกว่างาน investigation ลึก ๆ
 
 ## เทียบสองแบบ
 

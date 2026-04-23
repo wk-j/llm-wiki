@@ -127,9 +127,9 @@ Brief description of what was done and what pages were created/updated.
 - Tags should be lowercase, general enough to cluster related pages (e.g. `psychology`, `productivity`, `ai`), but specific enough to be useful.
 - In markdown **tables**, escape the `|` inside wikilink aliases as `\|` (e.g. `[[claude-code\|Claude Code]]`), or drop the alias entirely (`[[claude-code]]`). An unescaped pipe inside a table cell is parsed as a column separator and breaks the row.
 
-## Concept page writing style
+## Thai-Primary Page Writing Style (Concepts, Entities, Analysis)
 
-Concept pages (`wiki/concepts/`) are re-read more than any other page type — they get linked from sources, entities, and each other. Write them so a reader who hasn't seen the source can still follow along. Applies equally to Thai-primary and English concept pages.
+Concept, entity, and analysis pages are all written with Thai as the primary language. They are frequently cross-linked and should be written so a reader who hasn't seen the original source material can still follow along.
 
 **Easy language.** Short sentences. Spoken register, not textbook. Prefer plain verbs over nominalizations. Name the thing before using an acronym. In Thai, this compounds with the translationese rule under `## Bilingual content` below.
 
@@ -141,14 +141,14 @@ Concept pages (`wiki/concepts/`) are re-read more than any other page type — t
 - Break compound English-structured sentences into shorter ones.
 - At the end of each mechanics section, summarize the payoff in one line (`ได้อะไร` / `ผลคือ` / `Why this helps`). Don't make the reader derive it.
 
-Source, entity, and analysis pages follow their own norms — this section is specifically for concept pages.
+Source summaries (`wiki/sources/`) follow their own norms as they are direct summaries of a single document.
 
 ## Bilingual content (Thai + English)
 
 **Per page type:**
 
-- **Concept pages (`wiki/concepts/`) — Thai is the primary body language.** Write narrative prose in Thai. Keep English for technical terms, proper nouns, product/tool/library names, and direct quotes from English sources. Use English glosses where they help anchor a concept.
-- **Source, entity, analysis pages** — default to English. Switch to Thai if the source is Thai, or the user asks for it.
+- **Concept, Entity, and Analysis pages (`wiki/concepts/`, `wiki/entities/`, `wiki/analysis/`) — Thai is the primary body language.** Write narrative prose in Thai. Keep English for technical terms, proper nouns, product/tool/library names, and direct quotes from English sources. Use English glosses where they help anchor a concept.
+- **Source summaries (`wiki/sources/`)** — default to English. Switch to Thai if the source is Thai, or the user asks for it.
 
 **Always in English (tooling stability, all page types):**
 
@@ -188,6 +188,11 @@ Thai-primary body should read like a Thai developer wrote it, not like an Englis
 - **Use classifiers with English nouns** where natural: `ตัว Agent`, `ตัว model`, `ตัว endpoint` when referring to the thing itself.
 - **Use Thai connectors that developers actually speak**: `พอ...ก็`, `กลับ...`, `เลย...`, `แต่...`, `ตรงนี้คือ`, `ตรงที่` — avoid formal relativization (`ซึ่ง`, `ที่ซึ่ง`) when a spoken connector fits.
 - **Break long English-style compound sentences** into shorter Thai sentences. Thai prose usually doesn't chain clauses with commas the way English does. A 40-word English sentence often becomes two or three Thai sentences.
+- **Reorder the sentence, don't just swap vocabulary.** Thai and English order words differently. A sentence can have perfectly Thai-native vocabulary and still read as translated because the *shape* is English. Fixing vocab is step one; restructuring the sentence is step two — equally important and easy to miss.
+  - **Start with the actor/topic, not a long noun phrase.** English likes `"A heuristic from X proposing criteria for choosing model: ..."` Thai prefers `"X เสนอหลักเลือก model ว่า ..."` — actor first, verb follows quickly.
+  - **Break nominalized subjects.** `"การจะได้งานที่ดีต้องมีสองอย่าง"` (noun-phrase subject, English-shaped) → `"จะให้งานออกมาดี ต้องมีสองอย่าง"` (verb-first, Thai-shaped).
+  - **Prefer topic–comment over SVO clones.** Thai often names the topic, then comments on it: `"model ใหม่ที่ว่าแพง ไม่ได้แพงแค่ค่า token"` beats a direct `"ราคาของ model ใหม่ไม่ใช่แค่ค่า token"` mirror.
+  - **Self-test by reading aloud.** If a Thai developer wouldn't say it that way in conversation, rewrite — even if every individual word is Thai-native.
 - **Trust the reader.** Thai tech readers tolerate English technical terms embedded in Thai. What they don't tolerate is stilted grammar. Keep the terms, fix the grammar.
 
 **Primary-source quotes:** keep verbatim in the source language and gloss alongside. Do not silently translate.

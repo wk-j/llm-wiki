@@ -3,19 +3,19 @@ title: Flux
 type: entity
 tags: [ai, image-generation, model]
 created: 2026-04-18
-updated: 2026-04-18
+updated: 2026-04-23
 sources: ["Will AI replace 3D software?.md"]
 ---
 
 # Flux
 
-Image diffusion model family from Black Forest Labs. Distributed in multiple variants — Flux.1 Dev, Flux.1 Schnell (fast, open-weight), Flux.1 Pro (hosted), and ControlNet-style conditioning models (Depth, Canny, etc.).
+ตระกูลโมเดล image diffusion จาก Black Forest Labs. มีการเผยแพร่ในหลายเวอร์ชัน — Flux.1 Dev, Flux.1 Schnell (เร็ว, open-weight), Flux.1 Pro (hosted), และโมเดลสำหรับ conditioning แบบ ControlNet (Depth, Canny, ฯลฯ)
 
 ## Flux.1 Depth
 
-A conditioning-aware variant that takes a **depth map** as input alongside a text prompt, producing images that respect the input geometry. Core piece of [[andrew-price|Andrew Price]]'s [[ai-3d-workflow]]: the depth pass is rendered from a [[blender|Blender]] block-in and routed through the Flux.1 Depth template in [[comfyui|ComfyUI]], yielding dozens of textured variants of the scene in minutes.
+เป็นเวอร์ชันที่รับรู้เงื่อนไข (conditioning-aware) โดยรับ **depth map** เป็น input ควบคู่ไปกับ text prompt เพื่อสร้างภาพที่เคารพรูปทรงเรขาคณิตของ input เป็นส่วนประกอบหลักใน [[ai-3d-workflow]] ของ [[andrew-price|Andrew Price]]: โดย depth pass จะถูกเรนเดอร์จากการทำ block-in ใน [[blender|Blender]] แล้วส่งผ่าน template ของ Flux.1 Depth ใน [[comfyui|ComfyUI]] ซึ่งจะสร้าง scene ที่มี texture แตกต่างกันหลายสิบแบบในเวลาไม่กี่นาที
 
-## See also
+## ดูเพิ่ม
 
 - [[comfyui]]
 - [[will-ai-replace-3d-software]]

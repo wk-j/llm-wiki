@@ -3,29 +3,29 @@ title: Evgeni Chasnovski
 type: entity
 tags: [neovim, open-source, lua]
 created: 2026-04-17
-updated: 2026-04-17
+updated: 2026-04-23
 sources: [vim-pack-guide.md]
 ---
 
 # Evgeni Chasnovski
 
-[[neovim|Neovim]] plugin author best known for **mini.nvim**, a collection of ~40 small, independent Lua modules each solving one editor problem (completion, statusline, file explorer, pick, snippets, etc.). Maintains a technical blog at [echasnovski.com](https://echasnovski.com).
+ผู้เขียน plugin ของ [[neovim|Neovim]] ที่เป็นที่รู้จักดีที่สุดจาก **mini.nvim** ซึ่งเป็นชุดของ Lua module ขนาดเล็กและอิสระประมาณ 40 ตัว โดยแต่ละตัวจะแก้ปัญหาของ editor หนึ่งอย่าง (เช่น completion, statusline, file explorer, pick, snippets, ฯลฯ) เขาดูแลบล็อกทางเทคนิคที่ [echasnovski.com](https://echasnovski.com)
 
-## Notable work
+## ผลงานเด่น
 
-- **mini.nvim** — modular plugin suite (`mini.basics`, `mini.completion`, `mini.cmdline`, `mini.snippets`, `mini.pick`, `MiniMisc`, many others). Known for composability, zero-dependency modules, and high test coverage.
-- **mini.deps** — minimal Neovim plugin manager; conceptual predecessor to the built-in [[vim-pack]].
-- **Colorschemes** — `miniwinter`, part of `mini.colors`.
+- **mini.nvim** — ชุด plugin แบบ modular (`mini.basics`, `mini.completion`, `mini.cmdline`, `mini.snippets`, `mini.pick`, `MiniMisc`, และอื่นๆ อีกมากมาย) เป็นที่รู้จักในด้าน composability, module ที่ไม่มี dependency, และ test coverage ที่สูง
+- **mini.deps** — plugin manager ของ Neovim แบบ minimal; เป็นต้นแบบทางความคิดให้กับ [[vim-pack]] ที่มาพร้อมกับ Neovim
+- **Colorschemes** — `miniwinter` ซึ่งเป็นส่วนหนึ่งของ `mini.colors`
 
-## Influence on vim.pack
+## อิทธิพลต่อ vim.pack
 
-mini.deps informed several [[vim-pack]] design choices — the small API surface, lockfile-centered reproducibility, and the insistence on keeping the config file as the source of truth. The 2026-03-13 blog post [[vim-pack-guide|A Guide to vim.pack]] documents both vim.pack itself and migration from mini.deps.
+mini.deps เป็นแรงบันดาลใจให้กับการตัดสินใจเชิงออกแบบหลายอย่างของ [[vim-pack]] — เช่น API surface ที่เล็ก, การทำซ้ำที่เน้น lockfile เป็นศูนย์กลาง, และการยืนยันที่จะให้ไฟล์ config เป็น source of truth บล็อกโพสต์วันที่ 13 มีนาคม 2026 [[vim-pack-guide|A Guide to vim.pack]] ได้บันทึกข้อมูลทั้งเกี่ยวกับ vim.pack เองและการย้ายจาก mini.deps
 
-## Style and philosophy
+## สไตล์และปรัชญา
 
-Advocates **moderate lazy loading** — warns that aggressive startup optimization usually costs more in config complexity than it saves in milliseconds. Favors mechanical transparency over declarative DSLs; the user should be able to read the config top-to-bottom and see exactly what happens.
+สนับสนุน **moderate lazy loading** — เตือนว่าการปรับแต่ง startup time อย่างจริงจังมักจะเพิ่มความซับซ้อนของ config มากกว่าเวลาที่ประหยัดได้ในหน่วยมิลลิวินาที เขาชอบความโปร่งใสเชิงกลไกมากกว่า DSLs ที่เป็น declarative; ผู้ใช้ควรอ่าน config จากบนลงล่างและเห็นได้ชัดเจนว่าเกิดอะไรขึ้น
 
-## See also
+## ดูเพิ่ม
 
 - [[vim-pack]]
 - [[vim-pack-guide]]

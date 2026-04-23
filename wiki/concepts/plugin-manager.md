@@ -3,58 +3,58 @@ title: Plugin Manager
 type: concept
 tags: [tooling, editors, package-management]
 created: 2026-04-17
-updated: 2026-04-17
+updated: 2026-04-23
 sources: [vim-pack-guide.md]
 ---
 
-# Plugin Manager
+# Plugin Manager / ตัวจัดการ Plugin
 
-A plugin manager installs, loads, updates, and removes user-authored extensions for a host program — typically a text editor. In the Vim/Neovim world, it also decides *when* plugins load (startup vs. lazy) and manages lockfiles for reproducibility.
+Plugin manager ทำหน้าที่ติดตั้ง, โหลด, อัปเดต, และลบ extension ที่ผู้ใช้สร้างขึ้นสำหรับโปรแกรม host — โดยทั่วไปคือ text editor ในโลกของ Vim/Neovim, มันยังตัดสินใจด้วยว่า plugin จะโหลด *เมื่อไหร่* (ตอนเริ่มต้น หรือแบบ lazy) และจัดการ lockfile เพื่อให้สามารถทำซ้ำสภาพแวดล้อมได้
 
-## Core responsibilities
+## ความรับผิดชอบหลัก
 
-1. **Fetch** — clone a repository (usually Git) into a known location.
-2. **Load** — make the plugin visible on `runtimepath` so the editor finds its `plugin/`, `lua/`, `ftplugin/` files.
-3. **Update** — fetch new commits, show a diff, let the user accept or reject.
-4. **Pin** — record the installed version (lockfile) so a fresh machine produces an identical environment.
-5. **Hook** — run user code before/after install/update/delete (e.g. `TSUpdate` after installing `nvim-treesitter`).
+1.  **Fetch** — clone repository (โดยปกติคือ Git) มาไว้ในตำแหน่งที่รู้จัก
+2.  **Load** — ทำให้ plugin ปรากฏบน `runtimepath` เพื่อให้ editor สามารถหาไฟล์ `plugin/`, `lua/`, `ftplugin/` ของมันเจอ
+3.  **Update** — fetch commit ใหม่ๆ, แสดง diff, และให้ผู้ใช้ยอมรับหรือปฏิเสธ
+4.  **Pin** — บันทึกเวอร์ชันที่ติดตั้ง (lockfile) เพื่อให้เครื่องใหม่สามารถสร้างสภาพแวดล้อมที่เหมือนกันทุกประการได้
+5.  **Hook** — รันโค้ดของผู้ใช้ก่อน/หลังการ install/update/delete (เช่น `TSUpdate` หลังจากติดตั้ง `nvim-treesitter`)
 
-Advanced managers add:
-- **Lazy loading** — defer plugin load until an event, command, filetype, or keypress fires.
-- **Dependency resolution** — ensure plugin A loads before plugin B if B requires A.
-- **Declarative specs** — DSL for lazy triggers and setup in a single table.
+Manager ขั้นสูงจะเพิ่ม:
+- **Lazy loading** — เลื่อนการโหลด plugin ออกไปจนกว่าจะมี event, command, filetype, หรือการกดปุ่มเกิดขึ้น
+- **Dependency resolution** — รับประกันว่า plugin A จะโหลดก่อน plugin B หาก B ต้องการ A
+- **Declarative specs** — DSL สำหรับ lazy trigger และการตั้งค่าใน table เดียว
 
-## The Neovim landscape
+## ภูมิทัศน์ของ Neovim
 
-| Manager | Style | Notes |
+| Manager | สไตล์ | หมายเหตุ |
 |---|---|---|
-| [[vim-pack]] | Minimal, built-in (Neovim 0.12+) | Three functions, lockfile, autocmd-based hooks. No declarative lazy DSL. |
-| lazy.nvim | Rich declarative | Dominant third-party. `cmd`/`event`/`ft`/`keys` lazy triggers, `opts`, `dependencies`. |
-| mini.deps | Minimal, Lua | [[evgeni-chasnovski\|Chasnovski]]'s precursor to vim.pack. |
-| packer.nvim | Legacy | Archived in 2023; users migrate to lazy.nvim or vim.pack. |
-| pathogen / vim-plug | Pre-Lua era | Vimscript; still widely used in plain Vim. |
+| [[vim-pack]] | Minimal, built-in (Neovim 0.12+) | มีสามฟังก์ชัน, lockfile, hook ที่ใช้ autocmd. ไม่มี declarative lazy DSL |
+| lazy.nvim | Rich declarative | เป็น third-party ที่โดดเด่น `cmd`/`event`/`ft`/`keys` lazy triggers, `opts`, `dependencies` |
+| mini.deps | Minimal, Lua | ต้นแบบของ [[vim-pack]] โดย [[evgeni-chasnovski\|Chasnovski]] |
+| packer.nvim | Legacy | Archived ในปี 2023; ผู้ใช้ย้ายไป lazy.nvim หรือ vim.pack |
+| pathogen / vim-plug | ยุคก่อน Lua | Vimscript; ยังคงใช้กันอย่างแพร่หลายใน Vim ธรรมดา |
 
-## The central trade-off
+## ข้อแลกเปลี่ยนหลัก
 
-Plugin managers span a spectrum from **mechanically transparent** (you write Lua that imperatively loads plugins) to **declaratively convenient** (you write a spec table, the manager figures out when and how).
+Plugin manager มีสเปกตรัมตั้งแต่ **โปร่งใสเชิงกลไก** (คุณเขียน Lua ที่โหลด plugin แบบ imperative) ไปจนถึง **สะดวกแบบ declarative** (คุณเขียน spec table แล้ว manager จะคิดเองว่าเมื่อไหร่และอย่างไร)
 
-- Transparent wins: config is the source of truth, hook ordering is obvious, no magic.
-- Declarative wins: startup speed via aggressive lazy loading, less boilerplate, consistent shape.
+- **ข้อดีของ Transparent:** config คือ source of truth, ลำดับของ hook ชัดเจน, ไม่มี magic
+- **ข้อดีของ Declarative:** startup speed ผ่าน lazy loading ที่จริงจัง, boilerplate น้อยลง, รูปแบบที่สอดคล้องกัน
 
-[[vim-pack]] sits at the transparent end by design. `lazy.nvim` at the declarative end. Both are legitimate.
+[[vim-pack]] อยู่ฝั่ง transparent โดยการออกแบบ. `lazy.nvim` อยู่ฝั่ง declarative. ทั้งสองแบบต่างก็มีเหตุผลที่ดี.
 
 ## Lockfiles
 
-A lockfile records the exact commit of each installed plugin. It:
-- Lets a new machine reproduce the current environment.
-- Enables "revert latest update" workflows.
-- Should be checked into version control.
-- Should never be hand-edited.
+Lockfile บันทึก commit ที่แน่นอนของแต่ละ plugin ที่ติดตั้งไว้ มัน:
+- ช่วยให้เครื่องใหม่สามารถสร้างสภาพแวดล้อมปัจจุบันซ้ำได้
+- ทำให้สามารถทำ workflow "revert latest update" ได้
+- ควรถูกเช็คอินเข้า version control
+- ไม่ควรแก้ไขด้วยมือเด็ดขาด
 
-[[vim-pack]] writes `nvim-pack-lock.json`; lazy.nvim writes `lazy-lock.json`.
+[[vim-pack]] เขียน `nvim-pack-lock.json`; lazy.nvim เขียน `lazy-lock.json`.
 
-## See also
+## ดูเพิ่ม
 
 - [[vim-pack]]
 - [[neovim]]
-- [[helix]] — alternative: a batteries-included editor that ships features as built-ins rather than plugins
+- [[helix]] — ทางเลือก: a batteries-included editor that ships features as built-ins rather than plugins

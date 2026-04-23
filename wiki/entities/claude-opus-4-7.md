@@ -3,91 +3,92 @@ title: Claude Opus 4.7
 type: entity
 tags: [ai, models, anthropic, claude, opus]
 created: 2026-04-16
-updated: 2026-04-20
-sources: [Introducing Claude Opus 4.7.md, Whats new in Claude Opus 4.7 - Anthropic Docs.md, Claude Opus 4.7 Isn't a Drop-in Replacement for 4.6.md]
+updated: 2026-04-23
+sources: [Introducing Claude Opus 4.7.md, Whats new in Claude Opus 4.7 - Anthropic Docs.md, Claude Opus 4.7 Isn't a Drop-in Replacement for 4.6.md, Claude Mythos Preview.md]
 ---
 
 # Claude Opus 4.7
 
-[[anthropic|Anthropic]]'s flagship general-availability model as of **2026-04-16**. Direct successor to Opus 4.6.
+เป็นโมเดล flagship ของ [[anthropic|Anthropic]] ที่เปิดให้ใช้ทั่วไป ณ วันที่ **16 เมษายน 2026** เป็นรุ่นต่อโดยตรงจาก Opus 4.6
 
 **Model ID:** `claude-opus-4-7`
-**Pricing:** $5 / million input tokens, $25 / million output tokens (unchanged from 4.6)
+**ราคา:** $5 / 1 ล้าน input tokens, $25 / 1 ล้าน output tokens (ไม่เปลี่ยนแปลงจาก 4.6)
 
-## Positioning relative to siblings
+## ตำแหน่งเมื่อเทียบกับรุ่นอื่นๆ
 
-- **Better than Opus 4.6** across benchmarks (SWE-bench, Terminal-Bench 2.0, CyberGym, MCP-Atlas, Finance Agent, GDPval-AA)
-- **Less broadly capable than Claude Mythos Preview** ([[anthropic|Anthropic]]'s frontier, release-restricted)
-- Shares API shape with Sonnet 4.6 and Haiku 4.5 — [[effort-levels]], prompt caching, tools
+- **ดีกว่า Opus 4.6** ในทุก benchmarks (SWE-bench, Terminal-Bench 2.0, CyberGym, MCP-Atlas, Finance Agent, GDPval-AA)
+- **ความสามารถโดยรวมยังไม่เท่า [[claude-mythos-preview|Claude Mythos Preview]]** (ซึ่งเป็นโมเดล frontier ของ [[anthropic|Anthropic]] ที่จำกัดการเข้าถึง; ความสามารถด้าน cyber เกิดขึ้นเองโดยไม่ได้ตั้งใจฝึก — ในทางกลับกันความสามารถด้านนี้ของ Opus 4.7 ถูก*ลดทอน*ลงระหว่างการฝึก)
+- มี API shape เหมือนกับ Sonnet 4.6 และ Haiku 4.5 — [[effort-levels|effort levels]], prompt caching, tools
 
-## Headline improvements over Opus 4.6
+## สิ่งที่ปรับปรุงขึ้นจาก Opus 4.6
 
-| Area | Change |
+| ด้าน | การเปลี่ยนแปลง |
 |---|---|
-| **Software engineering** | Notable gains on hardest tasks; reliable on long-running coding work |
-| **Self-verification** | Model devises its own checks before reporting back |
-| **Instruction following** | Substantially more literal — old prompts may need retuning |
-| **Vision** | Up to 2,576 px on long edge (~3× prior Claude models) |
-| **File-system memory** | Better at carrying notes across multi-session work |
-| **Prompt injection resistance** | Improved |
-| **Honesty** | Improved |
-| **Tasteful outputs** | Higher-quality UIs, slides, docs |
+| **วิศวกรรมซอฟต์แวร์** | เก่งขึ้นอย่างเห็นได้ชัดในงานที่ยากมากๆ; ทำงานด้าน coding ที่ต้องรันนานๆ ได้อย่างน่าเชื่อถือ |
+| **การตรวจสอบตัวเอง (Self-verification)** | โมเดลสามารถสร้างวิธีตรวจสอบงานของตัวเองก่อนจะรายงานผลกลับมา |
+| **การทำตามคำสั่ง** | ทำตามคำสั่งแบบตรงไปตรงมามากขึ้นอย่างมาก — prompt เก่าๆ อาจจะต้องปรับแก้ |
+| **Vision** | รองรับรูปภาพด้านยาวสุดถึง 2,576 px (ประมาณ 3 เท่าของ Claude รุ่นก่อนๆ) |
+| **File-system memory** | จดจำข้อมูลข้าม session งานที่ทำต่อเนื่องหลายครั้งได้ดีขึ้น |
+| **การป้องกัน Prompt injection** | ดีขึ้น |
+| **ความซื่อสัตย์ (Honesty)** | ดีขึ้น |
+| **ผลลัพธ์ที่มีรสนิยม (Tasteful outputs)** | สร้าง UI, สไลด์, เอกสาร ที่มีคุณภาพสูงขึ้น |
 
-## Regressions / tradeoffs
+## ข้อด้อย / สิ่งที่ต้องแลกมา
 
-- Modestly weaker on harm-reduction advice for controlled substances
-- **More tokens used**: updated tokenizer (+0–35% on identical input) and more thinking at higher effort on later agentic turns — net effect on internal coding eval token cost is still favorable
+- ให้คำแนะนำเพื่อลดอันตรายจากสารควบคุม (harm-reduction advice for controlled substances) ได้แย่ลงเล็กน้อย
+- **ใช้ token มากขึ้น**: tokenizer ที่อัปเดตใหม่ (ใช้ token มากขึ้น +0–35% สำหรับ input ที่เหมือนกัน) และมีการ "คิด" มากขึ้นเมื่อใช้ effort level สูงๆ ใน turn หลังๆ ของ agent — แต่ผลกระทบสุทธิต่อค่า token ในการประเมินผลด้าน coding ภายในยังถือว่าดีขึ้น
 
-## New controls launched alongside
+## ฟีเจอร์ใหม่ที่เปิดตัวพร้อมกัน
 
-- **`xhigh` effort level** — see [[effort-levels]]
-- **[[task-budgets|Task budgets]]** (API, public beta; beta header `task-budgets-2026-03-13`) — advisory token target across a full agentic loop; distinct from `max_tokens`
-- **`/ultrareview`** slash command in [[claude-code|Claude Code]]
-- **[[auto-mode|Auto mode]]** extended to Claude Code Max users (the permission mode itself shipped earlier, 2026-03-24, for Team plan — see [[claude-code-auto-mode]])
+- **`xhigh` effort level** — ดูที่ [[effort-levels]]
+- **[[task-budgets|Task budgets]]** (API, public beta; beta header `task-budgets-2026-03-13`) — เป็นเป้าหมายจำนวน token ที่แนะนำสำหรับ agent loop ทั้งหมด; แตกต่างจาก `max_tokens`
+- **`/ultrareview`** slash command ใน [[claude-code|Claude Code]]
+- **[[auto-mode|Auto mode]]** ขยายให้ผู้ใช้ Claude Code Max สามารถใช้งานได้ (ตัว permission mode นี้เปิดตัวมาก่อนแล้วเมื่อวันที่ 24 มีนาคม 2026 สำหรับ Team plan — ดูที่ [[claude-code-auto-mode]])
 
-## API breaking changes (Messages API; Managed Agents unaffected)
+## API Breaking Changes (กระทบ Messages API; ไม่กระทบ Managed Agents)
 
-- **Extended thinking budgets removed** — `thinking.budget_tokens` → 400. [[adaptive-thinking|Adaptive thinking]] is the only thinking-on mode. Off by default on 4.7 — must opt in explicitly.
-- **Sampling parameters removed** — non-default `temperature` / `top_p` / `top_k` → 400. Prompt for the behavior instead.
-- **Thinking content omitted by default** — silent change; `thinking` field is empty unless `display: "summarized"` set. Product that streams reasoning to users will show a long pause.
-- **New tokenizer** — same text uses ~1.0–1.35× tokens; raise `max_tokens` headroom, revisit compaction triggers. 1M context at standard pricing (no long-context premium).
-- **Prefilled assistant responses deprecated** (starting Claude 4.6). Returns **400 error on Mythos Preview**. Redesign prompts that relied on assistant prefills to steer output shape. (Source: [[claude-opus-4-7-migration-pachaar|Pachaar migration guide]].)
+- **ยกเลิก Extended thinking budgets** — `thinking.budget_tokens` → 400. [[adaptive-thinking|Adaptive thinking]] กลายเป็นโหมดเดียวสำหรับการเปิด thinking ซึ่งจะปิดเป็นค่าเริ่มต้นใน 4.7 — ต้องเปิดใช้งานเอง
+- **ยกเลิก Sampling parameters** — การส่ง `temperature` / `top_p` / `top_k` ที่ไม่ใช่ค่าเริ่มต้น → 400 error. ให้ใช้ prompt เพื่อชี้นำพฤติกรรมแทน
+- **ไม่ส่งเนื้อหา thinking มาเป็นค่าเริ่มต้น** — การเปลี่ยนแปลงนี้เกิดขึ้นเงียบๆ; field `thinking` จะว่างเปล่า ยกเว้นจะตั้งค่า `display: "summarized"` หาก product ของคุณ stream reasoning ให้ผู้ใช้ จะเห็นว่ามีช่วงที่หยุดนิ่งนาน
+- **Tokenizer ใหม่** — ข้อความเดียวกันจะใช้ token มากขึ้น ~1.0–1.35 เท่า; ควรเพิ่ม headroom ของ `max_tokens` และทบทวน trigger สำหรับการทำ [[compaction|compaction]] ใหม่ รองรับ 1M context ในราคาปกติ (ไม่มีค่า premium สำหรับ long-context)
+- **Prefilled assistant responses ถูก deprecated** (เริ่มตั้งแต่ Claude 4.6) และจะ trả về **400 error บน Mythos Preview** ต้องออกแบบ prompt ที่เคยใช้ assistant prefill เพื่อบังคับ output shape ใหม่ (ที่มา: [[claude-opus-4-7-migration-pachaar|คู่มือย้ายระบบของ Pachaar]])
 
-## Behavior changes (prompt-level)
+## พฤติกรรมที่เปลี่ยนไป (ระดับ Prompt)
 
-- More literal instruction following (especially at lower effort)
-- Response length calibrates to task complexity
-- Fewer tool calls and fewer subagents by default (raise effort / prompt to increase)
-- More direct, opinionated tone; fewer emoji than 4.6
-- More regular progress updates during long agentic traces — drop scaffolding added to force interim status
-- **Every user turn triggers reasoning** — multi-turn chatty prompting inflates tokens on 4.7 where it was cheap on 4.6. Front-load context into turn 1; see [[delegation-mindset]].
-- **Literal-following can drop code-review recall** when harness says "conservative" or "only high-severity" — model finds bugs, then filters them out itself. Fix: [[find-vs-filter]] — separate discovery from triage.
+- ทำตามคำสั่งแบบตรงไปตรงมามากขึ้น (โดยเฉพาะที่ effort level ต่ำๆ)
+- ความยาวของคำตอบจะปรับตามความซับซ้อนของงาน
+- เรียกใช้ tool และ subagent น้อยลงเป็นค่าเริ่มต้น (ต้องเพิ่ม effort / prompt เพื่อให้เรียกมากขึ้น)
+- ใช้โทนเสียงที่ตรงไปตรงมาและแสดงความคิดเห็นมากขึ้น; ใช้อีโมจิน้อยกว่า 4.6
+- อัปเดตความคืบหน้าบ่อยขึ้นระหว่างที่ agent ทำงานนานๆ — สามารถเอา scaffolding ที่เคยใส่ไว้เพื่อบังคับให้รายงานสถานะออกได้
+- **ทุก turn ของผู้ใช้จะกระตุ้นให้เกิดการคิด (reasoning)** — การ prompt แบบถามตอบหลายๆ turn จะทำให้เปลือง token มากใน 4.7 ในขณะที่ 4.6 นั้นไม่เป็น ควรอัด context ที่จำเป็นทั้งหมดไว้ใน turn แรก; ดูที่ [[delegation-mindset]]
+- **การทำตามคำสั่งตรงๆ อาจลด recall ของ code-review** เมื่อ harness สั่งว่า "conservative" หรือ "only high-severity" — โมเดลจะหา bug เจอ แต่กรองมันออกไปเอง วิธีแก้: [[find-vs-filter]] — แยกขั้นตอนการค้นหา (discovery) ออกจากการคัดกรอง (triage)
 
-## Cyber posture
+## นโยบายด้าน Cyber
 
-- Cyber capabilities **differentially reduced during training**
-- Automatic safeguards block prohibited / high-risk cyber requests
-- **Cyber Verification Program** for legitimate security research
-- Part of [[anthropic|Anthropic]]'s **Project Glasswing** — pilot safeguards on 4.7 before broader Mythos-class release
+- ความสามารถด้าน Cyber **ถูกลดทอนลงอย่างจงใจระหว่างการฝึก**
+- มีระบบป้องกันอัตโนมัติเพื่อบล็อก request ที่ผิดกฎหมาย / มีความเสี่ยงสูงด้าน cyber
+- มี **Cyber Verification Program** สำหรับนักวิจัยด้านความปลอดภัยที่ถูกต้อง
+- เป็นส่วนหนึ่งของ **[[project-glasswing|Project Glasswing]]** ของ [[anthropic|Anthropic]] — เป็นการนำร่องระบบป้องกันบน 4.7 ก่อนที่จะปล่อยโมเดลระดับ Mythos-class ในวงกว้าง
 
-## Availability
+## ช่องทางการใช้งาน
 
-- Claude products (Claude.ai, [[claude-code|Claude Code]])
+- ผลิตภัณฑ์ของ Claude (Claude.ai, [[claude-code|Claude Code]])
 - Claude API (`claude-opus-4-7`)
 - Amazon Bedrock
 - Google Cloud Vertex AI
 - Microsoft Foundry
 
-## Role in existing wiki patterns
+## บทบาทใน Wiki Patterns ที่มีอยู่
 
-- **[[advisor-strategy|Advisor strategy]]**: natural advisor model succeeding Opus 4.6
-- **[[llm-knowledge-bases|LLM wikis]]**: better file-system memory reduces session reloading cost
-- **[[claude-code-session-management|Session management]]**: default [[claude-code|Claude Code]] effort raised to `xhigh`; auto mode is a new long-run option
+- **[[advisor-strategy|Advisor strategy]]**: เป็น advisor model ที่มาแทน Opus 4.6 อย่างเป็นธรรมชาติ
+- **[[llm-knowledge-bases|LLM wikis]]**: file-system memory ที่ดีขึ้นช่วยลดต้นทุนในการโหลด session ใหม่
+- **[[claude-code-session-management|Session management]]**: effort level เริ่มต้นของ [[claude-code|Claude Code]] ถูกปรับเป็น `xhigh`; auto mode เป็นทางเลือกใหม่สำหรับการทำงานระยะยาว
 
-## See also
+## ดูเพิ่ม
 
 - [[claude]]
 - [[anthropic]]
+- [[claude-mythos-preview]]
 - [[claude-code]]
 - [[effort-levels]]
 - [[advisor-strategy]]

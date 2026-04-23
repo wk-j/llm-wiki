@@ -3,37 +3,37 @@ title: Context Rot
 type: concept
 tags: [ai, context-management, claude-code, performance]
 created: 2026-04-16
-updated: 2026-04-16
+updated: 2026-04-23
 sources: [Using Claude Code Session Management & 1M Context.md]
 ---
 
-# Context Rot
+# Context Rot / Context เน่า
 
-The observation that **LLM output quality degrades as the context window fills**. As more tokens accumulate, attention spreads across a larger surface; older, irrelevant content distracts from the current task and reduces effective reasoning quality.
+ข้อสังเกตที่ว่า **คุณภาพของ output จาก LLM จะลดลงเมื่อ context window ใกล้จะเต็ม** เมื่อมี token สะสมมากขึ้น, attention จะกระจายไปบนพื้นที่ที่ใหญ่ขึ้น; เนื้อหาที่เก่าและไม่เกี่ยวข้องจะรบกวนงานปัจจุบันและลดคุณภาพการให้เหตุผลที่มีประสิทธิภาพลง
 
-## Characteristics
+## ลักษณะ
 
-- **Gradual, not sudden.** Rot begins well before the hard context limit.
-- **Task-dependent.** Simple retrieval tasks tolerate longer contexts better than reasoning-heavy tasks.
-- **For [[claude-code|Claude Code]]'s 1M context model:** noticeable around 300–400k tokens ([[anthropic|Anthropic]]'s observed threshold), but not a rigid rule.
+- **ค่อยเป็นค่อยไป, ไม่ใช่ทันที** การเน่าจะเริ่มก่อนถึงขีดจำกัดของ context นาน
+- **ขึ้นอยู่กับงาน** งานดึงข้อมูลแบบง่ายๆ จะทนต่อ context ที่ยาวได้ดีกว่างานที่ต้องใช้เหตุผลหนักๆ
+- **สำหรับโมเดล context 1M ของ [[claude-code|Claude Code]]:** จะเริ่มเห็นได้ชัดเจนที่ประมาณ 300k–400k tokens (เกณฑ์ที่ [[anthropic|Anthropic]] สังเกตเห็น) แต่ก็ไม่ใช่กฎที่ตายตัว
 
-## Why it matters for session design
+## ทำไมถึงสำคัญต่อการออกแบบ session
 
-Context rot is the hidden cost of long sessions. Even when a session is technically viable (tokens remain), the model becomes incrementally less capable. This is why session management techniques ([[compaction]], /rewind, subagents) exist — not just to avoid hitting the limit, but to keep the active context *useful*.
+Context rot คือต้นทุนที่ซ่อนอยู่ของ session ที่ยาวนาน แม้ว่า session จะยังคงใช้งานได้ในทางเทคนิค (ยังมี token เหลือ), แต่โมเดลจะมีความสามารถลดลงเรื่อยๆ นี่คือเหตุผลที่เทคนิคการจัดการ session ([[compaction]], /rewind, subagents) มีอยู่ — ไม่ใช่แค่เพื่อหลีกเลี่ยงการชนขีดจำกัด, แต่เพื่อทำให้ active context *มีประโยชน์*อยู่เสมอ
 
-The model is also at its **least intelligent point** when autocompact fires (context rot is at its worst). This makes proactive manual compaction — with explicit steering — more reliable than leaving it to autocompact.
+โมเดลยังอยู่ใน **จุดที่ฉลาดน้อยที่สุด** เมื่อ autocompact ทำงาน (เพราะ context rot อยู่ในจุดที่แย่ที่สุด) สิ่งนี้ทำให้การทำ manual compaction เชิงรุก — พร้อมการชี้นำที่ชัดเจน — น่าเชื่อถือกว่าการปล่อยให้ autocompact ทำงานเอง
 
-## Mitigations
+## วิธีบรรเทา
 
-| Technique | How it helps |
-|-----------|-------------|
-| **/rewind** | Drop failed attempts from context immediately rather than accumulating them |
-| **/compact** (proactive) | Shed weight before rot peaks; steer the summary |
-| **/clear + new session** | Full reset; human writes focused brief |
-| **Subagents** | Intermediate work stays in a fresh context; only result returns to parent |
-| **New session per task** | Prevents rot from accumulating across unrelated work |
+| เทคนิค | ช่วยได้อย่างไร |
+|---|---|
+| **/rewind** | ทิ้งความพยายามที่ล้มเหลวออกจาก context ทันที แทนที่จะสะสมไว้ |
+| **/compact** (เชิงรุก) | ลดน้ำหนักก่อนที่การเน่าจะถึงจุดสูงสุด; ชี้นำบทสรุป |
+| **/clear + new session** | รีเซ็ตทั้งหมด; มนุษย์เขียน brief ที่โฟกัส |
+| **Subagents** | งานระหว่างทางจะอยู่ใน context ใหม่; มีเพียงผลลัพธ์ที่กลับมายัง parent |
+| **New session per task** | ป้องกันไม่ให้การเน่าสะสมข้ามงานที่ไม่เกี่ยวข้องกัน |
 
-## See also
+## ดูเพิ่ม
 
 - [[compaction]]
 - [[claude-code-session-management]]

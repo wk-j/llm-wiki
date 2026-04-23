@@ -3,52 +3,51 @@ title: Domain-to-AI Translator
 type: concept
 tags: [ai, software-engineering, requirements, roles]
 created: 2026-04-15
-updated: 2026-04-15
+updated: 2026-04-23
 sources: [software-engineer-role-ai-era.md]
 ---
 
-# Domain-to-AI Translator
+# Domain-to-AI Translator / นักแปลจากโดเมนสู่ AI
 
-An engineering role defined by **converting ambiguous real-world business requirements into specifications precise enough for AI to execute correctly**. The source post calls this "the hardest skill for AI itself to replace."
+บทบาททางวิศวกรรมที่นิยามโดย **การแปลงความต้องการทางธุรกิจในโลกแห่งความเป็นจริงที่คลุมเครือให้เป็นข้อกำหนดที่แม่นยำพอที่ AI จะสามารถดำเนินการได้อย่างถูกต้อง** โพสต์ต้นทางเรียกสิ่งนี้ว่า "ทักษะที่ยากที่สุดที่ AI จะมาแทนที่ได้"
 
-## The translation problem
+## ปัญหาการแปล
 
-Business requirements in the wild are:
+ความต้องการทางธุรกิจในโลกแห่งความเป็นจริงมักจะ:
 
-- **Ambiguous** — "make checkout faster" doesn't say *how much* faster or *where* the current bottleneck is.
-- **Incomplete** — stakeholders omit constraints that feel obvious to them but aren't written down.
-- **Context-laden** — the "right" answer depends on regulatory, customer, or internal-political factors that never appear in the ticket.
-- **Contradictory** — different stakeholders want incompatible things.
+- **คลุมเครือ (Ambiguous)** — "ทำให้ checkout เร็วขึ้น" ไม่ได้บอกว่าเร็วขึ้น*เท่าไหร่* หรือคอขวดปัจจุบันอยู่*ที่ไหน*
+- **ไม่สมบูรณ์ (Incomplete)** — stakeholder ละเว้นข้อจำกัดที่พวกเขารู้สึกว่าชัดเจน แต่ไม่ได้เขียนไว้
+- **เต็มไปด้วยบริบท (Context-laden)** — คำตอบที่ "ถูกต้อง" ขึ้นอยู่กับปัจจัยด้านกฎระเบียบ, ลูกค้า, หรือการเมืองภายในที่ไม่เคยปรากฏใน ticket
+- **ขัดแย้งกันเอง (Contradictory)** — stakeholder ที่แตกต่างกันต้องการสิ่งที่เข้ากันไม่ได้
 
-AI executes instructions well, but resolves ambiguity poorly. Whoever sits between the business and the AI determines how much of the real problem actually gets solved.
+AI ทำตามคำสั่งได้ดี แต่แก้ปัญหาความคลุมเครือได้ไม่ดี ใครก็ตามที่อยู่ระหว่างธุรกิจกับ AI จะเป็นผู้กำหนดว่าปัญหาที่แท้จริงจะถูกแก้ไขได้มากน้อยเพียงใด
 
-## Why this resists automation
+## ทำไมสิ่งนี้ถึงต่อต้านระบบอัตโนมัติ
 
-Translation requires:
+การแปลต้องใช้:
 
-1. **Implicit-context inference** — knowing what the stakeholder meant but didn't say.
-2. **Tradeoff negotiation** — asking the right question to force an unspoken choice.
-3. **Domain fluency** — recognizing that a request violates an invariant the business cares about.
-4. **Judgment about completeness** — deciding when a spec is specific enough to hand off without further clarification.
+1.  **การอนุมานบริบทโดยนัย (Implicit-context inference)** — การรู้ว่า stakeholder หมายถึงอะไรแต่ไม่ได้พูดออกมา
+2.  **การเจรจาต่อรองข้อแลกเปลี่ยน (Tradeoff negotiation)** — การถามคำถามที่ถูกต้องเพื่อบังคับให้เกิดการตัดสินใจในเรื่องที่ไม่ได้พูดถึง
+3.  **ความคล่องแคล่วในโดเมน (Domain fluency)** — การตระหนักว่าคำร้องขอนั้นละเมิด invariant ที่ธุรกิจให้ความสำคัญ
+4.  **วิจารณญาณเกี่ยวกับความสมบูรณ์ (Judgment about completeness)** — การตัดสินใจว่าเมื่อใดที่ spec มีความเฉพาะเจาะจงเพียงพอที่จะส่งมอบได้โดยไม่ต้องชี้แจงเพิ่มเติม
 
-All four depend on cumulative, hard-to-transfer knowledge of a specific organization, product, and industry.
+ทั้งสี่อย่างนี้ขึ้นอยู่กับความรู้ที่สะสมมาและถ่ายทอดได้ยากขององค์กร, ผลิตภัณฑ์, และอุตสาหกรรมที่เฉพาะเจาะจง
 
-## What a good translation looks like
+## หน้าตาของการแปลที่ดี
 
-A good translated spec:
+spec ที่แปลมาอย่างดี:
+- ระบุเกณฑ์ความสำเร็จที่สามารถตรวจสอบได้โดยไม่ต้องถาม stakeholder ซ้ำ
+- ระบุ invariant ที่ solution ต้องรักษาไว้
+- ชี้ให้เห็น edge case ที่รู้จักและวิธีจัดการแต่ละกรณี
+- ไม่ทิ้งจุดตัดสินใจที่ AI จะต้องเดา
 
-- States success criteria verifiable without re-asking the stakeholder.
-- Names invariants the solution must preserve.
-- Calls out known edge cases and how to handle each.
-- Leaves no decision points the AI would have to guess at.
+เทียบกับหลักการข้อที่ 4 ของ [[llm-coding-pitfalls]] ("Goal-Driven Execution"): ข้อสังเกตของ [[andrej-karpathy|Karpathy]] ที่ว่าเกณฑ์ความสำเร็จที่แข็งแกร่งช่วยให้ LLM ทำงานวนลูปได้อย่างอิสระ ในขณะที่เกณฑ์ที่อ่อนแอ ("ทำให้มันทำงานได้") ต้องมีการชี้แจงอยู่ตลอดเวลา Domain-to-AI translation คือการกระทำต้นน้ำที่สร้างเกณฑ์ที่แข็งแกร่งขึ้นมา
 
-Compare with [[llm-coding-pitfalls]] principle #4 ("Goal-Driven Execution"): [[andrej-karpathy|Karpathy]]'s observation that strong success criteria let an LLM loop independently, while weak ones ("make it work") require constant clarification. Domain-to-AI translation is the upstream act that produces strong criteria.
+## ความสัมพันธ์กับ prompt engineering
 
-## Relationship to prompt engineering
+Prompt engineering เป็นส่วนหนึ่งของงานนี้ที่เน้นไปที่การใช้ถ้อยคำของคำสั่งสุดท้ายที่จะให้กับโมเดล Domain translation เป็นกิจกรรมที่ใหญ่กว่าซึ่งสร้าง *สิ่งที่ควรจะพูด* ขึ้นมาตั้งแต่แรก — ซึ่งส่วนใหญ่รวบรวมมาจากมนุษย์ ไม่ใช่จากโมเดล
 
-Prompt engineering is a subset of this work focused on the wording of the final instruction to the model. Domain translation is the larger activity that produces *what should be said* in the first place — most of which is gathered from humans, not from a model.
-
-## See also
+## ดูเพิ่ม
 
 - [[engineering-role-shift]]
 - [[ai-orchestrator]]

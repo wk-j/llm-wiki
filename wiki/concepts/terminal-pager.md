@@ -3,42 +3,42 @@ title: Terminal Pager
 type: concept
 tags: [terminal, tui, text-navigation, tools]
 created: 2026-04-16
-updated: 2026-04-16
+updated: 2026-04-23
 sources: [leo-robinovitch-terminal-pager.md]
 ---
 
 # Terminal Pager
 
-A program for interactively navigating multi-page text in a terminal. Used when output is too long to read at once: git diffs, man pages, logs, database results, AI tool output.
+โปรแกรมสำหรับดูข้อความหลายหน้าใน terminal แบบ interactive ใช้เมื่อ output ยาวเกินกว่าจะอ่านได้ในครั้งเดียว: git diffs, man pages, logs, ผลลัพธ์จากฐานข้อมูล, output ของเครื่องมือ AI
 
-## How programs invoke pagers
+## โปรแกรมเรียกใช้ pager อย่างไร
 
-Programs check the `$PAGER` environment variable. If set and stdout is a TTY (interactive session), they spawn the pager as a child process and pipe their output into its stdin. When stdout is not a TTY (e.g. `git diff | grep ...`), the pager is skipped.
+โปรแกรมจะตรวจสอบ environment variable `$PAGER` หากมีการตั้งค่าไว้และ stdout เป็น TTY (interactive session), โปรแกรมจะสร้าง pager เป็น child process และ pipe output ของตัวเองไปยัง stdin ของ pager หาก stdout ไม่ใช่ TTY (เช่น `git diff | grep ...`), pager จะถูกข้ามไป
 
-Specialised overrides exist: `$GIT_PAGER` for git, `$BAT_PAGER` for bat's inner pager, etc.
+มีการ override เฉพาะทางด้วย: `$GIT_PAGER` สำหรับ git, `$BAT_PAGER` สำหรับ pager ภายในของ bat, ฯลฯ
 
-## Common pagers
+## Pager ทั่วไป
 
-| Pager | Notes |
+| Pager | หมายเหตุ |
 |---|---|
-| `less` | Default fallback on most systems; highly configurable; text lost on exit by default (`-X` to persist) |
-| `bat` | Syntax highlighting + line numbers; calls another pager internally |
-| `most` | Multi-window, splits |
-| `delta` | Specialised for git diffs; side-by-side, syntax highlighting |
-| `lore` | [[leo-robinovitch|Leo Robinovitch]]'s Go pager, built on his `viewport` component |
-| `cat` | Set `PAGER=cat` to disable paging entirely |
+| `less` | เป็น default fallback ในระบบส่วนใหญ่; ตั้งค่าได้สูง; output จะหายไปเมื่อออกเป็นค่าเริ่มต้น (ใช้ `-X` เพื่อให้คงอยู่) |
+| `bat` | มี syntax highlighting + line numbers; เรียกใช้ pager อื่นภายใน |
+| `most` | มีหลายหน้าต่าง, splits |
+| `delta` | เชี่ยวชาญสำหรับ git diffs; side-by-side, syntax highlighting |
+| `lore` | pager ที่เขียนด้วย Go ของ [[leo-robinovitch|Leo Robinovitch]], สร้างขึ้นบน `viewport` component ของเขา |
+| `cat` | ตั้งค่า `PAGER=cat` เพื่อปิดการใช้งาน paging ทั้งหมด |
 
-## Useful `less` options
+## option ของ `less` ที่มีประโยชน์
 
-- `-X` / `--no-init` — keep output in terminal after quit
-- `-i` / `--ignore-case` — case-insensitive search
-- `-R` — pass ANSI escape codes through (color output)
+- `-X` / `--no-init` — คง output ไว้ใน terminal หลังจากออก
+- `-i` / `--ignore-case` — ค้นหาแบบไม่สนใจ case-sensitive
+- `-R` — ส่งผ่าน ANSI escape codes (สำหรับ output ที่มีสี)
 
 ## Pagers vs TUIs
 
-Pagers typically display a single stream of text in the alt screen (or inline). [[tui|TUIs]] compose multiple pager-like components alongside other UI elements. Leo Robinovitch's `viewport` component is a reusable mini-pager intended for embedding in TUIs.
+Pager โดยทั่วไปจะแสดงข้อความ stream เดียวใน alt screen (หรือ inline) ส่วน [[tui|TUIs]] จะประกอบด้วย component ที่คล้าย pager หลายตัวควบคู่ไปกับองค์ประกอบ UI อื่นๆ `viewport` component ของ Leo Robinovitch เป็น mini-pager ที่ใช้ซ้ำได้ซึ่งมีไว้สำหรับฝังใน TUI
 
-## See also
+## ดูเพิ่ม
 
 - [[tui]]
 - [[leo-robinovitch-terminal-pager]]

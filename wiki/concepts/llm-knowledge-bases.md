@@ -3,68 +3,68 @@ title: LLM Knowledge Bases
 type: concept
 tags: [llm, knowledge-management, obsidian, workflow, meta]
 created: 2026-04-12
-updated: 2026-04-16
+updated: 2026-04-23
 sources: [LLM Knowledge Bases Thread by @karpathy.md, "Karpathy's LLM Wiki The Complete Guide to His Idea File.md"]
 ---
 
-# LLM Knowledge Bases
+# LLM Knowledge Bases / ฐานความรู้ที่ดูแลโดย LLM
 
-A pattern for building personal knowledge bases where the LLM writes and maintains all content. The human curates sources, asks questions, and directs the analysis. The LLM handles summarizing, cross-referencing, filing, and bookkeeping.
+รูปแบบการสร้างฐานความรู้ส่วนบุคคลที่ให้ LLM เป็นผู้เขียนและดูแลเนื้อหาทั้งหมด มนุษย์ทำหน้าที่คัดเลือกแหล่งข้อมูล, ตั้งคำถาม, และกำกับการวิเคราะห์ ส่วน LLM จะจัดการเรื่องการสรุป, การเชื่อมโยงข้าม, การจัดเก็บ, และการลงบันทึก
 
-This wiki is an implementation of this pattern. The pattern was described as an [[idea-file]] by [[andrej-karpathy]] in a GitHub gist (Apr 2026).
+Wiki นี้คือการ implement รูปแบบนี้ รูปแบบนี้ถูกอธิบายไว้ในรูปแบบ [[idea-file]] โดย [[andrej-karpathy]] ใน GitHub gist (เม.ย. 2026)
 
-## Why wikis beat RAG
+## ทำไม wiki ถึงดีกว่า RAG
 
-Most people's experience with LLMs and documents is RAG: upload files, retrieve chunks at query time, generate an answer. The problem: "The LLM is rediscovering knowledge from scratch on every question. There's no accumulation."
+ประสบการณ์ส่วนใหญ่ของผู้คนกับ LLM และเอกสารคือ RAG: อัปโหลดไฟล์, ดึงข้อมูลเป็นส่วนๆ (chunks) ตอน query, แล้วสร้างคำตอบ ปัญหาคือ: "LLM ค้นพบความรู้ใหม่ตั้งแต่ต้นในทุกคำถาม ไม่มีการสะสม"
 
-| Dimension | Traditional RAG | LLM Wiki |
+| มิติ | RAG แบบดั้งเดิม | LLM Wiki |
 |---|---|---|
-| When knowledge is processed | At query time (every question) | At ingest time (once per source) |
-| Cross-references | Discovered ad-hoc per query | Pre-built and maintained |
-| Contradictions | May not be noticed | Flagged during ingestion |
-| Knowledge accumulation | None — starts fresh each query | Compounds with every source and query |
-| Output format | Chat responses (ephemeral) | Persistent markdown files (durable) |
-| Who maintains it | The system (black box) | The LLM (transparent, editable) |
-| Examples | NotebookLM, ChatGPT uploads | This wiki |
+| ประมวลผลความรู้เมื่อไหร่ | ตอน query (ทุกคำถาม) | ตอน ingest (ครั้งเดียวต่อแหล่งข้อมูล) |
+| การเชื่อมโยงข้าม | ค้นพบเฉพาะกิจตามแต่ละ query | สร้างไว้ล่วงหน้าและดูแลรักษา |
+| ข้อขัดแย้ง | อาจไม่ถูกสังเกตเห็น | ถูกตั้งค่าสถานะ (flag) ระหว่างการ ingest |
+| การสะสมความรู้ | ไม่มี — เริ่มใหม่ทุก query | ทบต้นกับทุกแหล่งข้อมูลและ query |
+| รูปแบบ Output | คำตอบในแชท (ชั่วคราว) | ไฟล์ markdown ที่คงอยู่ (ถาวร) |
+| ใครดูแล | ระบบ (กล่องดำ) | LLM (โปร่งใส, แก้ไขได้) |
+| ตัวอย่าง | NotebookLM, ChatGPT uploads | Wiki นี้ |
 
-Key line: "The knowledge is compiled once and then kept current, not re-derived on every query."
+บรรทัดสำคัญ: "ความรู้ถูกคอมไพล์เพียงครั้งเดียวแล้วดูแลให้เป็นปัจจุบัน ไม่ใช่สร้างขึ้นใหม่ทุกครั้งที่ query"
 
-## Architecture (three layers)
+## สถาปัตยกรรม (สามชั้น)
 
-1. **Raw sources** — immutable collection of source documents. The LLM reads but never modifies.
-2. **The wiki** — LLM-generated markdown files. Summaries, entity pages, concept pages, analysis. The LLM owns this entirely.
-3. **The schema** — instructions file (`CLAUDE.md` / `AGENTS.md`) defining structure, conventions, and workflows. Co-evolved with the LLM over time as you discover what works for your domain.
+1.  **Raw sources** — ชุดเอกสารต้นทางที่เปลี่ยนแปลงไม่ได้ LLM อ่านอย่างเดียว ห้ามแก้ไข
+2.  **The wiki** — ไฟล์ markdown ที่ LLM สร้างขึ้น สรุป, หน้า entity, หน้า concept, การวิเคราะห์ LLM เป็นเจ้าของส่วนนี้ทั้งหมด
+3.  **The schema** — ไฟล์คำสั่ง (`CLAUDE.md` / `AGENTS.md`) ที่กำหนดโครงสร้าง, ธรรมเนียม, และ workflow พัฒนาร่วมกับ LLM ไปเรื่อยๆ เมื่อคุณค้นพบว่าอะไรที่ใช้ได้ผลสำหรับโดเมนของคุณ
 
-Karpathy's analogy: "Obsidian is the IDE; the LLM is the programmer; the wiki is the codebase."
+อุปมาของ Karpathy: "Obsidian คือ IDE; LLM คือโปรแกรมเมอร์; wiki คือ codebase"
 
 ## Operations
 
-| Operation | Description |
+| Operation | คำอธิบาย |
 |---|---|
-| **Ingest** | Read a source, create summary, update entity/concept pages, update index and log. A single ingest may touch 10–15 pages. |
-| **Query** | Search index → read relevant pages → synthesize answer → optionally file back as analysis page |
-| **Lint** | Health check: contradictions, orphan pages, missing pages, stale data, suggested questions |
+| **Ingest** | อ่านแหล่งข้อมูล, สร้างสรุป, อัปเดตหน้า entity/concept, อัปเดต index และ log การ ingest ครั้งเดียวอาจแตะไฟล์ 10–15 หน้า |
+| **Query** | ค้นหา index → อ่านหน้าที่เกี่ยวข้อง → สังเคราะห์คำตอบ → เลือกได้ว่าจะบันทึกกลับเป็นหน้า analysis หรือไม่ |
+| **Lint** | ตรวจสอบสุขภาพ: ข้อขัดแย้ง, หน้าที่ไม่มีใครลิงก์หา,หน้าที่ถูกลิงก์หาแต่ไม่มีอยู่จริง, ข้อมูลที่ล้าสมัย, คำถามที่แนะนำ |
 
-The compounding loop: sources get ingested into the wiki, queries generate new insights, and the best insights get filed back as wiki pages. "This way your explorations compound in the knowledge base just like ingested sources do."
+วงจรทบต้น: แหล่งข้อมูลถูก ingest เข้า wiki, query สร้างข้อมูลเชิงลึกใหม่, และข้อมูลเชิงลึกที่ดีที่สุดจะถูกบันทึกกลับเป็นหน้า wiki "ด้วยวิธีนี้ การสำรวจของคุณจะทบต้นในฐานความรู้เช่นเดียวกับแหล่งข้อมูลที่ ingest เข้ามา"
 
-## Why it works
+## ทำไมถึงได้ผล
 
-- LLMs eliminate the maintenance burden that kills human-maintained wikis: "Humans abandon wikis because the maintenance burden grows faster than the value. LLMs don't get bored, don't forget to update a cross-reference, and can touch 15 files in one pass."
-- Cross-references, summaries, and consistency checks happen automatically
-- Knowledge compounds — each source and query enriches the whole wiki
-- At moderate scale (~100 sources, ~400K words), index files suffice without RAG infrastructure
+- LLM ขจัดภาระการบำรุงรักษาที่ทำให้ wiki ที่ดูแลโดยมนุษย์ต้องตายไป: "มนุษย์ทิ้ง wiki เพราะภาระการบำรุงรักษาเติบโตเร็วกว่าคุณค่าที่ได้ LLM ไม่เบื่อ, ไม่ลืมอัปเดต cross-reference, และสามารถแตะ 15 ไฟล์ได้ในครั้งเดียว"
+- การเชื่อมโยงข้าม, การสรุป, และการตรวจสอบความสอดคล้องเกิดขึ้นโดยอัตโนมัติ
+- ความรู้ทบต้น — ทุกแหล่งข้อมูลและ query ทำให้ wiki ทั้งหมดสมบูรณ์ขึ้น
+- ในระดับปานกลาง (~100 แหล่งข้อมูล, ~400K คำ), ไฟล์ index ก็เพียงพอโดยไม่ต้องมี infrastructure ของ RAG
 
-## Scale considerations
+## ข้อควรพิจารณาด้าน Scale
 
-- Small (< 50 sources): index file is sufficient for navigation
-- Medium (~100 sources, ~400K words): still works with index files per [[andrej-karpathy]]
-- Large: may need a search engine — **qmd** (by Tobi Lütke, Shopify CEO): hybrid BM25/vector/LLM-reranked search, runs locally, has CLI and MCP server
+- เล็ก (< 50 แหล่งข้อมูล): ไฟล์ index เพียงพอสำหรับการนำทาง
+- ปานกลาง (~100 แหล่งข้อมูล, ~400K คำ): ยังคงทำงานได้กับไฟล์ index ตามที่ [[andrej-karpathy]] กล่าวไว้
+- ใหญ่: อาจต้องใช้ search engine — **qmd** (โดย Tobi Lütke, CEO ของ Shopify): การค้นหาแบบ hybrid BM25/vector/LLM-reranked, รันบนเครื่อง, มี CLI และ MCP server
 
-## Historical connection
+## ความเชื่อมโยงทางประวัติศาสตร์
 
-The pattern is spiritually descended from [[vannevar-bush]]'s 1945 [[memex]] concept — private, curated knowledge with associative trails. The web evolved away from that toward public infrastructure. Bush's unsolved problem was maintenance. LLMs solve it.
+รูปแบบนี้สืบเชื้อสายทางจิตวิญญาณมาจากแนวคิด [[memex]] ของ [[vannevar-bush]] ในปี 1945 — ความรู้ส่วนบุคคลที่ผ่านการคัดสรรและมี associative trails เว็บได้วิวัฒนาการออกจากแนวทางนั้นไปสู่ infrastructure สาธารณะ ปัญหาที่ Bush แก้ไม่ตกคือการบำรุงรักษา ซึ่ง LLM แก้ปัญหานี้ได้
 
-## See also
+## ดูเพิ่ม
 
 - [[karpathy-llm-knowledge-bases]]
 - [[karpathy-llm-wiki-idea-file]]

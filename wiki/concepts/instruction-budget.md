@@ -43,6 +43,7 @@ sources: [alex-ker-harnesses-optimize.md]
 
 ## เชื่อมกับประเด็นอื่น
 
+- [[claude-md]] — CLAUDE.md คือที่ที่ instruction budget ถูกใช้เปลืองที่สุด; [[cyril-xbt|Cyril]] เชียร์ template 7 ส่วนเต็ม, Alex Ker เชียร์ minimal — อ่าน `[[claude-md]]` ตารางเทียบ
 - [[progressive-disclosure]] — เทคนิคหลักในการ *อยู่ใต้* instruction budget โดยไม่เสียความสามารถในการครอบ rule
 - [[coding-harness]] — harness ที่ดีออกแบบให้ instruction budget ไม่ถูกใช้สุ่มสี่สุ่มห้า
 - [[llm-coding-pitfalls]] — Karpathy ชี้ว่า AI หลาย pitfall มาจากการไม่รู้ว่า model ตอนนั้นอยู่ในโหมด confident-but-wrong อยู่ — instruction budget เป็นกลไกหนึ่งที่ทำให้เกิด
@@ -50,9 +51,11 @@ sources: [alex-ker-harnesses-optimize.md]
 
 ## See also
 
+- [[claude-md]]
 - [[humanlayer]]
 - [[alex-ker]]
 - [[alex-ker-harnesses-optimize]]
+- [[cyril-xbt-claude-md-guide]]
 - [[progressive-disclosure]]
 - [[coding-harness]]
 - [[context-rot]]

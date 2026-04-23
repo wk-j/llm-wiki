@@ -3,25 +3,25 @@ title: Akon Labs
 type: entity
 tags: [company, developer-tools, code-intelligence]
 created: 2026-04-13
-updated: 2026-04-13
+updated: 2026-04-23
 sources: [abhigyanpatwariGitNexus GitNexus The Zero-Server Code Intelligence Engine.md]
 ---
 
 # Akon Labs
 
-Company behind [[gitnexus]]'s enterprise offering. Provides GitNexus as a managed SaaS or self-hosted deployment, plus commercial licensing for the open-source version.
+บริษัทผู้อยู่เบื้องหลัง [[gitnexus]] เวอร์ชันสำหรับองค์กร ให้บริการ GitNexus ในรูปแบบ managed SaaS หรือ self-hosted deployment รวมถึง commercial licensing สำหรับเวอร์ชัน open-source
 
-## Enterprise features
+## ฟีเจอร์สำหรับองค์กร (Enterprise features)
 
 - Automated PR blast-radius analysis
 - Auto-updating code wiki
-- Auto-reindexing (knowledge graph stays fresh)
+- Auto-reindexing (knowledge graph จะอัปเดตอยู่เสมอ)
 - Multi-repo unified graphs
-- OCaml language support
+- รองรับภาษา OCaml
 - Priority feature/language requests
 
-Website: akonlabs.com
+เว็บไซต์: akonlabs.com
 
-## See also
+## ดูเพิ่ม
 
 - [[gitnexus]]

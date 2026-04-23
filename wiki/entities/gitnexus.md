@@ -3,33 +3,33 @@ title: GitNexus
 type: entity
 tags: [developer-tools, code-intelligence, knowledge-graphs, mcp, open-source]
 created: 2026-04-13
-updated: 2026-04-13
+updated: 2026-04-23
 sources: [abhigyanpatwariGitNexus GitNexus The Zero-Server Code Intelligence Engine.md]
 ---
 
 # GitNexus
 
-Open-source code intelligence engine that indexes codebases into [[code-knowledge-graphs|knowledge graphs]] and exposes them to AI agents via [[model-context-protocol|MCP]]. Created by Abhigyan Patwari; enterprise offering through [[akon-labs]].
+Code intelligence engine แบบ open-source ที่ทำ index codebase ให้เป็น [[code-knowledge-graphs|knowledge graphs]] และเปิดให้ AI agents เข้าถึงได้ผ่าน [[model-context-protocol|MCP]] สร้างโดย Abhigyan Patwari; มีเวอร์ชันสำหรับองค์กรผ่าน [[akon-labs]]
 
-## What it does
+## สิ่งที่ทำ
 
-Builds a complete graph of a codebase — functions, classes, imports, call chains, clusters, execution flows — then lets AI coding tools query that graph through smart, precomputed tools. The core claim: traditional [[graph-rag]] requires multiple LLM query hops to understand structure; GitNexus precomputes relationships so tools return complete context in one call.
+สร้างกราฟที่สมบูรณ์ของ codebase — ซึ่งรวมถึง functions, classes, imports, call chains, clusters, execution flows — จากนั้นให้เครื่องมือเขียนโค้ด AI สามารถ query กราฟนั้นผ่านเครื่องมืออัจฉริยะที่คำนวณไว้ล่วงหน้า ข้ออ้างหลักคือ: [[graph-rag]] แบบดั้งเดิมต้องใช้การ query LLM หลาย hop เพื่อทำความเข้าใจโครงสร้าง; แต่ GitNexus จะคำนวณความสัมพันธ์ไว้ล่วงหน้าเพื่อให้เครื่องมือสามารถคืน context ที่สมบูรณ์ได้ในการเรียกเพียงครั้งเดียว
 
-## Key details
+## รายละเอียดสำคัญ
 
 - **License**: Open source (GitHub: abhigyanpatwari/GitNexus)
-- **Languages**: 14 supported via Tree-sitter (TypeScript, Python, Java, Go, Rust, C#, etc.)
-- **Database**: LadybugDB (embedded graph DB with vector support)
-- **Interfaces**: CLI + MCP server (for daily dev), Web UI (browser-based, no server)
-- **Editor support**: Claude Code (full — MCP + skills + hooks), Cursor, Codex, Windsurf, OpenCode
-- **Install**: `npm install -g gitnexus` (CLI) or gitnexus.vercel.app (web)
-- **Privacy**: Fully local (CLI) or fully in-browser (web) — no code leaves the machine
+- **Languages**: รองรับ 14 ภาษาผ่าน Tree-sitter (TypeScript, Python, Java, Go, Rust, C#, etc.)
+- **Database**: LadybugDB (embedded graph DB ที่รองรับ vector)
+- **Interfaces**: CLI + MCP server (สำหรับงานพัฒนารายวัน), Web UI (ทำงานบนเบราว์เซอร์, ไม่ต้องมี server)
+- **Editor support**: Claude Code (รองรับเต็มรูปแบบ — MCP + skills + hooks), Cursor, Codex, Windsurf, OpenCode
+- **Install**: `npm install -g gitnexus` (CLI) หรือ gitnexus.vercel.app (web)
+- **Privacy**: ทำงานบนเครื่องทั้งหมด (CLI) หรือในเบราว์เซอร์ทั้งหมด (web) — โค้ดไม่ออกจากเครื่อง
 
-## Positioning
+## การวางตำแหน่ง (Positioning)
 
-> "Like DeepWiki, but deeper. DeepWiki helps you understand code. GitNexus lets you analyze it — because a knowledge graph tracks every relationship, not just descriptions."
+> "เหมือน DeepWiki, แต่ลึกกว่า DeepWiki ช่วยให้คุณเข้าใจโค้ด แต่ GitNexus ให้คุณวิเคราะห์มันได้ — เพราะ knowledge graph จะติดตามทุกความสัมพันธ์ ไม่ใช่แค่คำอธิบาย"
 
-## See also
+## ดูเพิ่ม
 
 - [[akon-labs]]
 - [[code-knowledge-graphs]]

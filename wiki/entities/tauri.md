@@ -3,34 +3,34 @@ title: Tauri
 type: entity
 tags: [desktop-apps, rust, frameworks, tooling]
 created: 2026-04-18
-updated: 2026-04-18
+updated: 2026-04-23
 sources: [opencode-tauri-to-electron.md, opencode-desktop-electron-brendonovich.md]
 ---
 
 # Tauri
 
-Rust-based desktop application framework. Uses the OS's **native webview** (WebKit on macOS, WebView2 on Windows, webkitgtk on Linux) for the frontend and Rust for the main process. Positioned against [[electron|Electron]] on bundle size, memory footprint, and security model.
+เฟรมเวิร์กสำหรับสร้างแอปพลิเคชันเดสก์ท็อปที่ใช้ Rust เป็นหลัก ใช้ **native webview** ของ OS (WebKit บน macOS, WebView2 บน Windows, webkitgtk บน Linux) สำหรับ frontend และใช้ Rust สำหรับ main process วางตำแหน่งตัวเองเป็นคู่แข่งกับ [[electron|Electron]] โดยชูจุดเด่นเรื่องขนาด bundle, การใช้หน่วยความจำ, และโมเดลความปลอดภัย
 
-## Strengths (per @brendonovich, 2026-04-18)
+## จุดแข็ง (ตาม @brendonovich, 18 เม.ย. 2026)
 
-- Small bundle size (no bundled Chromium)
-- Native webviews
-- Strong security model
-- Fast in the common case
+- ขนาด bundle เล็ก (ไม่มี Chromium มาด้วย)
+- ใช้ Native webviews
+- โมเดลความปลอดภัยที่แข็งแกร่ง
+- รวดเร็วในกรณีการใช้งานทั่วไป
 
-## Where it doesn't fit
+## กรณีที่ไม่เหมาะสม
 
-When the app's heavy logic runs in a **non-Rust runtime** (Node, Bun, Python), Tauri forces that runtime into a **sidecar process** — adding startup cost, IPC latency, and cross-platform reliability issues. [[opencode|OpenCode]] hit this and switched to Electron; see [[opencode-desktop-electron-brendonovich]] for the primary-source reasoning (and [[opencode-tauri-to-electron]] for the earlier Grok summary).
+เมื่อ logic หลักที่หนักๆ ของแอปทำงานบน **runtime ที่ไม่ใช่ Rust** (เช่น Node, Bun, Python), Tauri จะบังคับให้ runtime นั้นต้องทำงานเป็น **sidecar process** — ทำให้มีต้นทุนตอนเริ่มต้นเพิ่มขึ้น, มี IPC latency, และปัญหาความเสถียรข้าม platform [[opencode|OpenCode]] เจอปัญหานี้และได้ย้ายไปใช้ Electron; ดูเหตุผลจากแหล่งข้อมูลหลักได้ที่ [[opencode-desktop-electron-brendonovich]] (และสรุปก่อนหน้าที่ [[opencode-tauri-to-electron]])
 
-## WebKit caveat (macOS + Linux)
+## ข้อควรระวังเกี่ยวกับ WebKit (macOS + Linux)
 
-Tauri uses the **OS-native webview** — Chromium-equivalent **WebView2** on Windows, but **WebKit** on macOS and webkitgtk on Linux. For complex UIs, WebKit has measurably worse rendering perf than Chromium and subtle style inconsistencies, making cross-platform visual parity hard. A **CEF (Chromium Embedded Framework)** backend is in progress to swap the webview for Chromium, but stabilization timing is uncertain (per @brendonovich, 2026-03).
+Tauri ใช้ **native webview ของ OS** — ซึ่งคือ **WebView2** ที่เทียบเท่า Chromium บน Windows, แต่เป็น **WebKit** บน macOS และ webkitgtk บน Linux สำหรับ UI ที่ซับซ้อน, WebKit มีประสิทธิภาพการเรนเดอร์ที่แย่กว่า Chromium อย่างเห็นได้ชัด และมีความไม่สอดคล้องของสไตล์เล็กๆ น้อยๆ ทำให้การทำให้หน้าตาเหมือนกันทุก platform เป็นเรื่องยาก ขณะนี้กำลังมีการพัฒนา **CEF (Chromium Embedded Framework)** backend เพื่อเปลี่ยน webview ไปเป็น Chromium แต่ยังไม่แน่ชัดว่าจะเสถียรเมื่อไหร่ (ตาม @brendonovich, มี.ค. 2026)
 
-## The Rust-heavy-core sweet spot
+## จุดที่เหมาะสมที่สุด: Core ที่เป็น Rust หนักๆ
 
-Tauri is *"little more than a Rust library for launching and communicating with webviews"* (@brendonovich). You realize its perf advantage when the app's heavy work is written **in Rust** — @brendonovich cites [[@cap]] doing native video encoding/rendering in Rust as the canonical fit. If the heavy work is JS/Python/other, the Rust shell can't move the needle.
+Tauri เป็น *"อะไรที่มากกว่าไลบรารี Rust สำหรับเปิดและสื่อสารกับ webview เพียงเล็กน้อย"* (@brendonovich) คุณจะเห็นข้อได้เปรียบด้านประสิทธิภาพของมันก็ต่อเมื่องานหนักๆ ของแอปถูกเขียน **ด้วย Rust** — @brendonovich อ้างถึง [[@cap]] ที่ทำการเข้ารหัสและเรนเดอร์วิดีโอแบบ native ใน Rust ว่าเป็นกรณีการใช้งานที่เหมาะสมที่สุด ถ้างานหนักๆ เป็น JS/Python/อื่นๆ, shell ที่เป็น Rust ก็ไม่สามารถช่วยอะไรได้มาก
 
-## See also
+## ดูเพิ่ม
 
 - [[electron]]
 - [[opencode]]

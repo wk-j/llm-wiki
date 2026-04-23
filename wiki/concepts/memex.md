@@ -3,51 +3,51 @@ title: Memex
 type: concept
 tags: [knowledge-management, history-of-computing, hypertext, information-architecture]
 created: 2026-04-16
-updated: 2026-04-16
+updated: 2026-04-23
 sources: ["Karpathy's LLM Wiki The Complete Guide to His Idea File.md"]
 ---
 
 # Memex
 
-A hypothetical personal knowledge device described by [[vannevar-bush]] in his 1945 *Atlantic* essay "As We May Think." The Memex (memory + index) was a desk-sized machine where an individual could store all their books, records, and communications, search them rapidly, and create **associative trails** — linked sequences of documents with personal annotations.
+อุปกรณ์ความรู้ส่วนบุคคลในจินตนาการที่อธิบายโดย [[vannevar-bush]] ในบทความ "As We May Think" ของเขาในนิตยสาร *Atlantic* ปี 1945 Memex (memory + index) คือเครื่องจักรขนาดเท่าโต๊ะที่บุคคลหนึ่งสามารถเก็บหนังสือ, บันทึก, และการสื่อสารทั้งหมดของตน, ค้นหาได้อย่างรวดเร็ว, และสร้าง **associative trails** — ลำดับของเอกสารที่เชื่อมโยงกันพร้อมคำอธิบายประกอบส่วนตัว
 
-## Core concept
+## แนวคิดหลัก
 
-Bush's key insight: the human mind works by *association*, not alphabetical order. Hierarchical filing systems force rigid categories. The Memex would let people create their own paths through knowledge — linking a chemistry paper to an economics report to a historical essay, following personal logic.
+ข้อมูลเชิงลึกที่สำคัญของ Bush: จิตใจของมนุษย์ทำงานโดย *การเชื่อมโยง (association)*, ไม่ใช่ตามลำดับตัวอักษร ระบบการจัดเก็บไฟล์แบบลำดับชั้นบังคับให้ใช้หมวดหมู่ที่ตายตัว Memex จะให้ผู้คนสร้างเส้นทางของตนเองผ่านความรู้ — เชื่อมโยงเอกสารเคมีเข้ากับรายงานเศรษฐศาสตร์และบทความประวัติศาสตร์, ตามตรรกะส่วนตัว
 
-His famous quote: "Wholly new forms of encyclopedias will appear, ready-made with a mesh of associative trails running through them."
+คำพูดที่มีชื่อเสียงของเขา: "สารานุกรมรูปแบบใหม่ทั้งหมดจะปรากฏขึ้น พร้อมด้วยตาข่ายของ associative trails ที่ร้อยเรียงผ่านมัน"
 
-## Why it matters for LLM wikis
+## ทำไมถึงสำคัญสำหรับ LLM wikis
 
-[[andrej-karpathy]] explicitly connects the [[llm-knowledge-bases]] pattern to the Memex:
+[[andrej-karpathy]] เชื่อมโยงรูปแบบ [[llm-knowledge-bases]] กับ Memex อย่างชัดเจน:
 
-> "The idea is related in spirit to Vannevar Bush's Memex (1945) — a personal, curated knowledge store with associative trails between documents. Bush's vision was closer to this than to what the web became: private, actively curated, with the connections between documents as valuable as the documents themselves. The part he couldn't solve was who does the maintenance. The LLM handles that."
+> "แนวคิดนี้มีความเกี่ยวข้องทางจิตวิญญาณกับ Memex ของ Vannevar Bush (1945) — คลังความรู้ส่วนบุคคลที่ผ่านการคัดสรรพร้อม associative trails ระหว่างเอกสาร วิสัยทัศน์ของ Bush ใกล้เคียงกับสิ่งนี้มากกว่าสิ่งที่เว็บได้กลายเป็น: เป็นส่วนตัว, ได้รับการคัดสรรอย่างจริงจัง, โดยการเชื่อมต่อระหว่างเอกสารมีค่าเท่ากับตัวเอกสารเอง ส่วนที่เขาแก้ไม่ได้คือใครจะเป็นผู้ดูแลรักษา ซึ่ง LLM จัดการเรื่องนั้นได้"
 
-The web became *public and chaotic* rather than *private and curated*. The Memex imagined something personal. The LLM Wiki is closer to the original Memex vision:
+เว็บได้กลายเป็น *สาธารณะและวุ่นวาย* แทนที่จะเป็น *ส่วนตัวและผ่านการคัดสรร* Memex จินตนาการถึงบางสิ่งที่่เป็นส่วนตัว LLM Wiki ใกล้เคียงกับวิสัยทัศน์ดั้งเดิมของ Memex มากกว่า:
 
-| Dimension | Memex vision | The web | LLM Wiki |
+| มิติ | วิสัยทัศน์ Memex | เว็บ | LLM Wiki |
 |---|---|---|---|
-| Ownership | Personal | Public | Personal |
-| Curation | Active | Passive (search) | Active (ingest) |
-| Cross-references | Associative trails | Hyperlinks | Wikilinks |
-| Maintenance | Manual (unsolved) | Algorithmic (SEO) | LLM (solved) |
+| ความเป็นเจ้าของ | ส่วนตัว | สาธารณะ | ส่วนตัว |
+| การคัดสรร | อย่างจริงจัง | อย่างเฉยเมย (ค้นหา) | อย่างจริงจัง (ingest) |
+| การเชื่อมโยงข้าม | Associative trails | Hyperlinks | Wikilinks |
+| การบำรุงรักษา | ด้วยมือ (ยังแก้ไม่ได้) | โดยอัลกอริทึม (SEO) | โดย LLM (แก้ได้แล้ว) |
 
-## The missing piece
+## ชิ้นส่วนที่ขาดหายไป
 
-Bush's unsolved problem: **who does the maintenance?** Creating associative trails, updating connections, keeping everything consistent is tedious manual work. Humans abandon knowledge systems because maintenance burden grows faster than value.
+ปัญหาที่ Bush แก้ไม่ตก: **ใครจะเป็นผู้ดูแลรักษา?** การสร้าง associative trails, การอัปเดตการเชื่อมต่อ, การทำให้ทุกอย่างสอดคล้องกันเป็นงานที่น่าเบื่อหน่ายและต้องทำด้วยมือ มนุษย์ทิ้งระบบความรู้เพราะภาระการบำรุงรักษาเติบโตเร็วกว่าคุณค่าที่ได้
 
-LLMs solve this: "LLMs don't get bored, don't forget to update a cross-reference, and can touch 15 files in one pass. The wiki stays maintained because the cost of maintenance is near zero."
+LLM แก้ปัญหานี้: "LLM ไม่เบื่อ, ไม่ลืมอัปเดต cross-reference, และสามารถแตะ 15 ไฟล์ได้ในครั้งเดียว wiki ยังคงได้รับการดูแลเพราะต้นทุนการบำรุงรักษาใกล้ศูนย์"
 
-## Historical influence
+## อิทธิพลทางประวัติศาสตร์
 
-The Memex directly inspired the lineage that built the modern web:
-- **Douglas Engelbart** — read Bush's 1945 article, "became infected with the idea," went on to invent the computer mouse and personal computing
-- **Ted Nelson** — coined "hypertext" in 1965, directly inspired by Memex's associative trails
-- **Tim Berners-Lee** — whose World Wide Web (1989) implemented hypertext at global scale
+Memex เป็นแรงบันดาลใจโดยตรงให้กับสายเลือดที่สร้างเว็บสมัยใหม่:
+- **Douglas Engelbart** — อ่านบทความปี 1945 ของ Bush, "ติดเชื้อจากแนวคิดนี้," และได้ประดิษฐ์เมาส์คอมพิวเตอร์และคอมพิวเตอร์ส่วนบุคคล
+- **Ted Nelson** — บัญญัติศัพท์ "hypertext" ในปี 1965, โดยได้รับแรงบันดาลใจโดยตรงจาก associative trails ของ Memex
+- **Tim Berners-Lee** — ซึ่ง World Wide Web (1989) ของเขาได้นำ hypertext มาใช้งานในระดับโลก
 
-So the web is the Memex's descendant — but it evolved toward public infrastructure rather than personal knowledge management. The LLM Wiki pattern is a return to Bush's original intent.
+ดังนั้นเว็บจึงเป็นผู้สืบทอดของ Memex — แต่มันวิวัฒนาการไปสู่โครงสร้างพื้นฐานสาธารณะมากกว่าการจัดการความรู้ส่วนบุคคล รูปแบบ LLM Wiki คือการกลับไปสู่เจตนาดั้งเดิมของ Bush
 
-## See also
+## ดูเพิ่ม
 
 - [[vannevar-bush]]
 - [[llm-knowledge-bases]]

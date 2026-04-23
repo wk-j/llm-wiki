@@ -3,26 +3,26 @@ title: Glassmorphism
 type: concept
 tags: [ui, design, skeuomorphic]
 created: 2026-04-12
-updated: 2026-04-12
+updated: 2026-04-23
 sources: [UI style categories.md]
 ---
 
 # Glassmorphism
 
-A UI style that simulates frosted glass — semi-transparent backgrounds with backdrop blur, subtle borders, and layered depth. Part of the neo-skeuomorphic family alongside [[neumorphism]] and [[claymorphism]].
+สไตล์ UI ที่จำลองลักษณะของกระจกฝ้า — พื้นหลังกึ่งโปร่งใสพร้อม backdrop blur, ขอบบางๆ, และความลึกแบบเป็นชั้นๆ เป็นส่วนหนึ่งของตระกูล neo-skeuomorphic ควบคู่ไปกับ [[neumorphism]] และ [[claymorphism]]
 
-## Visual characteristics
+## ลักษณะทางสายตา
 
 - Background blur (`backdrop-filter: blur()`)
-- Semi-transparent fills (white or colored with low opacity)
-- Subtle light borders for edge definition
-- Multi-layer depth — panels float over vibrant backgrounds
+- พื้นสีกึ่งโปร่งใส (สีขาวหรือสีอื่นที่มี opacity ต่ำ)
+- ขอบสีอ่อนๆ เพื่อกำหนดขอบเขต
+- ความลึกแบบหลายชั้น — panel ลอยอยู่เหนือพื้นหลังที่มีสีสันสดใส
 
-## Lineage
+## ที่มา
 
-Evolved from Apple's use of translucency in iOS 7+ and macOS. Popularized as a named trend around 2020-2021. Now a standard tool in the design vocabulary rather than a standalone trend.
+วิวัฒนาการมาจากการใช้ความโปร่งแสงของ Apple ใน iOS 7+ และ macOS ได้รับความนิยมจนเป็นเทรนด์ที่มีชื่อเรียกประมาณปี 2020-2021 ปัจจุบันกลายเป็นเครื่องมือมาตรฐานในคำศัพท์การออกแบบมากกว่าที่จะเป็นเทรนด์เดี่ยวๆ
 
-## See also
+## ดูเพิ่ม
 
 - [[holographic-ui]]
 - [[diegetic-ui]]

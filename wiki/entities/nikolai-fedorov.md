@@ -3,30 +3,30 @@ title: Nikolai Fedorov
 type: entity
 tags: [philosophy, cosmism, soviet, transhumanism]
 created: 2026-04-14
-updated: 2026-04-14
+updated: 2026-04-23
 sources: [Soviet Cosmism philosophy.md, Soviet Cosmism UI style.md]
 ---
 
 # Nikolai Fedorov
 
-Russian philosopher (1829–1903) and originator of [[soviet-cosmism|Soviet Cosmism]]. His central idea — the "Common Task" (Общее Дело) — held that humanity's moral duty is to use science and technology to literally resurrect all deceased ancestors and achieve physical immortality.
+นักปรัชญาชาวรัสเซีย (1829–1903) และผู้ริเริ่มแนวคิด [[soviet-cosmism|Soviet Cosmism]] แนวคิดหลักของเขา — "Common Task" (Общее Дело) — คือการที่หน้าที่ทางศีลธรรมของมนุษยชาติคือการใช้วิทยาศาสตร์และเทคโนโลยีเพื่อฟื้นคืนชีพบรรพบุรุษผู้ล่วงลับทั้งหมดอย่างแท้จริง และบรรลุความเป็นอมตะทางกายภาพ
 
-## Key concepts
+## แนวคิดหลัก
 
-- **Воскрешение (Resurrection)** — not metaphorical; Fedorov meant actual technological resurrection of the dead
-- **Регуляция (Regulation)** — humanity's duty to regulate and control nature rather than submit to it
-- **Родство (Kinship)** — universal kinship binding all humans across generations, including the dead
+- **Воскрешение (Resurrection)** — ไม่ใช่เชิงเปรียบเทียบ; Fedorov หมายถึงการฟื้นคืนชีพผู้ตายด้วยเทคโนโลยีจริงๆ
+- **Регуляция (Regulation)** — หน้าที่ของมนุษยชาติในการควบคุมและกำกับดูแลธรรมชาติ แทนที่จะยอมจำนนต่อมัน
+- **Родство (Kinship)** — ความเป็นญาติสากลที่ผูกพันมนุษย์ทุกคนข้ามรุ่น รวมถึงผู้ที่ล่วงลับไปแล้ว
 
-## Influence
+## อิทธิพล
 
-Fedorov's ideas directly influenced [[konstantin-tsiolkovsky]]'s space exploration theories (humanity needs space to house resurrected ancestors) and [[vladimir-vernadsky]]'s [[noosphere]] concept. His philosophy bridges 19th-century Russian religious thought and 20th-century transhumanism.
+แนวคิดของ Fedorov มีอิทธิพลโดยตรงต่อทฤษฎีการสำรวจอวกาศของ [[konstantin-tsiolkovsky]] (มนุษยชาติต้องการอวกาศเพื่อเป็นที่อยู่ของบรรพบุรุษที่ฟื้นคืนชีพ) และแนวคิด [[noosphere]] ของ [[vladimir-vernadsky]] ปรัชญาของเขาเป็นสะพานเชื่อมระหว่างความคิดทางศาสนาของรัสเซียในศตวรรษที่ 19 และ transhumanism ในศตวรรษที่ 20
 
-## UI design expression
+## การแสดงออกในการออกแบบ UI
 
-In [[soviet-cosmism]] UI, Fedorov's terminology appears as panel labels: ВОСКРЕШЕНИЕ for resurrection progress bars, РЕГУЛЯЦИЯ for nature-control interfaces, РОДСТВО for network connection graphs. His ideas inform the biological data streams, cellular patterns, and genealogy tree motifs.
+ใน UI แบบ [[soviet-cosmism]], คำศัพท์ของ Fedorov จะปรากฏเป็นป้ายกำกับของ panel: ВОСКРЕШЕНИЕ สำหรับ progress bar ของการฟื้นคืนชีพ, РЕГУЛЯЦИЯ สำหรับ interface ควบคุมธรรมชาติ, РОДСТВО สำหรับกราฟการเชื่อมต่อเครือข่าย แนวคิดของเขายังเป็นข้อมูลในการออกแบบ data stream ทางชีวภาพ, ลวดลายเซลล์, และลวดลายแผนภูมิต้นตระกูล (genealogy tree)
 
-## See also
+## ดูเพิ่ม
 
-- [[soviet-cosmism]] — the movement he founded
-- [[konstantin-tsiolkovsky]] — his intellectual heir in space science
-- [[vladimir-vernadsky]] — noosphere theorist influenced by his ideas
+- [[soviet-cosmism]] — กระแสความคิดที่เขาก่อตั้ง
+- [[konstantin-tsiolkovsky]] — ทายาททางปัญญาของเขาในด้านวิทยาศาสตร์อวกาศ
+- [[vladimir-vernadsky]] — นักทฤษฎี noosphere ที่ได้รับอิทธิพลจากแนวคิดของเขา

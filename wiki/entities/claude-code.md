@@ -3,46 +3,72 @@ title: Claude Code
 type: entity
 tags: [ai, claude, tools, agents, cli, coding]
 created: 2026-04-16
-updated: 2026-04-18
-sources: [Introducing Claude Opus 4.7.md, Using Claude Code Session Management & 1M Context.md, forrestchang andrej-karpathy-skills.md, alex-ker-harnesses-optimize.md, Create custom subagents - Claude Code Docs.md]
+updated: 2026-04-23
+sources: [Introducing Claude Opus 4.7.md, Using Claude Code Session Management & 1M Context.md, forrestchang andrej-karpathy-skills.md, alex-ker-harnesses-optimize.md, Create custom subagents - Claude Code Docs.md, opencode-vs-claude-code-morph.md, Remote Control - Claude Code Docs.md, cyril-xbt-claude-md-guide.md]
 ---
 
 # Claude Code
 
-[[anthropic|Anthropic]]'s terminal-based coding agent — a CLI that drives [[claude|Claude]] through software engineering tasks with shell access, file edits, and tools. Also available as desktop app (Mac/Windows), web (claude.ai/code), and IDE extensions (VS Code, JetBrains).
+Coding agent แบบ terminal-based จาก [[anthropic|Anthropic]] — เป็น CLI ที่ขับเคลื่อน [[claude|Claude]] ให้ทำงานด้านวิศวกรรมซอฟต์แวร์ต่างๆ โดยสามารถเข้าถึง shell, แก้ไขไฟล์, และใช้เครื่องมือได้ นอกจากนี้ยังมีในรูปแบบ desktop app (Mac/Windows), web (claude.ai/code), และ IDE extensions (VS Code, JetBrains)
 
-## Session architecture
+## สถาปัตยกรรมของ Session
 
-See [[claude-code-session-management]] for the full model. At each turn the user chooses from five options:
+ดูโมเดลเต็มๆ ได้ที่ [[claude-code-session-management]] ในแต่ละ turn ผู้ใช้สามารถเลือกได้ 5 อย่าง:
 
-1. **Continue** — send another message
-2. **`/rewind`** (esc esc) — jump back to a previous message, drop everything after
-3. **`/clear`** — start fresh; user writes the new brief
-4. **`/compact`** — AI summarizes history in place; see [[compaction]]
-5. **Subagent** — delegate to a fresh-context agent; only result returns
+1.  **Continue** — ส่งข้อความต่อไป
+2.  **`/rewind`** (esc esc) — ย้อนกลับไปยังข้อความก่อนหน้า และลบทุกอย่างหลังจากนั้นทิ้ง
+3.  **`/clear`** — เริ่มใหม่ทั้งหมด; ผู้ใช้เขียน brief ใหม่
+4.  **`/compact`** — ให้ AI สรุปประวัติการสนทนา; ดูที่ [[compaction]]
+5.  **Subagent** — มอบหมายงานให้ agent ตัวใหม่ที่มี context สด; จะส่งคืนเฉพาะผลลัพธ์กลับมา
 
-These exist because of [[context-rot]] — model quality degrades as context fills. Claude Code's 1M token context is usable but the sweet spot sits well below it.
+เหตุผลที่มีตัวเลือกเหล่านี้คือเพื่อจัดการกับ [[context-rot]] — คุณภาพของโมเดลจะลดลงเมื่อ context window เต็ม ถึงแม้ context 1M token ของ Claude Code จะใช้งานได้ แต่จุดที่ทำงานได้ดีที่สุด (sweet spot) นั้นต่ำกว่า 1M มาก
 
-## Features and commands
+## ฟีเจอร์และคำสั่งต่างๆ
 
-- **Slash commands** — bundled (`/compact`, `/clear`, `/rewind`, `/ultrareview`, `/help`) plus user-defined
-- **`/ultrareview`** — dedicated review session flagging bugs and design issues (launched with [[claude-opus-4-7|Opus 4.7]]; 3 free sessions for Pro/Max)
-- **Subagents** — spawned via the Agent tool; fresh context window per agent. Markdown files with YAML frontmatter in `.claude/agents/` (project), `~/.claude/agents/` (user), or plugin-provided. Built-in set: **Explore** (Haiku, read-only), **Plan** (read-only, used in plan mode), **general-purpose** (all tools), plus helper agents like **statusline-setup** and **Claude Code Guide**. Configurable per-agent: `tools` / `disallowedTools`, `model`, `permissionMode`, `skills` (injected at startup), `mcpServers` (scoped to the subagent), `memory: user|project|local` for a persistent `MEMORY.md` directory, `background: true`, `isolation: worktree`, lifecycle `hooks`. Invoke via natural language, `@agent-<name>` mention, or `claude --agent <name>` to run a whole session on that system prompt. Subagents cannot spawn other subagents. See [[claude-code-subagents-docs]] and [[subagent-patterns]].
-- **Skills** — packaged prompts/instructions (e.g., [[forrestchang]]'s [[llm-coding-pitfalls|karpathy-guidelines]])
-- **Hooks** — shell commands triggered by harness events (configured in `settings.json`)
-- **[[auto-mode|Auto mode]]** — middle-path permission mode: a classifier reviews each tool call and auto-approves safe ones, blocks risky ones (mass deletion, exfiltration, malicious exec), redirects Claude, and only prompts the user if Claude insists on a blocked action. Launched 2026-03-24 (Team plan research preview, Sonnet/Opus 4.6); extended to Max users with [[claude-opus-4-7|Opus 4.7]]. Admins disable via `"disableAutoMode": "disable"` in managed settings. CLI: `claude --enable-auto-mode` then **Shift+Tab**. Source: [[claude-code-auto-mode]].
-- **MCP servers** — integrate external tools via [[model-context-protocol]]; Claude Code ships a built-in MCP tool-search index so only tool names load at session start and schemas load on demand (Anthropic reports ~85% context reduction vs. harnesses that load every MCP tool definition upfront). See [[progressive-disclosure]].
-- **Fast mode** — `/fast` toggles a faster-output variant (available on Opus 4.6)
+- **Slash commands** — คำสั่งที่มากับโปรแกรม (`/compact`, `/clear`, `/rewind`, `/ultrareview`, `/help`) และที่ผู้ใช้สร้างขึ้นเอง
+- **`/ultrareview`** — session สำหรับ review code โดยเฉพาะ เพื่อหา bug และปัญหาด้าน design (เปิดตัวพร้อม [[claude-opus-4-7|Opus 4.7]]; ให้ใช้ฟรี 3 ครั้งสำหรับ Pro/Max)
+- **Subagents** — สร้างขึ้นผ่าน Agent tool; มี context window ใหม่สำหรับแต่ละ agent สร้างโดยใช้ไฟล์ Markdown ที่มี YAML frontmatter ใน `.claude/agents/` (ของโปรเจกต์), `~/.claude/agents/` (ของผู้ใช้), หรือจาก plugin ชุดที่มาพร้อมโปรแกรม: **Explore** (ใช้ Haiku, อ่านอย่างเดียว), **Plan** (อ่านอย่างเดียว, ใช้ใน plan mode), **general-purpose** (ใช้ได้ทุก tool), และ agent ช่วยเหลืออื่นๆ เช่น **statusline-setup** และ **Claude Code Guide** สามารถตั้งค่าแต่ละ agent ได้: `tools` / `disallowedTools`, `model`, `permissionMode`, `skills` (จะถูก inject ตอนเริ่ม), `mcpServers` (จำกัดขอบเขตใน subagent), `memory: user|project|local` สำหรับ directory `MEMORY.md` แบบถาวร, `background: true`, `isolation: worktree`, lifecycle `hooks` เรียกใช้งานผ่าน natural language, mention `@agent-<name>`, หรือ `claude --agent <name>` เพื่อรันทั้ง session ด้วย system prompt นั้น Subagent ไม่สามารถสร้าง subagent ซ้อนได้ ดูเพิ่มเติมที่ [[claude-code-subagents-docs]] และ [[subagent-patterns]]
+- **Skills** — แพ็กเกจของ prompt/instructions (เช่น [[llm-coding-pitfalls|karpathy-guidelines]] ของ [[forrestchang]])
+- **Hooks** — คำสั่ง shell ที่จะทำงานเมื่อมี event ของ harness เกิดขึ้น (ตั้งค่าใน `settings.json`)
+- **[[auto-mode|Auto mode]]** — permission mode แบบกลางๆ: มี classifier คอยตรวจสอบทุก tool call และอนุมัติอันที่ปลอดภัยโดยอัตโนมัติ, บล็อกอันที่เสี่ยง (เช่น ลบไฟล์จำนวนมาก, ขโมยข้อมูล, รันคำสั่งอันตราย), ชี้นำ Claude ใหม่, และจะถามผู้ใช้ก็ต่อเมื่อ Claude ยืนยันจะทำสิ่งที่ถูกบล็อก เปิดตัว 24 มี.ค. 2026 (research preview สำหรับ Team plan, Sonnet/Opus 4.6); ขยายให้ผู้ใช้ Max ตอน [[claude-opus-4-7|Opus 4.7]] ออก Admin สามารถปิดได้ผ่าน `"disableAutoMode": "disable"` ใน managed settings CLI: `claude --enable-auto-mode` แล้วกด **Shift+Tab** ที่มา: [[claude-code-auto-mode]]
+- **MCP servers** — เชื่อมต่อกับเครื่องมือภายนอกผ่าน [[model-context-protocol]]; Claude Code มาพร้อม MCP tool-search index ในตัว ทำให้ตอนเริ่ม session จะโหลดแค่ชื่อ tool และ schema จะถูกโหลดเมื่อต้องการใช้งาน (Anthropic รายงานว่าลด context ได้ ~85% เมื่อเทียบกับ harness อื่นที่โหลด definition ของทุก MCP tool ตั้งแต่แรก) ดูที่ [[progressive-disclosure]]
+- **[[claude-md|CLAUDE.md]]** — ไฟล์ Markdown ในระดับโปรเจกต์ที่จะถูกโหลดอัตโนมัติเมื่อเริ่ม session เพื่อใช้เป็น system prompt แบบถาวร มี 3 ชั้น: project root (`<repo>/CLAUDE.md`), monorepo subdir (`<repo>/<sub>/CLAUDE.md`), และ global (`~/.claude/CLAUDE.md`) สำหรับ preference ที่ใช้กับทุกโปรเจกต์ มี template 7 ส่วนที่เป็นที่ยอมรับจาก [[cyril-xbt|@cyrilXBT]]: Project Overview / Tech Stack / Coding Conventions / Never Do This / File Structure / Current Sprint Goals / Important Context ซึ่งอยู่ภายใต้ [[instruction-budget]] — ควรทำให้กระชับ และย้ายกฎที่มีรายละเอียดเยอะไปไว้ใน skills ผ่าน [[progressive-disclosure]]
+- **Fast mode** — `/fast` เพื่อสลับไปใช้ variant ที่ให้ผลลัพธ์เร็วกว่า (มีใน Opus 4.6)
+- **Remote Control** — ควบคุม session CC *บนเครื่อง local* จาก `claude.ai/code` หรือแอป Claude บนมือถือ Session จะอยู่บนเครื่องของคุณ (filesystem, MCP, `@` autocomplete ยังใช้ได้จากระยะไกล); Anthropic จะ relay ข้อความผ่าน outbound HTTPS เท่านั้น — ไม่ต้องเปิด inbound port มี 3 โหมดใน CLI: `claude remote-control` (server mode, รองรับ `--spawn worktree|same-dir|session`, default capacity 32), `claude --remote-control` (`--rc`, interactive), `/remote-control` (`/rc`, จาก session ที่มีอยู่) ใน VS Code: `/remote-control` (v2.1.79+) เปิดตลอด: `/config` → **Enable Remote Control for all sessions** Push notification บนมือถือผ่าน `/config` → **Push when Claude decides** (v2.1.110+) ต้องใช้ v2.1.51+ และ claude.ai OAuth (ใช้กับ API keys / Bedrock / Vertex / Foundry ไม่ได้) Ultraplan จะตัดการเชื่อมต่อ RC ดูที่ [[claude-code-remote-surfaces]] และ [[claude-code-remote-control-docs]]
+
+## Remote surfaces (ช่องทางทำงานนอก terminal)
+
+CC มีหลายวิธีในการสั่งงาน agent เมื่อคุณไม่ได้อยู่ที่หน้า terminal ซึ่งทั้งหมดมีอยู่ใน [เอกสาร Remote Control](https://code.claude.com/docs/en/remote-control.md):
+
+| Surface | Claude ทำงานบน | Trigger |
+|---|---|---|
+| **Remote Control** | เครื่องของคุณ (CLI / VS Code) | มนุษย์ผ่าน claude.ai/code หรือมือถือ |
+| **Dispatch** | เครื่องของคุณ (Desktop) | ข้อความจาก Claude mobile |
+| **Channels** | เครื่องของคุณ (CLI) | Event จาก Telegram / Discord / custom server |
+| **Slack** | Anthropic cloud | `@Claude` mention |
+| **Scheduled tasks** | CLI / Desktop / cloud | Cron |
+| **Claude Code on the web** | Anthropic cloud | มนุษย์ผ่าน claude.ai/code |
+| **Ultraplan** | Anthropic cloud | มนุษย์จาก terminal |
+
+ดู [[claude-code-remote-surfaces]] สำหรับการจัดกรอบสองแกน (local vs cloud × human vs event)
 
 ## Effort levels
 
-With [[claude-opus-4-7|Opus 4.7]], the default effort in Claude Code was raised to **`xhigh`** for all plans. Recommended start for coding/agentic use: `high` or `xhigh`. See [[effort-levels]].
+ตอน [[claude-opus-4-7|Opus 4.7]] ออก, effort เริ่มต้นใน Claude Code ถูกปรับขึ้นเป็น **`xhigh`** สำหรับทุก plan คำแนะนำเริ่มต้นสำหรับงาน coding/agentic คือ `high` หรือ `xhigh` ดูที่ [[effort-levels]]
+
+## การยอมรับและ Benchmarks (ก.พ. 2026, อ้างอิงจาก Morph / SemiAnalysis)
+
+- ~71K GitHub stars; ~4% ของ public commit ทั้งหมดบน GitHub, ~135K/วัน; คาดการณ์ว่าจะถึง ~20% ภายในสิ้นปี 2026
+- VS Code extension: 5.2M installs, 4.0/5 คะแนน
+- เมื่อใช้ **WarpGrep v2**: **57.5% บน SWE-bench Pro**, **68.8% บน ARC-AGI-2** — เกือบ 2 เท่าของคะแนนเดิม
+- เดโมสร้าง C compiler ขนาด 100K บรรทัด: ใช้ 16 agents, ค่า API ประมาณ ~$20K
+- Core system prompt ~2,896 tokens (มี tool description ในตัว 20 ตัว); subagent prompts: Plan 633 / Explore 516 / Task 294 tokens; `/security-review` 2,610 tokens ดูที่ [[opencode-vs-claude-code-morph]] สำหรับที่มา
 
 ## 1M token context window
 
-Enables long autonomous tasks (full-stack build in one session) but exposes [[context-rot]] around 300–400k tokens. Session management is the main user-facing skill.
+ทำให้สามารถทำงาน autonomous ที่ยาวนานได้ (เช่น สร้าง full-stack app ใน session เดียว) แต่ก็ทำให้เกิด [[context-rot]] ที่ประมาณ 300k–400k tokens การจัดการ session จึงเป็นทักษะหลักที่ผู้ใช้ต้องเรียนรู้
 
-## See also
+## ดูเพิ่ม
 
 - [[claude]]
 - [[anthropic]]
@@ -56,3 +82,7 @@ Enables long autonomous tasks (full-stack build in one session) but exposes [[co
 - [[instruction-budget]]
 - [[subagent-patterns]]
 - [[auto-mode]]
+- [[claude-code-remote-surfaces]]
+- [[claude-code-remote-control-docs]]
+- [[opencode]]
+- [[opencode-vs-claude-code-morph]]

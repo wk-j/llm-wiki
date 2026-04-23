@@ -3,98 +3,98 @@ title: Holographic UI
 type: concept
 tags: [ui, design, sci-fi, holographic, glassmorphism, diegetic]
 created: 2026-04-14
-updated: 2026-04-14
+updated: 2026-04-23
 sources: [Holographic UI.md]
 ---
 
-# Holographic UI
+# Holographic UI / UI โฮโลแกรม
 
-A UI design language that simulates light-emitted interfaces projected into space — semi-transparent, glowing, and weightless. The core illusion: **the interface is made of light, not matter.**
+ภาษาการออกแบบ UI ที่จำลอง interface ที่เปล่งแสงและฉายภาพในอวกาศ — กึ่งโปร่งใส, เรืองแสง, และไร้น้ำหนัก ภาพลวงตาหลักคือ: **interface ทำจากแสง ไม่ใช่วัตถุ**
 
-Holographic UI sits at the intersection of [[glassmorphism]] (shared transparency and backdrop-blur techniques) and [[diegetic-ui]] (the "Holographic Projection" sub-style), but is a distinct system with its own constraints and vocabulary.
+Holographic UI อยู่ตรงกลางระหว่าง [[glassmorphism]] (ซึ่งใช้เทคนิคความโปร่งใสและ backdrop-blur ร่วมกัน) และ [[diegetic-ui]] (ในสไตล์ย่อย "Holographic Projection") แต่เป็นระบบที่แตกต่างและมีข้อจำกัดและคำศัพท์เป็นของตัวเอง
 
-## Holographic vs. physical screen UI
+## UI โฮโลแกรม vs. UI บนจอภาพปกติ
 
-| Property | Physical Screen | Holographic |
+| คุณสมบัติ | จอภาพปกติ | โฮโลแกรม |
 |---|---|---|
-| Background | Solid / opaque | Transparent / see-through |
-| Borders | Solid lines | Glowing edges, soft halos |
-| Depth | Flat | Layered Z-planes, parallax |
-| Color | Full RGB gamut | Monochromatic or duochromatic glow |
-| Interaction | Click/tap | Gesture, proximity, hover |
-| State change | Immediate | Fade / dematerialize |
+| พื้นหลัง | ทึบ / opaque | โปร่งใส / see-through |
+| ขอบ | เส้นทึบ | ขอบเรืองแสง, halo อ่อนๆ |
+| ความลึก | แบน | ระนาบ Z-planes เป็นชั้นๆ, parallax |
+| สี | Full RGB gamut | เรืองแสงสีเดียวหรือสองสี |
+| การโต้ตอบ | Click/tap | Gesture, proximity, hover |
+| การเปลี่ยนสถานะ | ทันที | Fade / dematerialize (สลายไป) |
 
-## Five variants
+## ห้าเวอร์ชันย่อย
 
-Each variant has a distinct color story and cultural reference:
+แต่ละเวอร์ชันมีเรื่องราวของสีและมีต้นแบบทางวัฒนธรรมที่แตกต่างกัน:
 
-- **Pure Holo** — Cyan/blue monochromatic. Minority Report, Iron Man's lab. Maximum translucency, thin glowing borders, nested panel layers.
-- **Bio-Holo** — Bioluminescent blue-green. Avatar / Na'vi network. Organic flowing shapes, curved borders, particle trails, web-like connections.
-- **Military Holo** — Amber/orange on near-black. The Expanse war rooms. Dense data, tight text grids, tactical overlays, angular bracket framing.
-- **Ghost Holo** — Purple/magenta on dark blue-black. Ghost in the Shell, Cyberpunk. Scan-line artifacts, glitch distortion, corrupted text effects.
-- **Clean Holo** — White/silver on dark. Apple Vision, near-future. Frosted glass panels, very subtle borders, typography-forward, breathing space.
+- **Pure Holo** — สีเดียว Cyan/blue. ต้นแบบ: Minority Report, แล็บของ Iron Man. โปร่งแสงสูงสุด, ขอบเรืองแสงบางๆ, panel ซ้อนกันเป็นชั้นๆ
+- **Bio-Holo** — สีฟ้า-เขียวแบบเรืองแสงในสิ่งมีชีวิต. ต้นแบบ: Avatar / เครือข่าย Na'vi. รูปทรงออร์แกนิก, ขอบโค้ง, เส้นอนุภาค, การเชื่อมต่อคล้ายใยแมงมุม
+- **Military Holo** — สีเหลืองอำพัน/ส้มบนพื้นเกือบดำ. ต้นแบบ: ห้องสงครามใน The Expanse. ข้อมูลหนาแน่น, ตารางข้อความแน่นๆ, tactical overlays, กรอบวงเล็บเชิงมุม
+- **Ghost Holo** — สีม่วง/ชมพูมาเจนต้าบนพื้นน้ำเงิน-ดำมืด. ต้นแบบ: Ghost in the Shell, Cyberpunk. มี scan-line artifacts, glitch distortion, เอฟเฟกต์ข้อความที่เสียหาย
+- **Clean Holo** — สีขาว/เงินบนพื้นมืด. ต้นแบบ: Apple Vision, โลกอนาคตอันใกล้. panel กระจกฝ้า, ขอบที่บอบบางมาก, เน้น typography, มีพื้นที่ว่าง
 
-## Core rendering primitives
+## Primitive หลักในการเรนเดอร์
 
 ### The Glass Panel
 
-The fundamental building block. Every holographic interface is composed of glass panels:
+เป็น building block พื้นฐาน ทุก interface โฮโลแกรมประกอบด้วย glass panel:
 
-- `rgba()` background (never solid)
-- 1px border with matching glow color
-- Triple box-shadow: outer diffuse glow + inner fill light + edge hot line
-- `backdrop-filter: blur()` for depth
-- Scan-line overlay via `::before` pseudo-element with repeating-linear-gradient
+- พื้นหลัง `rgba()` (ไม่เคยเป็นสีทึบ)
+- ขอบ 1px พร้อมสีเรืองแสงที่เข้ากัน
+- box-shadow สามชั้น: แสงฟุ้งด้านนอก + แสงเติมด้านใน + เส้นขอบสว่าง
+- `backdrop-filter: blur()` สำหรับความลึก
+- Scan-line overlay ผ่าน `::before` pseudo-element ด้วย repeating-linear-gradient
 
-### Depth layering
+### Depth layering (การซ้อนชั้นความลึก)
 
-Three Z-planes simulate projection distance — front (full opacity, strong shadow), mid (0.9 opacity), back (0.7 opacity, minimal shadow).
+ระนาบ Z-planes สามชั้นจำลองระยะการฉาย — ด้านหน้า (opacity เต็ม, เงาเข้ม), กลาง (opacity 0.9), หลัง (opacity 0.7, เงาน้อยที่สุด)
 
-### Corner accents
+### Corner accents (การเน้นที่มุม)
 
-Partial border geometry on corners only (using pseudo-elements) instead of full borders — reinforces the projected-light feel.
+รูปทรงขอบบางส่วนเฉพาะที่มุม (โดยใช้ pseudo-elements) แทนที่จะเป็นขอบเต็ม — เสริมความรู้สึกเหมือนแสงที่ถูกฉาย
 
-### Glow text
+### Glow text (ข้อความเรืองแสง)
 
-Text-shadow matching the panel accent color. Wide letter-spacing (≥0.08em). Light font weights. Distinct styles for primary text, dim labels, and data values.
+Text-shadow ที่เข้ากับสีเน้นของ panel. Letter-spacing กว้าง (≥0.08em). Font weight บาง. มีสไตล์ที่แตกต่างกันสำหรับข้อความหลัก, ป้ายกำกับสีจาง, และค่าข้อมูล
 
-## Animation vocabulary
+## คำศัพท์เกี่ยวกับ Animation
 
-Four mandatory animations create the "living light" illusion:
+Animation บังคับสี่อย่างที่สร้างภาพลวงตา "แสงที่มีชีวิต":
 
-1. **Materialize** — panel fade-in with slight scale-up and blur clear (on mount)
-2. **Breathe** — subtle glow pulse on all idle panels (3–5s cycle, staggered delays)
-3. **Scan** — a moving element representing active processing (at least one per screen)
-4. **Ring spin** — continuous rotation on any circular meter or loader
+1.  **Materialize** — panel fade-in พร้อม scale-up เล็กน้อยและ blur ที่ชัดขึ้น (ตอน mount)
+2.  **Breathe** — การกระพริบของแสงอย่างนุ่มนวลบน panel ที่ไม่ได้ใช้งานทั้งหมด (รอบ 3–5 วินาที, staggered delays)
+3.  **Scan** — องค์ประกอบที่เคลื่อนไหวซึ่งแสดงถึงการประมวลผลที่กำลังทำงาน (อย่างน้อยหนึ่งอย่างต่อหน้าจอ)
+4.  **Ring spin** — การหมุนอย่างต่อเนื่องบนมิเตอร์วงกลมหรือ loader
 
-Optional: glitch distortion (Ghost variant), particle float (ambient atmosphere), vanish/dematerialize (exit animation).
+Optional: glitch distortion (เวอร์ชัน Ghost), particle float (บรรยากาศรอบข้าง), vanish/dematerialize (animation ตอนออก)
 
-## Layout patterns
+## รูปแบบ Layout
 
-- **Command Deck** — center-focused 3-panel layout with flanking status/data panels and bottom ticker
-- **Floating Cards** — scattered grid with slight rotation and varied depth
-- **Cockpit** — horizontal information bands (navigation / main visual + instruments / alerts)
+- **Command Deck** — layout 3-panel ที่เน้นตรงกลาง พร้อม panel สถานะ/ข้อมูลด้านข้าง และ ticker ด้านล่าง
+- **Floating Cards** — ตารางกระจัดกระจายพร้อมการหมุนเล็กน้อยและความลึกที่แตกต่างกัน
+- **Cockpit** — แถบข้อมูลแนวนอน (navigation / ภาพหลัก + เครื่องมือ / การแจ้งเตือน)
 
-## Design constraints
+## ข้อจำกัดในการออกแบบ
 
-- Background must be dark (#000000–#0d0d20) — holograms don't project in daylight
-- All panels semi-transparent — `rgba()` only, never solid fills
-- Every border must glow via box-shadow
-- No pure white text — use palette-tinted near-white
-- No sharp corners > 2px border-radius
-- No photographic elements — holographic UIs are pure light constructs
-- Typography: Google Fonts — Exo 2, Rajdhani, Orbitron, or Share Tech Mono
+- พื้นหลังต้องมืด (#000000–#0d0d20) — โฮโลแกรมไม่ฉายในเวลากลางวัน
+- panel ทั้งหมดต้องกึ่งโปร่งใส — `rgba()` เท่านั้น, ห้ามใช้สีทึบ
+- ทุกขอบต้องเรืองแสงผ่าน box-shadow
+- ห้ามใช้ข้อความสีขาวล้วน — ให้ใช้สีเกือบขาวที่ย้อมสีตาม palette
+- ห้ามมีมุมแหลม > border-radius 2px
+- ไม่มีองค์ประกอบที่เป็นภาพถ่าย — UI โฮโลแกรมเป็นสิ่งก่อสร้างจากแสงล้วนๆ
+- Typography: Google Fonts — Exo 2, Rajdhani, Orbitron, หรือ Share Tech Mono
 
-## Relationship to other styles
+## ความสัมพันธ์กับสไตล์อื่น
 
-Holographic UI overlaps with but is distinct from:
+Holographic UI ทับซ้อนกับแต่แตกต่างจาก:
 
-- **[[glassmorphism]]** — shares backdrop-blur and transparency, but glassmorphism uses bright/colorful backgrounds while holographic requires dark void backgrounds
-- **[[diegetic-ui]]** — holographic projection is one of five diegetic sub-styles; holographic UI is a broader design system that works outside game/narrative contexts too
-- **[[retro-futurism]]** — the Military Holo and Ghost Holo variants share visual DNA with [[cassette-futurism]] and [[soviet-cosmism]] respectively, but holographic UI aims for "future" rather than "past's future"
-- **[[cyberpunk-neon]]** — Ghost Holo variant overlaps with cyberpunk aesthetics (purple/magenta, glitch effects)
+- **[[glassmorphism]]** — ใช้ backdrop-blur และความโปร่งใสร่วมกัน, แต่ glassmorphism ใช้พื้นหลังที่สว่าง/มีสีสัน ในขณะที่ holographic ต้องการพื้นหลังที่มืด
+- **[[diegetic-ui]]** — holographic projection เป็นหนึ่งในห้าสไตล์ย่อยของ diegetic; holographic UI เป็นระบบการออกแบบที่กว้างกว่าซึ่งทำงานนอกบริบทเกม/เรื่องเล่าได้ด้วย
+- **[[retro-futurism]]** — เวอร์ชัน Military Holo และ Ghost Holo มี DNA ทางสายตาร่วมกับ [[cassette-futurism]] และ [[soviet-cosmism]] ตามลำดับ, แต่ holographic UI มุ่งเป้าไปที่ "อนาคต" มากกว่า "อนาคตในมุมมองของอดีต"
+- **[[cyberpunk-neon]]** — เวอร์ชัน Ghost Holo ทับซ้อนกับสุนทรียศาสตร์แบบ cyberpunk (สีม่วง/มาเจนต้า, เอฟเฟกต์ glitch)
 
-## See also
+## ดูเพิ่ม
 
 - [[diegetic-ui]]
 - [[glassmorphism]]

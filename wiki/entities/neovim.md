@@ -3,37 +3,37 @@ title: Neovim
 type: entity
 tags: [editors, vim, neovim, tooling]
 created: 2026-04-17
-updated: 2026-04-17
+updated: 2026-04-23
 sources: [vim-pack-guide.md]
 ---
 
 # Neovim
 
-Neovim is a hyperextensible, Lua-embedded fork of Vim, originally forked in 2014 to refactor Vim's C codebase and add an embedded scripting runtime. It is the de facto modern Vim for most users who want async, Lua configuration, built-in LSP, and tree-sitter.
+Neovim เป็น fork ของ Vim ที่สามารถขยายความสามารถได้อย่างยิ่งยวด (hyperextensible) และฝัง Lua ไว้ในตัว เดิมที fork มาในปี 2014 เพื่อ refactor codebase ที่เป็นภาษา C ของ Vim และเพิ่ม scripting runtime เข้าไป สำหรับผู้ใช้ส่วนใหญ่ที่ต้องการ async, การตั้งค่าด้วย Lua, LSP และ tree-sitter ในตัว Neovim ถือเป็น Vim ยุคใหม่โดยพฤตินัย
 
-## What makes it distinct from Vim
+## สิ่งที่แตกต่างจาก Vim
 
-- **Embedded Lua runtime** — `init.lua` replaces `.vimrc` as the idiomatic config.
-- **Built-in LSP client** — `vim.lsp` ships in core; servers configured via `vim.lsp.enable()` and `nvim-lspconfig`.
-- **Built-in [[tree-sitter]]** — parsers, highlights, text objects.
-- **`vim.loader`** — bytecode cache; `vim.loader.enable()` yields 20-30% startup improvement.
-- **`runtimepath` conventions** — `lua/`, `plugin/`, `ftplugin/`, `after/` layout for discovering modules.
+- **Embedded Lua runtime** — `init.lua` เข้ามาแทนที่ `.vimrc` เป็นไฟล์ config ที่เป็นที่ยอมรับ
+- **Built-in LSP client** — `vim.lsp` มาพร้อมกับ core; ตั้งค่า server ผ่าน `vim.lsp.enable()` และ `nvim-lspconfig`
+- **Built-in [[tree-sitter]]** — parsers, highlights, text objects
+- **`vim.loader`** — bytecode cache; `vim.loader.enable()` ช่วยให้ startup เร็วขึ้น 20-30%
+- **`runtimepath` conventions** — layout แบบ `lua/`, `plugin/`, `ftplugin/`, `after/` สำหรับการค้นหา module
 
-## Plugin ecosystem
+## ระบบนิเวศของ Plugin
 
-Plugins are Git repositories laid out under `pack/<package>/{start,opt}/<plugin>/`. Historically managed by third-party tools (pathogen → vim-plug → packer.nvim → lazy.nvim). As of Neovim 0.12, the built-in [[vim-pack]] module provides install/load/update natively.
+Plugins คือ Git repository ที่จัดวางอยู่ภายใต้ `pack/<package>/{start,opt}/<plugin>/` ในอดีตถูกจัดการโดยเครื่องมือ third-party (pathogen → vim-plug → packer.nvim → lazy.nvim) ตั้งแต่ Neovim 0.12 เป็นต้นมา, module [[vim-pack]] ที่มาพร้อมกับโปรแกรมได้ให้ความสามารถในการ install/load/update มาในตัว
 
-## Version 0.12
+## เวอร์ชัน 0.12
 
-Shipped [[vim-pack]] as core. This is the first release where a capable plugin manager is part of Neovim itself — earlier versions had `:packadd` and the package standard, but no install/update UX.
+มาพร้อมกับ [[vim-pack]] เป็นส่วนหนึ่งของ core นี่เป็น release แรกที่มี [[plugin-manager]] ที่มีความสามารถมาในตัว Neovim เอง — เวอร์ชันก่อนหน้ามี `:packadd` และมาตรฐานของ package แต่ไม่มี UX สำหรับ install/update
 
-## Position relative to other editors
+## ตำแหน่งเมื่อเทียบกับ editor อื่นๆ
 
-- **Vim** — Neovim is a superset for most practical purposes; Vim 9 added Vim9script in response, keeping the lineage alive.
-- **[[helix]]** — post-modern modal editor with no plugin system at all; ships LSP/tree-sitter as built-ins. A philosophical opposite of Neovim's "extensible by default" stance.
-- **VS Code / Zed** — GUI editors with different extension models (Node.js/WASM); Neovim is often embedded inside them as a modal layer.
+- **Vim** — สำหรับการใช้งานจริงส่วนใหญ่ Neovim ถือเป็น superset ของ Vim; Vim 9 ได้เพิ่ม Vim9script เข้ามาเพื่อตอบโต้ ทำให้สายเลือดของ Vim ยังคงอยู่
+- **[[helix]]** — modal editor ยุค post-modern ที่ไม่มีระบบ plugin เลย; มาพร้อม LSP/tree-sitter ในตัว เป็นขั้วตรงข้ามทางปรัชญากับจุดยืนของ Neovim ที่ "ขยายความสามารถได้เป็นค่าเริ่มต้น"
+- **VS Code / Zed** — GUI editor ที่มีโมเดล extension แตกต่างกัน (Node.js/WASM); Neovim มักถูกฝังเข้าไปข้างในเพื่อใช้เป็น modal layer
 
-## See also
+## ดูเพิ่ม
 
 - [[vim-pack]]
 - [[plugin-manager]]

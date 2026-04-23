@@ -3,17 +3,17 @@ title: The `field` Keyword (C#)
 type: concept
 tags: [csharp, language-features, properties]
 created: 2026-04-15
-updated: 2026-04-15
+updated: 2026-04-23
 sources: [csharp-14-whats-new.md]
 ---
 
-# The `field` Keyword
+# The `field` Keyword / keyword `field` ของ C#
 
-Introduced in [[csharp|C#]] 14, `field` is a contextual keyword usable inside a property accessor body. It refers to a **compiler-synthesized backing field** for that property, eliminating the need to declare a `private` backing field by hand whenever you want custom accessor logic.
+`field` เป็น contextual keyword ที่ถูกนำมาใช้ใน [[csharp|C#]] 14 สามารถใช้ได้ภายใน body ของ property accessor มันอ้างอิงถึง **compiler-synthesized backing field** สำหรับ property นั้นๆ ซึ่งช่วยลดความจำเป็นในการประกาศ `private` backing field ด้วยตนเองทุกครั้งที่ต้องการ custom accessor logic
 
-## The problem it solves
+## ปัญหาที่แก้ไข
 
-Before C# 14, any property that needed custom get/set logic (validation, lazy initialization, change notification) required explicitly declaring a backing field:
+ก่อน C# 14, property ใดๆ ที่ต้องการ custom get/set logic (เช่น validation, lazy initialization, change notification) จำเป็นต้องประกาศ backing field อย่างชัดเจน:
 
 ```csharp
 private string _msg;
@@ -24,9 +24,9 @@ public string Message
 }
 ```
 
-The `_msg` field added naming noise, had to stay in sync with the property, and polluted the type's member list.
+field `_msg` เพิ่มความยุ่งยากในการตั้งชื่อ, ต้องคอยให้สอดคล้องกับ property, และทำให้ member list ของ type ดูรก
 
-## With `field`
+## ด้วย `field`
 
 ```csharp
 public string Message
@@ -36,22 +36,22 @@ public string Message
 }
 ```
 
-The compiler synthesizes the backing field. You can provide a custom body for **one or both** accessors — here the `get` is auto-implemented while `set` validates.
+Compiler จะสร้าง backing field ให้โดยอัตโนมัติ คุณสามารถเขียน custom body สำหรับ accessor **ตัวใดตัวหนึ่งหรือทั้งสองตัว** ก็ได้ — ในที่นี้ `get` จะถูก auto-implement ในขณะที่ `set` มีการ validate
 
-## Disambiguation
+## การแก้ความกำกวม (Disambiguation)
 
-`field` is a contextual keyword, so a pre-existing identifier named `field` in scope could cause confusion or a breaking change. Two escape hatches:
+`field` เป็น contextual keyword ดังนั้น identifier ที่มีอยู่ก่อนแล้วชื่อ `field` ใน scope อาจทำให้เกิดความสับสนหรือ breaking change ได้ มีทางออกสองทาง:
 
-- Use `@field` to force identifier interpretation
-- Use `this.field` when referring to a member named `field`
-- Or simply rename the clashing symbol
+- ใช้ `@field` เพื่อบังคับให้ตีความว่าเป็น identifier
+- ใช้ `this.field` เมื่ออ้างถึง member ที่ชื่อ `field`
+- หรือแค่เปลี่ยนชื่อ symbol ที่ชนกัน
 
-## Related
+## เกี่ยวข้องกับ
 
-- Complements C# 9+ auto-property init and C# 11 required members
-- Pairs naturally with nullability annotations and validation patterns
+- เป็นส่วนเสริมของ auto-property init ของ C# 9+ และ required members ของ C# 11
+- เข้ากันได้ดีกับ nullability annotations และ validation patterns
 
-## See also
+## ดูเพิ่ม
 
 - [[csharp]]
 - [[csharp-14-whats-new]]

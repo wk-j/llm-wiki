@@ -3,127 +3,126 @@ title: Soviet Cosmism
 type: concept
 tags: [ui, design, retro-futurism, constructivism, soviet, space, philosophy]
 created: 2026-04-13
-updated: 2026-04-14
+updated: 2026-04-23
 sources: [Soviet Cosmism UI style.md, Soviet Cosmism philosophy.md]
 ---
 
 # Soviet Cosmism
 
-A UI design language rooted in the Soviet Cosmist philosophical movement — the belief that humanity's destiny is cosmic expansion, immortality, and collective transcendence. As a design style, it sits within the [[retro-futurism]] family alongside [[cassette-futurism]], [[atompunk]], and [[raygun-gothic]], but draws from a distinctly different cultural lineage: Russian Constructivism, Soviet space propaganda, and collectivist utopianism.
+ภาษาการออกแบบ UI ที่มีรากฐานมาจากกระแสปรัชญา Soviet Cosmist — ความเชื่อที่ว่าโชคชะตาของมนุษยชาติคือการขยายตัวสู่จักรวาล, ความเป็นอมตะ, และการก้าวข้ามขีดจำกัดร่วมกัน ในฐานะสไตล์การออกแบบ, มันอยู่ในตระกูล [[retro-futurism]] ควบคู่ไปกับ [[cassette-futurism]], [[atompunk]], และ [[raygun-gothic]], แต่ดึงมาจากสายเลือดทางวัฒนธรรมที่แตกต่างอย่างชัดเจน: Russian Constructivism, โฆษณาชวนเชื่อเรื่องอวกาศของโซเวียต, และอุดมการณ์ยูโทเปียแบบรวมหมู่ (collectivist utopianism)
 
-## The philosophy
+## ปรัชญา
 
-Soviet Cosmism (Русский Космизм) emerged in the late 19th century through three key thinkers:
+Soviet Cosmism (Русский Космизм) เกิดขึ้นในช่วงปลายศตวรรษที่ 19 ผ่านนักคิดคนสำคัญสามคน:
 
-- **[[nikolai-fedorov]]** — originator; humanity's moral duty is to resurrect all ancestors through science
-- **[[konstantin-tsiolkovsky]]** — rocket pioneer; space colonization as the practical means to fulfill Fedorov's vision
-- **[[vladimir-vernadsky]]** — earth scientist; coined the [[noosphere]], Earth's collective thinking layer
+- **[[nikolai-fedorov]]** — ผู้ริเริ่ม; หน้าที่ทางศีลธรรมของมนุษยชาติคือการฟื้นคืนชีพบรรพบุรุษทั้งหมดผ่านวิทยาศาสตร์
+- **[[konstantin-tsiolkovsky]]** — ผู้บุกเบิกจรวด; การตั้งอาณานิคมในอวกาศเป็นวิธีการปฏิบัติเพื่อให้วิสัยทัศน์ของ Fedorov เป็นจริง
+- **[[vladimir-vernadsky]]** — นักวิทยาศาสตร์โลก; บัญญัติศัพท์ [[noosphere]], ชั้นความคิดร่วมของโลก
 
-### Five pillars
+### ห้าเสาหลัก
 
-| Pillar | Russian | Visual expression |
+| เสาหลัก | รัสเซีย | การแสดงออกทางภาพ |
 |---|---|---|
-| **Cosmos** | Космос | Deep star fields, orbital diagrams, celestial mechanics |
-| **Resurrection** | Воскрешение | Biological data streams, cellular patterns, genealogy trees |
-| **Noosphere** | Ноосфера | Network webs, radiating brainwave patterns |
-| **Constructivism** | Конструктивизм | Bold diagonal lines, stark geometric shapes |
-| **Progress** | Прогресс | Upward arrows, launching rockets, ascending spirals |
+| **Cosmos** | Космос | ทุ่งดาวลึก, แผนภาพวงโคจร, กลศาสตร์ท้องฟ้า |
+| **Resurrection** | Воскрешение | data stream ทางชีวภาพ, ลวดลายเซลล์, แผนภูมิต้นตระกูล |
+| **Noosphere** | Ноосфера | ใยเครือข่าย, รูปแบบคลื่นสมองที่แผ่ออกไป |
+| **Constructivism** | Конструктивизм | เส้นทแยงมุมที่โดดเด่น, รูปทรงเรขาคณิตที่แข็งกร้าว |
+| **Progress** | Прогресс | ลูกศรชี้ขึ้น, จรวดที่กำลังทะยาน, เกลียวที่สูงขึ้น |
 
-## What makes it distinct
+## อะไรทำให้มันแตกต่าง
 
-Where other retro-futurism subgenres reference American/Western space-age culture, Soviet Cosmism draws from:
+ในขณะที่แนว retro-futurism อื่นๆ อ้างอิงวัฒนธรรมยุคอวกาศของอเมริกา/ตะวันตก, Soviet Cosmism ดึงมาจาก:
 
-- **Russian Constructivism** — El Lissitzky, Rodchenko. Diagonal compositions, geometric abstraction, the poster as interface.
-- **Soviet space program aesthetics** — Soyuz dashboards, mission control panels, utilitarian instrumentation.
-- **Collectivist philosophy** — the individual subordinated to cosmic purpose. UI elements feel institutional, monumental, system-scale.
+- **Russian Constructivism** — El Lissitzky, Rodchenko. องค์ประกอบแนวทแยง, นามธรรมเรขาคณิต, โปสเตอร์ในฐานะ interface
+- **สุนทรียศาสตร์ของโครงการอวกาศโซเวียต** — แดชบอร์ดของยานโซยุซ, แผงควบคุมภารกิจ, เครื่องมือวัดที่เน้นการใช้งาน
+- **ปรัชญารวมหมู่ (Collectivist philosophy)** — ปัจเจกบุคคลอยู่ภายใต้เป้าหมายของจักรวาล องค์ประกอบ UI ให้ความรู้สึกเป็นสถาบัน, ยิ่งใหญ่, และมีขนาดระดับระบบ
 
-## Three canonical color palettes
+## สามจานสีที่เป็นที่ยอมรับ
 
-Pick one per project and commit fully. Mixing breaks the illusion.
+เลือกหนึ่งอย่างต่อโปรเจกต์และยึดมั่นอย่างเต็มที่ การผสมกันจะทำลายภาพลวงตา
 
-### Vostok Red (heroic/propaganda)
-Background `#0a0205`, primary red `#cc1f1f`, accent gold `#d4a017`, star white `#f0e8d8`, data cyan `#2dd4d4`. Human drama against infinite void.
+### Vostok Red (วีรบุรุษ/โฆษณาชวนเชื่อ)
+พื้นหลัง `#0a0205`, สีแดงหลัก `#cc1f1f`, สีทองเน้น `#d4a017`, สีขาวดาว `#f0e8d8`, สีฟ้าข้อมูล `#2dd4d4` ดราม่าของมนุษย์ตัดกับความว่างเปล่าอันไร้ที่สิ้นสุด
 
-### Cosmos Blue (scientific/orbital)
-Background `#020b18`, primary blue `#1a5fb4`, accent cyan `#00b4d8`, star white `#e8f4f8`, data amber `#e8a030`. Cold intelligence, orbital mechanics, telemetry.
+### Cosmos Blue (วิทยาศาสตร์/วงโคจร)
+พื้นหลัง `#020b18`, สีน้ำเงินหลัก `#1a5fb4`, สีฟ้าเน้น `#00b4d8`, สีขาวดาว `#e8f4f8`, สีเหลืองอำพันข้อมูล `#e8a030` ความฉลาดที่เยือกเย็น, กลศาสตร์วงโคจร, telemetry
 
-### Noosphere Green (philosophical/organic)
-Background `#040d08`, primary green `#1a7a3a`, accent phosphor `#00ff7f`, bio white `#d8f0e0`, warm amber `#c8a060`. Fedorov's resurrection science, organic intelligence.
+### Noosphere Green (ปรัชญา/ออร์แกนิก)
+พื้นหลัง `#040d08`, สีเขียวหลัก `#1a7a3a`, สีฟอสเฟอร์เน้น `#00ff7f`, สีขาวชีวภาพ `#d8f0e0`, สีเหลืองอำพันอบอุ่น `#c8a060` วิทยาศาสตร์การฟื้นคืนชีพของ Fedorov, ความฉลาดแบบออร์แกนิก
 
 ## Typography
 
-| Role | Font stack | Use |
+| บทบาท | Font stack | การใช้งาน |
 |---|---|---|
-| Cyrillic Display | Oswald, Anton (uppercase) | Section headers, mission callouts |
-| Latin Technical | Share Tech Mono, Courier New | Data readouts, coordinates, telemetry |
-| Body Propaganda | Raleway, Bebas Neue | Body text, labels |
-| Fine Print | Source Code Pro | Sub-labels, micro data |
+| Cyrillic Display | Oswald, Anton (ตัวพิมพ์ใหญ่) | หัวข้อ, callout ของภารกิจ |
+| Latin Technical | Share Tech Mono, Courier New | การแสดงข้อมูล, พิกัด, telemetry |
+| Body Propaganda | Raleway, Bebas Neue | ข้อความเนื้อหา, ป้ายกำกับ |
+| Fine Print | Source Code Pro | ป้ายกำกับย่อย, ข้อมูลขนาดเล็ก |
 
-Always uppercase for primary headings. Mix Cyrillic sparingly for atmosphere: КОСМОС, ПРОГРЕСС, ВОСТОК.
+ใช้ตัวพิมพ์ใหญ่เสมอสำหรับหัวเรื่องหลัก ผสม Cyrillic เป็นครั้งคราวเพื่อบรรยากาศ: КОСМОС, ПРОГРЕСС, ВОСТОК
 
-## Iconographic vocabulary
+## คำศัพท์เชิงสัญลักษณ์ (Iconographic vocabulary)
 
-**Primary motifs**: Sputnik orbital lines, Vostok capsule silhouette, constructivist diagonal grid, atomic orbital model (Bohr), star field, hammer & cosmos, Laika memorial (dog in porthole), geodesic sphere ([[noosphere]]), spiral galaxy arm.
+**Motif หลัก**: เส้นวงโคจรของ Sputnik, ภาพเงาของแคปซูล Vostok, ตารางแนวทแยงแบบ constructivist, แบบจำลองวงโคจรอะตอม (Bohr), ทุ่งดาว, ค้อนและจักรวาล, อนุสรณ์สถานไลก้า (สุนัขในช่องหน้าต่าง), ทรงกลม geodesic ([[noosphere]]), แขนของดาราจักรชนิดก้นหอย
 
-**Secondary motifs**: Radiating sunbursts, mechanical dials with Cyrillic labels, parabolic rocket trajectories, propaganda diagonal composition lines, film grain/noise overlay.
+**Motif รอง**: แสงอาทิตย์ที่แผ่ออก, หน้าปัดกลไกพร้อมป้ายกำกับ Cyrillic, วิถีโคจรพาราโบลาของจรวด, เส้นองค์ประกอบแนวทแยงแบบโฆษณาชวนเชื่อ, film grain/noise overlay
 
-## Layout principles
+## หลักการจัดวาง Layout
 
-**Constructivist composition**: never symmetric and centered — always dynamic and diagonal.
+**องค์ประกอบแบบ Constructivist**: ไม่เคยสมมาตรและอยู่ตรงกลาง — แต่จะไดนามิกและเป็นแนวทแยงเสมอ
 
-- **Asymmetric split** — 1/3 + 2/3 or 2/5 + 3/5 columns
-- **Diagonal accents** — `skewX(-8deg)` on headers
-- **Panel borders** — `border-left: 3px solid` only, not full box borders
-- **Negative space** — let the void of space breathe
-- **Layered depth** — background (stars) → midground (grid) → foreground (data)
+- **Asymmetric split** — คอลัมน์ 1/3 + 2/3 หรือ 2/5 + 3/5
+- **Diagonal accents** — `skewX(-8deg)` บน header
+- **Panel borders** — `border-left: 3px solid` เท่านั้น, ไม่ใช่ขอบกล่องเต็ม
+- **Negative space** — ปล่อยให้ความว่างเปล่าของอวกาศได้หายใจ
+- **Layered depth** — พื้นหลัง (ดาว) → กลาง (ตาราง) → หน้า (ข้อมูล)
 
-## Animation vocabulary
+## คำศัพท์เกี่ยวกับ Animation
 
-Every animation carries philosophical meaning. Soviet Cosmism UI moves *slowly and deliberately* — minimum 0.8s transitions, max 60s orbital cycle.
+ทุก animation มีความหมายทางปรัชญา Soviet Cosmism UI เคลื่อนไหว*ช้าๆ และตั้งใจ* — transition อย่างน้อย 0.8 วินาที, วงโคจรสูงสุด 60 วินาที
 
-| Animation | Meaning | Implementation |
+| Animation | ความหมาย | Implementation |
 |---|---|---|
-| Slow orbital rotation | Eternal cosmic cycles | `rotate 120s linear infinite` |
-| Data transmission pulse | Signal from cosmos to Earth | `scale + opacity, 2s ease` |
-| Phosphor fade-in | Consciousness emerging | `opacity 0→1, 1.5s, staggered` |
-| Scanline sweep | Observation, science | Moving gradient overlay |
-| Star parallax | Depth of space | Three layers at 0.1x, 0.3x, 0.5x |
-| Ticker crawl | Data from the [[noosphere]] | `translateX` marquee |
-| Gauge needle | Instrument precision | SVG rotation from pivot |
-| Grid flickering | System processing thought | Random opacity flicker |
+| Slow orbital rotation | วงจรของจักรวาลอันเป็นนิรันดร์ | `rotate 120s linear infinite` |
+| Data transmission pulse | สัญญาณจากจักรวาลสู่โลก | `scale + opacity, 2s ease` |
+| Phosphor fade-in | การเกิดขึ้นของจิตสำนึก | `opacity 0→1, 1.5s, staggered` |
+| Scanline sweep | การสังเกตการณ์, วิทยาศาสตร์ | Moving gradient overlay |
+| Star parallax | ความลึกของอวกาศ | สามชั้นที่ 0.1x, 0.3x, 0.5x |
+| Ticker crawl | ข้อมูลจาก [[noosphere]] | `translateX` marquee |
+| Gauge needle | ความแม่นยำของเครื่องมือ | SVG rotation from pivot |
+| Grid flickering | ระบบกำลังประมวลผลความคิด | Random opacity flicker |
 
-## UI patterns
+## รูปแบบ UI
 
-- **Dashboards** — mission control panels with gauge clusters instead of cards
-- **Navigation** — radial/orbital metaphors (hubs and spokes) instead of sidebars
-- **Buttons** — stamped metal aesthetic, blocky corners, feel pressed rather than clicked
-- **Progress** — orbit animations, countdown aesthetics
-- **Borders** — thick, structural, telegraph-relay weight
+- **Dashboards** — แผงควบคุมภารกิจพร้อมกลุ่มเกจวัดแทนที่จะเป็น card
+- **Navigation** — อุปมาแบบรัศมี/วงโคจร (hubs and spokes) แทนที่จะเป็น sidebar
+- **Buttons** — สุนทรียศาสตร์แบบโลหะปั๊ม, มุมเหลี่ยม, ให้ความรู้สึกถูกกดมากกว่าคลิก
+- **Progress** — animation วงโคจร, สุนทรียศาสตร์การนับถอยหลัง
+- **Borders** — หนา, มีโครงสร้าง, มีน้ำหนักเหมือน telegraph-relay
 
 ## Components
 
-Five core components: Telemetry Panel (instrument readout with bar fill), Orbital Clock (SVG with rotating ring), Star Field Canvas (three-layer parallax), Constructivist Header (skewed diagonal with emblem), Data Ticker (scrolling Tsiolkovsky quotes and telemetry).
+ส่วนประกอบหลักห้าอย่าง: Telemetry Panel (การแสดงค่าเครื่องมือวัดพร้อมแถบเติม), Orbital Clock (SVG พร้อมวงแหวนหมุน), Star Field Canvas (parallax สามชั้น), Constructivist Header (เอียงแนวทแยงพร้อมสัญลักษณ์), Data Ticker (เลื่อนคำพูดของ Tsiolkovsky และ telemetry)
 
-## The core tension
+## ความตึงเครียดหลัก
 
-The style's power comes from holding two contradictions simultaneously:
+พลังของสไตล์นี้มาจากการถือสองความขัดแย้งไว้พร้อมกัน:
+- **ความอบอุ่นแบบยูโทเปีย** — มนุษยชาติรวมเป็นหนึ่ง, เอื้อมมือสู่ดวงดาว, มีเป้าหมายร่วมกัน
+- **ตรรกะของเครื่องจักรที่เยือกเย็น** — ทุกอย่างคือระบบ, การคำนวณ, แผนห้าปี
 
-- **Utopian warmth** — humanity united, reaching for the stars, collective purpose
-- **Cold machine logic** — everything is a system, a calculation, a five-year plan
+ความเป็นคู่่นี้ทำให้ Soviet Cosmism UI มีความลึกทางอารมณ์ที่สไตล์เรโทรที่เน้นการตกแต่งเพียงอย่างเดียวไม่มี
 
-This duality gives Soviet Cosmism UI an emotional depth that purely decorative retro styles lack.
+## คำพูดเชิงปรัชญาสำหรับ ambient UI
 
-## Philosophical quotes for ambient UI
+- Tsiolkovsky: "Земля — колыбель разума, но нельзя вечно жить в колыбели." *(โลกคือเปลของเหตุผล แต่เราไม่สามารถอยู่ในเปลได้ตลอดไป)*
+- Tsiolkovsky: "Невозможное сегодня станет возможным завтра." *(สิ่งที่เป็นไปไม่ได้ในวันนี้ จะกลายเป็นสิ่งที่เป็นไปได้ในวันพรุ่งนี้)*
+- รหัสภารกิจ: ВОСТОК-1, СОЮЗ, МИР, БАЙКОНУР, КОСМОНАВТ, ОРБИТА
 
-- Tsiolkovsky: "Земля — колыбель разума, но нельзя вечно жить в колыбели." *(Earth is the cradle of reason, but one cannot live in the cradle forever.)*
-- Tsiolkovsky: "Невозможное сегодня станет возможным завтра." *(The impossible today will become possible tomorrow.)*
-- Mission codes: ВОСТОК-1, СОЮЗ, МИР, БАЙКОНУР, КОСМОНАВТ, ОРБИТА
+## ความสัมพันธ์กับ [[retro-futurism]]
 
-## Relationship to [[retro-futurism]]
+Soviet Cosmism อยู่ในแถบยุค 1960–80s, ซึ่งทับซ้อนกับ [[cassette-futurism]] ในช่วงเวลา แต่แตกต่างกันอย่างมากในแง่ของการอ้างอิงทางวัฒนธรรม ในขณะที่ cassette-futurism สื่อถึงอุปกรณ์อิเล็กทรอนิกส์สำหรับผู้บริโภคและวัฒนธรรม VHS ของตะวันตก, Soviet Cosmism สื่อถึงโครงการอวกาศของรัฐและศิลปะแบบ constructivist
 
-Soviet Cosmism occupies the 1960s–80s era band, overlapping temporally with [[cassette-futurism]] but diverging sharply in cultural reference. Where cassette-futurism channels Western consumer electronics and VHS culture, Soviet Cosmism channels state space programs and constructivist art.
-
-## See also
+## ดูเพิ่ม
 
 - [[retro-futurism]] — parent design family
 - [[cassette-futurism]] — overlapping era, Western counterpart

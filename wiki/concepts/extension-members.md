@@ -3,33 +3,33 @@ title: Extension Members (C#)
 type: concept
 tags: [csharp, language-features, extensions]
 created: 2026-04-15
-updated: 2026-04-15
+updated: 2026-04-23
 sources: [csharp-14-whats-new.md]
 ---
 
 # Extension Members
 
-Extension members, introduced in [[csharp|C#]] 14, generalize the decade-old *extension method* feature. A new `extension<T>(Receiver)` block can contain extension **methods**, **properties**, **static members**, and **operators** — all written in a static class but callable as though they belong to the extended type.
+Extension members, ที่ถูกนำมาใช้ใน [[csharp|C#]] 14, เป็นการขยายฟีเจอร์ *extension method* ที่มีมานานนับทศวรรษ บล็อก `extension<T>(Receiver)` ใหม่สามารถมีได้ทั้ง extension **methods**, **properties**, **static members**, และ **operators** — ทั้งหมดนี้เขียนใน static class แต่สามารถเรียกใช้ได้ราวกับว่าเป็นของ type ที่ถูกขยาย
 
-## Why this matters
+## ทำไมถึงสำคัญ
 
-Extension methods (C# 3.0) let you bolt instance-style methods onto types you didn't author, but the feature was limited to methods. There was no way to add a computed property, a static factory, or an operator to someone else's type without inheritance or wrapper types. C# 14 closes that gap.
+Extension methods (C# 3.0) ช่วยให้คุณสามารถเพิ่ม instance-style method เข้าไปใน type ที่คุณไม่ได้เป็นผู้สร้างได้ แต่ฟีเจอร์นี้จำกัดอยู่แค่ method เท่านั้น ไม่มีวิธีที่จะเพิ่ม computed property, static factory, หรือ operator เข้าไปใน type ของคนอื่นได้โดยไม่ต้องใช้ inheritance หรือ wrapper type C# 14 ได้ปิดช่องว่างนั้นแล้ว
 
 ## Syntax
 
-Extension blocks live inside a `static class`. Two forms:
+Extension block จะอยู่ภายใน `static class` มีสองรูปแบบ:
 
 ```csharp
 public static class Enumerable
 {
-    // Instance-receiver block: members behave like instance members
+    // Instance-receiver block: member จะทำงานเหมือน instance member
     extension<TSource>(IEnumerable<TSource> source)
     {
         public bool IsEmpty => !source.Any();
         public IEnumerable<TSource> Where(Func<TSource, bool> predicate) { ... }
     }
 
-    // Type-receiver block: members behave like static members of the receiver
+    // Type-receiver block: member จะทำงานเหมือน static member ของ receiver
     extension<TSource>(IEnumerable<TSource>)
     {
         public static IEnumerable<TSource> Combine(IEnumerable<TSource> a, IEnumerable<TSource> b) { ... }
@@ -39,25 +39,25 @@ public static class Enumerable
 }
 ```
 
-## Member kinds
+## ประเภทของ Member
 
-| Kind | Instance-receiver | Type-receiver |
+| ประเภท | Instance-receiver | Type-receiver |
 |---|---|---|
 | Method | `sequence.Where(...)` | `IEnumerable<int>.Combine(a, b)` |
 | Property | `sequence.IsEmpty` | `IEnumerable<int>.Identity` |
-| Operator | — | `a + b` on `IEnumerable<T>` |
+| Operator | — | `a + b` บน `IEnumerable<T>` |
 
 ## Call sites
 
-- Instance-receiver members look like instance calls: `sequence.IsEmpty`
-- Type-receiver members look like static calls on the extended type: `IEnumerable<int>.Identity`
-- User-defined extension operators bind like normal operators at the call site
+- Instance-receiver member จะดูเหมือนการเรียก instance: `sequence.IsEmpty`
+- Type-receiver member จะดูเหมือนการเรียก static บน type ที่ถูกขยาย: `IEnumerable<int>.Identity`
+- User-defined extension operator จะผูกเหมือน operator ปกติที่ call site
 
-## Relation to extension methods
+## ความสัมพันธ์กับ extension methods
 
-Traditional `this`-parameter extension methods (C# 3.0) still work. The new syntax is additive and more expressive — the old form can be mechanically expressed in the new one, but the new form is required for properties, static members, and operators.
+Extension method แบบดั้งเดิมที่ใช้ `this`-parameter (C# 3.0) ยังคงใช้งานได้ syntax ใหม่เป็นการเพิ่มเติมและมีความสามารถในการแสดงออกมากกว่า — รูปแบบเก่าสามารถแสดงออกในรูปแบบใหม่ได้ทางกลไก แต่รูปแบบใหม่จำเป็นสำหรับ properties, static members, และ operators
 
-## See also
+## ดูเพิ่ม
 
 - [[csharp]]
 - [[csharp-14-whats-new]]
