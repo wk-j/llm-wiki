@@ -1,0 +1,35 @@
+---
+title: Piyalitt Ittichaiwong
+type: entity
+tags: [people, thai, ai, medical, phd]
+created: 2026-04-24
+updated: 2026-04-24
+sources: [Piyalitt Ittichaiwong - GPT-5.5 Launch.md]
+---
+
+# Piyalitt Ittichaiwong
+
+นักวิจัยสาย AI + การแพทย์ชาวไทย ระดับ PhD ที่เขียนโปรแกรมมา 20 ปี เป็นคนเขียน content ภาษาไทยเกี่ยวกับโมเดลรุ่นใหม่ๆ บน Facebook อย่างสม่ำเสมอ — โดยเฉพาะในมุมของ **early-access tester** ที่ได้ลองรุ่นเต็มก่อน launch และ framing ในบริบท **Thai developer community**
+
+## ทำไมถึงน่าฟัง
+
+- เป็นหนึ่งในไม่กี่คนในไทยที่ได้เข้าถึง frontier models ก่อนเปิดตัวทั่วไป — มีมุมมองจากการ *ใช้งานจริงในงาน PhD ด้านการแพทย์* ไม่ใช่แค่อ่าน model card
+- **Connect-the-dots** ระหว่างความสามารถ coding ของโมเดลกับงานการแพทย์ — framing ที่ขาดในหลายๆ launch review
+- เป็นผู้ดูแล/โปรโมทคอมมิวนิตี้ **OpenAI Codex Community** ในไทย และเป็นหนึ่งในทีมเปิดตัว Hackathon OpenAI × สมาคมปัญญาประดิษฐ์ประเทศไทย (credit รวมเป็นล้าน, เสาร์ 2026-04-25)
+
+## มุมมองที่ชัดเจน
+
+- ใน post เปิดตัว [[gpt-5-5|GPT-5.5]] เขาเขียนว่าเป็น "Model แรกที่ทำให้รู้สึกว่า 20 ปี สู้มันไม่ได้จริงๆ" — งาน PhD "แทบจะจบใน 1 prompt" ถ้ารอได้
+- ระบุว่า GPT-5.5 เก่งใกล้ [[claude-mythos-preview|Claude Mythos Preview]] มาก — แต่*เปิดให้ทุกคนเข้าถึงได้* ต่างจาก Mythos ที่ถูก gate ผ่าน [[project-glasswing|Project Glasswing]]
+- ฟ้อง **SWE-Bench Pro memorization sign** ใน GPT-5.5 card ตรงกับที่ Anthropic เคย flag ใน Mythos — ตีความว่าเป็นความพลาด ไม่ใช่การ benchmaxx ตั้งใจ
+- **Prompt management** จะยิ่งสำคัญเมื่อราคา GPT-5.5 แพงขึ้น 2 เท่าจาก GPT-5.4
+
+## โพสต์ที่ ingest
+
+- **[[piyalitt-gpt-5-5-launch]]** (2026-04-23) — layered commentary ว่า subjective reaction + OpenAI launch summary ภาษาไทย
+
+## ดูเพิ่ม
+
+- [[openai]]
+- [[gpt-5-5]]
+- [[claude-mythos-preview]]
