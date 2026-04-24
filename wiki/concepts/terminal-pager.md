@@ -25,7 +25,7 @@ sources: [leo-robinovitch-terminal-pager.md]
 | `bat` | มี syntax highlighting + line numbers; เรียกใช้ pager อื่นภายใน |
 | `most` | มีหลายหน้าต่าง, splits |
 | `delta` | เชี่ยวชาญสำหรับ git diffs; side-by-side, syntax highlighting |
-| `lore` | pager ที่เขียนด้วย Go ของ [[leo-robinovitch|Leo Robinovitch]], สร้างขึ้นบน `viewport` component ของเขา |
+| `lore` | pager ที่เขียนด้วย Go ของ [[leo-robinovitch\|Leo Robinovitch]], สร้างขึ้นบน `viewport` component ของเขา |
 | `cat` | ตั้งค่า `PAGER=cat` เพื่อปิดการใช้งาน paging ทั้งหมด |
 
 ## option ของ `less` ที่มีประโยชน์

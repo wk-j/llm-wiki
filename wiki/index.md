@@ -40,6 +40,8 @@
 - [[claude-mythos-preview-red-anthropic]] — Anthropic red.anthropic.com (2026-04): Mythos Preview autonomously finds/exploits zero-days in every major OS and browser; cyber capabilities emerged without explicit training; thousands of vulns under coordinated disclosure; Project Glasswing restricts release
 - [[google-cloud-long-running-agent-patterns]] — Google Cloud Tech (Addy Osmani + Shubham Saboo, 2026-04-22): 5 design patterns for 7-day long-running agents on Agent Runtime — Checkpoint-and-Resume / Delegated Approval / Memory-Layered Context / Ambient Processing / Fleet Orchestration; governance triad (Identity/Registry/Gateway)
 - [[stop-slop-source]] — A skill for removing AI tells from prose
+- [[aaron-levie-agent-automation-jobs]] — Aaron Levie (Box CEO) on X (2026-04-24): companies need dedicated people, not side-project volunteers, to bridge from chatbot to agent-automating-a-process; 8-item job spec across map/deploy/context/wire/eval/HITL/upgrade/change-mgmt; "future of software engineering in non-tech companies"
+- [[piyalitt-gpt-5-5-launch]] — Piyalitt Ittichaiwong (Thai FB, 2026-04-23): layered GPT-5.5 launch commentary — "first model a 20yr-programmer PhD can't compete with"; near-Mythos-Preview ability but broadly accessible; SWE-Bench Pro memorization flag; pricing inversion (GPT-5.5 > Opus 4.7); CyberGym 81.8 vs 73.1; senior engineer reports clear edge over Opus 4.7 in reasoning/autonomy
 
 ## Entities
 
@@ -84,6 +86,10 @@
 - [[google-cloud]] — Google's enterprise cloud division; ships Gemini Enterprise Agent Platform; Cloud Next '26 introduced 7-day long-running Agent Runtime
 - [[gemini-enterprise-agent-platform]] — Google Cloud managed agent platform: Agent Runtime (7-day state), ADK, Mission Control, Memory Bank/Profiles, Agent Identity/Registry/Gateway, Observability, BYOC
 - [[hardik-pandya]] — Creator of the Stop Slop skill
+- [[piyalitt-ittichaiwong]] — Thai PhD researcher + 20yr programmer; early-access tester of frontier models (GPT-5.5); promoter of OpenAI Codex Community Thailand; co-organizer of OpenAI × Thai AI Society Hackathon
+- [[openai]] — AI lab; creator of ChatGPT, GPT family, and Codex; 2026 rival to Anthropic and Moonshot AI on the frontier-model axis
+- [[gpt-5-5]] — OpenAI flagship (2026-04-23): agentic coding SOTA (Terminal-Bench 2.0 82.7%, CyberGym 81.8%); 400K/1M ctx; $5/$30 per 1M tokens; near-Mythos Preview in capability but broadly accessible; 2× price of GPT-5.4, slightly > Opus 4.7 (pricing inversion)
+- [[aaron-levie]] — Co-founder/CEO of Box; enterprise-AI commentator on X; perspective from the company-deploying-AI side rather than the model-building side
 
 ## Concepts
 
@@ -147,5 +153,6 @@
 - [[model-cyber-capability-emergence]] — Offensive cyber capability as inevitable side effect of general model improvement; Mythos Preview case study; friction-based defense weakens; hard barriers (KASLR, W^X) remain critical
 - [[long-running-agents]] — 5 design patterns for agents that stay alive for hours to days: Checkpoint-and-Resume, Delegated Approval (pause-in-place HITL), Memory-Layered Context (with memory-drift governance), Ambient Processing, Fleet Orchestration
 - [[stop-slop-concept]] — Technique for making AI writing more human-like
+- [[agent-enablement-role]] — Aaron Levie's framing of the new dedicated job inside enterprises (IT / eng / business function) that owns chatbot→production-agent: 8-item spec spanning workflow mapping, deploy, context, eval, HITL, upgrades, change management; the "future of software engineering in non-tech companies"
 
 ## Analysis

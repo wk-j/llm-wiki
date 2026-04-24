@@ -3,8 +3,8 @@ title: Claude Opus 4.7
 type: entity
 tags: [ai, models, anthropic, claude, opus]
 created: 2026-04-16
-updated: 2026-04-23
-sources: [Introducing Claude Opus 4.7.md, Whats new in Claude Opus 4.7 - Anthropic Docs.md, Claude Opus 4.7 Isn't a Drop-in Replacement for 4.6.md, Claude Mythos Preview.md]
+updated: 2026-04-24
+sources: [Introducing Claude Opus 4.7.md, Whats new in Claude Opus 4.7 - Anthropic Docs.md, Claude Opus 4.7 Isn't a Drop-in Replacement for 4.6.md, Claude Mythos Preview.md, Piyalitt Ittichaiwong - GPT-5.5 Launch.md]
 ---
 
 # Claude Opus 4.7
@@ -77,6 +77,18 @@ sources: [Introducing Claude Opus 4.7.md, Whats new in Claude Opus 4.7 - Anthrop
 - Amazon Bedrock
 - Google Cloud Vertex AI
 - Microsoft Foundry
+
+## การแข่งขันกับ [[gpt-5-5|GPT-5.5]] (2026-04-23)
+
+หลัง [[openai|OpenAI]] เปิดตัว [[gpt-5-5|GPT-5.5]] หนึ่งสัปดาห์ต่อมา:
+
+- **Pricing inversion** — GPT-5.5 API ($5/$30) แพงกว่า Opus 4.7 ($5/$25) เล็กน้อย; ปกติ GPT รุ่นก่อนๆ ถูกกว่า Opus ประมาณครึ่งหนึ่ง
+- **CyberGym**: Opus 4.7 ที่ 73.1% vs GPT-5.4 79.0% vs GPT-5.5 81.8% — Opus 4.7 *ตามหลัง* เพราะความสามารถด้าน cyber ถูกลดทอนระหว่างฝึก (ดูหัวข้อ "นโยบายด้าน Cyber" ด้านล่าง)
+- **Reasoning / autonomy** — senior engineer ใน launch ของ GPT-5.5 รายงานว่า GPT-5.5 "แข็งแกร่งกว่าอย่างชัดเจน" ในด้านนี้
+- **[[piyalitt-ittichaiwong|Piyalitt Ittichaiwong]]**: "ไม่ต้องพูดถึง Opus 4.7 เลยครับ" — GPT-5.5 เก่งใกล้ [[claude-mythos-preview|Mythos Preview]] มากและเปิดให้ทุกคนใช้ ต่างจาก Mythos ที่ถูก gate ผ่าน [[project-glasswing|Project Glasswing]]
+- **Caveat**: GPT-5.5 ช้า (Piyalitt: "ถ้ารอได้"); SWE-Bench Pro 58.6% ของ GPT-5.5 มี memorization sign ตามที่ Anthropic ฟ้อง — ไม่ควรใช้ axis นี้ชี้ขาด
+
+ที่มา: [[piyalitt-gpt-5-5-launch]]
 
 ## บทบาทใน Wiki Patterns ที่มีอยู่
 

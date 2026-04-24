@@ -1,5 +1,27 @@
 # Log
 
+## [2026-04-24] ingest | Piyalitt Ittichaiwong — GPT-5.5 Launch Commentary
+
+Ingested a Thai Facebook post by Piyalitt Ittichaiwong (early-access tester, Thai PhD researcher + 20yr programmer) framing OpenAI's GPT-5.5 launch (2026-04-23) in two layers: subjective reaction ("first model I can't compete with"; near-Mythos Preview capability but accessible to all; SWE-Bench Pro memorization sign; pricing inversion — GPT-5.5 > Opus 4.7) and a structured Thai summary of OpenAI's launch materials.
+
+- Created raw: `raw/Piyalitt Ittichaiwong - GPT-5.5 Launch.md`
+- Created source page: `[[piyalitt-gpt-5-5-launch]]`
+- Created entity pages: `[[piyalitt-ittichaiwong]]`, `[[openai]]`, `[[gpt-5-5]]`
+- Updated `[[claude-opus-4-7]]` — added "การแข่งขันกับ GPT-5.5" section with pricing inversion, CyberGym gap (73.1 vs 81.8), senior-engineer testimonial, Piyalitt's "ไม่ต้องพูดถึง Opus 4.7 เลยครับ" quote
+- Updated `[[openai-codex]]` — linked to `[[openai]]` parent entity; added internal-OpenAI usage section (85%+ weekly, finance K-1 case, 20% traffic-splitter speedup, Edu/Go plans, 400K ctx)
+- Updated `[[index]]` and this log
+
+## [2026-04-24] ingest | Aaron Levie — Agent automation jobs
+
+Ingested an X post by Aaron Levie (CEO of Box) arguing companies will need dedicated headcount for the chatbot→agent-automation transition, with an 8-item job spec spanning workflow design, deploy, context, integration, evals, HITL, upgrades, and change management.
+
+- Created raw: `raw/Aaron Levie - Agent Automation Jobs.md`
+- Created source page: `[[aaron-levie-agent-automation-jobs]]`
+- Created entity page: `[[aaron-levie]]`
+- Created Thai-primary concept page: `[[agent-enablement-role]]` — cross-linked to ai-orchestrator, domain-to-ai-translator, harness-engineering, long-running-agents, engineering-role-shift
+- Updated `[[engineering-role-shift]]` — added agent-enablement-role to "บทบาทใหม่" list
+- Updated `[[index]]` and this log
+
 ## [2026-04-23] ingest | Stop Slop
 
 Ingested the "Stop Slop" GitHub repository by Hardik Pandya. This is a skill for LLMs to avoid "AI tells" and write more human-like prose.

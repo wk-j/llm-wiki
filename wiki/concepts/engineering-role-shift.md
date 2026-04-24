@@ -4,7 +4,7 @@ type: concept
 tags: [ai, software-engineering, career, roles]
 created: 2026-04-15
 updated: 2026-04-23
-sources: [software-engineer-role-ai-era.md, llm-era-computer-engineering-nattee.md]
+sources: [software-engineer-role-ai-era.md, llm-era-computer-engineering-nattee.md, aaron-levie-agent-automation-jobs.md]
 ---
 
 # Engineering Role Shift / การเปลี่ยนขั้วของบทบาทวิศวกร
@@ -74,6 +74,7 @@ sources: [software-engineer-role-ai-era.md, llm-era-computer-engineering-nattee.
 -   [[domain-to-ai-translator]] — ผู้เปลี่ยน requirement ที่คลุมเครือให้เป็น spec ที่สามารถ execute ได้
 -   AI Tool Builder — ผู้สร้าง RAG, agent framework, [[model-context-protocol|MCP]] server, evals
 -   Governance & Safety Owner — ผู้รับผิดชอบ compliance และ risk สำหรับระบบ AI
+-   [[agent-enablement-role]] — เจ้าของการเอา agent ไปใช้กับ workflow จริงในองค์กร ([[aaron-levie|Levie]] บอกว่าจะเป็นการเติบโตที่ใหญ่ที่สุดในบริษัท non-tech)
 
 ## ดูเพิ่มเติม
 

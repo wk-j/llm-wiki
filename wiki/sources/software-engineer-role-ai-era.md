@@ -27,11 +27,11 @@ See [[engineering-role-shift]] for the pattern generalized.
 
 | # | Thai | English | Core responsibility |
 |---|---|---|---|
-| 1 | ผู้ควบคุม AI | [[ai-orchestrator|AI Orchestrator]] | Design and direct pipelines of AI agents |
+| 1 | ผู้ควบคุม AI | [[ai-orchestrator\|AI Orchestrator]] | Design and direct pipelines of AI agents |
 | 2 | สถาปนิกระบบ | Systems Architect | Decide *what* to build and *why* — structure, data flow, integration |
 | 3 | ผู้คุมคุณภาพ | Quality Gatekeeper | Catch silent bugs, security holes, architectural misfits in AI output |
-| 4 | นักแปลความต้องการ | [[domain-to-ai-translator|Domain-to-AI Translator]] | Convert fuzzy business requirements into AI-executable specs |
-| 5 | ผู้สร้างเครื่องมือ AI | AI Tool Builder | Build RAG systems, agent frameworks, [[model-context-protocol|MCP]] servers, eval pipelines |
+| 4 | นักแปลความต้องการ | [[domain-to-ai-translator\|Domain-to-AI Translator]] | Convert fuzzy business requirements into AI-executable specs |
+| 5 | ผู้สร้างเครื่องมือ AI | AI Tool Builder | Build RAG systems, agent frameworks, [[model-context-protocol\|MCP]] servers, eval pipelines |
 | 6 | ผู้ดูแลความปลอดภัย | Governance & Safety Owner | Ensure AI systems meet regulatory and risk requirements |
 
 The post calls out **Domain-to-AI Translator** (#4) as the hardest role for AI itself to replace — the skill of turning ambiguous real-world requirements into precise specifications.
