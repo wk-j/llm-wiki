@@ -51,7 +51,19 @@ Alex Ker เล่าว่าเคยทำ prototype ทำนองนี้
 
 รูปแบบเดียวกันใช้ได้เวลาอยากเทียบ output ของโมเดลหลายตัว — เช่นเปิด thread คุยกับ MiniMax M2.5 คู่กับ GLM-5 ดูว่าใครตอบดีกว่า
 
+## แบบที่ 1.5: Parallel DAG (ซับซ้อน)
+
+เป็นการยกระดับ Fan-out จากการแตกงานที่อิสระต่อกัน มาเป็นการจัดการงานที่มีความเกี่ยวข้องกัน (dependencies) โดยใช้ Directed Acyclic Graph (DAG)
+
+**ตัวอย่างจริงจาก [[matt-pocock|Matt Pocock]]** — ในรูปแบบ [[matt-pocock-agent-workflow|New Flow]] (2026) เมื่อสั่ง `/implement`
+- **Planning Agent** จะสร้าง [[pr-dependency-dag|DAG of PRs]] ขึ้นมาเพื่อดูว่า branch ไหนต้องเสร็จก่อนตัวไหน
+- **Implementer Agents** จะถูกปล่อยให้ทำงานขนานกันเฉพาะในจุดที่กราฟอนุญาต (ไม่มี dependency ค้างอยู่)
+- หากมีงานใหม่เข้ามา ระบบจะ recompute กราฟใหม่ทันทีเพื่อหาจุดขนานสูงสุด (maximum concurrency)
+
+**ได้อะไร** — ช่วยให้ระบบ Agentic Workflow สามารถทำ Software Engineering ขนาดใหญ่ได้พร้อมกันหลายจุดโดยไม่เกิด merge conflict ที่ควบคุมไม่ได้
+
 ## แบบที่ 2: Pipeline (ลึก)
+
 
 แปลว่า "สายพาน" — งานชิ้นเดียวไหลผ่าน subagent หลายตัวเรียงเป็นลำดับ แต่ละตัวมองงานด้วย lens (เลนส์, มุมมอง) ที่ต่างกัน แล้วส่งต่อพร้อมความเห็นของตัวเอง
 

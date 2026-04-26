@@ -1,5 +1,15 @@
 # Log
 
+## [2026-04-25] ingest | Matt Pocock — High-Concurrency Agent Workflow
+
+Ingested a tweet from Matt Pocock (@mattpocockuk) describing a "New Flow" for software development using swappable agent dependencies. The workflow features Slack-driven triage, a planning agent that generates a Directed Acyclic Graph (DAG) of PRs/branches, and implementer agents working in parallel within Sandcastle sandboxes.
+
+- Created source page: `[[matt-pocock-agent-workflow]]`
+- Created concept page: `[[pr-dependency-dag]]`
+- Created entity pages: `[[matt-pocock]]`, `[[sandcastle]]`, `[[vercel]]`
+- Updated `[[subagent-patterns]]` — added "Parallel DAG" pattern (v1.5) as an evolution of Parallel Fan-out for complex dependencies.
+- Updated `[[index]]` and this log
+
 ## [2026-04-24] ingest | Piyalitt Ittichaiwong — GPT-5.5 Launch Commentary
 
 Ingested a Thai Facebook post by Piyalitt Ittichaiwong (early-access tester, Thai PhD researcher + 20yr programmer) framing OpenAI's GPT-5.5 launch (2026-04-23) in two layers: subjective reaction ("first model I can't compete with"; near-Mythos Preview capability but accessible to all; SWE-Bench Pro memorization sign; pricing inversion — GPT-5.5 > Opus 4.7) and a structured Thai summary of OpenAI's launch materials.
@@ -407,3 +417,9 @@ Source: Anthropic's official Claude Code subagent reference. Canonical mechanics
 - `entities/claude-code.md` — updated: subagent bullet expanded with concrete mechanics (built-in list, frontmatter fields, invocation modes, nested-spawn constraint)
 - `concepts/subagent-patterns.md` — updated: new "Mechanics ใน Claude Code" section mapping fan-out/pipeline to Claude Code primitives (`Explore`, `.claude/agents/`, `model: haiku`, `memory: project`)
 - `wiki/index.md` — updated: 1 new source entry
+## [2026-04-25] ingest | RTK (RTK-AI)
+Ingested RTK-AI GitHub repository. Created source summary `wiki/sources/rtk-github.md`, entity `wiki/entities/rtk.md`, and Thai-primary concept `wiki/concepts/token-optimization.md`. Updated index. RTK is a Rust-based CLI proxy for token compression (60-90% reduction).
+
+## [2026-04-25] ingest | Guillermo Rauch - Building the Generative Web
+Ingested Sequoia talk by Guillermo Rauch (Vercel CEO). Created source `wiki/sources/rauch-generative-web.md`, entities `wiki/entities/guillermo-rauch.md`, `wiki/entities/vercel.md`, `wiki/entities/v0-dev.md`, and concepts `wiki/concepts/generative-ui.md`, `wiki/concepts/ephemeral-apps.md`. Updated index. Key themes: ephemeral apps, generative UI, LLMs as customers, and the "Pit of Success" framework strategy.
+

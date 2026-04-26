@@ -24,7 +24,7 @@
 - [[will-ai-replace-3d-software]] — Andrew Price X thread: AI + 3D complementarity, moon-base workflow (Blender → Flux.1 Depth → Meshy), judgement-vs-automation skill framework
 - [[harness-engineering-panutat]] — Panutat Tejasen's Thai Facebook post: teach "Harness Engineering" (pipeline of AI review/test/audit agents) rather than teaching students to review AI output
 - [[llm-era-computer-engineering-nattee]] — Nattee Niparnan's Thai Facebook series (Ep. 1 + Ep. 2): LLM in grader/exam pedagogy, $140 PoC with Coding Agent, "taste paradox," core theory matters more not less
-- [[alex-ker-harnesses-optimize]] — Alex Ker (@thealexker): harness as scaffolding; lean human-written CLAUDE.md, progressive disclosure, R.P.I. prompt pattern, subagent patterns, commit-to-one-harness
+- [[alex-ker-harnesses-optimize]] — Alex Ker (@thealexker): harness as scaffolding; lean human-written CLAUDE.md, progressive disclosure, R.P.I. prompt framework, subagent patterns, commit-to-one-harness
 - [[claude-code-subagents-docs]] — Anthropic official docs: Claude Code subagent mechanics — file format, scopes, tools/permissions, persistent memory, hooks, foreground/background, `--agent` flag
 - [[opencode-tauri-to-electron]] — OpenCode's lead engineer @brendonovich on why the desktop shell moved from Tauri to Electron: JS/Bun server runs in-process instead of as a sidecar
 - [[opencode-desktop-electron-brendonovich]] — Primary-source @brendonovich writeup of the same move: adds WebKit vs Chromium rendering, Bun → Node migration, Bun-API plugin breakage
@@ -41,7 +41,9 @@
 - [[google-cloud-long-running-agent-patterns]] — Google Cloud Tech (Addy Osmani + Shubham Saboo, 2026-04-22): 5 design patterns for 7-day long-running agents on Agent Runtime — Checkpoint-and-Resume / Delegated Approval / Memory-Layered Context / Ambient Processing / Fleet Orchestration; governance triad (Identity/Registry/Gateway)
 - [[stop-slop-source]] — A skill for removing AI tells from prose
 - [[aaron-levie-agent-automation-jobs]] — Aaron Levie (Box CEO) on X (2026-04-24): companies need dedicated people, not side-project volunteers, to bridge from chatbot to agent-automating-a-process; 8-item job spec across map/deploy/context/wire/eval/HITL/upgrade/change-mgmt; "future of software engineering in non-tech companies"
-- [[piyalitt-gpt-5-5-launch]] — Piyalitt Ittichaiwong (Thai FB, 2026-04-23): layered GPT-5.5 launch commentary — "first model a 20yr-programmer PhD can't compete with"; near-Mythos-Preview ability but broadly accessible; SWE-Bench Pro memorization flag; pricing inversion (GPT-5.5 > Opus 4.7); CyberGym 81.8 vs 73.1; senior engineer reports clear edge over Opus 4.7 in reasoning/autonomy
+- [[piyalitt-ittichaiwong]] — Thai PhD researcher + 20yr programmer; early-access tester of frontier models (GPT-5.5); co-organizer of OpenAI × Thai AI Society Hackathon
+- [[rtk-github]] — RTK (RTK-AI) GitHub: high-performance Rust CLI proxy for token optimization (60-90% reduction)
+- [[zed-acp-protocol]] — Zed Industries: introducing Agent Client Protocol (ACP) — open standard for AI agent-IDE communication
 
 ## Entities
 
@@ -83,6 +85,8 @@
 - [[cyril-xbt]] — X content creator (@cyrilXBT); author of the opinionated 7-section CLAUDE.md guide; solo builder on AI + crypto + productivity
 - [[claude-mythos-preview]] — Anthropic frontier-preview model; most capable overall; autonomously finds/exploits zero-days in every major OS and browser; release restricted via Project Glasswing
 - [[project-glasswing]] — Anthropic initiative using Mythos Preview to secure critical software before Mythos-class models become broadly available; coordinated vulnerability disclosure
+- [[rtk]] — RTK (RTK-AI): high-performance Rust CLI proxy for output compression and token optimization
+- [[zed-industries]] — Creators of the Zed editor and the Agent Client Protocol (ACP)
 - [[google-cloud]] — Google's enterprise cloud division; ships Gemini Enterprise Agent Platform; Cloud Next '26 introduced 7-day long-running Agent Runtime
 - [[gemini-enterprise-agent-platform]] — Google Cloud managed agent platform: Agent Runtime (7-day state), ADK, Mission Control, Memory Bank/Profiles, Agent Identity/Registry/Gateway, Observability, BYOC
 - [[hardik-pandya]] — Creator of the Stop Slop skill
@@ -90,6 +94,9 @@
 - [[openai]] — AI lab; creator of ChatGPT, GPT family, and Codex; 2026 rival to Anthropic and Moonshot AI on the frontier-model axis
 - [[gpt-5-5]] — OpenAI flagship (2026-04-23): agentic coding SOTA (Terminal-Bench 2.0 82.7%, CyberGym 81.8%); 400K/1M ctx; $5/$30 per 1M tokens; near-Mythos Preview in capability but broadly accessible; 2× price of GPT-5.4, slightly > Opus 4.7 (pricing inversion)
 - [[aaron-levie]] — Co-founder/CEO of Box; enterprise-AI commentator on X; perspective from the company-deploying-AI side rather than the model-building side
+- [[matt-pocock]] — TypeScript expert and AI automation builder; creator of the swappable-agent high-concurrency development flow
+- [[sandcastle]] — AI sandboxing infrastructure for safe and isolated agentic code execution; part of the swappable agent stack
+- [[vercel]] — Cloud platform and creator of the Vercel AI SDK and Chat SDK used in agent orchestration
 
 ## Concepts
 
@@ -126,7 +133,7 @@
 - [[compaction]] — Session summarization technique: /compact replaces history with AI-generated summary to shed context weight while continuing a task
 - [[effort-levels]] — Claude's reasoning/latency parameter: medium / high / xhigh (new in 4.7) / max
 - [[vim-pack]] — Neovim 0.12's built-in plugin manager: three-function API, lockfile, autocmd hooks, no declarative lazy DSL
-- [[plugin-manager]] — The general pattern: fetch/load/update/pin/hook extensions; Neovim landscape and trade-offs
+- [[plugin-manager]] — The default pattern: fetch/load/update/pin/hook extensions; Neovim landscape and trade-offs
 
 - [[engineering-role-shift]] — Bimodal shift of engineering work: upstream/downstream expand, middle hollows out
 - [[ai-orchestrator]] — Engineer-as-pipeline-director; senior-developer role redefined for the AI era
@@ -137,7 +144,7 @@
 - [[taste-paradox]] — Nattee Niparnan: Agent lets you skip practice, but practice is what builds the judgment needed to control the Agent; core tension for Agent-era curriculum
 - [[coding-harness]] — Alex Ker: the harness (Claude Code, Codex, OpenCode, Cursor) as the `while` loop around the LLM; where human engineering judgment lives; includes R.P.I. prompt framework
 - [[instruction-budget]] — The "dumb zone" past a few hundred instructions; attention runs out even if total tokens are modest; distinct from context-rot
-- [[progressive-disclosure]] — Lazy-load pattern for agent context: CLIs (--help discovery), Skills (name+description only), MCP tools (Claude Code tool-search 85% context reduction)
+- [[progressive-disclosure]] — Lazy-load pattern for agent context: CLIs --help discovery), Skills (name+description only), MCP tools (Claude Code tool-search 85% context reduction)
 - [[subagent-patterns]] — Parallel fan-out (breadth) vs sequential pipeline (depth); pipeline pattern parallels Panutat's review-agent harness at a different layer
 - [[task-budgets]] — Opus 4.7 beta: advisory token target across a full agentic loop; model-aware (unlike `max_tokens`); min 20k; skip for open-ended quality-critical work
 - [[adaptive-thinking]] — The only thinking-on mode on Opus 4.7; off by default; thinking content also hidden by default unless `display: "summarized"` is set
@@ -154,5 +161,7 @@
 - [[long-running-agents]] — 5 design patterns for agents that stay alive for hours to days: Checkpoint-and-Resume, Delegated Approval (pause-in-place HITL), Memory-Layered Context (with memory-drift governance), Ambient Processing, Fleet Orchestration
 - [[stop-slop-concept]] — Technique for making AI writing more human-like
 - [[agent-enablement-role]] — Aaron Levie's framing of the new dedicated job inside enterprises (IT / eng / business function) that owns chatbot→production-agent: 8-item spec spanning workflow mapping, deploy, context, eval, HITL, upgrades, change management; the "future of software engineering in non-tech companies"
+- [[token-optimization]] — Strategies for reducing token count while maintaining information density (e.g. RTK, compaction)
+- [[agent-client-protocol]] — Standard for AI-to-IDE communication; allows swapping AI "brains" while keeping native editor UX
 
 ## Analysis
