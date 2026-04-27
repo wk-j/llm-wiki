@@ -519,3 +519,10 @@ Ingested Peter Gostev's talk on model failure modes and Arena.ai data. Explored 
 - Created source `peter-gostev-what-models-suck-at`
 - Created entities `peter-gostev`, `arena-ai`
 - Created concepts `bullshitbench`, `dissatisfaction-rate`, `reasoning-regression`
+
+## [2026-04-28] ingest | Mario Zechner I Hated Every Coding Agent, So I Built My Own
+Ingested Mario Zechner's talk on the **pi** coding agent. Explored the critique of "spaceship" agents, the power of minimalism, and the need for malleable tools. Introduced tree-structured sessions and the defense against "clanker slop" in Open Source.
+- Created source `mario-zechner-pi-agent`
+- Created entities `mario-zechner`, `pi-agent`, `terminus-agent`, `vouch-oss`
+- Created concepts `malleable-tools`, `tree-structured-sessions`, `terminalbench`, `clanker-slop`
+- Updated entity `claude-code` and concept `vibecoded-slop`

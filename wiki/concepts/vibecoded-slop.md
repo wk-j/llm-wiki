@@ -28,5 +28,6 @@ sources: [maggie-appleton-collaborative-ai-engineering.md]
 ## ดูเพิ่ม
 
 - [[stop-slop-concept]] — แนวคิดคล้ายกันแต่เน้นที่สไตล์การเขียนของ AI
+- [[clanker-slop]] — คำเรียกขยะหรือ spam ที่สร้างโดย AI ในวงการ Open Source
 - [[alignment-bottleneck]] — คอขวดที่นำไปสู่การสร้าง Slop
 - [[collaborative-ai-engineering]]

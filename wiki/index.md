@@ -1,6 +1,7 @@
 # Index
 
 ## Sources
+- [[mario-zechner-pi-agent]] — Mario Zechner (Pi, 2026): Minimalist terminal coding agent; Spaceship Trap; Malleable Tools; Tree-structured Sessions; Clanker Slop
 - [[peter-gostev-what-models-suck-at]] — Peter Gostev (Arena.ai, 2026): BullshitBench; Dissatisfaction Rate; Reasoning Regression; Expert Category Gaps (Math vs Creative)
 - [[maggie-appleton-collaborative-ai-engineering]] — Maggie Appleton (GitHub Next, 2026): Collaborative AI Engineering; Alignment Bottleneck; ACE prototype; Vibecoded Slop vs. Craftsmanship; Team Pulse
 - [[ryan-lopopolo-harness-engineering]] — Ryan Lopopolo (OpenAI, 2026): Harness Engineering from a "Token Billionaire" perspective; Code is Free; Just-in-Time Context; Reviewer Personas; Durable Feedback Loops
@@ -119,6 +120,10 @@
 - [[openai]] — AI lab; creator of ChatGPT, GPT family, and Codex; 2026 rival to Anthropic and Moonshot AI on the frontier-model axis
 - [[gpt-5-5]] — OpenAI flagship (2026-04-23): agentic coding SOTA (Terminal-Bench 2.0 82.7%, CyberGym 81.8%); 400K/1M ctx; $5/$30 per 1M tokens; near-Mythos Preview in capability but broadly accessible; 2× price of GPT-5.4, slightly > Opus 4.7 (pricing inversion)
 - [[aaron-levie]] — Co-founder/CEO of Box; enterprise-AI commentator on X; perspective from the company-deploying-AI side rather than the model-building side
+- [[mario-zechner]] — Creator of libGDX and pi coding agent; advocate for minimalist malleable tools
+- [[pi-agent]] — (pi.dev) Minimalist, extensible terminal coding agent with tree-structured sessions
+- [[terminus-agent]] — Minimalist agent using only tmux and keystrokes; inspired pi's design
+- [[vouch-oss]] — Mitchell Hashimoto's tool for human verification in Open Source projects
 - [[matt-pocock]] — TypeScript expert and AI automation builder; creator of the swappable-agent high-concurrency development flow
 - [[maggie-appleton]] — Staff Research Engineer at GitHub Next; designer/engineer; advocate for Collaborative AI Engineering and alignment
 - [[github-next]] — R&D team at GitHub; creators of Copilot, ACE, and Copilot Workspace
@@ -187,6 +192,10 @@
 - [[domain-to-ai-translator]] — Engineer role: convert ambiguous business requirements into AI-executable specs
 - [[ai-3d-workflow]] — Hybrid pipeline: AI ideates/renders variants; 3D controls precise placement (Andrew Price)
 - [[judgement-vs-automation]] — "If you can predict it, you can train it": predictable tasks automate, judgement tasks don't
+- [[malleable-tools]] — Mario Zechner: Minimalist core with hot-reloading extensions; tools that adapt to the developer
+- [[tree-structured-sessions]] — Branching conversation history (tree vs linear) for better context isolation and sub-task management
+- [[terminalbench]] — Evaluation harness for terminal-based agents; measures computer use and coding performance
+- [[clanker-slop]] — AI-generated spam/PRs in Open Source; human verification and vouching as defense
 - [[harness-engineering]] — Panutat Tejasen & Ryan Lopopolo: teach orchestration of review/test/audit agents, not manual review of AI output; human's role is harness design; includes OpenAI's "Durable Feedback Loop" strategy
 - [[collaborative-ai-engineering]] — Shift from solo agent usage to team-agent multiplayer collaboration; shared context and alignment-first development
 - [[alignment-bottleneck]] — Maggie Appleton: Speed of AI makes team coordination (not code output) the primary constraint; collapse of the implementation window
