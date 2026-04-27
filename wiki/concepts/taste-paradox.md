@@ -3,22 +3,29 @@ title: Taste Paradox
 type: concept
 tags: [ai, education, skills, judgment, coding-agent, curriculum]
 created: 2026-04-18
-updated: 2026-04-18
-sources: [llm-era-computer-engineering-nattee.md]
+updated: 2026-04-28
+sources: [llm-era-computer-engineering-nattee.md, llm-era-computer-engineering-ep3-nattee.md]
 ---
 
 # Taste Paradox / ปัญหา taste ในยุค Agent
 
-Loop ที่ขัดแย้งในตัวเอง: **Coding Agent ทำให้คนข้ามขั้นตอนฝึกมือได้ — แต่ขั้นตอนฝึกมือนั่นแหละคือสิ่งที่สร้าง judgment (ต่อมเอ๊ะ) ในการคุม Agent** เสนอโดย [[nattee-niparnan|Nattee Niparnan]] ใน Ep. 2 ของซีรีส์ *วิศวฯคอมจะอยู่อย่างไรในยุค LLM ครองเมือง* (2026-04-17)
+Loop ที่ขัดแย้งในตัวเอง: **Coding Agent ทำให้คนข้ามขั้นตอนฝึกมือได้ — แต่ขั้นตอนฝึกมือนั่นแหละคือสิ่งที่สร้าง judgment (ต่อมเอ๊ะ) ในการคุม Agent** เสนอโดย [[nattee-niparnan|Nattee Niparnan]] ใน Ep. 2-3 ของซีรีส์ *วิศวฯคอมจะอยู่อย่างไรในยุค LLM ครองเมือง*
 
 > "Agent ทำให้เราข้ามขั้นตอนฝึกมือได้ แต่ขั้นตอนฝึกมือนั่นแหละที่สร้าง judgment ให้เราคุม Agent ได้ มันวนเป็นลูป" — Nattee
+
+## [[eh-gland|ต่อมเอ๊ะ]] (Eh Gland): หัวใจของ Paradox
+
+ใน Ep. 3 Nattee ขยายความคำว่า taste ด้วยคำว่า "ต่อมเอ๊ะ":
+- มันคือสัญชาตญาณที่บอกเราว่า "ตรงนี้มันแปลกๆ" แม้ AI จะบอกว่าเสร็จแล้ว
+- ต่อมนี้จะทำงานได้ต้องอาศัย "ความจำในกล้ามเนื้อ" (muscle memory) จากการเคยแก้ปัญหาด้วยตัวเอง
+- **ความเสี่ยง**: ยิ่งใช้ AI มาก ต่อมเอ๊ะจะยิ่งฝ่อ (atrophy) ทำให้เราตรวจงาน AI ไม่ได้ในระยะยาว
 
 ## รูปแบบของ loop
 
 ```
 (อยาก) review Agent ได้ดี
     ↓ ต้อง
-เคยทำเอง / มี taste / มีต่อมเอ๊ะ
+มี [[eh-gland|ต่อมเอ๊ะ]] (judgment / taste)
     ↓ ต้อง
 เคย "ฝึกมือ" งานชนิดนั้นมาก่อน
     ↓ แต่

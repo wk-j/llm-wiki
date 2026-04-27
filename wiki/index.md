@@ -1,6 +1,10 @@
 # Index
 
 ## Sources
+- [[llm-era-computer-engineering-ep3-nattee]] — Nattee Niparnan Ep 3: Closing weaknesses (tests/UI), the shrinking generalist moat, and the Eh Gland
+
+- [[microsoft-openai-partnership-2026]] — Microsoft and OpenAI partnership restructure (April 2026): end of exclusivity, revenue share changes, and shift to an "open relationship"
+
 
 - [[github-copilot-billing-update]] — GitHub Copilot move to usage-based billing and GitHub AI Credits starting June 1, 2026
 - [[ui-style-categories]] — Comprehensive taxonomy of ~40+ UI/UX design styles across 11 categories
@@ -51,7 +55,10 @@
 - [[gee-money-sg-pb]] — Perspective from a Singapore Private Banker on regulatory standards, voice logs, and wealth preservation
 - [[annabel-wealth-architect-response]] — Annabelle's detailed response to allegations regarding her background, trading practices, and content style
 
+- [[deepseek-wikipedia]] — Summary of the Wikipedia article for DeepSeek, covering its origin, efficiency focus, and major technical breakthroughs.
 ## Entities
+- [[microsoft]] — Technology giant; shift toward AI independence, home-grown models, and a non-exclusive OpenAI partnership
+
 
 - [[abn-amro]] — Dutch bank with a strong private banking tradition
 - [[github]] — World's largest source code management platform; moving toward AI-first developer platform
@@ -114,7 +121,13 @@
 - [[singapore]] — Global financial hub and private banking center known for regulatory transparency and family offices
 - [[gee-money-more]] — Financial insight source focusing on private banking and investment practice
 
+- [[deepseek]] — Chinese AI lab known for high-efficiency models (V3, R1) and open-weight strategy.
+- [[high-flyer]] — Chinese Quant Hedge Fund; parent and primary funder of DeepSeek.
+- [[liang-wenfeng]] — Founder and CEO of DeepSeek and High-Flyer; advocate for technical efficiency.
 ## Concepts
+- [[eh-gland]] — The engineering intuition needed to spot AI errors; atrophies if thinking is outsourced
+- [[horror-vacui]] — Fear of empty space in UI design; leads to "Wall of Text" visual clutter
+
 
 - [[llm-knowledge-bases]] — The pattern of LLM-maintained personal wikis (what this wiki implements)
 - [[agentic-usage]] — Long-running, multi-step AI sessions with high compute demand; shift from autocomplete to agentic platforms
@@ -189,4 +202,9 @@
 - [[financial-poetry]] — Thai concept: financial content that prioritizes emotional narrative over technical substance
 - [[private-banking]] — Personalized financial services for HNWIs; relationship management vs. portfolio management; regulatory compliance and voice logs
 
+- [[mla-attention]] — Multi-head Latent Attention: DeepSeek's mechanism for reducing KV cache and memory usage in Transformers.
+- [[grpo]] — Group Relative Policy Optimization: DeepSeek's RL technique for reasoning models without a separate reward model.
+- [[mixture-of-experts]] — MoE architecture: Using specialized "experts" to increase model capacity without increasing per-token compute cost.
+- [[open-weight-models]] — AI distribution model where weights are public but training data/process remains private.
+- [[sputnik-moment-ai]] — The shift in AI industry assumptions following DeepSeek's high-efficiency breakthroughs in 2025.
 ## Analysis

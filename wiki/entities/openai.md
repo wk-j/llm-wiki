@@ -3,13 +3,21 @@ title: OpenAI
 type: entity
 tags: [ai, labs, models, organizations]
 created: 2026-04-24
-updated: 2026-04-24
-sources: [Piyalitt Ittichaiwong - GPT-5.5 Launch.md]
+updated: 2026-04-28
+sources: [Piyalitt Ittichaiwong - GPT-5.5 Launch.md, microsoft-openai-partnership-2026.md]
 ---
 
-# OpenAI
+# OpenAI / โอเพนเอไอ
 
 AI lab ในสหรัฐฯ — สร้าง ChatGPT, ตระกูล GPT, และ [[openai-codex|Codex]] เป็น lab คู่แข่งหลักของ [[anthropic|Anthropic]] และ [[moonshot-ai|Moonshot AI]] ในการแข่งขัน frontier model ช่วงปี 2026
+
+## จุดเปลี่ยนความสัมพันธ์กับ Microsoft (เม.ย. 2026)
+
+จากประกาศเมื่อ 2026-04-27 (ดู [[microsoft-openai-partnership-2026]]) OpenAI ได้ขยับจากความสัมพันธ์แบบผูกขาด (exclusive) กับ [[microsoft]] ไปสู่โครงสร้างแบบ "Open Relationship":
+
+- **อิสระในการใช้ Cloud**: OpenAI สามารถนำ model ไปรันและขายบน cloud เจ้าอื่นได้แล้ว (เช่น Google Cloud, AWS) ไม่ได้จำกัดอยู่แค่ Azure
+- **Infrastructure Diversification**: มีการดึง partner รายอื่นเข้ามาช่วยเรื่อง compute เพิ่มเติม เช่น Oracle และ SoftBank เพื่อให้รองรับ scale ของโมเดลระดับ frontier ได้ทัน
+- **Restructuring**: การปรับความสัมพันธ์นี้สอดคล้องกับการปรับโครงสร้างองค์กร (ปลายปี 2025) ที่พยายามลดข้อจำกัดเรื่อง profit caps เพื่อดึงดูดนักลงทุนในรูปแบบบริษัทมหาชนมากขึ้น
 
 ## โมเดลที่อยู่ใน wiki
 

@@ -3,8 +3,8 @@ title: Engineering Role Shift
 type: concept
 tags: [ai, software-engineering, career, roles]
 created: 2026-04-15
-updated: 2026-04-23
-sources: [software-engineer-role-ai-era.md, llm-era-computer-engineering-nattee.md, aaron-levie-agent-automation-jobs.md]
+updated: 2026-04-28
+sources: [software-engineer-role-ai-era.md, llm-era-computer-engineering-nattee.md, aaron-levie-agent-automation-jobs.md, llm-era-computer-engineering-ep3-nattee.md]
 ---
 
 # Engineering Role Shift / การเปลี่ยนขั้วของบทบาทวิศวกร
@@ -20,6 +20,14 @@ sources: [software-engineer-role-ai-era.md, llm-era-computer-engineering-nattee.
 -   **ปลายน้ำ (Downstream) — ขยายตัว:** งาน code review, การประเมินผล, การตรวจสอบ, security auditing, และการควบคุมผลลัพธ์ของ AI เวลาที่ใช้ในโซนนี้ *เพิ่มขึ้น* เพราะผลลัพธ์ของ AI "ดูน่าเชื่อถือแต่อาจมีข้อผิดพลาดซ่อนอยู่"
 
 ความสนใจของวิศวกรจึงถูกดึงไปยังสองปลายทางนี้พร้อมกัน
+
+## กำแพงของ "เป็ด" ที่พังทลาย (The Shrinking Generalist Moat)
+
+ข้อสังเกตจาก [[nattee-niparnan|Nattee Niparnan]] (Ep. 3, 2026-04-28): เดิมทีการเป็น **เป็ด (Generalist)** ที่รู้กว้างๆ ทำได้หลายอย่าง (Dev, Network, Infra, Ops) เคยเป็นจุดแข็งที่เป็น "Moat" (คูเมือง) ป้องกันตัวเองได้ แต่ในยุค AI คูเมืองนี้กำลังหายไปเพราะ:
+
+- **AI ทำงานกว้างได้ดีกว่าคน**: งานที่เคยต้องใช้เวลาศึกษา (เช่น config Cisco/Huawei switch, เขียน Grafana dashboard, เซ็ต VM ใน Proxmox) ตอนนี้ AI สามารถทำแทนได้ทันทีด้วยคำสั่งเดียว
+- **จุดแข็งกลายเป็นจุดอ่อน**: ความรู้ระดับผิวเผิน (พอทำได้) ไม่มีค่าตัวอีกต่อไป เพราะใครที่มี AI ก็ "พอทำได้" เหมือนกัน
+- **ทางรอด**: ต้องเลือก "ลึก" ในบางด้านเพื่อสร้าง [[eh-gland|ต่อมเอ๊ะ]] ที่แข็งแรงพอจะคุม AI ในด้านนั้นๆ ได้ การรู้กว้างยังจำเป็นแต่ต้องใช้เพื่อ "ปิดจุดอ่อน" โดยมี AI เป็นตัวช่วย ไม่ใช่ใช้เป็นจุดขายหลักอีกต่อไป
 
 ## ทำไมส่วนกลางถึงหายไป
 

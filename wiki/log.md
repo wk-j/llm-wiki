@@ -474,3 +474,27 @@ GitHub announcement regarding the move to usage-based billing starting June 1, 2
 
 ## [2026-04-27] Ingest | thClaws Positioning
 Ingested Panutat Tejasen's post on thClaws' positioning as an open-source project. Created source summary, updated thClaws and Panutat Tejasen entities. Created new concepts: [[open-source-governance]] and [[papercut-features]].
+
+## [2026-04-27] ingest | DeepSeek Wikipedia
+Ingested the Wikipedia page for DeepSeek. Created source summary, entity pages for DeepSeek, High-Flyer, and Liang Wenfeng, and concept pages for MLA, GRPO, Mixture of Experts, Open-weight models, and the "Sputnik Moment" in AI.
+
+## [2026-04-28] ingest | The Next Phase of the Microsoft OpenAI Partnership
+
+Ingested the Microsoft announcement (2026-04-27) regarding the restructuring of their partnership with OpenAI. The relationship has shifted from exclusive to non-exclusive, allowing OpenAI to license models to other cloud providers while Microsoft doubles down on its own "Microsoft AI" division and home-grown models.
+
+- Created raw: `raw/microsoft-openai-partnership-2026.md`
+- Created source page: `[[microsoft-openai-partnership-2026]]`
+- Created entity page: `[[microsoft]]` (Thai-primary, Bilingual H1)
+- Updated entity page: `[[openai]]` (Thai-primary) — added section on the partnership shift and infrastructure diversification.
+- Updated `[[index]]` and this log
+
+## [2026-04-28] ingest | วิศวฯคอมจะอยู่อย่างไรในยุค LLM ครองเมือง Ep. 3 — Nattee Niparnan
+
+Ingested Episode 3 of Nattee Niparnan's series. Key takeaways include using AI to close personal weaknesses (testing, UI/UX), the observation that the generalist ("เป็ด") moat is shrinking, and the introduction of the "Eh Gland" (ต่อมเอ๊ะ) as a core judgment requirement.
+
+- Created raw: `raw/LLM Era Computer Engineering Ep 3 - Nattee Niparnan.md`
+- Created source page: `[[llm-era-computer-engineering-ep3-nattee]]`
+- Created Thai-primary concept pages: `[[eh-gland]]`, `[[horror-vacui]]`
+- Updated entity page: `[[nattee-niparnan]]` — added Ep 3 details and "Eh Gland" coinage.
+- Updated concept pages: `[[taste-paradox]]` (linked Eh Gland), `[[engineering-role-shift]]` (added Shrinking Generalist Moat section).
+- Updated `[[index]]` and this log
