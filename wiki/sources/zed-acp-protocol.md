@@ -4,7 +4,7 @@ type: source
 tags: [ai, coding, protocol, acp, zed, editor]
 created: 2026-04-25
 updated: 2026-04-25
-sources: [https://www.youtube.com/watch?v=5gUR55_gbzc]
+sources: [https://www.youtube.com/watch?v=5gUR55_gbzc, agent-client-protocol-docs.md]
 ---
 
 # This New Protocol Will Change AI Coding Forever (ACP)

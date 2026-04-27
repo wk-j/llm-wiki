@@ -3,28 +3,33 @@ title: Panutat Tejasen
 type: entity
 tags: [person, thai, education, ai, software-engineering]
 created: 2026-04-18
-updated: 2026-04-23
-sources: [harness-engineering-panutat.md]
+updated: 2026-04-27
+sources: [harness-engineering-panutat.md, thclaws-announcement-panutat.md, panutat-tejasen-thclaws-positioning.md]
 ---
 
-# ภานุทัต เตชะเสน
+# Panutat Tejasen / ภานุทัต เตชะเสน
 
-ผู้ประกอบการชาวไทยผู้เสนอแนวคิด **[[harness-engineering|Harness Engineering]]** เพื่อเป็นแนวทางตอบสนองของหลักสูตรการศึกษาต่อการมาถึงของ AI coding agent ที่มีความสามารถสูง — ผ่านโพสต์สั้นๆ บน Facebook เมื่อวันที่ 18 เมษายน 2026
+วิศวกรซอฟต์แวร์และผู้ประกอบการชาวไทย ผู้บุกเบิกแนวคิด **[[harness-engineering|Harness Engineering]]** และผู้สร้างโปรเจกต์ **[[thclaws]]**
 
-## จุดยืน (จากโพสต์)
+## ผลงานและแนวคิดที่น่าสนใจ
 
-- มนุษย์ไม่สามารถ "รีวิว" หรือ "แนะนำ" AI Agent ในการเลือก framework/library ได้อย่างมีประโยชน์อีกต่อไป — เพราะความรู้ของ agent นั้นมีมากกว่าของมนุษย์
-- การบังคับให้มีการรีวิวนั้น จะทำให้ประสิทธิภาพ 10 เท่าของ AI ลดลงเหลือ 1/100 เท่า; มนุษย์จะกลายเป็นคอขวดเสียเอง
-- การศึกษาควรตั้งเป้าไปที่ *harness* ที่อยู่รอบๆ agent: เช่น code-review agent, inspection agent, test-generation agent, E2E-testing agent, และ security-audit agent ที่ถูกจัดเรียงเป็น pipeline
-- การนำเสนอเป็นไปอย่างเรียบง่าย: "อย่าดราม่านะครับ แค่ความเห็นส่วนตัว" — วางกรอบว่าเป็นเพียงข้อสังเกตส่วนตัวจากการใช้ agent ช่วยเขียนโค้ดจริงๆ ไม่ใช่การสั่งสอน
+### Harness Engineering (บังเหียนคุม AI)
+Panutat เสนอว่าในยุคที่ AI เก่งขึ้นเรื่อยๆ จนคนตามไม่ทัน การที่คนจะไปนั่ง "รีวิว" หรือ "แนะนำ" AI แบบบรรทัดต่อบรรทัดนั้นเป็นเรื่องเสียเวลาและเป็นคอขวด
+- **ทางแก้:** ให้คนเปลี่ยนหน้าที่มาเป็นผู้ออกแบบ **Harness** (บังเหียน) — คือการสร้างระบบ AI Agent ตัวอื่นๆ มาช่วยกันตรวจสอบ (Audit), ทดสอบ (Test), และควบคุม Agent หลักโดยอัตโนมัติแทนคน
 
-รายละเอียดเพิ่มเติมของแนวคิดนี้อยู่ใน [[harness-engineering]] และ [[harness-engineering-panutat]]
+### thClaws และ Open Source Governance
+Panutat ให้ความสำคัญกับเรื่อง **[[open-source-governance|Governance]]** (ระบบการตัดสินใจ) มากกว่าแค่ความเปิดกว้างของ source code
+- **นิยาม Open Source ปี 2026:** เขาเชื่อว่าความแตกต่างที่แท้จริงคือ "ใครเป็นคนตัดสินใจว่าจะชิปอะไร" (Who decides what to ship?)
+- **ความเร็วและการตอบสนอง:** เน้นการแก้ปัญหาให้ผู้ใช้ทันที (เช่น แก้ issue และชิปเวอร์ชั่นใหม่ภายใน 1 ชั่วโมง) เพื่อตอบโจทย์กลุ่มผู้ใช้ที่ผลิตภัณฑ์ Cloud-first ขนาดใหญ่ไม่สามารถดูแลได้ทั่วถึง (เช่น กลุ่มคนใช้ local LLM บน hardware เฉพาะทาง)
+
+### Product Overhang (ความเก่งที่ซ่อนอยู่)
+เขาชี้ให้เห็นว่า AI model อย่าง Claude 3.5 นั้นเขียน code เก่งมาตั้งนานแล้ว แต่ไม่มีใครรู้ จนกระทั่งมีคนสร้างเครื่องมืออย่าง Claude Code ที่ยอมให้ model เข้าถึงไฟล์ได้ (filesystem access) ความเก่งนี้ถึงถูกปลดปล่อยออกมา ตรงนี้เรียกว่า **[[product-overhang|Product Overhang]]**
 
 ## ดูเพิ่ม
 
+- [[thclaws]]
 - [[harness-engineering]]
-- [[harness-engineering-panutat]]
-- [[ai-orchestrator]]
-- [[engineering-role-shift]]
+- [[product-overhang]]
+- [[claude-code]]
 - [[nattee-niparnan]]
 - [[taste-paradox]]

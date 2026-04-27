@@ -2,6 +2,7 @@
 
 ## Sources
 
+- [[github-copilot-billing-update]] — GitHub Copilot move to usage-based billing and GitHub AI Credits starting June 1, 2026
 - [[ui-style-categories]] — Comprehensive taxonomy of ~40+ UI/UX design styles across 11 categories
 - [[karpathy-llm-knowledge-bases]] — Karpathy's Twitter thread on using LLMs to build personal knowledge wikis
 - [[retro-futuristic-ui-design]] — Complete retro-futurism UI design system with five subgenres, palettes, and implementation patterns
@@ -23,6 +24,8 @@
 - [[software-engineer-role-ai-era]] — Thai blog post on engineering role shift in the AI era: upstream/downstream expand, middle hollows out; six new role archetypes
 - [[will-ai-replace-3d-software]] — Andrew Price X thread: AI + 3D complementarity, moon-base workflow (Blender → Flux.1 Depth → Meshy), judgement-vs-automation skill framework
 - [[harness-engineering-panutat]] — Panutat Tejasen's Thai Facebook post: teach "Harness Engineering" (pipeline of AI review/test/audit agents) rather than teaching students to review AI output
+- [[panutat-tejasen-thclaws-positioning]] — Panutat Tejasen (FB, 2026-04-27): thClaws positioning; Open Source Governance; papercut features; speed as a differentiator
+- [[thclaws-announcement-panutat]] — Panutat Tejasen (FB, 2026-04-26): จาก LLM Wrapper สู่ AI Harness; ประกาศเปิดตัว thClaws; Clean Room Port ของ Claude Code มาเป็น Rust
 - [[llm-era-computer-engineering-nattee]] — Nattee Niparnan's Thai Facebook series (Ep. 1 + Ep. 2): LLM in grader/exam pedagogy, $140 PoC with Coding Agent, "taste paradox," core theory matters more not less
 - [[alex-ker-harnesses-optimize]] — Alex Ker (@thealexker): harness as scaffolding; lean human-written CLAUDE.md, progressive disclosure, R.P.I. prompt framework, subagent patterns, commit-to-one-harness
 - [[claude-code-subagents-docs]] — Anthropic official docs: Claude Code subagent mechanics — file format, scopes, tools/permissions, persistent memory, hooks, foreground/background, `--agent` flag
@@ -44,9 +47,15 @@
 - [[piyalitt-ittichaiwong]] — Thai PhD researcher + 20yr programmer; early-access tester of frontier models (GPT-5.5); co-organizer of OpenAI × Thai AI Society Hackathon
 - [[rtk-github]] — RTK (RTK-AI) GitHub: high-performance Rust CLI proxy for token optimization (60-90% reduction)
 - [[zed-acp-protocol]] — Zed Industries: introducing Agent Client Protocol (ACP) — open standard for AI agent-IDE communication
+- [[arjarn-m-annabelle-critique]] — Analysis of the "Annabelle" financial advisor controversy and the concept of "Financial Poetry" (referred to as "M-nabelle" by Arjarn M)
+- [[gee-money-sg-pb]] — Perspective from a Singapore Private Banker on regulatory standards, voice logs, and wealth preservation
+- [[annabel-wealth-architect-response]] — Annabelle's detailed response to allegations regarding her background, trading practices, and content style
 
 ## Entities
 
+- [[abn-amro]] — Dutch bank with a strong private banking tradition
+- [[github]] — World's largest source code management platform; moving toward AI-first developer platform
+- [[github-copilot]] — AI coding assistant evolving into an "Agentic Platform" with usage-based billing
 - [[andrej-karpathy]] — AI researcher, originator of the LLM knowledge bases pattern and LLM coding pitfalls observations
 - [[anthropic]] — AI safety lab; creator of Claude model family, Claude Code, MCP, advisor strategy
 - [[claude]] — Anthropic's model family: Opus, Sonnet, Haiku, and Mythos preview
@@ -64,19 +73,22 @@
 - [[csharp]] — Microsoft's statically-typed .NET language; C# 14 is the current release
 - [[vannevar-bush]] — MIT engineer, 1945 "As We May Think" essay, originator of the Memex concept and the hypertext lineage
 - [[leo-robinovitch]] — Go TUI developer; author of viewport component, lore pager, kl (k8s logs), wander (Nomad)
+- [[lgt-bank]] — Private bank owned by the Princely House of Liechtenstein
 - [[neovim]] — Lua-embedded modern fork of Vim; 0.12 ships vim.pack as built-in plugin manager
 - [[evgeni-chasnovski]] — Neovim plugin author; creator of mini.nvim and mini.deps, vim.pack design influence
 - [[andrew-price]] — 3D artist (Blender Guru); advocate of hybrid AI + 3D workflows
 - [[blender]] — Open-source 3D creation suite; pipeline anchor for AI + 3D workflows
 - [[comfyui]] — Open-source node-based UI for diffusion image-generation workflows
 - [[flux]] — Black Forest Labs image diffusion family; Flux.1 Depth enables geometry-conditioned generation
-- [[panutat-tejasen]] — Thai practitioner; proposed "Harness Engineering" as curriculum response to capable AI coding agents
+- [[panutat-tejasen]] — Thai practitioner; proposed "Harness Engineering" as curriculum response to capable AI coding agents; creator of thClaws
+- [[thclaws]] — Open-source Rust port of Claude Code's core logic for studying "AI Harness" architecture
 - [[nattee-niparnan]] — Chula CEDT faculty; cafe-grader maintainer; author of the "วิศวฯคอมจะอยู่อย่างไรในยุค LLM ครองเมือง" series; originator of the "taste paradox" framing
 - [[alex-ker]] — Engineer (@thealexker, GitHub AlexKer); author of "Harnesses are everything"; contributor to Roo Code / DeepAgent CLI / HumanLayer; ex-Baseten gpt-oss-swarm
 - [[humanlayer]] — Open-source harness company; cited source for the "dumb zone" instruction-budget framing and the R.P.I. prompt framework
 - [[openai-codex]] — OpenAI's coding harness; converges with Claude Code on skills progressive disclosure, diverges on MCP handling
 - [[opencode]] — Open-source coding harness; loads all MCP tool definitions at startup; docs warn users to limit server count
 - [[tauri]] — Rust-based desktop app framework using OS-native webviews; small bundles, strong security; struggles when app's heavy logic lives in a non-Rust runtime
+- [[ubs]] — Major Swiss investment bank and wealth management firm
 - [[electron]] — Chromium + Node.js desktop app framework; wins when app logic is already JS/Node/Bun (runs in-process, no sidecar)
 - [[owasp]] — OWASP Foundation; publisher of APTS, WSTG, ASVS, Top 10, and the 2026 Agentic Apps Top 10
 - [[somkiat-khitwongwattana]] — Thai software engineer a.k.a. **Akexorcist** (akexorcist.dev); long-time Android dev; writes in Thai on practice and LLM/Agent workflow
@@ -97,10 +109,17 @@
 - [[matt-pocock]] — TypeScript expert and AI automation builder; creator of the swappable-agent high-concurrency development flow
 - [[sandcastle]] — AI sandboxing infrastructure for safe and isolated agentic code execution; part of the swappable agent stack
 - [[vercel]] — Cloud platform and creator of the Vercel AI SDK and Chat SDK used in agent orchestration
+- [[annabelle]] — "Wealth Architect" and finance influencer; subject of the "Financial Poetry" controversy; also known as "M-nabelle" (Arjarn M's alias)
+- [[arjarn-m]] — Owner of "Arjarn M" Facebook page; financial and social critic
+- [[singapore]] — Global financial hub and private banking center known for regulatory transparency and family offices
+- [[gee-money-more]] — Financial insight source focusing on private banking and investment practice
 
 ## Concepts
 
 - [[llm-knowledge-bases]] — The pattern of LLM-maintained personal wikis (what this wiki implements)
+- [[agentic-usage]] — Long-running, multi-step AI sessions with high compute demand; shift from autocomplete to agentic platforms
+- [[usage-based-billing]] — Consumption-based pricing model replacing flat-rate subscriptions for AI resources
+- [[github-ai-credits]] — GitHub's token-based currency for AI usage; replaces PRUs
 - [[llm-coding-pitfalls]] — Karpathy's four observations on LLM code-editing failure modes: hidden confusion, overcomplication, scope drift, weak success criteria
 - [[code-knowledge-graphs]] — Knowledge graphs built from codebase structure for AI agent awareness
 - [[graph-rag]] — Retrieval-Augmented Generation using knowledge graphs instead of vector stores
@@ -118,6 +137,8 @@
 
 - [[soviet-cosmism]] — 1960s–80s retro-futurism subgenre: constructivist geometry, Soviet space program aesthetics, collectivist utopianism, three canonical palettes
 - [[noosphere]] — Vernadsky's concept of Earth's collective thinking layer; bridges Cosmism and modern collective intelligence
+- [[open-source-governance]] — Panutat's 2026 definition: Open source differentiation is governance (who decides what to ship)
+- [[papercut-features]] — Small UX frictions that big products ignore; differentiator for niche/fast-moving projects
 - [[tree-sitter]] — Framework for generating fast, error-tolerant parsers; used by editors, diff tools, and GitHub
 - [[tree-house]] — Helix's ground-up tree-sitter integration crate with injection tree architecture
 - [[holographic-ui]] — Light-projected interface design: 5 color variants, glass panel primitives, mandatory animations, layout patterns
@@ -127,6 +148,7 @@
 - [[memex]] — Vannevar Bush's 1945 hypothetical personal knowledge device with associative trails; ideological ancestor of LLM wikis
 
 - [[advisor-strategy]] — Inversion of orchestrator-worker: cheap executor model escalates to expensive advisor model only at hard decisions
+- [[alternative-assets]] — Investments outside traditional stocks/bonds; key part of UHNW wealth management
 - [[tui]] — Terminal User Interfaces: alt-screen, keyboard-driven apps composed of viewport/list/input components
 - [[terminal-pager]] — Programs for navigating multi-page text via $PAGER; less, bat, delta, lore
 - [[context-rot]] — Model performance degradation as context window fills; attention spread, irrelevant noise; observable ~300–400k tokens in 1M-context models
@@ -141,6 +163,7 @@
 - [[ai-3d-workflow]] — Hybrid pipeline: AI ideates/renders variants; 3D controls precise placement (Andrew Price)
 - [[judgement-vs-automation]] — "If you can predict it, you can train it": predictable tasks automate, judgement tasks don't
 - [[harness-engineering]] — Panutat Tejasen: teach orchestration of review/test/audit agents, not manual review of AI output; human's role is harness design
+- [[product-overhang]] — Latent model capabilities hidden by lack of appropriate interface; case study: Claude 3.5 coding skills vs Claude Code
 - [[taste-paradox]] — Nattee Niparnan: Agent lets you skip practice, but practice is what builds the judgment needed to control the Agent; core tension for Agent-era curriculum
 - [[coding-harness]] — Alex Ker: the harness (Claude Code, Codex, OpenCode, Cursor) as the `while` loop around the LLM; where human engineering judgment lives; includes R.P.I. prompt framework
 - [[instruction-budget]] — The "dumb zone" past a few hundred instructions; attention runs out even if total tokens are modest; distinct from context-rot
@@ -163,5 +186,7 @@
 - [[agent-enablement-role]] — Aaron Levie's framing of the new dedicated job inside enterprises (IT / eng / business function) that owns chatbot→production-agent: 8-item spec spanning workflow mapping, deploy, context, eval, HITL, upgrades, change management; the "future of software engineering in non-tech companies"
 - [[token-optimization]] — Strategies for reducing token count while maintaining information density (e.g. RTK, compaction)
 - [[agent-client-protocol]] — Standard for AI-to-IDE communication; allows swapping AI "brains" while keeping native editor UX
+- [[financial-poetry]] — Thai concept: financial content that prioritizes emotional narrative over technical substance
+- [[private-banking]] — Personalized financial services for HNWIs; relationship management vs. portfolio management; regulatory compliance and voice logs
 
 ## Analysis

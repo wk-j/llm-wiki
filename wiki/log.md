@@ -423,3 +423,54 @@ Ingested RTK-AI GitHub repository. Created source summary `wiki/sources/rtk-gith
 ## [2026-04-25] ingest | Guillermo Rauch - Building the Generative Web
 Ingested Sequoia talk by Guillermo Rauch (Vercel CEO). Created source `wiki/sources/rauch-generative-web.md`, entities `wiki/entities/guillermo-rauch.md`, `wiki/entities/vercel.md`, `wiki/entities/v0-dev.md`, and concepts `wiki/concepts/generative-ui.md`, `wiki/concepts/ephemeral-apps.md`. Updated index. Key themes: ephemeral apps, generative UI, LLMs as customers, and the "Pit of Success" framework strategy.
 
+## [2026-04-27] ingest | Annabel - Your Wealth Architect — Response to Controversy
+
+สรุปโพสต์ชี้แจงจากคุณแอมนาเบล (Annabel) ต่อประเด็นดราม่าเรื่องประวัติการทำงานและสไตล์คอนเทนต์ "Financial Poetry" พร้อมให้ข้อมูลเชิงลึกเกี่ยวกับกระบวนการทำงานจริงในระบบ Private Banking
+
+- สร้างหน้า raw: `raw/annabel-wealth-architect-response.md`
+- สร้างหน้า source: `[[annabel-wealth-architect-response]]`
+- สร้างหน้า concept: `[[alternative-assets]]` (Thai-primary) — อธิบายเรื่อง Hedge Fund, Private Equity ในพอร์ต UHNW
+- สร้างหน้า entity: `[[ubs]]`, `[[lgt-bank]]`, `[[abn-amro]]`
+- อัปเดตหน้า `[[annabelle]]`: เพิ่ม Career Timeline (SCB -> ABN -> LGT -> UBS) และสรุปคำชี้แจงต่อประเด็นต่างๆ
+- อัปเดตหน้า `[[private-banking]]`: เพิ่มรายละเอียดกระบวนการ Call Report, 4-eyes principle และการทำงานภายใต้ Securities and Futures Act
+- อัปเดตหน้า `[[financial-poetry]]`: เพิ่มมุมมองจากฝั่งผู้ผลิตคอนเทนต์เรื่องการ Simplify สำหรับมือใหม่
+- อัปเดต `[[index]]`
+
+ประเด็นสำคัญ: (1) ยืนยันกระบวนการ Voice Log และ Call Report ทำให้การแอบเทรดเป็นไปไม่ได้; (2) เส้นทางการทำงานจริงในสิงคโปร์และสวิตเซอร์แลนด์ช่วงปี 2018-2025; (3) การใช้ AI เป็นเครื่องมือในการทำงาน; (4) การจัดพอร์ตแบบ Subjective ที่มีตั้งแต่เน้นรักษาเงินต้นไปจนถึงเน้นสินทรัพย์ทางเลือก 60%
+
+## [2026-04-27] ingest | Gee Money & More — Singapore Private Banking
+
+สรุปโพสต์จากเพจ Facebook "Gee Money & More" โดย Private Banker จากสิงคโปร์ เพื่อชี้แจงความเข้าใจผิดเกี่ยวกับงานของ Private Banker และมาตรฐานของศูนย์กลางการเงินสิงคโปร์ (Singapore Finance Hub)
+
+- สร้างหน้า raw: `raw/gee-money-sg-pb.md`
+- สร้างหน้า source: `[[gee-money-sg-pb]]`
+- สร้างหน้า concept: `[[private-banking]]` (Thai-primary) — อธิบายความแตกต่างระหว่าง PB (Relationship Manager) กับ Portfolio Manager, เรื่อง Unauthorized Trading, และความสำคัญของ Voice Log
+- สร้างหน้า entity: `[[singapore]]`, `[[gee-money-more]]`
+- อัปเดต `[[index]]`
+
+ประเด็นสำคัญ: (1) Private Banker ไม่มีสิทธิ์เทรดเองโดยพลการ ทุกรายการต้องมี voice log; (2) หากต้องการให้ธนาคารจัดการแทนต้องเซ็น Discretionary Mandate; (3) ลูกค้า PB เน้น "ความปลอดภัยและยั่งยืน" (Wealth Protection) มากกว่ากำไรหวือหวา 2-หลัก; (4) จุดเด่นของสิงคโปร์คือ Regulatory Framework ที่แข็งแกร่งและความโปร่งใส
+
+## [2026-04-27] ingest | thClaws Announcement (Panutat Tejasen)
+สรุปโพสต์ของ [[panutat-tejasen|Panutat Tejasen]] เกี่ยวกับการเปิดตัว [[thclaws]] (โปรเจกต์แกะรอย [[claude-code]] ด้วยภาษา Rust) และการเปลี่ยนผ่านจากยุค "LLM Wrapper" ไปสู่ยุค "Harness Engineering" (วิศวกรรมบังเหียน) 
+
+สร้างหน้าใหม่:
+- [[thclaws-announcement-panutat]] (Source summary - Thai)
+- [[product-overhang]] (Concept - Thai-primary)
+- [[thclaws]] (Entity - Thai-primary)
+
+อัปเดตหน้าเดิม:
+- [[panutat-tejasen]] (Entity - Thai-primary refinement)
+- [[harness-engineering]] (Concept - Added sections on Agentic Apps and thClaws elements)
+- [[index]] (Updated with new pages)
+
+
+## [2026-04-27] ingest | GitHub Copilot Usage-Based Billing Update
+GitHub announcement regarding the move to usage-based billing starting June 1, 2026. Transitioning from PRUs to **GitHub AI Credits** driven by the compute demands of **Agentic Usage**. Code completions remain unlimited, while multi-step repo-wide sessions and code reviews draw from a monthly credit allotment.
+
+- Created source page: `[[github-copilot-billing-update]]`
+- Created entity pages: `[[github]]`, `[[github-copilot]]`
+- Created Thai-primary concept pages: `[[agentic-usage]]`, `[[usage-based-billing]]`, `[[github-ai-credits]]`
+- Updated `[[index]]` and this log
+
+## [2026-04-27] Ingest | thClaws Positioning
+Ingested Panutat Tejasen's post on thClaws' positioning as an open-source project. Created source summary, updated thClaws and Panutat Tejasen entities. Created new concepts: [[open-source-governance]] and [[papercut-features]].
