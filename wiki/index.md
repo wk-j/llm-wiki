@@ -1,6 +1,9 @@
 # Index
 
 ## Sources
+- [[peter-gostev-what-models-suck-at]] — Peter Gostev (Arena.ai, 2026): BullshitBench; Dissatisfaction Rate; Reasoning Regression; Expert Category Gaps (Math vs Creative)
+- [[maggie-appleton-collaborative-ai-engineering]] — Maggie Appleton (GitHub Next, 2026): Collaborative AI Engineering; Alignment Bottleneck; ACE prototype; Vibecoded Slop vs. Craftsmanship; Team Pulse
+- [[ryan-lopopolo-harness-engineering]] — Ryan Lopopolo (OpenAI, 2026): Harness Engineering from a "Token Billionaire" perspective; Code is Free; Just-in-Time Context; Reviewer Personas; Durable Feedback Loops
 - [[llm-era-computer-engineering-ep3-nattee]] — Nattee Niparnan Ep 3: Closing weaknesses (tests/UI), the shrinking generalist moat, and the Eh Gland
 
 - [[microsoft-openai-partnership-2026]] — Microsoft and OpenAI partnership restructure (April 2026): end of exclusivity, revenue share changes, and shift to an "open relationship"
@@ -88,6 +91,9 @@
 - [[comfyui]] — Open-source node-based UI for diffusion image-generation workflows
 - [[flux]] — Black Forest Labs image diffusion family; Flux.1 Depth enables geometry-conditioned generation
 - [[panutat-tejasen]] — Thai practitioner; proposed "Harness Engineering" as curriculum response to capable AI coding agents; creator of thClaws
+- [[peter-gostev]] — AI expert at Arena.ai; creator of BullshitBench; analyst of model failure modes
+- [[arena-ai]] — (Chatbot Arena) LMSYS blind-test platform for LLM evaluation and Elo ranking
+- [[ryan-lopopolo]] — Member of Technical Staff at OpenAI; advocate of agent-exclusively workflows and Harness Engineering
 - [[thclaws]] — Open-source Rust port of Claude Code's core logic for studying "AI Harness" architecture
 - [[nattee-niparnan]] — Chula CEDT faculty; cafe-grader maintainer; author of the "วิศวฯคอมจะอยู่อย่างไรในยุค LLM ครองเมือง" series; originator of the "taste paradox" framing
 - [[alex-ker]] — Engineer (@thealexker, GitHub AlexKer); author of "Harnesses are everything"; contributor to Roo Code / DeepAgent CLI / HumanLayer; ex-Baseten gpt-oss-swarm
@@ -114,6 +120,9 @@
 - [[gpt-5-5]] — OpenAI flagship (2026-04-23): agentic coding SOTA (Terminal-Bench 2.0 82.7%, CyberGym 81.8%); 400K/1M ctx; $5/$30 per 1M tokens; near-Mythos Preview in capability but broadly accessible; 2× price of GPT-5.4, slightly > Opus 4.7 (pricing inversion)
 - [[aaron-levie]] — Co-founder/CEO of Box; enterprise-AI commentator on X; perspective from the company-deploying-AI side rather than the model-building side
 - [[matt-pocock]] — TypeScript expert and AI automation builder; creator of the swappable-agent high-concurrency development flow
+- [[maggie-appleton]] — Staff Research Engineer at GitHub Next; designer/engineer; advocate for Collaborative AI Engineering and alignment
+- [[github-next]] — R&D team at GitHub; creators of Copilot, ACE, and Copilot Workspace
+- [[ace]] — (Agent Collaboration Environment) GitHub Next prototype for multiplayer team-agent collaboration
 - [[sandcastle]] — AI sandboxing infrastructure for safe and isolated agentic code execution; part of the swappable agent stack
 - [[vercel]] — Cloud platform and creator of the Vercel AI SDK and Chat SDK used in agent orchestration
 - [[annabelle]] — "Wealth Architect" and finance influencer; subject of the "Financial Poetry" controversy; also known as "M-nabelle" (Arjarn M's alias)
@@ -143,6 +152,9 @@
 - [[meta-ui]] — Screen-level effects reflecting character state (blood splatter, blur, shake)
 - [[glassmorphism]] — Frosted glass UI style with backdrop blur and transparency
 - [[brutalism]] — Raw, unpolished UI stripped of decorative convention
+- [[bullshitbench]] — Benchmark for LLM "bullshit detection": ability to reject nonsense or false premises
+- [[dissatisfaction-rate]] — Arena.ai metric: frequency of users disliking both anonymous model responses
+- [[reasoning-regression]] — Failure mode where increased thinking capacity leads to over-justifying nonsense
 - [[retro-futurism]] — The past's imagination of the future — five subgenres from 1930s Raygun Gothic to 1980s Cassette Futurism
 - [[cassette-futurism]] — 1970s–80s retro-futurism subgenre: clunky terminals, VHS noise, tape-era computing
 - [[atompunk]] — 1950s–60s retro-futurism subgenre: atomic age optimism, Fallout aesthetic
@@ -175,7 +187,14 @@
 - [[domain-to-ai-translator]] — Engineer role: convert ambiguous business requirements into AI-executable specs
 - [[ai-3d-workflow]] — Hybrid pipeline: AI ideates/renders variants; 3D controls precise placement (Andrew Price)
 - [[judgement-vs-automation]] — "If you can predict it, you can train it": predictable tasks automate, judgement tasks don't
-- [[harness-engineering]] — Panutat Tejasen: teach orchestration of review/test/audit agents, not manual review of AI output; human's role is harness design
+- [[harness-engineering]] — Panutat Tejasen & Ryan Lopopolo: teach orchestration of review/test/audit agents, not manual review of AI output; human's role is harness design; includes OpenAI's "Durable Feedback Loop" strategy
+- [[collaborative-ai-engineering]] — Shift from solo agent usage to team-agent multiplayer collaboration; shared context and alignment-first development
+- [[alignment-bottleneck]] — Maggie Appleton: Speed of AI makes team coordination (not code output) the primary constraint; collapse of the implementation window
+- [[vibecoded-slop]] — Low-quality software/features created by AI without rigorous design or critical thinking; "vibes" over craftsmanship
+- [[team-pulse]] — Using agents to proactively summarize team activity and maintain shared context without information overload
+- [[code-is-free]] — Ryan Lopopolo: Implementation/Refactoring is no longer scarce; focus on human attention and steering; code as disposable build artifact
+- [[token-billionaire]] — Ryan Lopopolo: Using billions of tokens daily to enable agent-only workflows; Staff Engineer mindset for individual developers
+- [[just-in-time-context]] — Ryan Lopopolo: Strategy to avoid context overload by injecting instructions only when Agent fails or needs correction (lint/test/review time)
 - [[product-overhang]] — Latent model capabilities hidden by lack of appropriate interface; case study: Claude 3.5 coding skills vs Claude Code
 - [[taste-paradox]] — Nattee Niparnan: Agent lets you skip practice, but practice is what builds the judgment needed to control the Agent; core tension for Agent-era curriculum
 - [[coding-harness]] — Alex Ker: the harness (Claude Code, Codex, OpenCode, Cursor) as the `while` loop around the LLM; where human engineering judgment lives; includes R.P.I. prompt framework

@@ -498,3 +498,24 @@ Ingested Episode 3 of Nattee Niparnan's series. Key takeaways include using AI t
 - Updated entity page: `[[nattee-niparnan]]` — added Ep 3 details and "Eh Gland" coinage.
 - Updated concept pages: `[[taste-paradox]]` (linked Eh Gland), `[[engineering-role-shift]]` (added Shrinking Generalist Moat section).
 - Updated `[[index]]` and this log
+
+## [2026-04-28] ingest | Ryan Lopopolo Harness Engineering
+Ingested Ryan Lopopolo's talk on Harness Engineering.
+- Created source summary: [[ryan-lopopolo-harness-engineering]]
+- Created entity: [[ryan-lopopolo]]
+- Updated entity: [[openai]]
+- Updated concept: [[harness-engineering]]
+- Created concepts: [[code-is-free]], [[token-billionaire]], [[just-in-time-context]]
+
+## [2026-04-28] ingest | Maggie Appleton Collaborative AI Engineering
+Ingested Maggie Appleton's talk on Collaborative AI Engineering. Explored the shift from individual agent productivity to team-based alignment. Introduced the concept of the "Alignment Bottleneck" and the ACE (Agent Collaboration Environment) prototype.
+- Created source `maggie-appleton-collaborative-ai-engineering`
+- Created entities `maggie-appleton`, `github-next`, `ace`
+- Created concepts `collaborative-ai-engineering`, `alignment-bottleneck`, `vibecoded-slop`, `team-pulse`
+- Updated entity `github`
+
+## [2026-04-28] ingest | Peter Gostev What Models Still Suck At
+Ingested Peter Gostev's talk on model failure modes and Arena.ai data. Explored the "BullshitBench" for nonsense detection and the concept of "Reasoning Regression" where thinking models over-justify false premises.
+- Created source `peter-gostev-what-models-suck-at`
+- Created entities `peter-gostev`, `arena-ai`
+- Created concepts `bullshitbench`, `dissatisfaction-rate`, `reasoning-regression`

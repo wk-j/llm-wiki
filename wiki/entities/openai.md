@@ -4,12 +4,23 @@ type: entity
 tags: [ai, labs, models, organizations]
 created: 2026-04-24
 updated: 2026-04-28
-sources: [Piyalitt Ittichaiwong - GPT-5.5 Launch.md, microsoft-openai-partnership-2026.md]
+sources: [piyalitt-gpt-5-5-launch.md, microsoft-openai-partnership-2026.md, ryan-lopopolo-harness-engineering.md]
 ---
 
 # OpenAI / โอเพนเอไอ
 
 AI lab ในสหรัฐฯ — สร้าง ChatGPT, ตระกูล GPT, และ [[openai-codex|Codex]] เป็น lab คู่แข่งหลักของ [[anthropic|Anthropic]] และ [[moonshot-ai|Moonshot AI]] ในการแข่งขัน frontier model ช่วงปี 2026
+
+## วัฒนธรรมและแนวทางการพัฒนาภายใน
+
+จากข้อมูลของ [[ryan-lopopolo]] (2026) ทีมวิศวกรภายใน OpenAI ได้เปลี่ยนผ่านไปสู่การทำงานแบบ Agent-exclusively:
+- **[[harness-engineering|Harness Engineering]]**: การสร้างระบบควบคุมคุณภาพอัตโนมัติรอบตัว Agent แทนการเขียนโค้ดเอง
+- **[[code-is-free|Code is Free]]**: แนวคิดว่าโค้ดไม่มีต้นทุนการผลิต เน้นการผลิตและ refactor ในสเกลใหญ่
+- **[[token-billionaire|Token Billionaire]]**: การใช้ output tokens ในระดับพันล้านต่อวันเพื่อผลักดันขีดจำกัดของ Agentic workflow
+
+## บุคลากรสำคัญใน wiki
+
+- [[ryan-lopopolo]] — Member of Technical Staff (Harness Engineering advocate)
 
 ## จุดเปลี่ยนความสัมพันธ์กับ Microsoft (เม.ย. 2026)
 
