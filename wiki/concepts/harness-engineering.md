@@ -31,6 +31,16 @@ Panutat เปรียบเทียบ LLM เป็น **"ม้าป่า
 - **Context Compaction:** การจัดการหน่วยความจำ (Token) เพื่อให้ Agent ทำงานต่อเนื่องได้ยาวนาน
 - **Agent Teams:** การจัดกลุ่ม Agent ให้ทำงานร่วมกันเป็นทีม
 
+## ทิศทางใหม่: บังเหียนคือระบบหลังบ้าน (The Harness is the Backend)
+
+ในปี 2026 เกิดแนวคิดใหม่จาก [[mf-piccolo]] ผู้สร้าง [[iii-triple-i]] ที่มองว่า Harness ไม่ควรเป็นเพียงโครงสร้างชั่วคราว (Scaffolding) ที่ครอบ AI ไว้ แต่ควรเป็นส่วนหนึ่งของสถาปัตยกรรม Backend โดยตรง
+
+- **Collapse of Categories:** แทนที่จะมีระบบแยกสำหรับ Queue, State, และ Agent Orchestration ทุกอย่างถูกยุบรวมเหลือเพียง [[wtf-primitives|WTF Primitives]] (Worker, Trigger, Function)
+- **Agent as a Worker:** ในแนวทางนี้ AI Agent คือ "Worker" ประเภทหนึ่งที่สามารถเรียกใช้ Function และจัดการ State ได้ด้วย Primitives เดียวกับโปรแกรมดั้งเดิม
+- **Just-in-time Infrastructure:** Agent สามารถสร้าง Worker/Sandbox ใหม่ขึ้นมาใช้งานได้เองตามความต้องการในขณะรันงาน
+
+การเปลี่ยนแปลงนี้ทำให้ Harness เปลี่ยนจาก "สิ่งแปลกปลอม" ที่มาครอบระบบเดิม กลายเป็นเนื้อเดียวกันกับโครงสร้างพื้นฐานของซอฟต์แวร์
+
 ## ปัญหาตั้งต้น
 
 ข้อเสนอที่พบบ่อย: สอนนักศึกษาให้ "ตรวจงาน AI Agent" และ "แนะนำให้ AI เลือก Framework ที่ถูก" ฟังดูสมเหตุสมผล แต่ในทางปฏิบัติ:

@@ -1,5 +1,16 @@
 # Log
 
+## [2026-04-30] ingest | Andrej Karpathy: From Vibe Coding to Agentic Engineering
+
+Ingested Sequoia AI Ascent 2026 talk by Andrej Karpathy. Explored the transition from "vibe coding" (raising the floor) to "agentic engineering" (raising the ceiling/discipline). Introduced Software 3.0, Jagged Intelligence (Ghosts vs. Animals), and the need for Agent-Native Infrastructure.
+
+- Created source page: `[[andrej-karpathy-vibe-coding-to-agentic-engineering]]`
+- Created/Updated entity page: `[[andrej-karpathy]]` (Updated with 2026 perspectives)
+- Created Thai-primary concept pages: `[[vibe-coding]]`, `[[agentic-engineering]]`, `[[software-3-0]]`, `[[jagged-intelligence]]`, `[[verifiability]]`, `[[agent-native-infrastructure]]`
+- Updated `[[index]]` and this log
+
+Key takeaways: (1) **Software 3.0** defines programming as using the context window as a lever over an LLM interpreter; (2) **Agentic Engineering** is a discipline for maintaining professional quality while using powerful but "jagged" agents; (3) **Jagged Intelligence** describes how AI peaks in verifiable domains (math/code) but fails in common sense (ghosts vs. animals); (4) **Agent-Native Infrastructure** calls for docs and APIs designed for agent legibility, not just human readability.
+
 ## [2026-04-25] ingest | Matt Pocock — High-Concurrency Agent Workflow
 
 Ingested a tweet from Matt Pocock (@mattpocockuk) describing a "New Flow" for software development using swappable agent dependencies. The workflow features Slack-driven triage, a planning agent that generates a Directed Acyclic Graph (DAG) of PRs/branches, and implementer agents working in parallel within Sandcastle sandboxes.
@@ -185,7 +196,7 @@ Source: @brendonovich's canonical X writeup (2026-03-25) — the primary source 
 - `sources/opencode-tauri-to-electron.md` — added cross-reference note pointing to the primary source
 - `index.md` — indexed new source
 
-Net-new beyond the earlier Grok summary: (1) **WebKit rendering perf + style parity** on macOS/Linux was a first-class reason, not just "Chromium is more consistent"; Tauri has a CEF effort but stabilization timing is uncertain. (2) **Bun → Node migration** was underway for other reasons and unlocked the in-process architecture — it's a cascading cause, not just a consequence. (3) **Plugin fallout:** Bun-specific-API plugins stop working; full story deferred to OpenCode 2.0. (4) Tauri-fit condition stated crisply: "Rust heavy core" (Cap video encoding is the canonical fit); shell-only Rust doesn't move the needle.
+Net-new beyond the earlier Grok summary: (1) **WebKit rendering perf + style parity** on macOS/Linux was a first-class reason, not just "Chromium is more consistent"; Tauri has a CEF effort but stabilization documentation timing is uncertain. (2) **Bun → Node migration** was underway for other reasons and unlocked the in-process architecture — it's a cascading cause, not just a consequence. (3) **Plugin fallout:** Bun-specific-API plugins stop working; full story deferred to OpenCode 2.0. (4) Tauri-fit condition stated crisply: "Rust heavy core" (Cap video encoding is the canonical fit); shell-only Rust doesn't move the needle.
 
 ## [2026-04-19] ingest | What's new in Claude Opus 4.7 (Anthropic docs)
 Source: Anthropic developer docs page for Opus 4.7 — developer-facing companion to the earlier marketing announcement. Created/updated:
@@ -526,3 +537,33 @@ Ingested Mario Zechner's talk on the **pi** coding agent. Explored the critique 
 - Created entities `mario-zechner`, `pi-agent`, `terminus-agent`, `vouch-oss`
 - Created concepts `malleable-tools`, `tree-structured-sessions`, `terminalbench`, `clanker-slop`
 - Updated entity `claude-code` and concept `vibecoded-slop`
+
+## [2026-04-28] ingest | ทำไม AI ช่วยให้เขียนโค้ดเร็วขึ้น 10 เท่า แต่โปรเจกต์ยังเสร็จช้าเท่าเดิม?
+Ingested article by Jeeraphan Lairat (Senestia) on the local optimization trap of AI coding speed. Created source summary `jeeraphan-lairat-ai-coding-speed`, entities `jeeraphan-lairat`, `senestia`, and concepts `theory-of-constraints`, `local-optimization-trap`, `lead-time`, `shift-left-testing`, and `limit-wip`. Updated `alignment-bottleneck` to link back to TOC and Lead Time.
+
+## [2026-04-28] ingest | Chase AI — Claude Code + Impeccable = Design CHEAT CODE
+
+สรุปวิดีโอจาก [[chase-ai|Chase AI]] เกี่ยวกับการใช้งาน [[impeccable|Impeccable]] ซึ่งเป็น design skill สำหรับ [[claude-code|Claude Code]] เพื่อแก้ปัญหา "AI Slop" ในงาน frontend โดยเน้นการใช้ภาษาและมาตรฐานการออกแบบระดับมืออาชีพ และการใช้โหมด Live Editing ผ่าน browser
+
+- สร้างหน้า raw: `raw/Claude Code + Impeccable = Design CHEAT CODE.md`
+- สร้างหน้า source: `[[chase-ai-claude-code-impeccable]]`
+- สร้างหน้า entity: `[[chase-ai]]`, `[[impeccable]]`
+- สร้างหน้า concept: `[[ai-slop]]` (Thai-primary) — รวบรวมนิยามของ Slop ในแง่ Design, Code และ Vibes
+- อัปเดตหน้า entity: `[[claude-code]]` — เพิ่มหมวด Ecosystem & Extensions และข้อมูลของ Impeccable
+- อัปเดต `[[index]]` และ log นี้
+
+ประเด็นสำคัญ: (1) AI มักสร้างงานที่ไม่มีรสนิยมเพราะผู้ใช้ไม่ใช้ศัพท์เทคนิคของ designer (Nomenclature); (2) Impeccable เพิ่มเสาหลักการออกแบบ 7 ประการให้ Claude Code; (3) Impeccable Live ช่วยให้การแก้ UI แบบ micro-adjustments ทำได้ง่ายผ่าน Graphic Interface; (4) การทำ Design Audit เพื่อหาจุดที่เป็น anti-patterns และ AI slop
+
+## [2026-04-28] ingest | Why Karpathy’s Second Brain Breaks at Agent Scale
+Ingested technical critique by @Ctrl_Alt_Zaid on agent memory architecture. Created source summary, entity pages for @Ctrl_Alt_Zaid and Mercury, and several concept pages related to machine-efficient memory (Selective Injection, Memory Drift, Scoring, Decay, Hybrid Architecture). Updated Andrej Karpathy entity with the critique.
+## [2026-04-29] ingest | Compound Engineering v3.3.0
+Ingested release notes for [[compound-engineering]] v3.3.0. Created source summary, entities for [[trevin]] and [[every-inc]], and new concept pages for [[playback-pattern]], [[grounding]], and [[cheaper-to-correct]]. Updated [[judgement-vs-automation]] to include agent operational judgment and reduced ceremony.
+## [2026-04-29] ingest | The Harness Is the Backend
+Ingested [[the-harness-is-the-backend]] by [[mf-piccolo]]. Introduced the [[iii-triple-i]] framework and the [[wtf-primitives]] (Worker-Trigger-Function) architectural pattern. Updated [[harness-engineering]] to reflect the shift from extrinsic harness scaffolding to integrated backend primitives.
+
+## [2026-04-30] ingest | thClaws Marketplace / มาร์เก็ตเพลสสำหรับ thClaws
+Ingested Facebook post by [[panutat-tejasen|Panutat Tejasen]] regarding thClaws v0.7.0.
+- Created source summary: `[[thclaws-marketplace-panutat]]`
+- Updated entity pages: `[[panutat-tejasen]]`, `[[thclaws]]`
+- Created concept pages: `[[rabbit-hole]]`, `[[host-bridge]]`
+- Updated `[[wiki/index.md]]`

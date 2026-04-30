@@ -127,9 +127,9 @@ Brief description of what was done and what pages were created/updated.
 - Tags should be lowercase, general enough to cluster related pages (e.g. `psychology`, `productivity`, `ai`), but specific enough to be useful.
 - In markdown **tables**, escape the `|` inside wikilink aliases as `\|` (e.g. `[[claude-code\|Claude Code]]`), or drop the alias entirely (`[[claude-code]]`). An unescaped pipe inside a table cell is parsed as a column separator and breaks the row.
 
-## Thai-Primary Page Writing Style (Concepts, Entities, Analysis)
+## Thai-Primary Page Writing Style (Sources, Concepts, Entities, Analysis)
 
-Concept, entity, and analysis pages are all written with Thai as the primary language. They are frequently cross-linked and should be written so a reader who hasn't seen the original source material can still follow along.
+Source, concept, entity, and analysis pages are all written with Thai as the primary language. They are frequently cross-linked and should be written so a reader who hasn't seen the original source material can still follow along.
 
 **Easy language.** Short sentences. Spoken register, not textbook. Prefer plain verbs over nominalizations. Name the thing before using an acronym. In Thai, this compounds with the translationese rule under `## Bilingual content` below.
 
@@ -141,14 +141,14 @@ Concept, entity, and analysis pages are all written with Thai as the primary lan
 - Break compound English-structured sentences into shorter ones.
 - At the end of each mechanics section, summarize the payoff in one line (`ได้อะไร` / `ผลคือ` / `Why this helps`). Don't make the reader derive it.
 
-Source summaries (`wiki/sources/`) follow their own norms as they are direct summaries of a single document.
+Source summaries (`wiki/sources/`) are also Thai-primary, but stay closer to the structure of the original document — section headings track the source, and primary-source quotes stay verbatim in the source language with a Thai gloss.
 
 ## Bilingual content (Thai + English)
 
 **Per page type:**
 
-- **Concept, Entity, and Analysis pages (`wiki/concepts/`, `wiki/entities/`, `wiki/analysis/`) — Thai is the primary body language.** Write narrative prose in Thai. Keep English for technical terms, proper nouns, product/tool/library names, and direct quotes from English sources. Use English glosses where they help anchor a concept.
-- **Source summaries (`wiki/sources/`)** — default to English. Switch to Thai if the source is Thai, or the user asks for it.
+- **Concept, Entity, Analysis, and Source pages (`wiki/concepts/`, `wiki/entities/`, `wiki/analysis/`, `wiki/sources/`) — Thai is the primary body language.** Write narrative prose in Thai. Keep English for technical terms, proper nouns, product/tool/library names, and direct quotes from English sources. Use English glosses where they help anchor a concept.
+- **Primary-source quotes in source summaries** — keep verbatim in the source language (English source → English quote, Thai source → Thai quote) and gloss alongside in Thai.
 
 **Always in English (tooling stability, all page types):**
 

@@ -9,13 +9,14 @@ sources: [zed-acp-protocol.md]
 
 # Zed Industries
 
-**Zed Industries** คือทีมพัฒนาที่อยู่เบื้องหลัง **Zed**, โค้ดเอดิเตอร์ (Code Editor) ประสิทธิภาพสูงที่เขียนด้วยภาษา Rust ซึ่งเน้นความเร็วและการทำงานร่วมกัน (collaboration)
+**Zed Industries** คือทีมพัฒนาที่อยู่เบื้องหลัง [[zed]], โค้ดเอดิเตอร์ (Code Editor) ประสิทธิภาพสูงที่เขียนด้วยภาษา [[rust]] ซึ่งเน้นความเร็วและการทำงานร่วมกัน (collaboration) ก่อตั้งโดยทีมผู้สร้าง [[atom]] และ [[vscode|Electron]] (Nathan Sobo และคณะ)
 
-## ผลงานสำคัญด้าน AI (Key AI Contributions)
+## ผลงานสำคัญ (Key Achievements)
 
+- **[[zed]] 1.0**: ประกาศเปิดตัวเวอร์ชัน 1.0 อย่างเป็นทางการเมื่อวันที่ 29 เมษายน 2026 รองรับทั้ง macOS, Windows และ Linux
 - **Agent Client Protocol (ACP):** ผู้ริเริ่มมาตรฐานเปิด [[agent-client-protocol|ACP]] ร่วมกับ [[jetbrains|JetBrains]] เพื่อเชื่อมต่อ AI Agent เข้ากับ IDE
-- **Rust-powered Editor:** ใช้ความสามารถของภาษา Rust เพื่อให้เอดิเตอร์ตอบสนองได้ทันท่วงทีแม้ในขณะที่ AI กำลังเสนอโค้ดจำนวนมาก
-- **Multi-modal AI Integration:** บูรณาการ AI เข้ากับ workflow ของการเขียนโค้ดอย่างแนบเนียนผ่านอินเทอร์เฟซที่รองรับ ACP
+- **[[gpui]]**: พัฒนา UI framework ประสิทธิภาพสูงที่ใช้ GPU ในการวาดภาพ
+- **[[deltadb]]**: สร้างระบบ sync ข้อมูลที่ใช้ [[crdts]] เพื่อรองรับการทำงานร่วมกันระหว่างมนุษย์และ AI Agent
 
 ## See also
 

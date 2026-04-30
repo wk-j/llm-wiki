@@ -1,15 +1,16 @@
 # Index
 
 ## Sources
+- [[andrej-karpathy-vibe-coding-to-agentic-engineering]] — Andrej Karpathy (2026): Vibe Coding vs. Agentic Engineering; Software 3.0; Jagged Intelligence (Ghosts vs. Animals); Verifiability; Agent-Native Infrastructure
+- [[zed-is-1-0]] — Zed Industries (2026): Zed editor 1.0 release; video game engine architecture; GPUI (Rust); DeltaDB (CRDT); Parallel Agents; Agent Client Protocol (ACP)
+- [[chase-ai-claude-code-impeccable]] — Chase AI (2026): Claude Code + Impeccable skill; Eleven Pillars of Design; Impeccable Live (browser editing); Greenfield vs. Legacy; Design Audit; AI Slop
+- [[jeeraphan-lairat-ai-coding-speed]] — Jeeraphan Lairat (Senestia, 2026): Why 10x coding speed doesn't lower Lead Time; Theory of Constraints; Local Optimization Trap; Shift-Left Testing; Limit WIP
 - [[mario-zechner-pi-agent]] — Mario Zechner (Pi, 2026): Minimalist terminal coding agent; Spaceship Trap; Malleable Tools; Tree-structured Sessions; Clanker Slop
 - [[peter-gostev-what-models-suck-at]] — Peter Gostev (Arena.ai, 2026): BullshitBench; Dissatisfaction Rate; Reasoning Regression; Expert Category Gaps (Math vs Creative)
 - [[maggie-appleton-collaborative-ai-engineering]] — Maggie Appleton (GitHub Next, 2026): Collaborative AI Engineering; Alignment Bottleneck; ACE prototype; Vibecoded Slop vs. Craftsmanship; Team Pulse
 - [[ryan-lopopolo-harness-engineering]] — Ryan Lopopolo (OpenAI, 2026): Harness Engineering from a "Token Billionaire" perspective; Code is Free; Just-in-Time Context; Reviewer Personas; Durable Feedback Loops
 - [[llm-era-computer-engineering-ep3-nattee]] — Nattee Niparnan Ep 3: Closing weaknesses (tests/UI), the shrinking generalist moat, and the Eh Gland
-
 - [[microsoft-openai-partnership-2026]] — Microsoft and OpenAI partnership restructure (April 2026): end of exclusivity, revenue share changes, and shift to an "open relationship"
-
-
 - [[github-copilot-billing-update]] — GitHub Copilot move to usage-based billing and GitHub AI Credits starting June 1, 2026
 - [[ui-style-categories]] — Comprehensive taxonomy of ~40+ UI/UX design styles across 11 categories
 - [[karpathy-llm-knowledge-bases]] — Karpathy's Twitter thread on using LLMs to build personal knowledge wikis
@@ -58,12 +59,17 @@
 - [[arjarn-m-annabelle-critique]] — Analysis of the "Annabelle" financial advisor controversy and the concept of "Financial Poetry" (referred to as "M-nabelle" by Arjarn M)
 - [[gee-money-sg-pb]] — Perspective from a Singapore Private Banker on regulatory standards, voice logs, and wealth preservation
 - [[annabel-wealth-architect-response]] — Annabelle's detailed response to allegations regarding her background, trading practices, and content style
-
 - [[deepseek-wikipedia]] — Summary of the Wikipedia article for DeepSeek, covering its origin, efficiency focus, and major technical breakthroughs.
+- [[why-karpathys-second-brain-breaks]] — @Ctrl_Alt_Zaid (2026): Why Karpathy's LLM Wiki fails at agent scale; Facts vs. Pages; Memory Drift; Hybrid Architecture; Mercury Agent
+- [[compound-engineering-v3-3-0]] — Compound Engineering (Trevin, 2026): Playback Pattern (Stated/Inferred/Out-of-scope); Grounding with evidence; Reduced agent ceremony; cheaper to correct.
+- [[the-harness-is-the-backend]] — mf-piccolo (2026): "The Harness is the Backend" philosophy; WTF Primitives (Worker-Trigger-Function); iii framework; stochastic debugging; live discovery.
+- [[thclaws-marketplace-panutat]] — Panutat Tejasen (2026-04-30): thClaws v0.7.0 Marketplace; Enterprise Security; Private Marketplace; Host Bridge concept; Rabbit Holes in coding.
+
 ## Entities
+- [[chase-ai]] — Content creator and AI agency founder; Claude Code expert; author of Claude Code Masterclass
+- [[impeccable]] — Open-source design skill and toolset for Claude Code; focuses on high-taste UI and live browser editing
+- [[iii-triple-i]] — Open-source backend engine for AI agents using WTF Primitives.
 - [[microsoft]] — Technology giant; shift toward AI independence, home-grown models, and a non-exclusive OpenAI partnership
-
-
 - [[abn-amro]] — Dutch bank with a strong private banking tradition
 - [[github]] — World's largest source code management platform; moving toward AI-first developer platform
 - [[github-copilot]] — AI coding assistant evolving into an "Agentic Platform" with usage-based billing
@@ -77,6 +83,7 @@
 - [[akon-labs]] — Company behind GitNexus enterprise (SaaS and self-hosted)
 - [[helix]] — Post-modern modal text editor with built-in tree-sitter, LSP, and multiple selections
 - [[imetomi]] — GitHub developer behind the retro-futuristic-ui-design React component library
+- [[jeeraphan-lairat]] — Software Engineer at Senestia; writes on AI productivity and Lead Time
 - [[nathan-david-jones]] — Concept artist whose retro-futuristic UI work is a key visual reference for cassette futurism
 - [[nikolai-fedorov]] — Russian philosopher, originator of Soviet Cosmism and the resurrection imperative
 - [[konstantin-tsiolkovsky]] — Rocket science pioneer, key Soviet Cosmist thinker
@@ -95,7 +102,7 @@
 - [[peter-gostev]] — AI expert at Arena.ai; creator of BullshitBench; analyst of model failure modes
 - [[arena-ai]] — (Chatbot Arena) LMSYS blind-test platform for LLM evaluation and Elo ranking
 - [[ryan-lopopolo]] — Member of Technical Staff at OpenAI; advocate of agent-exclusively workflows and Harness Engineering
-- [[thclaws]] — Open-source Rust port of Claude Code's core logic for studying "AI Harness" architecture
+- [[thclaws]] — Open-source Rust port of Claude Code's core logic; v0.7.0 includes Marketplace for Skills/MCP/Plugins and Host Bridge for Agent Dashboards
 - [[nattee-niparnan]] — Chula CEDT faculty; cafe-grader maintainer; author of the "วิศวฯคอมจะอยู่อย่างไรในยุค LLM ครองเมือง" series; originator of the "taste paradox" framing
 - [[alex-ker]] — Engineer (@thealexker, GitHub AlexKer); author of "Harnesses are everything"; contributor to Roo Code / DeepAgent CLI / HumanLayer; ex-Baseten gpt-oss-swarm
 - [[humanlayer]] — Open-source harness company; cited source for the "dumb zone" instruction-budget framing and the R.P.I. prompt framework
@@ -112,8 +119,10 @@
 - [[claude-mythos-preview]] — Anthropic frontier-preview model; most capable overall; autonomously finds/exploits zero-days in every major OS and browser; release restricted via Project Glasswing
 - [[project-glasswing]] — Anthropic initiative using Mythos Preview to secure critical software before Mythos-class models become broadly available; coordinated vulnerability disclosure
 - [[rtk]] — RTK (RTK-AI): high-performance Rust CLI proxy for output compression and token optimization
+- [[mf-piccolo]] — Developer and architect of iii; author of "The Harness is the Backend".
 - [[zed-industries]] — Creators of the Zed editor and the Agent Client Protocol (ACP)
 - [[google-cloud]] — Google's enterprise cloud division; ships Gemini Enterprise Agent Platform; Cloud Next '26 introduced 7-day long-running Agent Runtime
+- [[gpui]] — Zed's custom GPU-accelerated UI framework built in Rust; feeds data directly to shaders for sub-millisecond latency.
 - [[gemini-enterprise-agent-platform]] — Google Cloud managed agent platform: Agent Runtime (7-day state), ADK, Mission Control, Memory Bank/Profiles, Agent Identity/Registry/Gateway, Observability, BYOC
 - [[hardik-pandya]] — Creator of the Stop Slop skill
 - [[piyalitt-ittichaiwong]] — Thai PhD researcher + 20yr programmer; early-access tester of frontier models (GPT-5.5); promoter of OpenAI Codex Community Thailand; co-organizer of OpenAI × Thai AI Society Hackathon
@@ -124,28 +133,42 @@
 - [[pi-agent]] — (pi.dev) Minimalist, extensible terminal coding agent with tree-structured sessions
 - [[terminus-agent]] — Minimalist agent using only tmux and keystrokes; inspired pi's design
 - [[vouch-oss]] — Mitchell Hashimoto's tool for human verification in Open Source projects
+- [[zed]] — High-performance, AI-native code editor built in Rust using a video game engine architecture; successor to Atom and VS Code.
 - [[matt-pocock]] — TypeScript expert and AI automation builder; creator of the swappable-agent high-concurrency development flow
 - [[maggie-appleton]] — Staff Research Engineer at GitHub Next; designer/engineer; advocate for Collaborative AI Engineering and alignment
 - [[github-next]] — R&D team at GitHub; creators of Copilot, ACE, and Copilot Workspace
 - [[ace]] — (Agent Collaboration Environment) GitHub Next prototype for multiplayer team-agent collaboration
 - [[sandcastle]] — AI sandboxing infrastructure for safe and isolated agentic code execution; part of the swappable agent stack
+- [[senestia]] — Health tech company; focuses on healthcare accessibility and engineering pipeline efficiency
 - [[vercel]] — Cloud platform and creator of the Vercel AI SDK and Chat SDK used in agent orchestration
 - [[annabelle]] — "Wealth Architect" and finance influencer; subject of the "Financial Poetry" controversy; also known as "M-nabelle" (Arjarn M's alias)
+- [[compound-engineering]] — AI agent skill suite by Every Inc. focusing on alignment and reduced friction.
+- [[every-inc]] — Organization developing productivity and AI engineering tools like Compound Engineering.
+- [[trevin]] — Engineer at Every Inc.; lead developer of Compound Engineering and creator of the Playback Pattern.
 - [[arjarn-m]] — Owner of "Arjarn M" Facebook page; financial and social critic
 - [[singapore]] — Global financial hub and private banking center known for regulatory transparency and family offices
 - [[gee-money-more]] — Financial insight source focusing on private banking and investment practice
-
 - [[deepseek]] — Chinese AI lab known for high-efficiency models (V3, R1) and open-weight strategy.
+- [[deltadb]] — Zed's CRDT-based synchronization engine; enables character-level change tracking for human-agent collaboration.
 - [[high-flyer]] — Chinese Quant Hedge Fund; parent and primary funder of DeepSeek.
 - [[liang-wenfeng]] — Founder and CEO of DeepSeek and High-Flyer; advocate for technical efficiency.
+- [[ctrl-alt-zaid]] — AI researcher and author; proponent of machine-efficient agent memory and Mercury project
+- [[mercury]] — Open-source agent memory infrastructure; "Identity as human-owned, Memory as machine-efficient"
+
 ## Concepts
+- [[agent-native-infrastructure]] — Designing systems (docs, APIs, infra) for agent legibility and direct action (sensors/actuators)
+- [[agentic-engineering]] — Raising the ceiling; professional engineering discipline for AI agents; 10x+ speedup with quality control
+- [[ai-slop]] — Generic, low-quality, or tasteless AI output; result of poor prompting or lack of professional vocabulary
 - [[eh-gland]] — The engineering intuition needed to spot AI errors; atrophies if thinking is outsourced
 - [[horror-vacui]] — Fear of empty space in UI design; leads to "Wall of Text" visual clutter
-
-
+- [[jagged-intelligence]] — Peaks in hard tasks (code/math) but valleys in common sense (ghosts vs. animals); driven by verifiability
 - [[llm-knowledge-bases]] — The pattern of LLM-maintained personal wikis (what this wiki implements)
+- [[local-optimization-trap]] — Efficiency trap: optimizing non-bottleneck stages (like coding) without improving Lead Time
 - [[agentic-usage]] — Long-running, multi-step AI sessions with high compute demand; shift from autocomplete to agentic platforms
+- [[software-3-0]] — Programming by prompting; context window as the lever; LLM as the programmable computer
 - [[usage-based-billing]] — Consumption-based pricing model replacing flat-rate subscriptions for AI resources
+- [[verifiability]] — The core driver of AI progress: tasks that are easily measured (code/math) improve fastest via RL
+- [[vibe-coding]] — Raising the floor; programming by "vibing" with AI; humans as directors of implementation
 - [[github-ai-credits]] — GitHub's token-based currency for AI usage; replaces PRUs
 - [[llm-coding-pitfalls]] — Karpathy's four observations on LLM code-editing failure modes: hidden confusion, overcomplication, scope drift, weak success criteria
 - [[code-knowledge-graphs]] — Knowledge graphs built from codebase structure for AI agent awareness
@@ -164,7 +187,6 @@
 - [[cassette-futurism]] — 1970s–80s retro-futurism subgenre: clunky terminals, VHS noise, tape-era computing
 - [[atompunk]] — 1950s–60s retro-futurism subgenre: atomic age optimism, Fallout aesthetic
 - [[raygun-gothic]] — 1930s–50s retro-futurism subgenre: streamlined chrome, art deco geometry meets space age
-
 - [[soviet-cosmism]] — 1960s–80s retro-futurism subgenre: constructivist geometry, Soviet space program aesthetics, collectivist utopianism, three canonical palettes
 - [[noosphere]] — Vernadsky's concept of Earth's collective thinking layer; bridges Cosmism and modern collective intelligence
 - [[open-source-governance]] — Panutat's 2026 definition: Open source differentiation is governance (who decides what to ship)
@@ -176,7 +198,6 @@
 - [[field-keyword]] — C# 14 `field` keyword: compiler-synthesized backing field referenced inside property accessors
 - [[idea-file]] — Karpathy's concept: sharing abstract patterns for LLM agents to instantiate, rather than sharing code implementations
 - [[memex]] — Vannevar Bush's 1945 hypothetical personal knowledge device with associative trails; ideological ancestor of LLM wikis
-
 - [[advisor-strategy]] — Inversion of orchestrator-worker: cheap executor model escalates to expensive advisor model only at hard decisions
 - [[alternative-assets]] — Investments outside traditional stocks/bonds; key part of UHNW wealth management
 - [[tui]] — Terminal User Interfaces: alt-screen, keyboard-driven apps composed of viewport/list/input components
@@ -186,7 +207,6 @@
 - [[effort-levels]] — Claude's reasoning/latency parameter: medium / high / xhigh (new in 4.7) / max
 - [[vim-pack]] — Neovim 0.12's built-in plugin manager: three-function API, lockfile, autocmd hooks, no declarative lazy DSL
 - [[plugin-manager]] — The default pattern: fetch/load/update/pin/hook extensions; Neovim landscape and trade-offs
-
 - [[engineering-role-shift]] — Bimodal shift of engineering work: upstream/downstream expand, middle hollows out
 - [[ai-orchestrator]] — Engineer-as-pipeline-director; senior-developer role redefined for the AI era
 - [[domain-to-ai-translator]] — Engineer role: convert ambiguous business requirements into AI-executable specs
@@ -195,21 +215,29 @@
 - [[malleable-tools]] — Mario Zechner: Minimalist core with hot-reloading extensions; tools that adapt to the developer
 - [[tree-structured-sessions]] — Branching conversation history (tree vs linear) for better context isolation and sub-task management
 - [[terminalbench]] — Evaluation harness for terminal-based agents; measures computer use and coding performance
+- [[theory-of-constraints]] — Management principle: system speed is limited by its slowest part (bottleneck)
 - [[clanker-slop]] — AI-generated spam/PRs in Open Source; human verification and vouching as defense
 - [[harness-engineering]] — Panutat Tejasen & Ryan Lopopolo: teach orchestration of review/test/audit agents, not manual review of AI output; human's role is harness design; includes OpenAI's "Durable Feedback Loop" strategy
+- [[host-bridge]] — Architecture for connecting Agent (Host) to Browser (UI) for dynamic dashboards and file-system interaction
 - [[collaborative-ai-engineering]] — Shift from solo agent usage to team-agent multiplayer collaboration; shared context and alignment-first development
+- [[cheaper-to-correct]] — Design principle: move alignment to early, low-cost stages to reduce the price of agent errors.
 - [[alignment-bottleneck]] — Maggie Appleton: Speed of AI makes team coordination (not code output) the primary constraint; collapse of the implementation window
 - [[vibecoded-slop]] — Low-quality software/features created by AI without rigorous design or critical thinking; "vibes" over craftsmanship
 - [[team-pulse]] — Using agents to proactively summarize team activity and maintain shared context without information overload
 - [[code-is-free]] — Ryan Lopopolo: Implementation/Refactoring is no longer scarce; focus on human attention and steering; code as disposable build artifact
 - [[token-billionaire]] — Ryan Lopopolo: Using billions of tokens daily to enable agent-only workflows; Staff Engineer mindset for individual developers
 - [[just-in-time-context]] — Ryan Lopopolo: Strategy to avoid context overload by injecting instructions only when Agent fails or needs correction (lint/test/review time)
+- [[lead-time]] — Total duration from request to delivery; the primary metric for AI-era productivity
+- [[limit-wip]] — "Stop Starting, Start Finishing" — restricting work-in-progress to maintain flow and identify bottlenecks
 - [[product-overhang]] — Latent model capabilities hidden by lack of appropriate interface; case study: Claude 3.5 coding skills vs Claude Code
 - [[taste-paradox]] — Nattee Niparnan: Agent lets you skip practice, but practice is what builds the judgment needed to control the Agent; core tension for Agent-era curriculum
 - [[coding-harness]] — Alex Ker: the harness (Claude Code, Codex, OpenCode, Cursor) as the `while` loop around the LLM; where human engineering judgment lives; includes R.P.I. prompt framework
+- [[grounding]] — Anchorining agent proposals in code evidence, prior art, or reasoned arguments to prevent speculation.
 - [[instruction-budget]] — The "dumb zone" past a few hundred instructions; attention runs out even if total tokens are modest; distinct from context-rot
 - [[progressive-disclosure]] — Lazy-load pattern for agent context: CLIs --help discovery), Skills (name+description only), MCP tools (Claude Code tool-search 85% context reduction)
 - [[subagent-patterns]] — Parallel fan-out (breadth) vs sequential pipeline (depth); pipeline pattern parallels Panutat's review-agent harness at a different layer
+- [[playback-pattern]] — Alignment framework: Stated, Inferred, and Out-of-scope lists to confirm intent before execution.
+- [[wtf-primitives]] — Worker-Trigger-Function: iii framework's 3 building blocks for unifying agents and backend.
 - [[task-budgets]] — Opus 4.7 beta: advisory token target across a full agentic loop; model-aware (unlike `max_tokens`); min 20k; skip for open-ended quality-critical work
 - [[adaptive-thinking]] — The only thinking-on mode on Opus 4.7; off by default; thinking content also hidden by default unless `display: "summarized"` is set
 - [[delegation-mindset]] — Opus 4.7 triggers reasoning every user turn; front-load intent/constraints/criteria/paths in turn 1 instead of chatty multi-turn guidance
@@ -226,13 +254,20 @@
 - [[stop-slop-concept]] — Technique for making AI writing more human-like
 - [[agent-enablement-role]] — Aaron Levie's framing of the new dedicated job inside enterprises (IT / eng / business function) that owns chatbot→production-agent: 8-item spec spanning workflow mapping, deploy, context, eval, HITL, upgrades, change management; the "future of software engineering in non-tech companies"
 - [[token-optimization]] — Strategies for reducing token count while maintaining information density (e.g. RTK, compaction)
-- [[agent-client-protocol]] — Standard for AI-to-IDE communication; allows swapping AI "brains" while keeping native editor UX
+- [[agent-client-protocol]] — Standard for AI-to-IDE communication; allows swapping AI "brains" while keeping native editor UX (pioneered by Zed and JetBrains)
 - [[financial-poetry]] — Thai concept: financial content that prioritizes emotional narrative over technical substance
 - [[private-banking]] — Personalized financial services for HNWIs; relationship management vs. portfolio management; regulatory compliance and voice logs
-
 - [[mla-attention]] — Multi-head Latent Attention: DeepSeek's mechanism for reducing KV cache and memory usage in Transformers.
 - [[grpo]] — Group Relative Policy Optimization: DeepSeek's RL technique for reasoning models without a separate reward model.
 - [[mixture-of-experts]] — MoE architecture: Using specialized "experts" to increase model capacity without increasing per-token compute cost.
 - [[open-weight-models]] — AI distribution model where weights are public but training data/process remains private.
 - [[sputnik-moment-ai]] — The shift in AI industry assumptions following DeepSeek's high-efficiency breakthroughs in 2025.
+- [[shift-left-testing]] — Moving testing activities earlier in the development lifecycle to reduce wait times
+- [[memory-drift]] — Stale information problem in agent memory; older assumptions conflicting with new reality
+- [[selective-injection|Selective Injection]] — Token optimization strategy: injecting only relevant facts into context vs. document dumps
+- [[memory-scoring]] — Metadata for agent memory: ranking by freshness, confidence, and importance
+- [[memory-decay]] — Archiving or weakening old agent memories to maintain relevance and prevent clutter
+- [[hybrid-memory|Hybrid Memory Architecture]] — Design pattern: Markdown for human interface + structured memory for agent substrate
+- [[rabbit-hole]] — Phenomenon where a "simple" coding task becomes recursively complex and time-consuming
+- [[host-bridge]] — Architecture for connecting Agent (Host) to Browser (UI) for dynamic dashboards and file-system interaction
 ## Analysis
