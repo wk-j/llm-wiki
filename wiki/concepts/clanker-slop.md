@@ -3,8 +3,8 @@ title: Clanker Slop
 type: concept
 tags: [ai, spam, open-source, critique]
 created: 2026-04-28
-updated: 2026-04-28
-sources: [mario-zechner-pi-agent.md]
+updated: 2026-05-03
+sources: [mario-zechner-pi-agent.md, building-pi-world-of-slop.md]
 ---
 
 # Clanker Slop / ขยะจากหุ่นยนต์
@@ -17,12 +17,15 @@ sources: [mario-zechner-pi-agent.md]
 - **PR Flooding**: การมีคนส่ง PR ที่ AI เขียนมาให้ตรวจวันละเป็นร้อยตัว
 - **Vibe-coding Error**: โค้ดที่ดูเหมือนจะรันได้ (Vibe ดี) แต่ซ่อน bug หรือความซับซ้อนที่ไม่มีความจำเป็นไว้
 - **Maintenance Burden**: ภาระในการตรวจงานที่ AI "พ่น" ออกมากลายเป็นภาระหนักของมนุษย์ที่เป็นเจ้าของโปรเจกต์
+- **Attention Drain**: maintainer ต้องเสียเวลาคัดแยกว่า issue/PR ไหนมาจากคนจริงที่เข้าใจปัญหา และอันไหนเป็น output ที่ agent ยิงมาเฉยๆ
 
 ## วิธีแก้ (Human Verification)
 
 เพื่อป้องกัน **Clanker Slop**, นักพัฒนาเริ่มใช้มาตรการรุนแรงขึ้น เช่น:
 - **Whitelist/Vouch**: การอนุญาตเฉพาะคนที่เคยคุยกันในฐานะ "มนุษย์" ก่อนเท่านั้นถึงจะส่ง PR ได้
 - **Auto-closing**: การปิด PR ทันทีถ้าตรวจสอบพบว่ามาจากเครื่องมือ AI โดยไม่ผ่านการตรวจสอบเบื้องต้น
+- **Human Voice Gate**: ขอให้ผู้ส่งเขียน issue สั้นๆ ด้วยเสียงของตัวเองก่อน ถ้าดูเป็นมนุษย์จริงจึงค่อย vouch รอบถัดไป
+- **OSS Vacation**: ปิด tracker ชั่วคราวเมื่อภาระเกินรับไหว เป็น social protocol เพื่อรักษา attention ของ maintainer ไม่ใช่แค่ technical filter
 
 ## ดูเพิ่ม
 

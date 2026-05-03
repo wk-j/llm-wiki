@@ -1,5 +1,17 @@
 # Log
 
+## [2026-05-02] ingest | JRT Investment — I Don't Give a Fuck Skill
+
+Ingested a Thai Facebook post by JRT Investment framing "I don't give a fuck" as a selective-care skill, not apathy. The useful idea is **care allocation**: attention is a scarce resource, so the work is deciding which people, work, and feedback deserve it.
+
+- Created raw capture: `raw/JRT Investment - I dont give a fuck skill.md`
+- Created source page: `[[jrt-investment-idgaf-skill]]`
+- Created entity page: `[[jrt-investment]]`
+- Created concept page: `[[care-allocation]]`
+- Updated `[[index]]`, `[[log]]`, and `hotcache.md`
+
+Key takeaways: (1) mental load often comes from letting external judgment set the agenda; (2) reducing low-value care lowers the perceived cost of failure; (3) this connects to existing wiki themes around scarce human attention in [[code-is-free]], [[cheaper-to-correct]], and [[delegation-mindset]].
+
 ## [2026-04-30] ingest | Andrej Karpathy: From Vibe Coding to Agentic Engineering
 
 Ingested Sequoia AI Ascent 2026 talk by Andrej Karpathy. Explored the transition from "vibe coding" (raising the floor) to "agentic engineering" (raising the ceiling/discipline). Introduced Software 3.0, Jagged Intelligence (Ghosts vs. Animals), and the need for Agent-Native Infrastructure.
@@ -566,4 +578,12 @@ Ingested Facebook post by [[panutat-tejasen|Panutat Tejasen]] regarding thClaws 
 - Created source summary: `[[thclaws-marketplace-panutat]]`
 - Updated entity pages: `[[panutat-tejasen]]`, `[[thclaws]]`
 - Created concept pages: `[[rabbit-hole]]`, `[[host-bridge]]`
+- Updated `[[wiki/index.md]]`
+
+## [2026-05-03] ingest | Building pi in a World of Slop — Mario Zechner
+
+Ingested Mario Zechner's AI Engineer talk connecting pi's design to a broader critique of agent-generated slop.
+- Created source summary: `[[building-pi-world-of-slop]]`
+- Updated entities: `[[mario-zechner]]`, `[[pi-agent]]`
+- Updated concepts: `[[malleable-tools]]`, `[[clanker-slop]]`, `[[vibecoded-slop]]`, `[[coding-harness]]`
 - Updated `[[wiki/index.md]]`

@@ -1,10 +1,12 @@
 # Index
 
 ## Sources
+- [[jrt-investment-idgaf-skill]] — JRT Investment (FB, 2026-05-02): "I don't give a fuck" as care allocation; attention as scarce resource; lower mental load and faster decisions
 - [[andrej-karpathy-vibe-coding-to-agentic-engineering]] — Andrej Karpathy (2026): Vibe Coding vs. Agentic Engineering; Software 3.0; Jagged Intelligence (Ghosts vs. Animals); Verifiability; Agent-Native Infrastructure
 - [[zed-is-1-0]] — Zed Industries (2026): Zed editor 1.0 release; video game engine architecture; GPUI (Rust); DeltaDB (CRDT); Parallel Agents; Agent Client Protocol (ACP)
 - [[chase-ai-claude-code-impeccable]] — Chase AI (2026): Claude Code + Impeccable skill; Eleven Pillars of Design; Impeccable Live (browser editing); Greenfield vs. Legacy; Design Audit; AI Slop
 - [[jeeraphan-lairat-ai-coding-speed]] — Jeeraphan Lairat (Senestia, 2026): Why 10x coding speed doesn't lower Lead Time; Theory of Constraints; Local Optimization Trap; Shift-Left Testing; Limit WIP
+- [[building-pi-world-of-slop]] — Mario Zechner (AI Engineer, 2026): pi as self-modifying agent core; hidden context critique; clanker pressure on OSS; slow-down discipline for agent-generated code
 - [[mario-zechner-pi-agent]] — Mario Zechner (Pi, 2026): Minimalist terminal coding agent; Spaceship Trap; Malleable Tools; Tree-structured Sessions; Clanker Slop
 - [[peter-gostev-what-models-suck-at]] — Peter Gostev (Arena.ai, 2026): BullshitBench; Dissatisfaction Rate; Reasoning Regression; Expert Category Gaps (Math vs Creative)
 - [[maggie-appleton-collaborative-ai-engineering]] — Maggie Appleton (GitHub Next, 2026): Collaborative AI Engineering; Alignment Bottleneck; ACE prototype; Vibecoded Slop vs. Craftsmanship; Team Pulse
@@ -129,8 +131,8 @@
 - [[openai]] — AI lab; creator of ChatGPT, GPT family, and Codex; 2026 rival to Anthropic and Moonshot AI on the frontier-model axis
 - [[gpt-5-5]] — OpenAI flagship (2026-04-23): agentic coding SOTA (Terminal-Bench 2.0 82.7%, CyberGym 81.8%); 400K/1M ctx; $5/$30 per 1M tokens; near-Mythos Preview in capability but broadly accessible; 2× price of GPT-5.4, slightly > Opus 4.7 (pricing inversion)
 - [[aaron-levie]] — Co-founder/CEO of Box; enterprise-AI commentator on X; perspective from the company-deploying-AI side rather than the model-building side
-- [[mario-zechner]] — Creator of libGDX and pi coding agent; advocate for minimalist malleable tools
-- [[pi-agent]] — (pi.dev) Minimalist, extensible terminal coding agent with tree-structured sessions
+- [[mario-zechner]] — Creator of libGDX and pi coding agent; advocate for minimalist malleable tools and slow-down discipline when using agents
+- [[pi-agent]] — (pi.dev) Minimalist, extensible terminal coding agent with tree-structured sessions and self-modifying TypeScript extensions
 - [[terminus-agent]] — Minimalist agent using only tmux and keystrokes; inspired pi's design
 - [[vouch-oss]] — Mitchell Hashimoto's tool for human verification in Open Source projects
 - [[zed]] — High-performance, AI-native code editor built in Rust using a video game engine architecture; successor to Atom and VS Code.
@@ -154,8 +156,10 @@
 - [[liang-wenfeng]] — Founder and CEO of DeepSeek and High-Flyer; advocate for technical efficiency.
 - [[ctrl-alt-zaid]] — AI researcher and author; proponent of machine-efficient agent memory and Mercury project
 - [[mercury]] — Open-source agent memory infrastructure; "Identity as human-owned, Memory as machine-efficient"
+- [[jrt-investment]] — Thai Facebook source on investment and life mindset; frames "I don't give a fuck" as selective care allocation
 
 ## Concepts
+- [[care-allocation]] — Treating attention/care as a scarce resource: care deeply about high-stake people/work, ignore low-value judgment noise
 - [[agent-native-infrastructure]] — Designing systems (docs, APIs, infra) for agent legibility and direct action (sensors/actuators)
 - [[agentic-engineering]] — Raising the ceiling; professional engineering discipline for AI agents; 10x+ speedup with quality control
 - [[ai-slop]] — Generic, low-quality, or tasteless AI output; result of poor prompting or lack of professional vocabulary
@@ -212,17 +216,17 @@
 - [[domain-to-ai-translator]] — Engineer role: convert ambiguous business requirements into AI-executable specs
 - [[ai-3d-workflow]] — Hybrid pipeline: AI ideates/renders variants; 3D controls precise placement (Andrew Price)
 - [[judgement-vs-automation]] — "If you can predict it, you can train it": predictable tasks automate, judgement tasks don't
-- [[malleable-tools]] — Mario Zechner: Minimalist core with hot-reloading extensions; tools that adapt to the developer
+- [[malleable-tools]] — Mario Zechner: Minimalist core with hot-reloading/self-modifying extensions; tools that adapt to the developer
 - [[tree-structured-sessions]] — Branching conversation history (tree vs linear) for better context isolation and sub-task management
 - [[terminalbench]] — Evaluation harness for terminal-based agents; measures computer use and coding performance
 - [[theory-of-constraints]] — Management principle: system speed is limited by its slowest part (bottleneck)
-- [[clanker-slop]] — AI-generated spam/PRs in Open Source; human verification and vouching as defense
+- [[clanker-slop]] — AI-generated spam/PRs in Open Source; human verification, vouching, and maintainer attention protection as defense
 - [[harness-engineering]] — Panutat Tejasen & Ryan Lopopolo: teach orchestration of review/test/audit agents, not manual review of AI output; human's role is harness design; includes OpenAI's "Durable Feedback Loop" strategy
 - [[host-bridge]] — Architecture for connecting Agent (Host) to Browser (UI) for dynamic dashboards and file-system interaction
 - [[collaborative-ai-engineering]] — Shift from solo agent usage to team-agent multiplayer collaboration; shared context and alignment-first development
 - [[cheaper-to-correct]] — Design principle: move alignment to early, low-cost stages to reduce the price of agent errors.
 - [[alignment-bottleneck]] — Maggie Appleton: Speed of AI makes team coordination (not code output) the primary constraint; collapse of the implementation window
-- [[vibecoded-slop]] — Low-quality software/features created by AI without rigorous design or critical thinking; "vibes" over craftsmanship
+- [[vibecoded-slop]] — Low-quality software/features created by AI without rigorous design, code reading, or critical thinking; "vibes" over craftsmanship
 - [[team-pulse]] — Using agents to proactively summarize team activity and maintain shared context without information overload
 - [[code-is-free]] — Ryan Lopopolo: Implementation/Refactoring is no longer scarce; focus on human attention and steering; code as disposable build artifact
 - [[token-billionaire]] — Ryan Lopopolo: Using billions of tokens daily to enable agent-only workflows; Staff Engineer mindset for individual developers
@@ -231,7 +235,7 @@
 - [[limit-wip]] — "Stop Starting, Start Finishing" — restricting work-in-progress to maintain flow and identify bottlenecks
 - [[product-overhang]] — Latent model capabilities hidden by lack of appropriate interface; case study: Claude 3.5 coding skills vs Claude Code
 - [[taste-paradox]] — Nattee Niparnan: Agent lets you skip practice, but practice is what builds the judgment needed to control the Agent; core tension for Agent-era curriculum
-- [[coding-harness]] — Alex Ker: the harness (Claude Code, Codex, OpenCode, Cursor) as the `while` loop around the LLM; where human engineering judgment lives; includes R.P.I. prompt framework
+- [[coding-harness]] — Alex Ker / Mario Zechner: the harness as the `while` loop and de facto context owner around the LLM; where human engineering judgment lives
 - [[grounding]] — Anchorining agent proposals in code evidence, prior art, or reasoned arguments to prevent speculation.
 - [[instruction-budget]] — The "dumb zone" past a few hundred instructions; attention runs out even if total tokens are modest; distinct from context-rot
 - [[progressive-disclosure]] — Lazy-load pattern for agent context: CLIs --help discovery), Skills (name+description only), MCP tools (Claude Code tool-search 85% context reduction)
