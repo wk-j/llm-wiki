@@ -15,7 +15,13 @@
       "Bash(gh api *)",
       "WebFetch(domain:agentclientprotocol.com)",
       "WebSearch",
-      "Bash(gh search *)"
+      "Bash(gh search *)",
+      "Read(//Users/wk/.opencode/bin/**)",
+      "Bash(codesign -dv /Users/wk/.opencode/bin/opencode)",
+      "Bash(spctl -a -vv /Users/wk/.opencode/bin/opencode)",
+      "Bash(xattr /Users/wk/.opencode/bin/opencode)",
+      "Bash(log show *)",
+      "Bash(/usr/bin/log show *)"
     ]
   }
 }

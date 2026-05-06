@@ -4,7 +4,7 @@ type: concept
 tags: [ai, quality, design, critique]
 created: 2026-04-28
 updated: 2026-04-28
-sources: [chase-ai-claude-code-impeccable.md, mario-zechner-pi-agent.md, maggies-appleton-collaborative-ai-engineering.md]
+sources: [chase-ai-claude-code-impeccable.md, mario-zechner-pi-agent.md, maggies-appleton-collaborative-ai-engineering.md, ai-language-crisis-phenomenon.md]
 ---
 
 # AI Slop / ขยะ AI
@@ -13,6 +13,7 @@ sources: [chase-ai-claude-code-impeccable.md, mario-zechner-pi-agent.md, maggies
 
 ## ประเภทของ AI Slop
 
+- **Text/Language Slop:** งานเขียนที่ใช้คำฟุ่มเฟือย, โครงสร้างประโยคซ้ำซาก (เช่น "ไม่ใช่แค่... แต่คือ..."), หรือคำศัพท์ยอดฮิตที่ AI ชอบใช้ (delve, unlock) จนทำให้ภาษาดูจืดชืดและขาดอารมณ์ความรู้สึกของมนุษย์ (ดูเพิ่มที่ [[ai-language-crisis-phenomenon]])
 - **Visual/Design Slop:** งานออกแบบ UI ที่ดูเป็นแพทเทิร์นซ้ำๆ (เช่น bento box แบบเดิมๆ หรือสีที่ดูตุ่นๆ) ขาดความเข้าใจในเรื่อง hierarchy, typography และ spatial design ที่ดี
 - **Code Slop (Clanker Slop):** โค้ดที่ AI เขียนออกมาแบบขอไปที มีความซับซ้อนเกินจำเป็น หรือดูเหมือนจะทำงานได้แต่แฝงไปด้วย bug (ดูเพิ่มที่ [[clanker-slop]])
 - **Vibecoded Slop:** ผลงานที่เน้น "ความรู้สึก" ว่าใช่ แต่เชิงเทคนิคแล้วใช้งานจริงไม่ได้หรือไม่เสถียร (ดูเพิ่มที่ [[vibecoded-slop]])

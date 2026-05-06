@@ -1,6 +1,10 @@
 # Index
 
 ## Sources
+- [[agentic-coding-trap]] — Lars Faye (2026): The "Agentic Coding is a trap" warning, cognitive debt, and skill atrophy from over-relying on coding agents
+- [[anthropic-engineer-claude-code]] — summary of Cal Rueb's presentation on Claude Code best practices
+- [[ai-language-crisis-phenomenon]] — Thairath Plus (2026-05-03): AI Language Crisis Phenomenon; Text Slop; the "Not just... but..." cliché; and the threat to human language depth.
+- [[matt-pocock-4-ai-terms]] — Matt Pocock (2026-05-04) defines the 4 core AI terms: Model, Harness, Environment, and Agent.
 - [[jrt-investment-idgaf-skill]] — JRT Investment (FB, 2026-05-02): "I don't give a fuck" as care allocation; attention as scarce resource; lower mental load and faster decisions
 - [[andrej-karpathy-vibe-coding-to-agentic-engineering]] — Andrej Karpathy (2026): Vibe Coding vs. Agentic Engineering; Software 3.0; Jagged Intelligence (Ghosts vs. Animals); Verifiability; Agent-Native Infrastructure
 - [[zed-is-1-0]] — Zed Industries (2026): Zed editor 1.0 release; video game engine architecture; GPUI (Rust); DeltaDB (CRDT); Parallel Agents; Agent Client Protocol (ACP)
@@ -68,6 +72,11 @@
 - [[thclaws-marketplace-panutat]] — Panutat Tejasen (2026-04-30): thClaws v0.7.0 Marketplace; Enterprise Security; Private Marketplace; Host Bridge concept; Rabbit Holes in coding.
 
 ## Entities
+- [[lars-faye]] — Developer and author warning about the cognitive debt of agentic coding
+- [[simon-willison]] — Senior developer and creator of Datasette; highlighted cognitive debt from AI assistance
+- [[dax]] — Creator of OpenCode; advocates that "coding is planning"
+- [[cal-rueb]] — Anthropic engineer and core contributor to Claude Code
+- [[claude-web]] — The browser-based interface for Claude (claude.ai).
 - [[chase-ai]] — Content creator and AI agency founder; Claude Code expert; author of Claude Code Masterclass
 - [[impeccable]] — Open-source design skill and toolset for Claude Code; focuses on high-taste UI and live browser editing
 - [[iii-triple-i]] — Open-source backend engine for AI agents using WTF Primitives.
@@ -159,6 +168,10 @@
 - [[jrt-investment]] — Thai Facebook source on investment and life mindset; frames "I don't give a fuck" as selective care allocation
 
 ## Concepts
+- [[cognitive-debt]] — Losing mental models of a codebase by over-delegating implementation to AI
+- [[skill-atrophy]] — The degradation of coding and critical thinking skills due to AI over-reliance
+- [[vendor-lock-in]] — Beyond API lock-in: locking an entire team's skills to a subsidized AI provider
+- [[agentic-search]] — using terminal tools (grep/find) to explore a codebase instead of RAG indexing
 - [[care-allocation]] — Treating attention/care as a scarce resource: care deeply about high-stake people/work, ignore low-value judgment noise
 - [[agent-native-infrastructure]] — Designing systems (docs, APIs, infra) for agent legibility and direct action (sensors/actuators)
 - [[agentic-engineering]] — Raising the ceiling; professional engineering discipline for AI agents; 10x+ speedup with quality control

@@ -15,11 +15,13 @@ Known for his "Total TypeScript" educational content and increasingly for his wo
 
 ## Contributions to Agentic Workflows
 
+- **Structural Definitions:** Defined the relationship between Model, Harness, Environment, and Agent (May 2026), clarifying that an Agent is a Model, harnessed, in an environment.
 - **Slack-driven Triage:** Using `/triage` to initiate agentic discussion threads for repo issues.
 - **Parallel Implementation:** Orchestrating multiple implementer agents based on a dependency graph of branches.
 - **Architectural Guardrails:** Running `/review` periodically to detect doc drift and architectural regression.
 
 ## See also
-- [[matt-pocock-agent-workflow]]
+- [[matt-pocock-4-ai-terms]]
+- [[coding-harness]]
 - [[pr-dependency-dag]]
 - [[sandcastle]]

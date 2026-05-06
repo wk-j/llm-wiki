@@ -587,3 +587,33 @@ Ingested Mario Zechner's AI Engineer talk connecting pi's design to a broader cr
 - Updated entities: `[[mario-zechner]]`, `[[pi-agent]]`
 - Updated concepts: `[[malleable-tools]]`, `[[clanker-slop]]`, `[[vibecoded-slop]]`, `[[coding-harness]]`
 - Updated `[[wiki/index.md]]`
+
+## [2026-05-04] ingest | Matt Pocock - 4 AI Terms Defined
+Ingested Matt Pocock's concise structural definitions of **Model**, **Harness**, **Environment**, and **Agent**. Key takeaway: an Agent is a combination of a Model, a Harness (prompt/tools/state), and an Environment (file system/MCP). This clarifies how the same model results in different agents (e.g., Claude Code vs. Claude Web). 
+- Created source summary: `[[matt-pocock-4-ai-terms]]`
+- Created entity: `[[claude-web]]`
+- Updated entity: `[[matt-pocock]]`
+- Updated concept: `[[coding-harness]]`
+- Updated `[[wiki/index.md]]`
+
+## [2026-05-04] ingest | AI Language Crisis Phenomenon
+Ingested an article from Thairath Plus about "Text Slop" and the "AI Language Crisis." Highlights the cliché "Not just... but..." formula and the threat to human language depth if models keep training on averaged, synthetic output.
+- Created source summary: `[[ai-language-crisis-phenomenon]]`
+- Updated concept: `[[ai-slop]]`, `[[stop-slop-concept]]`
+- Updated `[[wiki/index.md]]`
+
+## [2026-05-04] ingest | This Anthropic Engineer Uses Claude Code Differently Than Everyone Else
+Ingested a video presentation by Anthropic engineer Cal Rueb about Claude Code best practices.
+- Created source summary: `[[anthropic-engineer-claude-code]]`
+- Created entity: `[[cal-rueb]]`
+- Created concept: `[[agentic-search]]`
+- Updated entity: `[[claude-code]]`
+- Updated concept: `[[claude-md]]`
+- Updated `[[wiki/index.md]]`
+
+## [2026-05-05] ingest | Agentic Coding is a Trap
+Ingested Lars Faye's article "Agentic Coding is a Trap". The article warns against over-reliance on coding agents, highlighting the risks of cognitive debt and skill atrophy.
+- Created source summary: `[[agentic-coding-trap]]`
+- Created entities: `[[lars-faye]]`, `[[simon-willison]]`, `[[dax]]`
+- Created concepts: `[[cognitive-debt]]`, `[[skill-atrophy]]`, `[[vendor-lock-in]]`
+- Updated `[[index]]`, `[[log]]`, and `hotcache.md`

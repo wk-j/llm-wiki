@@ -11,7 +11,18 @@ sources: [alex-ker-harnesses-optimize.md, building-pi-world-of-slop.md]
 
 **Coding harness** คือชั้นของซอฟต์แวร์ที่อยู่ระหว่างผู้ใช้กับ LLM จริง — เช่น [[claude-code|Claude Code]], [[openai-codex|Codex]], [[opencode|OpenCode]], Cursor, Deep Agent CLI, Roo Code — ซึ่งไม่ใช่ตัว model เอง แต่เป็นสิ่งที่ทำให้ model กลายเป็นเครื่องมือที่ใช้งานได้จริง
 
-[[alex-ker|Alex Ker]] สรุปไว้ว่า "engineers used to argue about IDEs, now we argue about harnesses" (2026-04-18)
+## โครงสร้างพื้นฐาน (The Formula)
+
+[[matt-pocock|Matt Pocock]] (2026-05-04) ให้โครงสร้างที่ชัดเจนในการแยกแยะองค์ประกอบของระบบ AI:
+
+- **Model (ตัวโมเดล)**: เป็นก้อน parameters (stateless blob) ที่ทำหน้าที่เดา token ถัดไปเท่านั้น (เช่น Opus)
+- **Harness (ตัวครอบ)**: ทุกสิ่งที่อยู่รอบโมเดลที่ทำให้มันกลายเป็นเอเจนท์ได้ เช่น tools, system prompt, context management
+- **Environment (สภาพแวดล้อม)**: โลกภายนอกที่เอเจนท์เข้าไปกระทำ เช่น file system, [[model-context-protocol|MCP]] servers
+- **Agent (เอเจนท์)**: ผลลัพธ์จากการนำ **Model** มาใส่ **Harness** แล้วรันใน **Environment**
+
+> **Agent = Model + Harnessed + In an Environment**
+
+มุมมองนี้ช่วยให้เข้าใจว่าทำไมโมเดลตัวเดียวกัน (เช่น Opus) ถึงกลายเป็นเอเจนท์ที่ต่างกันได้ (เช่น Claude Code vs. Claude Web) เพราะพวกมันมี "Harness" ที่ต่างกันนั่นเอง
 
 ## นิยามเชิงวิศวกรรม
 

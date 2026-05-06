@@ -4,7 +4,7 @@ type: entity
 tags: [ai, claude, tools, agents, cli, coding]
 created: 2026-04-16
 updated: 2026-04-23
-sources: [Introducing Claude Opus 4.7.md, Using Claude Code Session Management & 1M Context.md, forrestchang andrej-karpathy-skills.md, alex-ker-harnesses-optimize.md, Create custom subagents - Claude Code Docs.md, opencode-vs-claude-code-morph.md, Remote Control - Claude Code Docs.md, cyril-xbt-claude-md-guide.md]
+sources: [Introducing Claude Opus 4.7.md, Using Claude Code Session Management & 1M Context.md, forrestchang andrej-karpathy-skills.md, alex-ker-harnesses-optimize.md, Create custom subagents - Claude Code Docs.md, opencode-vs-claude-code-morph.md, Remote Control - Claude Code Docs.md, cyril-xbt-claude-md-guide.md, This Anthropic Engineer Uses Claude Code Differently Than Everyone Else.md]
 ---
 
 # Claude Code
@@ -74,6 +74,8 @@ CC มีหลายวิธีในการสั่งงาน agent เ�
 
 ## ดูเพิ่ม
 
+- [[cal-rueb]]
+- [[agentic-search]]
 - [[claude]]
 - [[anthropic]]
 - [[claude-opus-4-7]]
