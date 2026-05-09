@@ -1,6 +1,9 @@
 # Index
 
 ## Sources
+- [[memory-and-dreaming-self-learning-agents]] — Anthropic talk (Mahes, 2026-05-09): Memory-as-filesystem + Dreaming (out-of-band batch curation) for self-learning agents in Managed Agents API
+- [[helldivers-2-mostly-negative-reviews]] — SwanyPlaysGames (2026-05-07): Helldivers 2 Steam reviews hit "Mostly Negative"; late-game stagnation; monkey-paw balancing; monetization focus
+- [[multi-token-prediction-gemma-4]] — Google (2026-05-05): MTP drafters for Gemma 4; up to 3x speedup via speculative decoding; lossless; shares activations and KV cache with target
 - [[agentic-coding-trap]] — Lars Faye (2026): The "Agentic Coding is a trap" warning, cognitive debt, and skill atrophy from over-relying on coding agents
 - [[anthropic-engineer-claude-code]] — summary of Cal Rueb's presentation on Claude Code best practices
 - [[ai-language-crisis-phenomenon]] — Thairath Plus (2026-05-03): AI Language Crisis Phenomenon; Text Slop; the "Not just... but..." cliché; and the threat to human language depth.
@@ -72,6 +75,13 @@
 - [[thclaws-marketplace-panutat]] — Panutat Tejasen (2026-04-30): thClaws v0.7.0 Marketplace; Enterprise Security; Private Marketplace; Host Bridge concept; Rabbit Holes in coding.
 
 ## Entities
+- [[claude-managed-agents]] — Anthropic's managed agent platform; Memory (public beta) + Dreaming (research preview); permission scopes, optimistic concurrency, audit log
+- [[harvey-ai]] — Legal AI; early Dreaming customer; reported 6× task completion on legal benchmark
+- [[arrowhead-game-studios]] — Swedish developer of Helldivers 2; criticized for "Monkey Paw" balancing and late-game stagnation in 2026
+- [[helldivers-2]] — Squad-based shooter by Arrowhead; hit "Mostly Negative" on Steam in 2026 due to live-service mismanagement
+- [[sony-interactive-entertainment]] — Publisher of Helldivers 2; criticized alongside Arrowhead for 2026 review crisis
+- [[swanyplaysgames]] — Content creator and YouTuber; key reporter on Helldivers 2 2026 crisis
+- [[gemma]] — Google's open-weight model family (Apache 2.0); Gemma 4 (E2B/E4B edge through 31B); ships MTP drafters in 2026
 - [[lars-faye]] — Developer and author warning about the cognitive debt of agentic coding
 - [[simon-willison]] — Senior developer and creator of Datasette; highlighted cognitive debt from AI assistance
 - [[dax]] — Creator of OpenCode; advocates that "coding is planning"
@@ -81,6 +91,8 @@
 - [[impeccable]] — Open-source design skill and toolset for Claude Code; focuses on high-taste UI and live browser editing
 - [[iii-triple-i]] — Open-source backend engine for AI agents using WTF Primitives.
 - [[microsoft]] — Technology giant; shift toward AI independence, home-grown models, and a non-exclusive OpenAI partnership
+- [[milvus]] — Open-source vector database for large-scale AI applications and code retrieval
+- [[zilliz]] — Managed cloud service for Milvus vector database
 - [[abn-amro]] — Dutch bank with a strong private banking tradition
 - [[github]] — World's largest source code management platform; moving toward AI-first developer platform
 - [[github-copilot]] — AI coding assistant evolving into an "Agentic Platform" with usage-based billing
@@ -168,6 +180,13 @@
 - [[jrt-investment]] — Thai Facebook source on investment and life mindset; frames "I don't give a fuck" as selective care allocation
 
 ## Concepts
+- [[dreaming]] — Anthropic batch process that reads transcripts across agents, produces curated diffs to memory; out-of-band, cross-agent perspective
+- [[agent-memory-filesystem]] — Memory modeled as a file system Claude manages with bash/grep; permission scopes, optimistic concurrency, version history
+- [[self-learning-agents]] — Vision: agents improve from their own and others' sessions via memory + dreaming, no retraining
+- [[live-service-stagnation]] — Critical state where core game maintenance and endgame progression stall in favor of short-term monetization
+- [[monkey-paw-balancing]] — Frustrating design pattern where a player buff is countered by a hidden or simultaneous nerf
+- [[speculative-decoding]] — Lossless inference speedup: small drafter guesses k tokens, big target verifies in one batched forward pass; exploits memory-bandwidth slack
+- [[multi-token-prediction]] — MTP: predicting multiple future tokens in one forward pass; doubles as a built-in drafter for speculative decoding (Gemma 4)
 - [[cognitive-debt]] — Losing mental models of a codebase by over-delegating implementation to AI
 - [[skill-atrophy]] — The degradation of coding and critical thinking skills due to AI over-reliance
 - [[vendor-lock-in]] — Beyond API lock-in: locking an entire team's skills to a subsidized AI provider
@@ -182,6 +201,7 @@
 - [[llm-knowledge-bases]] — The pattern of LLM-maintained personal wikis (what this wiki implements)
 - [[local-optimization-trap]] — Efficiency trap: optimizing non-bottleneck stages (like coding) without improving Lead Time
 - [[agentic-usage]] — Long-running, multi-step AI sessions with high compute demand; shift from autocomplete to agentic platforms
+- [[ast-based-chunking]] — Chunking code based on Abstract Syntax Tree structure using tree-sitter for better RAG quality
 - [[software-3-0]] — Programming by prompting; context window as the lever; LLM as the programmable computer
 - [[usage-based-billing]] — Consumption-based pricing model replacing flat-rate subscriptions for AI resources
 - [[verifiability]] — The core driver of AI progress: tasks that are easily measured (code/math) improve fastest via RL
@@ -240,51 +260,4 @@
 - [[cheaper-to-correct]] — Design principle: move alignment to early, low-cost stages to reduce the price of agent errors.
 - [[alignment-bottleneck]] — Maggie Appleton: Speed of AI makes team coordination (not code output) the primary constraint; collapse of the implementation window
 - [[vibecoded-slop]] — Low-quality software/features created by AI without rigorous design, code reading, or critical thinking; "vibes" over craftsmanship
-- [[team-pulse]] — Using agents to proactively summarize team activity and maintain shared context without information overload
-- [[code-is-free]] — Ryan Lopopolo: Implementation/Refactoring is no longer scarce; focus on human attention and steering; code as disposable build artifact
-- [[token-billionaire]] — Ryan Lopopolo: Using billions of tokens daily to enable agent-only workflows; Staff Engineer mindset for individual developers
-- [[just-in-time-context]] — Ryan Lopopolo: Strategy to avoid context overload by injecting instructions only when Agent fails or needs correction (lint/test/review time)
-- [[lead-time]] — Total duration from request to delivery; the primary metric for AI-era productivity
-- [[limit-wip]] — "Stop Starting, Start Finishing" — restricting work-in-progress to maintain flow and identify bottlenecks
-- [[product-overhang]] — Latent model capabilities hidden by lack of appropriate interface; case study: Claude 3.5 coding skills vs Claude Code
-- [[taste-paradox]] — Nattee Niparnan: Agent lets you skip practice, but practice is what builds the judgment needed to control the Agent; core tension for Agent-era curriculum
-- [[coding-harness]] — Alex Ker / Mario Zechner: the harness as the `while` loop and de facto context owner around the LLM; where human engineering judgment lives
-- [[grounding]] — Anchorining agent proposals in code evidence, prior art, or reasoned arguments to prevent speculation.
-- [[instruction-budget]] — The "dumb zone" past a few hundred instructions; attention runs out even if total tokens are modest; distinct from context-rot
-- [[progressive-disclosure]] — Lazy-load pattern for agent context: CLIs --help discovery), Skills (name+description only), MCP tools (Claude Code tool-search 85% context reduction)
-- [[subagent-patterns]] — Parallel fan-out (breadth) vs sequential pipeline (depth); pipeline pattern parallels Panutat's review-agent harness at a different layer
-- [[playback-pattern]] — Alignment framework: Stated, Inferred, and Out-of-scope lists to confirm intent before execution.
-- [[wtf-primitives]] — Worker-Trigger-Function: iii framework's 3 building blocks for unifying agents and backend.
-- [[task-budgets]] — Opus 4.7 beta: advisory token target across a full agentic loop; model-aware (unlike `max_tokens`); min 20k; skip for open-ended quality-critical work
-- [[adaptive-thinking]] — The only thinking-on mode on Opus 4.7; off by default; thinking content also hidden by default unless `display: "summarized"` is set
-- [[delegation-mindset]] — Opus 4.7 triggers reasoning every user turn; front-load intent/constraints/criteria/paths in turn 1 instead of chatty multi-turn guidance
-- [[find-vs-filter]] — Code-review prompting pattern: separate discovery from triage so literal-following models don't silently drop findings below your bar
-- [[auto-mode]] — Claude Code permission mode between default-prompt-every-action and `--dangerously-skip-permissions`; classifier reviews each tool call, auto-approves safe, blocks risky
-- [[graduated-autonomy]] — OWASP APTS L1–L4 framework: Assisted / Supervised / Semi-Autonomous / Autonomous; Tier ≠ Level; vocabulary for matching oversight to autonomy across harnesses
-- [[agent-runtime-untrusted]] — APTS architectural stance: treat agent runtime as untrusted; make scope-exceeding attempts fail by construction (sandbox, external allowlist, unreachable audit trail), not by model restraint
-- [[claude-code-remote-surfaces]] — Two-axis map (local vs cloud execution × human vs event trigger) of the seven ways to drive Claude Code away from your terminal: Remote Control, Dispatch, Channels, Slack, Scheduled, web, Ultraplan
-- [[model-choice-by-expertise]] — Somkiat heuristic: Domain Expert reviewing code = older/cheaper model (Sonnet 4.5) is enough; vibe-coding = pay for newer model as a "rented taste" confidence proxy; complement to [[taste-paradox]]
-- [[agent-swarm]] — Scaling *out* (100–300 sub-agents coordinated by an agent) vs scaling up (bigger model); Kimi K2.6's headline pattern; heterogeneous domain-specialized sub-agents; Claw Groups = BYO-Agents extension
-- [[claude-md]] — Claude Code's project-level markdown file as persistent system prompt: 3-location hierarchy, cyrilXBT 7-section template, tension with [[instruction-budget]] (Cyril's volume vs Alex Ker's minimalism), composition with slash commands
-- [[model-cyber-capability-emergence]] — Offensive cyber capability as inevitable side effect of general model improvement; Mythos Preview case study; friction-based defense weakens; hard barriers (KASLR, W^X) remain critical
-- [[long-running-agents]] — 5 design patterns for agents that stay alive for hours to days: Checkpoint-and-Resume, Delegated Approval (pause-in-place HITL), Memory-Layered Context (with memory-drift governance), Ambient Processing, Fleet Orchestration
-- [[stop-slop-concept]] — Technique for making AI writing more human-like
-- [[agent-enablement-role]] — Aaron Levie's framing of the new dedicated job inside enterprises (IT / eng / business function) that owns chatbot→production-agent: 8-item spec spanning workflow mapping, deploy, context, eval, HITL, upgrades, change management; the "future of software engineering in non-tech companies"
-- [[token-optimization]] — Strategies for reducing token count while maintaining information density (e.g. RTK, compaction)
-- [[agent-client-protocol]] — Standard for AI-to-IDE communication; allows swapping AI "brains" while keeping native editor UX (pioneered by Zed and JetBrains)
-- [[financial-poetry]] — Thai concept: financial content that prioritizes emotional narrative over technical substance
-- [[private-banking]] — Personalized financial services for HNWIs; relationship management vs. portfolio management; regulatory compliance and voice logs
-- [[mla-attention]] — Multi-head Latent Attention: DeepSeek's mechanism for reducing KV cache and memory usage in Transformers.
-- [[grpo]] — Group Relative Policy Optimization: DeepSeek's RL technique for reasoning models without a separate reward model.
-- [[mixture-of-experts]] — MoE architecture: Using specialized "experts" to increase model capacity without increasing per-token compute cost.
-- [[open-weight-models]] — AI distribution model where weights are public but training data/process remains private.
-- [[sputnik-moment-ai]] — The shift in AI industry assumptions following DeepSeek's high-efficiency breakthroughs in 2025.
-- [[shift-left-testing]] — Moving testing activities earlier in the development lifecycle to reduce wait times
-- [[memory-drift]] — Stale information problem in agent memory; older assumptions conflicting with new reality
-- [[selective-injection|Selective Injection]] — Token optimization strategy: injecting only relevant facts into context vs. document dumps
-- [[memory-scoring]] — Metadata for agent memory: ranking by freshness, confidence, and importance
-- [[memory-decay]] — Archiving or weakening old agent memories to maintain relevance and prevent clutter
-- [[hybrid-memory|Hybrid Memory Architecture]] — Design pattern: Markdown for human interface + structured memory for agent substrate
-- [[rabbit-hole]] — Phenomenon where a "simple" coding task becomes recursively complex and time-consuming
-- [[host-bridge]] — Architecture for connecting Agent (Host) to Browser (UI) for dynamic dashboards and file-system interaction
 ## Analysis

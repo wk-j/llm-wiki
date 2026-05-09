@@ -1,5 +1,28 @@
 # Log
 
+## [2026-05-09] ingest | Memory and dreaming for self-learning agents
+
+Ingested an Anthropic talk by Mahes (Platform PM) introducing Memory (public beta) and Dreaming (research preview, launched today) in the Claude Managed Agents API.
+
+- Created source page: `[[memory-and-dreaming-self-learning-agents]]`
+- Created concept pages: `[[dreaming]]`, `[[agent-memory-filesystem]]`, `[[self-learning-agents]]`
+- Created entity pages: `[[claude-managed-agents]]`, `[[harvey-ai]]`
+- Updated `[[anthropic]]` to list Managed Agents API as a product surface
+- Updated `[[index]]`, `[[log]]`, `hotcache.md`
+
+Key takeaways: (1) Anthropic models memory as a **file system Claude manages with bash/grep**, mirroring the skills design — leaning on Opus 4.7's SOTA file-system memory; (2) **Dreaming** runs out-of-band across multiple agents' transcripts to produce curated diffs to memory stores, separating "memory quality" from "task completion" as discrete objectives; (3) Multi-agent enterprise needs drove **permission scopes**, **optimistic concurrency** via content hashes, and **version history with attribution**; (4) Early customers report ~90% mistake reduction (Rocketin) and 6× task completion (Harvey on a legal benchmark).
+
+## [2026-05-08] ingest | Helldivers 2 Just Fell to “Mostly Negative” Reviews
+
+Ingested a video by SwanyPlaysGames reporting on the 2026 review crisis of Helldivers 2. The source highlights the "Lightning in a Bottle" tragedy where a successful game stalls due to a focus on monetization over core systems and late-game progression.
+
+- Created source page: `[[helldivers-2-mostly-negative-reviews]]`
+- Created/Updated entity pages: `[[helldivers-2]]`, `[[arrowhead-game-studios]]`, `[[sony-interactive-entertainment]]`, `[[swanyplaysgames]]`
+- Created Thai-primary concept pages: `[[monkey-paw-balancing]]`, `[[live-service-stagnation]]`
+- Updated `[[index]]`, `[[log]]`, and `hotcache.md`
+
+Key takeaways: (1) **Monkey Paw Balancing** creates distrust by countering every player buff with a hidden or explicit nerf; (2) **Live Service Stagnation** occurs when revenue loops (Warbonds) outpace core maintenance and endgame features (Ship Modules); (3) Community fragmentation and "Mosty Negative" reviews signal a breakdown in the developer-player relationship despite 1.5+ years of content updates.
+
 ## [2026-05-02] ingest | JRT Investment — I Don't Give a Fuck Skill
 
 Ingested a Thai Facebook post by JRT Investment framing "I don't give a fuck" as a selective-care skill, not apathy. The useful idea is **care allocation**: attention is a scarce resource, so the work is deciding which people, work, and feedback deserve it.
@@ -616,4 +639,20 @@ Ingested Lars Faye's article "Agentic Coding is a Trap". The article warns again
 - Created source summary: `[[agentic-coding-trap]]`
 - Created entities: `[[lars-faye]]`, `[[simon-willison]]`, `[[dax]]`
 - Created concepts: `[[cognitive-debt]]`, `[[skill-atrophy]]`, `[[vendor-lock-in]]`
+- Updated `[[index]]`, `[[log]]`, and `hotcache.md`
+
+## [2026-05-07] ingest | Accelerating Gemma 4: Multi-Token Prediction Drafters
+Ingested Google blog post by Olivier Lacombe and Maarten Grootendorst announcing MTP drafters for Gemma 4. Up to 3x lossless inference speedup via speculative decoding; drafter shares activations and KV cache with the target. Reported ~2.2x on Apple Silicon (batch 4–8) and similar gains on A100; supports Transformers, MLX, vLLM, SGLang, Ollama, LiteRT-LM.
+- Created source summary: `[[multi-token-prediction-gemma-4]]`
+- Created entity: `[[gemma]]`
+- Created concepts: `[[speculative-decoding]]`, `[[multi-token-prediction]]`
+- Updated `[[index]]`, `[[log]]`, and `hotcache.md`
+
+## [2026-05-08] ingest | Why I’m Against Claude Code’s Grep-only Retrieval
+Ingested Milvus blog post critiquing Claude Code's reliance on Agentic Search (grep). Proposes Vector Search and Semantic Retrieval as a more token-efficient alternative (40%+ reduction). Highlights AST-based chunking and Merkle Tree-based sync for performance.
+- Created source summary: `[[why-im-against-claude-codes-grep-only-retrieval]]`
+- Created entities: `[[milvus]]`, `[[zilliz]]`, `[[claude-context]]`
+- Created concepts: `[[semantic-retrieval]]`, `[[ast-based-chunking]]`, `[[merkle-tree-sync]]`
+- Updated concepts: `[[agentic-search]]`
+- Updated entities: `[[claude-code]]`
 - Updated `[[index]]`, `[[log]]`, and `hotcache.md`

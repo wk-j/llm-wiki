@@ -3,15 +3,24 @@ title: Claude Code
 type: entity
 tags: [ai, claude, tools, agents, cli, coding]
 created: 2026-04-16
-updated: 2026-04-23
-sources: [Introducing Claude Opus 4.7.md, Using Claude Code Session Management & 1M Context.md, forrestchang andrej-karpathy-skills.md, alex-ker-harnesses-optimize.md, Create custom subagents - Claude Code Docs.md, opencode-vs-claude-code-morph.md, Remote Control - Claude Code Docs.md, cyril-xbt-claude-md-guide.md, This Anthropic Engineer Uses Claude Code Differently Than Everyone Else.md]
+updated: 2026-05-08
+sources: [Introducing Claude Opus 4.7.md, Using Claude Code Session Management & 1M Context.md, forrestchang andrej-karpathy-skills.md, alex-ker-harnesses-optimize.md, Create custom subagents - Claude Code Docs.md, opencode-vs-claude-code-morph.md, Remote Control - Claude Code Docs.md, cyril-xbt-claude-md-guide.md, This Anthropic Engineer Uses Claude Code Differently Than Everyone Else.md, why-im-against-claude-codes-grep-only-retrieval.md]
 ---
 
 # Claude Code
 
 Coding agent แบบ terminal-based จาก [[anthropic|Anthropic]] — เป็น CLI ที่ขับเคลื่อน [[claude|Claude]] ให้ทำงานด้านวิศวกรรมซอฟต์แวร์ต่างๆ โดยสามารถเข้าถึง shell, แก้ไขไฟล์, และใช้เครื่องมือได้ นอกจากนี้ยังมีในรูปแบบ desktop app (Mac/Windows), web (claude.ai/code), และ IDE extensions (VS Code, JetBrains)
 
+## กลยุทธ์การค้นหาข้อมูล (Retrieval Strategy)
+
+Claude Code ขึ้นชื่อเรื่องการใช้ [[agentic-search]] หรือ "Grep-only Retrieval" ซึ่งเป็นการให้ Agent ใช้เครื่องมือ terminal ดั้งเดิม (grep, find) ค้นหาโค้ดด้วยตัวเองเหมือนมนุษย์ อย่างไรก็ตาม มีข้อถกเถียงในเชิงประสิทธิภาพ:
+
+- **ข้อดี:** ยืดหยุ่น ไม่ต้องทำ indexing ล่วงหน้า เหมาะกับโปรเจกต์ขนาดเล็กถึงกลาง
+- **ข้อเสีย:** เมื่อใช้กับ codebase ขนาดใหญ่ จะเกิดปัญหา "Token Bloat" (ดึงโค้ดที่ไม่เกี่ยวข้องมาเยอะ) และ "Time Tax" (เสียเวลาค้นหาซ้ำซ้อน)
+- **ทางเลือก:** มีเครื่องมือเสริมอย่าง [[claude-context]] ที่นำ [[semantic-retrieval]] (Vector RAG) ผ่าน [[milvus]] มาช่วยเพิ่มความแม่นยำและลดการใช้ token ได้กว่า 40%
+
 ## สถาปัตยกรรมของ Session
+...
 
 ดูโมเดลเต็มๆ ได้ที่ [[claude-code-session-management]] ในแต่ละ turn ผู้ใช้สามารถเลือกได้ 5 อย่าง:
 

@@ -17,6 +17,7 @@ sources: [Introducing Claude Opus 4.7.md, The advisor strategy Give Sonnet an in
 - **[[claude-opus-4-7]]** — โมเดล flagship ปัจจุบัน (เปิดตัว 16 เม.ย. 2026)
 - **[[claude-mythos-preview|Claude Mythos Preview]]** — โมเดลที่เก่งที่สุดของ Anthropic; สามารถค้นหาและโจมตีช่องโหว่ zero-days ใน OS และเบราว์เซอร์หลักๆ ได้เอง; ยังจำกัดการเข้าถึงอย่างจงใจระหว่างที่รอให้ระบบป้องกันด้าน cyber พัฒนาขึ้น
 - **[[claude-code|Claude Code]]** — coding agent ที่ทำงานผ่าน terminal (มีเวอร์ชัน desktop, web, และ IDE extensions ด้วย)
+- **[[claude-managed-agents|Claude Managed Agents API]]** — แพลตฟอร์มรัน agent ให้ลูกค้า; มี [[agent-memory-filesystem|Memory]] (public beta) และ [[dreaming|Dreaming]] (research preview, 2026-05-09)
 - **Claude API** (`platform.claude.com`) — API สำหรับนักพัฒนา; รองรับ effort levels, task budgets, advisor tool, MCP
 - **[[project-glasswing|Project Glasswing]]** — โครงการที่ใช้ Mythos Preview เพื่อเสริมความปลอดภัยให้ซอฟต์แวร์ที่สำคัญ ก่อนที่โมเดลระดับ Mythos-class จะเปิดให้ใช้ในวงกว้าง
 
