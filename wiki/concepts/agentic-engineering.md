@@ -26,9 +26,16 @@ sources: [Andrej Karpathy From Vibe Coding to Agentic Engineering.md]
 ## Payoff / ผลคือ
 วิศวกรสามารถขยายขอบเขตการทำงาน (Scale) ได้มหาศาล โดยหนึ่งคนสามารถคุมงานที่เคยต้องใช้ทีมงานขนาดใหญ่ได้ ในขณะที่ยังคงรักษาความสมบูรณ์แบบ (Integrity) ของระบบไว้ได้
 
+## บทบาทที่เปลี่ยนไป: Tactical vs Strategic
+[[matt-pocock]] เสริมมุมมองว่าใน Agentic Engineering:
+- **AI คือ Tactical Sergeant**: รับหน้าที่ "จ่า" คอยคุมการรบหน้างาน จัดการรายละเอียดโค้ดและ implementation
+- **มนุษย์คือ Strategist**: รับหน้าที่ "นักยุทธศาสตร์" ออกแบบโครงสร้าง (Interface), ควบคุมทิศทาง และจัดการความซับซ้อนภาพรวม
+
 ## ดูเพิ่ม
 - [[vibe-coding]]
 - [[software-3-0]]
 - [[jagged-intelligence]]
 - [[agent-swarm]]
 - [[andrej-karpathy]]
+- [[matt-pocock-software-fundamentals]]
+- [[deep-modules]] — เครื่องมือสำคัญในการทำ Strategic design ร่วมกับ AI

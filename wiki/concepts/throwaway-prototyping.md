@@ -1,0 +1,68 @@
+---
+title: Throwaway Prototyping
+type: concept
+tags: [ai, prototyping, workflow, ui, software-engineering]
+created: 2026-05-12
+updated: 2026-05-12
+sources: ["New Skills! handoff, prototype, review and writing-*  Skills Changelog.md"]
+---
+
+# Throwaway Prototyping / Prototype แบบทิ้งได้
+
+**Throwaway prototyping** คือการให้ agent สร้างของทดลองเร็ว ๆ เพื่อใช้เรียนรู้ ไม่ใช่เพื่อ merge เข้า production. ใน changelog ของ [[matt-pocock|Matt Pocock]] แนวคิดนี้ถูกแพ็กเป็น skill `/prototype`
+
+## ทำไม prototype ถึงสำคัญใน AI engineering
+
+AI coding ทำให้ implementation เร็วขึ้นมาก แต่ความเร็วนี้ไม่ได้ช่วยถ้าเรายังไม่รู้ว่าของที่ควรสร้างคืออะไร. บางคำถามตอบจาก spec ไม่พอ ต้องเห็น behavior จริงก่อน
+
+Prototype จึงเป็น research tool. มันช่วย flush out design decisions ก่อน commit กับ implementation จริง
+
+**ได้อะไร:** ลดการให้ agent สร้างของจริงจากสมมติฐานที่ยังไม่ผ่านการดูของจริง
+
+## UI prototype
+
+UI prototype ใช้ตอบคำถามที่ต้องใช้ taste และ product context เช่น หน้านี้ควรรู้สึกอย่างไร, layout แบบไหน scan ง่าย, interaction แบบไหนไม่ขัดมือ
+
+Pocock เสนอให้ agent สร้างหลาย variation ที่ต่างกันชัดเจน แล้วให้มนุษย์เลือก
+
+- เลือก variation ที่ถูกทางที่สุด
+- บอกว่าอยากเก็บอะไรจาก A และ B
+- แตก variation ใหม่จาก decision นั้น
+- ทิ้งของที่ไม่ใช่
+
+ตรงนี้เชื่อมกับ [[alignment-bottleneck]] เพราะทำให้คนกับ agent เห็น artifact เดียวกัน แทนที่จะคุยกันบนคำอธิบายลอย ๆ
+
+## Logic prototype
+
+Prototype ไม่จำเป็นต้องเป็น UI. งาน business logic ที่มี state เปลี่ยนตามเวลา ก็เหมาะกับ prototype มาก
+
+ตัวอย่าง: entity ใน database เปลี่ยนสถานะตาม action ของผู้ใช้. แทนที่จะถก state machine ใน abstract, ให้ agent สร้าง terminal app เล็ก ๆ เพื่อกด case ต่าง ๆ แล้วดูว่า state ไหลไปทางไหน
+
+**ผลคือ:** edge case โผล่เร็วขึ้น เพราะมนุษย์ได้ลองขยับระบบ ไม่ใช่แค่อ่าน spec
+
+## Prototype เป็น handoff artifact
+
+Prototype ที่ดีควรถูกส่งต่อให้ implementation agent ผ่าน [[agent-handoff-documents|handoff document]]. Agent ตัวถัดไปไม่ต้องเดา preference ใหม่ เพราะมี artifact และบทเรียนจากรอบทดลองอยู่แล้ว
+
+ลำดับงานที่ Pocock ใช้บ่อยคือ
+
+1. [[grill-me|Grill]] เพื่อเคลียร์ intent
+2. Prototype เพื่อดู option จริง
+3. Handoff ผล prototype ไปให้ implementation agent
+4. Review ผลจริงตาม spec และ repo standards
+
+## ข้อควรระวัง
+
+คำว่า throwaway ต้องจริง. ถ้า prototype ถูกยกเข้า production แบบไม่ตรวจ จะกลายเป็น [[vibecoded-slop|vibecoded slop]] อีกแบบหนึ่ง
+
+Prototype มีไว้หาคำตอบ ไม่ใช่เลี่ยง design. พอได้คำตอบแล้ว ต้องกลั่นกลับเป็น spec, issue, หรือ implementation plan ที่ชัดก่อนให้ agent สร้างของจริง
+
+## See also
+
+- [[new-skills-handoff-prototype-review-writing]]
+- [[agent-handoff-documents]]
+- [[grill-me]]
+- [[alignment-bottleneck]]
+- [[ai-orchestrator]]
+- [[custom-editing-interfaces]]
+- [[html-artifacts]]

@@ -3,8 +3,8 @@ title: Just-in-Time Context
 type: concept
 tags: [ai, prompt-engineering, context-management, efficiency]
 created: 2026-04-28
-updated: 2026-04-28
-sources: [ryan-lopopolo-harness-engineering.md]
+updated: 2026-05-23
+sources: [ryan-lopopolo-harness-engineering.md, Agent Harness Engineering.md, software-writing-software-gone-right.md]
 ---
 
 # Just-in-Time Context / บริบทแบบมาเมื่อจำเป็น
@@ -29,8 +29,21 @@ sources: [ryan-lopopolo-harness-engineering.md]
 - **Efficiency**: ประหยัด token และรักษา context window ให้สะอาดที่สุด
 - **Reliability**: Agent ได้รับข้อมูลที่เจาะจงกับปัญหาหน้างาน ทำให้แก้ปัญหาได้แม่นยำกว่าการอ่านคู่มือเล่มหนาตั้งแต่ต้น
 
+## เชื่อมกับ Harness Ratchet
+
+[[harness-ratchet]] คือ just-in-time context ที่มีความจำระยะยาวกว่าเดิม: เมื่อ failure เกิดขึ้นครั้งหนึ่ง ทีมไม่ได้แค่ส่ง context กลับไปแก้รอบนั้น แต่เพิ่ม trigger ถาวร เช่น lint, test, hook, หรือ reviewer agent เพื่อให้ context เดิมถูกส่งกลับเข้า loop ทุกครั้งที่ failure class นั้นโผล่มาอีก
+
+## ระวังสับสนกับ Just-in-Time Software
+
+[[just-in-time-software|Just-in-time software]] ของ [[tj-devries|TJ DeVries]] ใช้คำว่า JIT คนละชั้น. หน้านี้พูดถึงการส่ง **context** เข้า agent ตอนจำเป็น ส่วน TJ พูดถึงการสร้าง **capability/code** ตอนจำเป็น เช่น function เล็ก ๆ ใน [[luaai-nvim|luai.nvim]]
+
+ทั้งสองแนวคิดคล้ายกันตรงที่ไม่ front-load ทุกอย่าง แต่สิ่งที่เลื่อนเวลาไว้ไม่เหมือนกัน: อันหนึ่งเลื่อน context, อีกอันเลื่อน implementation
+
 ## ดูเพิ่ม
 - [[harness-engineering]]
 - [[ryan-lopopolo]]
+- [[harness-ratchet]]
+- [[agent-harness-engineering]]
 - [[context-rot]]
 - [[compaction]]
+- [[just-in-time-software]]

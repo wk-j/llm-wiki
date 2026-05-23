@@ -26,8 +26,12 @@ sources: [Andrej Karpathy From Vibe Coding to Agentic Engineering.md]
 ## ทำไมถึงสำคัญ
 Vibe Coding เปลี่ยนความสัมพันธ์ระหว่างโปรแกรมเมอร์กับคอมพิวเตอร์ จาก "ผู้สั่งการระดับ micro" (Micro-manager) เป็น "ผู้กำกับ" (Director) ที่เน้นไปที่ผลลัพธ์และความสวยงามมากกว่ารายละเอียดทางเทคนิค
 
+## ความเสี่ยงและการควบคุม
+แม้ Vibe Coding จะช่วยให้เริ่มต้นได้เร็ว แต่ [[matt-pocock]] เตือนว่าหากทำโดยขาดพื้นฐานวิศวกรรม (Software Fundamentals) จะนำไปสู่สภาวะ "Outrunning your headlights" หรือการขับรถเร็วกว่าไฟหน้า คือ AI เขียนโค้ดเร็วเกินกว่าที่เราจะตรวจสอบความถูกต้องได้ทัน นำไปสู่ [[software-entropy]] ในที่สุด
+
 ## ดูเพิ่ม
 - [[agentic-engineering]]
 - [[software-3-0]]
 - [[andrej-karpathy]]
 - [[vibecoded-slop]] — เมื่อ vibe coding ขาดการตรวจสอบคุณภาพ
+- [[matt-pocock-software-fundamentals]] — มุมมองที่เน้นย้ำถึงความสำคัญของพื้นฐานซอฟต์แวร์ในยุค AI

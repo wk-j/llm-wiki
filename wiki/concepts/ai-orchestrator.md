@@ -3,8 +3,8 @@ title: AI Orchestrator
 type: concept
 tags: [ai, software-engineering, agents, roles]
 created: 2026-04-15
-updated: 2026-04-23
-sources: [software-engineer-role-ai-era.md, Using Claude Code Session Management & 1M Context.md, llm-era-computer-engineering-nattee.md, alex-ker-harnesses-optimize.md]
+updated: 2026-05-12
+sources: [software-engineer-role-ai-era.md, Using Claude Code Session Management & 1M Context.md, llm-era-computer-engineering-nattee.md, alex-ker-harnesses-optimize.md, "New Skills! handoff, prototype, review and writing-*  Skills Changelog.md"]
 ---
 
 # AI Orchestrator / ผู้อำนวยการวง AI
@@ -51,6 +51,17 @@ Orchestration สร้างขึ้นบน tooling layer ที่บทบ
 
 นี่คือทักษะ orchestration ที่ใช้กับ agent ตัวเดียวข้าม turn แทนที่จะเป็นข้าม agent หลายตัวใน subagent pipeline (ดู [[subagent-patterns]])
 
+## Skill routing ใน workflow ของ Pocock
+
+Changelog เรื่อง skill ของ [[matt-pocock|Matt Pocock]] ทำให้เห็น orchestration ในระดับ command ชัดขึ้น. งานหนึ่งไม่ควรถูกส่งไป implement ทันทีเสมอไป แต่ควรถูก route ไปยัง skill ที่เหมาะกับความไม่แน่ใจตรงหน้า
+
+- ใช้ [[grill-me]] เมื่อปัญหายังไม่ชัดและต้องถามให้ intent ตรงกัน
+- ใช้ [[throwaway-prototyping]] เมื่อคำตอบต้องดู artifact หรือ state behavior จริง
+- ใช้ [[agent-handoff-documents]] เมื่อต้องแตก session ใหม่เพื่อกัน context หลักเน่า
+- ใช้ [[dual-axis-code-review]] เมื่อมี diff แล้วต้องตรวจทั้ง standards และ spec
+
+**ผลคือ:** AI orchestrator ไม่ได้แค่แตกงานให้ agent หลายตัว แต่ต้องเลือก phase ของงานให้ถูกด้วย
+
 ## แรงกดดันที่ลดทอนความต้องการ senior
 
 [[nattee-niparnan|อ.ณัฐที นิภาชน์]] (Ep. 2, 17 เม.ย. 2026) ได้ชี้ให้เห็นผลข้างเคียงของ orchestration: **การตัดสินใจเชิงออกแบบระดับสูงกำลังถูกผลักลงไปยัง junior ไม่ใช่ขึ้นไปยัง senior** การเลือก framework, การประเมิน library, ข้อกังวลที่ตัดขวางระบบเช่น authorization — ในอดีตสิ่งเหล่านี้เป็นการตัดสินใจของ Senior developer ในขณะที่ junior สร้าง implementation แต่ตอนนี้ agent ทำ implementation ดังนั้นงานจริงชิ้นแรกของ junior จึงกลายเป็นคำถามระดับ orchestration: *"Agent นี้สร้างโค้ดที่เสถียรใน framework ไหน? มัน hallucinate น้อยลงใน library ใด? pipeline นี้บังคับให้เกิดข้อแลกเปลี่ยนอะไรบ้าง?"*
@@ -76,3 +87,6 @@ Orchestration สร้างขึ้นบน tooling layer ที่บทบ
 - [[llm-era-computer-engineering-nattee]]
 - [[alex-ker]]
 - [[humanlayer]]
+- [[agent-handoff-documents]]
+- [[throwaway-prototyping]]
+- [[dual-axis-code-review]]

@@ -15,8 +15,15 @@ sources: [agentic-coding-trap.md]
 
 ในยุคของ [[agentic-engineering]] การใช้ AI generate โค้ดปริมาณมากๆ นำไปสู่ Cognitive Debt ได้ง่าย เพราะความเร็วในการสร้างโค้ดนั้นสูงกว่าความสามารถในการทำความเข้าใจของมนุษย์ วิธีแก้ที่ [[lars-faye]] แนะนำคือ ไม่ควรให้ AI สร้างโค้ดมากเกินกว่าที่จะรีวิวและทำความเข้าใจได้หมดในคราวเดียว
 
+## วิธีแก้และป้องกัน
+1. **Human-in-the-loop**: อย่าปล่อยให้ Agent ทำงานคนเดียวโดยไม่ตรวจสอบ
+2. **Surgical Updates**: ขอให้ Agent แก้ไขเฉพาะจุดที่จำเป็น ไม่ใช่เขียนใหม่หมด
+3. **Review Discipline**: อ่านและทำความเข้าใจโค้ดที่ Agent เขียนเหมือนเป็นโค้ดของเพื่อนร่วมงาน
+4. **[[html-artifacts|HTML Artifacts]]**: ใช้การสร้างเอกสาร HTML ที่มีภาพประกอบ (SVG/Charts) เพื่อให้มนุษย์เห็นภาพรวมของระบบและคง "Shared Mental Model" ไว้ได้ง่ายกว่าการอ่านโค้ดดิบๆ หรือ Markdown
+
 ## See also
 
 - [[skill-atrophy]]
 - [[eh-gland]]
 - [[taste-paradox]]
+- [[thariq-html-effectiveness]]

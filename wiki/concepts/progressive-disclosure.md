@@ -3,8 +3,8 @@ title: Progressive Disclosure
 type: concept
 tags: [ai, prompt-engineering, context-management, harness, mcp, skills]
 created: 2026-04-18
-updated: 2026-04-18
-sources: [alex-ker-harnesses-optimize.md]
+updated: 2026-05-10
+sources: [alex-ker-harnesses-optimize.md, Agent Harness Engineering.md]
 ---
 
 # Progressive Disclosure / เปิดเผยทีละนิด
@@ -73,11 +73,14 @@ sources: [alex-ker-harnesses-optimize.md]
 
 ตัว agent ไม่ได้ฉลาดขึ้นเพราะมี context เยอะขึ้น — กลับกัน [[context-rot]] กับ [[instruction-budget]] ทำให้ performance แย่ลงพอข้อมูลท่วมเกิน Progressive disclosure ยอมแลก latency นิดหน่อย (ตัว agent ต้องเดิน 2–3 step ไปค้นเอง) แลกกับ attention ที่จดจ่อตรงที่ควรจด — คุ้ม
 
+[[addy-osmani|Addy Osmani]] เพิ่มอีกมุมใน [[agent-harness-engineering]]: progressive disclosure ไม่ได้ใช้กับ docs อย่างเดียว แต่ใช้กับ **tool output** ด้วย Log 2,000 บรรทัดควรอยู่ใน filesystem แล้วส่งเฉพาะ header/footer หรือ error ที่สำคัญกลับเข้า context. นี่คือ tool-call offloading — เปิดเผยเฉพาะส่วนที่ทำให้ agent ตัดสินใจต่อได้
+
 ## See also
 
 - [[instruction-budget]]
 - [[context-rot]]
 - [[coding-harness]]
+- [[agent-harness-engineering]]
 - [[alex-ker-harnesses-optimize]]
 - [[claude-code]]
 - [[openai-codex]]

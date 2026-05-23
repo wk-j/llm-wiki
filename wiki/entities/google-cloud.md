@@ -3,8 +3,8 @@ title: Google Cloud
 type: entity
 tags: [company, cloud, google, ai-platform]
 created: 2026-04-23
-updated: 2026-04-23
-sources: [google-cloud-long-running-agent-patterns.md]
+updated: 2026-05-10
+sources: [google-cloud-long-running-agent-patterns.md, Agent Harness Engineering.md]
 ---
 
 # Google Cloud
@@ -15,7 +15,7 @@ sources: [google-cloud-long-running-agent-patterns.md]
 
 ## Developer advocates ที่มีใน Wiki
 
-- **Addy Osmani** — วิศวกรที่ทำงานด้าน Chrome/web-perf มายาวนาน; หนึ่งในผู้เขียนบทความ 5-patterns
+- **[[addy-osmani|Addy Osmani]]** — วิศวกรที่ทำงานด้าน Chrome/web-perf มายาวนาน; หนึ่งในผู้เขียนบทความ 5-patterns และผู้เขียน [[agent-harness-engineering]]
 - **Shubham Saboo** — DevRel จาก Google Cloud; หนึ่งในผู้เขียนบทความ
 
 ## ดูเพิ่ม
@@ -23,3 +23,4 @@ sources: [google-cloud-long-running-agent-patterns.md]
 - [[gemini-enterprise-agent-platform]]
 - [[google-cloud-long-running-agent-patterns]]
 - [[long-running-agents]]
+- [[addy-osmani]]

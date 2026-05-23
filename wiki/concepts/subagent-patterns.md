@@ -3,8 +3,8 @@ title: Subagent Patterns
 type: concept
 tags: [ai, agents, subagents, harness, orchestration, architecture]
 created: 2026-04-18
-updated: 2026-04-23
-sources: [alex-ker-harnesses-optimize.md, Using Claude Code Session Management & 1M Context.md, Create custom subagents - Claude Code Docs.md, Kimi K2.6 Tech Blog Advancing Open-Source Coding.md]
+updated: 2026-05-12
+sources: [alex-ker-harnesses-optimize.md, Using Claude Code Session Management & 1M Context.md, Create custom subagents - Claude Code Docs.md, Kimi K2.6 Tech Blog Advancing Open-Source Coding.md, "New Skills! handoff, prototype, review and writing-*  Skills Changelog.md"]
 ---
 
 # Subagent Patterns / รูปแบบการใช้ subagent
@@ -61,6 +61,14 @@ Alex Ker เล่าว่าเคยทำ prototype ทำนองนี้
 - หากมีงานใหม่เข้ามา ระบบจะ recompute กราฟใหม่ทันทีเพื่อหาจุดขนานสูงสุด (maximum concurrency)
 
 **ได้อะไร** — ช่วยให้ระบบ Agentic Workflow สามารถทำ Software Engineering ขนาดใหญ่ได้พร้อมกันหลายจุดโดยไม่เกิด merge conflict ที่ควบคุมไม่ได้
+
+## แบบที่ 1.75: DIY subagent ด้วย handoff
+
+[[matt-pocock|Matt Pocock]] เพิ่ม pattern กึ่งกลางอีกแบบผ่าน skill `/handoff`: มนุษย์เปิด agent session ใหม่เอง แล้วส่ง [[agent-handoff-documents|handoff document]] เข้าไปเป็น context เริ่มต้น
+
+มันคล้าย subagent เพราะแยกงานออกจาก main context. แต่ต่างตรงที่ session ใหม่มี context window เต็มของตัวเอง และไม่ได้ถูกจำกัดเหมือน subagent ภายใน harness บางตัว. เหมาะมากตอนอยู่ใน [[grill-me|grilling session]] แล้วต้องแตกไปทำ [[throwaway-prototyping|prototype]] ก่อนค่อยกลับมาตัดสินใจต่อ
+
+**ได้อะไร** — ได้ isolation แบบ subagent แต่ยังให้มนุษย์คุม lifecycle และการส่งงานกลับเอง
 
 ## แบบที่ 2: Pipeline (ลึก)
 
@@ -137,3 +145,5 @@ Pipeline ตรงนี้คือแบบเดียวกันกับ [
 - [[context-rot]]
 - [[compaction]]
 - [[panutat-tejasen]]
+- [[agent-handoff-documents]]
+- [[throwaway-prototyping]]

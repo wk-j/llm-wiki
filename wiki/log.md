@@ -1,5 +1,41 @@
 # Log
 
+## [2026-05-23] ingest | Software Writing Software (gone right!)
+
+Ingested TJ DeVries's talk/demo on `luai.nvim`, a Neovim experiment that generates small Lua functions from descriptions, stores them as modules, and reuses/improves them later.
+
+- Created source page: `[[software-writing-software-gone-right]]`
+- Created concept pages: `[[personalized-development-environment]]`, `[[just-in-time-software]]`
+- Created entity pages: `[[tj-devries]]`, `[[luaai-nvim]]`
+- Updated concepts/entities: `[[malleable-tools]]`, `[[coding-harness]]`, `[[just-in-time-context]]`, `[[neovim]]`
+- Updated `[[index]]`, `[[log]]`, `hotcache.md`
+
+Key takeaways: (1) AI does not need to own the whole coding task; it can materialize tiny personal functions exactly when needed; (2) caching generated code turns one-off prompts into reusable personal software; (3) prompt/error history attached to a generated function lets the user improve it without redescribing everything; (4) this is a micro-scale example of malleable tools and a tiny coding harness embedded in an editor.
+
+## [2026-05-09] ingest | Using Claude Code: The Unreasonable Effectiveness of HTML
+
+Ingested Thariq S.'s post on why HTML is a superior communication medium to Markdown for AI agents.
+
+- Created source page: `[[thariq-html-effectiveness]]`
+- Created concept pages: `[[html-artifacts]]`, `[[custom-editing-interfaces]]`
+- Updated entities: `[[claude-code]]`
+- Updated concepts: `[[cognitive-debt]]`, `[[specs-to-code]]`
+- Updated `[[index]]`, `[[log]]`, `hotcache.md`
+
+Key takeaways: (1) **HTML vs Markdown**: Markdown fails at scale (>100 lines), while HTML offers rich density (SVG, CSS, JS) and visual clarity; (2) **Custom Editing Interfaces**: Building "throwaway editors" with export buttons helps humans stay in the loop for complex data tasks; (3) **Information Density**: HTML is a high-signal medium that reduces cognitive debt by making complex plans and code reviews navigable.
+
+## [2026-05-09] ingest | Matt Pocock — Software Fundamentals Matter More Than Ever
+
+Ingested Matt Pocock's talk arguing that software fundamentals (design, architecture, testing) are more critical in the AI age to prevent "Software Entropy."
+
+- Created source page: `[[matt-pocock-software-fundamentals]]`
+- Created concept pages: `[[grill-me]]`, `[[ubiquitous-language]]`, `[[deep-modules]]`, `[[software-entropy]]`, `[[specs-to-code]]`
+- Created/Updated entity pages: `[[matt-pocock]]`, `[[john-ousterhout]]`
+- Updated concepts: `[[vibe-coding]]`, `[[agentic-engineering]]` (added Tactical vs Strategic framing)
+- Updated `[[index]]`, `[[log]]`, `hotcache.md`
+
+Key takeaways: (1) **Specs-to-Code Trap**: Ignoring the code leads to garbage; (2) **Deep Modules**: Simplify interfaces to delegate implementation to AI safely; (3) **Grill Me**: Force AI into a shared design concept before execution; (4) **Ubiquitous Language**: Shared vocabulary (DDD) aligns AI with the domain and reduces verbosity.
+
 ## [2026-05-09] ingest | Memory and dreaming for self-learning agents
 
 Ingested an Anthropic talk by Mahes (Platform PM) introducing Memory (public beta) and Dreaming (research preview, launched today) in the Claude Managed Agents API.
@@ -656,3 +692,33 @@ Ingested Milvus blog post critiquing Claude Code's reliance on Agentic Search (g
 - Updated concepts: `[[agentic-search]]`
 - Updated entities: `[[claude-code]]`
 - Updated `[[index]]`, `[[log]]`, and `hotcache.md`
+
+## [2026-05-09] ingest | Granite 4.1 - The Fastest ASR?
+Ingested Sam Witteveen's video on IBM Granite Speech 4.1 and its three 2B ASR variants: base, Plus, and NAR.
+- Created source summary: `[[granite-4-1-fastest-asr]]`
+- Created entities: `[[ibm]]`, `[[granite-speech]]`, `[[sam-witteveen]]`
+- Created concepts: `[[automatic-speech-recognition]]`, `[[non-autoregressive-asr]]`, `[[keyword-biasing]]`, `[[speaker-attributed-asr]]`, `[[word-error-rate]]`
+- Updated `[[index]]`, `[[log]]`, and `hotcache.md`
+
+Key takeaway: Granite Speech 4.1 is best understood as a choice of ASR bottleneck: base for low WER and keyword biasing, Plus for structured transcripts with speaker labels/timestamps, and NAR for extremely high-throughput raw transcription.
+
+## [2026-05-10] ingest | Agent Harness Engineering
+Ingested Addy Osmani's X post synthesizing the broader "Agent = Model + Harness" framing for coding agents.
+- Created source summary: `[[agent-harness-engineering]]`
+- Created concept: `[[harness-ratchet]]`
+- Created entities: `[[addy-osmani]]`, `[[vtrivedy]]`, `[[fred-schott]]`, `[[flue]]`
+- Updated concepts: `[[coding-harness]]`, `[[harness-engineering]]`, `[[progressive-disclosure]]`, `[[context-rot]]`, `[[just-in-time-context]]`
+- Updated entities: `[[humanlayer]]`, `[[google-cloud]]`, `[[claude-code]]`
+- Updated `[[index]]`, `[[log]]`, and `hotcache.md`
+
+Key takeaway: harness engineering is now broader than a review-agent pipeline. It is the discipline of shaping the full runtime around a model — prompts, tools, filesystem, sandbox, hooks, memory, context policy, subagents, observability, and recovery paths. The reusable pattern is the Harness Ratchet: every real agent failure should become a durable rule, hook, lint/test gate, or reviewer behavior.
+
+## [2026-05-12] ingest | New Skills! /handoff, /prototype, /review and /writing-* | Skills Changelog
+Ingested Matt Pocock's skills changelog covering new `/handoff` and `/prototype` skills plus in-progress `/review` and `writing-*` workflows.
+- Created source summary: `[[new-skills-handoff-prototype-review-writing]]`
+- Created concepts: `[[agent-handoff-documents]]`, `[[throwaway-prototyping]]`, `[[dual-axis-code-review]]`, `[[writing-fragments]]`
+- Updated entity: `[[matt-pocock]]`
+- Updated concepts: `[[context-rot]]`, `[[subagent-patterns]]`, `[[ai-orchestrator]]`, `[[grill-me]]`
+- Updated `[[index]]`, `[[log]]`, and `hotcache.md`
+
+Key takeaway: Pocock's new skills treat agent work as phase routing. Use handoff when context should move to a fresh session, prototype when unknowns need an artifact, review as two separate axes (standards/spec), and writing-* as a fragment-first workflow that keeps human voice as the raw material.
