@@ -1,10 +1,11 @@
 # Index
 
 ## Sources
+- [[software-after-software]] — Thorsten Ball (2026-05-26): 12-point manifesto on code abundance, process drag, agent-first development, frontier camps, and reorganizing around models; Amp Labs positioning
+- [[fundamental-productivity-ai-world]] — ChrisZa Stuff (2026-05-24): productivity as accepted human interaction; AI creates producer/consumer imbalance; acceptance bottleneck; standards must rebalance for AI-era artifacts
 - [[software-writing-software-gone-right]] — TJ DeVries (2026-05-20): `luai.nvim`; just-in-time software; personalized development environment; generate/cache/improve Lua functions inside Neovim
 - [[new-skills-handoff-prototype-review-writing]] — Matt Pocock (2026-05-12): Skills changelog for /handoff, /prototype, in-progress /review and writing-* workflows; handoff docs, throwaway prototypes, dual-axis review, writing fragments
 - [[agent-harness-engineering]] — Addy Osmani (2026-05-10): Agent = Model + Harness; harness components, hooks, context management, Harness Ratchet, and Harness-as-a-Service
-- [[thariq-html-effectiveness]] — Thariq S. (2026-05-09): The Unreasonable Effectiveness of HTML in Claude Code; HTML vs Markdown; Information Density; Custom Editing Interfaces; Throwaway Editors
 - [[matt-pocock-software-fundamentals]] — Matt Pocock (2026-04-23): Software fundamentals matter more than ever; Specs-to-Code trap; Strategic vs Tactical AI; Grill Me; Ubiquitous Language; Deep Modules; Software Entropy; TDD
 - [[granite-4-1-fastest-asr]] — Sam Witteveen (2026-05-07): IBM Granite Speech 4.1 ASR models; 2B base/Plus/NAR variants; WER, RTFX, diarization, keyword biasing, local deployment
 - [[memory-and-dreaming-self-learning-agents]] — Anthropic talk (Mahes, 2026-05-09): Memory-as-filesystem + Dreaming (out-of-band batch curation) for self-learning agents in Managed Agents API
@@ -81,6 +82,12 @@
 - [[thclaws-marketplace-panutat]] — Panutat Tejasen (2026-04-30): thClaws v0.7.0 Marketplace; Enterprise Security; Private Marketplace; Host Bridge concept; Rabbit Holes in coding.
 
 ## Entities
+- [[thorsten-ball]] — Sourcegraph/Amp engineer; author of Software After Software manifesto and "Writing an Interpreter in Go"
+- [[amp]] — Sourcegraph's agent-first coding agent product; competitor to Claude Code/Codex/OpenCode
+- [[amp-labs]] — Frontier R&D arm of Amp; positioned as Sourcegraph's example of a Frontier Camp
+- [[sourcegraph]] — Code search and developer tools company (since 2013); maker of Amp and Cody
+- [[thariq-shihipar]] — Claude Code MTS; advocates HTML artifacts over Markdown for richer, more readable, shareable, interactive agent outputs
+- [[chrisza-stuff]] — Thai creator discussing AI productivity as human interaction; source for Interaction Productivity, Acceptance Bottleneck, and AI-era Standard Balance
 - [[tj-devries]] — Neovim developer/tooling creator; source for PDE and `luai.nvim` just-in-time software demo
 - [[luaai-nvim]] — Experimental Neovim plugin that generates missing Lua functions with an LLM, saves them as modules, and reuses/improves them later
 - [[john-ousterhout]] — ศาสตราจารย์ Stanford และผู้แต่ง A Philosophy of Software Design; ต้นคิดเรื่อง Deep Modules
@@ -196,6 +203,13 @@
 - [[jrt-investment]] — Thai Facebook source on investment and life mindset; frames "I don't give a fuck" as selective care allocation
 
 ## Concepts
+- [[process-drag]] — Ball's framing: old engineering rituals (planning, prioritization, sequential review) become drag in a world of abundant code
+- [[value-migration-from-code]] — Ball's framing: software value moves from code to data, distribution, trust, compliance, regulatory position
+- [[reorganize-around-models]] — Ball's framing: winners build small teams around models; "agents are wasted when made to work like people"
+- [[frontier-camp]] — Ball's institutional pattern: small autonomous team at the model frontier that pulls the corporation toward a new way of working
+- [[interaction-productivity]] — Productivity as accepted transfer between people; optimize the handoff, not just the producer's artifact count
+- [[acceptance-bottleneck]] — AI-era bottleneck where humans must understand, accept, and take responsibility for work before it can move forward
+- [[ai-era-standard-balance]] — Rebalancing standards/templates because AI makes artifact production cheap while consumption and acceptance remain human-limited
 - [[personalized-development-environment]] — TJ DeVries's PDE idea: the whole developer machine as a customizable, AI-assisted workshop, not just an editor
 - [[just-in-time-software]] — Generate small software capabilities exactly when needed, cache them, and improve them from prompt/error history
 - [[agent-handoff-documents]] — Temporary handoff documents that let a fresh agent continue work with context, intent, artifact paths, and suggested next skills

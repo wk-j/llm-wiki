@@ -1,9 +1,18 @@
 # Log
 
-## [2026-05-23] ingest | Software Writing Software (gone right!)
+## [2026-05-27] ingest | Software After Software
 
-Ingested TJ DeVries's talk/demo on `luai.nvim`, a Neovim experiment that generates small Lua functions from descriptions, stores them as modules, and reuses/improves them later.
+Ingested Thorsten Ball's 12-point manifesto from X (2026-05-26) on how AI agents transform software development economics, organization, and practice. Manifesto announces the positioning of Amp Labs (Sourcegraph) as a frontier R&D unit.
 
+- Created source page: `[[software-after-software]]`
+- Created entity pages: `[[thorsten-ball]]`, `[[amp]]`, `[[amp-labs]]`, `[[sourcegraph]]`
+- Created concept pages: `[[process-drag]]`, `[[value-migration-from-code]]`, `[[reorganize-around-models]]`, `[[frontier-camp]]`
+- Updated concepts: `[[code-is-free]]` (added Ball's industry-level framing), `[[engineering-role-shift]]`, `[[agent-native-infrastructure]]`, `[[just-in-time-software]]`, `[[acceptance-bottleneck]]`, `[[ai-era-standard-balance]]`, `[[local-optimization-trap]]`, `[[delegation-mindset]]`
+- Updated `[[index]]`, `[[log]]`, and `hotcache.md`
+
+Key takeaways: (1) **Code abundance** — AI makes implementation trivial; bottleneck moves from writing code to making decisions; "review will shift from code to decisions". (2) **Process drag** — Planning, prioritization, sequential review become drag when code is abundant; "AI is not only an accelerator for X — it changes whether X should exist at all". (3) **Value migration** — Software that does X loses value when agents can do X; moats shift to data, permissions, distribution, trust, compliance, regulatory position, and physical assets; software companies will be the last to admit it. (4) **Reorganize around models** — "A small team with strong judgment and many agents will outrun a large team trying to fit AI into processes from before the transformation"; ability to keep up beats headcount. (5) **Frontier camp** — Small autonomous team near real systems whose output is software + people + practice; Amp Labs as Ball's worked example. (6) The unit of work becomes the **delegated task**, not the code to be written.
+
+## [2026-05-25] ingest-refresh | Using Claude Code: The Unreasonable Effectiveness of HTML
 - Created source page: `[[software-writing-software-gone-right]]`
 - Created concept pages: `[[personalized-development-environment]]`, `[[just-in-time-software]]`
 - Created entity pages: `[[tj-devries]]`, `[[luaai-nvim]]`

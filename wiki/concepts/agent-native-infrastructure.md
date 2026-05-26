@@ -3,8 +3,8 @@ title: Agent-Native Infrastructure
 type: concept
 tags: [ai, infrastructure, agents, systems-design]
 created: 2026-04-30
-updated: 2026-04-30
-sources: [Andrej Karpathy From Vibe Coding to Agentic Engineering.md]
+updated: 2026-05-27
+sources: [Andrej Karpathy From Vibe Coding to Agentic Engineering.md, software-after-software.md]
 ---
 
 # Agent-Native Infrastructure / โครงสร้างพื้นฐานที่เอื้อต่อเอเจนท์
@@ -29,7 +29,18 @@ sources: [Andrej Karpathy From Vibe Coding to Agentic Engineering.md]
 - **Seamless Coordination**: Agent หลายตัวสามารถทำงานร่วมกันข้ามระบบได้โดยไม่มีแรงต้าน
 - **Reduced Friction**: ลดความผิดพลาดที่เกิดจากการที่ AI ตีความหน้าจอ UI ของมนุษย์ผิด
 
+## Ball's Manifesto angle
+
+[[thorsten-ball|Thorsten Ball]] ใน [[software-after-software|Software After Software]] ข้อ 7 ใส่ frame เดียวกันแบบสั้นและคม:
+
+> "Software, so far, was built for human use. In the future, software will be built mainly for agent use."
+
+Ball เพิ่มสองข้อย่อย: (1) ซอฟต์แวร์จะ "just-in-time" มากกว่า ahead-of-time (ดู [[just-in-time-software]]); (2) เส้นแบ่งระหว่าง "ใช้ซอฟต์แวร์" กับ "สร้างซอฟต์แวร์" อาจหายไปเลย — เพราะ agent ทำได้ทั้งสองด้านพร้อมกัน
+
 ## ดูเพิ่ม
 - [[agentic-engineering]]
 - [[software-3-0]]
 - [[andrej-karpathy]]
+- [[software-after-software]]
+- [[thorsten-ball]]
+- [[just-in-time-software]]

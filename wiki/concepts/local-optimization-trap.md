@@ -3,8 +3,8 @@ title: Local Optimization Trap
 type: concept
 tags: [efficiency, software-engineering, ai-productivity]
 created: 2026-04-28
-updated: 2026-04-28
-sources: [jeeraphan-lairat-ai-coding-speed.md]
+updated: 2026-05-25
+sources: [jeeraphan-lairat-ai-coding-speed.md, fundamental-productivity-ai-world.md]
 ---
 
 # Local Optimization Trap / กับดักของการเร่งสปีดผิดจุด
@@ -18,7 +18,12 @@ sources: [jeeraphan-lairat-ai-coding-speed.md]
 
 ## ตัวอย่าง
 - ทีมพัฒนาใช้ AI เขียนโค้ดเร็วขึ้น 10 เท่า แต่ต้องรอคนมาเทสนาน 3 วันเท่าเดิม ผลคือ Productivity รวมขององค์กรเท่าเดิม แต่ความเครียดของฝ่าย Testing เพิ่มขึ้น 10 เท่า
+- ทีมใช้ AI สร้าง requirement หรือ design spec ได้เร็วมาก แต่คนถัดไปยังต้องอ่านและยอมรับงานเอง จุดคอขวดจึงย้ายไปที่ [[acceptance-bottleneck|Acceptance Bottleneck]] ตามเลนส์ของ [[interaction-productivity|Interaction Productivity]]
 
 ## See also
 - [[theory-of-constraints]]
 - [[lead-time]]
+- [[interaction-productivity]]
+- [[acceptance-bottleneck]]
+- [[process-drag]]
+- [[software-after-software]]

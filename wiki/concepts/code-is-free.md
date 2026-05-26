@@ -3,13 +3,13 @@ title: Code is Free
 type: concept
 tags: [ai, software-engineering, economy, agents]
 created: 2026-04-28
-updated: 2026-04-28
-sources: [ryan-lopopolo-harness-engineering.md]
+updated: 2026-05-27
+sources: [ryan-lopopolo-harness-engineering.md, software-after-software.md]
 ---
 
 # Code is Free / โค้ดไม่มีต้นทุนการผลิต
 
-แนวคิดที่ว่าในยุค AI Agent การผลิต (Implementation), การปรับปรุง (Refactoring) และการลบ (Deletion) ซอร์สโค้ด ไม่ใช่ทรัพยากรที่ขาดแคลนอีกต่อไป — เสนอโดย [[ryan-lopopolo]] (OpenAI, 2026)
+แนวคิดที่ว่าในยุค AI Agent การผลิต (Implementation), การปรับปรุง (Refactoring) และการลบ (Deletion) ซอร์สโค้ด ไม่ใช่ทรัพยากรที่ขาดแคลนอีกต่อไป — เสนอโดย [[ryan-lopopolo]] (OpenAI, 2026) และต่อมาถูก [[thorsten-ball|Thorsten Ball]] ขยายในระดับอุตสาหกรรมผ่าน [[software-after-software|Software After Software]] (2026-05-26)
 
 ## แก่นความคิด
 ในอดีต โค้ดมีต้นทุนสูงเพราะต้องใช้ "แรงงานมนุษย์" ที่มีจำกัด แต่ในโลกที่ Agent ทำงานได้เหมือนวิศวกรซอฟต์แวร์:
@@ -25,8 +25,24 @@ sources: [ryan-lopopolo-harness-engineering.md]
 ## Payne's Perspective (Why this matters)
 การมองว่าโค้ดไม่มีต้นทุนช่วยเปลี่ยน mindset ของวิศวกรจาก "Senior Coder" ไปเป็น "Staff Engineer" หรือ "Orchestrator" ที่เน้นการตัดสินใจ (Judgement) และการวางทิศทาง (Steering) มากกว่าการลงมือทำ
 
+## Ball's Industry-Level Framing
+
+[[thorsten-ball|Thorsten Ball]] (Amp/Sourcegraph, 2026-05-26) ขยายแนวคิดเดียวกันในระดับอุตสาหกรรมผ่าน [[software-after-software|Software After Software]]:
+
+- Lopopolo เน้นมุม **engineer's mental model** — code เป็น disposable artifact, อย่ายึดติด
+- Ball เน้นมุม **industry assumption** — วิชาชีพ software dev (40 ปี) สร้างบนสมมติฐานว่า code "ยากและพลาดง่าย"; อุตสาหกรรม software สร้างบนสมมติฐานว่า "code หายาก"; ทั้งสองสมมติฐานพังพร้อมกัน
+
+Ball ขยายต่อไปอีกขั้น: ถ้า code abundance เป็นจริง business model ของซอฟต์แวร์ก็เปลี่ยน — มูลค่าย้ายออกจาก code ไปสู่ data/distribution/trust/compliance (ดู [[value-migration-from-code]])
+
+ผลคือ "code is free" ไม่ใช่แค่ engineering tactic แต่กลายเป็น corporate strategy ด้วย
+
 ## ดูเพิ่ม
 - [[harness-engineering]]
 - [[ryan-lopopolo]]
 - [[token-billionaire]]
 - [[judgement-vs-automation]]
+- [[software-after-software]]
+- [[thorsten-ball]]
+- [[value-migration-from-code]]
+- [[process-drag]]
+- [[reorganize-around-models]]

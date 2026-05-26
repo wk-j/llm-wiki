@@ -3,8 +3,8 @@ title: Engineering Role Shift
 type: concept
 tags: [ai, software-engineering, career, roles]
 created: 2026-04-15
-updated: 2026-04-28
-sources: [software-engineer-role-ai-era.md, llm-era-computer-engineering-nattee.md, aaron-levie-agent-automation-jobs.md, llm-era-computer-engineering-ep3-nattee.md]
+updated: 2026-05-27
+sources: [software-engineer-role-ai-era.md, llm-era-computer-engineering-nattee.md, aaron-levie-agent-automation-jobs.md, llm-era-computer-engineering-ep3-nattee.md, software-after-software.md]
 ---
 
 # Engineering Role Shift / การเปลี่ยนขั้วของบทบาทวิศวกร
@@ -84,6 +84,16 @@ sources: [software-engineer-role-ai-era.md, llm-era-computer-engineering-nattee.
 -   Governance & Safety Owner — ผู้รับผิดชอบ compliance และ risk สำหรับระบบ AI
 -   [[agent-enablement-role]] — เจ้าของการเอา agent ไปใช้กับ workflow จริงในองค์กร ([[aaron-levie|Levie]] บอกว่าจะเป็นการเติบโตที่ใหญ่ที่สุดในบริษัท non-tech)
 
+## Ball's Manifesto angle
+
+[[thorsten-ball|Thorsten Ball]] ใน [[software-after-software|Software After Software]] (2026-05-26) ข้อ 11 พูดเรื่องเดียวกันในมุมที่ตรงกว่าและแรงกว่า:
+
+> "The software engineer does not disappear, but changes. Software engineering shifts away from code and toward product thinking, shaping systems, judging tradeoffs, and business outcomes."
+
+ในข้อ 4 Ball เพิ่มอีกว่า "review will shift from code to decisions" — review ไม่ได้หาย แต่ย้ายไปอีก layer
+
+Ball กดดันเรื่อง "ability to keep up matters more than headcount" (ข้อ 9.3) ซึ่งสะท้อนว่าทักษะการ adapt กับ model ใหม่ทุก 8 สัปดาห์เป็นทักษะใหม่ที่ engineer ต้องมี ไม่ใช่แค่ system thinking
+
 ## ดูเพิ่มเติม
 
 - [[software-engineer-role-ai-era]]
@@ -98,3 +108,7 @@ sources: [software-engineer-role-ai-era.md, llm-era-computer-engineering-nattee.
 - [[llm-era-computer-engineering-nattee]]
 - [[llm-coding-pitfalls]]
 - [[llm-knowledge-bases]]
+- [[software-after-software]]
+- [[thorsten-ball]]
+- [[reorganize-around-models]]
+- [[frontier-camp]]
