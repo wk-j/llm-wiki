@@ -1,6 +1,8 @@
 # Index
 
 ## Sources
+- [[piyalitt-deepswe-benchmark]] — Piyalitt Ittichaiwong (2026-05-27): DeepSWE & FrontierSWE benchmarks; contamination-free + behavioral verifier reveal real model gaps; GPT-5.5 70% #1, Opus 4.7 54% #3; per-vendor habits (Claude misses requirements / cheats via git, GPT precise)
+- [[improved-15-llms-harness-changed]] — Can Bölük (2026-02-12): Hashline edit tool benchmark across 16 models; harness > model framing; vendor vs open harness; OpenCode block context
 - [[software-after-software]] — Thorsten Ball (2026-05-26): 12-point manifesto on code abundance, process drag, agent-first development, frontier camps, and reorganizing around models; Amp Labs positioning
 - [[fundamental-productivity-ai-world]] — ChrisZa Stuff (2026-05-24): productivity as accepted human interaction; AI creates producer/consumer imbalance; acceptance bottleneck; standards must rebalance for AI-era artifacts
 - [[software-writing-software-gone-right]] — TJ DeVries (2026-05-20): `luai.nvim`; just-in-time software; personalized development environment; generate/cache/improve Lua functions inside Neovim
@@ -82,6 +84,13 @@
 - [[thclaws-marketplace-panutat]] — Panutat Tejasen (2026-04-30): thClaws v0.7.0 Marketplace; Enterprise Security; Private Marketplace; Host Bridge concept; Rabbit Holes in coding.
 
 ## Entities
+- [[deepswe]] — Datacurve's contamination-free long-horizon coding benchmark; behavioral verifier; 113 problems / 91 repos / 5 langs; wider model spread than SWE-Bench Pro
+- [[frontierswe]] — Proximal's ultra-long-horizon coding benchmark (20h/problem); unsaturated; same picture as DeepSWE (big gap between top 2 and rest)
+- [[datacurve]] — Team behind the DeepSWE benchmark
+- [[proximal]] — Team behind the FrontierSWE benchmark
+- [[mini-swe-agent]] — Minimal single-bash-tool harness; used by DeepSWE to isolate model ability from scaffolding
+- [[can-boluk]] — Engineer; oh-my-pi maintainer; Hashline edit format and react-edit-benchmark author
+- [[oh-my-pi]] — Can Bölük's pi fork; model-agnostic harness lab; Hashline and structured subagent outputs
 - [[thorsten-ball]] — Sourcegraph/Amp engineer; author of Software After Software manifesto and "Writing an Interpreter in Go"
 - [[amp]] — Sourcegraph's agent-first coding agent product; competitor to Claude Code/Codex/OpenCode
 - [[amp-labs]] — Frontier R&D arm of Amp; positioned as Sourcegraph's example of a Frontier Camp
@@ -203,6 +212,13 @@
 - [[jrt-investment]] — Thai Facebook source on investment and life mindset; frames "I don't give a fuck" as selective care allocation
 
 ## Concepts
+- [[benchmark-contamination]] — Model has seen the answer at pre-training; inflates coding benchmarks; DeepSWE designs it out by writing fresh, never-merged problems
+- [[behavioral-verifier]] — Verifier that tests software behavior, not implementation; DeepSWE's verifier has 0.3% false-positive vs SWE-Bench Pro's 8.5%
+- [[reward-hacking]] — Model games the verifier instead of solving the task (Claude recovers solutions from .git; models hide forbidden imports)
+- [[long-horizon-coding]] — Multi-step coding tasks needing self-exploration; short prompt, large diff; where real model gaps appear
+- [[missed-requirement]] — Failure mode: agent finishes the obvious branch but forgets a parallel requirement (Claude's single-branch delivery)
+- [[hashline]] — Line-tagged edits via short content hashes; reduces whitespace reproduction failures; large gains on weak models in Can's benchmark
+- [[edit-tool-formats]] — Patch vs str_replace vs fine-tuned merge vs Hashline; format choice can swing coding success as much as model choice
 - [[process-drag]] — Ball's framing: old engineering rituals (planning, prioritization, sequential review) become drag in a world of abundant code
 - [[value-migration-from-code]] — Ball's framing: software value moves from code to data, distribution, trust, compliance, regulatory position
 - [[reorganize-around-models]] — Ball's framing: winners build small teams around models; "agents are wasted when made to work like people"

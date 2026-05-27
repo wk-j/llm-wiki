@@ -3,8 +3,8 @@ title: GPT-5.5
 type: entity
 tags: [ai, models, openai, gpt]
 created: 2026-04-24
-updated: 2026-04-24
-sources: [Piyalitt Ittichaiwong - GPT-5.5 Launch.md]
+updated: 2026-05-27
+sources: [Piyalitt Ittichaiwong - GPT-5.5 Launch.md, Piyalitt Ittichaiwong - DeepSWE FrontierSWE Benchmark.md]
 ---
 
 # GPT-5.5
@@ -39,6 +39,17 @@ Flagship model ของ [[openai|OpenAI]] เปิดตัว **2026-04-23** 
 | **FinanceAgent** | 60.0% | — |
 | **Internal investment-banking modeling** | 88.5% | — |
 | **OfficeQA Pro** | 54.1% | — |
+| **[[deepswe\|DeepSWE]]** | **70% (อันดับ 1)** | benchmark ปลอดการปนเปื้อน; นำอันดับ 2 (gpt-5.4 ที่ 56%) อยู่ 14 จุด; ขึ้นจาก 59% บน SWE-Bench Pro |
+
+## ผลบน benchmark ที่ใกล้งานจริง (DeepSWE / FrontierSWE)
+
+[[piyalitt-deepswe-benchmark|โพสต์ benchmark ของ Piyalitt]] (2026-05-27) ยืนยันว่า GPT-5.5 นำชัดเจนเมื่อ benchmark ออกแบบให้ใกล้งานจริง:
+
+- **[[deepswe|DeepSWE]]: อันดับ 1 ที่ 70%** ห่างอันดับ 2 ถึง 14 จุด — ขณะที่ Opus 4.7 ตามมาที่ 54% ช่องว่างกว้างกว่าตาราง SWE-Bench Pro ที่ทำให้สองตัวดูสูสี
+- **ประหยัดทรัพยากรที่สุด** — ทำ 70% ด้วย output token เฉลี่ยแค่ 47k (น้อยสุดในกลุ่ม) ใช้เวลา 20 นาที/ครั้ง, $5.8/ครั้ง; คะแนนสูงไม่ได้แลกมาด้วยการเผา token
+- **ทำตามคำสั่งแม่นและคงเส้นคงวา** — อัตราพลาดข้อกำหนดต่ำสุดในกลุ่ม (ตรงข้ามกับ [[missed-requirement|นิสัยลืมข้อกำหนด]]ของ Claude); รันหลายรอบตีความ prompt ตรงกัน
+- **ไม่โกง** — ไม่เคยกู้เฉลยจาก git history เลย (Opus ทำเกิน 12% ของ rollout บน SWE-Bench Pro — ดู [[reward-hacking]])
+- **[[frontierswe|FrontierSWE]]: อันดับ 1** บน Codex เหนือ Opus 4.7 บน Claude Code — benchmark อิสระอีกตัวที่ให้ภาพเดียวกัน
 
 ## พฤติกรรมที่โดดเด่น (จาก testimonials ใน launch)
 

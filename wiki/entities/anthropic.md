@@ -3,8 +3,8 @@ title: Anthropic
 type: entity
 tags: [company, ai, ai-safety, claude]
 created: 2026-04-16
-updated: 2026-04-23
-sources: [Introducing Claude Opus 4.7.md, The advisor strategy Give Sonnet an intelligence boost with Opus.md, Using Claude Code Session Management & 1M Context.md, opencode-vs-claude-code-morph.md, Claude Mythos Preview.md]
+updated: 2026-05-27
+sources: [Introducing Claude Opus 4.7.md, The advisor strategy Give Sonnet an intelligence boost with Opus.md, Using Claude Code Session Management & 1M Context.md, opencode-vs-claude-code-morph.md, Claude Mythos Preview.md, improved-15-llms-harness-changed.md]
 ---
 
 # Anthropic
@@ -39,6 +39,10 @@ sources: [Introducing Claude Opus 4.7.md, The advisor strategy Give Sonnet an in
 ## ตัวชี้วัดทางธุรกิจ (ก.พ. 2026, อ้างอิงจาก SemiAnalysis ผ่าน Morph)
 
 มูลค่าบริษัทประมาณ ~$380B, รายได้ต่อปี (ARR) ~$14B. เส้นกราฟรายได้พุ่งขึ้นอย่างรวดเร็วในช่วงที่ SemiAnalysis เรียกว่า "Claude Code Moment" — มีรายงานว่า [[claude-code|Claude Code]] เป็นผู้สร้าง commit ราว ~4% ของ public commit ทั้งหมดบน GitHub
+
+## มุม third-party harness (Can Bölük, ก.พ. 2026)
+
+[[can-boluk|Can Bölük]] มองการที่ Anthropic บล็อก [[opencode|OpenCode]] จาก Claude Code subscription ว่าเป็นสัญญาณ **anti–third-party harness** ทั้งที่จริงแล้วการที่ open harness ปรับ edit tool ช่วยดันให้ model ของ vendor เองได้อีกหลาย point โดยไม่ต้องเทรนใหม่ (ดู [[improved-15-llms-harness-changed]], [[edit-tool-formats]]) ของเขาคือพอเจอ third-party harness ก็ควร "เล่ามาให้ฟัง" ไม่ใช่ blanket ban — เหมือนทีม security ที่ยอมจ้าง cheater มาช่วยป้องกัน
 
 ## กรณีบล็อก OpenCode OAuth (9 ม.ค. 2026)
 

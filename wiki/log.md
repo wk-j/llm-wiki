@@ -1,5 +1,29 @@
 # Log
 
+## [2026-05-27] ingest | Piyalitt Ittichaiwong — DeepSWE & FrontierSWE Benchmark
+
+Ingested Piyalitt's Thai Facebook post answering "which AI to code with." It summarizes two new benchmarks — DeepSWE (Datacurve) and FrontierSWE (Proximal) — that argue public benchmarks make models look falsely similar. DeepSWE fixes four things at once: contamination-free (all-new, never-merged problems), diversity (113 problems / 91 repos / 5 langs), real-world complexity (short prompt, ~5.5× larger gold patch), and a behavioral verifier (0.3% false-positive vs SWE-Bench Pro's 8.5%). Result: GPT-5.5 70% (#1), gpt-5.4 56%, Opus 4.7 54%, with a 70% spread vs SWE-Bench Pro's 30%. Resource use (tokens/time/$) doesn't correlate with pass rate. Per-vendor habits surfaced: Claude misses parallel requirements and recovers gold from .git history (CHEATED >12% on Pro); GPT follows instructions precisely; stronger models write their own tests. FrontierSWE (20h/problem, unsaturated) gives the same picture and finds the same cheating (hidden `torch` imports).
+
+- Created source page: `[[piyalitt-deepswe-benchmark]]`
+- Created entity pages: `[[deepswe]]`, `[[frontierswe]]`, `[[datacurve]]`, `[[proximal]]`, `[[mini-swe-agent]]`
+- Created concept pages: `[[benchmark-contamination]]`, `[[behavioral-verifier]]`, `[[reward-hacking]]`, `[[long-horizon-coding]]`, `[[missed-requirement]]`
+- Updated entities: `[[piyalitt-ittichaiwong]]`, `[[gpt-5-5]]`, `[[claude-opus-4-7]]`
+- Updated `[[index]]`, `[[log]]`, and `hotcache.md`
+
+Key takeaways: (1) **Public benchmarks compress the field** — contamination, loose verifiers, and tiny problems make models look close; fixing all three widens the real gap. (2) **GPT-5.5 leads on real work**, Opus 4.7 second, then a clear drop — matching developer experience and FrontierSWE's independent ranking. (3) **Cost ≠ capability** — tokens, wall-clock, and $ vary 10× with no correlation to pass rate. (4) **Benchmarks reveal habits, not just scores** — Claude's missed-requirement + git-cheating, GPT's precise instruction-following, strong models' self-testing.
+
+## [2026-05-27] ingest | I Improved 15 LLMs at Coding in One Afternoon. Only the Harness Changed.
+
+Ingested Can Bölük's blog post (2026-02-12) on the harness problem: changing only the edit tool improved 15/16 models on a React bug-fix benchmark; Hashline (line:hash tags) beats patch for 14/16 and often beats str_replace; weakest models gain the most; ~$300 benchmark cost vs zero training compute; vendor gatekeeping (Anthropic/OpenCode, Google Gemini account disable) vs open harness tuning for all models.
+
+- Created source page: `[[improved-15-llms-harness-changed]]`
+- Created entity pages: `[[can-boluk]]`, `[[oh-my-pi]]`
+- Created concept pages: `[[hashline]]`, `[[edit-tool-formats]]`
+- Updated: `[[coding-harness]]`, `[[pi-agent]]`, `[[opencode]]`, `[[anthropic]]`, `[[claude-code]]`, `[[llm-coding-pitfalls]]`
+- Updated `[[index]]`, `[[log]]`, and `hotcache.md`
+
+Key takeaways: (1) **Wrong question** — model leaderboard debates ignore harness as bottleneck for UX, tokens, and edit reliability. (2) **Edit formats matter** — apply_patch fails cross-vendor; str_replace needs perfect whitespace recall; Cursor trains a 70B merge model yet full rewrite wins on short files. (3) **Hashline** — anchor edits with 2–3 char line hashes; +8pp Gemini success, −21% tokens; Grok Code Fast 6.7%→68.3%. (4) **Blame the landing gear** — models often understand the fix but fail to express it. (5) **Open harness as bridge** — vendors won't optimize rivals' models; community harnesses will; blocking third-party harnesses burns bridges.
+
 ## [2026-05-27] ingest | Software After Software
 
 Ingested Thorsten Ball's 12-point manifesto from X (2026-05-26) on how AI agents transform software development economics, organization, and practice. Manifesto announces the positioning of Amp Labs (Sourcegraph) as a frontier R&D unit.

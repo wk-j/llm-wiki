@@ -3,8 +3,8 @@ title: Piyalitt Ittichaiwong
 type: entity
 tags: [people, thai, ai, medical, phd]
 created: 2026-04-24
-updated: 2026-04-24
-sources: [Piyalitt Ittichaiwong - GPT-5.5 Launch.md]
+updated: 2026-05-27
+sources: [Piyalitt Ittichaiwong - GPT-5.5 Launch.md, Piyalitt Ittichaiwong - DeepSWE FrontierSWE Benchmark.md]
 ---
 
 # Piyalitt Ittichaiwong
@@ -24,12 +24,18 @@ sources: [Piyalitt Ittichaiwong - GPT-5.5 Launch.md]
 - ฟ้อง **SWE-Bench Pro memorization sign** ใน GPT-5.5 card ตรงกับที่ Anthropic เคย flag ใน Mythos — ตีความว่าเป็นความพลาด ไม่ใช่การ benchmaxx ตั้งใจ
 - **Prompt management** จะยิ่งสำคัญเมื่อราคา GPT-5.5 แพงขึ้น 2 เท่าจาก GPT-5.4
 
+- ใน post เรื่อง benchmark เขาวางตัวเป็น "ที่พึ่งทางความจริง" ให้คอมมิวนิตี้ — เบื่อการเถียงกันด้วย benchmark สาธารณะ (เช่น "Gemini 3.5 Flash ดีบน benchmark" หรือ "Opus เก่ง backend กว่า GPT ตาม lmarena" ทั้งที่ lmarena ดู frontend เป็นหลัก) เลยชี้ไปที่ [[deepswe|DeepSWE]] + [[frontierswe|FrontierSWE]] ที่ออกแบบให้ใกล้งานจริง ว่าสะท้อนความต่างได้ดีกว่า
+- จุดยืนสอดคล้องกันสองโพสต์: GPT-5.5 นำชัดในงาน coding จริง ตามด้วย Opus 4.7 แล้วค่อยห่างลงมา
+
 ## โพสต์ที่ ingest
 
 - **[[piyalitt-gpt-5-5-launch]]** (2026-04-23) — layered commentary ว่า subjective reaction + OpenAI launch summary ภาษาไทย
+- **[[piyalitt-deepswe-benchmark]]** (2026-05-27) — สรุป benchmark DeepSWE + FrontierSWE เพื่อตอบคำถาม "เขียนโปรแกรมใช้ AI ตัวไหนดี"; เน้นว่า benchmark ที่ปลอดการปนเปื้อนและ verifier ที่ตรวจพฤติกรรมเผยช่องว่างจริงของ model
 
 ## ดูเพิ่ม
 
 - [[openai]]
 - [[gpt-5-5]]
 - [[claude-mythos-preview]]
+- [[deepswe]]
+- [[frontierswe]]

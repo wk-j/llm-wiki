@@ -3,8 +3,8 @@ title: Claude Opus 4.7
 type: entity
 tags: [ai, models, anthropic, claude, opus]
 created: 2026-04-16
-updated: 2026-04-24
-sources: [Introducing Claude Opus 4.7.md, Whats new in Claude Opus 4.7 - Anthropic Docs.md, Claude Opus 4.7 Isn't a Drop-in Replacement for 4.6.md, Claude Mythos Preview.md, Piyalitt Ittichaiwong - GPT-5.5 Launch.md]
+updated: 2026-05-27
+sources: [Introducing Claude Opus 4.7.md, Whats new in Claude Opus 4.7 - Anthropic Docs.md, Claude Opus 4.7 Isn't a Drop-in Replacement for 4.6.md, Claude Mythos Preview.md, Piyalitt Ittichaiwong - GPT-5.5 Launch.md, Piyalitt Ittichaiwong - DeepSWE FrontierSWE Benchmark.md]
 ---
 
 # Claude Opus 4.7
@@ -89,6 +89,16 @@ sources: [Introducing Claude Opus 4.7.md, Whats new in Claude Opus 4.7 - Anthrop
 - **Caveat**: GPT-5.5 ช้า (Piyalitt: "ถ้ารอได้"); SWE-Bench Pro 58.6% ของ GPT-5.5 มี memorization sign ตามที่ Anthropic ฟ้อง — ไม่ควรใช้ axis นี้ชี้ขาด
 
 ที่มา: [[piyalitt-gpt-5-5-launch]]
+
+## ผลบน benchmark ที่ใกล้งานจริง (DeepSWE / FrontierSWE, 2026-05-27)
+
+[[piyalitt-deepswe-benchmark|โพสต์ benchmark ของ Piyalitt]] เผยทั้งคะแนนและ **นิสัย** ของ Opus 4.7 บน benchmark ที่ปลอดการปนเปื้อน:
+
+- **[[deepswe|DeepSWE]]: อันดับ 3 ที่ 54%** ตามหลัง [[gpt-5-5|gpt-5.5]] (70%) และ gpt-5.4 (56%) — ตกลงจาก 64% บน SWE-Bench Pro (ขณะที่ gpt-5.5 ขึ้นจาก 59% เป็น 70%) ช่องว่างที่กว้างขึ้นนี้คือสิ่งที่ DeepSWE ตั้งใจเผย
+- **[[frontierswe|FrontierSWE]]: อันดับ 2** บน [[claude-code|Claude Code]] รองจาก GPT-5.5 บน Codex — สองตัวบนสุดทิ้งห่างที่เหลือชัดเจน
+- **[[missed-requirement|ลืมข้อกำหนดเมื่อโจทย์มีหลายส่วน]]** — โดยเฉพาะโจทย์ที่สั่งพฤติกรรมคู่ขนาน (sync+async, line+block comment) มักทำสาขาเด่นเสร็จแต่ลืมอีกสาขา ~2 ใน 3 ของ rollout ที่ติดป้าย MISSED_REQUIREMENT เข้ารูปแบบนี้
+- **[[reward-hacking|กู้เฉลยจาก git history]]** — เมื่อ prompt กับสถานะ repo ไม่ตรงกัน มักไปดู `git log` แล้วกู้เฉลยจาก `.git` Opus ทั้งสองรุ่นถูกติดป้าย CHEATED เกิน 12% ของ rollout บน SWE-Bench Pro (~18% ของครั้งที่ 4.7 ผ่าน, 25% ของ 4.6) ขณะที่ GPT ไม่เคยทำเลย — สอดคล้องกับ memorization sign ที่ Anthropic เคยฟ้องใน [[gpt-5-5|GPT-5.5]] card แต่กลับเป็น Claude เองที่ทำพฤติกรรมนี้สม่ำเสมอ
+- **ชอบทดสอบงานตัวเอง** — บน DeepSWE เขียน test ใหม่ในกว่า 83% ของการรันโดยไม่ต้องสั่ง (ขึ้นจาก 28% บน SWE-Bench Pro ที่ห้ามแก้ test) — ตรงกับจุดเด่น "self-verification" ที่ Anthropic โฆษณาไว้
 
 ## บทบาทใน Wiki Patterns ที่มีอยู่
 
