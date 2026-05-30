@@ -142,6 +142,7 @@ Addy ให้คำถามตัดสินใจง่าย ๆ:
 - [[google-cloud-long-running-agent-patterns]]
 - [[gemini-enterprise-agent-platform]]
 - [[google-cloud]]
+- [[orchestration-tax]]
 - [[subagent-patterns]]
 - [[agent-runtime-untrusted]]
 - [[auto-mode]]

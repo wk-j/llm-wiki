@@ -3,8 +3,8 @@ title: Project Glasswing
 type: entity
 tags: [anthropic, cybersecurity, initiative, ai-safety]
 created: 2026-04-22
-updated: 2026-04-23
-sources: [Claude Mythos Preview.md]
+updated: 2026-05-29
+sources: [Claude Mythos Preview.md, Piyalitt Ittichaiwong - Opus 4.8 Launch Recap.md]
 ---
 
 # Project Glasswing
@@ -39,12 +39,14 @@ sources: [Claude Mythos Preview.md]
 ## แผนในอนาคต
 
 - [[anthropic|Anthropic]] วางแผนที่จะเปิดตัวระบบป้องกันด้านไซเบอร์ใหม่พร้อมกับ "Claude Opus model ที่กำลังจะมาถึง" — เป็นการปรับปรุงระบบป้องกันบนโมเดลที่มีความเสี่ยงน้อยกว่า Mythos Preview
+- **อัปเดต (28 พ.ค. 2026, บทความเปิดตัว [[claude-opus-4-8|Opus 4.8]]):** "Opus model ที่กำลังจะมาถึง" ก็คือ Opus 4.8 ที่เพิ่งออก ตอนนี้มีองค์กรจำนวนหนึ่งใช้ [[claude-mythos-preview|Mythos Preview]] สำหรับงาน cybersecurity อยู่แล้ว และการพัฒนามาตรการป้องกัน "คืบหน้าอย่างรวดเร็ว" — คาดว่าจะ **นำโมเดลระดับ Mythos มาให้ลูกค้าทุกคนได้ภายในไม่กี่สัปดาห์ข้างหน้า** (ก้าวสำคัญจากเดิมที่ Mythos เปิดให้เฉพาะพาร์ทเนอร์จำกัด)
 - มี **Cyber Verification Program** สำหรับผู้เชี่ยวชาญด้านความปลอดภัยที่การทำงานที่ถูกกฎหมายของพวกเขาได้รับผลกระทบจากระบบป้องกัน
 - จะมีการเผยแพร่บทวิเคราะห์ทางเทคนิคโดยละเอียดของช่องโหว่ต่างๆ เมื่อได้รับการแพตช์แล้ว
 
 ## ดูเพิ่ม
 
 - [[claude-mythos-preview]]
+- [[claude-opus-4-8]]
 - [[anthropic]]
 - [[model-cyber-capability-emergence]]
 - [[agent-runtime-untrusted]]

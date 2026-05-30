@@ -19,11 +19,13 @@ sources: [jeeraphan-lairat-ai-coding-speed.md, fundamental-productivity-ai-world
 ## ตัวอย่าง
 - ทีมพัฒนาใช้ AI เขียนโค้ดเร็วขึ้น 10 เท่า แต่ต้องรอคนมาเทสนาน 3 วันเท่าเดิม ผลคือ Productivity รวมขององค์กรเท่าเดิม แต่ความเครียดของฝ่าย Testing เพิ่มขึ้น 10 เท่า
 - ทีมใช้ AI สร้าง requirement หรือ design spec ได้เร็วมาก แต่คนถัดไปยังต้องอ่านและยอมรับงานเอง จุดคอขวดจึงย้ายไปที่ [[acceptance-bottleneck|Acceptance Bottleneck]] ตามเลนส์ของ [[interaction-productivity|Interaction Productivity]]
+- เปิด AI agent 20 ตัวขนานกัน รู้สึกว่าผลิตเยอะ แต่ judgement ของมนุษย์ (review + merge) ยังเป็น serial ตัวเดียว — เปิด agent คือ optimize จุดที่ไม่ใช่คอขวด งานเลยกองหน้าขั้น review ดู [[orchestration-tax|Orchestration Tax]] ของ [[addy-osmani|Addy Osmani]]
 
 ## See also
 - [[theory-of-constraints]]
 - [[lead-time]]
 - [[interaction-productivity]]
 - [[acceptance-bottleneck]]
+- [[orchestration-tax]]
 - [[process-drag]]
 - [[software-after-software]]

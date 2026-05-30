@@ -1,7 +1,10 @@
 # Index
 
 ## Sources
+- [[the-orchestration-tax]] — Addy Osmani (2026-05-28): the "orchestration tax" (named by Richard Seroter on a Google I/O panel); you are the single serial resource (GIL/Amdahl) in a concurrent agent system; starting agents is cheap, closing the loop is not; 5 tactics to architect your attention; busy ≠ productive; unpaid tax = technical + cognitive debt
+- [[piyalitt-opus-4-8-recap]] — Piyalitt Ittichaiwong (2026-05-28): Thai recap of the Claude Opus 4.8 launch; honesty as the headline (admits uncertainty, ~4× less likely to let its own bugs through); alignment near Mythos; new dynamic workflows + effort control UI + system-in-messages; default effort drops xhigh→high; Mythos-to-all-customers timeline within weeks
 - [[piyalitt-deepswe-benchmark]] — Piyalitt Ittichaiwong (2026-05-27): DeepSWE & FrontierSWE benchmarks; contamination-free + behavioral verifier reveal real model gaps; GPT-5.5 70% #1, Opus 4.7 54% #3; per-vendor habits (Claude misses requirements / cheats via git, GPT precise)
+- [[software-engineering-at-the-tipping-point]] — Adam Bender (2026-05-22): Software Ecology and Socio-technical Systems at the 10x Moment; Google's monorepo and Shared Fate / LSC superpowers; how AI-era scaling breaks reviewer capacity, test compute, VCS limits, and internal API boundaries; DORA amplifier pattern and 4 core fundamentals (Infrastructure, Validation, Isolation, Abstraction) for preserving human intellectual control
 - [[improved-15-llms-harness-changed]] — Can Bölük (2026-02-12): Hashline edit tool benchmark across 16 models; harness > model framing; vendor vs open harness; OpenCode block context
 - [[software-after-software]] — Thorsten Ball (2026-05-26): 12-point manifesto on code abundance, process drag, agent-first development, frontier camps, and reorganizing around models; Amp Labs positioning
 - [[fundamental-productivity-ai-world]] — ChrisZa Stuff (2026-05-24): productivity as accepted human interaction; AI creates producer/consumer imbalance; acceptance bottleneck; standards must rebalance for AI-era artifacts
@@ -84,6 +87,10 @@
 - [[thclaws-marketplace-panutat]] — Panutat Tejasen (2026-04-30): thClaws v0.7.0 Marketplace; Enterprise Security; Private Marketplace; Host Bridge concept; Rabbit Holes in coding.
 
 ## Entities
+- [[claude-opus-4-8]] — Anthropic flagship (2026-05-28); direct upgrade to Opus 4.7 at same price; headline is honesty (admits uncertainty, fewer unsupported claims, ~4× less likely to let its own bugs through); alignment near Mythos; ships dynamic workflows + effort control UI; default effort high
+- [[adam-bender]] — Senior software engineer and speaker representing Google for Developers; advocate for systems thinking and software ecology in the AI era
+- [[google-for-developers]] — Google's developer advocacy and relations program; publishes engineering lessons, tools, APIs, and frameworks for global developers
+- [[dora]] — DevOps Research and Assessment team at Google; conducts statistical research on software delivery performance and DevOps metrics
 - [[deepswe]] — Datacurve's contamination-free long-horizon coding benchmark; behavioral verifier; 113 problems / 91 repos / 5 langs; wider model spread than SWE-Bench Pro
 - [[frontierswe]] — Proximal's ultra-long-horizon coding benchmark (20h/problem); unsaturated; same picture as DeepSWE (big gap between top 2 and rest)
 - [[datacurve]] — Team behind the DeepSWE benchmark
@@ -212,6 +219,17 @@
 - [[jrt-investment]] — Thai Facebook source on investment and life mindset; frames "I don't give a fuck" as selective care allocation
 
 ## Concepts
+- [[orchestration-tax]] — Addy Osmani: the structural gap between what agents produce and what one human can review/merge; you are the GIL/serial bottleneck (Amdahl's Law) of your agent fleet; fix = architect attention (scale to review rate, sort work, batch reviews, spend the lock only on judgement, protect serial time)
+- [[cognitive-surrender]] — Accepting agent code without forming your own opinion because attention is exhausted; an ahead-of-dashboard symptom of orchestration tax; accrues cognitive debt
+- [[model-honesty]] — Models should claim only what evidence supports; admit uncertainty, don't overclaim progress; Opus 4.8's headline trait (~4× fewer of its own bugs let through); countermeasure to weak-success-criteria / missed-requirement / reward-hacking
+- [[dynamic-workflows]] — Claude Code research-preview (with Opus 4.8): Claude self-plans a large task, dispatches hundreds of parallel subagents in one session, self-verifies, then reports; example = whole-codebase migration to merge using the existing test suite
+- [[system-in-messages]] — Claude Messages API (Opus 4.8): put `system` inside the messages array to update instructions / permissions / token budget / environment mid-run without breaking prompt cache or faking a user turn
+- [[software-ecology]] — Holistic study of the socio-technical ecosystems that produce software; treats developers, tools, and organization as a co-evolving ecosystem
+- [[socio-technical-system]] — A system composed of deeply coupled human (social) and tech (technical) elements; internal developer environment is a socio-technical system
+- [[shared-fate]] — The degree to which components of an ecosystem are tightly linked; monorepos represent high shared fate, requiring unified automated testing
+- [[large-scale-changes]] — Capability allowing a single developer to safely make coordinated, large-scale code changes spanning millions of lines across thousands of files via automation
+- [[conways-law]] — Classic rule stating that software architectures mirror the communication structures of the organizations that design them
+- [[10x-moment]] — AI/LLM-driven transformation accelerating coding by 10x+, shifting constraints from code implementation to software engineering verification and decision-making
 - [[benchmark-contamination]] — Model has seen the answer at pre-training; inflates coding benchmarks; DeepSWE designs it out by writing fresh, never-merged problems
 - [[behavioral-verifier]] — Verifier that tests software behavior, not implementation; DeepSWE's verifier has 0.3% false-positive vs SWE-Bench Pro's 8.5%
 - [[reward-hacking]] — Model games the verifier instead of solving the task (Claude recovers solutions from .git; models hide forbidden imports)

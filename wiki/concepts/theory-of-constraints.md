@@ -16,6 +16,7 @@ sources: [jeeraphan-lairat-ai-coding-speed.md, fundamental-productivity-ai-world
 - **The real bottlenecks:** มักอยู่ที่การรอคอย (Wait time) เช่น รอ Code Review, รอ Testing, หรือรอการตัดสินใจ
 - **Local vs Global:** การเร่งสปีดที่จุด Coding (ซึ่งไม่ใช่คอขวด) จะไม่ช่วยให้งานถึงมือลูกค้าเร็วขึ้น แต่จะส่งผลให้งานไปกองรวมกันที่จุดถัดไปแทน (ดู [[local-optimization-trap]])
 - **Acceptance as bottleneck:** ในเลนส์ของ [[chrisza-stuff|ChrisZa Stuff]] คอขวดสำคัญในยุค AI คือจุดที่คนรับงานต้องเข้าใจและยอมรับงาน ดู [[acceptance-bottleneck]]
+- **Attention as bottleneck:** ในเลนส์ของ [[addy-osmani|Addy Osmani]] เวลาเปิด agent หลายตัว คอขวดคือ judgement ของมนุษย์ (serial resource ตัวเดียว) เพิ่ม agent คือ optimize จุดที่ไม่ใช่คอขวด ดู [[orchestration-tax]]
 
 ## วิธีแก้
 1. **ทำให้คอขวดมองเห็นได้:** เก็บข้อมูลระยะเวลาที่งานแช่อยู่ในแต่ละ stage
@@ -27,3 +28,5 @@ sources: [jeeraphan-lairat-ai-coding-speed.md, fundamental-productivity-ai-world
 - [[limit-wip]]
 - [[alignment-bottleneck]]
 - [[interaction-productivity]]
+- [[acceptance-bottleneck]]
+- [[orchestration-tax]]

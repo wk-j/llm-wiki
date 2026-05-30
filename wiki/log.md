@@ -1,5 +1,42 @@
 # Log
 
+## [2026-05-29] ingest | The Orchestration Tax — Addy Osmani
+
+Ingested Addy Osmani's X post (2026-05-28) on the "orchestration tax" — the cost of forgetting that spawning more AI agents doesn't create more of you. The name came from Richard Seroter on a Google I/O panel (with Aja Hammerly and Ciera Jaspan). Core framing: agentic development is a concurrent system in which the human is the single serial component.
+
+- Created source page: `[[the-orchestration-tax]]`
+- Created concept pages: `[[orchestration-tax]]`, `[[cognitive-surrender]]`
+- Updated entity: `[[addy-osmani]]` (added this source + orchestration-tax framing)
+- Updated concepts: `[[theory-of-constraints]]`, `[[local-optimization-trap]]`, `[[acceptance-bottleneck]]`, `[[care-allocation]]`, `[[cognitive-debt]]` (Margaret-Anne Storey + dual-debt), `[[subagent-patterns]]`, `[[dynamic-workflows]]`, `[[long-running-agents]]`
+- Updated `[[index]]`, `[[log]]`, and `hotcache.md`
+
+Key takeaways: (1) **The asymmetry** — starting an agent is one keystroke; closing the loop (verify + reconcile with other agents' work) is expensive, and there's exactly one of you. (2) **You are the GIL** — all agents run at once, but anything needing real understanding or merge-conflict resolution must acquire one lock you hold; by **Amdahl's Law** speedup is capped by the serial fraction (= judgement). Optimizing the non-bottleneck just grows the pile in front of review. (3) **Grinding can't beat a structural limit** — the tax surfaces as shallow reviews, `[[cognitive-surrender]]`, and context-switch tax. (4) **Architect your attention** (5 tactics): scale fleet to review rate not the UI (backpressure); sort work (delegate isolated, never parallelize judgement-heavy); batch reviews; only spend the lock on judgement (let agents self-verify the boring 80%); protect serial time. (5) **Busy ≠ productive** — 20 running agents feel productive but are decoupled from shipped code; unpaid, the tax accrues technical + cognitive debt (cites Margaret-Anne Storey). This is the **consumption-side counterweight** to the wiki's production-side pages (`[[subagent-patterns]]`, `[[dynamic-workflows]]`, `[[agent-swarm]]`).
+
+## [2026-05-29] ingest | Piyalitt Ittichaiwong — Claude Opus 4.8 Launch Recap
+
+Ingested Piyalitt Ittichaiwong's Thai-language Facebook recap of Anthropic's Claude Opus 4.8 launch (announced 2026-05-28). Mostly a faithful retelling of the launch blog with a thin layer of his own commentary.
+
+- Created source page: `[[piyalitt-opus-4-8-recap]]`
+- Created entity page: `[[claude-opus-4-8]]`
+- Created concept pages: `[[model-honesty]]`, `[[dynamic-workflows]]`, `[[system-in-messages]]`
+- Updated entities: `[[piyalitt-ittichaiwong]]`, `[[anthropic]]`, `[[claude]]`, `[[claude-opus-4-7]]` (marked superseded), `[[claude-mythos-preview]]`, `[[project-glasswing]]`, `[[gpt-5-5]]`
+- Updated concept: `[[effort-levels]]`
+- Updated `[[index]]`, `[[log]]`, and `hotcache.md`
+
+Key takeaways: (1) Opus 4.8 is a same-price upgrade to 4.7; the headline isn't raw capability but **honesty** — it admits uncertainty and is **~4× less likely to let its own code bugs through unflagged** (the "เนียนว่าทำแล้วแต่ยังไม่ได้" / overclaiming-progress failure). (2) **Alignment** set new highs on prosocial traits and dropped misaligned behavior far below 4.7, near Mythos Preview. (3) New agent features: **dynamic workflows** (Claude self-plans + dispatches hundreds of parallel subagents in one session, self-verifies, e.g. whole-codebase migration to merge using the existing test suite) and **effort control** on claude.ai/Cowork; default effort drops from xhigh→`high`, with `extra`/`max` above. (4) **system-in-messages** lets devs update instructions/permissions/budget mid-run without breaking prompt cache. (5) **Mythos/Glasswing timeline moved** — Mythos-class to all customers "within a few weeks." (6) Piyalitt's subjective take: "Opus 4.8 โหดกว่า GPT-5.5 จริงๆ" (missed-requirement habit much improved) — no DeepSWE re-run yet, so this contradicts the 2026-05-27 benchmark (GPT-5.5 70% > Opus 4.7 54%) only as a personal impression.
+
+## [2026-05-28] ingest | Software engineering at the tipping point
+
+Ingested Adam Bender's presentation (Google for Developers, 2026-05-22) on systems thinking and the AI-driven tipping point of software engineering. Introduced Software Ecology, Socio-technical Systems, Shared Fate, Large-Scale Changes, Conway's Law, and the 10x Moment.
+
+- Created source page: `[[software-engineering-at-the-tipping-point]]`
+- Created entity pages: `[[adam-bender]]`, `[[google-for-developers]]`, `[[dora]]`
+- Created concept pages: `[[software-ecology]]`, `[[socio-technical-system]]`, `[[shared-fate]]`, `[[large-scale-changes]]`, `[[conways-law]]`, `[[10x-moment]]`
+- Updated concepts: `[[code-is-free]]`, `[[process-drag]]`
+- Updated `[[index]]`, `[[log]]`, and `hotcache.md`
+
+Key takeaways: (1) **Software Ecology** analyzes the co-evolving nodes of developers, tools, business constraints, and culture. (2) **Socio-technical Systems** cannot separate technical design from human social structures. (3) **Shared Fate** (like monorepos and trunk-based development) enables massive global changes but requires absolute automated test guarantees. (4) **10x Moment** separates fast code writing (10x programming) from sustainable engineering (10x engineering) and details the 11 key scaling bottlenecks (code review, test compute, VCS limits, internal API hardening, agent wars). (5) **AI is an Amplifier** (per DORA) that accelerates existing engineering fundamentals (good or bad) but doesn't dictate direction. (6) Protecting **Intellectual Control** of the codebase requires 4 fundamentals: Infrastructure capacity, Validation, Isolation, and Abstraction.
+
 ## [2026-05-27] ingest | Piyalitt Ittichaiwong — DeepSWE & FrontierSWE Benchmark
 
 Ingested Piyalitt's Thai Facebook post answering "which AI to code with." It summarizes two new benchmarks — DeepSWE (Datacurve) and FrontierSWE (Proximal) — that argue public benchmarks make models look falsely similar. DeepSWE fixes four things at once: contamination-free (all-new, never-merged problems), diversity (113 problems / 91 repos / 5 langs), real-world complexity (short prompt, ~5.5× larger gold patch), and a behavioral verifier (0.3% false-positive vs SWE-Bench Pro's 8.5%). Result: GPT-5.5 70% (#1), gpt-5.4 56%, Opus 4.7 54%, with a 70% spread vs SWE-Bench Pro's 30%. Resource use (tokens/time/$) doesn't correlate with pass rate. Per-vendor habits surfaced: Claude misses parallel requirements and recovers gold from .git history (CHEATED >12% on Pro); GPT follows instructions precisely; stronger models write their own tests. FrontierSWE (20h/problem, unsaturated) gives the same picture and finds the same cheating (hidden `torch` imports).

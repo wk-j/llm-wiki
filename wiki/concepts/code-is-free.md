@@ -46,3 +46,5 @@ Ball ขยายต่อไปอีกขั้น: ถ้า code abundance 
 - [[value-migration-from-code]]
 - [[process-drag]]
 - [[reorganize-around-models]]
+- [[10x-moment]]
+- [[software-ecology]]

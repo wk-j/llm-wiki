@@ -106,6 +106,8 @@ Pipeline ตรงนี้คือแบบเดียวกันกับ [
 
 ถ้าเอา fan-out มาขยายจาก 3–5 ตัวเป็น 100–300 ตัว โดย coordinator agent ตัดสินใจเองว่าจะแตกกี่ทาง จะได้ [[agent-swarm]] — pattern ที่ [[kimi-k2-6|Kimi K2.6]] ของ [[moonshot-ai|Moonshot AI]] ดันเป็นจุดขาย เหมาะกับงานที่ output เป็น artifact จำนวนมาก (100 resume, 30 landing page) มากกว่างาน investigation ลึก ๆ
 
+เวอร์ชันของ Anthropic ในแนวนี้คือ [[dynamic-workflows|dynamic workflows]] ใน [[claude-code|Claude Code]] (research preview, มากับ [[claude-opus-4-8|Opus 4.8]]) — ต่างตรงที่ main agent **วางแผนและเลือกจำนวน subagent เอง** ตามขนาดงาน แล้ว **ตรวจผลตัวเองด้วย test suite** ก่อนรายงาน เหมาะกับงานหนักอย่าง migrate ทั้ง codebase ที่ตัดสินถูก/ผิดด้วยพฤติกรรมได้
+
 ## เทียบสองแบบ
 
 | | Parallel fan-out | Pipeline |
@@ -121,6 +123,7 @@ Pipeline ตรงนี้คือแบบเดียวกันกับ [
 - **[[advisor-strategy]]** (pattern ที่จับคู่โมเดลเล็กถูกกับโมเดลใหญ่แพง) อยู่คนละระดับกับ subagent pattern ไม่ใช่ pipeline แต่เป็นคู่ executor ตัวเล็ก + advisor ตัวใหญ่ เรียก advisor เฉพาะตอนเจอจุดตัดสินใจยาก ใช้ร่วมกันได้ — main agent ใน fan-out อาจเป็น executor ที่เรียก advisor ตอนสังเคราะห์ข้อสรุป
 - **[[ai-orchestrator]]** — เลือกรูปแบบไหนเมื่อไหร่ นั่นคืองานของ orchestrator (คนคุมวงทั้งระบบ) ตัวจริง
 - **[[context-rot]]** (ปรากฏการณ์โมเดลโง่ลงเมื่อ context ยาวขึ้น) — subagent ไม่ได้มีไว้เท่ ๆ มันเกิดขึ้นมาเพราะหน้าต่างหลักต้องคุมไม่ให้โตเกินจุดที่โมเดลเริ่มเสียคุณภาพ
+- **[[orchestration-tax]]** (น้ำหนักถ่วงฝั่งบริโภค) — fan-out / swarm พูดเรื่องการ *ผลิต* output ขนานกัน แต่ [[addy-osmani|Addy Osmani]] เตือนว่าฝั่ง *รับ* (มนุษย์ review + merge) เป็น serial resource ตัวเดียวที่ขนานไม่ได้ เปิด subagent เยอะเกินที่ review ไหวจะเกิด orchestration tax ทางเลี่ยงคือให้ subagent self-verify (เขียน test/screenshot) เพื่อให้มนุษย์ใช้ attention เฉพาะกับ judgement จริง ๆ
 
 ## ลงมือจริงใน Claude Code
 
@@ -136,6 +139,8 @@ Pipeline ตรงนี้คือแบบเดียวกันกับ [
 
 - [[alex-ker]]
 - [[alex-ker-harnesses-optimize]]
+- [[dynamic-workflows]]
+- [[agent-swarm]]
 - [[claude-code-subagents-docs]]
 - [[coding-harness]]
 - [[harness-engineering]]
@@ -143,6 +148,7 @@ Pipeline ตรงนี้คือแบบเดียวกันกับ [
 - [[ai-orchestrator]]
 - [[advisor-strategy]]
 - [[context-rot]]
+- [[orchestration-tax]]
 - [[compaction]]
 - [[panutat-tejasen]]
 - [[agent-handoff-documents]]

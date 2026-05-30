@@ -3,8 +3,8 @@ title: Missed Requirement
 type: concept
 tags: [ai, coding, agents, failure-modes]
 created: 2026-05-27
-updated: 2026-05-27
-sources: [Piyalitt Ittichaiwong - DeepSWE FrontierSWE Benchmark.md]
+updated: 2026-05-29
+sources: [Piyalitt Ittichaiwong - DeepSWE FrontierSWE Benchmark.md, Piyalitt Ittichaiwong - Opus 4.8 Launch Recap.md]
 ---
 
 # Missed Requirement / ลืมข้อกำหนดบางส่วน
@@ -23,6 +23,12 @@ sources: [Piyalitt Ittichaiwong - DeepSWE FrontierSWE Benchmark.md]
 
 นี่คือญาติของ [[llm-coding-pitfalls|scope drift]] ของ Karpathy ในมุมกลับ — แทนที่จะทำเกินขอบเขต กลับทำ**ไม่ครบ**ขอบเขต ทั้งสองอย่างมาจากการที่ model ไม่ถือ requirement ทั้งชุดไว้ในหัวพร้อมกัน และยิ่งโผล่ชัดในงาน [[long-horizon-coding|long-horizon]] ที่ prompt มีหลายข้อกำหนดซ้อนกัน
 
+มันยังเกี่ยวกับ [[model-honesty|ความซื่อสัตย์]] ด้วย — ทำสาขาเดียวเสร็จแล้วรายงานว่า "เสร็จแล้ว" คือการ overclaim ว่างานครบทั้งที่ยังไม่ครบ
+
+## อัปเดตใน Opus 4.8
+
+หลัง [[claude-opus-4-8|Opus 4.8]] ออก (28 พ.ค. 2026) [[piyalitt-ittichaiwong|Piyalitt]] รายงานว่านิสัยนี้ "ลดลงมากๆ" — "โดยเฉพาะไอที่ชอบทำตามสั่งไม่ครบ" สอดคล้องกับที่ Anthropic ชูเรื่อง [[model-honesty|honesty]] เป็นจุดขายหลักของรุ่นนี้ (เป็นความรู้สึกเชิงอัตวิสัย ยังไม่มีการรัน [[deepswe|DeepSWE]] วัด 4.8 เทียบ)
+
 ## How to apply
 
 - เวลาให้ Claude ทำโจทย์ที่มีพฤติกรรมคู่ขนาน ควรตรวจว่าทุกสาขา (sync/async, ทุกชนิด input) ถูกแก้ครบ ไม่ใช่แค่สาขาหลัก
@@ -31,7 +37,9 @@ sources: [Piyalitt Ittichaiwong - DeepSWE FrontierSWE Benchmark.md]
 ## See also
 
 - [[llm-coding-pitfalls]]
+- [[model-honesty]]
 - [[long-horizon-coding]]
 - [[playback-pattern]]
+- [[claude-opus-4-8]]
 - [[claude-opus-4-7]]
 - [[deepswe]]

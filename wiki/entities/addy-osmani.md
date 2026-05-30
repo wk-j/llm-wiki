@@ -3,8 +3,8 @@ title: Addy Osmani
 type: entity
 tags: [ai, software-engineering, web, google, agents]
 created: 2026-05-10
-updated: 2026-05-10
-sources: [Agent Harness Engineering.md, 5 Agent Design patterns for Long-running AI Agents.md]
+updated: 2026-05-29
+sources: [Agent Harness Engineering.md, 5 Agent Design patterns for Long-running AI Agents.md, The Orchestration Tax.md]
 ---
 
 # Addy Osmani
@@ -15,9 +15,11 @@ sources: [Agent Harness Engineering.md, 5 Agent Design patterns for Long-running
 
 - เขียน [[google-cloud-long-running-agent-patterns]] ร่วมกับ Shubham Saboo — สรุป 5 pattern สำหรับ [[long-running-agents|agent ที่อยู่ข้ามวัน]]
 - เขียน [[agent-harness-engineering]] — สังเคราะห์แนวคิดว่า **Agent = Model + Harness** และเสนอให้มอง agent failure เป็นสัญญาณสำหรับปรับ harness
+- เขียน [[the-orchestration-tax]] — แกะแนวคิด [[orchestration-tax|orchestration tax]] (ชื่อที่ Richard Seroter ตั้งบน panel Google I/O): มนุษย์คือ serial resource ตัวเดียวที่ขนานไม่ได้ในวง agent ต้องออกแบบ attention เหมือนออกแบบระบบ concurrent
 
 ## แนวคิดที่เชื่อมกับ Addy
 
+- [[orchestration-tax]] — ช่องว่างระหว่างของที่ agent ผลิตได้กับของที่มนุษย์ merge ได้จริง; เราคือ GIL ของ agent
 - [[long-running-agents]] — checkpoint/resume, delegated approval, memory-layered context, ambient processing, fleet orchestration
 - [[coding-harness]] — prompt, tools, filesystem, sandbox, memory, hooks, subagent, และ observability รอบ model
 - [[harness-ratchet]] — ทุก mistake ของ agent ควรกลายเป็น rule/hook/test ที่กัน failure class เดิม
@@ -27,5 +29,7 @@ sources: [Agent Harness Engineering.md, 5 Agent Design patterns for Long-running
 - [[google-cloud]]
 - [[google-cloud-long-running-agent-patterns]]
 - [[agent-harness-engineering]]
+- [[the-orchestration-tax]]
+- [[orchestration-tax]]
 - [[coding-harness]]
 - [[harness-ratchet]]

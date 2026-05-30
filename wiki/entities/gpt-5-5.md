@@ -3,8 +3,8 @@ title: GPT-5.5
 type: entity
 tags: [ai, models, openai, gpt]
 created: 2026-04-24
-updated: 2026-05-27
-sources: [Piyalitt Ittichaiwong - GPT-5.5 Launch.md, Piyalitt Ittichaiwong - DeepSWE FrontierSWE Benchmark.md]
+updated: 2026-05-29
+sources: [Piyalitt Ittichaiwong - GPT-5.5 Launch.md, Piyalitt Ittichaiwong - DeepSWE FrontierSWE Benchmark.md, Piyalitt Ittichaiwong - Opus 4.8 Launch Recap.md]
 ---
 
 # GPT-5.5
@@ -23,6 +23,7 @@ Flagship model ของ [[openai|OpenAI]] เปิดตัว **2026-04-23** 
 | **[[claude-opus-4-7\|Claude Opus 4.7]]** | senior engineer บอกว่า "แข็งแกร่งกว่าอย่างชัดเจน" ในด้าน reasoning + autonomy; CyberGym 81.8 vs 73.1; แพงกว่า Opus เล็กน้อย (ปกติ GPT ถูกกว่าครึ่ง — pricing inversion) |
 | **[[claude-mythos-preview\|Claude Mythos Preview]]** | [[piyalitt-ittichaiwong\|Piyalitt]] บอกว่า "เก่งใกล้มากๆ" ยกเว้น SWE-Bench Pro ที่มี memorization sign — แต่ GPT-5.5 *เปิดให้ทุกคนเข้าถึง* ต่างจาก Mythos ที่ gate ผ่าน [[project-glasswing\|Project Glasswing]] |
 | **[[kimi-k2-6]]** | K2.6 เน้น scale-out (300 sub-agent swarm, open source); GPT-5.5 เน้น single-agent capability + knowledge work + enterprise deployment |
+| **[[claude-opus-4-8\|Claude Opus 4.8]]** | หลัง Opus 4.8 ออก (28 พ.ค. 2026) [[piyalitt-ittichaiwong\|Piyalitt]] เปลี่ยนใจว่า "Opus 4.8 โหดกว่า GPT-5.5 จริงๆ" โดยเฉพาะนิสัย [[missed-requirement\|ลืมข้อกำหนด]] ที่ลดลงมาก — เป็น**ความรู้สึกเชิงอัตวิสัย** ยังไม่มีการรัน [[deepswe\|DeepSWE]] เทียบ 4.8 (ก่อนหน้านี้ GPT-5.5 นำที่ 70% vs Opus 4.7 ที่ 54%); เขายังหยอกว่า "ไม่ได้โหดกว่า 5.6 นะ" |
 
 ## Benchmarks เด่น
 
@@ -78,6 +79,7 @@ Flagship model ของ [[openai|OpenAI]] เปิดตัว **2026-04-23** 
 - [[openai]]
 - [[openai-codex]]
 - [[piyalitt-gpt-5-5-launch]]
+- [[claude-opus-4-8]]
 - [[claude-opus-4-7]]
 - [[claude-mythos-preview]]
 - [[kimi-k2-6]]

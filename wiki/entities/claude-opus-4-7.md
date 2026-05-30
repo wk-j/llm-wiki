@@ -3,11 +3,13 @@ title: Claude Opus 4.7
 type: entity
 tags: [ai, models, anthropic, claude, opus]
 created: 2026-04-16
-updated: 2026-05-27
-sources: [Introducing Claude Opus 4.7.md, Whats new in Claude Opus 4.7 - Anthropic Docs.md, Claude Opus 4.7 Isn't a Drop-in Replacement for 4.6.md, Claude Mythos Preview.md, Piyalitt Ittichaiwong - GPT-5.5 Launch.md, Piyalitt Ittichaiwong - DeepSWE FrontierSWE Benchmark.md]
+updated: 2026-05-29
+sources: [Introducing Claude Opus 4.7.md, Whats new in Claude Opus 4.7 - Anthropic Docs.md, Claude Opus 4.7 Isn't a Drop-in Replacement for 4.6.md, Claude Mythos Preview.md, Piyalitt Ittichaiwong - GPT-5.5 Launch.md, Piyalitt Ittichaiwong - DeepSWE FrontierSWE Benchmark.md, Piyalitt Ittichaiwong - Opus 4.8 Launch Recap.md]
 ---
 
 # Claude Opus 4.7
+
+> **อัปเดต (2026-05-28):** ถูกแทนที่ด้วย [[claude-opus-4-8|Claude Opus 4.8]] ซึ่งเป็น flagship ตัวใหม่ — ราคาเท่ากัน, ดีขึ้นหลายด้าน, จุดขายคือ [[model-honesty|ความซื่อสัตย์]] (ไม่เนียนว่าทำเสร็จ, ปล่อย bug ตัวเองผ่านน้อยลง ~4 เท่า) และ alignment ที่ใกล้ [[claude-mythos-preview|Mythos Preview]] มากขึ้น
 
 เป็นโมเดล flagship ของ [[anthropic|Anthropic]] ที่เปิดให้ใช้ทั่วไป ณ วันที่ **16 เมษายน 2026** เป็นรุ่นต่อโดยตรงจาก Opus 4.6
 
@@ -108,6 +110,7 @@ sources: [Introducing Claude Opus 4.7.md, Whats new in Claude Opus 4.7 - Anthrop
 
 ## ดูเพิ่ม
 
+- [[claude-opus-4-8]]
 - [[claude]]
 - [[anthropic]]
 - [[claude-mythos-preview]]

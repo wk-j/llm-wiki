@@ -48,6 +48,8 @@ sources: [jrt-investment-idgaf-skill.md]
 
 ในเชิงทักษะส่วนตัว มันเสริม [[judgement-vs-automation]] คนยังต้องใช้ judgment แต่ต้องรู้ด้วยว่า judgment ของตัวเองควรถูกใช้กับเรื่องไหน และ judgment ของใครควรถูกนำมานับ
 
+เวลาทำงานกับ AI agent หลายตัว concept นี้ขยายเป็น [[orchestration-tax|Orchestration Tax]] ของ [[addy-osmani|Addy Osmani]]: attention เป็น serial resource ที่ clone ไม่ได้ เปิด agent เกินที่ review ไหวจะนำไปสู่ [[cognitive-surrender|cognitive surrender]] — ยอมรับงานเพราะไม่เหลือ attention จะคิดเอง วิธีแก้คือ "spend the lock on judgement" เท่านั้น ตรงกับ care allocation พอดี
+
 ## ข้อควรระวัง
 
 Care allocation ไม่ใช่การปิดหูจาก feedback ทั้งหมด ถ้า feedback มาจากคนที่มี context มี stake และช่วยให้เราตัดสินใจดีขึ้น ก็ควร care
@@ -62,3 +64,5 @@ Care allocation ไม่ใช่การปิดหูจาก feedback ท
 - [[cheaper-to-correct]]
 - [[delegation-mindset]]
 - [[judgement-vs-automation]]
+- [[orchestration-tax]]
+- [[cognitive-surrender]]
