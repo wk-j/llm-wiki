@@ -3,8 +3,8 @@ title: Subagent Patterns
 type: concept
 tags: [ai, agents, subagents, harness, orchestration, architecture]
 created: 2026-04-18
-updated: 2026-05-12
-sources: [alex-ker-harnesses-optimize.md, Using Claude Code Session Management & 1M Context.md, Create custom subagents - Claude Code Docs.md, Kimi K2.6 Tech Blog Advancing Open-Source Coding.md, "New Skills! handoff, prototype, review and writing-*  Skills Changelog.md"]
+updated: 2026-06-05
+sources: [alex-ker-harnesses-optimize.md, Using Claude Code Session Management & 1M Context.md, Create custom subagents - Claude Code Docs.md, Kimi K2.6 Tech Blog Advancing Open-Source Coding.md, "New Skills! handoff, prototype, review and writing-*  Skills Changelog.md", Mellum2 Goes Open Source A Fast Model for AI Workflows  The JetBrains AI Blog.md]
 ---
 
 # Subagent Patterns / รูปแบบการใช้ subagent
@@ -121,6 +121,7 @@ Pipeline ตรงนี้คือแบบเดียวกันกับ [
 ## จุดที่เชื่อมกับเรื่องอื่น
 
 - **[[advisor-strategy]]** (pattern ที่จับคู่โมเดลเล็กถูกกับโมเดลใหญ่แพง) อยู่คนละระดับกับ subagent pattern ไม่ใช่ pipeline แต่เป็นคู่ executor ตัวเล็ก + advisor ตัวใหญ่ เรียก advisor เฉพาะตอนเจอจุดตัดสินใจยาก ใช้ร่วมกันได้ — main agent ใน fan-out อาจเป็น executor ที่เรียก advisor ตอนสังเคราะห์ข้อสรุป
+- **[[focal-models]]** — ถ้า subagent ทำงานเล็กที่เกิดบ่อย เช่น context gathering, summarization, validation, routing การใช้ model เฉพาะทางอย่าง [[mellum2|Mellum2]] อาจคุ้มกว่าใช้ frontier model ทุกตัว
 - **[[ai-orchestrator]]** — เลือกรูปแบบไหนเมื่อไหร่ นั่นคืองานของ orchestrator (คนคุมวงทั้งระบบ) ตัวจริง
 - **[[context-rot]]** (ปรากฏการณ์โมเดลโง่ลงเมื่อ context ยาวขึ้น) — subagent ไม่ได้มีไว้เท่ ๆ มันเกิดขึ้นมาเพราะหน้าต่างหลักต้องคุมไม่ให้โตเกินจุดที่โมเดลเริ่มเสียคุณภาพ
 - **[[orchestration-tax]]** (น้ำหนักถ่วงฝั่งบริโภค) — fan-out / swarm พูดเรื่องการ *ผลิต* output ขนานกัน แต่ [[addy-osmani|Addy Osmani]] เตือนว่าฝั่ง *รับ* (มนุษย์ review + merge) เป็น serial resource ตัวเดียวที่ขนานไม่ได้ เปิด subagent เยอะเกินที่ review ไหวจะเกิด orchestration tax ทางเลี่ยงคือให้ subagent self-verify (เขียน test/screenshot) เพื่อให้มนุษย์ใช้ attention เฉพาะกับ judgement จริง ๆ
@@ -147,9 +148,12 @@ Pipeline ตรงนี้คือแบบเดียวกันกับ [
 - [[claude-code-session-management]]
 - [[ai-orchestrator]]
 - [[advisor-strategy]]
+- [[focal-models]]
+- [[mellum2]]
 - [[context-rot]]
 - [[orchestration-tax]]
 - [[compaction]]
 - [[panutat-tejasen]]
 - [[agent-handoff-documents]]
 - [[throwaway-prototyping]]
+- [[loop-engineering]]

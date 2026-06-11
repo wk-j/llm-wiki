@@ -36,6 +36,13 @@ Cognitive surrender ไม่ได้เกิดจากความขี้
 - **Only spend the lock on judgement** — ให้ agent พิสูจน์ส่วนน่าเบื่อเอง (test/screenshot) เพื่อให้ attention ที่เหลือพอจะตั้งความเห็นกับ 20% ที่สำคัญ
 - เทียบกับ [[acceptance-bottleneck]] ของ ChrisZa: การ "accept" งานต้องผูกกับความเข้าใจและความรับผิดชอบจริง — cognitive surrender คือ acceptance ที่ขาดสองอย่างนั้น
 
+## ลูปยิ่งดี ยิ่งล่อให้ยอมแพ้
+
+ใน [[loop-engineering]] Addy เตือนว่า cognitive surrender เป็นหนึ่งในสามอย่างที่ **คมขึ้น** เมื่อลูปดีขึ้น (อีกสองคือ verification ยังเป็นของเรา + comprehension debt). พอลูปรันเองไม่มีคนดู มันยั่วยวนให้เลิกมีความเห็นแล้วรับอะไรก็ตามที่มันคืนมา
+
+> Designing the loop is the cure when you do it with judgement and the accelerant when you do it to avoid thinking — same action, opposite result.
+> (ออกแบบลูปคือ *ยา* ถ้าทำด้วยวิจารณญาณ และเป็น *ตัวเร่ง* ถ้าทำเพื่อเลี่ยงการคิด — ทำเหมือนกันเป๊ะ ผลตรงข้าม)
+
 ## See also
 
 - [[orchestration-tax]]
@@ -44,4 +51,5 @@ Cognitive surrender ไม่ได้เกิดจากความขี้
 - [[acceptance-bottleneck]]
 - [[care-allocation]]
 - [[skill-atrophy]]
+- [[loop-engineering]]
 - [[addy-osmani]]

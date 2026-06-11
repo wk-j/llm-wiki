@@ -1,6 +1,11 @@
 # Index
 
 ## Sources
+- [[stop-writing-specs-start-writing-facts]] — Jaroslaw Wasowski (2026-05-12): former SDD advocate walks it back; a spec is a prediction about the model, not a contract (LLM non-determinism even at temp 0); a fact = executable assertion that survives model upgrades (one test passed Sonnet 3.5→Opus 4.5+ unchanged, the spec needed 4 reinterpretations); intent gap (Lahiri); 57-year genealogy Hoare→Meyer→QuickCheck→Agent Behavioral Contracts; SDD still wins where a human outside the team reads the artifact (compliance/B2B/onboarding); 90-day migration audit→pivot→gate
+- [[loop-engineering-osmani]] — Addy Osmani (2026-06-09): "loop engineering" = stop prompting the agent yourself, design the loop that prompts it (Steinberger/Cherny); a loop is a harness that runs on a timer, spawns helpers, feeds itself; five pieces + memory (Automations / Worktrees / Skills / Plugins+Connectors / Sub-agents / state file); Claude Code & Codex both have all five; /loop vs /goal; maker/checker split; three problems get sharper (verification, comprehension debt, cognitive surrender)
+- [[harness-engineering-bockeler]] — Birgitta Böckeler / Thoughtworks, martinfowler.com (2026-04-02): mental model for the coding-agent *user* harness; harness = guides (feedforward) + sensors (feedback), split computational vs inferential; the steering loop; keep quality left; three regulation categories (maintainability / architecture fitness / behaviour harness); harnessability; harness templates; harness as cybernetic governor
+- [[what-weve-learned-building-cloud-agents]] — Cursor / Josh Ma (2026-06-02): one year of building cloud agents; the dev environment is the product (full env = output quality; failures show as silent quality drops, not crashes); long-running agents need durable execution (work-stealing 1-nine → Temporal 2-nines, 50M+ actions/day, 40%+ of Cursor PRs from cloud agents); decouple agent loop / machine / conversation state; "get out of the way" (shift logic from harness → agent-controlled tools as models improve); self-healing environments / autoinstall
+- [[mellum2-goes-open-source]] — JetBrains AI Blog (2026-06-01): Mellum2 open-sourced under Apache 2.0; 12B MoE model with 2.5B active params/token for routing, low-latency RAG, fast subagents, and private/local software-engineering AI workflows; introduces the focal-model framing
 - [[the-orchestration-tax]] — Addy Osmani (2026-05-28): the "orchestration tax" (named by Richard Seroter on a Google I/O panel); you are the single serial resource (GIL/Amdahl) in a concurrent agent system; starting agents is cheap, closing the loop is not; 5 tactics to architect your attention; busy ≠ productive; unpaid tax = technical + cognitive debt
 - [[piyalitt-opus-4-8-recap]] — Piyalitt Ittichaiwong (2026-05-28): Thai recap of the Claude Opus 4.8 launch; honesty as the headline (admits uncertainty, ~4× less likely to let its own bugs through); alignment near Mythos; new dynamic workflows + effort control UI + system-in-messages; default effort drops xhigh→high; Mythos-to-all-customers timeline within weeks
 - [[piyalitt-deepswe-benchmark]] — Piyalitt Ittichaiwong (2026-05-27): DeepSWE & FrontierSWE benchmarks; contamination-free + behavioral verifier reveal real model gaps; GPT-5.5 70% #1, Opus 4.7 54% #3; per-vendor habits (Claude misses requirements / cheats via git, GPT precise)
@@ -87,6 +92,9 @@
 - [[thclaws-marketplace-panutat]] — Panutat Tejasen (2026-04-30): thClaws v0.7.0 Marketplace; Enterprise Security; Private Marketplace; Host Bridge concept; Rabbit Holes in coding.
 
 ## Entities
+- [[cursor]] — AI coding company / IDE-harness; builds cloud agents on dedicated VMs; migrated agent loop to Temporal for durable execution; 40%+ of its monorepo PRs come from cloud agents; fine-tunes its own merge model
+- [[josh-ma]] — Cursor; author of "What We've Learned Building Cloud Agents" (2026-06-02)
+- [[temporal]] — durable-execution platform (retry, scheduling, durability across node failures); Cursor migrated its cloud-agent loop here, going from 1-nine to 2-nines reliability and 50M+ actions/day
 - [[claude-opus-4-8]] — Anthropic flagship (2026-05-28); direct upgrade to Opus 4.7 at same price; headline is honesty (admits uncertainty, fewer unsupported claims, ~4× less likely to let its own bugs through); alignment near Mythos; ships dynamic workflows + effort control UI; default effort high
 - [[adam-bender]] — Senior software engineer and speaker representing Google for Developers; advocate for systems thinking and software ecology in the AI era
 - [[google-for-developers]] — Google's developer advocacy and relations program; publishes engineering lessons, tools, APIs, and frameworks for global developers
@@ -173,6 +181,7 @@
 - [[somkiat-khitwongwattana]] — Thai software engineer a.k.a. **Akexorcist** (akexorcist.dev); long-time Android dev; writes in Thai on practice and LLM/Agent workflow
 - [[moonshot-ai]] — Chinese AI lab behind the Kimi family; open-source coding challenger; runs Kimi Code, Agent Swarm, Claw Groups surfaces
 - [[kimi-k2-6]] — Moonshot AI's 2026-04 open-source flagship: 262k context, agent swarm to 300 sub-agents, positioned vs GPT-5.4 / Opus 4.6 / Gemini 3.1 Pro on coding
+- [[mellum2]] — JetBrains 12B Apache 2.0 MoE model for fast AI workflows: routing, summarization, RAG, subagent steps, and private/local deployment; example of focal-model design
 - [[cyril-xbt]] — X content creator (@cyrilXBT); author of the opinionated 7-section CLAUDE.md guide; solo builder on AI + crypto + productivity
 - [[claude-mythos-preview]] — Anthropic frontier-preview model; most capable overall; autonomously finds/exploits zero-days in every major OS and browser; release restricted via Project Glasswing
 - [[project-glasswing]] — Anthropic initiative using Mythos Preview to secure critical software before Mythos-class models become broadly available; coordinated vulnerability disclosure
@@ -181,6 +190,8 @@
 - [[zed-industries]] — Creators of the Zed editor and the Agent Client Protocol (ACP)
 - [[google-cloud]] — Google's enterprise cloud division; ships Gemini Enterprise Agent Platform; Cloud Next '26 introduced 7-day long-running Agent Runtime
 - [[addy-osmani]] — Google engineer and author on web performance / agent architecture; wrote long-running agent patterns and Agent Harness Engineering
+- [[birgitta-bockeler]] — Thoughtworks engineer; "Exploring Gen AI" author on martinfowler.com; framed the coding-agent user harness as a control system of guides + sensors
+- [[thoughtworks]] — global software consultancy behind CI/CD, evolutionary architecture, fitness functions, and the Technology Radar; home of Böckeler's harness writing
 - [[vtrivedy]] — X writer credited by Addy Osmani with coining "harness engineering" around Agent = Model + Harness
 - [[fred-schott]] — Developer of Flue, cited as an agent harness framework author
 - [[flue]] — Agent harness framework by Fred Schott; example of Harness-as-a-Service / harness framework direction
@@ -217,13 +228,29 @@
 - [[ctrl-alt-zaid]] — AI researcher and author; proponent of machine-efficient agent memory and Mercury project
 - [[mercury]] — Open-source agent memory infrastructure; "Identity as human-owned, Memory as machine-efficient"
 - [[jrt-investment]] — Thai Facebook source on investment and life mindset; frames "I don't give a fuck" as selective care allocation
+- [[jetbrains]] — Developer-tools company behind IntelliJ/PyCharm; ACP partner and creator of Mellum2 for software-engineering AI workflows
+- [[jaroslaw-wasowski]] — Medium software-architecture writer; former SDD advocate (6 articles) who walked it back with "Stop Writing Specs. Start Writing Facts."
+- [[spec-kit]] — GitHub's SDD framework, ~90k stars (Q2 2026); shipped /speckit.spec-drift; its Step 1 survives as Wasowski's sketchpad
+- [[marc-brooker]] — AWS senior engineer (Lambda/Aurora); strongest defense of SDD: specs as explicit, versioned, living artifacts in iterative use
 
 ## Concepts
+- [[spec-driven-development]] — write the spec, let the agent generate code, spec as source of truth (Spec Kit/Kiro/OpenSpec/BMAD, 200k+ stars); core critique: a spec is a prediction about the model, not a contract; honest scope = compliance, B2B contracts, onboarding — wherever a human outside the team reads the artifact
+- [[facts-first]] — store system truth as executable assertions (test / property / contract) checked by exit code, not model interpretation; facts survive model upgrades; @draft→@spec→@implemented lifecycle in git; AI-era synthesis of Hoare→Design by Contract→QuickCheck→Agent Behavioral Contracts; 90-day migration audit→pivot→gate
+- [[intent-gap]] — Lahiri (Microsoft Research): AI code is "plausible by construction but not correct by construction"; the distance between user intent and what the program does; natural-language specs can't close it because they're uncheckable
+- [[llm-nondeterminism]] — LLMs are non-deterministic even at temperature 0 (floating-point non-associativity, batch scheduling, fused-attention kernels); 100B+ model reproduced outputs in only 12.5% of runs vs fully-consistent 7–8B (IBM RAG study); prose instructions are sampled, model migration = change of interpreter
+- [[property-based-testing]] — write universally quantified properties, let the machine generate random inputs (QuickCheck/Hypothesis); Quviq case: 450 lines of PBT over 60k lines of Erlang found 25 bugs incl. race conditions (1:133); checks behavior, not implementation — a natural fit for AI-written code
+- [[loop-engineering]] — Addy Osmani: replace yourself as the prompter; design a system that finds work, hands it out, checks it, remembers, and decides next; a loop = harness on a timer that spawns helpers and feeds itself; five pieces + memory; sits one floor above the harness; leverage moves from prompt to loop; harder than prompt engineering, not easier
+- [[git-worktrees]] — separate working directory on its own branch sharing the same repo history; lets parallel agents not step on each other's files; removes mechanical collision but not the human review ceiling (ties to orchestration-tax)
+- [[cloud-agents]] — coding agents that run on cloud VMs (own env/deps/network), in parallel, unattended, for hours/days; building them = building an operating layer around the agent (environment + durability + decoupled conversation state + autonomy), not porting a local agent to a server
+- [[durable-execution]] — running long workflows that survive crashes/outages without losing state or hand-rolling retry/scheduling; why Cursor moved its agent loop to Temporal (work-stealing 1-nine → 2-nines); treat the agent loop as a long-running server process
+- [[agent-development-environment]] — "the environment is the product": a full dev environment is the single biggest factor in cloud-agent output quality; missing pieces show as silent quality drops (blamed on the model), not crashes; ends up requiring "enterprise IT for agents" (secret redaction, network policy, credential management)
+- [[self-healing-environments]] — next step past the binary of hand-holding vs getting out of the way: give the agent tools to understand its own system, report missing secrets / blocked network, and fix them (Cursor's "autoinstall")
 - [[orchestration-tax]] — Addy Osmani: the structural gap between what agents produce and what one human can review/merge; you are the GIL/serial bottleneck (Amdahl's Law) of your agent fleet; fix = architect attention (scale to review rate, sort work, batch reviews, spend the lock only on judgement, protect serial time)
 - [[cognitive-surrender]] — Accepting agent code without forming your own opinion because attention is exhausted; an ahead-of-dashboard symptom of orchestration tax; accrues cognitive debt
 - [[model-honesty]] — Models should claim only what evidence supports; admit uncertainty, don't overclaim progress; Opus 4.8's headline trait (~4× fewer of its own bugs let through); countermeasure to weak-success-criteria / missed-requirement / reward-hacking
 - [[dynamic-workflows]] — Claude Code research-preview (with Opus 4.8): Claude self-plans a large task, dispatches hundreds of parallel subagents in one session, self-verifies, then reports; example = whole-codebase migration to merge using the existing test suite
 - [[system-in-messages]] — Claude Messages API (Opus 4.8): put `system` inside the messages array to update instructions / permissions / token budget / environment mid-run without breaking prompt cache or faking a user turn
+- [[focal-models]] — JetBrains/Mellum2 framing: fast specialized models for high-frequency AI workflow steps such as routing, summarization, validation, RAG, and subagents; complements rather than replaces frontier models
 - [[software-ecology]] — Holistic study of the socio-technical ecosystems that produce software; treats developers, tools, and organization as a co-evolving ecosystem
 - [[socio-technical-system]] — A system composed of deeply coupled human (social) and tech (technical) elements; internal developer environment is a socio-technical system
 - [[shared-fate]] — The degree to which components of an ecosystem are tightly linked; monorepos represent high shared fate, requiring unified automated testing
@@ -355,6 +382,7 @@
 - [[grounding]] — Prompting discipline: requiring agents to cite code evidence before making changes
 - [[grpo]] — Group Relative Policy Optimization: DeepSeek's efficient RL without value model
 - [[harness-engineering]] — Engineering the pipeline of review/test/audit agents surrounding a core task
+- [[harness-guides-sensors]] — Böckeler's mental model: the user harness as a control system of guides (feedforward) + sensors (feedback), computational vs inferential, steering loop, regulation categories (maintainability/architecture/behaviour), harnessability, harness templates
 - [[harness-ratchet]] — Discipline of turning observed agent failures into durable harness constraints: rules, hooks, tests, lint, gates, or reviewer agents
 - [[holographic-ui]] — Light-projected interface style: glass panels, glow, mandatory animation
 - [[horror-vacui]] — UI anti-pattern: fear of empty space leading to visual over-saturation
@@ -380,7 +408,7 @@
 - [[memory-scoring]] — Mercury concept: ranking importance of memory fragments for injection
 - [[merkle-tree-sync]] — Performance: incremental codebase sync for agents using Merkle hashes
 - [[meta-ui]] — UI reflecting character state on the lens (blood, blur, screen shake)
-- [[mixture-of-experts]] — MoE: routing tokens to specialized subnetworks for efficiency (DeepSeek/GPT-4)
+- [[mixture-of-experts]] — MoE: routing tokens to specialized subnetworks for efficiency (DeepSeek/GPT-4/Mellum2)
 - [[mla-attention]] — Multi-head Latent Attention: DeepSeek technique reducing KV cache size
 - [[model-choice-by-expertise]] — Heuristic: domain expert = Sonnet is enough; no knowledge = pay for Opus
 - [[model-context-protocol]] — MCP: open standard for agent-tool communication
@@ -391,7 +419,7 @@
 - [[non-diegetic-ui]] — Traditional overlay UI (health bars) external to the narrative world
 - [[noosphere]] — Vernadsky's concept: the Earth's layer of collective thinking/intelligence
 - [[open-source-governance]] — Differentiation through who decides what to ship, not just the code
-- [[open-weight-models]] — Models shared as weights (Gemma/DeepSeek) but not necessarily open source
+- [[open-weight-models]] — Models shared as weights (Gemma/DeepSeek/Mellum2) but not necessarily fully open source; useful for private/local deployment
 - [[papercut-features]] — Small UX wins/fixes that differentiate niche products from giants
 - [[playback-pattern]] — Alignment: agent restates "Stated, Inferred, Out-of-scope" before acting
 - [[plugin-manager]] — Tooling to manage life cycle, versions, and dependencies of software extensions

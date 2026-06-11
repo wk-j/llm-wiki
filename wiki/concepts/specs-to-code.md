@@ -3,8 +3,8 @@ title: Specs-to-Code
 type: concept
 tags: [ai-coding, automation, workflow, hype]
 created: 2026-05-09
-updated: 2026-05-09
-sources: [matt-pocock-software-fundamentals.md]
+updated: 2026-06-11
+sources: [matt-pocock-software-fundamentals.md, "Stop Writing Specs. Start Writing Facts. The Entire SDD Movement Is Already Obsolete..md"]
 ---
 
 # Specs-to-Code / จากสเปกสู่โค้ด (โดยไม่ดูไส้ใน)
@@ -23,6 +23,10 @@ sources: [matt-pocock-software-fundamentals.md]
 2. **Code is Not Cheap**: โค้ดแย่ๆ คือหนี้สินที่แพงที่สุด เพราะมันจะขัดขวางไม่ให้ AI ตัวอื่นๆ เข้ามาทำงานต่อได้ (Context ตัน หรือ AI เข้าใจผิด)
 3. **Vibe Coding by another name**: หากทำโดยไม่มีระเบียบวินัย มันก็คือการ [[vibe-coding]] ที่ขาดการตรวจสอบคุณภาพ
 
+## หลักฐานจากฝั่ง SDD เอง (2026-06-11)
+
+คำเตือนของ Pocock ได้แรงหนุนจากคนที่เคยอยู่ฝั่งตรงข้าม: [[jaroslaw-wasowski|Jaroslaw Wasowski]] (อดีตคนเชียร์ [[spec-driven-development|SDD]] 6 บทความ) ถอนคำพูดใน [[stop-writing-specs-start-writing-facts]] ด้วยเหตุผลเชิงกลไก — spec ที่เป็น prose ต้องผ่านการตีความของ model ทุกครั้ง และ [[llm-nondeterminism|LLM ไม่ deterministic แม้ temperature 0]] ดังนั้น "เขียน spec แล้วให้ AI ปั่นโค้ด" จึงไม่มีวันได้ผลซ้ำเดิม เขาเสนอ [[facts-first]] (เก็บความจริงเป็น executable assertion) มาแทนใน inner loop
+
 ## สิ่งที่ควรจะเป็น
 แทนที่จะละทิ้งโค้ด มนุษย์ควรใช้ AI เป็นเครื่องมือช่วยในการ implement แต่ยังต้องรักษาอำนาจในการตัดสินใจเชิงสถาปัตยกรรม (Architectural decisions) และตรวจสอบความถูกต้องของโค้ดที่ออกมาเสมอ โดยอาจใช้ [[html-artifacts]] เพื่อสร้างแผนงาน (Plans) ที่อ่านง่ายและมีรายละเอียดครบถ้วนแทนการใช้ Markdown เพียงอย่างเดียว
 
@@ -32,3 +36,5 @@ sources: [matt-pocock-software-fundamentals.md]
 - [[software-entropy]]
 - [[code-is-free]] — แนวคิดที่เกี่ยวข้องกันในมุมของต้นทุน
 - [[html-artifacts]] — สื่อกลางที่ช่วยให้ specs อ่านง่ายและตรวจสอบได้จริง
+- [[spec-driven-development]] — movement เต็มรูปของแนวคิดนี้ พร้อมขอบเขตที่มันยังชนะ
+- [[facts-first]] — ข้อเสนอทดแทน: เขียน fact ที่รันได้แทน spec ที่ต้องตีความ

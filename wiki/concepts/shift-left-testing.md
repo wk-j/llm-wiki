@@ -21,6 +21,12 @@ sources: [jeeraphan-lairat-ai-coding-speed.md]
 - ลดอัตราการ Reject งานกลับไปแก้
 - เป็นพื้นฐานสำคัญของการทำ Self-testing โดย Developer
 
+## โยงกับ harness ของ coding agent
+
+[[birgitta-bockeler|Birgitta Böckeler]] ต่อยอดหลัก "keep quality left" เข้ากับ coding agent ใน [[harness-guides-sensors]]: feedback sensor (test, linter, review agent) ควรกระจายตาม lifecycle ตามต้นทุน/ความเร็ว — ของเร็วรันก่อน commit, ของแพง (mutation testing, review ภาพรวม) รันใน pipeline จุดต่างคือ sensor พวกนี้ไม่ได้ป้อนกลับให้แค่คน แต่ป้อนเข้า self-correcting loop ของ agent ด้วย
+
 ## See also
 - [[lead-time]]
 - [[theory-of-constraints]]
+- [[harness-guides-sensors]]
+- [[birgitta-bockeler]]

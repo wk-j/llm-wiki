@@ -1,0 +1,120 @@
+---
+title: Loop Engineering
+type: concept
+tags: [ai, agents, loops, harness, orchestration, automation, workflow]
+created: 2026-06-09
+updated: 2026-06-09
+sources: ["Loop Engineering..md"]
+---
+
+# Loop Engineering / วิศวกรรมลูป
+
+**Loop engineering คือการเลิกเป็น "คนพิมพ์ prompt" ให้ agent แล้วไปออกแบบ "ระบบ" ที่ทำหน้าที่พิมพ์ prompt นั้นแทนเรา.** [[addy-osmani|Addy Osmani]] (วิศวกร Google) สรุปไว้ในบทความ [[loop-engineering-osmani|Loop Engineering]] (2026-06-09): ลูป = *recursive goal* — เรากำหนด "จุดประสงค์" ไว้หนึ่งอย่าง แล้ว AI วนทำเองจนกว่าจะเสร็จ. เราไม่ได้คุยทีละ turn อีกต่อไป เราออกแบบลูปครั้งเดียวแล้วปล่อยให้ลูปไปจิ้ม agent แทน
+
+ที่มาของคำมาจากสองคน: Peter Steinberger (*"You should be designing loops that prompt your agents"*) และ Boris Cherny หัวหน้า Claude Code (*"My job is to write loops"*)
+
+## จาก "ถือเครื่องมือ" ไปเป็น "ออกแบบระบบ"
+
+สองปีที่ผ่านมา วิธีรีดงานจาก coding agent คือ: เขียน prompt ดี ๆ ใส่ context พอ → อ่านที่มันตอบ → พิมพ์อันต่อไป. **agent เป็นเครื่องมือ และเราถือมันอยู่ตลอดเวลา** ทีละ turn
+
+loop engineering เปลี่ยนภาพนั้น. เราสร้างระบบเล็ก ๆ ที่ *หางานเอง → แจกงาน → ตรวจงาน → จดว่าอะไรเสร็จ → ตัดสินใจขั้นต่อไป* แล้วปล่อยให้ระบบนั้นไปจิ้ม agent แทนเรา
+
+**ที่ทางในกองความคิดของ Addy** — loop engineering อยู่ *ชั้นบน* ของ [[agent-harness-engineering|harness]] หนึ่งชั้น:
+
+- [[coding-harness|harness]] = สภาพแวดล้อมที่ agent *ตัวเดียว* รันอยู่ข้างใน (prompt, tool, filesystem, memory, hook)
+- loop = harness ที่ **รันบน timer, แตก helper ออกไป, และป้อนงานให้ตัวเอง**
+
+> ได้อะไร: จุดงัด (leverage) ย้ายจาก "เขียน prompt เก่ง" ไปเป็น "ออกแบบลูปเก่ง" — งานไม่ได้ง่ายลง แต่จุดที่ใช้ทักษะมันย้ายที่
+
+## ห้าชิ้น + memory
+
+Addy บอกว่าลูปต้องการ 5 ชิ้น แล้วก็อีกหนึ่งที่ไว้จำของ. ที่น่าสนใจคือ **ตอนนี้ทั้ง Claude Code และ Codex มีครบทั้งหมดแล้ว** — เลิกเขียน bash กองโตเองได้. ชื่อต่างกันบ้าง แต่ความสามารถเหมือนกัน → ออกแบบลูปที่ทำงานได้ไม่ว่าจะนั่งอยู่ใน tool ตัวไหน
+
+| ชิ้น | ทำอะไร | หน้าที่เกี่ยว |
+|---|---|---|
+| **Automations** | รันตามตารางเวลา ทำ discovery + triage เอง — *หัวใจที่เต้น* ของลูป | (ดูด้านล่าง) |
+| **Worktrees** | ให้ agent ขนานกันได้โดยไม่เหยียบไฟล์กัน | [[git-worktrees]] |
+| **Skills** | เขียนความรู้โปรเจกต์ลงดิสก์ แทนให้ agent เดา | [[claude-md\|skill/CLAUDE.md]] |
+| **Plugins & Connectors** | เสียบ agent เข้าเครื่องมือจริง (issue tracker, DB, Slack) ผ่าน [[model-context-protocol\|MCP]] | [[plugin-manager]] |
+| **Sub-agents** | ตัวหนึ่งคิด อีกตัวตรวจ | [[subagent-patterns]] |
+| **Memory** (ชิ้นที่หก) | state file *นอก* บทสนทนา จำว่าอะไรเสร็จ/ค้าง | [[long-running-agents]] |
+
+### Automations — หัวใจที่เต้น
+
+Automations คือสิ่งที่ทำให้ลูปเป็น "ลูป" จริง ไม่ใช่แค่รันครั้งเดียว. เลือก project + prompt + ความถี่ + รันบน local หรือ background worktree. รอบที่เจออะไรไป triage inbox, รอบที่ไม่เจอก็ archive ตัวเองทิ้ง
+
+มี primitive ใน session สองตัวที่อยู่ใกล้แก่นที่สุด — และนี่คือจุดที่ทั้งสอง tool ตรงกัน:
+
+- **`/loop`** — รันซ้ำตาม cadence (ทุก ๆ กี่นาที/ชั่วโมง)
+- **`/goal`** — วิ่งต่อ *ข้าม turn* จนกว่าเงื่อนไขที่ verify ได้จะเป็นจริง เช่น "all tests in test/auth pass and lint is clean". **หลังทุก turn มี model เล็กแยกต่างหากเช็คว่าเสร็จหรือยัง** — ตัวที่เขียนโค้ดไม่ใช่ตัวที่ให้เกรด. นี่คือ maker/checker split ที่ใช้กับ *เงื่อนไขหยุด* เอง
+
+> Automations คือส่วนที่ทำให้งาน *โผล่ขึ้นมา* ส่วนที่เหลือของลูปคือส่วนที่ลงมือทำกับงานนั้น
+
+### Skills — intent ที่เขียนไว้ข้างนอก
+
+agent เริ่มทุก session แบบเย็นชืด และจะเติม "ช่องว่างของ intent" ด้วยการเดาอย่างมั่นใจ. skill คือ intent ที่เขียนไว้ข้างนอก (convention, ขั้นตอน build, "เราไม่ทำแบบนี้เพราะเหตุการณ์ครั้งนั้น") เขียนครั้งเดียว agent อ่านทุกรอบ
+
+> ไม่มี skill ลูป re-derive โปรเจกต์จากศูนย์ทุกรอบ. มี skill มันค่อย ๆ compound
+
+ข้อต้องแยก: **skill คือ format สำหรับ "เขียน" ส่วน [[plugin-manager\|plugin]] คือวิธี "ส่ง"** — อยากแชร์ข้าม repo ก็แพ็กเป็น plugin
+
+### Memory — agent ลืม แต่ repo ไม่ลืม
+
+ชิ้นที่หกฟังดูง่ายเกินจะสำคัญ: ไฟล์ markdown หรือบอร์ด Linear ที่อยู่ *นอก* บทสนทนาเดียว เก็บว่าอะไรเสร็จ/ค้าง. แต่มันคือกลเดียวกับที่ [[long-running-agents|long-running agent]] ทุกตัวพึ่งพา — **โมเดลลืมทุกอย่างระหว่างรอบ memory เลยต้องอยู่บนดิสก์ ไม่ใช่ใน context.** state file คือกระดูกสันหลังที่ทำให้พรุ่งนี้รันต่อจากจุดที่วันนี้หยุดได้
+
+## ลูปหนึ่งหน้าตาเป็นยังไง
+
+ตัวอย่างที่ Addy ใช้บ่อย ร้อยทั้งหมดเข้าด้วยกัน:
+
+1. **automation** รันทุกเช้า → เรียก triage skill อ่าน CI failure เมื่อวาน + open issue + commit ล่าสุด → เขียน finding ลง state file
+2. finding ที่ควรทำ → เปิด **worktree** แยก ส่ง **sub-agent** ร่างตัวแก้
+3. **sub-agent ตัวที่สอง** review ร่างเทียบ project skill + test เดิม
+4. **connector** เปิด PR + อัปเดต ticket เอง
+5. อะไรที่ลูปจัดการไม่ได้ → ตกลง triage inbox ให้เรา
+6. **state file** จำว่าลองอะไร อะไรผ่าน อะไรค้าง
+
+จุดสำคัญ: **เราออกแบบมันครั้งเดียว ไม่ได้ prompt สักขั้นเลย** — นั่นคือ "การ write loop" ของ Cherny ที่เป็นจริง
+
+## maker/checker — สิ่งที่สำคัญที่สุดในลูป
+
+> โมเดลที่เขียนโค้ดมันใจดีเกินไปเวลาให้เกรดการบ้านตัวเอง
+
+การแยก **คนเขียน** ออกจาก **คนตรวจ** คือโครงสร้างที่มีประโยชน์ที่สุดในลูป. agent ตัวที่สอง — instruction ต่าง บางทีคนละ model — จับสิ่งที่ตัวแรกพูดจนตัวเองเชื่อไปเอง. เหตุผลที่มันสำคัญ *ในลูป* โดยเฉพาะ: ลูปรันตอนเราไม่ได้ดู — **verifier ที่เราเชื่อใจจริงคือเหตุผลเดียวที่เดินจากไปได้**
+
+นี่คือ [[subagent-patterns|pipeline pattern]] (explore → implement → verify) ที่ Addy เคยเขียนในชื่อ "code agent orchestra" / "adversarial code review" — และเป็นสิ่งที่ `/goal` ทำใต้ฝากระโปรงอยู่แล้ว
+
+## สามอย่างที่ลูปยัง *ไม่* ทำให้ — และคมขึ้นเมื่อลูปดีขึ้น
+
+> The loop changes the work, it does not delete you from it.
+> (ลูปเปลี่ยนงาน ไม่ได้ลบเราออกจากงาน)
+
+1. **Verification ยังเป็นของเรา** — ลูปที่รันไม่มีคนดู = ลูปที่ *พลาดโดยไม่มีคนดู* ด้วย. "done is a claim and not a proof" (เสร็จคือคำกล่าวอ้าง ไม่ใช่ข้อพิสูจน์). งานเราคือ ship โค้ดที่เรา *ยืนยันแล้ว*
+2. **ความเข้าใจเน่าได้ถ้าปล่อย** — ยิ่งลูป ship เร็ว ช่องว่างระหว่าง "สิ่งที่มีจริง" กับ "สิ่งที่เราเข้าใจ" ยิ่งโต. Addy เรียก *comprehension debt* — ญาติของ [[cognitive-debt]]
+3. **[[cognitive-surrender]]** — พอลูปรันเอง มันยั่วให้เลิกมีความเห็นแล้วรับอะไรก็ตามที่มันคืนมา
+
+> Designing the loop is the cure when you do it with judgement and the accelerant when you do it to avoid thinking — same action, opposite result.
+> (ออกแบบลูปคือ *ยา* ถ้าทำด้วยวิจารณญาณ และเป็น *ตัวเร่ง* ถ้าทำเพื่อเลี่ยงการคิด — ทำเหมือนกันเป๊ะ ผลตรงข้าม)
+
+## เชื่อมกับเรื่องอื่นในวิกินี้
+
+- **[[orchestration-tax]]** — คู่ตรงข้ามที่สำคัญ. ลูปแก้การชน *เชิงกลไก* (ผ่าน worktree) และผลิตงานขนานได้เยอะ แต่ **เพดานยังคือ review bandwidth ของเรา** — เปิดลูปเยอะเกินที่ตรวจไหวก็เกิด orchestration tax. ทั้งสองเรื่องคือ Addy คนเดียวกัน เล่าคนละด้าน: ลูป = ฝั่งผลิต/ระบบ, orchestration tax = ฝั่งบริโภค/ความสนใจ
+- **[[long-running-agents]]** — ลูปคือ long-running agent ที่ประกอบจาก primitive ของตัวผลิตภัณฑ์; state file = memory-on-disk เหมือน checkpoint-and-resume
+- **[[agent-harness-engineering]]** — ชั้นล่างของลูป (harness ของ agent ตัวเดียว)
+- **[[subagent-patterns]]** — chunk "Sub-agents" ของลูปคือ pattern พวกนี้
+- **[[git-worktrees]]** — chunk "Worktrees"
+- **[[harness-ratchet]]** — finding ซ้ำ ๆ ที่ลูปเจอ ควรกลายเป็น skill/test/hook ถาวร
+
+## See also
+
+- [[loop-engineering-osmani]]
+- [[addy-osmani]]
+- [[git-worktrees]]
+- [[orchestration-tax]]
+- [[cognitive-surrender]]
+- [[long-running-agents]]
+- [[agent-harness-engineering]]
+- [[subagent-patterns]]
+- [[plugin-manager]]
+- [[model-context-protocol]]
+- [[harness-ratchet]]
+- [[cognitive-debt]]

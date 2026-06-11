@@ -23,6 +23,8 @@ Agent สั้น ๆ ถูกเขียนเป็น **request handler** 
 
 แก้ด้วยการเปลี่ยนมุม — **ปฏิบัติกับ agent เหมือน long-running server process** ไม่ใช่ request handler checkpoint ความคืบหน้า, จัดการ failure บางส่วน, ทำให้ idempotent — เหมือนตอนเขียน data pipeline ที่ต้อง process ล้าน record ไม่ได้ต่างจาก engineering pattern ที่เราใช้อยู่แล้ว เปลี่ยนแค่ subject จาก `data row` เป็น `agent decision`
 
+มุมนี้ตรงกับสิ่งที่ [[cursor|Cursor]] เจอจริงตอนทำ [[cloud-agents|cloud agent]] — agent loop ที่อยู่ยาว ๆ คือ distributed-system workload ตัวหนึ่ง. Cursor เลยย้ายไปใช้ [[temporal|Temporal]] เพื่อ [[durable-execution|durable execution]] แทนการสร้าง durability primitive เอง ดู [[what-weve-learned-building-cloud-agents]]
+
 ## Pattern 1: Checkpoint-and-Resume
 
 **เหมาะกับงานประเภทไหน** — งานที่เป็นชุดยาว ๆ เช่น process document 500 ไฟล์, ส่ง email 2000 ฉบับ, reconcile transaction 50000 record
@@ -142,6 +144,10 @@ Addy ให้คำถามตัดสินใจง่าย ๆ:
 - [[google-cloud-long-running-agent-patterns]]
 - [[gemini-enterprise-agent-platform]]
 - [[google-cloud]]
+- [[cloud-agents]]
+- [[durable-execution]]
+- [[temporal]]
+- [[what-weve-learned-building-cloud-agents]]
 - [[orchestration-tax]]
 - [[subagent-patterns]]
 - [[agent-runtime-untrusted]]
@@ -149,3 +155,4 @@ Addy ให้คำถามตัดสินใจง่าย ๆ:
 - [[agent-swarm]]
 - [[advisor-strategy]]
 - [[claude-code-session-management]]
+- [[loop-engineering]]

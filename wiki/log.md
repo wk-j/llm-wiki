@@ -792,3 +792,46 @@ Ingested Matt Pocock's skills changelog covering new `/handoff` and `/prototype`
 - Updated `[[index]]`, `[[log]]`, and `hotcache.md`
 
 Key takeaway: Pocock's new skills treat agent work as phase routing. Use handoff when context should move to a fresh session, prototype when unknowns need an artifact, review as two separate axes (standards/spec), and writing-* as a fragment-first workflow that keeps human voice as the raw material.
+
+## [2026-06-05] ingest | Mellum2 Goes Open Source
+Ingested JetBrains' announcement that Mellum2 is open-sourced under Apache 2.0. Key takeaway: Mellum2 is best understood as a production AI workflow model, not a frontier chatbot: 12B MoE with 2.5B active parameters per token, optimized for latency/throughput/cost in routing, RAG, subagent, summarization, and private/local deployment.
+- Created source summary: `[[mellum2-goes-open-source]]`
+- Created entity: `[[mellum2]]`
+- Created concept: `[[focal-models]]`
+- Updated entity: `[[jetbrains]]`
+- Updated concepts: `[[mixture-of-experts]]`, `[[open-weight-models]]`, `[[ai-orchestrator]]`, `[[subagent-patterns]]`
+- Updated `[[index]]`, `[[log]]`, and `hotcache.md`
+
+## [2026-06-05] ingest | What We've Learned Building Cloud Agents (Cursor / Josh Ma)
+Ingested Cursor's blog (Josh Ma, 2026-06-02) on one year of building cloud agents. Key takeaways: (1) the development environment is the product — a full env is the biggest factor in output quality and missing pieces show as silent quality drops, not crashes, ending in "enterprise IT for agents"; (2) long-running agents need durable execution — Cursor moved from a fragile work-stealing setup (1-nine) to Temporal (2-nines, 50M+ actions/day, 7M+ workflows; 40%+ of Cursor PRs from cloud agents); (3) decouple agent loop / machine / conversation state; (4) "get out of the way" — shift logic from a deterministic harness into agent-controlled tools as models improve; (5) self-healing environments / "autoinstall".
+- Created source summary: `[[what-weve-learned-building-cloud-agents]]`
+- Created entities: `[[cursor]]`, `[[josh-ma]]`, `[[temporal]]`
+- Created concepts: `[[cloud-agents]]`, `[[durable-execution]]`, `[[agent-development-environment]]`, `[[self-healing-environments]]`
+- Updated concepts: `[[long-running-agents]]`, `[[coding-harness]]`
+- Updated `[[index]]`, `[[log]]`, and `hotcache.md`
+
+## [2026-06-08] ingest | Harness engineering for coding agent users (Birgitta Böckeler / Thoughtworks)
+Ingested Böckeler's martinfowler.com article (2026-04-02) presenting a mental model for the coding-agent *user* harness. Key takeaways: (1) bounded contexts of "harness" — model / builder harness / user harness; focus on the outer user harness; (2) harness = guides (feedforward) + sensors (feedback), each split into computational (CPU, deterministic, fast, cheap → run every change) vs inferential (model, semantic, slow/expensive/non-deterministic → run selectively); sensors feed back into the agent's self-correcting loop, not just humans; (3) the steering loop — humans iterate the harness; recurring failures become improved controls (= harness ratchet); (4) keep quality left — distribute sensors across the lifecycle by cost/speed; (5) harness as cybernetic governor with three regulation categories: maintainability harness (easiest, lots of tooling), architecture fitness harness (= fitness functions), behaviour harness (the unsolved "elephant" — over-relies on AI-generated tests; approved fixtures helps selectively); (6) harnessability varies (typed langs, clear module boundaries, frameworks help; legacy paradox: harness most needed where hardest to build); (7) harness templates as a future direction. Field evidence cited: OpenAI harness write-up, Stripe minions, Thoughtworks "janitor army".
+- Created source summary: `[[harness-engineering-bockeler]]`
+- Created entities: `[[birgitta-bockeler]]`, `[[thoughtworks]]`
+- Created concept: `[[harness-guides-sensors]]`
+- Updated concepts: `[[coding-harness]]`, `[[harness-engineering]]`, `[[harness-ratchet]]`, `[[shift-left-testing]]`
+- Updated `[[index]]`, `[[log]]`, and `hotcache.md`
+- Note: `[[fitness-function]]` referenced but not yet created (future page marker)
+
+## [2026-06-09] ingest | Loop Engineering (Addy Osmani)
+Ingested Addy Osmani's "Loop Engineering" post (x.com, 2026-06-09). Key takeaways: (1) loop engineering = stop being the person who prompts the agent; design the system that does it instead — a loop is a recursive goal where you set a purpose and the AI iterates until done (quotes Peter Steinberger and Boris Cherny "my job is to write loops"); (2) it sits one floor above the harness — a harness that runs on a timer, spawns helpers, and feeds itself; (3) a loop needs five pieces + memory: Automations (the heartbeat — schedule/discovery/triage; /loop re-runs on cadence, /goal runs until a verifiable stop condition a separate small model checks), Worktrees (parallel agents don't collide), Skills (project intent written on disk), Plugins & Connectors (MCP into real tools), Sub-agents (maker/checker split), and a state file (memory outside the single conversation — "the agent forgets, the repo doesn't"); (4) Claude Code and Codex both have all five now, so design the loop, not the tool; (5) three problems get sharper, not easier, as the loop improves — verification is still yours ("done is a claim, not a proof"), comprehension debt, and cognitive surrender; "build the loop, stay the engineer."
+- Created source summary: `[[loop-engineering-osmani]]`
+- Created concepts: `[[loop-engineering]]`, `[[git-worktrees]]`
+- Updated entity: `[[addy-osmani]]`
+- Updated concepts: `[[orchestration-tax]]`, `[[cognitive-surrender]]`, `[[subagent-patterns]]`, `[[long-running-agents]]`
+- Updated `[[index]]`, `[[log]]`, and `hotcache.md`
+
+## [2026-06-11] ingest | Stop Writing Specs. Start Writing Facts. (Jaroslaw Wasowski)
+Ingested Wasowski's Medium article (2026-05-12) — a former SDD advocate (6 articles) walking back the claim that Spec-Driven Development answers vibe-coding chaos. Key takeaways: (1) a spec is a prediction about the model, not a contract — prose is sampled by the LLM on every read, even at temperature 0 (floating-point non-associativity, batch scheduling, fused-attention kernels; IBM RAG study: 100B+ model reproduced outputs in only 12.5% of runs vs fully-consistent 7–8B); (2) a fact = executable assertion (test / property / contract) verified by exit code, not interpretation — one test passed CI unchanged across Sonnet 3.5→3.7→4→Opus 4.5+ while the equivalent 1,500-word spec needed 4 reinterpretations; (3) intent gap (Lahiri, MSR): AI code is "plausible by construction but not correct by construction"; (4) facts-first = 57-year synthesis (Hoare 1969 → Meyer DbC 1992 → QuickCheck 2000 → Agent Behavioral Contracts 2026); Quviq/John Hughes case: 450 lines of PBT over 60k lines of Erlang found 25 bugs; (5) SDD still wins where a human outside the team reads the artifact — compliance, B2B contracts, onboarding ("ceremony is the product"); (6) 90-day migration: audit → pivot → gate. Caveats noted: author's own 6 projects, no control group; Google Trends decline (100→86) is weak evidence; the real proposal is "scope SDD down + add executable facts," not "drop SDD."
+- Created source summary: `[[stop-writing-specs-start-writing-facts]]`
+- Created entities: `[[jaroslaw-wasowski]]`, `[[spec-kit]]`, `[[marc-brooker]]`
+- Created concepts: `[[spec-driven-development]]`, `[[facts-first]]`, `[[intent-gap]]`, `[[llm-nondeterminism]]`, `[[property-based-testing]]`
+- Updated concepts: `[[specs-to-code]]`, `[[verifiability]]`, `[[harness-guides-sensors]]`, `[[behavioral-verifier]]`
+- Updated entity: `[[birgitta-bockeler]]` (her spec-as-source warning is quoted in this article)
+- Updated `[[index]]`, `[[log]]`, and `hotcache.md`
