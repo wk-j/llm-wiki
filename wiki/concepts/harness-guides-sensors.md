@@ -3,8 +3,8 @@ title: Harness Guides & Sensors
 type: concept
 tags: [ai, agents, harness, software-engineering, feedback-loop, cybernetics]
 created: 2026-06-08
-updated: 2026-06-08
-sources: [harness-engineering-bockeler.md]
+updated: 2026-06-11
+sources: [harness-engineering-bockeler.md, How to Keep Shipping When You Walk Away from Your Desk — Zack Proser, WorkOS.md]
 ---
 
 # Harness Guides & Sensors / บังเหียนที่ทำจาก "ตัวนำทาง" กับ "ตัวเซ็นเซอร์"
@@ -31,6 +31,8 @@ sources: [harness-engineering-bockeler.md]
 - **Sensors = feedback (ตัวเซ็นเซอร์)** — สิ่งที่ *จับ* งานหลัง agent ทำเสร็จ แล้วบอกว่าผ่านหรือไม่ผ่าน เช่น test, linter, type checker, structural test, review agent, log, browser
 
 จุดสำคัญที่ Böckeler เน้น: sensor ไม่ได้ป้อนกลับให้แค่มนุษย์ แต่ป้อนกลับเข้า **self-correcting loop ของ agent เอง** ด้วย — agent เห็น lint error ก็แก้เองก่อนจะถึงคน นี่คือหัวใจของการลด review toil
+
+[[zack-proser|Zack Proser]] ให้ตัวอย่างใช้งานจริงใน [[how-to-keep-shipping-away-from-desk|How to Keep Shipping When You Walk Away from Your Desk]]: gate ชั้นแรกคือ lint/build/unit test ผ่าน hook, ชั้นสองคือให้ agent คลิก browser flow จริง, ชั้นสามคือ critic agent ตรวจตาม constitution. ลำดับนี้ไล่จาก computational sensor ที่เร็ว ไปหา sensor ที่ต้องตีความมากขึ้น.
 
 ## computational vs inferential
 
@@ -103,6 +105,7 @@ Böckeler มองว่า harness ทำตัวเหมือน **cyberne
 - [[what-weve-learned-building-cloud-agents]] (Cursor) — เส้นแบ่ง deterministic (computational) vs ยกให้ agent (inferential) ขยับตลอด
 - [[instruction-budget]] — guide ทุกบรรทัดมีต้นทุน ใส่เท่าที่จำเป็น
 - [[facts-first]] / [[spec-driven-development]] — critique ของ Wasowski อ่านผ่านกรอบนี้ได้ตรง ๆ: prose spec คือ guide แบบ inferential (ต้องให้ model ตีความ, [[llm-nondeterminism|non-deterministic]]) ส่วน executable fact คือ sensor แบบ computational — facts-first คือการย้ายน้ำหนักจากฝั่งแรกไปฝั่งหลัง
+- [[developer-balance]] — verification gate ทำให้ agent ปิด loop เองได้ คนจึงใช้ attention กับ judgement แทนการเฝ้ารายละเอียด
 
 ## ปัญหาที่ยังเปิดอยู่ (จากบทความ)
 
@@ -118,6 +121,8 @@ Böckeler มองว่า harness ทำตัวเหมือน **cyberne
 - [[thoughtworks]]
 - [[coding-harness]]
 - [[harness-engineering]]
+- [[how-to-keep-shipping-away-from-desk]]
+- [[developer-balance]]
 - [[harness-ratchet]]
 - [[shift-left-testing]]
 - [[fitness-function]]

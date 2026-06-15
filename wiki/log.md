@@ -835,3 +835,20 @@ Ingested Wasowski's Medium article (2026-05-12) — a former SDD advocate (6 art
 - Updated concepts: `[[specs-to-code]]`, `[[verifiability]]`, `[[harness-guides-sensors]]`, `[[behavioral-verifier]]`
 - Updated entity: `[[birgitta-bockeler]]` (her spec-as-source warning is quoted in this article)
 - Updated `[[index]]`, `[[log]]`, and `hotcache.md`
+
+## [2026-06-11] ingest | How to Keep Shipping When You Walk Away from Your Desk (Zack Proser / WorkOS)
+Ingested Zack Proser's AI Engineer talk on keeping agent-driven software work sustainable. Key takeaways: (1) agents are no longer the bottleneck, human attention and judgement are; Simon Willison's four parallel agents leaving him wiped out by 11am is the concrete symptom; (2) developer balance uses four layers — signal agents filter Slack/Linear noise, voice-first briefs increase dispatch speed, Claude Code Remote Control lets the same local session continue while the developer walks away, and scheduled analysis of JSONL conversation history proposes missing skills/hooks/MCP integrations; (3) "speed requires safety" through verification gates from lint/build/unit tests → browser click-through → critic agent; (4) remote steering should preserve focus, health, and diffuse thinking, not create always-on work; (5) early-career boundary: do not delegate work you do not yet know how to do yourself.
+- Created source summary: `[[how-to-keep-shipping-away-from-desk]]`
+- Created concept: `[[developer-balance]]`
+- Created entities: `[[zack-proser]]`, `[[workos]]`
+- Updated concepts: `[[orchestration-tax]]`, `[[harness-ratchet]]`, `[[harness-guides-sensors]]`, `[[skill-atrophy]]`, `[[claude-code-remote-surfaces]]`
+- Updated entities: `[[claude-code]]`, `[[simon-willison]]`
+- Updated `[[index]]`, `[[log]]`, and `hotcache.md`
+
+## [2026-06-15] ingest | Introducing Omnigent: A Meta-Harness to Combine, Control and Share Your Agents
+Ingested Databricks' announcement of Omnigent, an Apache 2.0 open-source alpha meta-harness. Key takeaways: (1) agent harnesses are becoming silos, so workflows that combine Claude Code, Codex, Pi, SDKs, and custom agents need a layer above them; (2) Omnigent wraps agents behind a common messages/files-in and streams/tool-calls-out interface; (3) the meta-harness owns cross-agent composition, stateful contextual policy, cost controls, OS sandboxing, and live collaborative sessions; (4) policy based on action history is stronger than asking through prompts; (5) the Kubernetes/Terraform-like abstraction-layer claim remains an alpha-stage bet, with adapter quality and lowest-common-denominator APIs as open risks.
+- Created source summary: `[[introducing-omnigent-meta-harness]]`
+- Created entities: `[[omnigent]]`, `[[databricks]]`
+- Created concept: `[[meta-harness]]`
+- Updated concepts: `[[coding-harness]]`, `[[harness-engineering]]`, `[[loop-engineering]]`, `[[agent-runtime-untrusted]]`
+- Updated `[[index]]`, `[[log]]`, and `hotcache.md`

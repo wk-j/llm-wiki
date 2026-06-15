@@ -3,8 +3,8 @@ title: Agent Runtime as Untrusted Component / ตัวรัน agent คือ
 type: concept
 tags: [ai, agents, security, threat-model, apts, architecture]
 created: 2026-04-20
-updated: 2026-04-23
-sources: [owasp-apts.md, Claude Mythos Preview.md]
+updated: 2026-06-15
+sources: [owasp-apts.md, Claude Mythos Preview.md, "Introducing Omnigent A Meta-Harness to Combine, Control and Share Your Agents.md"]
 ---
 
 # Agent Runtime as Untrusted Component / ตัวรัน agent คือส่วนที่เชื่อไม่ได้
@@ -79,6 +79,7 @@ APTS เลยเขียนไว้แบบนี้:
 - [[subagent-patterns|Pipeline subagent]] pattern เอา review/test/audit agent มาคอยดูช่วงที่ main agent รันเอง คล้าย containment verification ของ APTS-AL-028 แต่ทำต่อเนื่อง
 - [[harness-engineering]] ของ [[panutat-tejasen|Panutat]] สอนให้ออกแบบ harness ของ reviewer ไม่ใช่สอนคนไป review ของ agent เอง ลึก ๆ แล้วก็คือ fail-by-construction ในระดับหลักสูตร
 - **Agent Gateway** ของ [[gemini-enterprise-agent-platform|Gemini Enterprise Agent Platform]] — ตัวกลางที่ตรวจ request ของ agent ก่อนเข้าถึง memory/tool policy อยู่นอก model audit ได้ เปลี่ยนได้โดยไม่ต้อง redeploy agent — ดู [[long-running-agents|Pattern 3 ของ long-running agents]] คือ APTS-SC-020 รีแบรนด์เป็น product
+- **Contextual policy** ของ [[omnigent|Omnigent]] — [[meta-harness|meta-harness]] จำ action history แล้วบังคับกฎจาก state จริง เช่น หลังลง package ใหม่ต้องขออนุมัติก่อน `git push`; egress proxy inject credential เฉพาะ request ที่ผ่านกฎโดยไม่ให้ agent เห็น secret
 
 พูดง่าย ๆ คำถามเปลี่ยนจาก "จะเทรน agent ยังไงให้เชื่อได้" เป็น "จะกั้น agent ยังไงโดยไม่ต้องเชื่อ"
 
@@ -111,3 +112,5 @@ APTS เลยเขียนไว้แบบนี้:
 - [[advisor-strategy]]
 - [[model-cyber-capability-emergence]]
 - [[claude-mythos-preview]]
+- [[meta-harness]]
+- [[omnigent]]

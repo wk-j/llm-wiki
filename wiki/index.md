@@ -1,6 +1,8 @@
 # Index
 
 ## Sources
+- [[introducing-omnigent-meta-harness]] — Databricks (2026-06-13): proposes meta-harness as the layer above Claude Code/Codex/Pi/custom agents; common messages+files/tool-calls interface; composition, stateful policy, cost control, OS sandbox, multi-harness authoring, and live collaborative sessions; Omnigent is Apache 2.0 alpha
+- [[how-to-keep-shipping-away-from-desk]] — Zack Proser / WorkOS (2026-06-11): agent is no longer the bottleneck, human attention is; developer-balance stack = signal layer / voice-first / Remote Control / system improvement from JSONL history; speed requires safety through lint→browser→critic verification gates; preserve judgement, health, and learning while agents keep shipping
 - [[stop-writing-specs-start-writing-facts]] — Jaroslaw Wasowski (2026-05-12): former SDD advocate walks it back; a spec is a prediction about the model, not a contract (LLM non-determinism even at temp 0); a fact = executable assertion that survives model upgrades (one test passed Sonnet 3.5→Opus 4.5+ unchanged, the spec needed 4 reinterpretations); intent gap (Lahiri); 57-year genealogy Hoare→Meyer→QuickCheck→Agent Behavioral Contracts; SDD still wins where a human outside the team reads the artifact (compliance/B2B/onboarding); 90-day migration audit→pivot→gate
 - [[loop-engineering-osmani]] — Addy Osmani (2026-06-09): "loop engineering" = stop prompting the agent yourself, design the loop that prompts it (Steinberger/Cherny); a loop is a harness that runs on a timer, spawns helpers, feeds itself; five pieces + memory (Automations / Worktrees / Skills / Plugins+Connectors / Sub-agents / state file); Claude Code & Codex both have all five; /loop vs /goal; maker/checker split; three problems get sharper (verification, comprehension debt, cognitive surrender)
 - [[harness-engineering-bockeler]] — Birgitta Böckeler / Thoughtworks, martinfowler.com (2026-04-02): mental model for the coding-agent *user* harness; harness = guides (feedforward) + sensors (feedback), split computational vs inferential; the steering loop; keep quality left; three regulation categories (maintainability / architecture fitness / behaviour harness); harnessability; harness templates; harness as cybernetic governor
@@ -92,6 +94,10 @@
 - [[thclaws-marketplace-panutat]] — Panutat Tejasen (2026-04-30): thClaws v0.7.0 Marketplace; Enterprise Security; Private Marketplace; Host Bridge concept; Rabbit Holes in coding.
 
 ## Entities
+- [[omnigent]] — Databricks open-source alpha meta-harness; wraps Claude Code/Codex/Pi/SDK/custom agents behind a common API and adds cross-harness policy, sandbox, cost control, and live collaboration
+- [[databricks]] — data and AI infrastructure company; creator of Omnigent and Genie; proposes meta-harness as a control layer above agent-tool silos
+- [[zack-proser]] — WorkOS Applied AI engineer; proposes developer balance through signal filtering, self-verifying agent loops, Remote Control, and harness improvement from conversation history
+- [[workos]] — enterprise developer-tools/API company; Zack Proser's Applied AI team used Claude Code to fix and verify a Slack-to-blog workflow end to end
 - [[cursor]] — AI coding company / IDE-harness; builds cloud agents on dedicated VMs; migrated agent loop to Temporal for durable execution; 40%+ of its monorepo PRs come from cloud agents; fine-tunes its own merge model
 - [[josh-ma]] — Cursor; author of "What We've Learned Building Cloud Agents" (2026-06-02)
 - [[temporal]] — durable-execution platform (retry, scheduling, durability across node failures); Cursor migrated its cloud-agent loop here, going from 1-nine to 2-nines reliability and 50M+ actions/day
@@ -234,6 +240,8 @@
 - [[marc-brooker]] — AWS senior engineer (Lambda/Aurora); strongest defense of SDD: specs as explicit, versioned, living artifacts in iterative use
 
 ## Concepts
+- [[meta-harness]] — control plane above multiple agent harnesses; standardizes composition, stateful policy, cost/sandbox controls, and shared sessions while preserving the ability to swap models and harnesses
+- [[developer-balance]] — design agent workflows so human attention, health, judgement, and learning remain sustainable; filter signals, require self-verification, steer without desk-watching, and turn session friction into harness improvements
 - [[spec-driven-development]] — write the spec, let the agent generate code, spec as source of truth (Spec Kit/Kiro/OpenSpec/BMAD, 200k+ stars); core critique: a spec is a prediction about the model, not a contract; honest scope = compliance, B2B contracts, onboarding — wherever a human outside the team reads the artifact
 - [[facts-first]] — store system truth as executable assertions (test / property / contract) checked by exit code, not model interpretation; facts survive model upgrades; @draft→@spec→@implemented lifecycle in git; AI-era synthesis of Hoare→Design by Contract→QuickCheck→Agent Behavioral Contracts; 90-day migration audit→pivot→gate
 - [[intent-gap]] — Lahiri (Microsoft Research): AI code is "plausible by construction but not correct by construction"; the distance between user intent and what the program does; natural-language specs can't close it because they're uncheckable
