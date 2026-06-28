@@ -4,7 +4,7 @@ type: entity
 tags: [person, ai, llm]
 created: 2026-04-12
 updated: 2026-04-30
-sources: [LLM Knowledge Bases Thread by @karpathy.md, forrestchangandrej-karpathy-skills A single CLAUDE.md file to improve Claude Code behavior, derived from Andrej Karpathy's observations on LLM coding pitfalls..md, "Karpathy's LLM Wiki The Complete Guide to His Idea File.md", Andrej Karpathy From Vibe Coding to Agentic Engineering.md]
+sources: [LLM Knowledge Bases Thread by @karpathy.md, forrestchangandrej-karpathy-skills A single CLAUDE.md file to improve Claude Code behavior, derived from Andrej Karpathy's observations on LLM coding pitfalls..md, "Karpathy's LLM Wiki The Complete Guide to His Idea File.md", Andrej Karpathy From Vibe Coding to Agentic Engineering.md, Self Learning for Agents Clearly Explained.md]
 ---
 
 # Andrej Karpathy / อันเดรจ คาร์พาธี
@@ -27,6 +27,12 @@ sources: [LLM Knowledge Bases Thread by @karpathy.md, forrestchangandrej-karpath
 - **[[software-3-0]]** — นิยามใหม่ของการเขียนโปรแกรม คือการใช้ context window เป็น lever ในการสั่งการ LLM interpreter
 - **[[jagged-intelligence]]** — มุมมองต่อ LLM ว่าเป็น "ghosts" (statistical simulation) ที่มีความเก่งแบบฟันปลา (jagged) คือเก่งงานยากอย่างการ refactor code มหาศาล แต่พลาดเรื่องง่ายๆ อย่างการนับจำนวนตัวอักษรหรือตรรกะพื้นฐาน
 
+## AutoResearch — model ที่ปรับ model
+
+ใน [[self-learning-for-agents-explained]] Karpathy ปรากฏผ่านโปรเจกต์ **AutoResearch**: ชี้ coding agent ไปที่ training setup เล็ก ๆ แล้วปล่อยรันข้ามคืน — แก้ไฟล์เดียว, เทรน 5 นาที, ให้คะแนนผล, เก็บถ้าดีขึ้นไม่งั้น undo, วนเป็นร้อยรอบก่อนคุณตื่น. เจอ speedup จริง ~11%. เป็นตัวอย่างของ self-learning **ชั้น Model** (ดู [[three-learning-layers]]).
+
+**ข้อจำกัดที่น่าสนใจ:** agent ปรับ model *อีกตัวที่เล็กกว่า* — weight ของตัว agent เองไม่เคยเปลี่ยน. และเหมือนทุกวิธีในชั้น Model มันรันได้แค่ที่คอมพิวเตอร์ให้คะแนนได้ฟรี ซึ่งเข้ากับธีม [[llm-coding-pitfalls]] ที่ Karpathy ชูเอง: ที่ที่วัดผลได้ชัด AI ทำได้ดี ที่ที่วัดยากต้องมีคน.
+
 ## แนวปฏิบัติและปรัชญา
 
 - **Outsource thinking, not understanding**: เราสามารถให้ AI ช่วยคิด (process/implement) ได้ แต่ความเข้าใจ (understanding) และทิศทาง (direction) ต้องอยู่ที่มนุษย์
@@ -48,3 +54,5 @@ sources: [LLM Knowledge Bases Thread by @karpathy.md, forrestchangandrej-karpath
 - [[llm-knowledge-bases]]
 - [[idea-file]]
 - [[memex]]
+- [[three-learning-layers]]
+- [[self-learning-for-agents-explained]]

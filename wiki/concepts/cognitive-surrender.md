@@ -3,8 +3,8 @@ title: Cognitive Surrender
 type: concept
 tags: [ai, psychology, developer-experience, attention, code-review]
 created: 2026-05-29
-updated: 2026-05-29
-sources: [The Orchestration Tax.md]
+updated: 2026-06-16
+sources: [The Orchestration Tax.md, Agentic Code Review.md]
 ---
 
 # Cognitive Surrender / การยอมแพ้ทางความคิด
@@ -43,9 +43,16 @@ Cognitive surrender ไม่ได้เกิดจากความขี้
 > Designing the loop is the cure when you do it with judgement and the accelerant when you do it to avoid thinking — same action, opposite result.
 > (ออกแบบลูปคือ *ยา* ถ้าทำด้วยวิจารณญาณ และเป็น *ตัวเร่ง* ถ้าทำเพื่อเลี่ยงการคิด — ทำเหมือนกันเป๊ะ ผลตรงข้าม)
 
+## AI review ก็ทำให้ยอมแพ้ได้
+
+ใน [[agentic-code-review]] Addy ใช้คำว่า borrowed confidence: AI reviewer พูดว่า "looks good" ด้วยน้ำเสียงมั่นใจ แล้วความมั่นใจนั้นกลายเป็นของเรา ทั้งที่เราไม่ได้เข้าใจเอง. วิธีแก้ไม่ใช่เลิกใช้ AI review แต่ใช้มันเป็น **sensor**: ให้ช่วยจัดคิว risk, ชี้จุดน่าสงสัย, และสรุป evidence. คำตัดสิน merge ยังต้องเป็นของคนที่รับผิดชอบระบบ
+
+**ผลคือ:** cognitive surrender ไม่ได้เกิดเฉพาะตอน agent เขียนโค้ด. มันเกิดตอน agent review โค้ดแทนเราได้ด้วย ถ้าเราเอาคำว่า passed/looks good ไปแทนความเข้าใจ
+
 ## See also
 
 - [[orchestration-tax]]
+- [[agentic-code-review]]
 - [[the-orchestration-tax]]
 - [[cognitive-debt]]
 - [[acceptance-bottleneck]]

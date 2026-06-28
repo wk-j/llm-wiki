@@ -3,8 +3,8 @@ title: Dreaming
 type: concept
 tags: [agent-memory, anthropic, multi-agent, batch-process, self-learning]
 created: 2026-05-09
-updated: 2026-05-09
-sources: [memory-and-dreaming-self-learning-agents]
+updated: 2026-06-26
+sources: [memory-and-dreaming-self-learning-agents, Self Learning for Agents Clearly Explained.md]
 ---
 
 # Dreaming / การฝัน (กระบวนการจัด memory นอก session)
@@ -80,6 +80,16 @@ Memory คือ primitive ระดับล่าง ส่วน dreaming เ
 
 ความต่างคือ dreaming ทำ **คน-ละ session** กับ agent ที่ทำงานจริง และมองข้าม session
 
+## dreaming ในแผนที่ self-learning ที่ใหญ่กว่า
+
+[[self-learning-for-agents-explained]] วาง dreaming ลงในกลุ่ม **"เขียน memory ใหม่เบื้องหลัง"** (Context Approach #1 ของชั้น Context ใน [[three-learning-layers]]) — ที่ที่ idea เดียวกันโผล่หลายเจ้า:
+
+- **[[letta|Letta]]** — ตรึง weight เรียนใน plain text; agent ที่คุยกับ user แก้ core memory ตัวเองไม่ได้ มี agent แยกเขียนใหม่ตอน idle (เรียก *sleep-time compute*)
+- **OpenClaw** — รันไอเดียเดียวกันเป็น **nightly dreaming pass** บนไฟล์ memory (ใช้คำว่า "dreaming" ตรง ๆ เหมือนกัน)
+- **[[anthropic|Anthropic]] dreaming** (หน้านี้) — เวอร์ชันที่เด่นเรื่อง **cross-agent**: อ่าน transcript หลาย agent พร้อมกัน ไม่ใช่แค่ memory ของ agent เดียว
+
+แก่นร่วมที่ thread สรุปได้คม: **weight ชั่วคราว แต่ text อยู่ถาวร** — memory ที่ dreaming จัดเป็น text จึงย้ายข้าม model ได้และ roll back ได้ ต่างจาก fine-tune ที่ฝังความรู้ลง weight
+
 ## See also
 
 - [[agent-memory-filesystem]]
@@ -90,3 +100,7 @@ Memory คือ primitive ระดับล่าง ส่วน dreaming เ
 - [[memory-drift]]
 - [[hybrid-memory]]
 - [[harvey-ai]]
+- [[three-learning-layers]]
+- [[self-learning-for-agents-explained]]
+- [[letta]]
+- [[agent-memory-types]]

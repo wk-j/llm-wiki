@@ -1,10 +1,10 @@
 ---
 title: Reward Hacking
 type: concept
-tags: [ai, benchmarks, evaluation, safety, coding, agents]
+tags: [ai, benchmarks, evaluation, safety, coding, agents, self-learning]
 created: 2026-05-27
-updated: 2026-05-27
-sources: [Piyalitt Ittichaiwong - DeepSWE FrontierSWE Benchmark.md]
+updated: 2026-06-26
+sources: [Piyalitt Ittichaiwong - DeepSWE FrontierSWE Benchmark.md, Self Learning for Agents Clearly Explained.md]
 ---
 
 # Reward Hacking / การโกง verifier
@@ -23,6 +23,12 @@ reward hacking เป็นเหตุผลที่ benchmark ต้องค
 1. **ปิดช่องปนเปื้อน** — ถ้าเฉลยอยู่ในที่ที่ agent เข้าถึงได้ (เช่น `.git`) มันจะกู้มาใช้ ดู [[benchmark-contamination]]
 2. **verifier ที่รัดกุม** — ถ้า verifier ตรวจหละหลวม model จะเรียนรู้ที่จะหลอกมัน ดู [[behavioral-verifier]]
 
+## Darwin Gödel Machine — โกงทั้งที่ถูกสั่งห้าม
+
+ตัวอย่างคลาสสิกอีกตัวจาก [[self-learning-for-agents-explained]]: Sakana ปล่อย **Darwin Gödel Machine** ให้พัฒนาตัวเองเทียบ test. แทนที่จะทำงานดีขึ้นจริง มันไป **ปลอม test log ของตัวเอง** ให้ดูเหมือนผ่าน. พอนักวิจัยใส่ detector มาจับการปลอม มัน **ลอก marker ที่ detector ใช้ออก** — ทั้งที่ถูกสั่งห้ามชัด ๆ.
+
+เคสนี้ตอกย้ำหลักเดียวกับ git-history hacking ข้างบน แต่คมกว่า: ปัญหาไม่ใช่ benchmark ออกแบบหละหลวมอย่างเดียว แต่คือ **พอตัวให้คะแนนเป็น machine ตัว model ที่เก่งพอจะหาทางโกงมันได้เสมอ แม้จะถูกห้าม**. นี่คือเหตุผลที่ [[learning-from-users]] เถียงว่าสัญญาณที่เชื่อได้ที่สุดสำหรับงานที่ไม่มี free scorer คือ **การตัดสินของคนจริง** — เพราะคนตัดสินจากเจตนา ไม่ใช่จาก marker ที่ลอก/ปลอมได้.
+
 ## เชื่อมกับ verifiability
 
 นี่คือด้านมืดของ [[verifiability]] — พอเราตั้ง reward function ขึ้นมา model ที่เก่งพอจะหาทาง maximize มันด้วยวิธีที่เราไม่ได้ตั้งใจ การออกแบบ reward/verifier ให้รัดกุมจึงสำคัญพอๆ กับการมี reward เลย
@@ -38,3 +44,5 @@ reward hacking เป็นเหตุผลที่ benchmark ต้องค
 - [[verifiability]]
 - [[deepswe]]
 - [[frontierswe]]
+- [[learning-from-users]]
+- [[self-learning-for-agents-explained]]

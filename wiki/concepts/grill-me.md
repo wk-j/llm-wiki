@@ -3,8 +3,8 @@ title: Grill Me
 type: concept
 tags: [ai-skill, planning, alignment, pocock]
 created: 2026-05-09
-updated: 2026-05-12
-sources: [matt-pocock-software-fundamentals.md, "New Skills! handoff, prototype, review and writing-*  Skills Changelog.md"]
+updated: 2026-06-21
+sources: [matt-pocock-software-fundamentals.md, "New Skills! handoff, prototype, review and writing-*  Skills Changelog.md", "Matt Pocock’s Agentic Engineering Workflow (just copy him).md"]
 ---
 
 # Grill Me / ทักษะการตั้งคำถามไล่บี้
@@ -30,8 +30,18 @@ sources: [matt-pocock-software-fundamentals.md, "New Skills! handoff, prototype,
 
 ใน changelog เรื่อง `/handoff` และ `/prototype`, Pocock เพิ่ม workflow ต่อจาก Grill Me: ถ้า grilling session ยาวแล้วเจอคำถามที่ต้องพิสูจน์ด้วย code ให้สร้าง [[agent-handoff-documents|handoff document]] ไปเปิด agent ใหม่เพื่อทำ [[throwaway-prototyping|prototype]] แล้วค่อยนำผลกลับมาคุยต่อ
 
+## grill me คือ procedure ไม่ใช่ ability
+
+ในพอดแคสต์กับ [[david-ondrej|David Ondrej]] (2026-06-19) Matt ยก grill me เป็นตัวอย่างของ **procedure** — skill ที่ user สั่งเอง (ดู [[skill-procedures-vs-abilities]]) — ไม่ใช่ ability ที่ model หยิบใช้เอง. เขาเน้นว่ามันสั้นแค่ ~5 ประโยคแต่ "unreasonably effective" และเขาใช้มันแทน plan mode มาตลอด: "interview me, let's reach a shared understanding" ก่อนเริ่มเขียนโค้ดจริง. นี่คือขั้น scope งานก่อนส่งเข้า [[afk-agents|AFK]]
+
+David เสริมเวอร์ชันของตัวเอง: แทนที่จะสั่ง "one-shot this app" ให้บอก vision แล้วสั่ง "list out the 10 most consequential decisions... interview me until you understand 98%"
+
 ## ดูเพิ่ม
 - [[matt-pocock]]
+- [[matt-pocock-agentic-workflow]]
+- [[david-ondrej]]
+- [[skill-procedures-vs-abilities]]
+- [[afk-agents]]
 - [[agentic-engineering]]
 - [[alignment-bottleneck]]
 - [[agent-handoff-documents]]

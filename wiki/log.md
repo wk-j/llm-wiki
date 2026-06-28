@@ -852,3 +852,39 @@ Ingested Databricks' announcement of Omnigent, an Apache 2.0 open-source alpha m
 - Created concept: `[[meta-harness]]`
 - Updated concepts: `[[coding-harness]]`, `[[harness-engineering]]`, `[[loop-engineering]]`, `[[agent-runtime-untrusted]]`
 - Updated `[[index]]`, `[[log]]`, and `hotcache.md`
+
+## [2026-06-16] ingest | Agentic Code Review
+Ingested Addy Osmani's "Agentic Code Review" post (x.com, 2026-06-16). Key takeaways: (1) coding agents made writing cheap but trust/understanding did not get cheaper, so review is now the leverage point; (2) 2026 data from Faros AI, CodeRabbit, GitClear, and GitHub points to the same producer/consumer imbalance: raw output rises much faster than delivered value, defects, and review capacity; (3) review depth must follow blast radius, code lifetime, and shared-ownership needs; (4) agent PRs need intent/evidence attached because otherwise the reviewer becomes the first human to reconstruct why the code exists; (5) AI reviewers are useful heterogeneous inferential sensors, not verdicts; (6) human-in-the-loop becomes human-on-the-loop: triage, sample, audit, own high-risk gates and merge decisions; (7) deterministic gates and test diffs matter more because agents can make green checks lie by weakening tests or CI.
+- Created source summary: `[[agentic-code-review-osmani]]`
+- Created concepts: `[[agentic-code-review]]`, `[[comprehension-debt]]`
+- Created entities: `[[coderabbit]]`, `[[greptile]]`, `[[faros-ai]]`, `[[gitclear]]`, `[[kun-chen]]`
+- Updated entity: `[[addy-osmani]]`
+- Updated concepts: `[[orchestration-tax]]`, `[[loop-engineering]]`, `[[harness-guides-sensors]]`, `[[cognitive-surrender]]`, `[[shift-left-testing]]`, `[[behavioral-verifier]]`
+- Updated `[[index]]`, `[[log]]`, and `hotcache.md`
+
+## [2026-06-21] ingest | Matt Pocock's Agentic Engineering Workflow (just copy him)
+Ingested the David Ondrej × Matt Pocock podcast (2026-06-19). Key takeaways: (1) harness over model — the F1 engine analogy; you control the harness/codebase more than the model, think ~50/50 not 90/10; a cheaper model works if the codebase is easy to change; (2) the bitter-lesson tension — don't over-optimize around one model, but don't just wait for compute either; bet on agent-agnostic fundamentals; (3) AI ate tactical programming (Ousterhout), so be strategic; your skills are the ceiling on what AI can do (seniors 10x, juniors small boost); (4) skills = procedures (you drive) vs abilities (model drives); Pocock prefers procedures, keeps knowledge in the human, avoids leaking descriptions into context; (5) knowledge/skills/wisdom — wisdom needs doing the thing in real context; the stateful teach skill; (6) queues, not loops — half the loop hype is labs selling tokens; you really want AFK agents pulling scoped tasks off a queue (Ralph lineage from Jeffrey Huntley); (7) push human-in-the-loop checkpoints right but ask "who reviews the AI that decides what's safe to skip"; review the system that produces the code; (8) self-improving systems ("if someone keeps stealing your bike, buy a lock") — a cron + cheap model finds deep bugs, not just the fancy model; (9) AX (agent experience) vs DX; good DX ≈ good AX; make review seamless (video+TTS PR walkthroughs); (10) setup = Claude Code + Opus 4.8 medium, AFK via Sandcastle on GitHub Actions, waits ~1 month before adopting new models; closing advice: delete everything, go to a blank slate, then layer back procedures you choose.
+- Created source summary: `[[matt-pocock-agentic-workflow]]`
+- Created concepts: `[[queues-over-loops]]`, `[[afk-agents]]`, `[[agent-experience]]`, `[[strategic-vs-tactical-programming]]`, `[[skill-procedures-vs-abilities]]`, `[[knowledge-skills-wisdom]]`, `[[bitter-lesson]]`, `[[ralph]]`
+- Created entities: `[[david-ondrej]]`, `[[jeffrey-huntley]]`, `[[teach-skill]]`, `[[superpowers]]`
+- Updated entities: `[[matt-pocock]]`, `[[sandcastle]]`
+- Updated concepts: `[[loop-engineering]]`, `[[grill-me]]`, `[[coding-harness]]`
+- Updated `[[index]]`, `[[log]]`, and `hotcache.md`
+
+## [2026-06-26] ingest | Self Learning for Agents Clearly Explained (@ataiiam / CopilotKit)
+Ingested X thread (published 2026-06-24) mapping where agents can self-learn, via Harrison Chase's 3-layer split (model / harness / context). Source has a CopilotKit Intelligence pitch at the end — framed as such.
+- Created source: `[[self-learning-for-agents-explained]]`
+- Created concepts: `[[three-learning-layers]]`, `[[agent-memory-types]]`, `[[learning-from-users]]`
+- Created entities: `[[ataiiam]]`, `[[copilotkit]]`, `[[ag-ui]]`, `[[langchain]]`, `[[letta]]`, `[[google-deepmind]]`, `[[meta]]`
+- Updated concepts: `[[self-learning-agents]]` (placed Anthropic memory+dreaming in the 3-layer map), `[[dreaming]]` (Letta/OpenClaw "rewrite memory in background" cluster), `[[loop-engineering]]` (= harness self-learning, Sydney Runkle's 4 levels), `[[harness-engineering]]` (self-rewriting harness: Deep Agents / Self-Harness), `[[reward-hacking]]` (Darwin Gödel Machine faked its own test logs)
+- Updated entities: `[[andrej-karpathy]]` (AutoResearch)
+- Key point: "the model belongs to the labs; the harness and the context are yours." Model-layer self-learning (Karpathy AutoResearch +11%, MIT SEAL, DeepMind AlphaEvolve) only runs where a computer can score for free → stays in labs. Harness layer is product-ready but "the harness catching an error ≠ the agent getting smarter." Context layer (memory: semantic/episodic/procedural + skills) is the only one that learns from users — and the user's real decision is the one signal a machine can't fake (auto-scores can — DGM). Captured at the agent↔user interface via AG-UI → procedural memory.
+- Updated `[[index]]`, `[[log]]`, and `hotcache.md`
+
+## [2026-06-28] ingest | รู้จักกับ Loop Engineering — mikelopster
+Ingested mikelopster's Thai YouTube video on Loop Engineering (https://www.youtube.com/watch?v=qlIuFfs-7pY). Key takeaways: (1) Loop Engineering extends prompt/context/harness work by putting a goal loop around the agent: goal prompt → agent creates prompt/actions → feedback gate checks whether the goal is done → loop continues or exits; (2) it differs from cronjob because an agent reads state and adapts actions, but the decisive part is the feedback gate; weak gates either burn token forever or falsely pass bad output; (3) Claude Code examples center on `/loop`, `/goal`, routine/scheduled work; Codex examples center on schedule and goal-oriented execution; (4) good use cases have measurable exit conditions: test, lint, CI, coverage, PR status, logs, metrics; (5) weak use cases are taste/content/UI polish and high-risk production/security work where humans must validate; (6) content-loop experiment selected sources and drafted text, but the real bottleneck became human review, making this a concrete orchestration-tax example; (7) start by running the workflow manually once, define goal/workflow/exit, rerun with the same prompt, then schedule only if it still makes sense.
+- Created source summary: `[[mikelopster-loop-engineering]]`
+- Created entity: `[[mikelopster]]`
+- Updated concepts: `[[loop-engineering]]`, `[[queues-over-loops]]`, `[[orchestration-tax]]`
+- Updated entities: `[[claude-code]]`, `[[openai-codex]]`
+- Updated `[[index]]`, `[[log]]`, and `hotcache.md`

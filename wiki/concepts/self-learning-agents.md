@@ -1,15 +1,17 @@
 ---
 title: Self-Learning Agents
 type: concept
-tags: [agent-memory, multi-agent, anthropic, vision]
+tags: [agent-memory, multi-agent, anthropic, vision, self-learning]
 created: 2026-05-09
-updated: 2026-05-09
-sources: [memory-and-dreaming-self-learning-agents]
+updated: 2026-06-26
+sources: [memory-and-dreaming-self-learning-agents, Self Learning for Agents Clearly Explained.md]
 ---
 
 # Self-Learning Agents / agent ที่เรียนรู้เอง
 
 แนวคิดที่ [[anthropic|Anthropic]] วาง memory เป็น primitive ตัวต่อไป — agent ที่ "เก่งขึ้นเอง" จากงานของตัวเองและของ agent ตัวอื่นในระบบเดียวกัน โดย**ไม่ต้อง retrain โมเดล** ทุกอย่างเกิดจากการสะสมและ curate memory ระหว่างที่รัน
+
+> ภาพรวมก่อนลงรายละเอียด: คำว่า "agent เรียนรู้เอง" จริง ๆ แตกได้เป็น 3 ชั้น (model / harness / context — ดู [[three-learning-layers]]). สิ่งที่ Anthropic ทำในหน้านี้คือ **ชั้น context** เป็นหลัก: เรียนผ่าน memory ที่เป็น text นอก model ไม่ใช่การแก้ weight. นั่นคือชั้นที่ product เกือบทุกตัวควรเริ่ม เพราะคุณเป็นเจ้าของมัน ส่วน weight เป็นของ lab.
 
 ## 3 อย่างที่ agent เรียนได้จาก memory
 
@@ -43,6 +45,16 @@ Self-learning ใน Managed Agents ตั้งอยู่บน 2 primitive:
 - **In-context learning** — โผล่ใน prompt session เดียวจบ ไม่ accumulate
 - **Self-learning agents (memory-based)** — accumulate ข้าม session, ข้าม agent, อยู่ที่ "ภายนอกโมเดล" — ปรับได้เร็วและ portable
 
+## ที่ทางในแผนที่ 3 ชั้น
+
+[[ataiiam|@ataiiam]] ใน [[self-learning-for-agents-explained]] วางแนวทางแบบ Anthropic ลงในแผนที่ที่ใหญ่กว่า — เทียบกับเจ้าอื่นได้ชัดขึ้น:
+
+- **Layer Model** (เรียนที่ weight) — Karpathy AutoResearch, MIT SEAL, DeepMind AlphaEvolve. รันได้แค่ที่มี "คะแนนฟรี" (code/math) → อยู่แต่ใน lab ไม่ใช่ที่ที่ product ส่วนใหญ่ควรแตะ
+- **Layer Harness** (เรียนที่ scaffold) — [[loop-engineering|loop engineering]], LangChain Deep Agents (เขียน harness ใหม่จาก trace), Self-Harness, [[microsoft|Microsoft]] Agent Framework. ทำได้ใน product แต่ "harness จับได้ ≠ agent ฉลาดขึ้น"
+- **Layer Context** (เรียนที่ memory + skill) — **ตรงนี้คือที่ที่ Anthropic อยู่**: [[dreaming]] = "เขียน memory ใหม่เบื้องหลัง" เวอร์ชัน Anthropic เทียบกับ [[letta|Letta]]/OpenClaw ที่ทำไอเดียเดียวกัน. memory แบ่งเป็น semantic/episodic/procedural ([[agent-memory-types]]) — self-learning จริงต้องใช้สองชนิดหลัง
+
+ส่วนที่ thread ชูเพิ่มและหน้านี้ยังไม่ครอบ: สัญญาณที่ดีที่สุดไม่ใช่ run ของ agent เอง แต่คือ **การตัดสินของ user จริง** ที่ปลอมไม่ได้ ดู [[learning-from-users]].
+
 ## ความเสี่ยง / สิ่งที่ยังไม่ตอบ
 
 - **Memory ผิดสะสม** — ถ้า agent หลายตัวเชื่อสิ่งเดียวกันที่ผิด dreaming จะแยก signal จาก noise ได้แค่ไหน
@@ -51,6 +63,10 @@ Self-learning ใน Managed Agents ตั้งอยู่บน 2 primitive:
 
 ## See also
 
+- [[three-learning-layers]]
+- [[agent-memory-types]]
+- [[learning-from-users]]
+- [[self-learning-for-agents-explained]]
 - [[dreaming]]
 - [[agent-memory-filesystem]]
 - [[claude-managed-agents]]
@@ -59,3 +75,4 @@ Self-learning ใน Managed Agents ตั้งอยู่บน 2 primitive:
 - [[memory-drift]]
 - [[memory-decay]]
 - [[hybrid-memory]]
+- [[letta]]

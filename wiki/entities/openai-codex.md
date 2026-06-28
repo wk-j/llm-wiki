@@ -3,8 +3,8 @@ title: Codex (OpenAI)
 type: entity
 tags: [ai, tools, cli, coding, harness]
 created: 2026-04-18
-updated: 2026-04-23
-sources: [alex-ker-harnesses-optimize.md, Piyalitt Ittichaiwong - GPT-5.5 Launch.md]
+updated: 2026-06-28
+sources: [alex-ker-harnesses-optimize.md, Piyalitt Ittichaiwong - GPT-5.5 Launch.md, "รู้จักกับ Loop Engineering — mikelopster transcript"]
 ---
 
 # Codex (OpenAI)
@@ -34,6 +34,12 @@ Coding harness จาก [[openai|OpenAI]] — เป็นหนึ่งใน
 - Codex + [[gpt-5-5|GPT-5.5]] เขียน custom heuristic algorithm แบ่งและกระจาย production traffic → เพิ่มความเร็ว token generation > 20% (โมเดลช่วยพัฒนา infra ที่ serve ตัวเอง)
 - Plan coverage กว้างขึ้น: Plus / Pro / Business / Enterprise / **Edu** / **Go** พร้อม context window 400K
 
+## Schedule และ goal-oriented work
+
+[[mikelopster]] ใน [[mikelopster-loop-engineering|คลิป Loop Engineering]] วาง Codex ไว้เป็นอีก surface ที่มี primitive แนว loop ถึงแม้ในคลิปจะบอกว่าไม่ได้มี `/loop` แบบเดียวกับ Claude Code. เขาชี้ไปที่ schedule / scheduled task และแนว `/goal`: ผู้ใช้ระบุเป้าหมาย แล้ว agent แตกงาน, สร้าง checklist/subagent, และ verify ไปเรื่อย ๆ จนถึงเงื่อนไขจบ.
+
+มุมนี้ทำให้ Codex อยู่ในกลุ่มเดียวกับ [[claude-code|Claude Code]] ในฐานะ coding harness ที่เริ่มรองรับ workflow แบบ [[loop-engineering|loop engineering]]. แต่ข้อจำกัดเหมือนกัน: ถ้า feedback gate ไม่ชัด หรือ output ยังต้องให้คนตัดสินทุกครั้ง ก็จะกลายเป็น [[orchestration-tax|orchestration tax]] มากกว่าการเพิ่ม throughput.
+
 ## ดูเพิ่ม
 
 - [[claude-code]]
@@ -44,3 +50,5 @@ Coding harness จาก [[openai|OpenAI]] — เป็นหนึ่งใน
 - [[coding-harness]]
 - [[progressive-disclosure]]
 - [[model-context-protocol]]
+- [[loop-engineering]]
+- [[mikelopster-loop-engineering]]

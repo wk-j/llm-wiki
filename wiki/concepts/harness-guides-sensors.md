@@ -3,8 +3,8 @@ title: Harness Guides & Sensors
 type: concept
 tags: [ai, agents, harness, software-engineering, feedback-loop, cybernetics]
 created: 2026-06-08
-updated: 2026-06-11
-sources: [harness-engineering-bockeler.md, How to Keep Shipping When You Walk Away from Your Desk — Zack Proser, WorkOS.md]
+updated: 2026-06-16
+sources: [harness-engineering-bockeler.md, How to Keep Shipping When You Walk Away from Your Desk — Zack Proser, WorkOS.md, Agentic Code Review.md]
 ---
 
 # Harness Guides & Sensors / บังเหียนที่ทำจาก "ตัวนำทาง" กับ "ตัวเซ็นเซอร์"
@@ -106,6 +106,7 @@ Böckeler มองว่า harness ทำตัวเหมือน **cyberne
 - [[instruction-budget]] — guide ทุกบรรทัดมีต้นทุน ใส่เท่าที่จำเป็น
 - [[facts-first]] / [[spec-driven-development]] — critique ของ Wasowski อ่านผ่านกรอบนี้ได้ตรง ๆ: prose spec คือ guide แบบ inferential (ต้องให้ model ตีความ, [[llm-nondeterminism|non-deterministic]]) ส่วน executable fact คือ sensor แบบ computational — facts-first คือการย้ายน้ำหนักจากฝั่งแรกไปฝั่งหลัง
 - [[developer-balance]] — verification gate ทำให้ agent ปิด loop เองได้ คนจึงใช้ attention กับ judgement แทนการเฝ้ารายละเอียด
+- [[agentic-code-review]] — ตัวอย่างการจัด sensor สำหรับ review: CI/type/lint/test เป็น computational sensor ที่ต้องแข็ง, AI reviewers อย่าง [[coderabbit|CodeRabbit]] หรือ [[greptile|Greptile]] เป็น inferential sensor ที่ช่วยจัด risk, ส่วนมนุษย์เป็น owner ของ judgement และ merge
 
 ## ปัญหาที่ยังเปิดอยู่ (จากบทความ)
 
@@ -129,3 +130,4 @@ Böckeler มองว่า harness ทำตัวเหมือน **cyberne
 - [[verifiability]]
 - [[what-weve-learned-building-cloud-agents]]
 - [[instruction-budget]]
+- [[agentic-code-review]]
