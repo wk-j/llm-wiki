@@ -7,6 +7,8 @@ description: Convert a wiki concept page (wiki/concepts/*.md) into a Medium-styl
 
 Turn a `wiki/concepts/*.md` page into a Medium-style blog post in Thai. Output **explicit markdown syntax** (raw markdown, not rendered) so the user can paste it anywhere.
 
+**Do not edit or create files.** This skill is chat-output only. Never overwrite the source concept/source page, never create a draft file, and never update wiki bookkeeping (`wiki/log.md`, `wiki/index.md`, `hotcache.md`) as part of using this skill unless the user separately and explicitly asks for file changes.
+
 ## Inputs
 
 - The concept page path (e.g. `wiki/concepts/delegation-mindset.md`). If the user doesn't specify, ask which concept.
@@ -85,4 +87,4 @@ Aim for 400–700 Thai words of prose (not counting code blocks). If the concept
 
 ## Handoff
 
-After writing, ask the user if they want the draft saved somewhere (e.g. `wiki/analysis/` or a separate `drafts/` folder). Don't save it proactively — blog drafts aren't wiki content.
+After writing, stop. Do not ask to save it, and do not save it proactively. If the user later asks to save the draft, treat that as a separate file-editing request and confirm the target path before writing.
