@@ -3,8 +3,8 @@ title: Long-running Agents / Agent ที่อยู่ข้ามวัน
 type: concept
 tags: [ai, agents, long-running, architecture, memory, orchestration]
 created: 2026-04-23
-updated: 2026-04-23
-sources: [google-cloud-long-running-agent-patterns.md]
+updated: 2026-07-01
+sources: [google-cloud-long-running-agent-patterns.md, l8-principals-agentic-engineering-workflow-kun-chen.md]
 ---
 
 # Long-running Agents / Agent ที่อยู่ข้ามวัน
@@ -139,6 +139,14 @@ Addy ให้คำถามตัดสินใจง่าย ๆ:
 
 **Compose กันได้** ระบบ compliance ตัวหนึ่งอาจใช้ครบทั้ง 5 — Checkpoint-and-Resume สำหรับ process document, Delegated Approval ตอน review gate, Memory-Layered Context สำหรับความรู้ข้าม case, Fleet Orchestration ประสาน specialist — pattern ไม่ได้แทนกัน แต่ stack ต่อกัน
 
+## Long-running แบบ personal workflow
+
+[[kun-chen|Kun Chen]] ให้ตัวอย่างที่เล็กกว่า enterprise runtime ใน [[l8-principals-agentic-engineering-workflow-kun-chen|workflow walkthrough]]. [[good-night-have-fun|Good Night Have Fun]] ให้ agent ทำงานยาวด้วย objective, token/iteration cap, และ stop condition. ตัวอย่างคือ usability loop: ใช้แอปเหมือนเด็ก 7 ขวบ, เจอปัญหาแรก, fix, แล้ววนต่อ.
+
+นี่ไม่ใช่ long-running agent แบบ VM อยู่ได้ 7 วัน แต่ใช้หลักเดียวกัน: state/commits/evidence อยู่ข้างนอกบทสนทนา, objective ต้องชัด, และต้องมีเงื่อนไขหยุดที่ไม่เผา quota ทิ้ง.
+
+**ได้อะไร:** long-running ไม่จำเป็นต้องเริ่มจาก platform ใหญ่. เริ่มจาก task loop ที่มี cap และ evidence ก็ได้.
+
 ## See also
 
 - [[google-cloud-long-running-agent-patterns]]
@@ -156,3 +164,5 @@ Addy ให้คำถามตัดสินใจง่าย ๆ:
 - [[advisor-strategy]]
 - [[claude-code-session-management]]
 - [[loop-engineering]]
+- [[l8-principals-agentic-engineering-workflow-kun-chen]]
+- [[good-night-have-fun]]

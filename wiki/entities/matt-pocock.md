@@ -3,8 +3,8 @@ title: Matt Pocock
 type: entity
 tags: [developer, typescript, ai, automation]
 created: 2026-04-25
-updated: 2026-06-21
-sources: [matt-pocock-software-fundamentals.md, "New Skills! handoff, prototype, review and writing-*  Skills Changelog.md", "Matt Pocock’s Agentic Engineering Workflow (just copy him).md"]
+updated: 2026-06-29
+sources: [matt-pocock-software-fundamentals.md, "New Skills! handoff, prototype, review and writing-*  Skills Changelog.md", "Matt Pocock’s Agentic Engineering Workflow (just copy him).md", matt-pocock-dumb-zone-compaction.md]
 ---
 
 # Matt Pocock
@@ -45,9 +45,16 @@ Pocock เชื่อว่า **"Software Fundamentals Matter More Than Ever"*
 
 **ทักษะของคุณคือเพดานของ AI** ("your skills are the ceiling on what AI can do") — AI ทำให้ senior เก่งขึ้น 10 เท่า แต่ junior ได้นิดเดียว ดู [[strategic-vs-tactical-programming]]
 
+## Dumb zone และ context hygiene (X, 2026-06)
+
+ในโพสต์ [[matt-pocock-dumb-zone-compaction]] Pocock เสนอวิธีจับ [[dumb-zone|dumb zone]] แบบเร็ว: เมื่อ agent ทำเรื่องโง่ ให้ `/rewind` ก่อนจุดพลาด แล้ว `/compact` ก่อนรันใหม่. ถ้ารอบใหม่ดีขึ้น แปลว่าปัญหาไม่ได้อยู่ที่ model อย่างเดียว แต่อยู่ที่ active context ที่รกด้วย trajectory ผิดและ noise.
+
+มุมนี้ต่อจาก harness-first ของเขาโดยตรง: session management เป็นส่วนหนึ่งของ [[coding-harness|harness]] ที่คนควบคุมได้. เขาไม่ได้เสนอให้ compact ตลอดเวลา แต่ให้ compact ตอนมี phase boundary ที่สรุป state ได้จริง.
+
 ## ดูเพิ่ม
 - [[matt-pocock-software-fundamentals]]
 - [[matt-pocock-agentic-workflow]]
+- [[matt-pocock-dumb-zone-compaction]]
 - [[matt-pocock-4-ai-terms]]
 - [[new-skills-handoff-prototype-review-writing]]
 - [[david-ondrej]]

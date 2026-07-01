@@ -3,8 +3,8 @@ title: Skills — Procedures vs Abilities
 type: concept
 tags: [ai-skill, agents, context-window, prompting, pocock]
 created: 2026-06-21
-updated: 2026-06-21
-sources: ["Matt Pocock’s Agentic Engineering Workflow (just copy him).md"]
+updated: 2026-07-01
+sources: ["Matt Pocock’s Agentic Engineering Workflow (just copy him).md", "i don't want to use your agent — @RhysSullivan.md", l8-principals-agentic-engineering-workflow-kun-chen.md]
 ---
 
 # Skills: Procedures vs Abilities / สกิลแบบ "เราสั่ง" vs "model หยิบเอง"
@@ -37,9 +37,25 @@ sources: ["Matt Pocock’s Agentic Engineering Workflow (just copy him).md"]
 
 ของที่ตื่นเต้นในยุคนี้คือเราเอา **knowledge + skills** (ดู [[knowledge-skills-wisdom]]) มามัดเป็น procedure ที่ reuse และแจกทีมได้ — เหมือนดึง function ที่ซ้ำสามรอบออกมาเป็น shared function. ทุกคนในทีม plan แบบเดียวกันและช่วยกันปรับ skill นั้น = ยกพื้นของทั้งทีม
 
+## Product skills สำหรับ agent ของผู้ใช้
+
+[[rhys-sullivan|Rhys Sullivan]] เสนอใน [[i-dont-want-to-use-your-agent]] ว่า product company ควรปล่อย skill ที่ทำให้ [[bring-your-own-agent|agent ของผู้ใช้]] กลายเป็น expert ใน product นั้น. แบบนี้ skill ไม่ได้อยู่แค่ใน repo ของทีม dev แต่กลายเป็น product surface.
+
+ตัวอย่าง: [[linear|Linear]] อาจให้ procedure สำหรับแตก problem ใหญ่เป็น ticket; [[cloudflare|Cloudflare]] อาจให้ procedure ที่ผูก docs กับ CLI commands; [[posthog|PostHog]] อาจให้ procedure สำหรับวิเคราะห์ funnel แล้ว deeplink กลับ dashboard.
+
+ตรงนี้ procedure/ability ยังเป็นคำถามเดิม: skill บางตัวควรให้ user เรียกเองเพราะเปลี่ยน workflow ชัดเจน, บางตัวควรให้ model หยิบเองเมื่อเจอ product context. สิ่งที่สำคัญคือ description ต้องไม่บวมจนกิน context ฟรี.
+
 ## คำแนะนำ: เริ่มจาก blank slate
 
 Matt แนะนำให้ลบ skill / plugin / MCP / `CLAUDE.md` / `AGENTS.md` ทิ้งหมดก่อน แล้วดูว่า agent ทำอะไรในโหมดเปล่า ๆ — เพราะคนส่วนใหญ่ทำ context window บวมด้วย instruction เกินจำเป็น. จากนั้นค่อย layer **procedures ที่เราเลือกเอง** กลับเข้าไปทีละอัน
+
+## มุม Kun Chen: skill เป็นที่เก็บ context แบบมีเงื่อนไข
+
+[[kun-chen|Kun Chen]] ใช้ skill เพื่อลด project memory bloat ใน [[l8-principals-agentic-engineering-workflow-kun-chen|workflow walkthrough]]. ตัวอย่างของเขาคือ E2E testing instructions: จำเป็นมากตอน agent แก้โค้ด แต่ไร้ประโยชน์ตอนคนแค่ถามคำถาม. ถ้าใส่ไว้ใน memory file มันกิน token ทุก session. ถ้าแยกเป็น skill agent จะโหลดเฉพาะตอนต้องใช้.
+
+เขายังเตือนว่า skill จากอินเทอร์เน็ตไม่ควรถูกติดตั้งเพราะ popular. Skill มีอำนาจสั่ง agent รันคำสั่งบนเครื่องได้ และบาง skill ที่ดูดังอาจทำให้ผลลัพธ์แย่ลงหรือใช้ token เพิ่มขึ้น.
+
+**ได้อะไร:** skill ควรถูกมองเป็น executable procedure/context ไม่ใช่ markdown ที่ไม่มีผลข้างเคียง. ยิ่ง skill มีอำนาจมาก ยิ่งต้องผ่าน trust และ evaluation.
 
 ## ดูเพิ่ม
 
@@ -50,4 +66,9 @@ Matt แนะนำให้ลบ skill / plugin / MCP / `CLAUDE.md` / `AGENTS
 - [[teach-skill]]
 - [[superpowers]]
 - [[instruction-budget]]
+- [[progressive-disclosure]]
+- [[bring-your-own-agent]]
+- [[i-dont-want-to-use-your-agent]]
+- [[l8-principals-agentic-engineering-workflow-kun-chen]]
+- [[kun-chen]]
 - [[progressive-disclosure]]

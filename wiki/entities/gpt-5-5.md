@@ -3,8 +3,8 @@ title: GPT-5.5
 type: entity
 tags: [ai, models, openai, gpt]
 created: 2026-04-24
-updated: 2026-05-29
-sources: [Piyalitt Ittichaiwong - GPT-5.5 Launch.md, Piyalitt Ittichaiwong - DeepSWE FrontierSWE Benchmark.md, Piyalitt Ittichaiwong - Opus 4.8 Launch Recap.md]
+updated: 2026-07-01
+sources: [Piyalitt Ittichaiwong - GPT-5.5 Launch.md, Piyalitt Ittichaiwong - DeepSWE FrontierSWE Benchmark.md, Piyalitt Ittichaiwong - Opus 4.8 Launch Recap.md, https://openai.com/index/introducing-genebench-pro/]
 ---
 
 # GPT-5.5
@@ -41,6 +41,7 @@ Flagship model ของ [[openai|OpenAI]] เปิดตัว **2026-04-23** 
 | **Internal investment-banking modeling** | 88.5% | — |
 | **OfficeQA Pro** | 54.1% | — |
 | **[[deepswe\|DeepSWE]]** | **70% (อันดับ 1)** | benchmark ปลอดการปนเปื้อน; นำอันดับ 2 (gpt-5.4 ที่ 56%) อยู่ 14 จุด; ขึ้นจาก 59% บน SWE-Bench Pro |
+| **[[genebench-pro\|GeneBench-Pro]]** | 12.0% (xhigh) | ตาม [[gpt-5-6-sol\|GPT-5.6 Sol]] ที่ 28.7% max / 31.5% Pro; ชี้ว่า coding strength กับ scientific judgement ไม่ใช่ axis เดียวกัน |
 
 ## ผลบน benchmark ที่ใกล้งานจริง (DeepSWE / FrontierSWE)
 
@@ -82,4 +83,5 @@ Flagship model ของ [[openai|OpenAI]] เปิดตัว **2026-04-23** 
 - [[claude-opus-4-8]]
 - [[claude-opus-4-7]]
 - [[claude-mythos-preview]]
+- [[genebench-pro]]
 - [[kimi-k2-6]]

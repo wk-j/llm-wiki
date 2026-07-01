@@ -3,8 +3,8 @@ title: Cognitive Surrender
 type: concept
 tags: [ai, psychology, developer-experience, attention, code-review]
 created: 2026-05-29
-updated: 2026-06-16
-sources: [The Orchestration Tax.md, Agentic Code Review.md]
+updated: 2026-06-30
+sources: [The Orchestration Tax.md, Agentic Code Review.md, techsauce-ai-brain-fry.md]
 ---
 
 # Cognitive Surrender / การยอมแพ้ทางความคิด
@@ -19,6 +19,8 @@ sources: [The Orchestration Tax.md, Agentic Code Review.md]
 Cognitive surrender ไม่ได้เกิดจากความขี้เกียจ แต่เกิดจาก **attention หมด** พอเราเปิด agent หลายตัวเกินกว่าที่ review ไหว ([[orchestration-tax]]) สมองซึ่งเป็น serial resource ตัวเดียวก็ทำงานเกินกำลัง พอถึงจุดหนึ่งการ "ตั้งคำถามกับงานของ agent" มันแพงเกินกว่าจะจ่าย เราเลยเลือกทางที่ถูกกว่าในระยะสั้น — **ยอมรับมันไป**
 
 ต่างจากการขี้เกียจตรงที่คนคนนั้นมัก *รู้สึกว่ายุ่งและทำงานหนัก* อยู่ด้วยซ้ำ (ดู busy ≠ productive ใน [[orchestration-tax]]) — มันคือการยอมแพ้ภายใต้ภาระ ไม่ใช่การเลี่ยงงาน
+
+[[ai-brain-fry|AI Brain Fry]] เป็นสัญญาณก่อนหน้าที่ควรระวัง. คนยังพยายามคุม AI อยู่ แต่สมองล้าจาก oversight load: ต้องตรวจคำตอบ เทียบผลลัพธ์ และสลับหลาย tool. ถ้าไม่ลดโหลด ตรงนี้อาจไหลมาเป็น cognitive surrender คือเริ่มรับ output เพราะไม่มีแรงตั้งความเห็นเอง.
 
 ## ทำไมอันตราย
 
@@ -52,6 +54,8 @@ Cognitive surrender ไม่ได้เกิดจากความขี้
 ## See also
 
 - [[orchestration-tax]]
+- [[ai-brain-fry]]
+- [[techsauce-ai-brain-fry]]
 - [[agentic-code-review]]
 - [[the-orchestration-tax]]
 - [[cognitive-debt]]

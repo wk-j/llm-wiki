@@ -3,8 +3,8 @@ title: OpenAI
 type: entity
 tags: [ai, labs, models, organizations]
 created: 2026-04-24
-updated: 2026-04-28
-sources: [piyalitt-gpt-5-5-launch.md, microsoft-openai-partnership-2026.md, ryan-lopopolo-harness-engineering.md]
+updated: 2026-07-01
+sources: [piyalitt-gpt-5-5-launch.md, microsoft-openai-partnership-2026.md, ryan-lopopolo-harness-engineering.md, https://openai.com/index/introducing-genebench-pro/]
 ---
 
 # OpenAI / โอเพนเอไอ
@@ -52,6 +52,7 @@ AI lab ในสหรัฐฯ — สร้าง ChatGPT, ตระกูล 
 ## ประเด็น benchmark
 
 - **SWE-Bench Pro memorization signal** — Anthropic ฟ้องไว้ใน model card ของ GPT-5.5 ว่ามี sign ของการจำ; [[piyalitt-ittichaiwong|Piyalitt]] ตีความว่าเป็นความพลาด ไม่ใช่การ benchmaxx ตั้งใจ — เป็นอีกเคสที่ทำให้ SWE-Bench Pro โดยเดี่ยวๆ เป็น axis ที่ควรระวัง (ดู [[kimi-k2-6]] ด้วย — benchmark table ถูก curate)
+- **[[genebench-pro|GeneBench-Pro]]** — benchmark วิจัย computational biology ที่ OpenAI เปิดตัว 2026-06-30 เพื่อวัด [[research-taste|research taste]]: ambiguity handling, QC, causal/statistical choices, และ decision-readiness. ผลในบทความ: [[gpt-5-6-sol|GPT-5.6 Sol]] ได้ 28.7% ที่ highest reasoning และ 31.5% ใน Pro mode แต่ยังต่ำกว่าหนึ่งในสาม จึงเป็นหลักฐานว่า scientific judgement ยังไม่อิ่มตัว
 
 ## Community presence
 
@@ -61,6 +62,8 @@ AI lab ในสหรัฐฯ — สร้าง ChatGPT, ตระกูล 
 ## ดูเพิ่ม
 
 - [[gpt-5-5]]
+- [[gpt-5-6-sol]]
+- [[genebench-pro]]
 - [[openai-codex]]
 - [[anthropic]]
 - [[claude-opus-4-7]]

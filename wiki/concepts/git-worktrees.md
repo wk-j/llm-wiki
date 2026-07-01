@@ -3,8 +3,8 @@ title: Git Worktrees for Parallel Agents
 type: concept
 tags: [ai, agents, git, isolation, parallel, orchestration, worktree]
 created: 2026-06-09
-updated: 2026-06-09
-sources: ["Loop Engineering..md"]
+updated: 2026-07-01
+sources: ["Loop Engineering..md", l8-principals-agentic-engineering-workflow-kun-chen.md]
 ---
 
 # Git Worktrees for Parallel Agents / worktree สำหรับ agent ขนาน
@@ -38,6 +38,14 @@ worktree แก้ปัญหา *ระดับไฟล์* (file-level coll
 
 worktree เอา friction เชิงกลไกของการรัน agent ขนานออกไป — แต่ต้องจับคู่กับวินัยฝั่ง [[orchestration-tax|review/merge]] เสมอ ไม่งั้นแค่ย้ายคอขวดจาก "ไฟล์ชนกัน" ไปเป็น "PR กองหน้าคนรีวิว"
 
+## Treehouse: ลดหนี้จากการคุม worktree เอง
+
+[[kun-chen|Kun Chen]] เพิ่มปัญหาอีกชั้นใน [[l8-principals-agentic-engineering-workflow-kun-chen|workflow walkthrough]]: git worktree แก้ file collision ได้ แต่สร้าง **worktree bookkeeping debt**. คนต้องตั้งชื่อ worktree, จำว่าอันไหนใช้ทำอะไร, จำว่ามี agent รันอยู่ไหม, และ cleanup เอง.
+
+[[treehouse|Treehouse]] คือ tool ของเขาที่ทำให้เข้า repo แล้วได้ fresh worktree ทันที. พอปิด tab มันรู้ว่า worktree ว่างและ reuse ได้. `treehouse status` ใช้ดูว่าช่องไหนยัง active.
+
+**ได้อะไร:** parallel agent workflow ต้องแก้ทั้ง collision ของไฟล์และ collision ในหัวคน. Worktree แก้ข้อแรก, Treehouse แก้ข้อสอง.
+
 ## See also
 
 - [[loop-engineering]]
@@ -46,3 +54,5 @@ worktree เอา friction เชิงกลไกของการรัน 
 - [[subagent-patterns]]
 - [[addy-osmani]]
 - [[cognitive-surrender]]
+- [[l8-principals-agentic-engineering-workflow-kun-chen]]
+- [[treehouse]]

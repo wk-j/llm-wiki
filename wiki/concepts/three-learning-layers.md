@@ -3,8 +3,8 @@ title: Three Learning Layers (Model / Harness / Context)
 type: concept
 tags: [ai, agents, self-learning, harness, memory, context-engineering]
 created: 2026-06-26
-updated: 2026-06-26
-sources: [Self Learning for Agents Clearly Explained.md]
+updated: 2026-06-29
+sources: [Self Learning for Agents Clearly Explained.md, "i don't want to use your agent — @RhysSullivan.md"]
 ---
 
 # Three Learning Layers / agent เรียนรู้ได้ 3 ชั้น
@@ -59,6 +59,16 @@ memory + skill เป็น text นอก model. memory มี 3 ชนิด (
 
 > ได้อะไร: text อยู่ถาวรกว่า weight — ย้าย model/roll back ได้ และเป็น **ชั้นเดียวที่รับสัญญาณจาก user ได้** เพราะ text เดียวกันเป็น memory ของ agent, preference ของ user, หรือความรู้ทั้งทีมก็ได้.
 
+## Product company อยู่ชั้นไหน
+
+[[i-dont-want-to-use-your-agent]] ของ [[rhys-sullivan|Rhys Sullivan]] ทำให้กรอบนี้ชัดในมุม SaaS/product. บริษัทไม่จำเป็นต้องเป็นเจ้าของทั้งสามชั้น:
+
+- **Model** — power user อาจจ่ายและเลือกเอง
+- **Harness** — power user อาจใช้ daily-driver agent ของตัวเอง
+- **Context** — บริษัทควรส่ง product knowledge, docs, skills, MCP/API/CLI และ deeplink ให้
+
+นี่คือ [[bring-your-own-agent]]: product ไม่ต้องชนะ agent ของผู้ใช้. Product ต้องทำให้ context ของตัวเองเข้า agent นั้นได้ดี.
+
 ## เชื่อมกับเรื่องอื่นในวิกินี้
 
 - **[[self-learning-agents]]** — กรอบ Anthropic (memory + dreaming) คือ instance หนึ่งของ Layer 3 (Context). thread นี้วางมันลงในแผนที่ที่ใหญ่กว่า
@@ -66,6 +76,7 @@ memory + skill เป็น text นอก model. memory มี 3 ชนิด (
 - **[[harness-guides-sensors]]** — อธิบายว่าทำไมแต่ละชั้นต้องมี scorer (computational vs inferential)
 - **[[learning-from-users]]** — สิ่งที่ทั้งสามชั้นพลาด: สัญญาณจากคนจริงที่ปลอมไม่ได้
 - **[[knowledge-skills-wisdom]]** — มุมของ [[matt-pocock|Pocock]] ว่า skill (Layer 3) คือเพดานของสิ่งที่ AI ทำได้
+- **[[bring-your-own-agent]]** — product company เปิด context layer ให้ agent ของผู้ใช้ แทนที่จะล็อกไว้ใน in-app agent อย่างเดียว
 
 ## See also
 
@@ -79,3 +90,4 @@ memory + skill เป็น text นอก model. memory มี 3 ชนิด (
 - [[langchain]]
 - [[dreaming]]
 - [[just-in-time-context]]
+- [[bring-your-own-agent]]

@@ -1,5 +1,54 @@
 # Log
 
+## [2026-07-01] ingest | Kun Chen — L8 Principal's Agentic Engineering Workflow
+
+Ingested the user-provided transcript of Kun Chen's "L8 Principal's Agentic Engineering Workflow" YouTube video. Treated it as a personal field report on building an end-to-end agentic engineering operating system around coding agents.
+
+- Created source page: `[[l8-principals-agentic-engineering-workflow-kun-chen]]`
+- Created entity pages: `[[wezterm]]`, `[[tmux]]`, `[[open-superwhisper]]`, `[[axi]]`, `[[lavish]]`, `[[no-mistakes]]`, `[[good-night-have-fun]]`, `[[treehouse]]`, `[[first-mate]]`
+- Updated entity: `[[kun-chen]]`
+- Updated concepts: `[[agentic-engineering]]`, `[[coding-harness]]`, `[[agent-experience]]`, `[[orchestration-tax]]`, `[[loop-engineering]]`, `[[git-worktrees]]`, `[[long-running-agents]]`, `[[skill-procedures-vs-abilities]]`
+- Updated `[[index]]`, `[[log]]`, and `hotcache.md`
+
+Key takeaways: (1) Kun's workflow is a full stack, not a single tool: terminal cockpit, memory, skills, voice input, AXI tool ergonomics, Lavish planning artifacts, No Mistakes validation, Good Night Have Fun loops, Treehouse worktrees, and First Mate meta-agent. (2) The human role shifts to the beginning and end of work: clarify intent/plans, then judge evidence/risk; agents do the long middle. (3) Skills should hold conditionally useful knowledge via progressive disclosure, but untrusted skills are both security and performance risks. (4) Validation evidence and risk-tiered review are the practical answer to orchestration tax; "don't read every diff" only makes sense after the pipeline has earned trust. (5) First Mate shows the next step after parallel worktrees: a personal meta-harness that manages crew/context-switching so the human can focus on direction.
+
+## [2026-07-01] ingest | OpenAI — Introducing GeneBench-Pro
+
+Ingested OpenAI's 2026-06-30 research publication introducing GeneBench-Pro, a computational-biology benchmark for measuring judgement-heavy scientific analysis rather than routine fact recall or fixed workflows.
+
+- Created source page: `[[introducing-genebench-pro]]`
+- Created entity pages: `[[genebench-pro]]`, `[[gpt-5-6-sol]]`, `[[hugging-face]]`, `[[artificial-analysis]]`
+- Created concept page: `[[research-taste]]`
+- Updated entities: `[[openai]]`, `[[gpt-5-5]]`
+- Updated concepts: `[[benchmark-contamination]]`, `[[behavioral-verifier]]`, `[[long-horizon-coding]]`
+- Updated `[[index]]`, `[[log]]`, and `hotcache.md`
+
+Key takeaways: (1) GeneBench-Pro frames scientific data analysis as a chain of judgement calls: separating biology from noise, checking whether data supports the estimand, revising assumptions, and deciding when a result is ready for downstream decisions. (2) The benchmark contains 129 synthetic problems across 10 computational-biology domains, built with known causal structure and audited traces to reduce arbitrary author preference, numerical-insensitivity failures, leakage, and shortcuts. (3) OpenAI sent 82 problems to external domain experts and opened 10 representative questions on Hugging Face, with a planned 50-question subset for Artificial Analysis. (4) GPT-5.6 Sol leads at 28.7% highest reasoning / 31.5% Pro, while GPT-5.5 xhigh is 12.0%; this suggests rapid progress but still far from replacing expert scientific judgement. (5) The source adds an important distinction to the wiki: coding strength and scientific reasoning under uncertainty are related but not the same axis.
+
+## [2026-06-30] ingest | Techsauce — AI Brain Fry
+
+Ingested a Techsauce Facebook post summarizing an HBR-cited "AI Brain Fry" study about mental fatigue from heavy workplace AI use. Treated the supplied Facebook excerpt as the source capture and preserved the missing HBR article details as open questions rather than filling them in silently.
+
+- Created source page: `[[techsauce-ai-brain-fry]]`
+- Created concept page: `[[ai-brain-fry]]`
+- Created entity pages: `[[techsauce]]`, `[[harvard-business-review]]`
+- Updated concepts: `[[orchestration-tax]]`, `[[developer-balance]]`, `[[cognitive-surrender]]`
+- Updated `[[index]]`, `[[log]]`, and `hotcache.md`
+
+Key takeaways: (1) AI can make work feel more tiring when the human role shifts from doing tasks to supervising, checking, comparing, and switching among AI tools. (2) The post claims 14% of surveyed U.S. workers using AI experienced AI Brain Fry; close oversight raised mental fatigue and information overload, while productivity started falling beyond 3 simultaneous tools. (3) AI still helps when it replaces routine tasks with clear outputs, reportedly reducing burnout. (4) The design question is not "more AI or less AI" but whether the workflow reduces work or merely moves it into human oversight.
+
+## [2026-06-29] ingest | Matt Pocock — Dumb Zone, Rewind, and Compaction
+
+Ingested Matt Pocock's X post on using `/rewind` + `/compact` to feel the "dumb zone" in long coding-agent sessions. The source came from the user-provided X capture and was treated as a practical field heuristic, not a formal benchmark.
+
+- Created source page: `[[matt-pocock-dumb-zone-compaction]]`
+- Created concept page: `[[dumb-zone]]`
+- Updated entity: `[[matt-pocock]]`
+- Updated concepts: `[[context-rot]]`, `[[compaction]]`
+- Updated `[[index]]`, `[[log]]`, and `hotcache.md`
+
+Key takeaways: (1) **Context capacity is not active-context quality** — a model can still fit the transcript while reasoning worse because failed attempts, stale branches, logs, and wrong assumptions pollute attention. (2) **`/rewind` removes the bad trajectory** instead of correcting forward while the bad turn stays in context. (3) **`/compact` turns the remaining transcript into task state** — useful when done at a phase boundary, risky when done mid-debugging. (4) The durable answer is to keep real progress outside the transcript: files, tests, issues, handoff docs, memory, and harness state.
+
 ## [2026-05-29] ingest | The Orchestration Tax — Addy Osmani
 
 Ingested Addy Osmani's X post (2026-05-28) on the "orchestration tax" — the cost of forgetting that spawning more AI agents doesn't create more of you. The name came from Richard Seroter on a Google I/O panel (with Aja Hammerly and Ciera Jaspan). Core framing: agentic development is a concurrent system in which the human is the single serial component.
@@ -887,4 +936,12 @@ Ingested mikelopster's Thai YouTube video on Loop Engineering (https://www.youtu
 - Created entity: `[[mikelopster]]`
 - Updated concepts: `[[loop-engineering]]`, `[[queues-over-loops]]`, `[[orchestration-tax]]`
 - Updated entities: `[[claude-code]]`, `[[openai-codex]]`
+- Updated `[[index]]`, `[[log]]`, and `hotcache.md`
+
+## [2026-06-29] ingest | i don't want to use your agent — Rhys Sullivan
+Ingested Rhys Sullivan's X post (published 2026-06-27 UTC / 2026-06-28 Thailand) arguing for a BYO-agent product strategy. Key takeaways: (1) in-app agents are not bad; they are useful and magical for normal users, but power users do not want every SaaS product to become a separate daily-driver agent; (2) incentive problem — companies cannot sustainably give every user frontier-model reasoning for free, while power users already pay for their own Opus/GPT-class models; (3) context problem — product dashboard agents cannot see local files, random repos, terminal setup, scripts, and personal memory as well as the user's local harness; (4) product companies should make the user's own agent an expert in their product/problem area via skills, docs, MCP/API/CLI, resources, and deeplinked UI; (5) build the internal/in-app agent on the same primitives exposed externally, so regular users keep chat while power users install the product into their own agent with one source of truth.
+- Created source summary: `[[i-dont-want-to-use-your-agent]]`
+- Created concept: `[[bring-your-own-agent]]`
+- Created entities: `[[rhys-sullivan]]`, `[[linear]]`, `[[cloudflare]]`, `[[posthog]]`
+- Updated concepts: `[[coding-harness]]`, `[[model-context-protocol]]`, `[[skill-procedures-vs-abilities]]`, `[[three-learning-layers]]`, `[[agent-experience]]`
 - Updated `[[index]]`, `[[log]]`, and `hotcache.md`

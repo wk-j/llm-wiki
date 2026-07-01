@@ -1,6 +1,11 @@
 # Index
 
 ## Sources
+- [[l8-principals-agentic-engineering-workflow-kun-chen]] — Kun Chen (YouTube transcript): end-to-end agentic engineering workflow for a solo L8/principal-style builder; terminal cockpit (WezTerm/tmux/Neovim), memory files, skills/progressive disclosure, voice input, AXI agent ergonomics, Lavish planning artifacts, No Mistakes validation, Good Night Have Fun long-running loops, Treehouse worktrees, First Mate meta-agent, and the captain mindset
+- [[introducing-genebench-pro]] — OpenAI (2026-06-30): launches GeneBench-Pro, a 129-problem computational-biology benchmark for research taste / scientific judgement; synthetic causal data generation, expert review, deterministic grading, 10 public sample questions, planned 50-question Artificial Analysis subset; GPT-5.6 Sol reaches 28.7% max reasoning and 31.5% Pro, showing progress but no saturation
+- [[techsauce-ai-brain-fry]] — Techsauce (Facebook, 2026-06-29/30): Thai summary of an HBR-cited AI Brain Fry study; AI can reduce burnout on routine tasks, but close AI oversight, tool switching, and using more than 3 tools can increase mental fatigue, information overload, decision fatigue, mistakes, and quit intention
+- [[i-dont-want-to-use-your-agent]] — Rhys Sullivan (X, 2026-06-27): BYO-agent thesis for product companies; in-app agents are useful for normal users, but power users want their own frontier-model/local-context agent to access product expertise via skills, MCP/API/CLI, docs, and deeplinked UI; build the internal agent on the same primitives exposed externally
+- [[matt-pocock-dumb-zone-compaction]] — Matt Pocock (X, 2026): practical `/rewind` + `/compact` test for the "dumb zone"; shows context-window capacity is not active-context quality; compact at phase boundaries, keep durable state outside the transcript
 - [[mikelopster-loop-engineering]] — mikelopster (YouTube, 2026): Thai practical take on Loop Engineering; explains prompt→context→loop, goal prompt, feedback gate, Claude Code `/loop`/`/goal`, Codex schedule/goal style, and why loop is useful only when exit condition/scorer is clear; content/taste loops can just create orchestration tax
 - [[self-learning-for-agents-explained]] — @ataiiam / CopilotKit (2026-06-24): agents can learn in 3 layers (Harrison Chase split) — model (Karpathy AutoResearch / MIT SEAL / DeepMind AlphaEvolve, lab-only, needs a free scorer), harness (loop engineering / LangChain Deep Agents / Self-Harness / Microsoft Agent Framework, product-ready), context (memory + skills via Letta/OpenClaw/Hermes/Anthropic skills, the only layer that learns from users); model belongs to labs, harness+context are yours; the unfakeable signal is the user's real decision (AG-UI/CopilotKit) — auto-scores can be gamed (Darwin Gödel Machine)
 - [[matt-pocock-agentic-workflow]] — David Ondrej × Matt Pocock (2026-06-19): "stop obsessing over the model, work on the harness" (F1 engine analogy, ~50/50, bitter-lesson tension); AI ate tactical programming so be strategic; your skills are the ceiling; skills = procedures (you drive) vs abilities (model drives); knowledge/skills/wisdom + the teach skill; queues not loops (Ralph lineage) + AFK; AX vs DX; self-improving systems ("buy a lock"); Sandcastle on GitHub Actions; start from a blank slate
@@ -98,6 +103,16 @@
 - [[thclaws-marketplace-panutat]] — Panutat Tejasen (2026-04-30): thClaws v0.7.0 Marketplace; Enterprise Security; Private Marketplace; Host Bridge concept; Rabbit Holes in coding.
 
 ## Entities
+- [[genebench-pro]] — OpenAI research-level benchmark for computational-biology agents; 129 synthetic problems across 10 domains, designed to measure research taste, ambiguity handling, QC, causal/statistical method choice, and decision-readiness rather than book knowledge
+- [[gpt-5-6-sol]] — OpenAI GPT-5.6 model variant reported as strongest on GeneBench-Pro; 28.7% pass rate at highest reasoning and 31.5% in Pro mode, from the GeneBench-Pro source only
+- [[hugging-face]] — AI model/dataset platform; hosts OpenAI's public package of 10 representative GeneBench-Pro questions
+- [[artificial-analysis]] — AI benchmarking organization/platform; OpenAI plans to provide it a 50-question GeneBench-Pro subset for independent third-party benchmarking
+- [[techsauce]] — Thai technology/business media and ecosystem source; summarized the AI Brain Fry workplace-AI fatigue framing for Thai readers
+- [[harvard-business-review]] — Management publication cited by Techsauce as the source context for AI Brain Fry; original HBR article details remain an open follow-up until ingested directly
+- [[rhys-sullivan]] — X writer behind "i don't want to use your agent"; frames product expertise as skills/MCP/API/CLI that should plug into the user's own daily-driver agent
+- [[linear]] — issue/project management tool; in the BYO-agent frame, valuable primitives are ticket/project APIs, planning skills, and deeplinks rather than only an in-app agent
+- [[cloudflare]] — cloud/edge/security/developer infrastructure platform; BYO-agent example where docs, CLI commands, config tools, and permissioned APIs matter more than dashboard chat alone
+- [[posthog]] — product analytics/product OS; BYO-agent example where event query tools, schema resources, UI deeplinks, and growth-analysis skills should be agent-accessible
 - [[mikelopster]] — Thai software/AI creator; source for a pragmatic Loop Engineering take: feedback gate and human review bottleneck matter more than the existence of a trigger
 - [[ataiiam]] — author of the "Self Learning for Agents" thread (2026-06-24); from the CopilotKit team; popularized Harrison Chase's model/harness/context split
 - [[copilotkit]] — framework for agent↔user interfaces; behind the AG-UI protocol and CopilotKit Intelligence (learn from users → procedural memory)
@@ -114,7 +129,16 @@
 - [[greptile]] — AI code review / code intelligence tool; example of heterogeneous reviewer design where different tools catch different classes of correctness and architecture issues
 - [[faros-ai]] — engineering intelligence / developer productivity metrics company; 2026 data source for AI adoption increasing throughput while code churn, defects, and review duration rise sharply
 - [[gitclear]] — git-based developer productivity analytics company; source for the 4x raw output vs roughly 12% delivered productivity gain framing
-- [[kun-chen]] — ex-Meta L8 solo builder cited by Addy; runs 20-30 agents and ships around 40 PR/day by moving human work into detailed plans plus automated review gates
+- [[kun-chen]] — ex-Meta L8/principal engineer and agentic workflow/tooling builder; runs high-concurrency agent workflows by moving human work to planning, evidence review, and risk judgement; creator/author of tools discussed here such as AXI, Lavish, No Mistakes, Good Night Have Fun, Treehouse, and First Mate
+- [[wezterm]] — cross-platform Lua-configurable terminal emulator; outer terminal surface in Kun Chen's terminal-first agent workflow
+- [[tmux]] — terminal multiplexer for persistent panes/windows; lets Kun Chen keep editor, shell, and many agent sessions live across devices
+- [[open-superwhisper]] — local Whisper-based voice-input app; Kun uses it to dictate long prompts and tune transcription vocabulary for project/tool names
+- [[axi]] — Kun Chen's agent-experience/tool-design standard and catalog; optimizes tool output for token cost, latency, and agent success rather than human-only ergonomics
+- [[lavish]] — Kun Chen's planning artifact tool/skill; turns wall-of-text plans into project-styled HTML artifacts with options, annotations, and decisions
+- [[no-mistakes]] — Kun Chen's validation pipeline; turns first-pass agent code into PRs with branch/rebase, adversarial review, E2E evidence, docs/lint, and PR babysitting
+- [[good-night-have-fun]] — Kun Chen's long-running agent loop tool (`gnhf`); runs objective-driven iterations with token/iteration caps and stop conditions
+- [[treehouse]] — Kun Chen's git-worktree manager for parallel agents; creates/reuses worktrees and reduces worktree bookkeeping overhead
+- [[first-mate]] — Kun Chen's meta-agent for coordinating multiple agent sessions, Treehouse worktrees, and No Mistakes PR gates from a single captain interface
 - [[omnigent]] — Databricks open-source alpha meta-harness; wraps Claude Code/Codex/Pi/SDK/custom agents behind a common API and adds cross-harness policy, sandbox, cost control, and live collaboration
 - [[databricks]] — data and AI infrastructure company; creator of Omnigent and Genie; proposes meta-harness as a control layer above agent-tool silos
 - [[zack-proser]] — WorkOS Applied AI engineer; proposes developer balance through signal filtering, self-verifying agent loops, Remote Control, and harness improvement from conversation history
@@ -234,7 +258,7 @@
 - [[terminus-agent]] — Minimalist agent using only tmux and keystrokes; inspired pi's design
 - [[vouch-oss]] — Mitchell Hashimoto's tool for human verification in Open Source projects
 - [[zed]] — High-performance, AI-native code editor built in Rust using a video game engine architecture; successor to Atom and VS Code.
-- [[matt-pocock]] — TypeScript expert and AI automation builder; creator of the swappable-agent high-concurrency development flow
+- [[matt-pocock]] — TypeScript expert and AI automation builder; creator of swappable-agent workflows, harness-first AI coding, and the dumb-zone `/rewind` + `/compact` heuristic
 - [[maggie-appleton]] — Staff Research Engineer at GitHub Next; designer/engineer; advocate for Collaborative AI Engineering and alignment
 - [[github-next]] — R&D team at GitHub; creators of Copilot, ACE, and Copilot Workspace
 - [[ace]] — (Agent Collaboration Environment) GitHub Next prototype for multiplayer team-agent collaboration
@@ -261,12 +285,16 @@
 - [[marc-brooker]] — AWS senior engineer (Lambda/Aurora); strongest defense of SDD: specs as explicit, versioned, living artifacts in iterative use
 
 ## Concepts
+- [[research-taste]] — OpenAI's term in GeneBench-Pro for the chain of scientific judgement calls that shape an analysis: what data can support, how diagnostics should change the model/estimand, when to revise the plan, and when a result is decision-ready
+- [[ai-brain-fry]] — Workplace-AI fatigue from using or overseeing AI beyond cognitive capacity; caused less by "AI use" itself than by oversight, checking, tool switching, and too many simultaneous AI tools; connects orchestration tax to non-coding work
+- [[bring-your-own-agent]] — Product strategy: keep in-app agents for normal users, but expose product expertise as skills, docs, MCP/API/CLI, resources, and deeplinks so power users can use their own model+harness+local context
+- [[dumb-zone]] — The point where an agent still has context left but starts reasoning worse because active context is polluted; use `/rewind` + `/compact` at phase boundaries to test and reduce it
 - [[three-learning-layers]] — Harrison Chase's split of where an agent can learn: model (weights, lab-only) / harness (scaffold, product-ready) / context (memory+skills, learns from users); each improves independently; every layer needs a scorer (computational free score vs human judgement); model belongs to labs, harness+context are yours
 - [[agent-memory-types]] — the 3 kinds of agent memory: semantic (facts) / episodic (past experience) / procedural (how to handle a case); self-improving agents need the last two but most setups only have semantic; one text serves agent, user, or whole team
 - [[learning-from-users]] — the signal almost no one captures: the real decisions of the people using your product; the one signal a machine can't fake (auto-scores can — Darwin Gödel Machine faked its own logs); captured at the agent↔user interface (AG-UI/CopilotKit) and fed back as procedural memory
 - [[queues-over-loops]] — Matt Pocock's reframe of loop hype: you don't need a single forever-loop, you need a queue of scoped tasks that many nodes (agents/devs) pick off; push human-in-the-loop checkpoints right; complements (not contradicts) loop-engineering
 - [[afk-agents]] — away-from-keyboard work: hand a scoped task to an agent and stop watching; parallelizes "many of you"; unscoped/planning work stays human-in-the-loop; the moment AFK clicked = output exploded; new ceiling is review bandwidth
-- [[agent-experience]] — AX: the experience an agent has working in your codebase; good DX ≈ good AX; a clean codebase is the most-forgotten part of the harness; extends to making review seamless (video+TTS PR walkthroughs)
+- [[agent-experience]] — AX: the experience an agent has working in a codebase, product, or tool; good DX ≈ good AX; includes codebase clarity, review surfaces, product primitives for BYO agents, AXI-style token-efficient tool output, and Lavish-style planning artifacts
 - [[strategic-vs-tactical-programming]] — Ousterhout's split; AI ate tactical programming (writing code) so humans must be strategic (design, interfaces, scoping); your skills are the ceiling on what AI can do; seniors get 10x, juniors get a small boost
 - [[skill-procedures-vs-abilities]] — two kinds of agent skill by who invokes: procedures (you drive: grill me, 2prd) vs abilities (model drives: coding standards); Pocock prefers procedures, keeps knowledge in the human, avoids leaking descriptions into context (disable model invocation)
 - [[knowledge-skills-wisdom]] — Pocock's teaching frame: knowledge (what) + skills (muscle memory) are bundleable into reusable skills; wisdom (when/where) can't be bundled — it needs doing the thing in real context
@@ -282,7 +310,7 @@
 - [[llm-nondeterminism]] — LLMs are non-deterministic even at temperature 0 (floating-point non-associativity, batch scheduling, fused-attention kernels); 100B+ model reproduced outputs in only 12.5% of runs vs fully-consistent 7–8B (IBM RAG study); prose instructions are sampled, model migration = change of interpreter
 - [[property-based-testing]] — write universally quantified properties, let the machine generate random inputs (QuickCheck/Hypothesis); Quviq case: 450 lines of PBT over 60k lines of Erlang found 25 bugs incl. race conditions (1:133); checks behavior, not implementation — a natural fit for AI-written code
 - [[loop-engineering]] — Addy Osmani + mikelopster: replace yourself as the prompter; design a system that finds work, hands it out, checks it, remembers, and decides next; five pieces + memory; practical boundary = feedback gate/scorer must be clear or the loop burns token and shifts work to human review
-- [[git-worktrees]] — separate working directory on its own branch sharing the same repo history; lets parallel agents not step on each other's files; removes mechanical collision but not the human review ceiling (ties to orchestration-tax)
+- [[git-worktrees]] — separate working directory on its own branch sharing the same repo history; lets parallel agents not step on each other's files; removes mechanical collision but not the human review ceiling; Kun Chen's Treehouse adds worktree reuse/status/cleanup ergonomics
 - [[cloud-agents]] — coding agents that run on cloud VMs (own env/deps/network), in parallel, unattended, for hours/days; building them = building an operating layer around the agent (environment + durability + decoupled conversation state + autonomy), not porting a local agent to a server
 - [[durable-execution]] — running long workflows that survive crashes/outages without losing state or hand-rolling retry/scheduling; why Cursor moved its agent loop to Temporal (work-stealing 1-nine → 2-nines); treat the agent loop as a long-running server process
 - [[agent-development-environment]] — "the environment is the product": a full dev environment is the single biggest factor in cloud-agent output quality; missing pieces show as silent quality drops (blamed on the model), not crashes; ends up requiring "enterprise IT for agents" (secret redaction, network policy, credential management)
@@ -339,7 +367,7 @@
 - [[agentic-search]] — using terminal tools (grep/find) to explore a codebase instead of RAG indexing
 - [[care-allocation]] — Treating attention/care as a scarce resource: care deeply about high-stake people/work, ignore low-value judgment noise
 - [[agent-native-infrastructure]] — Designing systems (docs, APIs, infra) for agent legibility and direct action (sensors/actuators)
-- [[agentic-engineering]] — Raising the ceiling; professional engineering discipline for AI agents; 10x+ speedup with quality control
+- [[agentic-engineering]] — Raising the ceiling; professional engineering discipline for AI agents; 10x+ speedup with quality control; Kun Chen's captain workflow shows the full stack from planning artifacts through validation pipelines, worktrees, long-running loops, and meta-agent coordination
 - [[ai-slop]] — Generic, low-quality, or tasteless AI output; result of poor prompting or lack of professional vocabulary
 - [[eh-gland]] — Engineering intuition (ต่อมเอ๊ะ) needed to spot AI errors; key human differentiator
 - [[horror-vacui]] — ความกลัวพื้นที่ว่างใน UI; นำไปสู่การอัดข้อมูลจนแน่นเกินไป (Visual Clutter)
@@ -403,8 +431,8 @@
 - [[code-knowledge-graphs]] — Codebase structure indexed as a graph for agent context and navigation
 - [[cognitive-debt]] — Mental model loss due to over-delegating codebase implementation to AI
 - [[collaborative-ai-engineering]] — Team-based AI engineering focusing on alignment and ACE-style environments
-- [[compaction]] — Claude Code session cleanup: summarizing history to prevent context rot
-- [[context-rot]] — Performance degradation as context window fills; ~400k token sweet spot
+- [[compaction]] — Claude Code session cleanup: summarizing history to prevent context rot; best when guided and done at phase boundaries, not mid-confusion
+- [[context-rot]] — Performance degradation as context window fills; includes the "dumb zone" where capacity remains but active-context quality drops
 - [[delegation-mindset]] — Shifting from micromanagement to goal-driven delegation; front-loading intent
 - [[diegetic-ui]] — Narrative-world UI (Iron Man HUD); character is aware of the interface
 - [[dissatisfaction-rate]] — LMSYS metric: frequency of users disliking both model answers in blind tests
@@ -442,7 +470,7 @@
 - [[llm-coding-pitfalls]] — Karpathy's observations: hidden confusion, overcomplication, scope drift
 - [[llm-knowledge-bases]] — LLM-maintained personal wikis (like this one) using Markdown/schema
 - [[local-optimization-trap]] — Pitfall: optimizing a non-bottleneck (coding) while ignoring the real constraint
-- [[long-running-agents]] — Agents with multi-day state; 5 patterns for persistence and HITL
+- [[long-running-agents]] — Agents with multi-day or long-task state; Google Cloud's 5 patterns for persistence/HITL plus Kun Chen's smaller personal-loop version via Good Night Have Fun with objective, caps, and stop condition
 - [[malleable-tools]] — Minimalist, self-modifying tools (pi-agent) vs. heavyweight "spaceship" agents
 - [[memex]] — The associatively-linked personal knowledge device; 1945 Memex as LLM-wiki ancestor
 - [[memory-decay]] — Mercury concept: machine memory that fades over time to prevent context rot
