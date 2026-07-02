@@ -1,6 +1,10 @@
 # Index
 
 ## Sources
+- [[how-perplexity-lost-ai-war]] — Mondo Startups (YouTube transcript): argues that Perplexity became a strong niche research tool rather than replacing Google because answer+citation was copied by incumbents, AI query costs are heavier than classic search economics, monetization clashes with trust, publisher disputes weaken positioning, and Google owns distribution through search/browser/mobile/product defaults
+- [[llm-loops-instead-of-chain-of-thought]] — bycloud (YouTube transcript): explains looped transformers as an internal test-time-compute alternative to chain-of-thought; covers recurrent-depth transformers, multi-hop reasoning, stability/Parcae, mechanistic latent-state analysis, Mixture-of-Recursions, KV-cache tradeoffs, and caveats about expressiveness and real-world scaling
+- [[oumuamua-2026-curiosity-channel]] — Curiosity Channel คนช่างสงสัย (YouTube, Thai): timeline of ʻOumuamua knowledge 2017→2026; light-curve shape inference, non-gravitational acceleration with no visible tail, Loeb's solar-sail hypothesis vs SETI silence, and the now-favored radiolysis/dark-comet explanation; closes with Occam's razor as method
+- [[chinas-models-no-longer-need-western-hardware]] — Prompt Engineering (YouTube transcript): explains Meituan's LongCat 2.0 as a 1.6T MoE model allegedly trained without NVIDIA GPUs or Google TPUs; frames the story around custom AI chips, CUDA independence, n-gram embeddings, sparse attention, speculative decoding, and the limits of self-reported benchmarks
 - [[planning-mode-dangerous-illusion]] — Zoran on C# (YouTube transcript): full demo behind the Claude planning critique; compares Sonnet 4.6 vs Opus 4.7 on a directory-upload feature and shows that better plans still miss senior engineering judgment around data retention, duplicated logic, and server-load risk
 - [[zoran-horvat-claude-no-planning-engine]] — Zoran Horvat (X, 2026): critique of Claude Code Plan mode as prompt/harness scaffolding rather than a symbolic planning engine; plans are useful drafts but not engineering judgment
 - [[zoran-horvat-domain-model-persistence]] — Zoran Horvat (X, 2026): domain model should not bend to the database; use DDD/value objects, EF Core complex properties, value conversions, private constructors, and query translation to keep domain modeling separate from persistence
@@ -107,6 +111,22 @@
 - [[thclaws-marketplace-panutat]] — Panutat Tejasen (2026-04-30): thClaws v0.7.0 Marketplace; Enterprise Security; Private Marketplace; Host Bridge concept; Rabbit Holes in coding.
 
 ## Entities
+- [[perplexity]] — AI answer/search startup founded in 2022; Mondo Startups frames it as a product that made answer-with-citations feel obvious but lost the broader Google-replacement race to copied features, high query costs, weak ad monetization, publisher-trust risk, and distribution disadvantage
+- [[google]] — technology/search/advertising incumbent; in the Perplexity source, wins AI search less through superior answers than through search habits, Chrome/Android/default placement, ad economics, and ecosystem distribution
+- [[aravind-srinivas]] — Perplexity co-founder; positioned by Mondo Startups as a founder who understood both search and LLMs after work around Google, DeepMind, and OpenAI
+- [[comet-browser]] — Perplexity's AI browser; attempt to own interface and distribution rather than remain only a search destination, with open questions around whether it can shift sticky browser/search habits
+- [[chatgpt]] — OpenAI consumer AI product; in the Perplexity source, one of the incumbent AI surfaces that absorbed answer-with-citations and weakened Perplexity's differentiation
+- [[mondo-startups]] — YouTube business/tech documentary channel; source of the Perplexity strategy analysis treated as secondary interpretation rather than primary company evidence
+- [[oumuamua]] — 1I/2017 U1, the first interstellar object detected (2017, Pan-STARRS1); elongated tumbling body with non-gravitational acceleration and no visible tail; best 2026 explanation = ordinary icy body venting radiolysis-produced hydrogen (a dark comet), not an alien craft
+- [[avi-loeb]] — Harvard astronomy professor; proposed the alien solar-sail hypothesis for ʻOumuamua (2018) and later challenged each natural explanation; recurring "maybe aliens" voice for anomalous sky objects including 3I/ATLAS
+- [[3i-atlas]] — third interstellar object (discovered 2025-07-01 by ATLAS); massive delayed methane outgassing evidences an irradiated insulating crust over a pristine icy core, strengthening the radiolysis explanation for ʻOumuamua
+- [[curiosity-channel]] — Thai science YouTube channel (คนช่างสงสัย); source of the ʻOumuamua 2026 recap; explains science in spoken Thai and closes with Occam's-razor methodology
+- [[longcat-2-0]] — Meituan model described by Prompt Engineering as a 1.6T-parameter MoE with 48B active params/token, trained on 50,000+ custom AI chips over 35T tokens without NVIDIA GPUs/Google TPUs; claims remain source-attributed pending primary-source and third-party verification
+- [[meituan]] — Chinese internet/services company behind LongCat 2.0 in the supplied source; example of AI capability moving from specialist labs into large Chinese platform companies with their own hardware/software stack ambitions
+- [[prompt-engineering]] — YouTube AI engineering explainer channel; source for the LongCat 2.0 / China hardware independence ingest, treated as third-party interpretation rather than primary Meituan evidence
+- [[bycloud]] — AI/LLM explainer channel behind the looped-transformer video; useful as a secondary synthesis source connecting recurrence, stability, mechanistic analysis, adaptive recursive depth, and KV-cache tradeoffs
+- [[crusoe]] — AI infrastructure company promoted in the bycloud source as a serverless fine-tuning provider; claims are sponsor-segment/product-context, not independent evaluation
+- [[intuitive-ai-academy]] — bycloud's LLM education project/course platform, promoted in the looped-transformer video as intuition-first AI education
 - [[zoran-horvat]] — .NET/software educator / Zoran on C#; argues for rich domain models over persistence-driven flattening, and criticizes Claude Plan mode as prompt scaffolding rather than true engineering judgment
 - [[entity-framework-core]] — Microsoft's .NET ORM; in Horvat's post, the example tooling for mapping nested value objects, converters, private constructors, and domain-rich queries to relational persistence
 - [[aom-khunpanitchot]] — Thai software/AI practitioner from the Fable/Elysia 2 Facebook field report; writes as an owner of the Elysia 2 codebase evaluating AI audit output for release readiness
@@ -294,6 +314,21 @@
 - [[marc-brooker]] — AWS senior engineer (Lambda/Aurora); strongest defense of SDD: specs as explicit, versioned, living artifacts in iterative use
 
 ## Concepts
+- [[answer-engine]] — Search experience that returns a synthesized answer with citations instead of only links; powerful for research, but easy for incumbent AI/search surfaces to absorb and risky when attribution or publisher trust breaks
+- [[ai-search-economics]] — Unit economics of AI search: live retrieval plus LLM synthesis makes each query expensive, while monetization through ads or subscriptions must preserve user trust and still cover compute
+- [[distribution-moat]] — Advantage from owning the path to users (defaults, browser, OS, ecosystem, habit); in the Perplexity case, explains why a better feature can lose once Google places a copied version inside existing surfaces
+- [[looped-transformers]] — Transformer architecture pattern that reuses a smaller block recurrently so hidden states refine over multiple internal steps; makes recurrence count a test-time-compute dial, but introduces stability, supervision, and KV-cache tradeoffs
+- [[latent-reasoning]] — Reasoning performed inside hidden states rather than explicit text traces; compact alternative to chain-of-thought, but harder to supervise and inspect
+- [[multi-hop-reasoning]] — Reasoning task where each step depends on a previous intermediate fact; used as an early benchmark for whether recurrence/depth helps models extrapolate beyond memorized patterns
+- [[mixture-of-recursions]] — Adaptive recursive-depth routing: easy tokens exit early while hard tokens continue through more recurrent steps; expert-choice routing adapts during the loop but complicates training and KV caching
+- [[kv-cache]] — Key/value tensor cache used during transformer decoding; speeds attention over past tokens but becomes a memory-bandwidth bottleneck for long context and recursive-depth models
+- [[chain-of-thought]] — Textual intermediate reasoning trace; practical and easy to supervise, but token/context/latency-heavy compared with latent recurrence
+- [[residual-stream]] — Main hidden-state channel in a transformer; in looped transformers it becomes the evolving state of a recurrent dynamical system
+- [[interstellar-objects]] — objects from outside the solar system on hyperbolic trajectories; "I" designation created for ʻOumuamua in 2017; three found by 2026 (1I/2I/3I); detection problem (found on the way out) drives Project Lyra and ESA's wait-at-L2 Comet Interceptor
+- [[dark-comets]] — objects that look like dry asteroids (no coma, no tail) yet self-accelerate like comets near the Sun; invisible hydrogen jets from radiolysis-charged ice; 14 found in the solar system by 2026; Hayabusa2 visits 1998 KY26 in 2031
+- [[occams-razor]] — prefer the simplest explanation that fits the evidence; don't add hypotheses (like alien technology) without necessity; a ranking heuristic, not a proof; ʻOumuamua as the worked example
+- [[n-gram-embeddings]] — Embedding table entries for short token groups rather than only single tokens; LongCat 2.0 uses this, per the source, to add corpus information more cheaply than simply adding more MoE experts
+- [[sparse-attention]] — Long-context attention strategy that looks only at selected relevant parts; LongCat's version is described as making the selection helper cheaper through predictable memory chunks, cross-layer caching, and coarse-to-fine selection
 - [[plan-mode-as-prompting]] — View that coding-agent Plan mode is prompt/harness scaffolding that produces a useful draft plan, not proof of a symbolic planning engine or senior engineering judgment; Horvat's directory-upload demo shows Opus 4.7 can reduce blind spots while still missing data/design questions
 - [[domain-model-persistence-separation]] — DDD principle: domain model and persistence are separate jobs; keep business concepts and invariants in types while mapping them to database storage through an adapter layer
 - [[domain-modeling]] — Software-design practice of shaping code around business concepts, rules, invariants, and shared language rather than merely mirroring tables or transport payloads
@@ -494,7 +529,7 @@
 - [[memory-scoring]] — Mercury concept: ranking importance of memory fragments for injection
 - [[merkle-tree-sync]] — Performance: incremental codebase sync for agents using Merkle hashes
 - [[meta-ui]] — UI reflecting character state on the lens (blood, blur, screen shake)
-- [[mixture-of-experts]] — MoE: routing tokens to specialized subnetworks for efficiency (DeepSeek/GPT-4/Mellum2)
+- [[mixture-of-experts]] — MoE: routing tokens to specialized subnetworks for efficiency (DeepSeek/GPT-4/Mellum2/LongCat 2.0)
 - [[mla-attention]] — Multi-head Latent Attention: DeepSeek technique reducing KV cache size
 - [[model-choice-by-expertise]] — Heuristic: domain expert = Sonnet is enough; no knowledge = pay for Opus
 - [[model-context-protocol]] — MCP: open standard for agent-tool communication

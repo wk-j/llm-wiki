@@ -3,8 +3,8 @@ title: Sputnik Moment (AI)
 type: concept
 tags: [ai, geopolitics, deepseek, economy]
 created: 2026-04-27
-updated: 2026-04-27
-sources: [deepseek-wikipedia.md]
+updated: 2026-07-03
+sources: [deepseek-wikipedia.md, chinas-models-no-longer-need-western-hardware.md]
 ---
 
 # Sputnik Moment (AI) / จุดเปลี่ยนสปุตนิก (ฉบับ AI)
@@ -24,7 +24,17 @@ sources: [deepseek-wikipedia.md]
 - **Price War:** ยักษ์ใหญ่ในจีนต่างลดราคาค่า API ลงอย่างถล่มทลาย
 - **Strategy Rethink:** บริษัทใน Silicon Valley ต้องกลับมาทบทวนว่าจะเน้นแค่การขยายขนาด (Scaling) อย่างเดียวต่อไป หรือต้องหันมาเน้นเรื่องประสิทธิภาพของสถาปัตยกรรมมากขึ้น
 
+## คลื่นต่อมา: ไม่ใช่แค่ถูกกว่า แต่พึ่ง hardware ตะวันตกน้อยลง
+
+DeepSeek ทำให้โลกถามว่า "ต้องใช้เงินและ GPU เท่าเดิมไหม" ส่วน [[longcat-2-0|LongCat 2.0]] ในวิดีโอ [[chinas-models-no-longer-need-western-hardware|China's Models No Longer Need Western Hardware]] เพิ่มคำถามว่า "ต้องใช้ NVIDIA + CUDA ไหม"
+
+คลิปอ้างว่า [[meituan|Meituan]] train model 1.6T บน custom AI chips มากกว่า 50,000 ตัว โดยไม่ใช้ NVIDIA GPUs หรือ Google TPUs. ถ้าตรวจยืนยันได้ นี่จะขยับ Sputnik Moment จาก algorithm efficiency ไปสู่ **hardware/software-stack independence**: จีนไม่ได้แค่รีดประสิทธิภาพจาก chip ที่มี แต่สร้าง stack ทางเลือกเอง
+
+ยังมี open question สำคัญ: chip รุ่นใด, software stack เปิดเผยแค่ไหน, benchmark third-party เห็นผลเหมือนกันไหม, และคำว่า "ไม่ใช้ NVIDIA/TPU" ครอบคลุม training ทั้งหมดหรือเฉพาะ cluster หลัก
+
 ## See also
 
 - [[deepseek]]
 - [[token-optimization]]
+- [[longcat-2-0]]
+- [[meituan]]

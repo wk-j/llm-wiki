@@ -3,8 +3,8 @@ title: Claude
 type: entity
 tags: [ai, models, anthropic, llm]
 created: 2026-04-16
-updated: 2026-07-02
-sources: [Introducing Claude Opus 4.7.md, The advisor strategy Give Sonnet an intelligence boost with Opus.md, Claude Mythos Preview.md, Piyalitt Ittichaiwong - Opus 4.8 Launch Recap.md, zoran-horvat-claude-no-planning-engine.md]
+updated: 2026-07-03
+sources: [Introducing Claude Opus 4.7.md, The advisor strategy Give Sonnet an intelligence boost with Opus.md, Claude Mythos Preview.md, Piyalitt Ittichaiwong - Opus 4.8 Launch Recap.md, zoran-horvat-claude-no-planning-engine.md, llm-loops-instead-of-chain-of-thought.md]
 ---
 
 # Claude
@@ -40,6 +40,12 @@ sources: [Introducing Claude Opus 4.7.md, The advisor strategy Give Sonnet an in
 
 นี่ไม่ลบ claim เรื่อง [[dynamic-workflows]] แต่ทำให้ต้องอ่านคำว่า "Claude self-plans" อย่างระวัง. Utility อาจจริงในงานที่มี verification gate เช่น test suite แต่ engineering judgment ยังต้องมาจากคน โดยเฉพาะ decision ที่กระทบ data, architecture, security, หรือ semantics ของ product.
 
+## Open question: latent recurrence?
+
+ใน [[llm-loops-instead-of-chain-of-thought|วิดีโอของ bycloud]] มีการพูดถึง speculation ว่าความสามารถบางอย่างของ Claude 3 บน Graph Walk BFS อาจเกี่ยวกับแนวคิด recurrence / [[looped-transformers|looped transformer]] ภายใน model. ข้อมูลนี้ยังไม่ใช่คำยืนยันจาก [[anthropic|Anthropic]] และไม่ควรอ่านเป็น architecture fact ของ Claude
+
+**สถานะ:** เก็บเป็นคำถามเปิดว่า frontier models ใช้ [[latent-reasoning|latent reasoning]] หรือ recurrent-depth trick แบบใดบ้าง ไม่ใช่ claim ที่ยืนยันแล้ว
+
 ## ช่องทางการใช้งาน (Surfaces)
 
 - [[claude-code|Claude Code]] (CLI)
@@ -57,3 +63,5 @@ sources: [Introducing Claude Opus 4.7.md, The advisor strategy Give Sonnet an in
 - [[effort-levels]]
 - [[advisor-strategy]]
 - [[plan-mode-as-prompting]]
+- [[looped-transformers]]
+- [[latent-reasoning]]

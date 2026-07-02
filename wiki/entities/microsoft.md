@@ -3,8 +3,8 @@ title: Microsoft
 type: entity
 tags: [ai, cloud, infrastructure, organizations]
 created: 2026-04-28
-updated: 2026-04-28
-sources: [microsoft-openai-partnership-2026.md]
+updated: 2026-07-03
+sources: [microsoft-openai-partnership-2026.md, how-perplexity-lost-ai-war.md]
 ---
 
 # Microsoft / ไมโครซอฟท์
@@ -31,8 +31,15 @@ sources: [microsoft-openai-partnership-2026.md]
 
 การที่ Microsoft เริ่มสร้างโมเดลเองและเปิดให้ OpenAI ไปหา cloud อื่นได้ ทำให้ตลาด AI ปี 2026 เริ่มเข้าสู่ยุค **Multi-cloud / Multi-model** อย่างเต็มตัว ผู้ใช้ Azure จะเห็นทางเลือกที่หลากหลายขึ้นระหว่างโมเดลของ Microsoft เอง กับโมเดลจาก OpenAI และ [[anthropic]] (ผ่าน integration ต่างๆ)
 
+## Bing และบทเรียนเรื่อง distribution
+
+ใน [[how-perplexity-lost-ai-war|How Perplexity Lost the AI War]] Microsoft ถูกยกเป็น counterexample สำคัญ: แม้ Bing จะได้ integration กับ ChatGPT ตั้งแต่ต้นปี 2023, มี Windows เป็น distribution surface, สิทธิ์เข้าถึง GPT-4, และงบ marketing ใหญ่ แต่แหล่งนี้บอกว่า market share ก็ยังขยับไม่มาก
+
+บทเรียนของแหล่งนี้คือ search/browser habit เปลี่ยนยากมาก. ถ้า Microsoft ยังเปลี่ยนพฤติกรรมผู้ใช้ได้จำกัด [[perplexity|Perplexity]] ก็ยิ่งเจอโจทย์หนักเมื่อพยายามใช้ [[comet-browser|Comet]] แก้ [[distribution-moat|distribution moat]]
+
 ## ดูเพิ่ม
 
 - [[openai]]
 - [[gpt-5-5]]
 - [[claude-code]] — คู่แข่งของ Copilot ในฝั่ง Anthropic
+- [[distribution-moat]]

@@ -3,8 +3,8 @@ title: OpenAI
 type: entity
 tags: [ai, labs, models, organizations]
 created: 2026-04-24
-updated: 2026-07-01
-sources: [piyalitt-gpt-5-5-launch.md, microsoft-openai-partnership-2026.md, ryan-lopopolo-harness-engineering.md, https://openai.com/index/introducing-genebench-pro/]
+updated: 2026-07-03
+sources: [piyalitt-gpt-5-5-launch.md, microsoft-openai-partnership-2026.md, ryan-lopopolo-harness-engineering.md, https://openai.com/index/introducing-genebench-pro/, how-perplexity-lost-ai-war.md]
 ---
 
 # OpenAI / โอเพนเอไอ
@@ -45,6 +45,8 @@ AI lab ในสหรัฐฯ — สร้าง ChatGPT, ตระกูล 
 - **API** — Responses API + Chat Completions API; batch/flex/priority tiers
 - **gpt-image-2** — image generation (อ้างโดย Piyalitt ว่าช่วยให้ GPT-5.5 ทำ design system ได้ดีขึ้น)
 
+ในแหล่ง [[how-perplexity-lost-ai-war|How Perplexity Lost the AI War]], [[chatgpt|ChatGPT]] ถูกใช้เป็นตัวอย่างว่า AI surface ขนาดใหญ่สามารถ absorb feature แบบ [[answer-engine|answer with citations]] ได้ ทำให้ความต่างของ [[perplexity|Perplexity]] ลดลง
+
 ## การแข่งขันกับ Anthropic (เม.ย. 2026)
 
 จาก [[piyalitt-gpt-5-5-launch]]: **pricing inversion** เกิดขึ้นที่ rung flagship — GPT-5.5 ($5/$30) แพงกว่า [[claude-opus-4-7|Opus 4.7]] ($5/$25) เล็กน้อย ทั้งที่ GPT รุ่นก่อนๆ มักถูกกว่า Opus ประมาณครึ่งหนึ่ง — signal ว่า OpenAI ใช้ compute มากจริงเพื่อให้ทัน [[claude-mythos-preview|Mythos-class]] capability ในตลาด mass
@@ -65,5 +67,6 @@ AI lab ในสหรัฐฯ — สร้าง ChatGPT, ตระกูล 
 - [[gpt-5-6-sol]]
 - [[genebench-pro]]
 - [[openai-codex]]
+- [[chatgpt]]
 - [[anthropic]]
 - [[claude-opus-4-7]]

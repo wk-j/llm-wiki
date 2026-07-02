@@ -3,8 +3,8 @@ title: Reasoning Regression
 type: concept
 tags: [llm, reasoning, thinking-mode, failure-mode]
 created: 2026-04-28
-updated: 2026-04-28
-sources: [peter-gostev-what-models-suck-at.md]
+updated: 2026-07-03
+sources: [peter-gostev-what-models-suck-at.md, llm-loops-instead-of-chain-of-thought.md]
 ---
 
 # Reasoning Regression / สภาวะคิดเยอะจนหลงทาง
@@ -26,7 +26,16 @@ sources: [peter-gostev-what-models-suck-at.md]
 
 การมี "ตรรกะ" (Reasoning) ที่ดีต้องมาพร้อมกับ "วิจารณญาณ" (Judgment) ในการหยุดคิดหรือปฏิเสธงานที่ผิดเพี้ยนตั้งแต่ต้นทาง
 
+## เกี่ยวกับ Chain-of-Thought และ latent reasoning
+
+[[llm-loops-instead-of-chain-of-thought|bycloud]] เสนออีกมุมหนึ่งว่า [[chain-of-thought|chain-of-thought]] คือวิธีเพิ่ม test-time compute ผ่านข้อความ: model เขียนขั้นคิด อ่านกลับ แล้วคิดต่อ. [[looped-transformers|Looped transformer]] พยายามย้ายการคิดนี้เข้า [[latent-reasoning|latent state]] แทน
+
+ตรงนี้ไม่ได้ลบปัญหา reasoning regression. ถ้าเพิ่ม compute โดยไม่มี judgement หรือ stop condition ที่ดี ไม่ว่าจะเพิ่มผ่าน token หรือ hidden-state loop model ก็ยังอาจคิดเยอะจนหลงทางได้. ต่างกันแค่ว่า chain-of-thought ทำให้เราเห็น trace ส่วน latent reasoning ซ่อน failure ไว้ใน activation มากกว่า
+
 ## ดูเพิ่ม
 
 - [[bullshitbench]]
 - [[eh-gland]] — สัญชาตญาณ "เอ๊ะ" ที่มนุษย์ต้องมีเพื่อดักจับปัญหานี้
+- [[chain-of-thought]]
+- [[latent-reasoning]]
+- [[looped-transformers]]

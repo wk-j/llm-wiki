@@ -3,8 +3,8 @@ title: Open-weight Models
 type: concept
 tags: [ai, open-source, deepseek, philosophy, deployment]
 created: 2026-04-27
-updated: 2026-06-05
-sources: [deepseek-wikipedia.md, Mellum2 Goes Open Source A Fast Model for AI Workflows  The JetBrains AI Blog.md]
+updated: 2026-07-03
+sources: [deepseek-wikipedia.md, Mellum2 Goes Open Source A Fast Model for AI Workflows  The JetBrains AI Blog.md, chinas-models-no-longer-need-western-hardware.md]
 ---
 
 # Open-weight Models / โอเพนเวต โมเดล
@@ -23,6 +23,8 @@ sources: [deepseek-wikipedia.md, Mellum2 Goes Open Source A Fast Model for AI Wo
 
 ตรงนี้ทำให้ open-weight/open-source model กลายเป็นเรื่อง architecture ของระบบ AI ด้วย ไม่ใช่แค่เรื่องอุดมการณ์ ถ้า model ทำหน้าที่เป็น [[focal-models|focal model]] ใน pipeline ที่เรียกถี่มาก การ self-host อาจคุมทั้ง cost, latency, และ privacy ได้ดีกว่า
 
+[[longcat-2-0|LongCat 2.0]] เพิ่มคำถามอีกชั้น: open-weight มีความหมายแค่ไหนถ้า model ใหญ่ขึ้นจนการรันจริงต้องพึ่ง hardware/software stack เฉพาะทาง. วิดีโอ [[chinas-models-no-longer-need-western-hardware|China's Models No Longer Need Western Hardware]] บอกว่า weights ของ LongCat จะตามมา แต่ในช่วงคลิปยังเป็น "coming soon" จึงควรแยกสถานะ **ประกาศจะปล่อย** ออกจาก **ปล่อย weights จริงแล้ว**.
+
 ## Why this helps / ผลคือ
 
 - **Democratization:** ช่วยให้เทคโนโลยี AI ระดับโลกเข้าถึงได้ง่ายขึ้น ไม่ถูกผูกขาดโดยยักษ์ใหญ่เพียงไม่กี่ราย
@@ -35,3 +37,4 @@ sources: [deepseek-wikipedia.md, Mellum2 Goes Open Source A Fast Model for AI Wo
 - [[open-source-governance]]
 - [[mellum2]]
 - [[focal-models]]
+- [[longcat-2-0]]

@@ -3,8 +3,8 @@ title: Value Migration from Code
 type: concept
 tags: [ai, business-model, software-industry, strategy]
 created: 2026-05-27
-updated: 2026-05-27
-sources: [software-after-software.md]
+updated: 2026-07-03
+sources: [software-after-software.md, how-perplexity-lost-ai-war.md]
 ---
 
 # Value Migration from Code / มูลค่าย้ายออกจากตัวโค้ด
@@ -70,6 +70,7 @@ Value migration ไม่ใช่ binary แบบ "code มูลค่า 0" 
 ## ความสัมพันธ์กับแนวคิดอื่น
 
 - [[code-is-free]] — เหตุผลทาง engineering ที่ทำให้ value migration เกิดขึ้น
+- [[distribution-moat]] — ตัวอย่างหนึ่งของ asset ที่ copy ยากกว่า feature; เคส [[perplexity|Perplexity]] ใน [[how-perplexity-lost-ai-war|How Perplexity Lost the AI War]] ชี้ว่า answer+citation ถูก copy ได้ แต่ Google ยังถือช่องทางผู้ใช้และ habit เดิม
 - [[process-drag]] — implication ฝั่ง process
 - [[reorganize-around-models]] — implication ฝั่งองค์กร
 - [[just-in-time-software]] — ถ้าซอฟต์แวร์สร้างได้เมื่อต้องการ vendor product จะแข่งกับการ "talk one into existence" ของลูกค้า
@@ -77,6 +78,7 @@ Value migration ไม่ใช่ binary แบบ "code มูลค่า 0" 
 ## See also
 
 - [[software-after-software]]
+- [[distribution-moat]]
 - [[code-is-free]]
 - [[process-drag]]
 - [[reorganize-around-models]]

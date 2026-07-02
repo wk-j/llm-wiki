@@ -3,8 +3,8 @@ title: Mixture of Experts
 type: concept
 tags: [ai, architecture, transformer, deepseek, inference]
 created: 2026-04-27
-updated: 2026-06-05
-sources: [deepseek-wikipedia.md, Mellum2 Goes Open Source A Fast Model for AI Workflows  The JetBrains AI Blog.md]
+updated: 2026-07-03
+sources: [deepseek-wikipedia.md, Mellum2 Goes Open Source A Fast Model for AI Workflows  The JetBrains AI Blog.md, chinas-models-no-longer-need-western-hardware.md]
 ---
 
 # Mixture of Experts (MoE) / มิกซ์เจอร์ ออฟ เอ็กซ์เพิร์ตส์
@@ -27,6 +27,16 @@ sources: [deepseek-wikipedia.md, Mellum2 Goes Open Source A Fast Model for AI Wo
 
 **ผลคือ:** MoE ไม่ได้มีค่าแค่ทำ model ใหญ่ขึ้น แต่มีค่าเมื่ออยากทำ model เฉพาะทางที่ต้นทุน inference ต่ำลง
 
+## LongCat 2.0: เมื่อเพิ่ม expert เริ่มไม่คุ้ม
+
+[[longcat-2-0|LongCat 2.0]] ในวิดีโอ [[chinas-models-no-longer-need-western-hardware|China's Models No Longer Need Western Hardware]] เป็นตัวอย่าง MoE อีกแบบหนึ่ง: model รวม 1.6T parameters แต่ active 48B ต่อ token ตามคำกล่าวในคลิป
+
+ผู้พูดชี้ว่าเพิ่ม expert ไปเรื่อย ๆ มี diminishing returns. พอ network sparse มากขึ้น performance อาจไม่ขึ้นตาม parameter รวม เพราะ router และการกระจายข้อมูลระหว่าง expert กลายเป็นข้อจำกัด
+
+LongCat จึงเพิ่ม [[n-gram-embeddings|n-gram embeddings]] เพื่ออัดข้อมูลวลีสั้นเข้า embedding table แทนการขยาย expert อย่างเดียว แล้วคุมต้นทุน long context ด้วย [[sparse-attention|sparse attention]]
+
+**ผลคือ:** MoE เป็นแค่หนึ่งในชุด tradeoff. ถ้า active compute แพงเกินไป ทีมอาจเพิ่มข้อมูลใน embedding หรือทำ attention ให้ถูกลงแทนการเพิ่ม expert ตรง ๆ
+
 ## Why this helps / ผลคือ
 
 - **ฉลาดเท่าเดิมแต่ประหยัดกว่า:** เราสามารถมี model ที่มี parameter รวมมหาศาล (เช่น 1 ล้านล้านตัว) แต่ตอนรันจริงใช้แค่ไม่กี่พันล้านตัว ทำให้รันได้ไวและประหยัดไฟ
@@ -38,3 +48,6 @@ sources: [deepseek-wikipedia.md, Mellum2 Goes Open Source A Fast Model for AI Wo
 - [[mla-attention]]
 - [[mellum2]]
 - [[focal-models]]
+- [[longcat-2-0]]
+- [[n-gram-embeddings]]
+- [[sparse-attention]]

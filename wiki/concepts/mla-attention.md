@@ -3,8 +3,8 @@ title: Multi-head Latent Attention
 type: concept
 tags: [ai, deepseek, architecture, transformer]
 created: 2026-04-27
-updated: 2026-04-27
-sources: [deepseek-wikipedia.md]
+updated: 2026-07-03
+sources: [deepseek-wikipedia.md, llm-loops-instead-of-chain-of-thought.md]
 ---
 
 # Multi-head Latent Attention (MLA) / มัลติเฮด เลเทนท์ แอทเทนชัน
@@ -17,6 +17,8 @@ sources: [deepseek-wikipedia.md]
 
 MLA แก้ปัญหานี้โดยการ **"บีบอัด" (compress)** ข้อมูล Key และ Value ให้อยู่ในรูปของ Low-rank Latent Vector ก่อนที่จะนำไปใช้งาน ผลคือมันช่วยลดขนาดของ KV Cache ลงได้อย่างมหาศาล (บางกรณีลดลงได้ถึง 90% เมื่อเทียบกับ Multi-head Attention แบบเดิม) โดยที่แทบไม่เสียความแม่นยำ
 
+ดูหน้า [[kv-cache|KV cache]] สำหรับภาพรวมของ bottleneck ฝั่ง memory และความเกี่ยวข้องกับ [[looped-transformers|looped transformer]] / [[mixture-of-recursions|Mixture of Recursions]]
+
 ## Why this helps / ผลคือ
 
 - **ประหยัด RAM GPU:** ทำให้สามารถรัน model ขนาดใหญ่บน hardware ที่เล็กลงได้
@@ -26,4 +28,6 @@ MLA แก้ปัญหานี้โดยการ **"บีบอัด" (
 ## See also
 
 - [[deepseek]]
+- [[kv-cache]]
+- [[sparse-attention]]
 - [[token-optimization]]

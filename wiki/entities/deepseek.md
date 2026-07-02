@@ -3,8 +3,8 @@ title: DeepSeek
 type: entity
 tags: [ai-lab, china, llm, deepseek]
 created: 2026-04-27
-updated: 2026-04-27
-sources: [deepseek-wikipedia.md]
+updated: 2026-07-03
+sources: [deepseek-wikipedia.md, chinas-models-no-longer-need-western-hardware.md]
 ---
 
 # DeepSeek / ดีพซีค
@@ -29,6 +29,12 @@ DeepSeek เป็นบริษัทที่แยกตัว (spinoff) อ
 - **Open-weight:** ปล่อยน้ำหนัก (weights) ของ model ให้คนทั่วไปนำไปใช้งานได้ฟรี (แต่ไม่เปิดเผยชุดข้อมูลที่ใช้ train ทั้งหมด) ซึ่งต่างจาก closed-source model ของ OpenAI
 - **Hiring Strategy:** ไม่เน้นจ้างแค่สาย Computer Science แต่รับคนจากหลากหลายสาขา เช่น นักคณิตศาสตร์ หรือแม้แต่นักกวี เพื่อเพิ่มความลุ่มลึกให้กับ model
 
+## อิทธิพลต่อ LongCat
+
+วิดีโอ [[chinas-models-no-longer-need-western-hardware|China's Models No Longer Need Western Hardware]] ใช้ [[deepseek|DeepSeek]] เป็นฉากหลังทางเทคนิคของ [[longcat-2-0|LongCat 2.0]] โดยบอกว่า LongCat ดัดแปลงแนวคิด [[sparse-attention|sparse attention]] ที่ได้แรงบันดาลใจจาก DeepSeek Sparse Attention
+
+ตรงนี้ควรอ่านแบบระวัง: wiki มีหน้า [[mla-attention|MLA Attention]] อยู่แล้วจาก DeepSeek แต่ sparse attention ในคลิปนี้ไม่ควรถูกเหมารวมว่าเป็นเทคนิคเดียวกับ MLA จนกว่าจะตรวจ primary source ของ LongCat หรือ DeepSeek โดยตรง
+
 ## See also
 
 - [[high-flyer]]
@@ -36,3 +42,5 @@ DeepSeek เป็นบริษัทที่แยกตัว (spinoff) อ
 - [[mla-attention]]
 - [[grpo]]
 - [[open-weight-models]]
+- [[longcat-2-0]]
+- [[sparse-attention]]
