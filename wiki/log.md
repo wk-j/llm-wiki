@@ -1,5 +1,29 @@
 # Log
 
+## [2026-07-02] ingest | Zoran on C# — Planning Mode is a Dangerous Illusion
+
+Ingested the user-provided YouTube transcript by Zoran Horvat / Zoran on C#. Treated it as the full demonstration behind the earlier X post `[[zoran-horvat-claude-no-planning-engine]]`, not as a conflicting source.
+
+- Created source page: `[[planning-mode-dangerous-illusion]]`
+- Updated concept: `[[plan-mode-as-prompting]]`
+- Updated entity pages: `[[zoran-horvat]]`, `[[claude-code]]`
+- Updated concepts: `[[coding-harness]]`, `[[dynamic-workflows]]`, `[[judgement-vs-automation]]`
+- Updated `[[index]]`, `[[log]]`, and `hotcache.md`
+
+Key takeaways: (1) Horvat's concrete demo asks Claude Code to plan a web feature for uploading a source-code directory, ignoring ephemeral/binary directories, storing JSON on the server, and rendering file path/name/line count. (2) Sonnet 4.6 planned server-side filtering but missed client-side filtering, causing wasteful uploads and possible server risk; it also implemented a file-path bug. (3) Opus 4.7 produced a better plan and working implementation, including client filtering and path recovery, but Horvat attributes this to better prompt/iteration strategy rather than a real planning engine. (4) Even Opus still missed senior engineering questions: should user data be discarded, and why is ignore logic duplicated on client and server? The wiki now records this as stronger evidence for `[[plan-mode-as-prompting]]`: plan text is useful, but it is not engineering judgment.
+
+## [2026-07-02] ingest | Zoran Horvat — Claude Has No Planning Engine
+
+Ingested the user-provided X post by Zoran Horvat arguing that Claude Code Plan mode is prompt/harness scaffolding rather than a symbolic planning engine. Preserved the existing dynamic-workflows claim as a separate source-attributed claim and framed the tension as an open question about what "self-plan" means.
+
+- Created source page: `[[zoran-horvat-claude-no-planning-engine]]`
+- Created concept page: `[[plan-mode-as-prompting]]`
+- Updated entities: `[[zoran-horvat]]`, `[[claude]]`, `[[claude-code]]`
+- Updated concepts: `[[coding-harness]]`, `[[dynamic-workflows]]`, `[[judgement-vs-automation]]`
+- Updated `[[index]]`, `[[log]]`, and `hotcache.md`
+
+Key takeaways: (1) Horvat says Plan mode looks intelligent because it writes neat steps, but the mechanism is still LLM pattern recognition plus prompt scaffolding and a read-only/sandboxed harness. (2) In his test, Opus 4.7 planned/performed better than Sonnet 4.6, but he attributes that to more refined prompting/iteration rather than genuine understanding. (3) Both models still missed senior engineering moves such as questioning whether user data should be discarded and noticing duplicated information across server/client code. (4) The wiki now keeps an explicit tension: Claude dynamic workflows may be useful when backed by verification gates, but plan text should be treated as a draft to review, not as engineering judgment.
+
 ## [2026-07-02] ingest | Zoran Horvat — Domain Model and Persistence
 
 Ingested the user-provided X post by Zoran Horvat arguing that domain models should not bend to fit the database. Treated EF Core 10 capability claims as source-attributed until checked against Microsoft docs or a working project.

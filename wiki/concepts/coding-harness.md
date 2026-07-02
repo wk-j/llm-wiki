@@ -4,7 +4,7 @@ type: concept
 tags: [ai, tools, agents, software-engineering, harness]
 created: 2026-04-18
 updated: 2026-07-02
-sources: [alex-ker-harnesses-optimize.md, building-pi-world-of-slop.md, Agent Harness Engineering.md, software-writing-software-gone-right.md, improved-15-llms-harness-changed.md, "Introducing Omnigent A Meta-Harness to Combine, Control and Share Your Agents.md", "Matt Pocock’s Agentic Engineering Workflow (just copy him).md", "i don't want to use your agent — @RhysSullivan.md", l8-principals-agentic-engineering-workflow-kun-chen.md, aom-fable-elysia-2-audit.md]
+sources: [alex-ker-harnesses-optimize.md, building-pi-world-of-slop.md, Agent Harness Engineering.md, software-writing-software-gone-right.md, improved-15-llms-harness-changed.md, "Introducing Omnigent A Meta-Harness to Combine, Control and Share Your Agents.md", "Matt Pocock’s Agentic Engineering Workflow (just copy him).md", "i don't want to use your agent — @RhysSullivan.md", l8-principals-agentic-engineering-workflow-kun-chen.md, aom-fable-elysia-2-audit.md, zoran-horvat-claude-no-planning-engine.md, planning-mode-dangerous-illusion.md]
 ---
 
 # Coding Harness / ตัวครอบของ Coding Agent
@@ -38,6 +38,14 @@ sources: [alex-ker-harnesses-optimize.md, building-pi-world-of-slop.md, Agent Ha
 ถ้า model คือแหล่งของ intelligence, harness คือสิ่งที่ทำให้ intelligence นั้นใช้งานได้จริง — ลูปที่ราบรื่นจะช่วยเพิ่มความเร็วและคุณภาพของโค้ดที่ได้
 
 [[mario-zechner|Mario Zechner]] เพิ่มมุมที่แข็งกว่านี้ใน [[building-pi-world-of-slop|Building pi in a World of Slop]]: harness ไม่ใช่แค่ UX wrapper แต่เป็นเจ้าของ context โดยพฤตินัย ถ้า harness เปลี่ยน system prompt, tool definitions, reminders, หรือ inject feedback เองโดยผู้ใช้มองไม่เห็น workflow ของผู้ใช้ก็อาจพังได้ แม้ model ตัวเดิมจะยังเก่งเท่าเดิม
+
+## Plan mode เป็น harness behavior
+
+[[zoran-horvat|Zoran Horvat]] เพิ่ม counterpoint ใน [[zoran-horvat-claude-no-planning-engine]] และ [[planning-mode-dangerous-illusion]]: Plan mode ของ [[claude-code|Claude Code]] ไม่ควรถูกอ่านว่า model มี planning engine แบบ symbolic อยู่ข้างใน. ในมุมของเขา Plan mode คือ [[plan-mode-as-prompting|prompt scaffold]]: harness sandbox ไม่ให้แก้ไฟล์ แล้วสั่ง model ให้ enumerate steps ก่อนลงมือ.
+
+นี่ทำให้ plan เป็น artifact ที่ดีสำหรับ human review แต่ไม่ใช่ engineering judgment เอง. Plan ที่ดู senior อาจยังไม่ถามคำถามสำคัญ เช่นควรทิ้ง user data หรือไม่ หรือมี duplicated state ระหว่าง server/client หรือเปล่า.
+
+**ได้อะไร:** เวลาออกแบบ harness รอบ planning ต้องเพิ่ม evidence, grounding, และ review gate ไม่ใช่แค่เปิด plan mode แล้วถือว่า "คิดแล้ว".
 
 ## Edit tool boundary (Can Bölük, 2026-02)
 

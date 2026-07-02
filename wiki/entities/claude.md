@@ -3,8 +3,8 @@ title: Claude
 type: entity
 tags: [ai, models, anthropic, llm]
 created: 2026-04-16
-updated: 2026-05-29
-sources: [Introducing Claude Opus 4.7.md, The advisor strategy Give Sonnet an intelligence boost with Opus.md, Claude Mythos Preview.md, Piyalitt Ittichaiwong - Opus 4.8 Launch Recap.md]
+updated: 2026-07-02
+sources: [Introducing Claude Opus 4.7.md, The advisor strategy Give Sonnet an intelligence boost with Opus.md, Claude Mythos Preview.md, Piyalitt Ittichaiwong - Opus 4.8 Launch Recap.md, zoran-horvat-claude-no-planning-engine.md]
 ---
 
 # Claude
@@ -34,6 +34,12 @@ sources: [Introducing Claude Opus 4.7.md, The advisor strategy Give Sonnet an in
 - File-system-based memory (ปรับปรุงให้ดีขึ้นใน Opus 4.7)
 - [[dynamic-workflows|Dynamic workflows]] ใน [[claude-code|Claude Code]] (research preview, มากับ Opus 4.8) — วางแผนเอง + สั่ง subagent คู่ขนานเป็นร้อย
 
+## ข้อควรระวังเรื่อง Plan mode
+
+[[zoran-horvat|Zoran Horvat]] เสนอ counterpoint ใน [[zoran-horvat-claude-no-planning-engine]] ว่า plan ที่ Claude เขียนออกมาไม่ควรถูกนับเป็น proof ว่ามี planning engine จริง. ในมุมของเขา Plan mode คือ [[plan-mode-as-prompting|prompt scaffold]] ของ harness: จำกัดไม่ให้แก้ไฟล์ แล้วสั่ง model ให้ enumerate steps ก่อน implement.
+
+นี่ไม่ลบ claim เรื่อง [[dynamic-workflows]] แต่ทำให้ต้องอ่านคำว่า "Claude self-plans" อย่างระวัง. Utility อาจจริงในงานที่มี verification gate เช่น test suite แต่ engineering judgment ยังต้องมาจากคน โดยเฉพาะ decision ที่กระทบ data, architecture, security, หรือ semantics ของ product.
+
 ## ช่องทางการใช้งาน (Surfaces)
 
 - [[claude-code|Claude Code]] (CLI)
@@ -50,3 +56,4 @@ sources: [Introducing Claude Opus 4.7.md, The advisor strategy Give Sonnet an in
 - [[claude-code]]
 - [[effort-levels]]
 - [[advisor-strategy]]
+- [[plan-mode-as-prompting]]

@@ -1,6 +1,8 @@
 # Index
 
 ## Sources
+- [[planning-mode-dangerous-illusion]] — Zoran on C# (YouTube transcript): full demo behind the Claude planning critique; compares Sonnet 4.6 vs Opus 4.7 on a directory-upload feature and shows that better plans still miss senior engineering judgment around data retention, duplicated logic, and server-load risk
+- [[zoran-horvat-claude-no-planning-engine]] — Zoran Horvat (X, 2026): critique of Claude Code Plan mode as prompt/harness scaffolding rather than a symbolic planning engine; plans are useful drafts but not engineering judgment
 - [[zoran-horvat-domain-model-persistence]] — Zoran Horvat (X, 2026): domain model should not bend to the database; use DDD/value objects, EF Core complex properties, value conversions, private constructors, and query translation to keep domain modeling separate from persistence
 - [[aom-fable-elysia-2-audit]] — Aom Khunpanitchot (Facebook, ingested 2026-07-02): field report on Fable running a deep agent audit against Elysia 2; Fable reportedly spawned nearly 100 agents and produced a 104-item / 24,000-word report saying the codebase was not ready for RC, despite other AI reviewers saying stable/RC looked acceptable
 - [[l8-principals-agentic-engineering-workflow-kun-chen]] — Kun Chen (YouTube transcript): end-to-end agentic engineering workflow for a solo L8/principal-style builder; terminal cockpit (WezTerm/tmux/Neovim), memory files, skills/progressive disclosure, voice input, AXI agent ergonomics, Lavish planning artifacts, No Mistakes validation, Good Night Have Fun long-running loops, Treehouse worktrees, First Mate meta-agent, and the captain mindset
@@ -105,7 +107,7 @@
 - [[thclaws-marketplace-panutat]] — Panutat Tejasen (2026-04-30): thClaws v0.7.0 Marketplace; Enterprise Security; Private Marketplace; Host Bridge concept; Rabbit Holes in coding.
 
 ## Entities
-- [[zoran-horvat]] — .NET/software educator from the ingested X post; argues for keeping domain models rich and using EF Core persistence tooling without flattening concepts into primitives
+- [[zoran-horvat]] — .NET/software educator / Zoran on C#; argues for rich domain models over persistence-driven flattening, and criticizes Claude Plan mode as prompt scaffolding rather than true engineering judgment
 - [[entity-framework-core]] — Microsoft's .NET ORM; in Horvat's post, the example tooling for mapping nested value objects, converters, private constructors, and domain-rich queries to relational persistence
 - [[aom-khunpanitchot]] — Thai software/AI practitioner from the Fable/Elysia 2 Facebook field report; writes as an owner of the Elysia 2 codebase evaluating AI audit output for release readiness
 - [[fable]] — AI agent/harness in Aom's Elysia 2 audit report; reportedly used ultracode auto mode, spawned nearly 100 agents, and produced a 104-item deep audit report; details remain source-attributed until the report/tooling is inspected directly
@@ -292,6 +294,7 @@
 - [[marc-brooker]] — AWS senior engineer (Lambda/Aurora); strongest defense of SDD: specs as explicit, versioned, living artifacts in iterative use
 
 ## Concepts
+- [[plan-mode-as-prompting]] — View that coding-agent Plan mode is prompt/harness scaffolding that produces a useful draft plan, not proof of a symbolic planning engine or senior engineering judgment; Horvat's directory-upload demo shows Opus 4.7 can reduce blind spots while still missing data/design questions
 - [[domain-model-persistence-separation]] — DDD principle: domain model and persistence are separate jobs; keep business concepts and invariants in types while mapping them to database storage through an adapter layer
 - [[domain-modeling]] — Software-design practice of shaping code around business concepts, rules, invariants, and shared language rather than merely mirroring tables or transport payloads
 - [[value-objects]] — DDD objects defined by their values rather than identity; wrap meaningful concepts like money, currency, identifiers, and UTC timestamps so rules live near the data
