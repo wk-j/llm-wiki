@@ -28,9 +28,11 @@ const config: QuartzConfig = {
       fontOrigin: "googleFonts",
       cdnCaching: true,
       typography: {
-        header: "Schibsted Grotesk",
-        body: "Source Sans Pro",
-        code: "IBM Plex Mono",
+        // Thai-primary site: Noto Sans Thai covers Thai + Latin consistently
+        // across devices (no system-font fallback for Thai glyphs).
+        header: "Noto Sans Thai",
+        body: "Noto Sans Thai",
+        code: "Space Mono",
       },
       colors: {
         lightMode: {
