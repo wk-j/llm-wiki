@@ -28,10 +28,11 @@ const config: QuartzConfig = {
       fontOrigin: "googleFonts",
       cdnCaching: true,
       typography: {
-        // Thai-primary site: Noto Sans Thai covers Thai + Latin consistently
-        // across devices (no system-font fallback for Thai glyphs).
-        header: "Noto Sans Thai",
-        body: "Noto Sans Thai",
+        // Thai-primary site: Sarabun is a *looped* (มีหัว) Thai face designed
+        // for long-form document reading — far easier on the eyes than a
+        // loopless face like Noto Sans Thai. Covers Thai + Latin consistently.
+        header: "Sarabun",
+        body: "Sarabun",
         code: "Space Mono",
       },
       colors: {
