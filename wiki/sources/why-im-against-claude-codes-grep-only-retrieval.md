@@ -1,5 +1,5 @@
 ---
-title: Why I’m Against Claude Code’s Grep-only Retrieval: It Just Burns Too Many Tokens
+title: "Why I’m Against Claude Code’s Grep-only Retrieval: It Just Burns Too Many Tokens"
 type: source
 tags: [retrieval, rag, vector-search, claude-code, token-optimization]
 url: https://milvus.io/blog/why-im-against-claude-codes-grep-only-retrieval-it-just-burns-too-many-tokens.md

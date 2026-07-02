@@ -6,7 +6,7 @@ url: https://www.youtube.com/watch?v=v4F1gFy-hqg
 date_ingested: 2026-05-09
 created: 2026-05-09
 updated: 2026-05-09
-sources: ["Software Fundamentals Matter More Than Ever" — Matt Pocock.md]
+sources: ['"Software Fundamentals Matter More Than Ever" — Matt Pocock.md']
 ---
 
 # "Software Fundamentals Matter More Than Ever" — Matt Pocock

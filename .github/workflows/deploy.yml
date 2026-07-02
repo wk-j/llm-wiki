@@ -1,0 +1,77 @@
+name: Deploy wiki to GitHub Pages
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - "wiki/**"
+      - "site/**"
+      - ".github/workflows/deploy.yml"
+  workflow_dispatch:
+
+# Allow the GITHUB_TOKEN to deploy to Pages, and use OIDC for the deployment.
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Only one concurrent deploy; don't cancel an in-progress run mid-publish.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+env:
+  # Quartz v4 head pinned for reproducible builds. Bump deliberately.
+  QUARTZ_REF: d25a6eabf96751ffca56f8a8139272def7a65041
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout wiki repo
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Fetch pinned Quartz
+        run: |
+          git init quartz
+          cd quartz
+          git remote add origin https://github.com/jackyzha0/quartz.git
+          git fetch --depth 1 origin "$QUARTZ_REF"
+          git checkout FETCH_HEAD
+
+      - name: Assemble content and config
+        run: |
+          rm -rf quartz/content
+          mkdir -p quartz/content
+          cp -R wiki/. quartz/content/
+          find quartz/content -name '.DS_Store' -delete
+          cp site/quartz.config.ts quartz/quartz.config.ts
+
+      - name: Install Quartz dependencies
+        working-directory: quartz
+        run: npm ci
+
+      - name: Build site
+        working-directory: quartz
+        run: npx quartz build
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: quartz/public
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
