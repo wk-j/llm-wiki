@@ -21,7 +21,9 @@ const config: QuartzConfig = {
     // GitHub Pages project site served under /llm-wiki. Quartz emits relative
     // links, so the subpath in baseUrl is what makes RSS/sitemap/OG URLs correct.
     baseUrl: "wk-j.github.io/llm-wiki",
-    ignorePatterns: ["private", "templates", ".obsidian", "**/.DS_Store"],
+    // `log.md` is the append-only operations log — useful in the repo, noise on
+    // the published site. Excluded from the build entirely.
+    ignorePatterns: ["private", "templates", ".obsidian", "**/.DS_Store", "log.md"],
     // Our pages carry `created` / `updated` in frontmatter; prefer those.
     defaultDateType: "modified",
     theme: {
