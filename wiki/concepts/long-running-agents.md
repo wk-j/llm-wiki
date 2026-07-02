@@ -3,8 +3,8 @@ title: Long-running Agents / Agent ที่อยู่ข้ามวัน
 type: concept
 tags: [ai, agents, long-running, architecture, memory, orchestration]
 created: 2026-04-23
-updated: 2026-07-01
-sources: [google-cloud-long-running-agent-patterns.md, l8-principals-agentic-engineering-workflow-kun-chen.md]
+updated: 2026-07-02
+sources: [google-cloud-long-running-agent-patterns.md, l8-principals-agentic-engineering-workflow-kun-chen.md, aom-fable-elysia-2-audit.md]
 ---
 
 # Long-running Agents / Agent ที่อยู่ข้ามวัน
@@ -147,6 +147,14 @@ Addy ให้คำถามตัดสินใจง่าย ๆ:
 
 **ได้อะไร:** long-running ไม่จำเป็นต้องเริ่มจาก platform ใหญ่. เริ่มจาก task loop ที่มี cap และ evidence ก็ได้.
 
+## Long-running แบบ audit
+
+[[aom-fable-elysia-2-audit|Fable audit Elysia 2]] เพิ่ม use case อีกแบบ: ไม่ใช่ให้ agent implement งานยาว แต่ให้มันอ่านและ audit codebase ยาว ๆ. [[fable|Fable]] ถูกปล่อยผ่าน auto mode จนชน limit แล้วกลับมาพร้อม report 104 ข้อ.
+
+งานแบบนี้เหมาะกับ long-running agent เพราะ audit ลึกต้องใช้เวลาสำรวจหลาย path. แต่ stop condition ต้องชัดกว่า "หาให้หมด" ไม่อย่างนั้นจะเผา budget และสร้าง report ที่ยาวเกินคนปิดงาน. เกณฑ์ที่ควรมีคือ severity, evidence, repro/test, และคำถามว่าอะไร block release.
+
+**ผลคือ:** long-running agent ไม่ได้มีไว้แค่ผลิต code. มันใช้เป็น reviewer ที่อ่านนานกว่าคนไหวได้ แต่ต้องมี gate ให้มนุษย์ตัดสินใจจากหลักฐาน.
+
 ## See also
 
 - [[google-cloud-long-running-agent-patterns]]
@@ -166,3 +174,5 @@ Addy ให้คำถามตัดสินใจง่าย ๆ:
 - [[loop-engineering]]
 - [[l8-principals-agentic-engineering-workflow-kun-chen]]
 - [[good-night-have-fun]]
+- [[deep-agent-audit]]
+- [[aom-fable-elysia-2-audit]]

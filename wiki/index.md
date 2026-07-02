@@ -1,6 +1,8 @@
 # Index
 
 ## Sources
+- [[zoran-horvat-domain-model-persistence]] — Zoran Horvat (X, 2026): domain model should not bend to the database; use DDD/value objects, EF Core complex properties, value conversions, private constructors, and query translation to keep domain modeling separate from persistence
+- [[aom-fable-elysia-2-audit]] — Aom Khunpanitchot (Facebook, ingested 2026-07-02): field report on Fable running a deep agent audit against Elysia 2; Fable reportedly spawned nearly 100 agents and produced a 104-item / 24,000-word report saying the codebase was not ready for RC, despite other AI reviewers saying stable/RC looked acceptable
 - [[l8-principals-agentic-engineering-workflow-kun-chen]] — Kun Chen (YouTube transcript): end-to-end agentic engineering workflow for a solo L8/principal-style builder; terminal cockpit (WezTerm/tmux/Neovim), memory files, skills/progressive disclosure, voice input, AXI agent ergonomics, Lavish planning artifacts, No Mistakes validation, Good Night Have Fun long-running loops, Treehouse worktrees, First Mate meta-agent, and the captain mindset
 - [[introducing-genebench-pro]] — OpenAI (2026-06-30): launches GeneBench-Pro, a 129-problem computational-biology benchmark for research taste / scientific judgement; synthetic causal data generation, expert review, deterministic grading, 10 public sample questions, planned 50-question Artificial Analysis subset; GPT-5.6 Sol reaches 28.7% max reasoning and 31.5% Pro, showing progress but no saturation
 - [[techsauce-ai-brain-fry]] — Techsauce (Facebook, 2026-06-29/30): Thai summary of an HBR-cited AI Brain Fry study; AI can reduce burnout on routine tasks, but close AI oversight, tool switching, and using more than 3 tools can increase mental fatigue, information overload, decision fatigue, mistakes, and quit intention
@@ -103,6 +105,11 @@
 - [[thclaws-marketplace-panutat]] — Panutat Tejasen (2026-04-30): thClaws v0.7.0 Marketplace; Enterprise Security; Private Marketplace; Host Bridge concept; Rabbit Holes in coding.
 
 ## Entities
+- [[zoran-horvat]] — .NET/software educator from the ingested X post; argues for keeping domain models rich and using EF Core persistence tooling without flattening concepts into primitives
+- [[entity-framework-core]] — Microsoft's .NET ORM; in Horvat's post, the example tooling for mapping nested value objects, converters, private constructors, and domain-rich queries to relational persistence
+- [[aom-khunpanitchot]] — Thai software/AI practitioner from the Fable/Elysia 2 Facebook field report; writes as an owner of the Elysia 2 codebase evaluating AI audit output for release readiness
+- [[fable]] — AI agent/harness in Aom's Elysia 2 audit report; reportedly used ultracode auto mode, spawned nearly 100 agents, and produced a 104-item deep audit report; details remain source-attributed until the report/tooling is inspected directly
+- [[elysia-2]] — Codebase/project in Aom's Fable audit post; used as a real release-readiness case where smoke/plugin checks and several AI reviewers suggested RC/stable readiness but Fable reported deeper blockers
 - [[genebench-pro]] — OpenAI research-level benchmark for computational-biology agents; 129 synthetic problems across 10 domains, designed to measure research taste, ambiguity handling, QC, causal/statistical method choice, and decision-readiness rather than book knowledge
 - [[gpt-5-6-sol]] — OpenAI GPT-5.6 model variant reported as strongest on GeneBench-Pro; 28.7% pass rate at highest reasoning and 31.5% in Pro mode, from the GeneBench-Pro source only
 - [[hugging-face]] — AI model/dataset platform; hosts OpenAI's public package of 10 representative GeneBench-Pro questions
@@ -285,6 +292,12 @@
 - [[marc-brooker]] — AWS senior engineer (Lambda/Aurora); strongest defense of SDD: specs as explicit, versioned, living artifacts in iterative use
 
 ## Concepts
+- [[domain-model-persistence-separation]] — DDD principle: domain model and persistence are separate jobs; keep business concepts and invariants in types while mapping them to database storage through an adapter layer
+- [[domain-modeling]] — Software-design practice of shaping code around business concepts, rules, invariants, and shared language rather than merely mirroring tables or transport payloads
+- [[value-objects]] — DDD objects defined by their values rather than identity; wrap meaningful concepts like money, currency, identifiers, and UTC timestamps so rules live near the data
+- [[primitive-obsession]] — Code smell where meaningful domain concepts are represented as raw primitives such as string, decimal, int, or GUID, making business rules depend on convention and memory
+- [[object-relational-mapping]] — ORM layer mapping application objects to relational tables; useful adapter, but risky when its constraints flatten the domain model
+- [[deep-agent-audit]] — High-budget agent/fleet code audit for release or high-risk gates: multiple agents inspect a codebase, produce evidence-backed findings, severity, fixes, and verification notes; useful only if confirmed findings and decision quality justify the report review cost
 - [[research-taste]] — OpenAI's term in GeneBench-Pro for the chain of scientific judgement calls that shape an analysis: what data can support, how diagnostics should change the model/estimand, when to revise the plan, and when a result is decision-ready
 - [[ai-brain-fry]] — Workplace-AI fatigue from using or overseeing AI beyond cognitive capacity; caused less by "AI use" itself than by oversight, checking, tool switching, and too many simultaneous AI tools; connects orchestration tax to non-coding work
 - [[bring-your-own-agent]] — Product strategy: keep in-app agents for normal users, but expose product expertise as skills, docs, MCP/API/CLI, resources, and deeplinks so power users can use their own model+harness+local context

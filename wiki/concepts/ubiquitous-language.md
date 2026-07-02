@@ -3,8 +3,8 @@ title: Ubiquitous Language
 type: concept
 tags: [ddd, ai-alignment, communication, vocabulary]
 created: 2026-05-09
-updated: 2026-05-09
-sources: [matt-pocock-software-fundamentals.md]
+updated: 2026-07-02
+sources: [matt-pocock-software-fundamentals.md, zoran-horvat-domain-model-persistence.md]
 ---
 
 # Ubiquitous Language / ภาษาที่ใช้ร่วมกันทุกที่
@@ -25,7 +25,17 @@ sources: [matt-pocock-software-fundamentals.md]
 ## ผลคือ (Payoff)
 ทำให้การคิด (Thinking trace) ของ AI มีประสิทธิภาพมากขึ้น และลดโอกาสที่ AI จะ hallucinate หรือสร้างศัพท์ใหม่ที่ไม่อยู่ในสารบบของระบบเดิม
 
+## มุม Domain Model
+
+โพสต์ของ [[zoran-horvat|Zoran Horvat]] เพิ่มมุมที่ใกล้ DDD ดั้งเดิมกว่า: ภาษากลางไม่ควรอยู่แค่ใน glossary หรือ prompt แต่ควรอยู่ใน type ของระบบด้วย. ถ้าธุรกิจมี `Money`, `Currency`, `OrderId`, หรือ `UtcTimestamp` code ก็ควรมี concept เหล่านี้เป็น [[value-objects|value objects]] หรือ type ที่ enforce rule ได้.
+
+ตรงนี้ทำให้ [[ubiquitous-language|Ubiquitous Language]] เชื่อมกับ [[domain-model-persistence-separation]] โดยตรง. Database อาจเก็บเป็น column primitive ได้ แต่ domain model ควรยังพูดภาษาของปัญหา ไม่ใช่ภาษาของ schema อย่างเดียว.
+
 ## ดูเพิ่ม
 - [[matt-pocock]]
+- [[zoran-horvat]]
+- [[domain-modeling]]
+- [[domain-model-persistence-separation]]
+- [[value-objects]]
 - [[domain-to-ai-translator]]
 - [[grill-me]]

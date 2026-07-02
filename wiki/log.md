@@ -1,5 +1,29 @@
 # Log
 
+## [2026-07-02] ingest | Zoran Horvat — Domain Model and Persistence
+
+Ingested the user-provided X post by Zoran Horvat arguing that domain models should not bend to fit the database. Treated EF Core 10 capability claims as source-attributed until checked against Microsoft docs or a working project.
+
+- Created source page: `[[zoran-horvat-domain-model-persistence]]`
+- Created entity pages: `[[zoran-horvat]]`, `[[entity-framework-core]]`
+- Created concept pages: `[[domain-model-persistence-separation]]`, `[[domain-modeling]]`, `[[value-objects]]`, `[[primitive-obsession]]`, `[[object-relational-mapping]]`
+- Updated concept: `[[ubiquitous-language]]`
+- Updated `[[index]]`, `[[log]]`, and `hotcache.md`
+
+Key takeaways: (1) Domain modeling and persistence are different jobs: the model should speak the language of the business, while persistence maps it to storage. (2) Primitive obsession often appears when teams flatten value-rich concepts into `string`, `decimal`, or raw GUID just to satisfy ORM/database friction. (3) Horvat frames value objects first: meaningful concepts like currency, amount, timestamp, and identifiers deserve types with their own validation. (4) He claims EF Core 10 can map nested value objects into one table through complex properties, use value converters for single-value wrappers, keep private constructors for ORM materialization, and still translate nested-property queries to SQL. (5) The open question is implementation-level: the principle is stable, but the exact EF Core 10 behavior and provider support need direct verification before becoming a production guideline.
+
+## [2026-07-02] ingest | Aom Khunpanitchot — Fable Elysia 2 Audit
+
+Ingested the user-provided Facebook capture of Aom Khunpanitchot's post about using Fable to audit Elysia 2. Treated it as a source-attributed field report, not an independently verified benchmark or release verdict.
+
+- Created source page: `[[aom-fable-elysia-2-audit]]`
+- Created entity pages: `[[aom-khunpanitchot]]`, `[[fable]]`, `[[elysia-2]]`
+- Created concept page: `[[deep-agent-audit]]`
+- Updated concepts: `[[agentic-code-review]]`, `[[coding-harness]]`, `[[orchestration-tax]]`, `[[long-running-agents]]`, `[[dynamic-workflows]]`, `[[model-honesty]]`
+- Updated `[[index]]`, `[[log]]`, and `hotcache.md`
+
+Key takeaways: (1) The post frames Fable as qualitatively different from several other AI reviewers in one real codebase: other agents reportedly judged Elysia 2 ready for stable/RC, while Fable produced a 104-item / 24,000-word report saying it was not ready. (2) The important concept is `[[deep-agent-audit]]`: a high-budget review tier where agent fan-out and long-running audit can surface issues humans may not invest weeks to find manually. (3) This does not erase benchmark/model claims elsewhere in the wiki; it raises an open question about how much of the result came from model ability versus harness, auto mode, subagent scale, prompt, token budget, and report structure. (4) The human role shifts from finding every issue manually to judging evidence, severity, false positives, and release risk.
+
 ## [2026-07-01] ingest | Kun Chen — L8 Principal's Agentic Engineering Workflow
 
 Ingested the user-provided transcript of Kun Chen's "L8 Principal's Agentic Engineering Workflow" YouTube video. Treated it as a personal field report on building an end-to-end agentic engineering operating system around coding agents.
