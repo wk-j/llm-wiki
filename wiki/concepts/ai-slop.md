@@ -3,8 +3,8 @@ title: AI Slop
 type: concept
 tags: [ai, quality, design, critique]
 created: 2026-04-28
-updated: 2026-04-28
-sources: [chase-ai-claude-code-impeccable.md, mario-zechner-pi-agent.md, maggies-appleton-collaborative-ai-engineering.md, ai-language-crisis-phenomenon.md]
+updated: 2026-07-03
+sources: [chase-ai-claude-code-impeccable.md, mario-zechner-pi-agent.md, maggies-appleton-collaborative-ai-engineering.md, ai-language-crisis-phenomenon.md, eternal-sloptember.md]
 ---
 
 # AI Slop / ขยะ AI
@@ -17,6 +17,7 @@ sources: [chase-ai-claude-code-impeccable.md, mario-zechner-pi-agent.md, maggies
 - **Visual/Design Slop:** งานออกแบบ UI ที่ดูเป็นแพทเทิร์นซ้ำๆ (เช่น bento box แบบเดิมๆ หรือสีที่ดูตุ่นๆ) ขาดความเข้าใจในเรื่อง hierarchy, typography และ spatial design ที่ดี
 - **Code Slop (Clanker Slop):** โค้ดที่ AI เขียนออกมาแบบขอไปที มีความซับซ้อนเกินจำเป็น หรือดูเหมือนจะทำงานได้แต่แฝงไปด้วย bug (ดูเพิ่มที่ [[clanker-slop]])
 - **Vibecoded Slop:** ผลงานที่เน้น "ความรู้สึก" ว่าใช่ แต่เชิงเทคนิคแล้วใช้งานจริงไม่ได้หรือไม่เสถียร (ดูเพิ่มที่ [[vibecoded-slop]])
+- **Polished Slop:** ใน [[eternal-sloptember|The Eternal Sloptember]] slop ที่น่ากลัวที่สุดไม่ใช่งานพังชัด ๆ แต่คืองานที่ดูถูก syntax ดี structure ดี แต่ process ข้างหลังไม่ได้เข้าใจระบบจริง จึงทำให้ [[quality-proxy-collapse|quality proxy collapse]]
 
 ## สาเหตุและวิธีแก้
 
@@ -31,5 +32,6 @@ sources: [chase-ai-claude-code-impeccable.md, mario-zechner-pi-agent.md, maggies
 
 - [[clanker-slop]]
 - [[vibecoded-slop]]
+- [[quality-proxy-collapse]]
 - [[impeccable]]
 - [[chase-ai]]

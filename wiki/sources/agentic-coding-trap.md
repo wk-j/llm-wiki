@@ -5,7 +5,7 @@ tags: [agentic-coding, psychology, developer-experience, ai]
 url: https://larsfaye.com/articles/agentic-coding-is-a-trap
 date_ingested: 2026-05-05
 created: 2026-05-05
-updated: 2026-05-05
+updated: 2026-07-03
 sources: []
 ---
 
@@ -21,6 +21,10 @@ A critical essay by [[lars-faye]] warning against the over-reliance on autonomou
 - **Vendor Lock-In on Skills:** Over-reliance on subsidized AI models creates a dangerous [[vendor-lock-in]]. If the models get "nerfed", have an outage, or prices skyrocket (due to [[usage-based-billing]]), entire teams can come to a standstill.
 - **The Ship's Computer Model:** The author advocates demoting AI from "orchestrated worker" to a secondary process (like the Ship's Computer in Star Trek). The human should stay engaged with implementation, manually coding 20%-100% of the task, and using AI for ad-hoc generation, research, and interactive documentation.
 - **Review Limit:** Never ask an agent to generate more code than you can thoroughly review in one sitting.
+
+## Relation to The Eternal Sloptember
+
+[[eternal-sloptember|The Eternal Sloptember]] is a stronger version of this warning. Lars Faye argues against over-delegating because it creates [[cognitive-debt]] and [[skill-atrophy]]. The Eternal Sloptember goes further: it argues that current agents do not program at all; they statistically mimic programming, so the output can look better while becoming harder to trust. The wiki keeps both as related but distinct positions.
 
 ## See also
 

@@ -1,6 +1,7 @@
 # Index
 
 ## Sources
+- [[eternal-sloptember]] — the singularity is nearer / geohot.github.io (2026-05-24): severe critique of coding agents as statistical mimicry rather than programming; argues agents front-load progress then fail at polish, harm large organizations more than high-performing small teams, collapse old quality proxies like syntax/grammar, and need world models/process understanding rather than RLVR-style test gaming
 - [[how-perplexity-lost-ai-war]] — Mondo Startups (YouTube transcript): argues that Perplexity became a strong niche research tool rather than replacing Google because answer+citation was copied by incumbents, AI query costs are heavier than classic search economics, monetization clashes with trust, publisher disputes weaken positioning, and Google owns distribution through search/browser/mobile/product defaults
 - [[llm-loops-instead-of-chain-of-thought]] — bycloud (YouTube transcript): explains looped transformers as an internal test-time-compute alternative to chain-of-thought; covers recurrent-depth transformers, multi-hop reasoning, stability/Parcae, mechanistic latent-state analysis, Mixture-of-Recursions, KV-cache tradeoffs, and caveats about expressiveness and real-world scaling
 - [[oumuamua-2026-curiosity-channel]] — Curiosity Channel คนช่างสงสัย (YouTube, Thai): timeline of ʻOumuamua knowledge 2017→2026; light-curve shape inference, non-gravitational acceleration with no visible tail, Loeb's solar-sail hypothesis vs SETI silence, and the now-favored radiolysis/dark-comet explanation; closes with Occam's razor as method
@@ -111,6 +112,12 @@
 - [[thclaws-marketplace-panutat]] — Panutat Tejasen (2026-04-30): thClaws v0.7.0 Marketplace; Enterprise Security; Private Marketplace; Host Bridge concept; Rabbit Holes in coding.
 
 ## Entities
+- [[the-singularity-is-nearer]] — author/blog label for "The Eternal Sloptember" on geohot.github.io; strong anti-agent critique centered on statistical mimicry, slop, and missing programming process/world models
+- [[tinygrad]] — ML framework/compiler stack used in the Eternal Sloptember field report as a real low-level systems task where the author tried agents but still felt manual work would be better/faster
+- [[afl]] — American Fuzzy Lop fuzzing tool; used in Eternal Sloptember to argue that programmers do not fear useful automation itself, only automation whose process/output cannot be trusted
+- [[yann-lecun]] — AI researcher invoked in Eternal Sloptember as part of the LeCun/Marcus camp skeptical that LLMs alone are enough without world models
+- [[gary-marcus]] — AI critic/researcher invoked alongside LeCun; represents skepticism toward LLM-only reasoning/programming capability
+- [[apple]] — technology company behind macOS/iOS; Eternal Sloptember uses Apple/macOS rhetorically to ask whether broad AI-agent adoption in large orgs improves or degrades software quality
 - [[perplexity]] — AI answer/search startup founded in 2022; Mondo Startups frames it as a product that made answer-with-citations feel obvious but lost the broader Google-replacement race to copied features, high query costs, weak ad monetization, publisher-trust risk, and distribution disadvantage
 - [[google]] — technology/search/advertising incumbent; in the Perplexity source, wins AI search less through superior answers than through search habits, Chrome/Android/default placement, ad economics, and ecosystem distribution
 - [[aravind-srinivas]] — Perplexity co-founder; positioned by Mondo Startups as a founder who understood both search and LLMs after work around Google, DeepMind, and OpenAI
@@ -314,6 +321,9 @@
 - [[marc-brooker]] — AWS senior engineer (Lambda/Aurora); strongest defense of SDD: specs as explicit, versioned, living artifacts in iterative use
 
 ## Concepts
+- [[quality-proxy-collapse]] — Failure of old surface-level quality signals such as syntax, grammar, structure, confidence, or partial test passing to prove that an AI-generated artifact came from a reliable understanding process
+- [[programming-process-matters]] — Critique that programming is not just producing code-shaped text; real agents need a process/world model that understands system effects, constraints, tradeoffs, and failure modes
+- [[world-models]] — Internal model of how actions change an environment; in software, the environment is code, state, invariants, tests, users, and failure modes affected by a change
 - [[answer-engine]] — Search experience that returns a synthesized answer with citations instead of only links; powerful for research, but easy for incumbent AI/search surfaces to absorb and risky when attribution or publisher trust breaks
 - [[ai-search-economics]] — Unit economics of AI search: live retrieval plus LLM synthesis makes each query expensive, while monetization through ads or subscriptions must preserve user trust and still cover compute
 - [[distribution-moat]] — Advantage from owning the path to users (defaults, browser, OS, ecosystem, habit); in the Perplexity case, explains why a better feature can lose once Google places a copied version inside existing surfaces

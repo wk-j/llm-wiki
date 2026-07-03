@@ -3,8 +3,8 @@ title: Cognitive Surrender
 type: concept
 tags: [ai, psychology, developer-experience, attention, code-review]
 created: 2026-05-29
-updated: 2026-06-30
-sources: [The Orchestration Tax.md, Agentic Code Review.md, techsauce-ai-brain-fry.md]
+updated: 2026-07-03
+sources: [The Orchestration Tax.md, Agentic Code Review.md, techsauce-ai-brain-fry.md, eternal-sloptember.md]
 ---
 
 # Cognitive Surrender / การยอมแพ้ทางความคิด
@@ -51,6 +51,8 @@ Cognitive surrender ไม่ได้เกิดจากความขี้
 
 **ผลคือ:** cognitive surrender ไม่ได้เกิดเฉพาะตอน agent เขียนโค้ด. มันเกิดตอน agent review โค้ดแทนเราได้ด้วย ถ้าเราเอาคำว่า passed/looks good ไปแทนความเข้าใจ
 
+[[eternal-sloptember|The Eternal Sloptember]] อธิบายอีกทางว่า artifact ที่ AI สร้างอาจดูเหมือนผ่าน process ของมนุษย์ ทั้งที่จริงไม่ใช่. ถ้าเราเชื่อ proxy ผิว ๆ เช่น syntax ดี หรือคำอธิบายดูมั่นใจ เราจะ surrender ง่ายขึ้นโดยไม่รู้ตัว
+
 ## See also
 
 - [[orchestration-tax]]
@@ -64,3 +66,4 @@ Cognitive surrender ไม่ได้เกิดจากความขี้
 - [[skill-atrophy]]
 - [[loop-engineering]]
 - [[addy-osmani]]
+- [[quality-proxy-collapse]]

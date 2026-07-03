@@ -3,8 +3,8 @@ title: Cognitive Debt
 type: concept
 tags: [psychology, developer-experience, ai]
 created: 2026-05-05
-updated: 2026-05-29
-sources: [agentic-coding-trap.md, The Orchestration Tax.md]
+updated: 2026-07-03
+sources: [agentic-coding-trap.md, The Orchestration Tax.md, eternal-sloptember.md]
 ---
 
 # Cognitive Debt / หนี้ทางความคิด
@@ -14,6 +14,8 @@ sources: [agentic-coding-trap.md, The Orchestration Tax.md]
 ปัญหาหลักคือเมื่อเราไม่ได้เขียนโค้ดเองหรือไม่ได้ใช้เวลากับมันมากพอ เราจะเสีย mental model ที่ชัดเจนของระบบไป [[simon-willison|Simon Willison]] อธิบายว่า เมื่อไม่มีภาพในหัวที่ชัดเจน ทุกๆ ฟีเจอร์ใหม่ที่เพิ่มเข้ามาจะยิ่งทำให้ระบบเข้าใจยากขึ้นเรื่อยๆ อาการนี้มักเกิดร่วมกับ [[skill-atrophy]]
 
 ในยุคของ [[agentic-engineering]] การใช้ AI generate โค้ดปริมาณมากๆ นำไปสู่ Cognitive Debt ได้ง่าย เพราะความเร็วในการสร้างโค้ดนั้นสูงกว่าความสามารถในการทำความเข้าใจของมนุษย์ วิธีแก้ที่ [[lars-faye]] แนะนำคือ ไม่ควรให้ AI สร้างโค้ดมากเกินกว่าที่จะรีวิวและทำความเข้าใจได้หมดในคราวเดียว
+
+[[eternal-sloptember|The Eternal Sloptember]] เพิ่มเหตุผลอีกชั้น: AI artifact ไม่ได้เกิดจาก process แบบมนุษย์เสมอไป แต่หน้าตาอาจเหมือนงานมนุษย์มากพอให้เราประเมินต่ำไปว่าต้องอ่านหนักแค่ไหน. นี่ทำให้ [[quality-proxy-collapse|quality proxy collapse]] กลายเป็นตัวเร่ง cognitive debt
 
 ## เชื่อมกับ Orchestration Tax
 
@@ -33,3 +35,4 @@ sources: [agentic-coding-trap.md, The Orchestration Tax.md]
 - [[thariq-html-effectiveness]]
 - [[orchestration-tax]]
 - [[cognitive-surrender]]
+- [[quality-proxy-collapse]]

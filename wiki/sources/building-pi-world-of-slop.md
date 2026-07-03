@@ -3,8 +3,8 @@ title: "Building pi in a World of Slop — Mario Zechner"
 type: source
 tags: [coding-agents, pi, open-source, slop, software-quality]
 created: 2026-05-03
-updated: 2026-05-03
-sources: [Building pi in a World of Slop — Mario Zechner.md]
+updated: 2026-07-03
+sources: [Building pi in a World of Slop — Mario Zechner.md, eternal-sloptember.md]
 ---
 
 # Building pi in a World of Slop / สร้าง pi ในโลกที่เต็มไปด้วย Slop
@@ -61,6 +61,7 @@ Mario เตือนว่าคำพูดแบบ "product นี้ agent 
 - สำหรับ [[vibecoded-slop|Vibecoded Slop]]: slop ไม่ได้มาจาก output แย่ทีละชิ้น แต่มาจาก output จำนวนมากที่ไม่มีคนอ่านจนสะสมเป็น system risk
 - สำหรับ [[harness-engineering|Harness Engineering]]: harness ที่ดีควรช่วยให้มนุษย์เห็น, จำกัด, และตัดสินใจ ไม่ใช่แค่เพิ่ม throughput
 - สำหรับ OSS: maintainer ต้องออกแบบ social protocol ใหม่ ไม่ใช่แค่ CI/test protocol
+- เทียบกับ [[eternal-sloptember|The Eternal Sloptember]]: Mario ยังเชื่อว่าถ้า harness โปร่งใสและมนุษย์อ่านทัน agents มีพื้นที่ใช้ประโยชน์ได้ ส่วน Eternal Sloptember วางข้อสงสัยลึกกว่านั้นว่า process ของ LLM-style agent เองอาจไม่ใช่ programming ตั้งแต่ต้น
 
 ## See also
 
@@ -69,5 +70,6 @@ Mario เตือนว่าคำพูดแบบ "product นี้ agent 
 - [[malleable-tools]]
 - [[clanker-slop]]
 - [[vibecoded-slop]]
+- [[quality-proxy-collapse]]
 - [[coding-harness]]
 - [[terminalbench]]

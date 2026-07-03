@@ -1028,3 +1028,12 @@ Ingested Mondo Startups' YouTube transcript on Perplexity and the AI search mark
 - Updated concepts: `[[agentic-search]]`, `[[value-migration-from-code]]`
 - Updated entities: `[[openai]]`, `[[microsoft]]`
 - Updated `[[index]]`, `[[log]]`, and `hotcache.md`
+
+## [2026-07-03] ingest | The Eternal Sloptember
+Ingested "The Eternal Sloptember" by the singularity is nearer / geohot.github.io (2026-05-24). Key takeaways: (1) the author argues that coding agents cannot program; they are statistical models that mimic the distribution of programming, so output can look increasingly right while being broken in harder-to-detect ways; (2) the author reports trying agents for six months on real work including tinygrad and USB<->PCIe reverse engineering, finding that agents front-load progress but turn polish into a slot-machine loop; (3) this is not framed as status anxiety — AFL found more bugs than LLMs without provoking the same reaction, and the author wants trustworthy robot associates; (4) large organizations are predicted to suffer more than high-performing individuals/small teams because feedback loops are slower and lower performers may produce much more agent slop without self-correction; (5) AI artifacts break old assumptions about process: syntax/grammar/structure no longer prove that a human-like understanding process produced the work; (6) the author moves toward a LeCun/Marcus-style critique that real programming agents need world models, not RLVR-style test gaming. Preserved tensions: this conflicts with harness-first optimism and agentic-engineering claims elsewhere; kept both sides by adding quality-proxy-collapse and programming-process-matters rather than rewriting existing pages as a verdict.
+- Created source summary: `[[eternal-sloptember]]`
+- Created entities: `[[the-singularity-is-nearer]]`, `[[tinygrad]]`, `[[afl]]`, `[[yann-lecun]]`, `[[gary-marcus]]`, `[[apple]]`
+- Created concepts: `[[quality-proxy-collapse]]`, `[[programming-process-matters]]`, `[[world-models]]`
+- Updated concepts: `[[ai-slop]]`, `[[vibecoded-slop]]`, `[[cognitive-debt]]`, `[[cognitive-surrender]]`
+- Updated source pages: `[[agentic-coding-trap]]`, `[[building-pi-world-of-slop]]`
+- Updated `[[index]]`, `[[log]]`, and `hotcache.md`
