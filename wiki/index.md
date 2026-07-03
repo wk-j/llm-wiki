@@ -1,6 +1,9 @@
 # Index
 
 ## Sources
+- [[review-lite-cohr-nok-aaoi]] — คุณพ่อนักลงทุน (YouTube, Thai, 2026-06-28): compares Lumentum/LITE, Coherent/COHR, Nokia/NOK, AAOI, and AXT in the AI data-center photonics theme; frames photonic interconnects as a possible post-GPU/memory bottleneck, explains Indium Phosphide wafer / 6-inch capacity constraints, and separates current leaders from pure-play, high-risk, and upstream substrate bets; transcript and financial numbers kept source-attributed
+- [[defence-mechanism]] — Wikipedia overview of psychoanalytic defense mechanisms: unconscious/automatic processes that protect the self from anxiety and conflict; covers Freud/Anna Freud history, examples such as repression/rationalization/sublimation, multiple classification systems (DSM-IV-TR, PDM-2, Kernberg, Gabbard, Vaillant, Perry DMRS), relation with coping, and empirical-evidence criticism
+- [[infinity-godel-incompleteness-mlhf]] — แมทเล่าให้ฟัง | MLHF (YouTube, Thai): explains infinity through cardinality, countable vs uncountable sets, Cantor's diagonal argument, Beth/Aleph numbers, Continuum Hypothesis, ZFC axioms, Gödel/Cohen independence, and Gödel's incompleteness theorems; includes transcript caveats around auto-captioned terminology and Gödel/Cohen timeline compression
 - [[eternal-sloptember]] — the singularity is nearer / geohot.github.io (2026-05-24): severe critique of coding agents as statistical mimicry rather than programming; argues agents front-load progress then fail at polish, harm large organizations more than high-performing small teams, collapse old quality proxies like syntax/grammar, and need world models/process understanding rather than RLVR-style test gaming
 - [[how-perplexity-lost-ai-war]] — Mondo Startups (YouTube transcript): argues that Perplexity became a strong niche research tool rather than replacing Google because answer+citation was copied by incumbents, AI query costs are heavier than classic search economics, monetization clashes with trust, publisher disputes weaken positioning, and Google owns distribution through search/browser/mobile/product defaults
 - [[llm-loops-instead-of-chain-of-thought]] — bycloud (YouTube transcript): explains looped transformers as an internal test-time-compute alternative to chain-of-thought; covers recurrent-depth transformers, multi-hop reasoning, stability/Parcae, mechanistic latent-state analysis, Mixture-of-Recursions, KV-cache tradeoffs, and caveats about expressiveness and real-world scaling
@@ -112,6 +115,26 @@
 - [[thclaws-marketplace-panutat]] — Panutat Tejasen (2026-04-30): thClaws v0.7.0 Marketplace; Enterprise Security; Private Marketplace; Host Bridge concept; Rabbit Holes in coding.
 
 ## Entities
+- [[khunpho-naklongthun]] — Thai investing YouTube channel behind the LITE/COHR/NOK/AAOI photonics comparison; useful as a secondary investment explainer, not a primary company source
+- [[coherent]] — Photonics/materials/optical communications company framed in the source as the current leader in 6-inch Indium Phosphide wafer readiness and optical transceiver delivery for AI data centers
+- [[lumentum]] — Optical/photonics company framed as a more direct pure play on AI data-center photonics, with stronger recent growth/margin in the source but capacity-ramp risk through 2028
+- [[aaoi]] — Applied Optoelectronics; smaller optical-communications company framed as the high-risk/high-return photonics bet using its own MBE process and ambitious revenue/capacity targets
+- [[nokia]] — Telecom/networking company compared as a larger, more defensive photonics/network-stack option; source notes cash-flow/base-size strengths but lower pure-play exposure and San Jose/timeline risk
+- [[axt]] — Upstream substrate supplier for Indium Phosphide wafers; source frames it as important to photonics bottlenecks but exposed to China/export-control risk
+- [[nvidia]] — GPU / AI infrastructure company; in the photonics source, used as demand/credibility signal for AI data-center optical interconnect investment rather than as the main stock under review
+- [[anna-freud]] — Psychoanalyst who systematized defense mechanisms in The Ego and the Mechanisms of Defence (1936), including signal anxiety and the ego's defensive action
+- [[sigmund-freud]] — Founder of psychoanalysis; source background for defense mechanisms as ego management of id impulses and internal conflict
+- [[george-vaillant]] — Psychiatrist behind a four-level defense hierarchy (pathological, immature, neurotic, mature) tied to long-term adaptation in the Grant Study tradition
+- [[robert-plutchik]] — Psychologist who related defense mechanisms to basic emotions and diagnostic structures
+- [[otto-kernberg]] — Psychoanalyst/object-relations theorist; frames primitive/splitting-based defenses as central to borderline personality organization
+- [[j-christopher-perry]] — Psychiatrist and psychotherapy researcher behind the Defense Mechanism Rating Scale (DMRS)
+- [[american-psychiatric-association]] — Psychiatry organization behind DSM-IV-TR, which included a tentative defensive-functioning axis
+- [[wikipedia]] — Collaborative encyclopedia; source for the Defence mechanism overview in this wiki
+- [[mlhf]] — Thai mathematics explainer YouTube channel "แมทเล่าให้ฟัง"; source for the infinity/cardinality/Continuum Hypothesis/Gödel incompleteness ingest
+- [[georg-cantor]] — mathematician behind cardinality and Cantor's diagonal argument; opens the path from comparing infinite sets to the Continuum Hypothesis
+- [[kurt-godel]] — logician/mathematician behind incompleteness theorems and the result that ZFC cannot disprove the Continuum Hypothesis if ZFC is consistent
+- [[paul-cohen]] — mathematician who proved that ZFC cannot prove the Continuum Hypothesis if ZFC is consistent, completing the independence picture with Gödel's result
+- [[david-hilbert]] — mathematician whose 23 problems include the Continuum Hypothesis; symbol of the programmatic hope that major mathematical questions can be settled by proof
 - [[the-singularity-is-nearer]] — author/blog label for "The Eternal Sloptember" on geohot.github.io; strong anti-agent critique centered on statistical mimicry, slop, and missing programming process/world models
 - [[tinygrad]] — ML framework/compiler stack used in the Eternal Sloptember field report as a real low-level systems task where the author tried agents but still felt manual work would be better/faster
 - [[afl]] — American Fuzzy Lop fuzzing tool; used in Eternal Sloptember to argue that programmers do not fear useful automation itself, only automation whose process/output cannot be trusted
@@ -321,6 +344,26 @@
 - [[marc-brooker]] — AWS senior engineer (Lambda/Aurora); strongest defense of SDD: specs as explicit, versioned, living artifacts in iterative use
 
 ## Concepts
+- [[photonic-interconnects]] — Sending data through light inside data-center/network systems; in the LITE/COHR/NOK/AAOI source, the possible AI infrastructure bottleneck after GPU, memory, and CPU, but not automatically a high-margin business
+- [[indium-phosphide-wafer]] — Semiconductor substrate used for photonic devices; source frames 6-inch wafer capacity, qualification, yield, China supply risk, and AXT/Sumitomo substrate concentration as the key upstream bottleneck
+- [[optical-transceivers]] — High-speed light/electrical conversion modules such as 800G/1.6T transceivers; the source's revenue bridge from photonic materials and lasers into AI data-center network deployments
+- [[ai-data-center-bottlenecks]] — Systems view that AI scaling can bottleneck on compute, memory, networking, power, cooling, and supply chain; the photonics source adds optical links as a bottleneck to watch
+- [[defense-mechanisms]] — Psychoanalytic frame for automatic psychological processes that protect the self from anxiety, conflict, and difficult affects; adaptive when flexible, pathological when persistent use distorts reality or harms life
+- [[defense-mechanism-hierarchy]] — Classification idea that defenses vary by adaptiveness; includes Vaillant's mature/neurotic/immature/pathological levels plus DSM-IV-TR, PDM-2, Kernberg, Gabbard, and Perry DMRS variants
+- [[coping]] — Conscious, reasoned ways of handling stress; overlaps with defense mechanisms as adaptation, but differs because defenses are more automatic and often outside awareness
+- [[object-constancy]] — Object-relations capacity to hold good and bad aspects of the same person together; helps explain why splitting-based defenses appear when integration fails
+- [[infinity]] — mathematical infinity as more than "endless"; through cardinality it splits into countable and uncountable sizes
+- [[set-theory]] — branch of mathematics about sets; the background language for cardinality, infinity, ZFC, and the Continuum Hypothesis
+- [[cardinality]] — size of a set, defined for infinite sets through one-to-one correspondence rather than everyday intuition
+- [[countable-infinity]] — infinity that can be paired with natural numbers, such as integers, even numbers, primes, and rationals
+- [[uncountable-infinity]] — infinity too large to list against natural numbers; real numbers are the central example
+- [[cantor-diagonal-argument]] — proof that any claimed complete list of real numbers misses at least one constructed diagonal number, so reals are uncountable
+- [[beth-numbers]] — cardinal sequence built by repeatedly taking power sets; `beth_1` is the size of the continuum/reals
+- [[aleph-numbers]] — ordered sequence of infinite cardinalities; `aleph_0` is countable infinity and `aleph_1` is the next larger cardinal
+- [[continuum-hypothesis]] — asks whether any infinity size sits between countable infinity and the real numbers; independent from ZFC
+- [[zfc-set-theory]] — standard axiom system for much of modern set theory and mathematical foundations
+- [[undecidable-propositions]] — statements a given axiom system can neither prove nor disprove, assuming the system is consistent
+- [[godel-incompleteness-theorems]] — Gödel's result that sufficiently strong consistent formal systems cannot prove every truth expressible in them
 - [[quality-proxy-collapse]] — Failure of old surface-level quality signals such as syntax, grammar, structure, confidence, or partial test passing to prove that an AI-generated artifact came from a reliable understanding process
 - [[programming-process-matters]] — Critique that programming is not just producing code-shaped text; real agents need a process/world model that understands system effects, constraints, tradeoffs, and failure modes
 - [[world-models]] — Internal model of how actions change an environment; in software, the environment is code, state, invariants, tests, users, and failure modes affected by a change

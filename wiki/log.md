@@ -1,5 +1,28 @@
 # Log
 
+
+## [2026-07-03] ingest | คุณพ่อนักลงทุน — รีวิว LITE COHR NOK AAOI
+
+Ingested the user-provided YouTube transcript for a Thai investing comparison of Lumentum/LITE, Coherent/COHR, Nokia/NOK, AAOI, and AXT in the AI data-center photonics theme. Treated it as secondary investment commentary, not a primary company source; transcript errors and all financial/company figures remain source-attributed.
+
+- Created source page: `[[review-lite-cohr-nok-aaoi]]`
+- Created entity pages: `[[khunpho-naklongthun]]`, `[[coherent]]`, `[[lumentum]]`, `[[aaoi]]`, `[[nokia]]`, `[[axt]]`, `[[nvidia]]`
+- Created concept pages: `[[photonic-interconnects]]`, `[[indium-phosphide-wafer]]`, `[[optical-transceivers]]`, `[[ai-data-center-bottlenecks]]`
+- Updated `[[index]]`, `[[log]]`, and `hotcache.md`
+
+Key takeaways: (1) The source frames photonic interconnects as a possible next AI data-center bottleneck after GPU/memory/CPU, but warns that a technical bottleneck does not automatically mean memory-like margins. (2) The critical upstream constraint is 6-inch Indium Phosphide wafer readiness: equipment, customer qualification, yield, and volume production matter more than announcements. (3) Coherent is presented as the current leader because it is more vertically integrated and allegedly already shipping 6-inch transceiver products; Lumentum is the purer growth/margin play but has capacity-ramp risk; AAOI is the high-risk/high-return MBE scale-up bet; Nokia is the larger defensive network-stack option with lower pure-play exposure; AXT is the upstream substrate angle with China/export-control risk. (4) The wiki keeps open the tension between “photonics as AI infrastructure bottleneck” and “photonics historically lower margin than memory.”
+
+## [2026-07-03] ingest | Wikipedia — Defence mechanism
+
+Ingested the user-provided Wikipedia article on defense mechanisms as a first psychology/psychoanalysis cluster in the wiki. Treated the article as an overview source and preserved its empirical-evidence criticism as an open caution rather than presenting the taxonomy as settled clinical fact.
+
+- Created source page: `[[defence-mechanism]]`
+- Created concept pages: `[[defense-mechanisms]]`, `[[defense-mechanism-hierarchy]]`, `[[coping]]`, `[[object-constancy]]`
+- Created entity pages: `[[anna-freud]]`, `[[sigmund-freud]]`, `[[george-vaillant]]`, `[[robert-plutchik]]`, `[[otto-kernberg]]`, `[[j-christopher-perry]]`, `[[american-psychiatric-association]]`, `[[wikipedia]]`
+- Updated `[[index]]`, `[[log]]`, and `hotcache.md`
+
+Key takeaways: (1) Defense mechanisms are mostly automatic psychological processes that protect the self/ego from anxiety, conflict, and difficult affects. (2) They are not inherently bad: mature/adaptive defenses such as humor, sublimation, suppression, altruism, and anticipation can help people face stress, while persistent reliance on defenses that distort reality can become maladaptive. (3) Anna Freud systematized the concept in 1936 and introduced signal anxiety; later systems classify defenses differently, including DSM-IV-TR, PDM-2, Kernberg, Gabbard, Vaillant, and Perry's DMRS. (4) Coping overlaps with defense as adaptation, but is usually more conscious and reasoned. (5) The article's criticism matters: much evidence comes from clinical observation and subjective interpretation, so the wiki keeps defense mechanisms as a useful interpretive language, not a quick diagnostic label.
+
 ## [2026-07-02] ingest | Zoran on C# — Planning Mode is a Dangerous Illusion
 
 Ingested the user-provided YouTube transcript by Zoran Horvat / Zoran on C#. Treated it as the full demonstration behind the earlier X post `[[zoran-horvat-claude-no-planning-engine]]`, not as a conflicting source.
@@ -1036,4 +1059,11 @@ Ingested "The Eternal Sloptember" by the singularity is nearer / geohot.github.i
 - Created concepts: `[[quality-proxy-collapse]]`, `[[programming-process-matters]]`, `[[world-models]]`
 - Updated concepts: `[[ai-slop]]`, `[[vibecoded-slop]]`, `[[cognitive-debt]]`, `[[cognitive-surrender]]`
 - Updated source pages: `[[agentic-coding-trap]]`, `[[building-pi-world-of-slop]]`
+- Updated `[[index]]`, `[[log]]`, and `hotcache.md`
+
+## [2026-07-03] ingest | เมื่อ Infinity เขย่าวงการคณิตศาสตร์ | Gödel's Incompleteness Theorems
+Ingested แมทเล่าให้ฟัง | MLHF's Thai YouTube transcript on infinity, cardinality, Continuum Hypothesis, and Gödel incompleteness. Key takeaways: (1) everyday intuition breaks on infinite sets because one-to-one pairing makes natural numbers and even numbers the same cardinality; (2) countable infinity includes naturals, evens, integers, primes, and rationals, while Cantor's diagonal argument shows real numbers are uncountable; (3) Beth numbers build larger cardinalities through power sets, while Aleph numbers name the ordered sequence of infinite cardinalities; (4) Continuum Hypothesis asks whether `aleph_1 = beth_1`, i.e. whether any infinity size sits between naturals and reals; (5) Gödel/Cohen independence shows that, assuming ZFC is consistent, ZFC can neither disprove nor prove CH; (6) Gödel incompleteness generalizes the shock: sufficiently strong consistent formal systems cannot prove every truth expressible inside them. Preserved caveats: transcript auto-caption mangles Beth/Aleph/undecidable terms and compresses Gödel/Cohen timeline; source summary keeps the source narrative while noting the standard split.
+- Created source summary: `[[infinity-godel-incompleteness-mlhf]]`
+- Created entities: `[[mlhf]]`, `[[georg-cantor]]`, `[[kurt-godel]]`, `[[paul-cohen]]`, `[[david-hilbert]]`
+- Created concepts: `[[infinity]]`, `[[set-theory]]`, `[[cardinality]]`, `[[countable-infinity]]`, `[[uncountable-infinity]]`, `[[cantor-diagonal-argument]]`, `[[beth-numbers]]`, `[[aleph-numbers]]`, `[[continuum-hypothesis]]`, `[[zfc-set-theory]]`, `[[undecidable-propositions]]`, `[[godel-incompleteness-theorems]]`
 - Updated `[[index]]`, `[[log]]`, and `hotcache.md`
