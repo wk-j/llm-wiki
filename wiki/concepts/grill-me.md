@@ -3,8 +3,8 @@ title: Grill Me
 type: concept
 tags: [ai-skill, planning, alignment, pocock]
 created: 2026-05-09
-updated: 2026-06-21
-sources: [matt-pocock-software-fundamentals.md, "New Skills! handoff, prototype, review and writing-*  Skills Changelog.md", "Matt Pocock’s Agentic Engineering Workflow (just copy him).md"]
+updated: 2026-07-04
+sources: [matt-pocock-software-fundamentals.md, "New Skills! handoff, prototype, review and writing-*  Skills Changelog.md", "Matt Pocock’s Agentic Engineering Workflow (just copy him).md", a-field-guide-to-fable-finding-your-unknowns.md]
 ---
 
 # Grill Me / ทักษะการตั้งคำถามไล่บี้
@@ -36,8 +36,16 @@ sources: [matt-pocock-software-fundamentals.md, "New Skills! handoff, prototype,
 
 David เสริมเวอร์ชันของตัวเอง: แทนที่จะสั่ง "one-shot this app" ให้บอก vision แล้วสั่ง "list out the 10 most consequential decisions... interview me until you understand 98%"
 
+## หลักฐานอิสระจากทีม Claude Code
+
+[[thariq-shihipar|Thariq Shihipar]] (ทีม Claude Code) ใช้ pattern เดียวกันใน [[field-guide-to-fable-finding-unknowns|A Field Guide to Fable]] โดยเรียกว่า "Interviews" — หลัง brainstorm แล้วยังเหลือความคลุมเครือ ให้ Claude สัมภาษณ์กลับ prompt ของเขา: "Interview me one question at a time about anything ambiguous, prioritize questions where my answer would change the architecture."
+
+จุดที่เพิ่มจากมุมของ Pocock คือเกณฑ์จัดลำดับ: ถามเรื่องที่คำตอบ *เปลี่ยน architecture* ก่อน เพราะนั่นคือ [[unknowns-matrix|unknown]] ที่แพงที่สุดถ้าไปเจอทีหลัง — สองแหล่งอิสระ (educator ภายนอก + คนในทีมผู้สร้างเครื่องมือ) มาบรรจบที่วิธีเดียวกัน ทำให้ pattern นี้น่าเชื่อขึ้น
+
 ## ดูเพิ่ม
 - [[matt-pocock]]
+- [[field-guide-to-fable-finding-unknowns]]
+- [[unknowns-matrix]]
 - [[matt-pocock-agentic-workflow]]
 - [[david-ondrej]]
 - [[skill-procedures-vs-abilities]]

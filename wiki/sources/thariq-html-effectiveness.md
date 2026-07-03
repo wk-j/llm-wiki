@@ -83,9 +83,12 @@ FAQ ในบทความยังยอมรับว่า HTML ใช้ 
 
 มันยังต่อกับ [[ai-era-standard-balance|AI-era Standard Balance]] ด้วย เพราะ standard ของเอกสารยุค AI ต้อง balance ภาระของ producer กับ consumer ใหม่ HTML เป็นหนึ่งใน candidate format ที่ลดภาระฝั่ง consumer ได้
 
+ภาคต่อของบทความนี้คือ [[field-guide-to-fable-finding-unknowns|A Field Guide to Fable]] (2026-07): Thariq ใช้ HTML artifact เป็นสื่อหลักของทุกเทคนิคหา [[unknowns-matrix|unknowns]] — design directions, implementation plan, pitch/explainer, และ report+quiz ก่อน merge
+
 ## See also
 
 - [[thariq-shihipar]]
+- [[field-guide-to-fable-finding-unknowns]]
 - [[claude-code]]
 - [[html-artifacts]]
 - [[custom-editing-interfaces]]

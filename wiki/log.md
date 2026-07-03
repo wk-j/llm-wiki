@@ -1079,3 +1079,13 @@ Ingested แมทเล่าให้ฟัง | MLHF's Thai YouTube transcrip
 - Created entities: `[[mlhf]]`, `[[georg-cantor]]`, `[[kurt-godel]]`, `[[paul-cohen]]`, `[[david-hilbert]]`
 - Created concepts: `[[infinity]]`, `[[set-theory]]`, `[[cardinality]]`, `[[countable-infinity]]`, `[[uncountable-infinity]]`, `[[cantor-diagonal-argument]]`, `[[beth-numbers]]`, `[[aleph-numbers]]`, `[[continuum-hypothesis]]`, `[[zfc-set-theory]]`, `[[undecidable-propositions]]`, `[[godel-incompleteness-theorems]]`
 - Updated `[[index]]`, `[[log]]`, and `hotcache.md`
+
+## [2026-07-04] ingest | A Field Guide to Fable: Finding Your Unknowns
+Ingested Thariq Shihipar's (@trq212, Claude Code team) X article on working with Claude Fable 5. Key takeaways: (1) the map (prompt/skills/context) is not the territory (codebase/real-world constraints); the difference is "unknowns," and Fable is claimed as the first model where work quality is bottlenecked by the user's ability to clarify them; (2) unknowns split into 4 quadrants — known knowns (the prompt), known unknowns, unknown knowns (know-it-when-I-see-it), unknown unknowns — and reducing/planning for unknowns is framed as the skill of agentic coding (Boris Cherny and Jarred Sumner as exemplars); (3) techniques per phase: blind spot pass, brainstorms/prototypes, interviews, code references, change-ranked implementation plans (pre); implementation-notes.md with a Deviations log (during); pitches/explainers and merge-gating quizzes (post); (4) HTML artifacts are the preferred medium for nearly all of them; (5) worked example: the Fable launch video was edited entirely by Claude Code, using explainers, a Remotion prototype, and teach-me-first for color grading. Cross-cutting effects: Fable's identity clarified from open question (model vs harness) to Anthropic Claude-family model while keeping Aom's ultracode-auto-mode details open; interviews converge with Pocock's grill-me from an independent source; quizzes added as a practical counter to comprehension debt. Tension kept open versus eternal-sloptember and plan-mode-as-prompting: is the remaining gap the user's unknowns or the agent's missing world model?
+- Created source summary: `[[field-guide-to-fable-finding-unknowns]]` (raw: `a-field-guide-to-fable-finding-your-unknowns.md`)
+- Created concepts: `[[map-vs-territory]]`, `[[unknowns-matrix]]`
+- Created entity: `[[boris-cherny]]`
+- Updated entities: `[[thariq-shihipar]]` (identified as @trq212, now credited with 3 sources), `[[fable]]`, `[[claude]]`
+- Updated concepts: `[[html-artifacts]]`, `[[grill-me]]`, `[[throwaway-prototyping]]`, `[[intent-gap]]`
+- Updated source pages: `[[thariq-html-effectiveness]]`, `[[claude-code-session-management]]`
+- Updated `[[index]]`, `[[log]]`, and `hotcache.md`

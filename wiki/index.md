@@ -1,6 +1,7 @@
 # Index
 
 ## Sources
+- [[field-guide-to-fable-finding-unknowns]] — Thariq Shihipar / @trq212 (X article, ingested 2026-07-04): working with Claude Fable 5 through the map-vs-territory lens; quality is bottlenecked by the user's ability to clarify unknowns; 4-quadrant unknowns breakdown plus techniques before/during/after implementation (blind spot pass, brainstorms/prototypes, interviews, references, implementation plans, implementation notes, pitches, quizzes); Fable launch video edited entirely by Claude Code
 - [[how-ai-became-more-expensive-than-workers-it-replaced]] — Economy Media (YouTube, 2026-07-02): argues that enterprise AI can become more expensive than the labor it replaces when token-based pricing, tokenmaxxing, data-center supply constraints, and agent usage scale across whole companies; keeps numbers about Microsoft/Meta/Anthropic/OpenAI/Bloomberg/Reuters/Gartner as source-attributed
 - [[review-lite-cohr-nok-aaoi]] — คุณพ่อนักลงทุน (YouTube, Thai, 2026-06-28): compares Lumentum/LITE, Coherent/COHR, Nokia/NOK, AAOI, and AXT in the AI data-center photonics theme; frames photonic interconnects as a possible post-GPU/memory bottleneck, explains Indium Phosphide wafer / 6-inch capacity constraints, and separates current leaders from pure-play, high-risk, and upstream substrate bets; transcript and financial numbers kept source-attributed
 - [[defence-mechanism]] — Wikipedia overview of psychoanalytic defense mechanisms: unconscious/automatic processes that protect the self from anxiety and conflict; covers Freud/Anna Freud history, examples such as repression/rationalization/sublimation, multiple classification systems (DSM-IV-TR, PDM-2, Kernberg, Gabbard, Vaillant, Perry DMRS), relation with coping, and empirical-evidence criticism
@@ -116,6 +117,7 @@
 - [[thclaws-marketplace-panutat]] — Panutat Tejasen (2026-04-30): thClaws v0.7.0 Marketplace; Enterprise Security; Private Marketplace; Host Bridge concept; Rabbit Holes in coding.
 
 ## Entities
+- [[boris-cherny]] — Anthropic engineer, creator of Claude Code; cited in loop-engineering ("my job is to write loops") and named by Thariq as an exemplar agentic coder with few unknowns
 - [[economy-media]] — YouTube economics/business channel; source for the AI token-cost / labor-cost reversal ingest, treated as secondary explainer rather than primary reporting
 - [[khunpho-naklongthun]] — Thai investing YouTube channel behind the LITE/COHR/NOK/AAOI photonics comparison; useful as a secondary investment explainer, not a primary company source
 - [[coherent]] — Photonics/materials/optical communications company framed in the source as the current leader in 6-inch Indium Phosphide wafer readiness and optical transceiver delivery for AI data centers
@@ -162,7 +164,7 @@
 - [[zoran-horvat]] — .NET/software educator / Zoran on C#; argues for rich domain models over persistence-driven flattening, and criticizes Claude Plan mode as prompt scaffolding rather than true engineering judgment
 - [[entity-framework-core]] — Microsoft's .NET ORM; in Horvat's post, the example tooling for mapping nested value objects, converters, private constructors, and domain-rich queries to relational persistence
 - [[aom-khunpanitchot]] — Thai software/AI practitioner from the Fable/Elysia 2 Facebook field report; writes as an owner of the Elysia 2 codebase evaluating AI audit output for release readiness
-- [[fable]] — AI agent/harness in Aom's Elysia 2 audit report; reportedly used ultracode auto mode, spawned nearly 100 agents, and produced a 104-item deep audit report; details remain source-attributed until the report/tooling is inspected directly
+- [[fable]] — Claude Fable 5, an Anthropic model in the Claude family (confirmed by trq212's field guide); earlier appeared in Aom's Elysia 2 audit via ultracode auto mode spawning ~100 agents; Thariq's claim: first model where work quality is bottlenecked by the user clarifying unknowns; spec/tier/pricing still open
 - [[elysia-2]] — Codebase/project in Aom's Fable audit post; used as a real release-readiness case where smoke/plugin checks and several AI reviewers suggested RC/stable readiness but Fable reported deeper blockers
 - [[genebench-pro]] — OpenAI research-level benchmark for computational-biology agents; 129 synthetic problems across 10 domains, designed to measure research taste, ambiguity handling, QC, causal/statistical method choice, and decision-readiness rather than book knowledge
 - [[gpt-5-6-sol]] — OpenAI GPT-5.6 model variant reported as strongest on GeneBench-Pro; 28.7% pass rate at highest reasoning and 31.5% in Pro mode, from the GeneBench-Pro source only
@@ -346,6 +348,8 @@
 - [[marc-brooker]] — AWS senior engineer (Lambda/Aurora); strongest defense of SDD: specs as explicit, versioned, living artifacts in iterative use
 
 ## Concepts
+- [[map-vs-territory]] — Korzybski's "the map is not the territory" applied to agentic coding: map = prompt/skills/context given to the agent, territory = codebase and real-world constraints; the difference is unknowns, and stronger models move the bottleneck to the user's map
+- [[unknowns-matrix]] — Thariq's 4-quadrant breakdown (known knowns / known unknowns / unknown knowns / unknown unknowns) with matched techniques per phase: blind spot pass, brainstorms/prototypes, interviews, references, implementation plans, implementation notes, pitches/explainers, quizzes
 - [[tokenmaxxing]] — Using large amounts of AI tokens as a status/KPI signal rather than because the work requires it; can inflate AI demand and enterprise bills without proving productivity
 - [[ai-token-economics]] — Unit economics of LLM/agent usage: token price, usage pattern, infrastructure supply, model subsidy, and enterprise-scale multiplication of small per-token costs
 - [[enterprise-ai-roi]] — Enterprise-level return-on-investment question for AI: token/API bills, oversight, rework, governance, and actual workflow outcomes versus labor savings

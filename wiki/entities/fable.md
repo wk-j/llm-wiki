@@ -1,17 +1,25 @@
 ---
 title: Fable
 type: entity
-tags: [ai, agents, code-review, coding-harness]
+tags: [ai, agents, models, anthropic, code-review]
 created: 2026-07-02
-updated: 2026-07-02
-sources: [aom-fable-elysia-2-audit.md]
+updated: 2026-07-04
+sources: [aom-fable-elysia-2-audit.md, a-field-guide-to-fable-finding-your-unknowns.md]
 ---
 
 # Fable / เฟเบิล
 
-[[fable|Fable]] คือ AI agent/harness ที่ปรากฏใน source [[aom-fable-elysia-2-audit|Fable audit Elysia 2]]. จากโพสต์นี้ Fable ถูกใช้ทำ code review/audit แบบหนักกับ [[elysia-2|Elysia 2]] โดยเปิด ultracode auto mode และแตกตัวเป็น agent เกือบ 100 ตัว.
+**Claude Fable 5** คือ model ในตระกูล [[claude|Claude]] ของ [[anthropic|Anthropic]] ข้อมูลนี้ชัดขึ้นจาก source ที่สอง: [[field-guide-to-fable-finding-unknowns|A Field Guide to Fable]] โดย [[thariq-shihipar|Thariq Shihipar]] (ทีม [[claude-code|Claude Code]]) ซึ่งเรียกเต็ม ๆ ว่า "Claude Fable 5" และอ้างถึง launch video จากบัญชี ClaudeDevs ที่ตัดต่อด้วย Claude Code ทั้งตัว
 
-ข้อมูลใน wiki ตอนนี้มาจากโพสต์เดียว จึงควรอ่านแบบระวัง: ยังไม่รู้แน่ชัดว่า Fable เป็น model, harness, product surface, หรือชุด workflow ที่ห่อ model หลายตัวไว้ข้างใน.
+ก่อนหน้านั้น Fable ปรากฏครั้งแรกใน [[aom-fable-elysia-2-audit|Fable audit Elysia 2]] ซึ่งหน้านี้เคยบันทึกเป็นคำถามเปิดว่า Fable เป็น model, harness, product surface, หรือชุด workflow — field guide เคลียร์แกนหลักแล้วว่าเป็น model แต่รายละเอียด spec/tier/pricing ยังไม่อยู่ใน wiki และคำว่า "ultracode auto mode" ในเคสของ Aom น่าจะเป็น harness/โหมดการรันที่ห่อ model อีกชั้น ซึ่งยังไม่มีข้อมูลตรง
+
+## Claim หลักจาก field guide (2026-07)
+
+Thariq อ้างว่า Fable เป็น model ตัวแรกที่คุณภาพงานถูกจำกัดด้วยความสามารถของ *ผู้ใช้* ในการเคลียร์ [[unknowns-matrix|unknowns]] ไม่ใช่ความสามารถของ model — ยิ่ง model แรง คอขวดยิ่งย้ายมาที่ [[map-vs-territory|แผนที่]] (prompt/skills/context) ที่ผู้ใช้ส่งให้ เก็บเป็นความเห็นส่วนตัวของคนใน Anthropic ไม่ใช่ benchmark
+
+## สิ่งที่ source แรกอ้าง (เคส Elysia 2)
+
+ในเคส Elysia 2, [[aom-khunpanitchot|Aom Khunpanitchot]] เล่าว่า Fable:
 
 ## สิ่งที่ source นี้อ้าง
 
@@ -31,7 +39,12 @@ sources: [aom-fable-elysia-2-audit.md]
 
 ## See also
 
+- [[field-guide-to-fable-finding-unknowns]]
 - [[aom-fable-elysia-2-audit]]
+- [[claude]]
+- [[anthropic]]
+- [[map-vs-territory]]
+- [[unknowns-matrix]]
 - [[elysia-2]]
 - [[deep-agent-audit]]
 - [[agentic-code-review]]

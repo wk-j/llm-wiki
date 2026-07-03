@@ -9,7 +9,7 @@ sources: [Using Claude Code Session Management & 1M Context.md]
 
 # Using Claude Code: Session Management & 1M Context
 
-**Source:** Twitter/X thread by [[@trq212]], 2026-04-16  
+**Source:** Twitter/X thread by [[thariq-shihipar|Thariq Shihipar (@trq212)]], 2026-04-16  
 **URL:** https://x.com/trq212/status/2044548257058328723
 
 ## Summary
@@ -59,6 +59,8 @@ Explicit subagent invocations:
 
 ## See also
 
+- [[thariq-shihipar]]
+- [[field-guide-to-fable-finding-unknowns]]
 - [[claude-code]]
 - [[context-rot]]
 - [[compaction]]
