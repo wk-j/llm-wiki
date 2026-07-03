@@ -1,6 +1,7 @@
 # Index
 
 ## Sources
+- [[how-ai-became-more-expensive-than-workers-it-replaced]] — Economy Media (YouTube, 2026-07-02): argues that enterprise AI can become more expensive than the labor it replaces when token-based pricing, tokenmaxxing, data-center supply constraints, and agent usage scale across whole companies; keeps numbers about Microsoft/Meta/Anthropic/OpenAI/Bloomberg/Reuters/Gartner as source-attributed
 - [[review-lite-cohr-nok-aaoi]] — คุณพ่อนักลงทุน (YouTube, Thai, 2026-06-28): compares Lumentum/LITE, Coherent/COHR, Nokia/NOK, AAOI, and AXT in the AI data-center photonics theme; frames photonic interconnects as a possible post-GPU/memory bottleneck, explains Indium Phosphide wafer / 6-inch capacity constraints, and separates current leaders from pure-play, high-risk, and upstream substrate bets; transcript and financial numbers kept source-attributed
 - [[defence-mechanism]] — Wikipedia overview of psychoanalytic defense mechanisms: unconscious/automatic processes that protect the self from anxiety and conflict; covers Freud/Anna Freud history, examples such as repression/rationalization/sublimation, multiple classification systems (DSM-IV-TR, PDM-2, Kernberg, Gabbard, Vaillant, Perry DMRS), relation with coping, and empirical-evidence criticism
 - [[infinity-godel-incompleteness-mlhf]] — แมทเล่าให้ฟัง | MLHF (YouTube, Thai): explains infinity through cardinality, countable vs uncountable sets, Cantor's diagonal argument, Beth/Aleph numbers, Continuum Hypothesis, ZFC axioms, Gödel/Cohen independence, and Gödel's incompleteness theorems; includes transcript caveats around auto-captioned terminology and Gödel/Cohen timeline compression
@@ -115,6 +116,7 @@
 - [[thclaws-marketplace-panutat]] — Panutat Tejasen (2026-04-30): thClaws v0.7.0 Marketplace; Enterprise Security; Private Marketplace; Host Bridge concept; Rabbit Holes in coding.
 
 ## Entities
+- [[economy-media]] — YouTube economics/business channel; source for the AI token-cost / labor-cost reversal ingest, treated as secondary explainer rather than primary reporting
 - [[khunpho-naklongthun]] — Thai investing YouTube channel behind the LITE/COHR/NOK/AAOI photonics comparison; useful as a secondary investment explainer, not a primary company source
 - [[coherent]] — Photonics/materials/optical communications company framed in the source as the current leader in 6-inch Indium Phosphide wafer readiness and optical transceiver delivery for AI data centers
 - [[lumentum]] — Optical/photonics company framed as a more direct pure play on AI data-center photonics, with stronger recent growth/margin in the source but capacity-ramp risk through 2028
@@ -344,6 +346,10 @@
 - [[marc-brooker]] — AWS senior engineer (Lambda/Aurora); strongest defense of SDD: specs as explicit, versioned, living artifacts in iterative use
 
 ## Concepts
+- [[tokenmaxxing]] — Using large amounts of AI tokens as a status/KPI signal rather than because the work requires it; can inflate AI demand and enterprise bills without proving productivity
+- [[ai-token-economics]] — Unit economics of LLM/agent usage: token price, usage pattern, infrastructure supply, model subsidy, and enterprise-scale multiplication of small per-token costs
+- [[enterprise-ai-roi]] — Enterprise-level return-on-investment question for AI: token/API bills, oversight, rework, governance, and actual workflow outcomes versus labor savings
+- [[ai-labor-cost-reversal]] — Situation where AI moves from cheaper-than-labor to comparable or more expensive than humans in some tasks; source preserves coding as still cheaper while call-center/data-entry economics stay open
 - [[photonic-interconnects]] — Sending data through light inside data-center/network systems; in the LITE/COHR/NOK/AAOI source, the possible AI infrastructure bottleneck after GPU, memory, and CPU, but not automatically a high-margin business
 - [[indium-phosphide-wafer]] — Semiconductor substrate used for photonic devices; source frames 6-inch wafer capacity, qualification, yield, China supply risk, and AXT/Sumitomo substrate concentration as the key upstream bottleneck
 - [[optical-transceivers]] — High-speed light/electrical conversion modules such as 800G/1.6T transceivers; the source's revenue bridge from photonic materials and lasers into AI data-center network deployments

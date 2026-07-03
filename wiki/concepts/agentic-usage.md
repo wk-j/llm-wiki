@@ -3,8 +3,8 @@ title: Agentic Usage
 type: concept
 tags: [ai-agents, workflows, compute-cost]
 created: 2026-04-27
-updated: 2026-04-27
-sources: [github-copilot-billing-update.md, aaron-levie-agent-automation-jobs.md]
+updated: 2026-07-03
+sources: [github-copilot-billing-update.md, aaron-levie-agent-automation-jobs.md, how-ai-became-more-expensive-than-workers-it-replaced.md]
 ---
 
 # Agentic Usage / การใช้งานแบบเอเจนท์
@@ -20,6 +20,8 @@ sources: [github-copilot-billing-update.md, aaron-levie-agent-automation-jobs.md
 ## ทำไมถึงต้องแยกนิยาม?
 ในโลกของการพัฒนา software การขยับจาก "Autocomplete" ไปเป็น "Agentic" ทำให้ต้นทุนการประมวลผล (Inference cost) พุ่งสูงขึ้นมาก จนโมเดลการคิดเงินแบบ Buffet (จ่ายเหมา) เริ่มอยู่ไม่ได้ และต้องเปลี่ยนไปเป็น [[usage-based-billing\|Usage-based billing]]
 
+วิดีโอ [[how-ai-became-more-expensive-than-workers-it-replaced|How AI Became More Expensive Than The Workers It Replaced]] เพิ่มมุม enterprise finance: agentic usage ไม่ได้แค่แพงกว่า autocomplete ต่อ request แต่พอทุกคนในองค์กรใช้พร้อมกัน บิล token จะคูณกับจำนวนพนักงานและจำนวนรอบลองผิดลองถูก จนกลายเป็นคำถามระดับงบประมาณ ไม่ใช่แค่ developer tooling
+
 ## ความเกี่ยวข้องในระบบต่างๆ
 - **[[github-copilot]]**: ระบุว่าการเปลี่ยนไปใช้เครดิตมีสาเหตุหลักมาจากพฤติกรรมนี้
 - **[[claude-code]]**: ถูกออกแบบมาเป็น Agent ตั้งแต่ต้น (Native Agentic Usage)
@@ -29,3 +31,6 @@ sources: [github-copilot-billing-update.md, aaron-levie-agent-automation-jobs.md
 - [[subagent-patterns]]
 - [[github-ai-credits]]
 - [[token-optimization]]
+- [[ai-token-economics]]
+- [[enterprise-ai-roi]]
+- [[tokenmaxxing]]

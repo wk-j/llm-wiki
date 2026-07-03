@@ -4,7 +4,7 @@ type: entity
 tags: [ai, labs, models, organizations]
 created: 2026-04-24
 updated: 2026-07-03
-sources: [piyalitt-gpt-5-5-launch.md, microsoft-openai-partnership-2026.md, ryan-lopopolo-harness-engineering.md, https://openai.com/index/introducing-genebench-pro/, how-perplexity-lost-ai-war.md]
+sources: [piyalitt-gpt-5-5-launch.md, microsoft-openai-partnership-2026.md, ryan-lopopolo-harness-engineering.md, https://openai.com/index/introducing-genebench-pro/, how-perplexity-lost-ai-war.md, how-ai-became-more-expensive-than-workers-it-replaced.md]
 ---
 
 # OpenAI / โอเพนเอไอ
@@ -51,6 +51,12 @@ AI lab ในสหรัฐฯ — สร้าง ChatGPT, ตระกูล 
 
 จาก [[piyalitt-gpt-5-5-launch]]: **pricing inversion** เกิดขึ้นที่ rung flagship — GPT-5.5 ($5/$30) แพงกว่า [[claude-opus-4-7|Opus 4.7]] ($5/$25) เล็กน้อย ทั้งที่ GPT รุ่นก่อนๆ มักถูกกว่า Opus ประมาณครึ่งหนึ่ง — signal ว่า OpenAI ใช้ compute มากจริงเพื่อให้ทัน [[claude-mythos-preview|Mythos-class]] capability ในตลาด mass
 
+## Enterprise cost pressure
+
+วิดีโอ [[how-ai-became-more-expensive-than-workers-it-replaced|How AI Became More Expensive Than The Workers It Replaced]] วาง [[openai|OpenAI]] คู่กับ [[anthropic|Anthropic]] ในฐานะผู้ให้บริการ model ที่ได้รายได้จาก enterprise adoption แต่กำลังเจอคำถามกลับด้านจากลูกค้า: ถ้าราคา token ขึ้นและองค์กรใช้ AI ทั้งบริษัท ROI ยังชัดอยู่ไหม
+
+แหล่งนี้ยังคาดว่าเมื่อ OpenAI / Anthropic ต้องตอบโจทย์นักลงทุนและทำกำไร ราคาการใช้ token อาจสูงขึ้นอีก ตรงนี้ควรอ่านเป็น claim ของคลิป ไม่ใช่ข้อสรุปจากเอกสารการเงินของ OpenAI
+
 ## ประเด็น benchmark
 
 - **SWE-Bench Pro memorization signal** — Anthropic ฟ้องไว้ใน model card ของ GPT-5.5 ว่ามี sign ของการจำ; [[piyalitt-ittichaiwong|Piyalitt]] ตีความว่าเป็นความพลาด ไม่ใช่การ benchmaxx ตั้งใจ — เป็นอีกเคสที่ทำให้ SWE-Bench Pro โดยเดี่ยวๆ เป็น axis ที่ควรระวัง (ดู [[kimi-k2-6]] ด้วย — benchmark table ถูก curate)
@@ -70,3 +76,5 @@ AI lab ในสหรัฐฯ — สร้าง ChatGPT, ตระกูล 
 - [[chatgpt]]
 - [[anthropic]]
 - [[claude-opus-4-7]]
+- [[ai-token-economics]]
+- [[enterprise-ai-roi]]

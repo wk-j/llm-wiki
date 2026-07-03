@@ -78,3 +78,5 @@ Techsauce ย้ำว่า AI ยังช่วยลด burnout ได้เ
 - [[cognitive-surrender]]
 - [[cognitive-debt]]
 - [[care-allocation]]
+- [[enterprise-ai-roi]]
+- [[tokenmaxxing]]

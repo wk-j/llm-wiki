@@ -3,8 +3,8 @@ title: Code is Free
 type: concept
 tags: [ai, software-engineering, economy, agents]
 created: 2026-04-28
-updated: 2026-05-27
-sources: [ryan-lopopolo-harness-engineering.md, software-after-software.md]
+updated: 2026-07-03
+sources: [ryan-lopopolo-harness-engineering.md, software-after-software.md, how-ai-became-more-expensive-than-workers-it-replaced.md]
 ---
 
 # Code is Free / โค้ดไม่มีต้นทุนการผลิต
@@ -16,6 +16,12 @@ sources: [ryan-lopopolo-harness-engineering.md, software-after-software.md]
 - **Abundance of Code**: โค้ดกลายเป็นทรัพยากรที่มีล้นเหลือ (Abundant)
 - **Constraint Shift**: ทรัพยากรที่ขาดแคลนย้ายจาก "การเขียนโค้ด" ไปเป็น **เวลาของมนุษย์ (human time)**, **สมาธิ (attention)** และ **token budget**
 - **Disposable Artifact**: มองว่าโค้ดเป็นเพียง "ผลลัพธ์จากการ compile" (build artifact) ของความต้องการ (spec/prompt) ไม่ใช่สมบัติที่ต้องหวงแหน
+
+## Cost caveat จาก enterprise AI
+
+วิดีโอ [[how-ai-became-more-expensive-than-workers-it-replaced|How AI Became More Expensive Than The Workers It Replaced]] ทำให้ต้องอ่านคำว่า “free” แบบมีขอบเขต. ในงาน coding คลิปยังบอกว่า AI ถูกกว่าคนอย่างชัดเจน แต่เมื่อองค์กรเอา AI ไปใช้กว้าง ๆ บิล token, [[tokenmaxxing|tokenmaxxing]], และงานตรวจของคนอาจทำให้ต้นทุนรวมสูงกว่าที่คำขวัญนี้ทำให้รู้สึก
+
+ดังนั้นหน้านี้ไม่ได้ถูกลบล้าง แต่ต้องตีความว่า “code production ถูกลงมาก” ไม่ใช่ “AI ไม่มีต้นทุน” หรือ “ทุกงานถูกกว่าแรงงานมนุษย์เสมอ” จุดขาดแคลนยังรวม [[ai-token-economics|token budget]] และ [[enterprise-ai-roi|ROI ของทั้ง workflow]] ด้วย
 
 ## ผลกระทบต่อการทำงาน
 1. **Parallel Implementation**: แทนที่จะเลือกวิธีที่ดีที่สุดเพียงวิธีเดียว เราสามารถสั่ง Agent 5 ตัวให้เขียนโค้ด 5 แบบพร้อมกัน แล้วเลือกแบบที่ผ่าน test และดีที่สุดมาใช้งาน
@@ -48,3 +54,6 @@ Ball ขยายต่อไปอีกขั้น: ถ้า code abundance 
 - [[reorganize-around-models]]
 - [[10x-moment]]
 - [[software-ecology]]
+- [[ai-labor-cost-reversal]]
+- [[ai-token-economics]]
+- [[enterprise-ai-roi]]

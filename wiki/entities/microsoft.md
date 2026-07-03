@@ -4,7 +4,7 @@ type: entity
 tags: [ai, cloud, infrastructure, organizations]
 created: 2026-04-28
 updated: 2026-07-03
-sources: [microsoft-openai-partnership-2026.md, how-perplexity-lost-ai-war.md]
+sources: [microsoft-openai-partnership-2026.md, how-perplexity-lost-ai-war.md, how-ai-became-more-expensive-than-workers-it-replaced.md]
 ---
 
 # Microsoft / ไมโครซอฟท์
@@ -37,9 +37,17 @@ sources: [microsoft-openai-partnership-2026.md, how-perplexity-lost-ai-war.md]
 
 บทเรียนของแหล่งนี้คือ search/browser habit เปลี่ยนยากมาก. ถ้า Microsoft ยังเปลี่ยนพฤติกรรมผู้ใช้ได้จำกัด [[perplexity|Perplexity]] ก็ยิ่งเจอโจทย์หนักเมื่อพยายามใช้ [[comet-browser|Comet]] แก้ [[distribution-moat|distribution moat]]
 
+## Claude Code cost pullback
+
+ใน [[how-ai-became-more-expensive-than-workers-it-replaced|How AI Became More Expensive Than The Workers It Replaced]] Microsoft ถูกใช้เป็นตัวอย่างองค์กรที่เริ่มคุมค่าใช้จ่าย AI ภายใน คลิปอ้างว่า Microsoft สั่งให้วิศวกรหยุดใช้เครื่องมือ coding ของ Anthropic / Claude Code โดยเหตุผลที่ถูกเล่าภายหลังคือค่าใช้จ่ายสูง ไม่ใช่แค่การผลักให้ใช้เครื่องมือใน ecosystem ของตัวเอง
+
+wiki เก็บเรื่องนี้เป็น source-attributed เพราะต้องตรวจ memo / reporting ต้นทางก่อนสรุปว่า policy จริงมีขอบเขตแค่ไหน
+
 ## ดูเพิ่ม
 
 - [[openai]]
 - [[gpt-5-5]]
 - [[claude-code]] — คู่แข่งของ Copilot ในฝั่ง Anthropic
 - [[distribution-moat]]
+- [[enterprise-ai-roi]]
+- [[ai-token-economics]]

@@ -1,6 +1,18 @@
 # Log
 
 
+## [2026-07-03] ingest | Economy Media — How AI Became More Expensive Than The Workers It Replaced
+
+Ingested the user-provided YouTube transcript from Economy Media about enterprise AI costs rising toward or above labor costs. Treated the video as secondary business/economics commentary; all numeric claims from Bloomberg/Reuters/Fortune/Gartner/WSJ/Economic Times/company examples remain source-attributed until checked against primary sources.
+
+- Created source page: `[[how-ai-became-more-expensive-than-workers-it-replaced]]`
+- Created entity page: `[[economy-media]]`
+- Created concept pages: `[[tokenmaxxing]]`, `[[ai-token-economics]]`, `[[enterprise-ai-roi]]`, `[[ai-labor-cost-reversal]]`
+- Updated related pages: `[[agentic-usage]]`, `[[usage-based-billing]]`, `[[ai-data-center-bottlenecks]]`, `[[orchestration-tax]]`, `[[code-is-free]]`, `[[ai-brain-fry]]`, `[[ai-search-economics]]`, `[[anthropic]]`, `[[openai]]`, `[[microsoft]]`, `[[meta]]`, `[[nvidia]]`, and `[[claude-code]]`
+- Updated `[[index]]`, `[[log]]`, and `hotcache.md`
+
+Key takeaways: (1) The source argues that AI's early cheap-labor narrative can reverse at enterprise scale because token costs multiply across employees, agent loops, context length, and model choice. (2) Tokenmaxxing is the behavioral mechanism: token consumption becomes a status/KPI proxy, so usage can rise without proportional outcome value. (3) Data-center and component constraints connect physical AI infrastructure to token prices, extending the `[[ai-data-center-bottlenecks]]` page from capacity/latency into cost/ROI. (4) The source creates an open tension with `[[code-is-free]]`: coding may still be much cheaper with AI, but “AI is cheap” cannot be generalized across data entry, call centers, or all enterprise workflows once token bills, oversight, and rework are counted.
+
 ## [2026-07-03] ingest | คุณพ่อนักลงทุน — รีวิว LITE COHR NOK AAOI
 
 Ingested the user-provided YouTube transcript for a Thai investing comparison of Lumentum/LITE, Coherent/COHR, Nokia/NOK, AAOI, and AXT in the AI data-center photonics theme. Treated it as secondary investment commentary, not a primary company source; transcript errors and all financial/company figures remain source-attributed.
