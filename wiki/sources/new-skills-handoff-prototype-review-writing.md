@@ -13,7 +13,7 @@ sources: ["New Skills! handoff, prototype, review and writing-*  Skills Changelo
 
 วิดีโอ changelog ของ [[matt-pocock|Matt Pocock]] (TypeScript expert และคนทำ workflow agent) อธิบาย skill ชุดใหม่ใน ecosystem ของเขา โดยแกนหลักคือการทำให้ agent ทำงานข้าม context window ได้ดีขึ้น และใช้ prototype เป็นพื้นที่ทดลองก่อน commit กับ implementation จริง
 
-## สรุปสั้น
+## ใจความสำคัญ
 
 - **`/handoff`** สร้างเอกสารส่งต่องานชั่วคราว เพื่อให้ agent ตัวใหม่รับ context, intent, และ skill ที่ควรใช้ต่อได้ ดู [[agent-handoff-documents]]
 - **`/prototype`** ใช้สร้าง prototype แบบทิ้งได้ ทั้ง UI prototype และ logic prototype เพื่อหาคำตอบที่อ่านจาก spec อย่างเดียวไม่ได้ ดู [[throwaway-prototyping]]

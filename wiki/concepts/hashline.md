@@ -40,7 +40,7 @@ sources: [improved-15-llms-harness-changed.md]
 
 ## เทียบกับแนวอื่น
 
-ดูตารางเต็มที่ [[edit-tool-formats]] — สรุปสั้น ๆ:
+ดูตารางเต็มที่ [[edit-tool-formats]] — พูดสั้น ๆ คือ:
 
 | แนว | ปัญหาหลัก |
 |---|---|

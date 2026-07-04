@@ -15,7 +15,7 @@ sources: [chinas-models-no-longer-need-western-hardware.md]
 
 แก่นของคลิปไม่ใช่แค่ benchmark ว่า model เก่งแค่ไหน แต่คือคำถามว่า lab จีนเริ่มมีทางเลี่ยงทั้ง hardware และ software stack ตะวันตกได้จริงแค่ไหน โดยเฉพาะ NVIDIA + CUDA.
 
-## สรุปสั้น
+## ใจความสำคัญ
 
 - Meituan open source / เปิดตัว LongCat 2.0 ซึ่งคลิปบอกว่าเป็น **1.6T-parameter MoE model** และมี **48B active parameters ต่อ token**
 - คลิปอ้างว่า train บน custom AI chips มากกว่า 50,000 ตัว และข้อมูลกว่า 35T tokens โดยไม่ใช้ NVIDIA GPUs หรือ Google TPUs

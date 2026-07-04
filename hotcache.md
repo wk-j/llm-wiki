@@ -1,7 +1,7 @@
 ---
 title: Hotcache
 
-Last updated: 2026-07-04 (index.md rewritten in Thai + Thariq Field Guide to Fable ingest)
+Last updated: 2026-07-04 (minor Thai wording cleanup + index.md rewritten in Thai + Thariq Field Guide to Fable ingest)
 
 ## Wiki state
 

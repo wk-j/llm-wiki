@@ -15,7 +15,7 @@ sources: [review-lite-cohr-nok-aaoi.md]
 
 แก่นของคลิปคือคำถามว่า ถ้า AI data center ต้องการส่งข้อมูลระหว่าง GPU, memory, switch, และ server เร็วขึ้นเรื่อย ๆ ใครได้ประโยชน์จริงจากคอขวดนี้ และใครยังเป็นแค่เรื่องเล่าที่ยังต้องพิสูจน์
 
-## สรุปสั้น
+## ใจความสำคัญ
 
 - คลิปวาง [[photonic-interconnects|photonics]] เป็นคอขวดถัดจาก GPU, memory, และ CPU ใน [[ai-data-center-bottlenecks|AI data center bottlenecks]] แต่ผู้พูดยังไม่เชื่อเต็มที่ว่า photonics จะทำ margin ได้ดีเท่ากลุ่ม memory
 - ห่วงโซ่ของ photonics ในคลิปเริ่มจากวัตถุดิบและ [[indium-phosphide-wafer|Indium Phosphide wafer]] ไปจนถึง laser, DSP, optical module, switch, และ data center

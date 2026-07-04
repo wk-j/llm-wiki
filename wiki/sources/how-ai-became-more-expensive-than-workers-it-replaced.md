@@ -15,7 +15,7 @@ sources: [how-ai-became-more-expensive-than-workers-it-replaced.md]
 
 แก่นของคลิปคือ [[ai-labor-cost-reversal|AI labor cost reversal]]: บางงาน AI ยังถูกกว่าคน โดยเฉพาะ coding ตามที่คลิปยอมรับ แต่บางงาน เช่น data entry หรือ call center ส่วนต่างเริ่มแคบ หรือคนอาจถูกกว่าแล้ว
 
-## สรุปสั้น
+## ใจความสำคัญ
 
 - คลิปเริ่มจาก narrative หลัง ChatGPT ปี 2022: AI ถูกมองว่าเร็ว ถูก และแทนทีมงานจำนวนมากได้
 - พอองค์กรบังคับหรือกระตุ้นให้พนักงานใช้ AI การใช้ token กลายเป็น KPI / status signal จนเกิด [[tokenmaxxing|tokenmaxxing]] คือใช้ token เยอะเพื่อดู productive
@@ -73,7 +73,7 @@ sources: [how-ai-became-more-expensive-than-workers-it-replaced.md]
 
 **ผลคือ:** enterprise AI ROI ต้องรวม adoption policy, model choice, human oversight, token waste, และงานที่ AI ถูกกว่าคนจริง ๆ แยกจากงานที่แค่ดูทันสมัย
 
-## จุดตึงกับ “Code is Free”
+## เมื่อเทียบกับ “Code is Free”
 
 หน้า [[code-is-free|Code is Free]] ใน wiki บอกว่า implementation cost ต่ำลงมาก และ scarcity ย้ายไปที่ human judgement, attention, และ token budget. คลิปนี้ไม่ได้ลบกรอบนั้น แต่เพิ่มคำเตือนว่า “token budget” อาจไม่ได้เล็กพอจะมองข้ามได้
 

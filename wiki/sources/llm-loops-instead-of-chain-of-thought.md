@@ -15,7 +15,7 @@ sources: [llm-loops-instead-of-chain-of-thought.md]
 
 แก่นของคลิปคือ test-time compute มีได้มากกว่าหนึ่งรูปแบบ. Chain-of-thought เพิ่ม compute ผ่าน text. Looped transformer เพิ่ม compute ผ่าน recurrence ภายใน model.
 
-## สรุปสั้น
+## ใจความสำคัญ
 
 - Chain-of-thought ทำงานดีเพราะให้ model iterate ได้ แต่ต้อง decode ความคิดเป็น text แล้ว embed กลับเข้า model ซ้ำ ๆ
 - Looped transformer ใช้ block เดิมวนหลายรอบ ให้ hidden state ค่อย ๆ refine โดยไม่ต้อง externalize ความคิดเป็น token
