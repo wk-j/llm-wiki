@@ -91,7 +91,7 @@ When the user asks to lint or health-check the wiki:
 
 ## Index format (wiki/index.md)
 
-Organized by section. Each entry: `- [[Page Name]] — one-line description`.
+Organized by section. Each entry: `- [[page-name]] — คำอธิบายหนึ่งบรรทัดเป็นภาษาไทย` (targets stay English; descriptions are Thai — see `## Bilingual content`).
 
 ```markdown
 # Index
@@ -155,7 +155,9 @@ Source summaries (`wiki/sources/`) are also Thai-primary, but stay closer to the
 - Filenames (`wiki/concepts/ai-3d-workflow.md`) — lowercase, hyphens
 - Wikilink targets (`[[ai-3d-workflow]]`) — use alias for Thai display: `[[ai-3d-workflow|เวิร์กโฟลว์ AI + 3D]]` (inside tables, escape the pipe: `[[ai-3d-workflow\|เวิร์กโฟลว์ AI + 3D]]`)
 - Frontmatter `title:` and `tags:`
-- Entries in `wiki/index.md` (keeps the index scannable with `grep`)
+- Section headings in `wiki/index.md` (`## Sources` etc.)
+
+**Index entries (`wiki/index.md`) are Thai-primary** (changed 2026-07-04, by user request): each entry stays `- [[english-target]] — คำอธิบายภาษาไทยหนึ่งบรรทัด`. Wikilink targets stay English; descriptions follow the same Thai style rules as page bodies (technical terms stay English). `grep` by page name still works because targets are English.
 
 **What counts as a "technical term" (stays English in Thai-primary body):**
 

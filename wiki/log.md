@@ -1089,3 +1089,9 @@ Ingested Thariq Shihipar's (@trq212, Claude Code team) X article on working with
 - Updated concepts: `[[html-artifacts]]`, `[[grill-me]]`, `[[throwaway-prototyping]]`, `[[intent-gap]]`
 - Updated source pages: `[[thariq-html-effectiveness]]`, `[[claude-code-session-management]]`
 - Updated `[[index]]`, `[[log]]`, and `hotcache.md`
+
+## [2026-07-04] maintain | Rewrite index.md descriptions in Thai
+Rewrote every entry description in `wiki/index.md` into Thai per user request (previously the index was English-only by convention). Wikilink targets, aliases, and section headings (`## Sources` etc.) stay English so filenames and `grep` by page name keep working; descriptions follow the same spoken-Thai style rules as page bodies. Also cleaned up while rewriting: dropped a stray `[[piyalitt-ittichaiwong]]` entity line that sat in the Sources section (it remains in Entities), and merged ~50 duplicated concept entries (the Concepts section contained a large repeated block, e.g. `[[agentic-search]]`, `[[bullshitbench]]`, `[[dreaming]]`, `[[usage-based-billing]]` each listed twice) keeping the more informative description at the first occurrence. Verified the set of wikilink targets is identical before/after. Updated `CLAUDE.md` to record the new convention: index entries are Thai-primary (changed 2026-07-04, by user request); targets stay English.
+- Rewrote `[[index]]` (584 lines, all descriptions Thai)
+- Updated `CLAUDE.md` (index-format and bilingual-content sections)
+- Updated `[[log]]` and `hotcache.md`

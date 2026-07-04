@@ -1,653 +1,599 @@
 # Index
 
 ## Sources
-- [[field-guide-to-fable-finding-unknowns]] — Thariq Shihipar / @trq212 (X article, ingested 2026-07-04): working with Claude Fable 5 through the map-vs-territory lens; quality is bottlenecked by the user's ability to clarify unknowns; 4-quadrant unknowns breakdown plus techniques before/during/after implementation (blind spot pass, brainstorms/prototypes, interviews, references, implementation plans, implementation notes, pitches, quizzes); Fable launch video edited entirely by Claude Code
-- [[how-ai-became-more-expensive-than-workers-it-replaced]] — Economy Media (YouTube, 2026-07-02): argues that enterprise AI can become more expensive than the labor it replaces when token-based pricing, tokenmaxxing, data-center supply constraints, and agent usage scale across whole companies; keeps numbers about Microsoft/Meta/Anthropic/OpenAI/Bloomberg/Reuters/Gartner as source-attributed
-- [[review-lite-cohr-nok-aaoi]] — คุณพ่อนักลงทุน (YouTube, Thai, 2026-06-28): compares Lumentum/LITE, Coherent/COHR, Nokia/NOK, AAOI, and AXT in the AI data-center photonics theme; frames photonic interconnects as a possible post-GPU/memory bottleneck, explains Indium Phosphide wafer / 6-inch capacity constraints, and separates current leaders from pure-play, high-risk, and upstream substrate bets; transcript and financial numbers kept source-attributed
-- [[defence-mechanism]] — Wikipedia overview of psychoanalytic defense mechanisms: unconscious/automatic processes that protect the self from anxiety and conflict; covers Freud/Anna Freud history, examples such as repression/rationalization/sublimation, multiple classification systems (DSM-IV-TR, PDM-2, Kernberg, Gabbard, Vaillant, Perry DMRS), relation with coping, and empirical-evidence criticism
-- [[infinity-godel-incompleteness-mlhf]] — แมทเล่าให้ฟัง | MLHF (YouTube, Thai): explains infinity through cardinality, countable vs uncountable sets, Cantor's diagonal argument, Beth/Aleph numbers, Continuum Hypothesis, ZFC axioms, Gödel/Cohen independence, and Gödel's incompleteness theorems; includes transcript caveats around auto-captioned terminology and Gödel/Cohen timeline compression
-- [[eternal-sloptember]] — the singularity is nearer / geohot.github.io (2026-05-24): severe critique of coding agents as statistical mimicry rather than programming; argues agents front-load progress then fail at polish, harm large organizations more than high-performing small teams, collapse old quality proxies like syntax/grammar, and need world models/process understanding rather than RLVR-style test gaming
-- [[how-perplexity-lost-ai-war]] — Mondo Startups (YouTube transcript): argues that Perplexity became a strong niche research tool rather than replacing Google because answer+citation was copied by incumbents, AI query costs are heavier than classic search economics, monetization clashes with trust, publisher disputes weaken positioning, and Google owns distribution through search/browser/mobile/product defaults
-- [[llm-loops-instead-of-chain-of-thought]] — bycloud (YouTube transcript): explains looped transformers as an internal test-time-compute alternative to chain-of-thought; covers recurrent-depth transformers, multi-hop reasoning, stability/Parcae, mechanistic latent-state analysis, Mixture-of-Recursions, KV-cache tradeoffs, and caveats about expressiveness and real-world scaling
-- [[oumuamua-2026-curiosity-channel]] — Curiosity Channel คนช่างสงสัย (YouTube, Thai): timeline of ʻOumuamua knowledge 2017→2026; light-curve shape inference, non-gravitational acceleration with no visible tail, Loeb's solar-sail hypothesis vs SETI silence, and the now-favored radiolysis/dark-comet explanation; closes with Occam's razor as method
-- [[chinas-models-no-longer-need-western-hardware]] — Prompt Engineering (YouTube transcript): explains Meituan's LongCat 2.0 as a 1.6T MoE model allegedly trained without NVIDIA GPUs or Google TPUs; frames the story around custom AI chips, CUDA independence, n-gram embeddings, sparse attention, speculative decoding, and the limits of self-reported benchmarks
-- [[planning-mode-dangerous-illusion]] — Zoran on C# (YouTube transcript): full demo behind the Claude planning critique; compares Sonnet 4.6 vs Opus 4.7 on a directory-upload feature and shows that better plans still miss senior engineering judgment around data retention, duplicated logic, and server-load risk
-- [[zoran-horvat-claude-no-planning-engine]] — Zoran Horvat (X, 2026): critique of Claude Code Plan mode as prompt/harness scaffolding rather than a symbolic planning engine; plans are useful drafts but not engineering judgment
-- [[zoran-horvat-domain-model-persistence]] — Zoran Horvat (X, 2026): domain model should not bend to the database; use DDD/value objects, EF Core complex properties, value conversions, private constructors, and query translation to keep domain modeling separate from persistence
-- [[aom-fable-elysia-2-audit]] — Aom Khunpanitchot (Facebook, ingested 2026-07-02): field report on Fable running a deep agent audit against Elysia 2; Fable reportedly spawned nearly 100 agents and produced a 104-item / 24,000-word report saying the codebase was not ready for RC, despite other AI reviewers saying stable/RC looked acceptable
-- [[l8-principals-agentic-engineering-workflow-kun-chen]] — Kun Chen (YouTube transcript): end-to-end agentic engineering workflow for a solo L8/principal-style builder; terminal cockpit (WezTerm/tmux/Neovim), memory files, skills/progressive disclosure, voice input, AXI agent ergonomics, Lavish planning artifacts, No Mistakes validation, Good Night Have Fun long-running loops, Treehouse worktrees, First Mate meta-agent, and the captain mindset
-- [[introducing-genebench-pro]] — OpenAI (2026-06-30): launches GeneBench-Pro, a 129-problem computational-biology benchmark for research taste / scientific judgement; synthetic causal data generation, expert review, deterministic grading, 10 public sample questions, planned 50-question Artificial Analysis subset; GPT-5.6 Sol reaches 28.7% max reasoning and 31.5% Pro, showing progress but no saturation
-- [[techsauce-ai-brain-fry]] — Techsauce (Facebook, 2026-06-29/30): Thai summary of an HBR-cited AI Brain Fry study; AI can reduce burnout on routine tasks, but close AI oversight, tool switching, and using more than 3 tools can increase mental fatigue, information overload, decision fatigue, mistakes, and quit intention
-- [[i-dont-want-to-use-your-agent]] — Rhys Sullivan (X, 2026-06-27): BYO-agent thesis for product companies; in-app agents are useful for normal users, but power users want their own frontier-model/local-context agent to access product expertise via skills, MCP/API/CLI, docs, and deeplinked UI; build the internal agent on the same primitives exposed externally
-- [[matt-pocock-dumb-zone-compaction]] — Matt Pocock (X, 2026): practical `/rewind` + `/compact` test for the "dumb zone"; shows context-window capacity is not active-context quality; compact at phase boundaries, keep durable state outside the transcript
-- [[mikelopster-loop-engineering]] — mikelopster (YouTube, 2026): Thai practical take on Loop Engineering; explains prompt→context→loop, goal prompt, feedback gate, Claude Code `/loop`/`/goal`, Codex schedule/goal style, and why loop is useful only when exit condition/scorer is clear; content/taste loops can just create orchestration tax
-- [[self-learning-for-agents-explained]] — @ataiiam / CopilotKit (2026-06-24): agents can learn in 3 layers (Harrison Chase split) — model (Karpathy AutoResearch / MIT SEAL / DeepMind AlphaEvolve, lab-only, needs a free scorer), harness (loop engineering / LangChain Deep Agents / Self-Harness / Microsoft Agent Framework, product-ready), context (memory + skills via Letta/OpenClaw/Hermes/Anthropic skills, the only layer that learns from users); model belongs to labs, harness+context are yours; the unfakeable signal is the user's real decision (AG-UI/CopilotKit) — auto-scores can be gamed (Darwin Gödel Machine)
-- [[matt-pocock-agentic-workflow]] — David Ondrej × Matt Pocock (2026-06-19): "stop obsessing over the model, work on the harness" (F1 engine analogy, ~50/50, bitter-lesson tension); AI ate tactical programming so be strategic; your skills are the ceiling; skills = procedures (you drive) vs abilities (model drives); knowledge/skills/wisdom + the teach skill; queues not loops (Ralph lineage) + AFK; AX vs DX; self-improving systems ("buy a lock"); Sandcastle on GitHub Actions; start from a blank slate
-- [[agentic-code-review-osmani]] — Addy Osmani (2026-06-16): coding agents moved the hard part from writing code to deciding whether to trust it; 2026 data shows raw code output rising far faster than delivered value and review capacity; review must become risk-tiered, evidence-required, sensor-driven, and still human-owned at merge
-- [[introducing-omnigent-meta-harness]] — Databricks (2026-06-13): proposes meta-harness as the layer above Claude Code/Codex/Pi/custom agents; common messages+files/tool-calls interface; composition, stateful policy, cost control, OS sandbox, multi-harness authoring, and live collaborative sessions; Omnigent is Apache 2.0 alpha
-- [[how-to-keep-shipping-away-from-desk]] — Zack Proser / WorkOS (2026-06-11): agent is no longer the bottleneck, human attention is; developer-balance stack = signal layer / voice-first / Remote Control / system improvement from JSONL history; speed requires safety through lint→browser→critic verification gates; preserve judgement, health, and learning while agents keep shipping
-- [[stop-writing-specs-start-writing-facts]] — Jaroslaw Wasowski (2026-05-12): former SDD advocate walks it back; a spec is a prediction about the model, not a contract (LLM non-determinism even at temp 0); a fact = executable assertion that survives model upgrades (one test passed Sonnet 3.5→Opus 4.5+ unchanged, the spec needed 4 reinterpretations); intent gap (Lahiri); 57-year genealogy Hoare→Meyer→QuickCheck→Agent Behavioral Contracts; SDD still wins where a human outside the team reads the artifact (compliance/B2B/onboarding); 90-day migration audit→pivot→gate
-- [[loop-engineering-osmani]] — Addy Osmani (2026-06-09): "loop engineering" = stop prompting the agent yourself, design the loop that prompts it (Steinberger/Cherny); a loop is a harness that runs on a timer, spawns helpers, feeds itself; five pieces + memory (Automations / Worktrees / Skills / Plugins+Connectors / Sub-agents / state file); Claude Code & Codex both have all five; /loop vs /goal; maker/checker split; three problems get sharper (verification, comprehension debt, cognitive surrender)
-- [[harness-engineering-bockeler]] — Birgitta Böckeler / Thoughtworks, martinfowler.com (2026-04-02): mental model for the coding-agent *user* harness; harness = guides (feedforward) + sensors (feedback), split computational vs inferential; the steering loop; keep quality left; three regulation categories (maintainability / architecture fitness / behaviour harness); harnessability; harness templates; harness as cybernetic governor
-- [[what-weve-learned-building-cloud-agents]] — Cursor / Josh Ma (2026-06-02): one year of building cloud agents; the dev environment is the product (full env = output quality; failures show as silent quality drops, not crashes); long-running agents need durable execution (work-stealing 1-nine → Temporal 2-nines, 50M+ actions/day, 40%+ of Cursor PRs from cloud agents); decouple agent loop / machine / conversation state; "get out of the way" (shift logic from harness → agent-controlled tools as models improve); self-healing environments / autoinstall
-- [[mellum2-goes-open-source]] — JetBrains AI Blog (2026-06-01): Mellum2 open-sourced under Apache 2.0; 12B MoE model with 2.5B active params/token for routing, low-latency RAG, fast subagents, and private/local software-engineering AI workflows; introduces the focal-model framing
-- [[the-orchestration-tax]] — Addy Osmani (2026-05-28): the "orchestration tax" (named by Richard Seroter on a Google I/O panel); you are the single serial resource (GIL/Amdahl) in a concurrent agent system; starting agents is cheap, closing the loop is not; 5 tactics to architect your attention; busy ≠ productive; unpaid tax = technical + cognitive debt
-- [[piyalitt-opus-4-8-recap]] — Piyalitt Ittichaiwong (2026-05-28): Thai recap of the Claude Opus 4.8 launch; honesty as the headline (admits uncertainty, ~4× less likely to let its own bugs through); alignment near Mythos; new dynamic workflows + effort control UI + system-in-messages; default effort drops xhigh→high; Mythos-to-all-customers timeline within weeks
-- [[piyalitt-deepswe-benchmark]] — Piyalitt Ittichaiwong (2026-05-27): DeepSWE & FrontierSWE benchmarks; contamination-free + behavioral verifier reveal real model gaps; GPT-5.5 70% #1, Opus 4.7 54% #3; per-vendor habits (Claude misses requirements / cheats via git, GPT precise)
-- [[software-engineering-at-the-tipping-point]] — Adam Bender (2026-05-22): Software Ecology and Socio-technical Systems at the 10x Moment; Google's monorepo and Shared Fate / LSC superpowers; how AI-era scaling breaks reviewer capacity, test compute, VCS limits, and internal API boundaries; DORA amplifier pattern and 4 core fundamentals (Infrastructure, Validation, Isolation, Abstraction) for preserving human intellectual control
-- [[improved-15-llms-harness-changed]] — Can Bölük (2026-02-12): Hashline edit tool benchmark across 16 models; harness > model framing; vendor vs open harness; OpenCode block context
-- [[software-after-software]] — Thorsten Ball (2026-05-26): 12-point manifesto on code abundance, process drag, agent-first development, frontier camps, and reorganizing around models; Amp Labs positioning
-- [[fundamental-productivity-ai-world]] — ChrisZa Stuff (2026-05-24): productivity as accepted human interaction; AI creates producer/consumer imbalance; acceptance bottleneck; standards must rebalance for AI-era artifacts
-- [[software-writing-software-gone-right]] — TJ DeVries (2026-05-20): `luai.nvim`; just-in-time software; personalized development environment; generate/cache/improve Lua functions inside Neovim
-- [[new-skills-handoff-prototype-review-writing]] — Matt Pocock (2026-05-12): Skills changelog for /handoff, /prototype, in-progress /review and writing-* workflows; handoff docs, throwaway prototypes, dual-axis review, writing fragments
-- [[agent-harness-engineering]] — Addy Osmani (2026-05-10): Agent = Model + Harness; harness components, hooks, context management, Harness Ratchet, and Harness-as-a-Service
-- [[matt-pocock-software-fundamentals]] — Matt Pocock (2026-04-23): Software fundamentals matter more than ever; Specs-to-Code trap; Strategic vs Tactical AI; Grill Me; Ubiquitous Language; Deep Modules; Software Entropy; TDD
-- [[granite-4-1-fastest-asr]] — Sam Witteveen (2026-05-07): IBM Granite Speech 4.1 ASR models; 2B base/Plus/NAR variants; WER, RTFX, diarization, keyword biasing, local deployment
-- [[memory-and-dreaming-self-learning-agents]] — Anthropic talk (Mahes, 2026-05-09): Memory-as-filesystem + Dreaming (out-of-band batch curation) for self-learning agents in Managed Agents API
-- [[helldivers-2-mostly-negative-reviews]] — SwanyPlaysGames (2026-05-07): Helldivers 2 Steam reviews hit "Mostly Negative"; late-game stagnation; monkey-paw balancing; monetization focus
-- [[multi-token-prediction-gemma-4]] — Google (2026-05-05): MTP drafters for Gemma 4; up to 3x speedup via speculative decoding; lossless; shares activations and KV cache with target
-- [[agentic-coding-trap]] — Lars Faye (2026): The "Agentic Coding is a trap" warning, cognitive debt, and skill atrophy from over-relying on coding agents
-- [[anthropic-engineer-claude-code]] — summary of Cal Rueb's presentation on Claude Code best practices
-- [[ai-language-crisis-phenomenon]] — Thairath Plus (2026-05-03): AI Language Crisis Phenomenon; Text Slop; the "Not just... but..." cliché; and the threat to human language depth.
-- [[matt-pocock-4-ai-terms]] — Matt Pocock (2026-05-04) defines the 4 core AI terms: Model, Harness, Environment, and Agent.
-- [[jrt-investment-idgaf-skill]] — JRT Investment (FB, 2026-05-02): "I don't give a fuck" as care allocation; attention as scarce resource; lower mental load and faster decisions
-- [[andrej-karpathy-vibe-coding-to-agentic-engineering]] — Andrej Karpathy (2026): Vibe Coding vs. Agentic Engineering; Software 3.0; Jagged Intelligence (Ghosts vs. Animals); Verifiability; Agent-Native Infrastructure
-- [[zed-is-1-0]] — Zed Industries (2026): Zed editor 1.0 release; video game engine architecture; GPUI (Rust); DeltaDB (CRDT); Parallel Agents; Agent Client Protocol (ACP)
-- [[chase-ai-claude-code-impeccable]] — Chase AI (2026): Claude Code + Impeccable skill; Eleven Pillars of Design; Impeccable Live (browser editing); Greenfield vs. Legacy; Design Audit; AI Slop
-- [[jeeraphan-lairat-ai-coding-speed]] — Jeeraphan Lairat (Senestia, 2026): Why 10x coding speed doesn't lower Lead Time; Theory of Constraints; Local Optimization Trap; Shift-Left Testing; Limit WIP
-- [[building-pi-world-of-slop]] — Mario Zechner (AI Engineer, 2026): pi as self-modifying agent core; hidden context critique; clanker pressure on OSS; slow-down discipline for agent-generated code
-- [[mario-zechner-pi-agent]] — Mario Zechner (Pi, 2026): Minimalist terminal coding agent; Spaceship Trap; Malleable Tools; Tree-structured Sessions; Clanker Slop
-- [[peter-gostev-what-models-suck-at]] — Peter Gostev (Arena.ai, 2026): BullshitBench; Dissatisfaction Rate; Reasoning Regression; Expert Category Gaps (Math vs Creative)
-- [[maggie-appleton-collaborative-ai-engineering]] — Maggie Appleton (GitHub Next, 2026): Collaborative AI Engineering; Alignment Bottleneck; ACE prototype; Vibecoded Slop vs. Craftsmanship; Team Pulse
-- [[ryan-lopopolo-harness-engineering]] — Ryan Lopopolo (OpenAI, 2026): Harness Engineering from a "Token Billionaire" perspective; Code is Free; Just-in-Time Context; Reviewer Personas; Durable Feedback Loops
-- [[llm-era-computer-engineering-ep3-nattee]] — Nattee Niparnan Ep 3: Closing weaknesses (tests/UI), the shrinking generalist moat, and the Eh Gland
-- [[microsoft-openai-partnership-2026]] — Microsoft and OpenAI partnership restructure (April 2026): end of exclusivity, revenue share changes, and shift to an "open relationship"
-- [[github-copilot-billing-update]] — GitHub Copilot move to usage-based billing and GitHub AI Credits starting June 1, 2026
-- [[ui-style-categories]] — Comprehensive taxonomy of ~40+ UI/UX design styles across 11 categories
-- [[karpathy-llm-knowledge-bases]] — Karpathy's Twitter thread on using LLMs to build personal knowledge wikis
-- [[retro-futuristic-ui-design]] — Complete retro-futurism UI design system with five subgenres, palettes, and implementation patterns
-- [[gitnexus|GitNexus source]] — README for GitNexus, the zero-server code intelligence engine using knowledge graphs and MCP
-- [[soviet-cosmism-ui-style]] — Soviet Cosmism as a UI design language: philosophy, visual DNA, and UI patterns
-- [[soviet-cosmism-philosophy]] — Deep dive: Soviet Cosmism philosophy, three color palettes, animation vocabulary, CSS foundation, component library
-- [[helix-release-25-07]] — Helix 25.07 release: file explorer, LSP document colors, command mode rewrite, Tree-house
-- [[four-horsemen-game-ui]] — Four types of game UI: diegetic, non-diegetic, spatial, meta — classified by world presence and character awareness
-- [[imetomi-retro-futuristic-ui]] — Open-source React/CSS component library implementing cassette futurism CRT and LCD effects
-- [[holographic-ui|Holographic UI source]] — Complete holographic UI design system: 5 variants, rendering techniques, animations, components, layout patterns
-- [[karpathy-guidelines]] — Claude Code skill packaging Karpathy's four behavioral rules: think before coding, simplicity, surgical changes, goal-driven execution
-- [[csharp-14-whats-new]] — Microsoft Learn overview of C# 14 (ships with .NET 10): extension members, `field` keyword, null-conditional assignment, and six other features
-- [[karpathy-llm-wiki-idea-file]] — Deep dive into Karpathy's LLM Wiki idea file gist: idea file concept, wiki vs RAG, three-layer architecture, tool stack, Memex connection
-- [[advisor-strategy|Advisor Strategy source]] — Anthropic blog: advisor strategy pairs Opus advisor with Sonnet/Haiku executor for near-Opus intelligence at fraction of cost
-- [[leo-robinovitch-terminal-pager]] — Leo Robinovitch on building a reusable Go viewport component and lore terminal pager: ANSI/Unicode, search, Bubble Tea
-- [[claude-code-session-management]] — @trq212 guide to Claude Code session management: context rot, compaction, rewind, subagents as context tools
-- [[claude-opus-4-7-announcement]] — Anthropic announcement of Claude Opus 4.7: SWE gains, 3× vision, xhigh effort, /ultrareview, auto mode, tokenizer change
-- [[vim-pack-guide]] — Evgeni Chasnovski's guide to vim.pack, Neovim 0.12's built-in plugin manager: API, lockfile, hooks, lazy loading, migration from mini.deps/lazy.nvim
-- [[software-engineer-role-ai-era]] — Thai blog post on engineering role shift in the AI era: upstream/downstream expand, middle hollows out; six new role archetypes
-- [[will-ai-replace-3d-software]] — Andrew Price X thread: AI + 3D complementarity, moon-base workflow (Blender → Flux.1 Depth → Meshy), judgement-vs-automation skill framework
-- [[harness-engineering-panutat]] — Panutat Tejasen's Thai Facebook post: teach "Harness Engineering" (pipeline of AI review/test/audit agents) rather than teaching students to review AI output
-- [[panutat-tejasen-thclaws-positioning]] — Panutat Tejasen (FB, 2026-04-27): thClaws positioning; Open Source Governance; papercut features; speed as a differentiator
+- [[field-guide-to-fable-finding-unknowns]] — Thariq Shihipar / @trq212 (บทความบน X, ingest 2026-07-04): มองการทำงานกับ Claude Fable 5 ผ่านเลนส์ map vs territory — คุณภาพงานติดอยู่ที่ตัวเราว่าเคลียร์ unknowns ได้แค่ไหน; มี 4-quadrant ของ unknowns กับเทคนิคก่อน/ระหว่าง/หลังลงมือ (blind spot pass, brainstorm/prototype, interview, references, implementation plan/notes, pitch, quiz); วิดีโอเปิดตัว Fable ตัดต่อด้วย Claude Code ทั้งหมด
+- [[how-ai-became-more-expensive-than-workers-it-replaced]] — Economy Media (YouTube, 2026-07-02): ชี้ว่า AI ในองค์กรอาจแพงกว่าแรงงานที่มันมาแทน — พอ token-based pricing บวก tokenmaxxing บวก data center ขาดแคลน แล้ว agent ถูกใช้กันทั้งบริษัท ต้นทุนก็บาน; ตัวเลขของ Microsoft/Meta/Anthropic/OpenAI/Bloomberg/Reuters/Gartner ยังอิงตามแหล่ง ยังไม่ได้ตรวจ
+- [[review-lite-cohr-nok-aaoi]] — คุณพ่อนักลงทุน (YouTube ไทย, 2026-06-28): เทียบ Lumentum/LITE, Coherent/COHR, Nokia/NOK, AAOI, AXT ในธีม photonics ของ AI data center; มอง photonic interconnect เป็นคอขวดตัวถัดไปหลัง GPU/memory อธิบายข้อจำกัด wafer Indium Phosphide / กำลังผลิต 6 นิ้ว แล้วแยกเจ้าตลาดตัวจริงออกจากหุ้น pure-play เสี่ยงสูงและหุ้นวัตถุดิบต้นน้ำ; transcript กับตัวเลขการเงินยังอิงตามแหล่ง ยังไม่ได้ตรวจ
+- [[defence-mechanism]] — Wikipedia ว่าด้วย defense mechanism ในจิตวิเคราะห์: กระบวนการอัตโนมัติที่จิตใช้กันตัวเองจากความกังวลและความขัดแย้ง; เล่าประวัติ Freud/Anna Freud ตัวอย่างอย่าง repression/rationalization/sublimation ระบบจัดหมวดหลายค่าย (DSM-IV-TR, PDM-2, Kernberg, Gabbard, Vaillant, Perry DMRS) ความต่างกับ coping และคำวิจารณ์เรื่องหลักฐานเชิงประจักษ์
+- [[infinity-godel-incompleteness-mlhf]] — แมทเล่าให้ฟัง | MLHF (YouTube ไทย): อธิบาย infinity ผ่าน cardinality, countable vs uncountable, Cantor's diagonal argument, Beth/Aleph numbers, Continuum Hypothesis, ZFC, ผลงาน independence ของ Gödel/Cohen และทฤษฎี incompleteness ของ Gödel; มีหมายเหตุว่าศัพท์มาจาก auto-caption และ timeline ของ Gödel/Cohen ถูกเล่าแบบบีบ
+- [[eternal-sloptember]] — geohot.github.io (2026-05-24): บทวิจารณ์สายแรงว่า coding agent ไม่ได้ "เขียนโปรแกรม" แต่เลียนแบบเชิงสถิติ ทำงานช่วงแรกดูคืบแล้วไปตายตอน polish; องค์กรใหญ่เจ็บกว่าทีมเล็ก proxy คุณภาพแบบเดิม (syntax/โครงสร้างสวย) ใช้ไม่ได้แล้ว และของจริงต้องมี world model/เข้าใจ process ไม่ใช่เล่นเกมกับ test แบบ RLVR
+- [[how-perplexity-lost-ai-war]] — Mondo Startups (YouTube transcript): มองว่า Perplexity กลายเป็นเครื่องมือ research เฉพาะทางที่ดี แต่ล้ม Google ไม่ได้ — ฟีเจอร์ answer+citation โดนเจ้าเดิมก๊อปตาม ต้นทุนต่อ query ของ AI หนักกว่า search แบบเดิม การหาเงินขัดกับความน่าเชื่อถือ ปัญหากับ publisher บั่นทอน positioning แถม Google กุม distribution ผ่าน search/browser/mobile/default ของ product
+- [[llm-loops-instead-of-chain-of-thought]] — bycloud (YouTube transcript): อธิบาย looped transformer เป็นทางเลือกของ chain-of-thought ที่คิดวนอยู่ภายในตัว model (test-time compute); ครอบคลุม recurrent-depth transformer, multi-hop reasoning, เสถียรภาพ/Parcae, การวิเคราะห์ latent state, Mixture-of-Recursions, tradeoff เรื่อง KV cache และข้อควรระวังเรื่อง expressiveness กับการ scale ใช้จริง
+- [[oumuamua-2026-curiosity-channel]] — Curiosity Channel คนช่างสงสัย (YouTube ไทย): ไทม์ไลน์ความรู้เรื่อง ʻOumuamua ปี 2017→2026; เดารูปทรงจาก light curve, ความเร่งที่ไม่ใช่แรงโน้มถ่วงทั้งที่ไม่เห็นหาง, สมมติฐาน solar sail ของ Loeb ปะทะความเงียบจากฝั่ง SETI, จบที่คำอธิบาย radiolysis/dark comet ที่ตอนนี้เป็นตัวเต็ง; ปิดท้ายด้วย Occam's razor ในฐานะวิธีคิด
+- [[chinas-models-no-longer-need-western-hardware]] — Prompt Engineering (YouTube transcript): เล่าเรื่อง LongCat 2.0 ของ Meituan — MoE 1.6T ที่อ้างว่า train โดยไม่ใช้ NVIDIA GPU หรือ Google TPU; วนรอบประเด็นชิป AI ทำเอง ความเป็นอิสระจาก CUDA, n-gram embeddings, sparse attention, speculative decoding และข้อจำกัดของ benchmark ที่รายงานกันเอง
+- [[planning-mode-dangerous-illusion]] — Zoran on C# (YouTube transcript): demo เต็มเบื้องหลังคำวิจารณ์เรื่อง planning ของ Claude; เทียบ Sonnet 4.6 กับ Opus 4.7 บนฟีเจอร์ directory upload แล้วชี้ว่าแผนดีขึ้นก็ยังพลาด judgment แบบ senior — เรื่อง data retention, logic ซ้ำซ้อน, ความเสี่ยง server load
+- [[zoran-horvat-claude-no-planning-engine]] — Zoran Horvat (X, 2026): วิจารณ์ Plan mode ของ Claude Code ว่าเป็นแค่ prompt/harness scaffolding ไม่ใช่ planning engine เชิงสัญลักษณ์; แผนใช้เป็นร่างได้ แต่ไม่ใช่ judgment ทางวิศวกรรม
+- [[zoran-horvat-domain-model-persistence]] — Zoran Horvat (X, 2026): domain model ไม่ควรงอตัวตาม database; ใช้ DDD/value objects, EF Core complex properties, value conversions, private constructor และ query translation เพื่อแยกงาน domain modeling ออกจาก persistence
+- [[aom-fable-elysia-2-audit]] — Aom Khunpanitchot (Facebook, ingest 2026-07-02): รายงานหน้างานตอนให้ Fable ทำ deep agent audit กับ Elysia 2; เล่าว่า Fable spawn agent เกือบ 100 ตัว ออกรายงาน 104 ประเด็น / 24,000 คำ สรุปว่า codebase ยังไม่พร้อมออก RC ทั้งที่ AI reviewer เจ้าอื่นบอกว่าดูโอเคแล้ว
+- [[l8-principals-agentic-engineering-workflow-kun-chen]] — Kun Chen (YouTube transcript): workflow แบบ agentic ครบวงจรของ builder เดี่ยวระดับ L8/principal; terminal cockpit (WezTerm/tmux/Neovim), memory files, skills/progressive disclosure, voice input, ergonomics ของ AXI agent, planning artifacts แบบ Lavish, No Mistakes validation, loop รันยาวแบบ Good Night Have Fun, Treehouse worktrees, First Mate meta-agent และ mindset แบบกัปตันเรือ
+- [[introducing-genebench-pro]] — OpenAI (2026-06-30): เปิดตัว GeneBench-Pro benchmark ชีววิทยาเชิงคำนวณ 129 ข้อ วัด research taste / judgment เชิงวิทยาศาสตร์; สร้างข้อมูล causal สังเคราะห์ ให้ผู้เชี่ยวชาญรีวิว ตรวจให้คะแนนแบบ deterministic มีข้อตัวอย่างสาธารณะ 10 ข้อ กับ subset 50 ข้อสำหรับ Artificial Analysis; GPT-5.6 Sol ได้ 28.7% (max reasoning) / 31.5% (Pro) — คืบหน้าแต่ยังห่างจากตัน
+- [[techsauce-ai-brain-fry]] — Techsauce (Facebook, 2026-06-29/30): สรุปไทยของงานวิจัย AI Brain Fry ที่ HBR อ้างถึง; AI ช่วยลด burnout ในงาน routine ได้ แต่พอต้องคอยจ้อง AI ใกล้ชิด สลับเครื่องมือบ่อย หรือใช้เกิน 3 ตัว ความล้าทางใจ information overload decision fatigue ความผิดพลาด และความอยากลาออกกลับเพิ่มขึ้น
+- [[i-dont-want-to-use-your-agent]] — Rhys Sullivan (X, 2026-06-27): แนวคิด BYO-agent สำหรับบริษัททำ product; agent ในแอปเหมาะกับ user ทั่วไป แต่ power user อยากพา agent ของตัวเอง (frontier model + local context) มาดึงความเชี่ยวชาญของ product ผ่าน skills, MCP/API/CLI, docs และ UI แบบ deeplink; ให้สร้าง agent ภายในบน primitives ชุดเดียวกับที่เปิดให้ข้างนอก
+- [[matt-pocock-dumb-zone-compaction]] — Matt Pocock (X, 2026): ทดสอบ "dumb zone" แบบลงมือจริงด้วย `/rewind` + `/compact`; ชี้ว่าความจุ context window ไม่เท่ากับคุณภาพของ active context; ให้ compact ตรงรอยต่อระหว่าง phase แล้วเก็บ state ถาวรไว้นอก transcript
+- [[mikelopster-loop-engineering]] — mikelopster (YouTube, 2026): มุมไทยภาคปฏิบัติเรื่อง Loop Engineering; อธิบาย prompt→context→loop, goal prompt, feedback gate, `/loop`/`/goal` ของ Claude Code, สไตล์ schedule/goal ของ Codex และย้ำว่า loop คุ้มก็ต่อเมื่อ exit condition/scorer ชัด — งานสาย content/taste วนไปก็ได้แค่ orchestration tax
+- [[self-learning-for-agents-explained]] — @ataiiam / CopilotKit (2026-06-24): agent เรียนรู้ได้ 3 ชั้นตามการแบ่งของ Harrison Chase — ชั้น model (Karpathy AutoResearch / MIT SEAL / DeepMind AlphaEvolve — เป็นของ lab ต้องมี scorer ที่ได้มาฟรี), ชั้น harness (loop engineering / LangChain Deep Agents / Self-Harness / Microsoft Agent Framework — พร้อมใช้ใน product), ชั้น context (memory + skills ผ่าน Letta/OpenClaw/Hermes/Anthropic skills — ชั้นเดียวที่เรียนจาก user จริง); model เป็นของ lab ส่วน harness+context เป็นของเรา; สัญญาณที่ปลอมไม่ได้คือการตัดสินใจจริงของ user (AG-UI/CopilotKit) เพราะ auto-score โดนโกงได้ (Darwin Gödel Machine)
+- [[matt-pocock-agentic-workflow]] — David Ondrej × Matt Pocock (2026-06-19): "เลิกหมกมุ่นกับ model แล้วไปลงแรงกับ harness" (อุปมาเครื่องยนต์ F1, ~50/50, แรงตึงกับ bitter lesson); AI กิน tactical programming ไปแล้ว เราเลยต้องเล่นเชิง strategic; เพดานคือ skill ของเราเอง; skills = procedures (เราขับ) vs abilities (model ขับ); knowledge/skills/wisdom + teach skill; ใช้ queue ไม่ใช่ loop (สาย Ralph) + AFK; AX vs DX; ระบบ self-improving ("buy a lock"); Sandcastle บน GitHub Actions; เริ่มจากกระดานเปล่า
+- [[agentic-code-review-osmani]] — Addy Osmani (2026-06-16): coding agent ย้ายจุดยากจากการเขียน code ไปอยู่ที่การตัดสินว่าจะเชื่อ code นั้นได้ไหม; ข้อมูลปี 2026 ชี้ว่าปริมาณ code ดิบโตเร็วกว่า value ที่ส่งมอบและกำลังรีวิวมาก; review เลยต้องแบ่งชั้นตามความเสี่ยง มีหลักฐานแนบ ขับด้วย sensor และคนยังต้องเป็นเจ้าของการ merge
+- [[introducing-omnigent-meta-harness]] — Databricks (2026-06-13): เสนอ meta-harness เป็นชั้นที่อยู่เหนือ Claude Code/Codex/Pi/agent ทำเอง; interface กลางแบบ messages+files/tool-calls; ทำ composition, stateful policy, คุมต้นทุน, OS sandbox, เขียนงานข้ามหลาย harness และ session ทำงานร่วมกันแบบสด; Omnigent เป็น alpha ใต้ Apache 2.0
+- [[how-to-keep-shipping-away-from-desk]] — Zack Proser / WorkOS (2026-06-11): คอขวดไม่ใช่ agent แล้ว แต่คือ attention ของคน; stack สมดุลนักพัฒนา = signal layer / voice-first / Remote Control / ปรับปรุงระบบจากประวัติ JSONL; จะเร็วได้ต้องปลอดภัยผ่านด่านตรวจ lint→browser→critic; รักษา judgment สุขภาพ และการเรียนรู้ของตัวเองไว้ ระหว่างที่ agent ship งานต่อ
+- [[stop-writing-specs-start-writing-facts]] — Jaroslaw Wasowski (2026-05-12): อดีตสาย SDD กลับลำ; spec คือคำทำนายพฤติกรรม model ไม่ใช่สัญญา (LLM ไม่ deterministic แม้ temp 0); fact = assertion ที่รันได้และอยู่รอดข้ามรุ่น model (test ตัวหนึ่งผ่านตั้งแต่ Sonnet 3.5→Opus 4.5+ โดยไม่ต้องแก้ ส่วน spec ต้องตีความใหม่ 4 รอบ); intent gap (Lahiri); ลำดับวงศ์ 57 ปี Hoare→Meyer→QuickCheck→Agent Behavioral Contracts; SDD ยังชนะเมื่อคนนอกทีมต้องอ่าน artifact (compliance/B2B/onboarding); แผนย้าย 90 วัน audit→pivot→gate
+- [[loop-engineering-osmani]] — Addy Osmani (2026-06-09): "loop engineering" = เลิก prompt agent เอง แล้วออกแบบ loop ที่ prompt แทนเรา (Steinberger/Cherny); loop คือ harness ที่รันตามเวลา spawn ตัวช่วย และป้อนงานให้ตัวเอง; ห้าชิ้นส่วน + memory (Automations / Worktrees / Skills / Plugins+Connectors / Sub-agents / state file); Claude Code กับ Codex มีครบทั้งคู่; /loop vs /goal; แยกบท maker/checker; ปัญหาสามข้อที่คมขึ้น (verification, comprehension debt, cognitive surrender)
+- [[harness-engineering-bockeler]] — Birgitta Böckeler / Thoughtworks, martinfowler.com (2026-04-02): mental model ของ harness ฝั่ง *ผู้ใช้* coding agent; harness = guides (feedforward) + sensors (feedback) แยกแบบ computational กับ inferential; steering loop; ดันคุณภาพไปไว้ต้นทาง; regulation สามหมวด (maintainability / architecture fitness / behaviour harness); harnessability; harness templates; harness ในบท cybernetic governor
+- [[what-weve-learned-building-cloud-agents]] — Cursor / Josh Ma (2026-06-02): บทเรียนหนึ่งปีจากการทำ cloud agents; dev environment คือตัว product (env ครบ = คุณภาพงาน ความพังโผล่เป็นคุณภาพตกเงียบๆ ไม่ใช่ crash); agent รันยาวต้องมี durable execution (จาก work-stealing 1-nine → Temporal 2-nines, 50M+ actions/วัน, PR ของ Cursor กว่า 40% มาจาก cloud agent); แยก state ของ agent loop / เครื่อง / บทสนทนา; "get out of the way" (พอ model เก่งขึ้น ก็ย้าย logic จาก harness ไปเป็น tool ที่ agent คุมเอง); environment ซ่อมตัวเอง / autoinstall
+- [[mellum2-goes-open-source]] — JetBrains AI Blog (2026-06-01): เปิด Mellum2 เป็น open source ใต้ Apache 2.0; MoE 12B ที่ active 2.5B params/token สำหรับงาน routing, RAG latency ต่ำ, subagent เร็ว และ workflow software engineering แบบ private/local; เสนอ framing เรื่อง focal model
+- [[the-orchestration-tax]] — Addy Osmani (2026-05-28): "orchestration tax" (Richard Seroter ตั้งชื่อบนเวที Google I/O); เราคือ resource เดี่ยวที่ทำงานแบบ serial (GIL/Amdahl) ในระบบ agent ที่วิ่งพร้อมกัน; เปิด agent น่ะถูก แต่ปิด loop นี่แพง; 5 กลยุทธ์จัดสรร attention; ยุ่งไม่เท่ากับได้งาน; ภาษีที่ไม่ยอมจ่ายกลายเป็นหนี้ทั้ง technical และ cognitive
+- [[piyalitt-opus-4-8-recap]] — Piyalitt Ittichaiwong (2026-05-28): สรุปไทยงานเปิดตัว Claude Opus 4.8; จุดขายคือความซื่อสัตย์ (ยอมรับความไม่แน่ใจ ปล่อยบั๊กของตัวเองหลุดน้อยลง ~4 เท่า); alignment ใกล้ระดับ Mythos; dynamic workflows ใหม่ + UI คุม effort + system-in-messages; effort ตั้งต้นลดจาก xhigh→high; Mythos จะถึงมือลูกค้าทุกรายภายในไม่กี่สัปดาห์
+- [[piyalitt-deepswe-benchmark]] — Piyalitt Ittichaiwong (2026-05-27): benchmark DeepSWE & FrontierSWE; พอตัดข้อมูลปนเปื้อนแล้วใส่ behavioral verifier ช่องว่างจริงของแต่ละ model ก็โผล่; GPT-5.5 ได้ 70% ที่ 1, Opus 4.7 ได้ 54% ที่ 3; นิสัยต่างกันรายเจ้า (Claude ตกหล่น requirement / โกงผ่าน git ส่วน GPT แม่นกว่า)
+- [[software-engineering-at-the-tipping-point]] — Adam Bender (2026-05-22): Software Ecology กับระบบ socio-technical ณ จังหวะ 10x; monorepo ของ Google กับพลัง Shared Fate / LSC; การ scale ยุค AI ทำให้กำลังรีวิว compute สำหรับ test ข้อจำกัด VCS และเส้นแบ่ง internal API พังยังไง; DORA amplifier pattern กับ 4 พื้นฐานหลัก (Infrastructure, Validation, Isolation, Abstraction) เพื่อรักษา human intellectual control
+- [[improved-15-llms-harness-changed]] — Can Bölük (2026-02-12): benchmark เครื่องมือ edit แบบ Hashline กับ model 16 ตัว; ชูมุม harness > model; เทียบ harness ของ vendor กับแบบเปิด; block context ของ OpenCode
+- [[software-after-software]] — Thorsten Ball (2026-05-26): manifesto 12 ข้อว่าด้วย code ที่ล้นเหลือ, process ที่ถ่วง, การพัฒนาแบบ agent-first, ค่าย frontier ต่างๆ และการจัดองค์กรใหม่รอบตัว model; จุดยืนของ Amp Labs
+- [[fundamental-productivity-ai-world]] — ChrisZa Stuff (2026-05-24): productivity คือปฏิสัมพันธ์ของคนที่ถูกอีกฝ่ายยอมรับ; AI ทำให้ฝั่ง producer/consumer เสียสมดุล; คอขวดอยู่ที่การ accept; มาตรฐานต้องปรับใหม่ให้รับ artifact ยุค AI
+- [[software-writing-software-gone-right]] — TJ DeVries (2026-05-20): `luai.nvim`; software แบบ just-in-time; dev environment ที่ปรับให้เข้ากับตัวเอง; gen/cache/ปรับปรุงฟังก์ชัน Lua ภายใน Neovim
+- [[new-skills-handoff-prototype-review-writing]] — Matt Pocock (2026-05-12): changelog ของ Skills — /handoff, /prototype, /review ที่ยังทำอยู่ กับ workflow ตระกูล writing-*; handoff docs, prototype แบบใช้แล้วทิ้ง, review สองแกน, writing fragments
+- [[agent-harness-engineering]] — Addy Osmani (2026-05-10): Agent = Model + Harness; ส่วนประกอบของ harness, hooks, การจัดการ context, Harness Ratchet และ Harness-as-a-Service
+- [[matt-pocock-software-fundamentals]] — Matt Pocock (2026-04-23): พื้นฐาน software ยิ่งสำคัญกว่าเดิม; กับดัก Specs-to-Code; Strategic vs Tactical AI; Grill Me; Ubiquitous Language; Deep Modules; Software Entropy; TDD
+- [[granite-4-1-fastest-asr]] — Sam Witteveen (2026-05-07): model ASR ตระกูล IBM Granite Speech 4.1; รุ่น 2B base/Plus/NAR; WER, RTFX, diarization, keyword biasing, รันแบบ local ได้
+- [[memory-and-dreaming-self-learning-agents]] — talk ของ Anthropic (Mahes, 2026-05-09): Memory-as-filesystem + Dreaming (คัดกรอง memory แบบ batch นอกรอบ) สำหรับ agent ที่เรียนรู้เองใน Managed Agents API
+- [[helldivers-2-mostly-negative-reviews]] — SwanyPlaysGames (2026-05-07): รีวิว Steam ของ Helldivers 2 ร่วงถึง "Mostly Negative"; ช่วง late game นิ่งสนิท; ปรับ balance แบบ monkey-paw; เทน้ำหนักไปทาง monetization
+- [[multi-token-prediction-gemma-4]] — Google (2026-05-05): MTP drafter สำหรับ Gemma 4; เร็วขึ้นได้ถึง 3 เท่าผ่าน speculative decoding; lossless; ใช้ activations กับ KV cache ร่วมกับ target model
+- [[agentic-coding-trap]] — Lars Faye (2026): คำเตือน "Agentic Coding is a trap" — cognitive debt กับ skill ที่ฝ่อลงจากการพึ่ง coding agent มากไป
+- [[anthropic-engineer-claude-code]] — สรุป presentation ของ Cal Rueb เรื่อง best practices ในการใช้ Claude Code
+- [[ai-language-crisis-phenomenon]] — Thairath Plus (2026-05-03): ปรากฏการณ์ AI Language Crisis; Text Slop; สำนวนเกร่อแบบ "Not just... but..."; ภัยต่อความลึกของภาษามนุษย์
+- [[matt-pocock-4-ai-terms]] — Matt Pocock (2026-05-04) นิยามศัพท์ AI หลัก 4 คำ: Model, Harness, Environment, Agent
+- [[jrt-investment-idgaf-skill]] — JRT Investment (FB, 2026-05-02): "I don't give a fuck" ในฐานะวิธีจัดสรรความใส่ใจ; attention เป็นของหายาก; ภาระในหัวลดลง ตัดสินใจไวขึ้น
+- [[andrej-karpathy-vibe-coding-to-agentic-engineering]] — Andrej Karpathy (2026): Vibe Coding vs Agentic Engineering; Software 3.0; Jagged Intelligence (Ghosts vs Animals); Verifiability; Agent-Native Infrastructure
+- [[zed-is-1-0]] — Zed Industries (2026): Zed ออกเวอร์ชัน 1.0; สถาปัตยกรรมแบบ video game engine; GPUI (Rust); DeltaDB (CRDT); Parallel Agents; Agent Client Protocol (ACP)
+- [[chase-ai-claude-code-impeccable]] — Chase AI (2026): Claude Code + skill Impeccable; Eleven Pillars of Design; Impeccable Live (แก้ผ่าน browser); Greenfield vs Legacy; Design Audit; AI Slop
+- [[jeeraphan-lairat-ai-coding-speed]] — Jeeraphan Lairat (Senestia, 2026): ทำไม coding เร็วขึ้น 10 เท่าแต่ Lead Time ไม่ลด; Theory of Constraints; กับดัก local optimization; Shift-Left Testing; จำกัด WIP
+- [[building-pi-world-of-slop]] — Mario Zechner (AI Engineer, 2026): pi ในฐานะ agent core ที่แก้ตัวเองได้; วิจารณ์เรื่อง hidden context; แรงกดดันจาก clanker ต่อวงการ OSS; วินัยชะลอความเร็วกับ code ที่ agent เขียน
+- [[mario-zechner-pi-agent]] — Mario Zechner (Pi, 2026): coding agent บน terminal สาย minimal; Spaceship Trap; Malleable Tools; session แบบ tree; Clanker Slop
+- [[peter-gostev-what-models-suck-at]] — Peter Gostev (Arena.ai, 2026): BullshitBench; Dissatisfaction Rate; Reasoning Regression; ช่องว่างรายหมวดของผู้เชี่ยวชาญ (Math vs Creative)
+- [[maggie-appleton-collaborative-ai-engineering]] — Maggie Appleton (GitHub Next, 2026): Collaborative AI Engineering; คอขวดอยู่ที่ alignment ในทีม; prototype ชื่อ ACE; Vibecoded Slop vs Craftsmanship; Team Pulse
+- [[ryan-lopopolo-harness-engineering]] — Ryan Lopopolo (OpenAI, 2026): Harness Engineering จากมุมมอง "Token Billionaire"; Code is Free; Just-in-Time Context; Reviewer Personas; Durable Feedback Loops
+- [[llm-era-computer-engineering-ep3-nattee]] — Nattee Niparnan Ep 3: ปิดจุดอ่อน (tests/UI), moat ของ generalist ที่หดลง และเรื่อง Eh Gland
+- [[microsoft-openai-partnership-2026]] — Microsoft กับ OpenAI ปรับโครงสร้าง partnership (เม.ย. 2026): เลิก exclusivity, เปลี่ยนสัดส่วน revenue share, ขยับเป็น "open relationship"
+- [[github-copilot-billing-update]] — GitHub Copilot ย้ายไปคิดเงินตามการใช้งานจริง (usage-based) กับ GitHub AI Credits เริ่ม 1 มิ.ย. 2026
+- [[ui-style-categories]] — taxonomy สไตล์ UI/UX ราว 40+ แบบ จัดเป็น 11 หมวด
+- [[karpathy-llm-knowledge-bases]] — thread บน Twitter ของ Karpathy เรื่องใช้ LLM สร้าง knowledge wiki ส่วนตัว
+- [[retro-futuristic-ui-design]] — design system แนว retro-futurism ครบชุด: 5 subgenre, palette, pattern สำหรับลงมือทำจริง
+- [[gitnexus|GitNexus source]] — README ของ GitNexus เครื่องมือ code intelligence แบบไม่ต้องมี server ใช้ knowledge graph กับ MCP
+- [[soviet-cosmism-ui-style]] — Soviet Cosmism ในฐานะภาษา design ของ UI: ปรัชญา, visual DNA, UI patterns
+- [[soviet-cosmism-philosophy]] — เจาะลึกปรัชญา Soviet Cosmism, palette สามชุด, คลังคำ animation, CSS พื้นฐาน, component library
+- [[helix-release-25-07]] — Helix 25.07: file explorer, LSP document colors, เขียน command mode ใหม่, Tree-house
+- [[four-horsemen-game-ui]] — game UI 4 แบบ: diegetic, non-diegetic, spatial, meta — แบ่งตามว่าอยู่ในโลกเกมไหม และตัวละครรับรู้ไหม
+- [[imetomi-retro-futuristic-ui]] — component library แบบ open source (React/CSS) ทำเอฟเฟกต์ CRT/LCD สาย cassette futurism
+- [[holographic-ui|Holographic UI source]] — design system ของ holographic UI ครบชุด: 5 variants, เทคนิค rendering, animations, components, layout patterns
+- [[karpathy-guidelines]] — skill ของ Claude Code ที่แพ็กกฎพฤติกรรม 4 ข้อของ Karpathy: คิดก่อนเขียน code, ทำให้เรียบง่าย, แก้เฉพาะจุด, ทำงานตามเป้า
+- [[csharp-14-whats-new]] — ภาพรวม C# 14 จาก Microsoft Learn (มากับ .NET 10): extension members, keyword `field`, null-conditional assignment และฟีเจอร์อีก 6 อย่าง
+- [[karpathy-llm-wiki-idea-file]] — เจาะ gist idea file ของ Karpathy เรื่อง LLM Wiki: แนวคิด idea file, wiki vs RAG, สถาปัตยกรรม 3 ชั้น, tool stack, จุดเชื่อมกับ Memex
+- [[advisor-strategy|Advisor Strategy source]] — blog ของ Anthropic: advisor strategy จับคู่ Opus เป็นที่ปรึกษากับ Sonnet/Haiku เป็นคนลงมือ ได้ความฉลาดเกือบเท่า Opus ในราคาเศษเดียว
+- [[leo-robinovitch-terminal-pager]] — Leo Robinovitch เล่าการสร้าง Go viewport component ที่เอาไปใช้ซ้ำได้ กับ terminal pager ชื่อ lore: ANSI/Unicode, search, Bubble Tea
+- [[claude-code-session-management]] — คู่มือจาก @trq212 เรื่องจัดการ session ของ Claude Code: context rot, compaction, rewind, ใช้ subagent เป็นเครื่องมือคุม context
+- [[claude-opus-4-7-announcement]] — Anthropic เปิดตัว Claude Opus 4.7: คะแนน SWE ขยับขึ้น, vision ดีขึ้น 3 เท่า, effort ระดับ xhigh, /ultrareview, auto mode, เปลี่ยน tokenizer
+- [[vim-pack-guide]] — คู่มือ vim.pack ของ Evgeni Chasnovski (plugin manager ในตัวของ Neovim 0.12): API, lockfile, hooks, lazy loading, วิธีย้ายจาก mini.deps/lazy.nvim
+- [[software-engineer-role-ai-era]] — blog ไทยเรื่องบทบาทวิศวกรที่เปลี่ยนไปในยุค AI: งานต้นน้ำ/ปลายน้ำขยาย ตรงกลางกลวงลง; archetype บทบาทใหม่ 6 แบบ
+- [[will-ai-replace-3d-software]] — thread บน X ของ Andrew Price: AI กับ 3D เสริมกันไม่ใช่แทนกัน, workflow ฐานดวงจันทร์ (Blender → Flux.1 Depth → Meshy), framework แยก skill ที่ต้องใช้ judgment กับที่ automate ได้
+- [[harness-engineering-panutat]] — โพสต์ Facebook ไทยของ Panutat Tejasen: ให้สอน "Harness Engineering" (pipeline ของ agent สาย review/test/audit) แทนที่จะสอนนักเรียนรีวิวงาน AI เอง
+- [[panutat-tejasen-thclaws-positioning]] — Panutat Tejasen (FB, 2026-04-27): การวางตำแหน่ง thClaws; Open Source Governance; ฟีเจอร์แก้ papercut; ใช้ความเร็วเป็นจุดต่าง
 - [[thclaws-announcement-panutat]] — Panutat Tejasen (FB, 2026-04-26): จาก LLM Wrapper สู่ AI Harness; ประกาศเปิดตัว thClaws; Clean Room Port ของ Claude Code มาเป็น Rust
-- [[llm-era-computer-engineering-nattee]] — Nattee Niparnan's Thai Facebook series (Ep. 1 + Ep. 2): LLM in grader/exam pedagogy, $140 PoC with Coding Agent, "taste paradox," core theory matters more not less
-- [[alex-ker-harnesses-optimize]] — Alex Ker (@thealexker): harness as scaffolding; lean human-written CLAUDE.md, progressive disclosure, R.P.I. prompt framework, subagent patterns, commit-to-one-harness
-- [[claude-code-subagents-docs]] — Anthropic official docs: Claude Code subagent mechanics — file format, scopes, tools/permissions, persistent memory, hooks, foreground/background, `--agent` flag
-- [[opencode-tauri-to-electron]] — OpenCode's lead engineer @brendonovich on why the desktop shell moved from Tauri to Electron: JS/Bun server runs in-process instead of as a sidecar
-- [[opencode-desktop-electron-brendonovich]] — Primary-source @brendonovich writeup of the same move: adds WebKit vs Chromium rendering, Bun → Node migration, Bun-API plugin breakage
-- [[claude-opus-4-7-whats-new-docs]] — Anthropic developer docs for Opus 4.7: API breaking changes (no thinking budgets / no sampling params / thinking content hidden), new `task_budget` beta, tokenizer change, behavior shifts
-- [[claude-opus-4-7-migration-pachaar]] — Akshay Pachaar third-party migration guide: turn-cost reasoning, delegation mindset, find-vs-filter for code review, mid-task effort toggling, multi-context-window workflow, prefilled-response deprecation
-- [[claude-code-auto-mode]] — Anthropic blog announcing auto mode (2026-03-24): classifier-gated middle path between default permission prompts and `--dangerously-skip-permissions`
-- [[opencode-vs-claude-code-morph]] — Morph vendor blog (2026-02-28): post-OAuth-block comparison; Black/Zen gateways; 112K vs 71K stars; 4% of GitHub commits; SWE-bench Pro 57.5%; interactivity axis (Tab/@mention/HTTP API)
-- [[owasp-apts]] — OWASP Autonomous Penetration Testing Standard v0.1.0 (Incubator, 2026): governance for autonomous pentest platforms; 173 reqs / 8 domains / 3 tiers; L1–L4 graduated autonomy; agent-runtime-as-untrusted architectural stance
-- [[claude-code-remote-control-docs]] — Anthropic docs for Remote Control (v2.1.51+): drive a local CC session from claude.ai/code or mobile; outbound-HTTPS relay; server/interactive/from-existing/VS Code modes; `--spawn worktree`; push notifications; five-way comparison table
-- [[somkiat-model-choice-by-expertise]] — Somkiat Khitwongwattana (FB, 2026-04-21): Domain Expert + code review = Sonnet 4.5 is enough; Vibe + no knowledge = pay for newer model as confidence proxy
-- [[kimi-k2-6-tech-blog]] — Moonshot AI launch post for Kimi K2.6 (2026-04): open-source SOTA coding claim, 12h+ / 4000+ tool-call long-horizon runs, 300-subagent swarm, Claw Groups BYO-Agents preview, benchmark table vs GPT-5.4 / Opus 4.6 / Gemini 3.1 Pro
-- [[cyril-xbt-claude-md-guide]] — @cyrilXBT X-post (2026-04-21): opinionated 7-section CLAUDE.md template (Overview / Stack / Conventions / Never Do This / File Structure / Current Sprint / Context), global vs project layering, composition with slash commands
-- [[claude-mythos-preview-red-anthropic]] — Anthropic red.anthropic.com (2026-04): Mythos Preview autonomously finds/exploits zero-days in every major OS and browser; cyber capabilities emerged without explicit training; thousands of vulns under coordinated disclosure; Project Glasswing restricts release
-- [[google-cloud-long-running-agent-patterns]] — Google Cloud Tech (Addy Osmani + Shubham Saboo, 2026-04-22): 5 design patterns for 7-day long-running agents on Agent Runtime — Checkpoint-and-Resume / Delegated Approval / Memory-Layered Context / Ambient Processing / Fleet Orchestration; governance triad (Identity/Registry/Gateway)
-- [[stop-slop-source]] — A skill for removing AI tells from prose
-- [[aaron-levie-agent-automation-jobs]] — Aaron Levie (Box CEO) on X (2026-04-24): companies need dedicated people, not side-project volunteers, to bridge from chatbot to agent-automating-a-process; 8-item job spec across map/deploy/context/wire/eval/HITL/upgrade/change-mgmt; "future of software engineering in non-tech companies"
-- [[piyalitt-ittichaiwong]] — Thai PhD researcher + 20yr programmer; early-access tester of frontier models (GPT-5.5); co-organizer of OpenAI × Thai AI Society Hackathon
-- [[rtk-github]] — RTK (RTK-AI) GitHub: high-performance Rust CLI proxy for token optimization (60-90% reduction)
-- [[zed-acp-protocol]] — Zed Industries: introducing Agent Client Protocol (ACP) — open standard for AI agent-IDE communication
-- [[arjarn-m-annabelle-critique]] — Analysis of the "Annabelle" financial advisor controversy and the concept of "Financial Poetry" (referred to as "M-nabelle" by Arjarn M)
-- [[gee-money-sg-pb]] — Perspective from a Singapore Private Banker on regulatory standards, voice logs, and wealth preservation
-- [[annabel-wealth-architect-response]] — Annabelle's detailed response to allegations regarding her background, trading practices, and content style
-- [[deepseek-wikipedia]] — Summary of the Wikipedia article for DeepSeek, covering its origin, efficiency focus, and major technical breakthroughs.
-- [[why-karpathys-second-brain-breaks]] — @Ctrl_Alt_Zaid (2026): Why Karpathy's LLM Wiki fails at agent scale; Facts vs. Pages; Memory Drift; Hybrid Architecture; Mercury Agent
-- [[compound-engineering-v3-3-0]] — Compound Engineering (Trevin, 2026): Playback Pattern (Stated/Inferred/Out-of-scope); Grounding with evidence; Reduced agent ceremony; cheaper to correct.
-- [[the-harness-is-the-backend]] — mf-piccolo (2026): "The Harness is the Backend" philosophy; WTF Primitives (Worker-Trigger-Function); iii framework; stochastic debugging; live discovery.
-- [[thclaws-marketplace-panutat]] — Panutat Tejasen (2026-04-30): thClaws v0.7.0 Marketplace; Enterprise Security; Private Marketplace; Host Bridge concept; Rabbit Holes in coding.
+- [[llm-era-computer-engineering-nattee]] — ซีรีส์ Facebook ไทยของ Nattee Niparnan (Ep. 1 + Ep. 2): ใช้ LLM ในการสอน grader/ข้อสอบ, ทำ PoC $140 ด้วย Coding Agent, "taste paradox", ทฤษฎีพื้นฐานยิ่งสำคัญขึ้นไม่ใช่น้อยลง
+- [[alex-ker-harnesses-optimize]] — Alex Ker (@thealexker): harness ในฐานะ scaffolding; CLAUDE.md ที่คนเขียนเองแบบกระชับ, progressive disclosure, R.P.I. prompt framework, pattern การใช้ subagent, ปักหลักกับ harness เดียว
+- [[claude-code-subagents-docs]] — docs ทางการของ Anthropic: กลไก subagent ของ Claude Code — รูปแบบไฟล์, scopes, tools/permissions, persistent memory, hooks, foreground/background, flag `--agent`
+- [[opencode-tauri-to-electron]] — @brendonovich (lead engineer ของ OpenCode) เล่าเหตุผลที่ desktop shell ย้ายจาก Tauri ไป Electron: JS/Bun server ไปรันใน process เดียวกันแทนที่จะเป็น sidecar
+- [[opencode-desktop-electron-brendonovich]] — writeup ต้นทางของ @brendonovich เรื่องเดียวกัน: เพิ่มประเด็น WebKit vs Chromium, การย้าย Bun → Node, plugin ที่พังเพราะพึ่ง Bun API
+- [[claude-opus-4-7-whats-new-docs]] — developer docs ของ Anthropic สำหรับ Opus 4.7: breaking changes ฝั่ง API (ไม่มี thinking budgets / ไม่มี sampling params / ซ่อน thinking content), beta ตัวใหม่ `task_budget`, เปลี่ยน tokenizer, พฤติกรรมที่ขยับไป
+- [[claude-opus-4-7-migration-pachaar]] — คู่มือ migration ฉบับ third-party ของ Akshay Pachaar: คิดต้นทุนเป็นราย turn, mindset แบบมอบหมายงาน, find-vs-filter สำหรับ code review, สลับ effort กลางงาน, workflow แบบหลาย context window, prefilled response ที่ถูกเลิกใช้
+- [[claude-code-auto-mode]] — blog ของ Anthropic ประกาศ auto mode (2026-03-24): ทางสายกลางที่มี classifier คุม อยู่ระหว่าง permission prompt ปกติกับ `--dangerously-skip-permissions`
+- [[opencode-vs-claude-code-morph]] — blog ฝั่ง vendor ของ Morph (2026-02-28): เทียบสองค่ายหลังเหตุการณ์ block OAuth; gateway Black/Zen; ดาว 112K vs 71K; 4% ของ commit บน GitHub; SWE-bench Pro 57.5%; แกน interactivity (Tab/@mention/HTTP API)
+- [[owasp-apts]] — OWASP Autonomous Penetration Testing Standard v0.1.0 (Incubator, 2026): governance สำหรับแพลตฟอร์ม pentest อัตโนมัติ; 173 ข้อกำหนด / 8 domain / 3 tier; autonomy ไล่ระดับ L1–L4; จุดยืนเชิงสถาปัตยกรรมว่าต้องมอง agent runtime เป็นของที่ไว้ใจไม่ได้
+- [[claude-code-remote-control-docs]] — docs ของ Anthropic เรื่อง Remote Control (v2.1.51+): คุม CC session บนเครื่องเราจาก claude.ai/code หรือมือถือ; relay แบบ outbound-HTTPS; โหมด server/interactive/from-existing/VS Code; `--spawn worktree`; push notifications; ตารางเทียบ 5 ทางเลือก
+- [[somkiat-model-choice-by-expertise]] — Somkiat Khitwongwattana (FB, 2026-04-21): ถ้าเป็น Domain Expert + รีวิว code เอง Sonnet 4.5 ก็พอ; แต่ถ้าสาย Vibe + ไม่มีความรู้ ก็ต้องจ่ายค่า model ใหม่กว่าเพื่อซื้อความมั่นใจแทน
+- [[kimi-k2-6-tech-blog]] — โพสต์เปิดตัว Kimi K2.6 ของ Moonshot AI (2026-04): เคลม SOTA ด้าน coding ฝั่ง open source, รันยาว 12 ชม.+ / tool call 4000+ ครั้ง, swarm ขนาด 300 subagent, preview ของ Claw Groups BYO-Agents, ตาราง benchmark เทียบ GPT-5.4 / Opus 4.6 / Gemini 3.1 Pro
+- [[cyril-xbt-claude-md-guide]] — โพสต์ X ของ @cyrilXBT (2026-04-21): template CLAUDE.md 7 section แบบมีจุดยืน (Overview / Stack / Conventions / Never Do This / File Structure / Current Sprint / Context), แบ่งชั้น global vs project, ใช้ร่วมกับ slash commands
+- [[claude-mythos-preview-red-anthropic]] — Anthropic red.anthropic.com (2026-04): Mythos Preview หาและเจาะ zero-day ได้เองในทุก OS และ browser หลัก; ความสามารถด้าน cyber โผล่มาโดยไม่ได้ตั้งใจ train; ช่องโหว่หลายพันรายการอยู่ระหว่าง coordinated disclosure; Project Glasswing คุมการปล่อยใช้งาน
+- [[google-cloud-long-running-agent-patterns]] — Google Cloud Tech (Addy Osmani + Shubham Saboo, 2026-04-22): design pattern 5 แบบสำหรับ agent รันยาว 7 วันบน Agent Runtime — Checkpoint-and-Resume / Delegated Approval / Memory-Layered Context / Ambient Processing / Fleet Orchestration; governance สามเสา (Identity/Registry/Gateway)
+- [[stop-slop-source]] — skill สำหรับลบร่องรอยความเป็น AI (AI tells) ออกจากงานเขียน
+- [[aaron-levie-agent-automation-jobs]] — Aaron Levie (CEO ของ Box) บน X (2026-04-24): บริษัทต้องมีคนรับผิดชอบเต็มตัว ไม่ใช่อาสาสมัครทำงานเสริม ถึงจะพาองค์กรจาก chatbot ไปสู่ agent ที่ automate process จริง; job spec 8 ข้อครอบคลุม map/deploy/context/wire/eval/HITL/upgrade/change-mgmt; "อนาคตของ software engineering ในบริษัทนอกสายเทค"
+- [[rtk-github]] — GitHub ของ RTK (RTK-AI): CLI proxy เขียนด้วย Rust ประสิทธิภาพสูง ลดการใช้ token ได้ 60-90%
+- [[zed-acp-protocol]] — Zed Industries แนะนำ Agent Client Protocol (ACP) — มาตรฐานเปิดให้ AI agent คุยกับ IDE
+- [[arjarn-m-annabelle-critique]] — วิเคราะห์ดราม่าที่ปรึกษาการเงิน "Annabelle" กับแนวคิด "Financial Poetry" (อาจารย์ M เรียกว่า "M-nabelle")
+- [[gee-money-sg-pb]] — มุมมองจาก Private Banker ที่สิงคโปร์ เรื่องมาตรฐาน regulator, voice log และการรักษาความมั่งคั่ง
+- [[annabel-wealth-architect-response]] — คำชี้แจงละเอียดของ Annabelle ต่อข้อกล่าวหาเรื่องประวัติ วิธีเทรด และสไตล์คอนเทนต์
+- [[deepseek-wikipedia]] — สรุปบทความ Wikipedia ของ DeepSeek: ที่มา จุดเน้นเรื่อง efficiency และ breakthrough ทางเทคนิคชิ้นสำคัญ
+- [[why-karpathys-second-brain-breaks]] — @Ctrl_Alt_Zaid (2026): ทำไม LLM Wiki ของ Karpathy พังเมื่อถึง scale ระดับ agent; Facts vs Pages; Memory Drift; Hybrid Architecture; Mercury Agent
+- [[compound-engineering-v3-3-0]] — Compound Engineering (Trevin, 2026): Playback Pattern (Stated/Inferred/Out-of-scope); Grounding ด้วยหลักฐาน; ลดพิธีรีตองของ agent; แก้ทีหลังถูกลง
+- [[the-harness-is-the-backend]] — mf-piccolo (2026): ปรัชญา "The Harness is the Backend"; WTF Primitives (Worker-Trigger-Function); framework iii; stochastic debugging; live discovery
+- [[thclaws-marketplace-panutat]] — Panutat Tejasen (2026-04-30): thClaws v0.7.0 Marketplace; Enterprise Security; Private Marketplace; แนวคิด Host Bridge; Rabbit Holes ในการ coding
 
 ## Entities
-- [[boris-cherny]] — Anthropic engineer, creator of Claude Code; cited in loop-engineering ("my job is to write loops") and named by Thariq as an exemplar agentic coder with few unknowns
-- [[economy-media]] — YouTube economics/business channel; source for the AI token-cost / labor-cost reversal ingest, treated as secondary explainer rather than primary reporting
-- [[khunpho-naklongthun]] — Thai investing YouTube channel behind the LITE/COHR/NOK/AAOI photonics comparison; useful as a secondary investment explainer, not a primary company source
-- [[coherent]] — Photonics/materials/optical communications company framed in the source as the current leader in 6-inch Indium Phosphide wafer readiness and optical transceiver delivery for AI data centers
-- [[lumentum]] — Optical/photonics company framed as a more direct pure play on AI data-center photonics, with stronger recent growth/margin in the source but capacity-ramp risk through 2028
-- [[aaoi]] — Applied Optoelectronics; smaller optical-communications company framed as the high-risk/high-return photonics bet using its own MBE process and ambitious revenue/capacity targets
-- [[nokia]] — Telecom/networking company compared as a larger, more defensive photonics/network-stack option; source notes cash-flow/base-size strengths but lower pure-play exposure and San Jose/timeline risk
-- [[axt]] — Upstream substrate supplier for Indium Phosphide wafers; source frames it as important to photonics bottlenecks but exposed to China/export-control risk
-- [[nvidia]] — GPU / AI infrastructure company; in the photonics source, used as demand/credibility signal for AI data-center optical interconnect investment rather than as the main stock under review
-- [[anna-freud]] — Psychoanalyst who systematized defense mechanisms in The Ego and the Mechanisms of Defence (1936), including signal anxiety and the ego's defensive action
-- [[sigmund-freud]] — Founder of psychoanalysis; source background for defense mechanisms as ego management of id impulses and internal conflict
-- [[george-vaillant]] — Psychiatrist behind a four-level defense hierarchy (pathological, immature, neurotic, mature) tied to long-term adaptation in the Grant Study tradition
-- [[robert-plutchik]] — Psychologist who related defense mechanisms to basic emotions and diagnostic structures
-- [[otto-kernberg]] — Psychoanalyst/object-relations theorist; frames primitive/splitting-based defenses as central to borderline personality organization
-- [[j-christopher-perry]] — Psychiatrist and psychotherapy researcher behind the Defense Mechanism Rating Scale (DMRS)
-- [[american-psychiatric-association]] — Psychiatry organization behind DSM-IV-TR, which included a tentative defensive-functioning axis
-- [[wikipedia]] — Collaborative encyclopedia; source for the Defence mechanism overview in this wiki
-- [[mlhf]] — Thai mathematics explainer YouTube channel "แมทเล่าให้ฟัง"; source for the infinity/cardinality/Continuum Hypothesis/Gödel incompleteness ingest
-- [[georg-cantor]] — mathematician behind cardinality and Cantor's diagonal argument; opens the path from comparing infinite sets to the Continuum Hypothesis
-- [[kurt-godel]] — logician/mathematician behind incompleteness theorems and the result that ZFC cannot disprove the Continuum Hypothesis if ZFC is consistent
-- [[paul-cohen]] — mathematician who proved that ZFC cannot prove the Continuum Hypothesis if ZFC is consistent, completing the independence picture with Gödel's result
-- [[david-hilbert]] — mathematician whose 23 problems include the Continuum Hypothesis; symbol of the programmatic hope that major mathematical questions can be settled by proof
-- [[the-singularity-is-nearer]] — author/blog label for "The Eternal Sloptember" on geohot.github.io; strong anti-agent critique centered on statistical mimicry, slop, and missing programming process/world models
-- [[tinygrad]] — ML framework/compiler stack used in the Eternal Sloptember field report as a real low-level systems task where the author tried agents but still felt manual work would be better/faster
-- [[afl]] — American Fuzzy Lop fuzzing tool; used in Eternal Sloptember to argue that programmers do not fear useful automation itself, only automation whose process/output cannot be trusted
-- [[yann-lecun]] — AI researcher invoked in Eternal Sloptember as part of the LeCun/Marcus camp skeptical that LLMs alone are enough without world models
-- [[gary-marcus]] — AI critic/researcher invoked alongside LeCun; represents skepticism toward LLM-only reasoning/programming capability
-- [[apple]] — technology company behind macOS/iOS; Eternal Sloptember uses Apple/macOS rhetorically to ask whether broad AI-agent adoption in large orgs improves or degrades software quality
-- [[perplexity]] — AI answer/search startup founded in 2022; Mondo Startups frames it as a product that made answer-with-citations feel obvious but lost the broader Google-replacement race to copied features, high query costs, weak ad monetization, publisher-trust risk, and distribution disadvantage
-- [[google]] — technology/search/advertising incumbent; in the Perplexity source, wins AI search less through superior answers than through search habits, Chrome/Android/default placement, ad economics, and ecosystem distribution
-- [[aravind-srinivas]] — Perplexity co-founder; positioned by Mondo Startups as a founder who understood both search and LLMs after work around Google, DeepMind, and OpenAI
-- [[comet-browser]] — Perplexity's AI browser; attempt to own interface and distribution rather than remain only a search destination, with open questions around whether it can shift sticky browser/search habits
-- [[chatgpt]] — OpenAI consumer AI product; in the Perplexity source, one of the incumbent AI surfaces that absorbed answer-with-citations and weakened Perplexity's differentiation
-- [[mondo-startups]] — YouTube business/tech documentary channel; source of the Perplexity strategy analysis treated as secondary interpretation rather than primary company evidence
-- [[oumuamua]] — 1I/2017 U1, the first interstellar object detected (2017, Pan-STARRS1); elongated tumbling body with non-gravitational acceleration and no visible tail; best 2026 explanation = ordinary icy body venting radiolysis-produced hydrogen (a dark comet), not an alien craft
-- [[avi-loeb]] — Harvard astronomy professor; proposed the alien solar-sail hypothesis for ʻOumuamua (2018) and later challenged each natural explanation; recurring "maybe aliens" voice for anomalous sky objects including 3I/ATLAS
-- [[3i-atlas]] — third interstellar object (discovered 2025-07-01 by ATLAS); massive delayed methane outgassing evidences an irradiated insulating crust over a pristine icy core, strengthening the radiolysis explanation for ʻOumuamua
-- [[curiosity-channel]] — Thai science YouTube channel (คนช่างสงสัย); source of the ʻOumuamua 2026 recap; explains science in spoken Thai and closes with Occam's-razor methodology
-- [[longcat-2-0]] — Meituan model described by Prompt Engineering as a 1.6T-parameter MoE with 48B active params/token, trained on 50,000+ custom AI chips over 35T tokens without NVIDIA GPUs/Google TPUs; claims remain source-attributed pending primary-source and third-party verification
-- [[meituan]] — Chinese internet/services company behind LongCat 2.0 in the supplied source; example of AI capability moving from specialist labs into large Chinese platform companies with their own hardware/software stack ambitions
-- [[prompt-engineering]] — YouTube AI engineering explainer channel; source for the LongCat 2.0 / China hardware independence ingest, treated as third-party interpretation rather than primary Meituan evidence
-- [[bycloud]] — AI/LLM explainer channel behind the looped-transformer video; useful as a secondary synthesis source connecting recurrence, stability, mechanistic analysis, adaptive recursive depth, and KV-cache tradeoffs
-- [[crusoe]] — AI infrastructure company promoted in the bycloud source as a serverless fine-tuning provider; claims are sponsor-segment/product-context, not independent evaluation
-- [[intuitive-ai-academy]] — bycloud's LLM education project/course platform, promoted in the looped-transformer video as intuition-first AI education
-- [[zoran-horvat]] — .NET/software educator / Zoran on C#; argues for rich domain models over persistence-driven flattening, and criticizes Claude Plan mode as prompt scaffolding rather than true engineering judgment
-- [[entity-framework-core]] — Microsoft's .NET ORM; in Horvat's post, the example tooling for mapping nested value objects, converters, private constructors, and domain-rich queries to relational persistence
-- [[aom-khunpanitchot]] — Thai software/AI practitioner from the Fable/Elysia 2 Facebook field report; writes as an owner of the Elysia 2 codebase evaluating AI audit output for release readiness
-- [[fable]] — Claude Fable 5, an Anthropic model in the Claude family (confirmed by trq212's field guide); earlier appeared in Aom's Elysia 2 audit via ultracode auto mode spawning ~100 agents; Thariq's claim: first model where work quality is bottlenecked by the user clarifying unknowns; spec/tier/pricing still open
-- [[elysia-2]] — Codebase/project in Aom's Fable audit post; used as a real release-readiness case where smoke/plugin checks and several AI reviewers suggested RC/stable readiness but Fable reported deeper blockers
-- [[genebench-pro]] — OpenAI research-level benchmark for computational-biology agents; 129 synthetic problems across 10 domains, designed to measure research taste, ambiguity handling, QC, causal/statistical method choice, and decision-readiness rather than book knowledge
-- [[gpt-5-6-sol]] — OpenAI GPT-5.6 model variant reported as strongest on GeneBench-Pro; 28.7% pass rate at highest reasoning and 31.5% in Pro mode, from the GeneBench-Pro source only
-- [[hugging-face]] — AI model/dataset platform; hosts OpenAI's public package of 10 representative GeneBench-Pro questions
-- [[artificial-analysis]] — AI benchmarking organization/platform; OpenAI plans to provide it a 50-question GeneBench-Pro subset for independent third-party benchmarking
-- [[techsauce]] — Thai technology/business media and ecosystem source; summarized the AI Brain Fry workplace-AI fatigue framing for Thai readers
-- [[harvard-business-review]] — Management publication cited by Techsauce as the source context for AI Brain Fry; original HBR article details remain an open follow-up until ingested directly
-- [[rhys-sullivan]] — X writer behind "i don't want to use your agent"; frames product expertise as skills/MCP/API/CLI that should plug into the user's own daily-driver agent
-- [[linear]] — issue/project management tool; in the BYO-agent frame, valuable primitives are ticket/project APIs, planning skills, and deeplinks rather than only an in-app agent
-- [[cloudflare]] — cloud/edge/security/developer infrastructure platform; BYO-agent example where docs, CLI commands, config tools, and permissioned APIs matter more than dashboard chat alone
-- [[posthog]] — product analytics/product OS; BYO-agent example where event query tools, schema resources, UI deeplinks, and growth-analysis skills should be agent-accessible
-- [[mikelopster]] — Thai software/AI creator; source for a pragmatic Loop Engineering take: feedback gate and human review bottleneck matter more than the existence of a trigger
-- [[ataiiam]] — author of the "Self Learning for Agents" thread (2026-06-24); from the CopilotKit team; popularized Harrison Chase's model/harness/context split
-- [[copilotkit]] — framework for agent↔user interfaces; behind the AG-UI protocol and CopilotKit Intelligence (learn from users → procedural memory)
-- [[ag-ui]] — Agent-User Interaction Protocol; open standard streaming every app/user/agent event in real time; lands agent miss + person fix in one place (vs MCP at the agent↔tool layer)
-- [[langchain]] — Harrison Chase's AI agent company; origin of the 3-layer split, "the art of loop engineering" (Sydney Runkle), and Deep Agents (harness rewrites itself from traces, model frozen); NOT the same as Chase AI
-- [[letta]] — agent memory platform; frozen weights, learns in editable plain text; separate agent rewrites core memory at idle (sleep-time compute); weights are temporary, text lasts
-- [[google-deepmind]] — Google's AI lab; AlphaEvolve = the most convincing model-layer self-learning (attention kernel +32.5%, 1969 matmul record, AI speeds up its own training) but only where a free scorer exists
-- [[meta]] — big tech; 2026 keystroke-logging on employee laptops = the "watch over the shoulder" way to capture human signal (sees the person, not the agent; privacy-invasive)
-- [[david-ondrej]] — AI creator / podcast host; interviewed Matt Pocock (2026-06-19); plays the model-first "true believer" foil to Pocock's harness-first stance
-- [[jeffrey-huntley]] — engineer; author of the Ralph loop (while-loop re-running Claude Code), the origin of the 2026 "agentic loop" wave
-- [[teach-skill]] — Matt Pocock's stateful teaching skill; mission.md → trusted resources → HTML lessons + quizzes → learning record; built on knowledge/skills/wisdom and zone of proximal development
-- [[superpowers]] — popular agent skills repo (Obra); the model-in-control philosophy contrasted with Pocock's user-in-control procedures
-- [[coderabbit]] — AI code review tool; Addy cites its report that AI-coauthored PRs had about 1.7x more issues than human-only PRs; useful as an inferential review sensor, not a merge verdict
-- [[greptile]] — AI code review / code intelligence tool; example of heterogeneous reviewer design where different tools catch different classes of correctness and architecture issues
-- [[faros-ai]] — engineering intelligence / developer productivity metrics company; 2026 data source for AI adoption increasing throughput while code churn, defects, and review duration rise sharply
-- [[gitclear]] — git-based developer productivity analytics company; source for the 4x raw output vs roughly 12% delivered productivity gain framing
-- [[kun-chen]] — ex-Meta L8/principal engineer and agentic workflow/tooling builder; runs high-concurrency agent workflows by moving human work to planning, evidence review, and risk judgement; creator/author of tools discussed here such as AXI, Lavish, No Mistakes, Good Night Have Fun, Treehouse, and First Mate
-- [[wezterm]] — cross-platform Lua-configurable terminal emulator; outer terminal surface in Kun Chen's terminal-first agent workflow
-- [[tmux]] — terminal multiplexer for persistent panes/windows; lets Kun Chen keep editor, shell, and many agent sessions live across devices
-- [[open-superwhisper]] — local Whisper-based voice-input app; Kun uses it to dictate long prompts and tune transcription vocabulary for project/tool names
-- [[axi]] — Kun Chen's agent-experience/tool-design standard and catalog; optimizes tool output for token cost, latency, and agent success rather than human-only ergonomics
-- [[lavish]] — Kun Chen's planning artifact tool/skill; turns wall-of-text plans into project-styled HTML artifacts with options, annotations, and decisions
-- [[no-mistakes]] — Kun Chen's validation pipeline; turns first-pass agent code into PRs with branch/rebase, adversarial review, E2E evidence, docs/lint, and PR babysitting
-- [[good-night-have-fun]] — Kun Chen's long-running agent loop tool (`gnhf`); runs objective-driven iterations with token/iteration caps and stop conditions
-- [[treehouse]] — Kun Chen's git-worktree manager for parallel agents; creates/reuses worktrees and reduces worktree bookkeeping overhead
-- [[first-mate]] — Kun Chen's meta-agent for coordinating multiple agent sessions, Treehouse worktrees, and No Mistakes PR gates from a single captain interface
-- [[omnigent]] — Databricks open-source alpha meta-harness; wraps Claude Code/Codex/Pi/SDK/custom agents behind a common API and adds cross-harness policy, sandbox, cost control, and live collaboration
-- [[databricks]] — data and AI infrastructure company; creator of Omnigent and Genie; proposes meta-harness as a control layer above agent-tool silos
-- [[zack-proser]] — WorkOS Applied AI engineer; proposes developer balance through signal filtering, self-verifying agent loops, Remote Control, and harness improvement from conversation history
-- [[workos]] — enterprise developer-tools/API company; Zack Proser's Applied AI team used Claude Code to fix and verify a Slack-to-blog workflow end to end
-- [[cursor]] — AI coding company / IDE-harness; builds cloud agents on dedicated VMs; migrated agent loop to Temporal for durable execution; 40%+ of its monorepo PRs come from cloud agents; fine-tunes its own merge model
-- [[josh-ma]] — Cursor; author of "What We've Learned Building Cloud Agents" (2026-06-02)
-- [[temporal]] — durable-execution platform (retry, scheduling, durability across node failures); Cursor migrated its cloud-agent loop here, going from 1-nine to 2-nines reliability and 50M+ actions/day
-- [[claude-opus-4-8]] — Anthropic flagship (2026-05-28); direct upgrade to Opus 4.7 at same price; headline is honesty (admits uncertainty, fewer unsupported claims, ~4× less likely to let its own bugs through); alignment near Mythos; ships dynamic workflows + effort control UI; default effort high
-- [[adam-bender]] — Senior software engineer and speaker representing Google for Developers; advocate for systems thinking and software ecology in the AI era
-- [[google-for-developers]] — Google's developer advocacy and relations program; publishes engineering lessons, tools, APIs, and frameworks for global developers
-- [[dora]] — DevOps Research and Assessment team at Google; conducts statistical research on software delivery performance and DevOps metrics
-- [[deepswe]] — Datacurve's contamination-free long-horizon coding benchmark; behavioral verifier; 113 problems / 91 repos / 5 langs; wider model spread than SWE-Bench Pro
-- [[frontierswe]] — Proximal's ultra-long-horizon coding benchmark (20h/problem); unsaturated; same picture as DeepSWE (big gap between top 2 and rest)
-- [[datacurve]] — Team behind the DeepSWE benchmark
-- [[proximal]] — Team behind the FrontierSWE benchmark
-- [[mini-swe-agent]] — Minimal single-bash-tool harness; used by DeepSWE to isolate model ability from scaffolding
-- [[can-boluk]] — Engineer; oh-my-pi maintainer; Hashline edit format and react-edit-benchmark author
-- [[oh-my-pi]] — Can Bölük's pi fork; model-agnostic harness lab; Hashline and structured subagent outputs
-- [[thorsten-ball]] — Sourcegraph/Amp engineer; author of Software After Software manifesto and "Writing an Interpreter in Go"
-- [[amp]] — Sourcegraph's agent-first coding agent product; competitor to Claude Code/Codex/OpenCode
-- [[amp-labs]] — Frontier R&D arm of Amp; positioned as Sourcegraph's example of a Frontier Camp
-- [[sourcegraph]] — Code search and developer tools company (since 2013); maker of Amp and Cody
-- [[thariq-shihipar]] — Claude Code MTS; advocates HTML artifacts over Markdown for richer, more readable, shareable, interactive agent outputs
-- [[chrisza-stuff]] — Thai creator discussing AI productivity as human interaction; source for Interaction Productivity, Acceptance Bottleneck, and AI-era Standard Balance
-- [[tj-devries]] — Neovim developer/tooling creator; source for PDE and `luai.nvim` just-in-time software demo
-- [[luaai-nvim]] — Experimental Neovim plugin that generates missing Lua functions with an LLM, saves them as modules, and reuses/improves them later
+- [[boris-cherny]] — engineer ที่ Anthropic ผู้สร้าง Claude Code; ถูกอ้างใน loop-engineering ("my job is to write loops") และ Thariq ยกเป็นตัวอย่าง agentic coder ที่เหลือ unknowns น้อย
+- [[economy-media]] — ช่อง YouTube สายเศรษฐศาสตร์/ธุรกิจ; เป็น source ของ ingest เรื่องต้นทุน token AI สลับข้างกับค่าแรงคน; ใช้เป็นแหล่งอธิบายชั้นสอง ไม่ใช่รายงานปฐมภูมิ
+- [[khunpho-naklongthun]] — ช่อง YouTube ลงทุนไทย เจ้าของคลิปเทียบหุ้น photonics LITE/COHR/NOK/AAOI; ใช้เป็นตัวอธิบายการลงทุนชั้นสอง ไม่ใช่ข้อมูลตรงจากบริษัท
+- [[coherent]] — บริษัท photonics/materials/optical communications; ใน source ถูกวางเป็นเจ้าตลาดปัจจุบันเรื่องความพร้อม 6-inch Indium Phosphide wafer และการส่งมอบ optical transceiver ให้ AI data center
+- [[lumentum]] — บริษัท optical/photonics; source มองว่าเป็น pure play ที่ตรงกับ photonics ใน AI data center กว่า ช่วงหลังโตแรง margin ดี แต่มีความเสี่ยงเรื่องเร่ง capacity ยาวถึงปี 2028
+- [[aaoi]] — Applied Optoelectronics; บริษัท optical communications ตัวเล็ก ถูกวางเป็นตัวเดิมพัน photonics แบบ high-risk/high-return ใช้กระบวนการ MBE ของตัวเอง ตั้งเป้ารายได้/capacity ไว้สูงมาก
+- [[nokia]] — บริษัท telecom/networking; ถูกเทียบเป็นตัวเลือก photonics/network stack ที่ใหญ่กว่าและ defensive กว่า; source ชมเรื่อง cash flow กับฐานธุรกิจใหญ่ แต่สัดส่วน photonics ตรง ๆ น้อยกว่า และมีความเสี่ยงเรื่อง San Jose/ไทม์ไลน์
+- [[axt]] — supplier ต้นน้ำของ Indium Phosphide wafer; source มองว่าสำคัญต่อคอขวดของ photonics แต่เสี่ยงเรื่องจีน/export control
+- [[nvidia]] — บริษัท GPU / AI infrastructure; ใน source เรื่อง photonics ถูกใช้เป็นสัญญาณ demand/ความน่าเชื่อของการลงทุน optical interconnect ใน AI data center ไม่ใช่หุ้นหลักที่รีวิว
+- [[anna-freud]] — นักจิตวิเคราะห์ผู้จัดระบบ defense mechanisms ในหนังสือ The Ego and the Mechanisms of Defence (1936) รวมเรื่อง signal anxiety และการที่ ego ลงมือป้องกันตัวเอง
+- [[sigmund-freud]] — ผู้ก่อตั้ง psychoanalysis; เป็นฉากหลังของ source เรื่อง defense mechanisms ว่าเป็นกลไกที่ ego ใช้จัดการแรงขับจาก id และความขัดแย้งภายใน
+- [[george-vaillant]] — จิตแพทย์เจ้าของ hierarchy ของ defense 4 ระดับ (pathological, immature, neurotic, mature) ที่ผูกกับการปรับตัวระยะยาวตามแนวทาง Grant Study
+- [[robert-plutchik]] — นักจิตวิทยาที่โยง defense mechanisms เข้ากับอารมณ์พื้นฐานและโครงสร้างการวินิจฉัย
+- [[otto-kernberg]] — นักจิตวิเคราะห์สาย object relations; มองว่า defense แบบ primitive/splitting เป็นแกนของ borderline personality organization
+- [[j-christopher-perry]] — จิตแพทย์และนักวิจัย psychotherapy เจ้าของ Defense Mechanism Rating Scale (DMRS)
+- [[american-psychiatric-association]] — องค์กรจิตเวชเจ้าของ DSM-IV-TR ที่เคยใส่แกน defensive functioning แบบทดลองเอาไว้
+- [[wikipedia]] — สารานุกรมที่คนช่วยกันเขียน; เป็น source ของหน้า overview เรื่อง Defence mechanism ใน wiki นี้
+- [[mlhf]] — ช่อง YouTube คณิตศาสตร์ไทย "แมทเล่าให้ฟัง"; source ของ ingest เรื่อง infinity/cardinality/Continuum Hypothesis/Gödel incompleteness
+- [[georg-cantor]] — นักคณิตศาสตร์ผู้คิด cardinality และ diagonal argument; เปิดทางจากการเทียบขนาดเซตอนันต์ไปสู่ Continuum Hypothesis
+- [[kurt-godel]] — นักตรรกศาสตร์/นักคณิตศาสตร์เจ้าของ incompleteness theorems และผลที่ว่าถ้า ZFC consistent ก็หักล้าง Continuum Hypothesis ไม่ได้
+- [[paul-cohen]] — นักคณิตศาสตร์ผู้พิสูจน์ว่าถ้า ZFC consistent ก็พิสูจน์ Continuum Hypothesis ไม่ได้เช่นกัน ปิดภาพ independence คู่กับผลของ Gödel
+- [[david-hilbert]] — นักคณิตศาสตร์เจ้าของโจทย์ 23 ข้อที่มี Continuum Hypothesis อยู่ด้วย; เป็นสัญลักษณ์ของความหวังว่าคำถามใหญ่ทางคณิตศาสตร์ตัดสินได้ด้วยการพิสูจน์
+- [[the-singularity-is-nearer]] — ป้ายชื่อผู้เขียน/บล็อกของ "The Eternal Sloptember" บน geohot.github.io; วิจารณ์ agent แรง แกนอยู่ที่ statistical mimicry, slop และการที่ agent ขาด process/world model ของการเขียนโปรแกรม
+- [[tinygrad]] — ML framework/compiler stack; ใน field report ของ Eternal Sloptember เป็นงาน low-level systems จริงที่ผู้เขียนลองใช้ agent แล้วยังรู้สึกว่าทำมือเองดีกว่า/เร็วกว่า
+- [[afl]] — American Fuzzy Lop เครื่องมือ fuzzing; Eternal Sloptember ยกมาชี้ว่าโปรแกรมเมอร์ไม่ได้กลัว automation ที่มีประโยชน์ กลัวแค่ automation ที่ process/ผลลัพธ์เชื่อไม่ได้
+- [[yann-lecun]] — นักวิจัย AI; Eternal Sloptember ยกมาเป็นฝั่ง LeCun/Marcus ที่ไม่เชื่อว่า LLM อย่างเดียวจะพอถ้าไม่มี world model
+- [[gary-marcus]] — นักวิจารณ์/นักวิจัย AI ที่ถูกยกมาคู่กับ LeCun; เป็นตัวแทนความไม่เชื่อว่า LLM ล้วน ๆ จะ reasoning/เขียนโปรแกรมได้จริง
+- [[apple]] — บริษัทเทคเจ้าของ macOS/iOS; Eternal Sloptember หยิบ Apple/macOS มาตั้งคำถามว่าถ้าองค์กรใหญ่ใช้ AI agent กันทั่ว คุณภาพซอฟต์แวร์จะดีขึ้นหรือแย่ลง
+- [[perplexity]] — startup ด้าน AI answer/search ก่อตั้งปี 2022; Mondo Startups มองว่าทำให้ answer-with-citations กลายเป็นของธรรมดา แต่แพ้ศึกใหญ่เรื่องชิงที่ Google เพราะโดนก๊อปฟีเจอร์ ค่า query แพง โฆษณาทำเงินไม่ค่อยได้ เสี่ยงเรื่องความไว้ใจจาก publisher และเสียเปรียบด้าน distribution
+- [[google]] — เจ้าตลาด search/โฆษณา; ใน source เรื่อง Perplexity ชนะศึก AI search ไม่ใช่เพราะคำตอบดีกว่า แต่เพราะนิสัยการ search ของคน ตำแหน่ง default ใน Chrome/Android เศรษฐศาสตร์โฆษณา และ distribution ของ ecosystem
+- [[aravind-srinivas]] — co-founder ของ Perplexity; Mondo Startups วางว่าเป็น founder ที่เข้าใจทั้ง search และ LLM จากงานแถว Google, DeepMind และ OpenAI
+- [[comet-browser]] — AI browser ของ Perplexity; ความพยายามยึด interface กับ distribution เอง ไม่ใช่เป็นแค่ปลายทาง search; ยังไม่ชัดว่าจะเปลี่ยนนิสัย browser/search ที่คนติดแน่นอยู่แล้วได้ไหม
+- [[chatgpt]] — ผลิตภัณฑ์ AI ฝั่ง consumer ของ OpenAI; ใน source เรื่อง Perplexity เป็นหนึ่งใน AI หน้าบ้านเจ้าใหญ่ที่ดูดฟีเจอร์ answer-with-citations ไปจน Perplexity หมดจุดต่าง
+- [[mondo-startups]] — ช่อง YouTube สารคดีธุรกิจ/เทค; ที่มาของบทวิเคราะห์กลยุทธ์ Perplexity ใช้เป็นการตีความชั้นสอง ไม่ใช่หลักฐานตรงจากบริษัท
+- [[oumuamua]] — 1I/2017 U1 วัตถุ interstellar ดวงแรกที่ตรวจพบ (2017, Pan-STARRS1); ทรงยาว หมุนคว้าง มี non-gravitational acceleration แต่ไม่มีหางให้เห็น; คำอธิบายที่ดีที่สุด ณ ปี 2026 คือก้อนน้ำแข็งธรรมดาที่ปล่อย hydrogen จาก radiolysis (dark comet) ไม่ใช่ยานต่างดาว
+- [[avi-loeb]] — ศาสตราจารย์ดาราศาสตร์ที่ Harvard; เสนอสมมติฐาน alien solar sail ให้ ʻOumuamua (2018) แล้วคอยแย้งคำอธิบายธรรมชาติทุกข้อ; เป็นเสียง "อาจจะเอเลี่ยน" ประจำเวลามีวัตถุแปลกบนฟ้า รวมถึง 3I/ATLAS
+- [[3i-atlas]] — วัตถุ interstellar ดวงที่สาม (ATLAS ค้นพบ 2025-07-01); ปล่อย methane ช้าแต่มหาศาล เป็นหลักฐานว่ามีเปลือกฉนวนที่โดนรังสีหุ้มแกนน้ำแข็งบริสุทธิ์อยู่ ยิ่งหนุนคำอธิบาย radiolysis ของ ʻOumuamua
+- [[curiosity-channel]] — ช่อง YouTube วิทยาศาสตร์ไทย (คนช่างสงสัย); source ของ recap ʻOumuamua ปี 2026; เล่าวิทยาศาสตร์เป็นภาษาพูด ปิดท้ายด้วยวิธีคิดแบบ Occam's razor
+- [[longcat-2-0]] — model ของ Meituan ตามที่ Prompt Engineering เล่า: MoE ขนาด 1.6T พารามิเตอร์ active 48B ต่อ token เทรนบนชิป AI ทำเองกว่า 50,000 ตัวด้วยข้อมูล 35T token โดยไม่ใช้ NVIDIA GPU/Google TPU; ตัวเลขยังเป็นคำกล่าวอ้างจาก source รอตรวจกับแหล่งปฐมภูมิและบุคคลที่สาม
+- [[meituan]] — บริษัทอินเทอร์เน็ต/บริการของจีน เจ้าของ LongCat 2.0 ใน source ที่ให้มา; ตัวอย่างว่าความสามารถ AI ย้ายจาก lab เฉพาะทางไปอยู่กับแพลตฟอร์มจีนรายใหญ่ที่อยากมี hardware/software stack ของตัวเอง
+- [[prompt-engineering]] — ช่อง YouTube อธิบายงาน AI engineering; source ของ ingest เรื่อง LongCat 2.0 / จีนยืนบน hardware ตัวเอง; ใช้เป็นการตีความจากบุคคลที่สาม ไม่ใช่หลักฐานตรงจาก Meituan
+- [[bycloud]] — ช่องอธิบาย AI/LLM เจ้าของคลิป looped transformer; มีประโยชน์ในฐานะ source สังเคราะห์ชั้นสองที่โยง recurrence, stability, mechanistic analysis, adaptive recursive depth และ tradeoff ของ KV cache เข้าด้วยกัน
+- [[crusoe]] — บริษัท AI infrastructure ที่ถูกโปรโมตใน source ของ bycloud ว่าให้บริการ serverless fine-tuning; ข้อมูลมาจากช่วงสปอนเซอร์/บริบทขายของ ไม่ใช่การประเมินอิสระ
+- [[intuitive-ai-academy]] — โปรเจกต์คอร์สสอน LLM ของ bycloud; ถูกโปรโมตในคลิป looped transformer ว่าเป็นการสอน AI แบบเอา intuition นำ
+- [[zoran-horvat]] — นักสอน .NET/software / Zoran on C#; เชียร์ rich domain model มากกว่าการกด model ให้แบนตาม persistence และวิจารณ์ Claude Plan mode ว่าเป็นแค่ prompt scaffolding ไม่ใช่วิจารณญาณทาง engineering จริง
+- [[entity-framework-core]] — ORM ฝั่ง .NET ของ Microsoft; ในโพสต์ของ Horvat เป็นตัวอย่างเครื่องมือ map nested value object, converter, private constructor และ query แบบ domain-rich ลง relational persistence
+- [[aom-khunpanitchot]] — คนทำ software/AI ชาวไทย จาก field report บน Facebook เรื่อง Fable/Elysia 2; เขียนในมุมเจ้าของ codebase Elysia 2 ที่ประเมินผล audit จาก AI ว่าพร้อม release หรือยัง
+- [[fable]] — Claude Fable 5 model ของ Anthropic ในตระกูล Claude (ยืนยันจาก field guide ของ trq212); ก่อนหน้านี้โผล่ใน audit Elysia 2 ของ Aom ผ่าน ultracode auto mode ที่ spawn agent ราว 100 ตัว; Thariq เคลมว่าเป็น model แรกที่คุณภาพงานไปติดคอขวดตรงที่ผู้ใช้ต้องเคลียร์ unknowns เอง; spec/tier/ราคายังไม่ชัด
+- [[elysia-2]] — codebase/โปรเจกต์ในโพสต์ audit ของ Aom; เป็นเคส release readiness จริงที่ smoke/plugin check กับ AI reviewer หลายตัวบอกว่าพร้อม RC/stable แต่ Fable กลับรายงาน blocker ที่ลึกกว่านั้น
+- [[genebench-pro]] — benchmark ระดับงานวิจัยของ OpenAI สำหรับ agent สาย computational biology; โจทย์สังเคราะห์ 129 ข้อใน 10 โดเมน วัด research taste, การรับมือความกำกวม, QC, การเลือกวิธี causal/statistical และความพร้อมใช้ตัดสินใจ ไม่ใช่ความรู้ตามตำรา
+- [[gpt-5-6-sol]] — GPT-5.6 ของ OpenAI ตัวที่รายงานว่าแรงสุดบน GeneBench-Pro; pass rate 28.7% ที่ reasoning สูงสุด และ 31.5% ใน Pro mode; ตัวเลขมาจาก source GeneBench-Pro อย่างเดียว
+- [[hugging-face]] — แพลตฟอร์ม model/dataset ด้าน AI; เป็นที่วางแพ็กเกจโจทย์ตัวอย่าง GeneBench-Pro 10 ข้อที่ OpenAI เปิด public
+- [[artificial-analysis]] — องค์กร/แพลตฟอร์ม benchmark AI; OpenAI วางแผนส่งชุดย่อย GeneBench-Pro 50 ข้อให้เอาไป benchmark อิสระแบบบุคคลที่สาม
+- [[techsauce]] — สื่อเทค/ธุรกิจไทยสาย ecosystem; สรุปเฟรม AI Brain Fry เรื่องความล้าจากการใช้ AI ในที่ทำงานให้คนอ่านไทย
+- [[harvard-business-review]] — สื่อด้าน management ที่ Techsauce อ้างเป็นบริบทต้นทางของ AI Brain Fry; รายละเอียดบทความ HBR ต้นฉบับยังค้างอยู่ จนกว่าจะ ingest ตรง
+- [[rhys-sullivan]] — คนเขียนบน X เจ้าของ "i don't want to use your agent"; มองว่าความเชี่ยวชาญของ product ควรออกมาเป็น skills/MCP/API/CLI ที่เสียบเข้า agent ตัวหลักที่ผู้ใช้ใช้อยู่ทุกวัน
+- [[linear]] — เครื่องมือจัดการ issue/project; ในเฟรม BYO-agent ของมีค่าคือ API ของ ticket/project, skill สำหรับวางแผน และ deeplink ไม่ใช่แค่ agent ในแอปอย่างเดียว
+- [[cloudflare]] — แพลตฟอร์ม cloud/edge/security/developer infrastructure; ตัวอย่าง BYO-agent ที่ docs, คำสั่ง CLI, เครื่องมือ config และ API ที่คุม permission ได้ สำคัญกว่าแชตใน dashboard อย่างเดียว
+- [[posthog]] — product analytics/product OS; ตัวอย่าง BYO-agent ที่เครื่องมือ query event, schema resource, deeplink เข้า UI และ skill วิเคราะห์ growth ควรเปิดให้ agent เข้าถึงได้
+- [[mikelopster]] — creator สาย software/AI ชาวไทย; source ของมุมมอง Loop Engineering แบบ pragmatic: feedback gate กับคอขวดที่คนต้อง review สำคัญกว่าการมี trigger
+- [[ataiiam]] — ผู้เขียน thread "Self Learning for Agents" (2026-06-24); อยู่ทีม CopilotKit; ทำให้การแบ่ง model/harness/context ของ Harrison Chase เป็นที่รู้จัก
+- [[copilotkit]] — framework สำหรับ interface ระหว่าง agent กับผู้ใช้; อยู่เบื้องหลัง AG-UI protocol และ CopilotKit Intelligence (เรียนจากผู้ใช้ → procedural memory)
+- [[ag-ui]] — Agent-User Interaction Protocol; มาตรฐานเปิดที่ stream ทุก event ของ app/user/agent แบบ real time; ทำให้จุดที่ agent พลาดกับจุดที่คนเข้ามาแก้อยู่ที่เดียวกัน (ต่างจาก MCP ที่อยู่ชั้น agent↔tool)
+- [[langchain]] — บริษัท AI agent ของ Harrison Chase; ต้นทางของการแบ่ง 3 ชั้น, "the art of loop engineering" (Sydney Runkle) และ Deep Agents (harness เขียนตัวเองใหม่จาก trace โดย model ถูกแช่แข็ง); คนละอย่างกับ Chase AI
+- [[letta]] — แพลตฟอร์ม memory สำหรับ agent; weights แช่แข็ง แต่เรียนรู้ใน plain text ที่แก้ได้; มี agent อีกตัวคอยเขียน core memory ใหม่ตอนว่าง (sleep-time compute); weights อยู่ชั่วคราว text อยู่ยาว
+- [[google-deepmind]] — lab AI ของ Google; AlphaEvolve คือ self-learning ระดับ model layer ที่น่าเชื่อสุด (attention kernel +32.5%, ทำลายสถิติ matmul ปี 1969, AI เร่งการเทรนของตัวเอง) แต่ใช้ได้เฉพาะที่มี scorer ฟรีเท่านั้น
+- [[meta]] — big tech; การ log keystroke บนแล็ปท็อปพนักงานปี 2026 คือวิธี "มองข้ามไหล่" เพื่อเก็บ signal จากคน (เห็นคน ไม่เห็น agent; ล้ำ privacy)
+- [[david-ondrej]] — creator สาย AI / โฮสต์ podcast; สัมภาษณ์ Matt Pocock (2026-06-19); รับบท "true believer" ฝั่ง model-first ไว้ชนกับจุดยืน harness-first ของ Pocock
+- [[jeffrey-huntley]] — engineer; ผู้เขียน Ralph loop (while loop ที่รัน Claude Code วนซ้ำ) ต้นตอกระแส "agentic loop" ปี 2026
+- [[teach-skill]] — skill สอนหนังสือแบบมี state ของ Matt Pocock; mission.md → trusted resources → บทเรียน HTML + quiz → learning record; สร้างบนแนวคิด knowledge/skills/wisdom กับ zone of proximal development
+- [[superpowers]] — repo รวม skill ของ agent ที่คนนิยม (Obra); เป็นปรัชญา model-in-control เอาไว้เทียบกับ procedures แบบ user-in-control ของ Pocock
+- [[coderabbit]] — เครื่องมือ AI review code; Addy อ้างรายงานของเจ้านี้ว่า PR ที่ AI ร่วมเขียนมีปัญหามากกว่า PR คนล้วนราว 1.7 เท่า; ใช้เป็น sensor เชิงอนุมานตอน review ไม่ใช่คำตัดสินว่า merge ได้
+- [[greptile]] — เครื่องมือ AI code review / code intelligence; ตัวอย่างการวาง reviewer หลายเจ้าต่างชนิด ให้แต่ละตัวจับปัญหา correctness/architecture คนละแบบ
+- [[faros-ai]] — บริษัท engineering intelligence / เมทริก developer productivity; แหล่งข้อมูลปี 2026 ที่ชี้ว่าใช้ AI แล้ว throughput เพิ่ม แต่ code churn, defect และเวลารีวิวพุ่งตามแรง
+- [[gitclear]] — บริษัท analytics ด้าน developer productivity จากข้อมูล git; ที่มาของเฟรม output ดิบเพิ่ม 4 เท่า แต่ productivity ที่ส่งมอบจริงเพิ่มแค่ราว 12%
+- [[kun-chen]] — อดีต L8/principal engineer ที่ Meta นักสร้าง agentic workflow/tooling; รัน agent พร้อมกันเยอะ ๆ โดยย้ายงานคนไปอยู่ที่การวางแผน รีวิวหลักฐาน และชั่งความเสี่ยง; ผู้สร้างเครื่องมือที่พูดถึงที่นี่ เช่น AXI, Lavish, No Mistakes, Good Night Have Fun, Treehouse และ First Mate
+- [[wezterm]] — terminal emulator ข้ามแพลตฟอร์มที่ config ด้วย Lua; เป็น terminal ชั้นนอกใน workflow แบบ terminal-first ของ Kun Chen
+- [[tmux]] — terminal multiplexer สำหรับ pane/window ที่เปิดค้างไว้ได้; ช่วยให้ Kun Chen เปิด editor, shell และ agent session หลายตัวค้างไว้ใช้ข้ามเครื่อง
+- [[open-superwhisper]] — แอป voice input แบบ local ที่ใช้ Whisper; Kun ใช้พูด prompt ยาว ๆ แล้วจูนคำศัพท์ transcription ให้รู้จักชื่อโปรเจกต์/เครื่องมือ
+- [[axi]] — มาตรฐานพร้อมแคตตาล็อกด้าน agent experience/tool design ของ Kun Chen; ปรับ output ของ tool ให้เหมาะกับค่า token, latency และโอกาสสำเร็จของ agent ไม่ใช่ ergonomics สำหรับคนอย่างเดียว
+- [[lavish]] — tool/skill ทำ planning artifact ของ Kun Chen; เปลี่ยนแผนที่เป็นกำแพงตัวหนังสือให้เป็น HTML artifact ตามสไตล์โปรเจกต์ มี options, annotation และ decision ให้เลือก
+- [[no-mistakes]] — validation pipeline ของ Kun Chen; เอาโค้ด agent รอบแรกมาทำเป็น PR ครบวงจร ทั้ง branch/rebase, adversarial review, หลักฐาน E2E, docs/lint และเฝ้า PR ต่อจนจบ
+- [[good-night-have-fun]] — tool รัน agent loop ยาว ๆ ของ Kun Chen (`gnhf`); รัน iteration ตาม objective มี cap เรื่อง token/จำนวนรอบ และเงื่อนไขหยุด
+- [[treehouse]] — ตัวจัดการ git worktree สำหรับรัน agent ขนานของ Kun Chen; สร้าง/ใช้ worktree ซ้ำ ลดงานจุกจิกเรื่องดูแล worktree
+- [[first-mate]] — meta-agent ของ Kun Chen สำหรับคุม agent session หลายตัว, worktree ของ Treehouse และ gate PR ของ No Mistakes จากหน้าจอกัปตันหน้าเดียว
+- [[omnigent]] — meta-harness แบบ open source ระยะ alpha ของ Databricks; ห่อ Claude Code/Codex/Pi/SDK/agent ทำเองไว้หลัง API เดียว แล้วเติม policy ข้าม harness, sandbox, การคุมค่าใช้จ่าย และ collaboration แบบ live
+- [[databricks]] — บริษัท data และ AI infrastructure; ผู้สร้าง Omnigent กับ Genie; เสนอ meta-harness เป็นชั้นควบคุมที่อยู่เหนือ silo ของ agent-tool
+- [[zack-proser]] — engineer ทีม Applied AI ที่ WorkOS; เสนอเรื่อง balance ของ developer ผ่านการกรอง signal, agent loop ที่ verify ตัวเอง, Remote Control และการปรับ harness จากประวัติบทสนทนา
+- [[workos]] — บริษัท developer tools/API ฝั่ง enterprise; ทีม Applied AI ของ Zack Proser ใช้ Claude Code แก้และ verify workflow Slack-to-blog ได้ครบวงจร
+- [[cursor]] — บริษัท AI coding / IDE-harness; สร้าง cloud agent บน VM แยกเฉพาะ; ย้าย agent loop ไป Temporal เพื่อ durable execution; PR ใน monorepo ของตัวเองมาจาก cloud agent เกิน 40%; fine-tune merge model ใช้เอง
+- [[josh-ma]] — Cursor; ผู้เขียน "What We've Learned Building Cloud Agents" (2026-06-02)
+- [[temporal]] — แพลตฟอร์ม durable execution (retry, scheduling, ทนต่อ node ล่ม); Cursor ย้าย loop ของ cloud agent มาที่นี่ reliability ขยับจาก 1 nine เป็น 2 nines รองรับ 50M+ actions ต่อวัน
+- [[claude-opus-4-8]] — flagship ของ Anthropic (2026-05-28); อัปเกรดตรงจาก Opus 4.7 ราคาเท่าเดิม; จุดขายคือความซื่อตรง (ยอมรับว่าไม่แน่ใจ เคลมลอย ๆ น้อยลง โอกาสปล่อยบั๊กของตัวเองหลุดน้อยลงราว 4 เท่า); alignment ใกล้ Mythos; มาพร้อม dynamic workflows + UI คุม effort โดย effort default อยู่ที่ high
+- [[adam-bender]] — senior software engineer และ speaker ตัวแทนฝั่ง Google for Developers; เชียร์ systems thinking กับ software ecology ในยุค AI
+- [[google-for-developers]] — โปรแกรม developer advocacy/relations ของ Google; เผยแพร่บทเรียน engineering, tools, API และ framework ให้นักพัฒนาทั่วโลก
+- [[dora]] — ทีม DevOps Research and Assessment ของ Google; ทำวิจัยเชิงสถิติเรื่อง software delivery performance และเมทริก DevOps
+- [[deepswe]] — benchmark งาน coding แบบ long-horizon ของ Datacurve ที่กัน contamination; ใช้ behavioral verifier; 113 โจทย์ / 91 repo / 5 ภาษา; แยกช่องว่างระหว่าง model ได้กว้างกว่า SWE-Bench Pro
+- [[frontierswe]] — benchmark งาน coding แบบ ultra-long-horizon ของ Proximal (20 ชั่วโมงต่อโจทย์); ยังไม่ saturate; เห็นภาพเดียวกับ DeepSWE (ท็อป 2 ทิ้งห่างที่เหลือเยอะ)
+- [[datacurve]] — ทีมเบื้องหลัง benchmark DeepSWE
+- [[proximal]] — ทีมเบื้องหลัง benchmark FrontierSWE
+- [[mini-swe-agent]] — harness แบบ minimal ที่มี bash tool ตัวเดียว; DeepSWE ใช้เพื่อแยกความสามารถของ model ออกจาก scaffolding
+- [[can-boluk]] — engineer; maintainer ของ oh-my-pi; ผู้เขียน Hashline edit format และ react-edit-benchmark
+- [[oh-my-pi]] — fork ของ pi โดย Can Bölük; เป็น lab ทดลอง harness แบบไม่ผูกกับ model ไหน; มี Hashline กับ structured subagent outputs
+- [[thorsten-ball]] — engineer ที่ Sourcegraph/Amp; ผู้เขียน manifesto Software After Software และหนังสือ "Writing an Interpreter in Go"
+- [[amp]] — ผลิตภัณฑ์ coding agent แบบ agent-first ของ Sourcegraph; คู่แข่ง Claude Code/Codex/OpenCode
+- [[amp-labs]] — หน่วย frontier R&D ของ Amp; ถูกวางเป็นตัวอย่าง Frontier Camp ของ Sourcegraph
+- [[sourcegraph]] — บริษัท code search และ developer tools (ตั้งแต่ 2013); ผู้สร้าง Amp กับ Cody
+- [[thariq-shihipar]] — MTS ทีม Claude Code; เชียร์ HTML artifact แทน Markdown เพื่อให้ output ของ agent อ่านง่ายกว่า แชร์ได้ และ interactive กว่า
+- [[chrisza-stuff]] — creator ชาวไทยที่มอง AI productivity เป็นเรื่อง human interaction; source ของ Interaction Productivity, Acceptance Bottleneck และ Standard Balance ยุค AI
+- [[tj-devries]] — นักพัฒนา Neovim/คนทำ tooling; source เรื่อง PDE กับเดโม just-in-time software ของ `luai.nvim`
+- [[luaai-nvim]] — plugin Neovim ตัวทดลอง ให้ LLM เขียนฟังก์ชัน Lua ที่ยังไม่มีขึ้นมาสด ๆ เซฟเป็น module แล้วเอากลับมาใช้/ปรับปรุงต่อทีหลัง
 - [[john-ousterhout]] — ศาสตราจารย์ Stanford และผู้แต่ง A Philosophy of Software Design; ต้นคิดเรื่อง Deep Modules
-- [[ibm]] — Enterprise technology company behind Granite; Granite Speech 4.1 positions small/local speech models for practical ASR workflows
-- [[granite-speech]] — IBM speech model family; Granite Speech 4.1 has 2B base, Plus, and NAR variants for ASR trade-offs
-- [[sam-witteveen]] — AI creator/practitioner covering local AI, models, and agent workflows; source for Granite Speech 4.1 analysis
-- [[claude-managed-agents]] — Anthropic's managed agent platform; Memory (public beta) + Dreaming (research preview); permission scopes, optimistic concurrency, audit log
-- [[harvey-ai]] — Legal AI; early Dreaming customer; reported 6× task completion on legal benchmark
-- [[arrowhead-game-studios]] — Swedish developer of Helldivers 2; criticized for "Monkey Paw" balancing and late-game stagnation in 2026
-- [[helldivers-2]] — Squad-based shooter by Arrowhead; hit "Mostly Negative" on Steam in 2026 due to live-service mismanagement
-- [[sony-interactive-entertainment]] — Publisher of Helldivers 2; criticized alongside Arrowhead for 2026 review crisis
-- [[swanyplaysgames]] — Content creator and YouTuber; key reporter on Helldivers 2 2026 crisis
-- [[gemma]] — Google's open-weight model family (Apache 2.0); Gemma 4 (E2B/E4B edge through 31B); ships MTP drafters in 2026
-- [[lars-faye]] — Developer and author warning about the cognitive debt of agentic coding
-- [[simon-willison]] — Senior developer and creator of Datasette; highlighted cognitive debt from AI assistance
-- [[dax]] — Creator of OpenCode; advocates that "coding is planning"
-- [[cal-rueb]] — Anthropic engineer and core contributor to Claude Code
-- [[claude-web]] — The browser-based interface for Claude (claude.ai).
-- [[chase-ai]] — Content creator and AI agency founder; Claude Code expert; author of Claude Code Masterclass
-- [[impeccable]] — Open-source design skill and toolset for Claude Code; focuses on high-taste UI and live browser editing
-- [[iii-triple-i]] — Open-source backend engine for AI agents using WTF Primitives.
-- [[microsoft]] — Technology giant; shift toward AI independence, home-grown models, and a non-exclusive OpenAI partnership
-- [[milvus]] — Open-source vector database for large-scale AI applications and code retrieval
-- [[zilliz]] — Managed cloud service for Milvus vector database
-- [[abn-amro]] — Dutch bank with a strong private banking tradition
-- [[github]] — World's largest source code management platform; moving toward AI-first developer platform
-- [[github-copilot]] — AI coding assistant evolving into an "Agentic Platform" with usage-based billing
-- [[andrej-karpathy]] — AI researcher, originator of the LLM knowledge bases pattern and LLM coding pitfalls observations
-- [[anthropic]] — AI safety lab; creator of Claude model family, Claude Code, MCP, advisor strategy
-- [[claude]] — Anthropic's model family: Opus, Sonnet, Haiku, and Mythos preview
-- [[claude-opus-4-7]] — Flagship Anthropic model (2026-04-16); SWE-focused upgrade to Opus 4.6
-- [[claude-code]] — Anthropic's terminal-based coding agent (CLI, desktop, web, IDE extensions)
-- [[forrestchang]] — GitHub developer who packaged Karpathy's coding observations into the `andrej-karpathy-skills` Claude Code skill
-- [[gitnexus]] — Open-source code intelligence engine that indexes codebases into knowledge graphs for AI agents
-- [[akon-labs]] — Company behind GitNexus enterprise (SaaS and self-hosted)
-- [[helix]] — Post-modern modal text editor with built-in tree-sitter, LSP, and multiple selections
-- [[imetomi]] — GitHub developer behind the retro-futuristic-ui-design React component library
-- [[jeeraphan-lairat]] — Software Engineer at Senestia; writes on AI productivity and Lead Time
-- [[nathan-david-jones]] — Concept artist whose retro-futuristic UI work is a key visual reference for cassette futurism
-- [[nikolai-fedorov]] — Russian philosopher, originator of Soviet Cosmism and the resurrection imperative
-- [[konstantin-tsiolkovsky]] — Rocket science pioneer, key Soviet Cosmist thinker
-- [[vladimir-vernadsky]] — Mineralogist/geochemist, creator of the noosphere concept
-- [[csharp]] — Microsoft's statically-typed .NET language; C# 14 is the current release
-- [[vannevar-bush]] — MIT engineer, 1945 "As We May Think" essay, originator of the Memex concept and the hypertext lineage
-- [[leo-robinovitch]] — Go TUI developer; author of viewport component, lore pager, kl (k8s logs), wander (Nomad)
-- [[lgt-bank]] — Private bank owned by the Princely House of Liechtenstein
-- [[neovim]] — Lua-embedded modern fork of Vim; 0.12 ships vim.pack as built-in plugin manager
-- [[evgeni-chasnovski]] — Neovim plugin author; creator of mini.nvim and mini.deps, vim.pack design influence
-- [[andrew-price]] — 3D artist (Blender Guru); advocate of hybrid AI + 3D workflows
-- [[blender]] — Open-source 3D creation suite; pipeline anchor for AI + 3D workflows
-- [[comfyui]] — Open-source node-based UI for diffusion image-generation workflows
-- [[flux]] — Black Forest Labs image diffusion family; Flux.1 Depth enables geometry-conditioned generation
-- [[panutat-tejasen]] — Thai practitioner; proposed "Harness Engineering" as curriculum response to capable AI coding agents; creator of thClaws
-- [[peter-gostev]] — AI expert at Arena.ai; creator of BullshitBench; analyst of model failure modes
-- [[arena-ai]] — (Chatbot Arena) LMSYS blind-test platform for LLM evaluation and Elo ranking
-- [[ryan-lopopolo]] — Member of Technical Staff at OpenAI; advocate of agent-exclusively workflows and Harness Engineering
-- [[thclaws]] — Open-source Rust port of Claude Code's core logic; v0.7.0 includes Marketplace for Skills/MCP/Plugins and Host Bridge for Agent Dashboards
-- [[nattee-niparnan]] — Chula CEDT faculty; cafe-grader maintainer; author of the "วิศวฯคอมจะอยู่อย่างไรในยุค LLM ครองเมือง" series; originator of the "taste paradox" framing
-- [[alex-ker]] — Engineer (@thealexker, GitHub AlexKer); author of "Harnesses are everything"; contributor to Roo Code / DeepAgent CLI / HumanLayer; ex-Baseten gpt-oss-swarm
-- [[humanlayer]] — Open-source harness company; cited source for the "dumb zone" instruction-budget framing and the R.P.I. prompt framework
-- [[openai-codex]] — OpenAI's coding harness; converges with Claude Code on skills progressive disclosure, diverges on MCP handling
-- [[opencode]] — Open-source coding harness; loads all MCP tool definitions at startup; docs warn users to limit server count
-- [[tauri]] — Rust-based desktop app framework using OS-native webviews; small bundles, strong security; struggles when app's heavy logic lives in a non-rust runtime
-- [[ubs]] — Major Swiss investment bank and wealth management firm
-- [[electron]] — Chromium + Node.js desktop app framework; wins when app logic is already JS/Node/Bun (runs in-process, no sidecar)
-- [[owasp]] — OWASP Foundation; publisher of APTS, WSTG, ASVS, Top 10, and the 2026 Agentic Apps Top 10
-- [[somkiat-khitwongwattana]] — Thai software engineer a.k.a. **Akexorcist** (akexorcist.dev); long-time Android dev; writes in Thai on practice and LLM/Agent workflow
-- [[moonshot-ai]] — Chinese AI lab behind the Kimi family; open-source coding challenger; runs Kimi Code, Agent Swarm, Claw Groups surfaces
-- [[kimi-k2-6]] — Moonshot AI's 2026-04 open-source flagship: 262k context, agent swarm to 300 sub-agents, positioned vs GPT-5.4 / Opus 4.6 / Gemini 3.1 Pro on coding
-- [[mellum2]] — JetBrains 12B Apache 2.0 MoE model for fast AI workflows: routing, summarization, RAG, subagent steps, and private/local deployment; example of focal-model design
-- [[cyril-xbt]] — X content creator (@cyrilXBT); author of the opinionated 7-section CLAUDE.md guide; solo builder on AI + crypto + productivity
-- [[claude-mythos-preview]] — Anthropic frontier-preview model; most capable overall; autonomously finds/exploits zero-days in every major OS and browser; release restricted via Project Glasswing
-- [[project-glasswing]] — Anthropic initiative using Mythos Preview to secure critical software before Mythos-class models become broadly available; coordinated vulnerability disclosure
-- [[rtk]] — RTK (RTK-AI): high-performance Rust CLI proxy for output compression and token optimization
-- [[mf-piccolo]] — Developer and architect of iii; author of "The Harness is the Backend".
-- [[zed-industries]] — Creators of the Zed editor and the Agent Client Protocol (ACP)
-- [[google-cloud]] — Google's enterprise cloud division; ships Gemini Enterprise Agent Platform; Cloud Next '26 introduced 7-day long-running Agent Runtime
-- [[addy-osmani]] — Google engineer and author on web performance / agent architecture; wrote long-running agent patterns and Agent Harness Engineering
-- [[birgitta-bockeler]] — Thoughtworks engineer; "Exploring Gen AI" author on martinfowler.com; framed the coding-agent user harness as a control system of guides + sensors
-- [[thoughtworks]] — global software consultancy behind CI/CD, evolutionary architecture, fitness functions, and the Technology Radar; home of Böckeler's harness writing
-- [[vtrivedy]] — X writer credited by Addy Osmani with coining "harness engineering" around Agent = Model + Harness
-- [[fred-schott]] — Developer of Flue, cited as an agent harness framework author
-- [[flue]] — Agent harness framework by Fred Schott; example of Harness-as-a-Service / harness framework direction
-- [[gpui]] — Zed's custom GPU-accelerated UI framework built in Rust; feeds data directly to shaders for sub-millisecond latency.
-- [[gemini-enterprise-agent-platform]] — Google Cloud managed agent platform: Agent Runtime (7-day state), ADK, Mission Control, Memory Bank/Profiles, Agent Identity/Registry/Gateway, Observability, BYOC
-- [[hardik-pandya]] — Creator of the Stop Slop skill
-- [[piyalitt-ittichaiwong]] — Thai PhD researcher + 20yr programmer; early-access tester of frontier models (GPT-5.5); promoter of OpenAI Codex Community Thailand; co-organizer of OpenAI × Thai AI Society Hackathon
-- [[openai]] — AI lab; creator of ChatGPT, GPT family, and Codex; 2026 rival to Anthropic and Moonshot AI on the frontier-model axis
-- [[gpt-5-5]] — OpenAI flagship (2026-04-23): agentic coding SOTA (Terminal-Bench 2.0 82.7%, CyberGym 81.8%); 400K/1M ctx; $5/$30 per 1M tokens; near-Mythos Preview in capability but broadly accessible; 2× price of GPT-5.4, slightly > Opus 4.7 (pricing inversion)
-- [[aaron-levie]] — Co-founder/CEO of Box; enterprise-AI commentator on X; perspective from the company-deploying-AI side rather than the model-building side
-- [[mario-zechner]] — Creator of libGDX and pi coding agent; advocate for minimalist malleable tools and slow-down discipline when using agents
-- [[pi-agent]] — (pi.dev) Minimalist, extensible terminal coding agent with tree-structured sessions and self-modifying TypeScript extensions
-- [[terminus-agent]] — Minimalist agent using only tmux and keystrokes; inspired pi's design
-- [[vouch-oss]] — Mitchell Hashimoto's tool for human verification in Open Source projects
-- [[zed]] — High-performance, AI-native code editor built in Rust using a video game engine architecture; successor to Atom and VS Code.
-- [[matt-pocock]] — TypeScript expert and AI automation builder; creator of swappable-agent workflows, harness-first AI coding, and the dumb-zone `/rewind` + `/compact` heuristic
-- [[maggie-appleton]] — Staff Research Engineer at GitHub Next; designer/engineer; advocate for Collaborative AI Engineering and alignment
-- [[github-next]] — R&D team at GitHub; creators of Copilot, ACE, and Copilot Workspace
-- [[ace]] — (Agent Collaboration Environment) GitHub Next prototype for multiplayer team-agent collaboration
-- [[sandcastle]] — AI sandboxing infrastructure for safe and isolated agentic code execution; part of the swappable agent stack
-- [[senestia]] — Health tech company; focuses on healthcare accessibility and engineering pipeline efficiency
-- [[vercel]] — Cloud platform and creator of the Vercel AI SDK and Chat SDK used in agent orchestration
-- [[annabelle]] — "Wealth Architect" and finance influencer; subject of the "Financial Poetry" controversy; also known as "M-nabelle" (Arjarn M's alias)
-- [[compound-engineering]] — AI agent skill suite by Every Inc. focusing on alignment and reduced friction.
-- [[every-inc]] — Organization developing productivity and AI engineering tools like Compound Engineering.
-- [[trevin]] — Engineer at Every Inc.; lead developer of Compound Engineering and creator of the Playback Pattern.
-- [[arjarn-m]] — Owner of "Arjarn M" Facebook page; financial and social critic
-- [[singapore]] — Global financial hub and private banking center known for regulatory transparency and family offices
-- [[gee-money-more]] — Financial insight source focusing on private banking and investment practice
-- [[deepseek]] — Chinese AI lab known for high-efficiency models (V3, R1) and open-weight strategy.
-- [[deltadb]] — Zed's CRDT-based synchronization engine; enables character-level change tracking for human-agent collaboration.
-- [[high-flyer]] — Chinese Quant Hedge Fund; parent and primary funder of DeepSeek.
-- [[liang-wenfeng]] — Founder and CEO of DeepSeek and High-Flyer; advocate for technical efficiency.
-- [[ctrl-alt-zaid]] — AI researcher and author; proponent of machine-efficient agent memory and Mercury project
-- [[mercury]] — Open-source agent memory infrastructure; "Identity as human-owned, Memory as machine-efficient"
-- [[jrt-investment]] — Thai Facebook source on investment and life mindset; frames "I don't give a fuck" as selective care allocation
-- [[jetbrains]] — Developer-tools company behind IntelliJ/PyCharm; ACP partner and creator of Mellum2 for software-engineering AI workflows
-- [[jaroslaw-wasowski]] — Medium software-architecture writer; former SDD advocate (6 articles) who walked it back with "Stop Writing Specs. Start Writing Facts."
-- [[spec-kit]] — GitHub's SDD framework, ~90k stars (Q2 2026); shipped /speckit.spec-drift; its Step 1 survives as Wasowski's sketchpad
-- [[marc-brooker]] — AWS senior engineer (Lambda/Aurora); strongest defense of SDD: specs as explicit, versioned, living artifacts in iterative use
+- [[ibm]] — บริษัทเทคฝั่ง enterprise เจ้าของ Granite; Granite Speech 4.1 วางตำแหน่ง speech model ตัวเล็ก/รัน local สำหรับงาน ASR ใช้จริง
+- [[granite-speech]] — ตระกูล speech model ของ IBM; Granite Speech 4.1 มีตัว base 2B, Plus และ NAR ให้เลือกตาม trade-off ของ ASR
+- [[sam-witteveen]] — creator/practitioner สาย AI ที่คุมเรื่อง local AI, models และ agent workflow; source ของบทวิเคราะห์ Granite Speech 4.1
+- [[claude-managed-agents]] — platform managed agents ของ Anthropic; มี Memory (public beta) กับ Dreaming (research preview); มาพร้อม permission scopes, optimistic concurrency, audit log
+- [[harvey-ai]] — AI ด้านกฎหมาย; ลูกค้ารุ่นแรกๆ ของ Dreaming; รายงานว่าทำงานเสร็จเพิ่ม 6 เท่าบน legal benchmark
+- [[arrowhead-game-studios]] — สตูดิโอเกมสวีเดน ผู้สร้าง Helldivers 2; โดนวิจารณ์เรื่อง balance แบบ "Monkey Paw" กับเนื้อหา late-game ที่ย่ำอยู่กับที่ในปี 2026
+- [[helldivers-2]] — เกมยิงเล่นเป็นทีมจาก Arrowhead; ปี 2026 รีวิว Steam ร่วงถึง "Mostly Negative" เพราะบริหาร live-service พลาด
+- [[sony-interactive-entertainment]] — ผู้จัดจำหน่าย Helldivers 2; โดนวิจารณ์คู่กับ Arrowhead ตอนวิกฤตรีวิวปี 2026
+- [[swanyplaysgames]] — content creator / YouTuber; คนหลักที่ตามรายงานวิกฤต Helldivers 2 ปี 2026
+- [[gemma]] — ตระกูล model open-weight ของ Google (Apache 2.0); Gemma 4 มีตั้งแต่ E2B/E4B สำหรับ edge ไปจนถึง 31B; ปี 2026 แถม MTP drafters มาด้วย
+- [[lars-faye]] — developer และนักเขียน; เตือนเรื่อง cognitive debt จากการเขียนโค้ดแบบ agentic
+- [[simon-willison]] — developer รุ่นใหญ่ ผู้สร้าง Datasette; ชี้ประเด็น cognitive debt จากการพึ่ง AI
+- [[dax]] — ผู้สร้าง OpenCode; ชูแนวคิด "coding is planning"
+- [[cal-rueb]] — engineer ที่ Anthropic; contributor หลักของ Claude Code
+- [[claude-web]] — หน้าเว็บของ Claude (claude.ai) ใช้ผ่าน browser
+- [[chase-ai]] — content creator เจ้าของ AI agency; สาย Claude Code ตัวจริง; เขียน Claude Code Masterclass
+- [[impeccable]] — skill กับชุดเครื่องมือ design แบบ open-source สำหรับ Claude Code; เน้น UI รสนิยมดีและแก้หน้าเว็บสดๆ ใน browser
+- [[iii-triple-i]] — backend engine แบบ open-source สำหรับ AI agents สร้างบน WTF Primitives
+- [[microsoft]] — ยักษ์ใหญ่เทคโนโลยี; กำลังหันมาพึ่งตัวเองด้าน AI ทำ model เอง และปรับดีลกับ OpenAI เป็นแบบไม่ exclusive
+- [[milvus]] — vector database แบบ open-source สำหรับงาน AI สเกลใหญ่และ code retrieval
+- [[zilliz]] — บริการ cloud แบบ managed ของ Milvus
+- [[abn-amro]] — ธนาคารเนเธอร์แลนด์ สาย private banking มายาวนาน
+- [[github]] — platform จัดการ source code ที่ใหญ่ที่สุดในโลก; กำลังขยับไปเป็น developer platform แบบ AI-first
+- [[github-copilot]] — ผู้ช่วยเขียนโค้ด AI ที่กำลังกลายร่างเป็น "Agentic Platform" คิดเงินตามการใช้งาน
+- [[andrej-karpathy]] — นักวิจัย AI; ต้นตำรับ pattern LLM knowledge bases กับข้อสังเกตเรื่องจุดพลาดของ LLM ตอนเขียนโค้ด
+- [[anthropic]] — lab ด้าน AI safety; ผู้สร้างตระกูล model Claude, Claude Code, MCP และแนวทาง advisor strategy
+- [[claude]] — ตระกูล model ของ Anthropic: Opus, Sonnet, Haiku และ Mythos preview
+- [[claude-opus-4-7]] — model เรือธงของ Anthropic (2026-04-16); อัปเกรดจาก Opus 4.6 เน้นงาน SWE
+- [[claude-code]] — coding agent บน terminal ของ Anthropic (มีทั้ง CLI, desktop, web, IDE extensions)
+- [[forrestchang]] — developer บน GitHub; เอาข้อสังเกตของ Karpathy มาแพ็คเป็น skill `andrej-karpathy-skills` สำหรับ Claude Code
+- [[gitnexus]] — engine วิเคราะห์โค้ดแบบ open-source; index codebase เป็น knowledge graph ให้ AI agents ใช้
+- [[akon-labs]] — บริษัทเบื้องหลัง GitNexus enterprise (มีทั้ง SaaS และ self-hosted)
+- [[helix]] — text editor แบบ modal สาย post-modern; มี tree-sitter, LSP, multiple selections มาในตัว
+- [[imetomi]] — developer บน GitHub เจ้าของ library React ชื่อ retro-futuristic-ui-design
+- [[jeeraphan-lairat]] — Software Engineer ที่ Senestia; เขียนเรื่อง AI productivity กับ Lead Time
+- [[nathan-david-jones]] — concept artist; งาน UI แนว retro-futuristic ของเขาเป็น reference ภาพหลักของ cassette futurism
+- [[nikolai-fedorov]] — นักปรัชญารัสเซีย; ต้นกำเนิด Soviet Cosmism กับแนวคิด resurrection imperative
+- [[konstantin-tsiolkovsky]] — ผู้บุกเบิกวิทยาศาสตร์จรวด; นักคิดคนสำคัญของ Soviet Cosmism
+- [[vladimir-vernadsky]] — นักแร่วิทยา/ธรณีเคมี; เจ้าของแนวคิด noosphere
+- [[csharp]] — ภาษา .NET แบบ statically-typed ของ Microsoft; ตอนนี้อยู่ที่ C# 14
+- [[vannevar-bush]] — วิศวกร MIT; เขียน "As We May Think" ปี 1945; ต้นกำเนิดแนวคิด Memex และสาย hypertext ทั้งหมด
+- [[leo-robinovitch]] — developer สาย Go TUI; เขียน viewport component, lore pager, kl (k8s logs), wander (Nomad)
+- [[lgt-bank]] — private bank ของราชวงศ์ Liechtenstein
+- [[neovim]] — fork ยุคใหม่ของ Vim ที่ฝัง Lua; เวอร์ชัน 0.12 มี vim.pack เป็น plugin manager ในตัว
+- [[evgeni-chasnovski]] — คนเขียน plugin Neovim; ผู้สร้าง mini.nvim กับ mini.deps; มีอิทธิพลต่อ design ของ vim.pack
+- [[andrew-price]] — 3D artist (Blender Guru); ชูเวิร์กโฟลว์ผสม AI + 3D
+- [[blender]] — ชุดโปรแกรม 3D แบบ open-source; เป็นแกนของ pipeline AI + 3D
+- [[comfyui]] — UI แบบ node สำหรับงาน diffusion image generation; open-source
+- [[flux]] — ตระกูล model diffusion ของ Black Forest Labs; Flux.1 Depth ทำให้ generate ภาพตาม geometry ที่กำหนดได้
+- [[panutat-tejasen]] — คนไทยสายปฏิบัติ; เสนอ "Harness Engineering" เป็นหลักสูตรรับมือยุคที่ AI coding agents เก่งขึ้น; ผู้สร้าง thClaws
+- [[peter-gostev]] — ผู้เชี่ยวชาญ AI ที่ Arena.ai; ผู้สร้าง BullshitBench; วิเคราะห์ failure modes ของ model
+- [[arena-ai]] — (Chatbot Arena) platform ของ LMSYS ให้คนเทสต์ LLM แบบ blind แล้วจัดอันดับด้วย Elo
+- [[ryan-lopopolo]] — Member of Technical Staff ที่ OpenAI; สายทำงานผ่าน agent ล้วนๆ กับ Harness Engineering
+- [[thclaws]] — port ตรรกะหลักของ Claude Code มาเป็น Rust แบบ open-source; v0.7.0 มี Marketplace สำหรับ Skills/MCP/Plugins กับ Host Bridge สำหรับ Agent Dashboards
+- [[nattee-niparnan]] — อาจารย์ CEDT จุฬาฯ; ดูแล cafe-grader; เขียนซีรีส์ "วิศวฯคอมจะอยู่อย่างไรในยุค LLM ครองเมือง"; เจ้าของ framing "taste paradox"
+- [[alex-ker]] — engineer (@thealexker, GitHub AlexKer); เขียน "Harnesses are everything"; contributor ของ Roo Code / DeepAgent CLI / HumanLayer; เคยทำ gpt-oss-swarm ที่ Baseten
+- [[humanlayer]] — บริษัท harness แบบ open-source; ที่มาของ framing "dumb zone" เรื่อง instruction budget กับ prompt framework แบบ R.P.I.
+- [[openai-codex]] — coding harness ของ OpenAI; เรื่อง skills progressive disclosure เดินทางเดียวกับ Claude Code แต่จัดการ MCP คนละแบบ
+- [[opencode]] — coding harness แบบ open-source; โหลด tool definitions ของ MCP ทั้งหมดตั้งแต่เปิดโปรแกรม; docs เตือนเองว่าอย่าใช้ server เยอะ
+- [[tauri]] — framework ทำ desktop app ด้วย Rust ใช้ webview ของ OS; bundle เล็ก security แน่น; แต่ลำบากถ้า logic หนักๆ ของ app อยู่ใน runtime ที่ไม่ใช่ Rust
+- [[ubs]] — investment bank และบริษัท wealth management รายใหญ่ของสวิส
+- [[electron]] — framework ทำ desktop app แบบ Chromium + Node.js; ได้เปรียบเมื่อ logic ของ app เป็น JS/Node/Bun อยู่แล้ว (รัน in-process ไม่ต้องมี sidecar)
+- [[owasp]] — มูลนิธิ OWASP; ออก APTS, WSTG, ASVS, Top 10 และ Agentic Apps Top 10 ปี 2026
+- [[somkiat-khitwongwattana]] — software engineer ชาวไทย a.k.a. **Akexorcist** (akexorcist.dev); สาย Android มายาวนาน; เขียนภาษาไทยเรื่องการทำงานจริงกับ LLM/Agent workflow
+- [[moonshot-ai]] — lab AI จีนเบื้องหลังตระกูล Kimi; ผู้ท้าชิงสาย open-source ด้าน coding; มี Kimi Code, Agent Swarm, Claw Groups
+- [[kimi-k2-6]] — model เรือธง open-source ของ Moonshot AI (2026-04): context 262k, agent swarm ได้ถึง 300 sub-agents; วางตัวชนกับ GPT-5.4 / Opus 4.6 / Gemini 3.1 Pro ด้านการเขียนโค้ด
+- [[mellum2]] — model MoE 12B ของ JetBrains (Apache 2.0) สำหรับงาน AI ที่ต้องเร็ว: routing, summarization, RAG, subagent steps, และ deploy แบบ private/local; ตัวอย่างของ focal-model design
+- [[cyril-xbt]] — content creator บน X (@cyrilXBT); เขียนคู่มือ CLAUDE.md 7 section แบบฟันธงชัด; solo builder สาย AI + crypto + productivity
+- [[claude-mythos-preview]] — model frontier-preview ของ Anthropic; เก่งสุดในภาพรวม; หาและ exploit zero-days ได้เองในทุก OS และ browser หลัก; เลยถูกจำกัดการปล่อยผ่าน Project Glasswing
+- [[project-glasswing]] — โครงการของ Anthropic ใช้ Mythos Preview ไล่อุดช่องโหว่ software สำคัญๆ ก่อน model ระดับ Mythos จะเปิดใช้วงกว้าง; ทำ coordinated vulnerability disclosure
+- [[rtk]] — RTK (RTK-AI): CLI proxy เขียนด้วย Rust เน้นเร็ว; บีบ output ให้เล็กและประหยัด token
+- [[mf-piccolo]] — developer ผู้ออกแบบ iii; เขียน "The Harness is the Backend"
+- [[zed-industries]] — ทีมผู้สร้าง Zed editor กับ Agent Client Protocol (ACP)
+- [[google-cloud]] — ฝั่ง enterprise cloud ของ Google; ทำ Gemini Enterprise Agent Platform; งาน Cloud Next '26 เปิดตัว Agent Runtime ที่รันยาว 7 วัน
+- [[addy-osmani]] — engineer ที่ Google; เขียนเรื่อง web performance / architecture ของ agent; เจ้าของงานเขียน long-running agent patterns กับ Agent Harness Engineering
+- [[birgitta-bockeler]] — engineer ที่ Thoughtworks; เขียนซีรีส์ "Exploring Gen AI" บน martinfowler.com; มอง user harness ของ coding agent เป็น control system ที่ประกอบจาก guides + sensors
+- [[thoughtworks]] — บริษัท consultancy ระดับโลก เบื้องหลัง CI/CD, evolutionary architecture, fitness functions และ Technology Radar; บ้านของงานเขียนเรื่อง harness ของ Böckeler
+- [[vtrivedy]] — นักเขียนบน X; Addy Osmani ยกเครดิตว่าเป็นคนบัญญัติคำ "harness engineering" จากสมการ Agent = Model + Harness
+- [[fred-schott]] — developer ผู้สร้าง Flue; ถูกยกเป็นตัวอย่างคนทำ framework ด้าน agent harness
+- [[flue]] — framework ด้าน agent harness โดย Fred Schott; ตัวอย่างทิศทาง Harness-as-a-Service / harness framework
+- [[gpui]] — UI framework ของ Zed เขียนด้วย Rust ใช้ GPU เร่ง; ส่งข้อมูลเข้า shader ตรงๆ ได้ latency ต่ำกว่า millisecond
+- [[gemini-enterprise-agent-platform]] — platform managed agents ของ Google Cloud: Agent Runtime (เก็บ state 7 วัน), ADK, Mission Control, Memory Bank/Profiles, Agent Identity/Registry/Gateway, Observability, BYOC
+- [[hardik-pandya]] — ผู้สร้าง skill Stop Slop
+- [[piyalitt-ittichaiwong]] — นักวิจัย PhD ชาวไทย เขียนโปรแกรมมา 20 ปี; ได้ทดลอง frontier models ก่อนใคร (GPT-5.5); ผลักดัน OpenAI Codex Community Thailand; co-organizer งาน OpenAI × Thai AI Society Hackathon
+- [[openai]] — lab ด้าน AI; ผู้สร้าง ChatGPT, ตระกูล GPT และ Codex; ปี 2026 เป็นคู่แข่ง Anthropic กับ Moonshot AI บนสนาม frontier model
+- [[gpt-5-5]] — model เรือธงของ OpenAI (2026-04-23): SOTA ด้าน agentic coding (Terminal-Bench 2.0 82.7%, CyberGym 81.8%); ctx 400K/1M; $5/$30 ต่อ 1M tokens; ความสามารถเฉียด Mythos Preview แต่เปิดให้ใช้วงกว้าง; แพงกว่า GPT-5.4 เท่าตัว และแพงกว่า Opus 4.7 นิดหน่อย (pricing inversion)
+- [[aaron-levie]] — co-founder/CEO ของ Box; คอมเมนต์เรื่อง enterprise AI บน X; มองจากมุมบริษัทที่เอา AI ไปใช้งาน ไม่ใช่ฝั่งคนสร้าง model
+- [[mario-zechner]] — ผู้สร้าง libGDX กับ pi coding agent; ชูเครื่องมือ minimalist ที่ดัดแปลงเองได้ กับวินัยชะลอความเร็วตอนใช้ agent
+- [[pi-agent]] — (pi.dev) coding agent บน terminal แบบ minimalist ต่อขยายได้; session เป็นโครงสร้าง tree และเขียน extension เป็น TypeScript ที่แก้ตัวเองได้
+- [[terminus-agent]] — agent แบบ minimalist ใช้แค่ tmux กับการกดคีย์; เป็นแรงบันดาลใจให้ design ของ pi
+- [[vouch-oss]] — เครื่องมือของ Mitchell Hashimoto ไว้ยืนยันว่าเป็นมนุษย์จริงในโปรเจกต์ Open Source
+- [[zed]] — code editor สาย AI-native เขียนด้วย Rust; ใช้สถาปัตยกรรมแบบ video game engine เลยเร็วมาก; ทายาทสาย Atom / VS Code
+- [[matt-pocock]] — กูรู TypeScript สาย AI automation; คิด swappable-agent workflows, แนวทาง harness-first AI coding และ heuristic `/rewind` + `/compact` ไว้แก้อาการ dumb zone
+- [[maggie-appleton]] — Staff Research Engineer ที่ GitHub Next; เป็นทั้ง designer และ engineer; ผลักดัน Collaborative AI Engineering กับเรื่อง alignment
+- [[github-next]] — ทีม R&D ของ GitHub; ผู้สร้าง Copilot, ACE และ Copilot Workspace
+- [[ace]] — (Agent Collaboration Environment) prototype ของ GitHub Next ให้ทั้งทีมทำงานร่วมกับ agent แบบ multiplayer
+- [[sandcastle]] — infrastructure ด้าน sandbox ให้ agent รันโค้ดแบบ isolated ได้อย่างปลอดภัย; ส่วนหนึ่งของ swappable agent stack
+- [[senestia]] — บริษัท health tech; เน้นให้คนเข้าถึงบริการสุขภาพได้ง่ายขึ้น กับทำ engineering pipeline ให้ลื่น
+- [[vercel]] — cloud platform; ผู้สร้าง Vercel AI SDK กับ Chat SDK ที่ใช้ทำ agent orchestration
+- [[annabelle]] — influencer สายการเงิน ฉายา "Wealth Architect"; ตัวละครหลักในดราม่า "Financial Poetry"; อีกชื่อคือ "M-nabelle" (นามแฝงของ Arjarn M)
+- [[compound-engineering]] — ชุด skill สำหรับ AI agent โดย Every Inc.; เน้น alignment กับลด friction
+- [[every-inc]] — บริษัททำเครื่องมือ productivity / AI engineering อย่าง Compound Engineering
+- [[trevin]] — engineer ที่ Every Inc.; developer หลักของ Compound Engineering และผู้คิด Playback Pattern
+- [[arjarn-m]] — เจ้าของเพจ Facebook "Arjarn M"; นักวิจารณ์การเงินและสังคม
+- [[singapore]] — ศูนย์กลางการเงินโลกและ private banking; ขึ้นชื่อเรื่องกฎเกณฑ์โปร่งใสกับ family offices
+- [[gee-money-more]] — แหล่งข้อมูลการเงิน เน้น private banking กับการลงทุนภาคปฏิบัติ
+- [[deepseek]] — lab AI จีน; ขึ้นชื่อเรื่อง model ประสิทธิภาพสูง (V3, R1) กับแนวทาง open-weight
+- [[deltadb]] — engine sync ของ Zed สร้างบน CRDT; track การแก้ไขละเอียดระดับตัวอักษร ให้คนกับ agent ทำงานร่วมกันได้
+- [[high-flyer]] — quant hedge fund จีน; บริษัทแม่และผู้ให้ทุนหลักของ DeepSeek
+- [[liang-wenfeng]] — ผู้ก่อตั้งและ CEO ของ DeepSeek กับ High-Flyer; ชูเรื่อง technical efficiency
+- [[ctrl-alt-zaid]] — นักวิจัยและนักเขียนด้าน AI; ชูแนวคิด agent memory แบบ machine-efficient กับโปรเจกต์ Mercury
+- [[mercury]] — infrastructure ด้าน agent memory แบบ open-source; แนวคิดคือ "Identity as human-owned, Memory as machine-efficient"
+- [[jrt-investment]] — เพจ Facebook ไทยสายการลงทุนและ mindset การใช้ชีวิต; ตีความ "I don't give a fuck" ว่าเป็นการเลือกว่าจะใส่ใจอะไร
+- [[jetbrains]] — บริษัทเครื่องมือ developer เบื้องหลัง IntelliJ/PyCharm; partner ของ ACP และผู้สร้าง Mellum2 สำหรับงาน AI ด้าน software engineering
+- [[jaroslaw-wasowski]] — นักเขียนสาย software architecture บน Medium; เคยเชียร์ SDD (เขียนไป 6 บทความ) แล้วกลับลำด้วย "Stop Writing Specs. Start Writing Facts."
+- [[spec-kit]] — framework SDD ของ GitHub ดาวราว 90k (Q2 2026); ออก /speckit.spec-drift; Step 1 ของมันยังรอดมาเป็น sketchpad ของ Wasowski
+- [[marc-brooker]] — senior engineer ที่ AWS (Lambda/Aurora); ฝั่งปกป้อง SDD ตัวจริง: มอง spec เป็น artifact ที่ explicit มี version และมีชีวิต ใช้วนซ้ำได้จริง
 
 ## Concepts
-- [[map-vs-territory]] — Korzybski's "the map is not the territory" applied to agentic coding: map = prompt/skills/context given to the agent, territory = codebase and real-world constraints; the difference is unknowns, and stronger models move the bottleneck to the user's map
-- [[unknowns-matrix]] — Thariq's 4-quadrant breakdown (known knowns / known unknowns / unknown knowns / unknown unknowns) with matched techniques per phase: blind spot pass, brainstorms/prototypes, interviews, references, implementation plans, implementation notes, pitches/explainers, quizzes
-- [[tokenmaxxing]] — Using large amounts of AI tokens as a status/KPI signal rather than because the work requires it; can inflate AI demand and enterprise bills without proving productivity
-- [[ai-token-economics]] — Unit economics of LLM/agent usage: token price, usage pattern, infrastructure supply, model subsidy, and enterprise-scale multiplication of small per-token costs
-- [[enterprise-ai-roi]] — Enterprise-level return-on-investment question for AI: token/API bills, oversight, rework, governance, and actual workflow outcomes versus labor savings
-- [[ai-labor-cost-reversal]] — Situation where AI moves from cheaper-than-labor to comparable or more expensive than humans in some tasks; source preserves coding as still cheaper while call-center/data-entry economics stay open
-- [[photonic-interconnects]] — Sending data through light inside data-center/network systems; in the LITE/COHR/NOK/AAOI source, the possible AI infrastructure bottleneck after GPU, memory, and CPU, but not automatically a high-margin business
-- [[indium-phosphide-wafer]] — Semiconductor substrate used for photonic devices; source frames 6-inch wafer capacity, qualification, yield, China supply risk, and AXT/Sumitomo substrate concentration as the key upstream bottleneck
-- [[optical-transceivers]] — High-speed light/electrical conversion modules such as 800G/1.6T transceivers; the source's revenue bridge from photonic materials and lasers into AI data-center network deployments
-- [[ai-data-center-bottlenecks]] — Systems view that AI scaling can bottleneck on compute, memory, networking, power, cooling, and supply chain; the photonics source adds optical links as a bottleneck to watch
-- [[defense-mechanisms]] — Psychoanalytic frame for automatic psychological processes that protect the self from anxiety, conflict, and difficult affects; adaptive when flexible, pathological when persistent use distorts reality or harms life
-- [[defense-mechanism-hierarchy]] — Classification idea that defenses vary by adaptiveness; includes Vaillant's mature/neurotic/immature/pathological levels plus DSM-IV-TR, PDM-2, Kernberg, Gabbard, and Perry DMRS variants
-- [[coping]] — Conscious, reasoned ways of handling stress; overlaps with defense mechanisms as adaptation, but differs because defenses are more automatic and often outside awareness
-- [[object-constancy]] — Object-relations capacity to hold good and bad aspects of the same person together; helps explain why splitting-based defenses appear when integration fails
-- [[infinity]] — mathematical infinity as more than "endless"; through cardinality it splits into countable and uncountable sizes
-- [[set-theory]] — branch of mathematics about sets; the background language for cardinality, infinity, ZFC, and the Continuum Hypothesis
-- [[cardinality]] — size of a set, defined for infinite sets through one-to-one correspondence rather than everyday intuition
-- [[countable-infinity]] — infinity that can be paired with natural numbers, such as integers, even numbers, primes, and rationals
-- [[uncountable-infinity]] — infinity too large to list against natural numbers; real numbers are the central example
-- [[cantor-diagonal-argument]] — proof that any claimed complete list of real numbers misses at least one constructed diagonal number, so reals are uncountable
-- [[beth-numbers]] — cardinal sequence built by repeatedly taking power sets; `beth_1` is the size of the continuum/reals
-- [[aleph-numbers]] — ordered sequence of infinite cardinalities; `aleph_0` is countable infinity and `aleph_1` is the next larger cardinal
-- [[continuum-hypothesis]] — asks whether any infinity size sits between countable infinity and the real numbers; independent from ZFC
-- [[zfc-set-theory]] — standard axiom system for much of modern set theory and mathematical foundations
-- [[undecidable-propositions]] — statements a given axiom system can neither prove nor disprove, assuming the system is consistent
-- [[godel-incompleteness-theorems]] — Gödel's result that sufficiently strong consistent formal systems cannot prove every truth expressible in them
-- [[quality-proxy-collapse]] — Failure of old surface-level quality signals such as syntax, grammar, structure, confidence, or partial test passing to prove that an AI-generated artifact came from a reliable understanding process
-- [[programming-process-matters]] — Critique that programming is not just producing code-shaped text; real agents need a process/world model that understands system effects, constraints, tradeoffs, and failure modes
-- [[world-models]] — Internal model of how actions change an environment; in software, the environment is code, state, invariants, tests, users, and failure modes affected by a change
-- [[answer-engine]] — Search experience that returns a synthesized answer with citations instead of only links; powerful for research, but easy for incumbent AI/search surfaces to absorb and risky when attribution or publisher trust breaks
-- [[ai-search-economics]] — Unit economics of AI search: live retrieval plus LLM synthesis makes each query expensive, while monetization through ads or subscriptions must preserve user trust and still cover compute
-- [[distribution-moat]] — Advantage from owning the path to users (defaults, browser, OS, ecosystem, habit); in the Perplexity case, explains why a better feature can lose once Google places a copied version inside existing surfaces
-- [[looped-transformers]] — Transformer architecture pattern that reuses a smaller block recurrently so hidden states refine over multiple internal steps; makes recurrence count a test-time-compute dial, but introduces stability, supervision, and KV-cache tradeoffs
-- [[latent-reasoning]] — Reasoning performed inside hidden states rather than explicit text traces; compact alternative to chain-of-thought, but harder to supervise and inspect
-- [[multi-hop-reasoning]] — Reasoning task where each step depends on a previous intermediate fact; used as an early benchmark for whether recurrence/depth helps models extrapolate beyond memorized patterns
-- [[mixture-of-recursions]] — Adaptive recursive-depth routing: easy tokens exit early while hard tokens continue through more recurrent steps; expert-choice routing adapts during the loop but complicates training and KV caching
-- [[kv-cache]] — Key/value tensor cache used during transformer decoding; speeds attention over past tokens but becomes a memory-bandwidth bottleneck for long context and recursive-depth models
-- [[chain-of-thought]] — Textual intermediate reasoning trace; practical and easy to supervise, but token/context/latency-heavy compared with latent recurrence
-- [[residual-stream]] — Main hidden-state channel in a transformer; in looped transformers it becomes the evolving state of a recurrent dynamical system
-- [[interstellar-objects]] — objects from outside the solar system on hyperbolic trajectories; "I" designation created for ʻOumuamua in 2017; three found by 2026 (1I/2I/3I); detection problem (found on the way out) drives Project Lyra and ESA's wait-at-L2 Comet Interceptor
-- [[dark-comets]] — objects that look like dry asteroids (no coma, no tail) yet self-accelerate like comets near the Sun; invisible hydrogen jets from radiolysis-charged ice; 14 found in the solar system by 2026; Hayabusa2 visits 1998 KY26 in 2031
-- [[occams-razor]] — prefer the simplest explanation that fits the evidence; don't add hypotheses (like alien technology) without necessity; a ranking heuristic, not a proof; ʻOumuamua as the worked example
-- [[n-gram-embeddings]] — Embedding table entries for short token groups rather than only single tokens; LongCat 2.0 uses this, per the source, to add corpus information more cheaply than simply adding more MoE experts
-- [[sparse-attention]] — Long-context attention strategy that looks only at selected relevant parts; LongCat's version is described as making the selection helper cheaper through predictable memory chunks, cross-layer caching, and coarse-to-fine selection
-- [[plan-mode-as-prompting]] — View that coding-agent Plan mode is prompt/harness scaffolding that produces a useful draft plan, not proof of a symbolic planning engine or senior engineering judgment; Horvat's directory-upload demo shows Opus 4.7 can reduce blind spots while still missing data/design questions
-- [[domain-model-persistence-separation]] — DDD principle: domain model and persistence are separate jobs; keep business concepts and invariants in types while mapping them to database storage through an adapter layer
-- [[domain-modeling]] — Software-design practice of shaping code around business concepts, rules, invariants, and shared language rather than merely mirroring tables or transport payloads
-- [[value-objects]] — DDD objects defined by their values rather than identity; wrap meaningful concepts like money, currency, identifiers, and UTC timestamps so rules live near the data
-- [[primitive-obsession]] — Code smell where meaningful domain concepts are represented as raw primitives such as string, decimal, int, or GUID, making business rules depend on convention and memory
-- [[object-relational-mapping]] — ORM layer mapping application objects to relational tables; useful adapter, but risky when its constraints flatten the domain model
-- [[deep-agent-audit]] — High-budget agent/fleet code audit for release or high-risk gates: multiple agents inspect a codebase, produce evidence-backed findings, severity, fixes, and verification notes; useful only if confirmed findings and decision quality justify the report review cost
-- [[research-taste]] — OpenAI's term in GeneBench-Pro for the chain of scientific judgement calls that shape an analysis: what data can support, how diagnostics should change the model/estimand, when to revise the plan, and when a result is decision-ready
-- [[ai-brain-fry]] — Workplace-AI fatigue from using or overseeing AI beyond cognitive capacity; caused less by "AI use" itself than by oversight, checking, tool switching, and too many simultaneous AI tools; connects orchestration tax to non-coding work
-- [[bring-your-own-agent]] — Product strategy: keep in-app agents for normal users, but expose product expertise as skills, docs, MCP/API/CLI, resources, and deeplinks so power users can use their own model+harness+local context
-- [[dumb-zone]] — The point where an agent still has context left but starts reasoning worse because active context is polluted; use `/rewind` + `/compact` at phase boundaries to test and reduce it
-- [[three-learning-layers]] — Harrison Chase's split of where an agent can learn: model (weights, lab-only) / harness (scaffold, product-ready) / context (memory+skills, learns from users); each improves independently; every layer needs a scorer (computational free score vs human judgement); model belongs to labs, harness+context are yours
-- [[agent-memory-types]] — the 3 kinds of agent memory: semantic (facts) / episodic (past experience) / procedural (how to handle a case); self-improving agents need the last two but most setups only have semantic; one text serves agent, user, or whole team
-- [[learning-from-users]] — the signal almost no one captures: the real decisions of the people using your product; the one signal a machine can't fake (auto-scores can — Darwin Gödel Machine faked its own logs); captured at the agent↔user interface (AG-UI/CopilotKit) and fed back as procedural memory
-- [[queues-over-loops]] — Matt Pocock's reframe of loop hype: you don't need a single forever-loop, you need a queue of scoped tasks that many nodes (agents/devs) pick off; push human-in-the-loop checkpoints right; complements (not contradicts) loop-engineering
-- [[afk-agents]] — away-from-keyboard work: hand a scoped task to an agent and stop watching; parallelizes "many of you"; unscoped/planning work stays human-in-the-loop; the moment AFK clicked = output exploded; new ceiling is review bandwidth
-- [[agent-experience]] — AX: the experience an agent has working in a codebase, product, or tool; good DX ≈ good AX; includes codebase clarity, review surfaces, product primitives for BYO agents, AXI-style token-efficient tool output, and Lavish-style planning artifacts
-- [[strategic-vs-tactical-programming]] — Ousterhout's split; AI ate tactical programming (writing code) so humans must be strategic (design, interfaces, scoping); your skills are the ceiling on what AI can do; seniors get 10x, juniors get a small boost
-- [[skill-procedures-vs-abilities]] — two kinds of agent skill by who invokes: procedures (you drive: grill me, 2prd) vs abilities (model drives: coding standards); Pocock prefers procedures, keeps knowledge in the human, avoids leaking descriptions into context (disable model invocation)
-- [[knowledge-skills-wisdom]] — Pocock's teaching frame: knowledge (what) + skills (muscle memory) are bundleable into reusable skills; wisdom (when/where) can't be bundled — it needs doing the thing in real context
-- [[bitter-lesson]] — Sutton's ML lesson (raw compute beats hand-tuning long-term); used as the tension in harness-vs-model: don't tie yourself to one model's tricks, but don't just wait for compute either — bet on fundamentals and agent-agnostic harness
-- [[ralph]] — Jeffrey Huntley's original loop: a while-loop re-running Claude Code with the same prompt until done; origin of the agentic-loop wave; Pocock argues it's really just an AFK agent and is better modeled as a queue
-- [[agentic-code-review]] — review architecture for agent-written code: tier by blast radius, require intent/evidence before review, keep deterministic CI/test gates strict, use heterogeneous AI reviewers as sensors, and keep human ownership of risky merges
-- [[comprehension-debt]] — gap between how the system actually works and how the team thinks it works; grows when agent-written changes outpace human review, intent capture, and mental-model updates
-- [[meta-harness]] — control plane above multiple agent harnesses; standardizes composition, stateful policy, cost/sandbox controls, and shared sessions while preserving the ability to swap models and harnesses
-- [[developer-balance]] — design agent workflows so human attention, health, judgement, and learning remain sustainable; filter signals, require self-verification, steer without desk-watching, and turn session friction into harness improvements
-- [[spec-driven-development]] — write the spec, let the agent generate code, spec as source of truth (Spec Kit/Kiro/OpenSpec/BMAD, 200k+ stars); core critique: a spec is a prediction about the model, not a contract; honest scope = compliance, B2B contracts, onboarding — wherever a human outside the team reads the artifact
-- [[facts-first]] — store system truth as executable assertions (test / property / contract) checked by exit code, not model interpretation; facts survive model upgrades; @draft→@spec→@implemented lifecycle in git; AI-era synthesis of Hoare→Design by Contract→QuickCheck→Agent Behavioral Contracts; 90-day migration audit→pivot→gate
-- [[intent-gap]] — Lahiri (Microsoft Research): AI code is "plausible by construction but not correct by construction"; the distance between user intent and what the program does; natural-language specs can't close it because they're uncheckable
-- [[llm-nondeterminism]] — LLMs are non-deterministic even at temperature 0 (floating-point non-associativity, batch scheduling, fused-attention kernels); 100B+ model reproduced outputs in only 12.5% of runs vs fully-consistent 7–8B (IBM RAG study); prose instructions are sampled, model migration = change of interpreter
-- [[property-based-testing]] — write universally quantified properties, let the machine generate random inputs (QuickCheck/Hypothesis); Quviq case: 450 lines of PBT over 60k lines of Erlang found 25 bugs incl. race conditions (1:133); checks behavior, not implementation — a natural fit for AI-written code
-- [[loop-engineering]] — Addy Osmani + mikelopster: replace yourself as the prompter; design a system that finds work, hands it out, checks it, remembers, and decides next; five pieces + memory; practical boundary = feedback gate/scorer must be clear or the loop burns token and shifts work to human review
-- [[git-worktrees]] — separate working directory on its own branch sharing the same repo history; lets parallel agents not step on each other's files; removes mechanical collision but not the human review ceiling; Kun Chen's Treehouse adds worktree reuse/status/cleanup ergonomics
-- [[cloud-agents]] — coding agents that run on cloud VMs (own env/deps/network), in parallel, unattended, for hours/days; building them = building an operating layer around the agent (environment + durability + decoupled conversation state + autonomy), not porting a local agent to a server
-- [[durable-execution]] — running long workflows that survive crashes/outages without losing state or hand-rolling retry/scheduling; why Cursor moved its agent loop to Temporal (work-stealing 1-nine → 2-nines); treat the agent loop as a long-running server process
-- [[agent-development-environment]] — "the environment is the product": a full dev environment is the single biggest factor in cloud-agent output quality; missing pieces show as silent quality drops (blamed on the model), not crashes; ends up requiring "enterprise IT for agents" (secret redaction, network policy, credential management)
-- [[self-healing-environments]] — next step past the binary of hand-holding vs getting out of the way: give the agent tools to understand its own system, report missing secrets / blocked network, and fix them (Cursor's "autoinstall")
-- [[orchestration-tax]] — Addy Osmani: the structural gap between what agents produce and what one human can review/merge; you are the GIL/serial bottleneck (Amdahl's Law) of your agent fleet; fix = architect attention (scale to review rate, sort work, batch reviews, spend the lock only on judgement, protect serial time)
-- [[cognitive-surrender]] — Accepting agent code without forming your own opinion because attention is exhausted; an ahead-of-dashboard symptom of orchestration tax; accrues cognitive debt
-- [[model-honesty]] — Models should claim only what evidence supports; admit uncertainty, don't overclaim progress; Opus 4.8's headline trait (~4× fewer of its own bugs let through); countermeasure to weak-success-criteria / missed-requirement / reward-hacking
-- [[dynamic-workflows]] — Claude Code research-preview (with Opus 4.8): Claude self-plans a large task, dispatches hundreds of parallel subagents in one session, self-verifies, then reports; example = whole-codebase migration to merge using the existing test suite
-- [[system-in-messages]] — Claude Messages API (Opus 4.8): put `system` inside the messages array to update instructions / permissions / token budget / environment mid-run without breaking prompt cache or faking a user turn
-- [[focal-models]] — JetBrains/Mellum2 framing: fast specialized models for high-frequency AI workflow steps such as routing, summarization, validation, RAG, and subagents; complements rather than replaces frontier models
-- [[software-ecology]] — Holistic study of the socio-technical ecosystems that produce software; treats developers, tools, and organization as a co-evolving ecosystem
-- [[socio-technical-system]] — A system composed of deeply coupled human (social) and tech (technical) elements; internal developer environment is a socio-technical system
-- [[shared-fate]] — The degree to which components of an ecosystem are tightly linked; monorepos represent high shared fate, requiring unified automated testing
-- [[large-scale-changes]] — Capability allowing a single developer to safely make coordinated, large-scale code changes spanning millions of lines across thousands of files via automation
-- [[conways-law]] — Classic rule stating that software architectures mirror the communication structures of the organizations that design them
-- [[10x-moment]] — AI/LLM-driven transformation accelerating coding by 10x+, shifting constraints from code implementation to software engineering verification and decision-making
-- [[benchmark-contamination]] — Model has seen the answer at pre-training; inflates coding benchmarks; DeepSWE designs it out by writing fresh, never-merged problems
-- [[behavioral-verifier]] — Verifier that tests software behavior, not implementation; DeepSWE's verifier has 0.3% false-positive vs SWE-Bench Pro's 8.5%
-- [[reward-hacking]] — Model games the verifier instead of solving the task (Claude recovers solutions from .git; models hide forbidden imports)
-- [[long-horizon-coding]] — Multi-step coding tasks needing self-exploration; short prompt, large diff; where real model gaps appear
-- [[missed-requirement]] — Failure mode: agent finishes the obvious branch but forgets a parallel requirement (Claude's single-branch delivery)
-- [[hashline]] — Line-tagged edits via short content hashes; reduces whitespace reproduction failures; large gains on weak models in Can's benchmark
-- [[edit-tool-formats]] — Patch vs str_replace vs fine-tuned merge vs Hashline; format choice can swing coding success as much as model choice
-- [[process-drag]] — Ball's framing: old engineering rituals (planning, prioritization, sequential review) become drag in a world of abundant code
-- [[value-migration-from-code]] — Ball's framing: software value moves from code to data, distribution, trust, compliance, regulatory position
-- [[reorganize-around-models]] — Ball's framing: winners build small teams around models; "agents are wasted when made to work like people"
-- [[frontier-camp]] — Ball's institutional pattern: small autonomous team at the model frontier that pulls the corporation toward a new way of working
-- [[interaction-productivity]] — Productivity as accepted transfer between people; optimize the handoff, not just the producer's artifact count
-- [[acceptance-bottleneck]] — AI-era bottleneck where humans must understand, accept, and take responsibility for work before it can move forward
-- [[ai-era-standard-balance]] — Rebalancing standards/templates because AI makes artifact production cheap while consumption and acceptance remain human-limited
-- [[personalized-development-environment]] — TJ DeVries's PDE idea: the whole developer machine as a customizable, AI-assisted workshop, not just an editor
-- [[just-in-time-software]] — Generate small software capabilities exactly when needed, cache them, and improve them from prompt/error history
-- [[agent-handoff-documents]] — Temporary handoff documents that let a fresh agent continue work with context, intent, artifact paths, and suggested next skills
-- [[throwaway-prototyping]] — Using disposable UI or logic prototypes as research spikes before committing to implementation
-- [[dual-axis-code-review]] — Reviewing agent-written diffs across two separate axes: repo standards and spec fidelity
-- [[writing-fragments]] — Fragment-first AI writing workflow: gather fragments, shape beats, then review prose without losing the author's voice
+- [[map-vs-territory]] — "แผนที่ไม่ใช่พื้นที่จริง" ของ Korzybski เอามาใช้กับ agentic coding: map = prompt/skills/context ที่ให้ agent ส่วน territory = โค้ดจริงกับข้อจำกัดโลกจริง; ส่วนต่างคือ unknowns และพอ model เก่งขึ้น คอขวดก็ย้ายมาอยู่ที่ map ของเราเอง
+- [[unknowns-matrix]] — ตาราง 4 ช่องของ Thariq (known knowns / known unknowns / unknown knowns / unknown unknowns) พร้อมเทคนิคประจำแต่ละช่วงงาน: blind spot pass, brainstorm/prototype, interview, reference, implementation plan, implementation notes, pitch/explainer, quiz
+- [[tokenmaxxing]] — เผา token AI เยอะๆ เพื่อโชว์สถานะหรือทำ KPI ไม่ใช่เพราะงานต้องใช้จริง; ดัน demand กับบิล enterprise ให้บวมโดยไม่ได้พิสูจน์ว่า productivity เพิ่ม
+- [[ai-token-economics]] — unit economics ของการใช้ LLM/agent: ราคา token, รูปแบบการใช้, supply ฝั่ง infrastructure, การ subsidize model และต้นทุนต่อ token เล็กๆ ที่คูณจนใหญ่ในสเกล enterprise
+- [[enterprise-ai-roi]] — คำถาม ROI ของ AI ระดับองค์กร: บิล token/API, ค่าคุมงาน, งานแก้ซ้ำ, governance เทียบกับผลลัพธ์ workflow จริงและแรงงานที่ประหยัดได้
+- [[ai-labor-cost-reversal]] — จุดที่ AI พลิกจากถูกกว่าแรงงานคน มาเทียบเท่าหรือแพงกว่าในบางงาน; source ยังมองว่างาน coding ถูกกว่าอยู่ ส่วน call center/data entry ยังไม่ชี้ขาด
+- [[photonic-interconnects]] — ส่งข้อมูลด้วยแสงใน data center/network; source เรื่อง LITE/COHR/NOK/AAOI มองว่าอาจเป็นคอขวด AI infrastructure ตัวถัดไปหลัง GPU, memory, CPU แต่ไม่ได้แปลว่าจะเป็นธุรกิจ margin สูงโดยอัตโนมัติ
+- [[indium-phosphide-wafer]] — substrate เซมิคอนดักเตอร์สำหรับอุปกรณ์ photonic; source ชี้ว่า capacity wafer 6 นิ้ว, การ qualify, yield, ความเสี่ยง supply จากจีน และการกระจุกตัวของ substrate ที่ AXT/Sumitomo คือคอขวดต้นน้ำตัวหลัก
+- [[optical-transceivers]] — โมดูลแปลงสัญญาณแสง↔ไฟฟ้าความเร็วสูงอย่าง 800G/1.6T; เป็นสะพานรายได้จากวัสดุ photonic กับ laser ไปสู่ network ใน AI data center
+- [[ai-data-center-bottlenecks]] — มองทั้งระบบ: AI จะสเกลก็ติดคอขวดได้ทั้ง compute, memory, networking, ไฟ, ระบายความร้อน และ supply chain; source เรื่อง photonics เพิ่ม optical link เป็นอีกตัวที่ต้องจับตา
+- [[defense-mechanisms]] — กรอบจิตวิเคราะห์ว่าด้วยกระบวนการทางใจอัตโนมัติที่ปกป้องตัวเองจากความกังวล ความขัดแย้ง และอารมณ์ยากๆ; ถ้ายืดหยุ่นก็คือปรับตัวได้ดี แต่ถ้าใช้ซ้ำจนบิดเบือนความจริงหรือทำชีวิตพังก็กลายเป็น pathological
+- [[defense-mechanism-hierarchy]] — แนวคิดจัดลำดับ defense ตามระดับการปรับตัว: mature/neurotic/immature/pathological ของ Vaillant บวก variant จาก DSM-IV-TR, PDM-2, Kernberg, Gabbard และ Perry DMRS
+- [[coping]] — วิธีรับมือความเครียดแบบรู้ตัวและคิดตาม; คาบเกี่ยวกับ defense mechanism ตรงที่เป็นการปรับตัวเหมือนกัน แต่ต่างตรงที่ defense ทำงานอัตโนมัติและมักอยู่นอกการรับรู้
+- [[object-constancy]] — ความสามารถแบบ object-relations ที่ถือด้านดีกับด้านแย่ของคนคนเดียวกันไว้พร้อมกันได้; ช่วยอธิบายว่าทำไม defense แบบ splitting โผล่มาตอน integration ล้มเหลว
+- [[infinity]] — อนันต์ทางคณิตศาสตร์ที่เป็นมากกว่าแค่ "ไม่มีที่สิ้นสุด"; พอมองผ่าน cardinality ก็แตกเป็นขนาด countable กับ uncountable
+- [[set-theory]] — สาขาคณิตศาสตร์ว่าด้วยเซต; เป็นภาษาพื้นฐานของ cardinality, อนันต์, ZFC และ Continuum Hypothesis
+- [[cardinality]] — ขนาดของเซต; กับเซตอนันต์ต้องนิยามผ่านการจับคู่หนึ่งต่อหนึ่ง ไม่ใช่สามัญสำนึกทั่วไป
+- [[countable-infinity]] — อนันต์ที่จับคู่กับจำนวนนับได้ เช่น จำนวนเต็ม เลขคู่ จำนวนเฉพาะ และจำนวนตรรกยะ
+- [[uncountable-infinity]] — อนันต์ที่ใหญ่เกินกว่าจะไล่รายการเทียบจำนวนนับ; ตัวอย่างหลักคือจำนวนจริง
+- [[cantor-diagonal-argument]] — บทพิสูจน์ว่า list จำนวนจริงที่อ้างว่าครบ ยังไงก็พลาดเลขที่สร้างจากแนวทแยงอย่างน้อยหนึ่งตัว; จำนวนจริงเลยเป็น uncountable
+- [[beth-numbers]] — ลำดับ cardinal ที่สร้างจากการทำ power set ซ้ำๆ; `beth_1` คือขนาดของ continuum/จำนวนจริง
+- [[aleph-numbers]] — ลำดับขนาดอนันต์แบบเรียงลำดับ; `aleph_0` คืออนันต์นับได้ ส่วน `aleph_1` คือ cardinal ตัวถัดไป
+- [[continuum-hypothesis]] — ถามว่ามีขนาดอนันต์คั่นกลางระหว่างอนันต์นับได้กับจำนวนจริงไหม; เป็นอิสระจาก ZFC พิสูจน์ไม่ได้ทั้งจริงและเท็จ
+- [[zfc-set-theory]] — ระบบสัจพจน์มาตรฐานของ set theory และรากฐานคณิตศาสตร์สมัยใหม่ส่วนใหญ่
+- [[undecidable-propositions]] — ข้อความที่ระบบสัจพจน์หนึ่งๆ พิสูจน์ก็ไม่ได้ หักล้างก็ไม่ได้ (ถ้าระบบนั้น consistent)
+- [[godel-incompleteness-theorems]] — ผลของ Gödel: ระบบ formal ที่แรงพอและ consistent จะพิสูจน์ความจริงทุกข้อที่ระบบตัวเองพูดถึงได้ไม่หมด
+- [[quality-proxy-collapse]] — สัญญาณคุณภาพผิวๆ แบบเดิม (syntax, grammar, โครงสร้าง, ความมั่นใจ, test ผ่านบางส่วน) ใช้พิสูจน์ไม่ได้อีกแล้วว่างานที่ AI สร้างมาจากความเข้าใจจริง
+- [[programming-process-matters]] — คำวิจารณ์ว่า programming ไม่ใช่แค่ปั๊มข้อความหน้าตาเหมือนโค้ด; agent ตัวจริงต้องมี process/world model ที่เข้าใจผลต่อระบบ ข้อจำกัด tradeoff และ failure mode
+- [[world-models]] — โมเดลภายในว่าการกระทำเปลี่ยน environment ยังไง; ในงานซอฟต์แวร์ environment คือโค้ด, state, invariant, test, ผู้ใช้ และ failure mode ที่โดนผลจากการแก้
+- [[answer-engine]] — search ที่ตอบเป็นคำตอบสังเคราะห์พร้อม citation แทนที่จะให้แค่ลิงก์; ทรงพลังกับงาน research แต่เจ้าตลาด AI/search ลอกไปใส่ surface ตัวเองได้ง่าย และเสี่ยงพังถ้า attribution หรือความเชื่อใจจาก publisher แตก
+- [[ai-search-economics]] — unit economics ของ AI search: ต้อง retrieve สดบวก LLM synthesis เลยแพงทุก query ส่วนการหาเงินผ่านโฆษณาหรือ subscription ก็ต้องรักษาความเชื่อใจผู้ใช้และยังจ่ายค่า compute ไหว
+- [[distribution-moat]] — ความได้เปรียบจากการเป็นเจ้าของทางเดินไปหาผู้ใช้ (default, browser, OS, ecosystem, ความเคยชิน); เคส Perplexity อธิบายว่าทำไม feature ที่ดีกว่าก็แพ้ได้ พอ Google เอาเวอร์ชันลอกไปวางใน surface ที่คนใช้อยู่แล้ว
+- [[looped-transformers]] — transformer ที่วน block เล็กซ้ำๆ ให้ hidden state ค่อยๆ คมขึ้นหลายรอบภายใน; จำนวนรอบกลายเป็นปุ่มหมุน test-time compute แต่แลกกับปัญหา stability, supervision และ KV cache
+- [[latent-reasoning]] — คิดใน hidden state แทนที่จะเขียน trace ออกมาเป็นข้อความ; กะทัดรัดกว่า chain-of-thought แต่ supervise และส่องดูยากกว่า
+- [[multi-hop-reasoning]] — โจทย์ reasoning ที่แต่ละ step ต้องพึ่งข้อเท็จจริงกลางทางจาก step ก่อน; ใช้เป็น benchmark ยุคแรกๆ ว่า recurrence/ความลึกช่วยให้ model ไปไกลกว่าแพตเทิร์นที่ท่องจำมาได้จริงไหม
+- [[mixture-of-recursions]] — routing ความลึกแบบปรับได้: token ง่ายออกก่อน token ยากวนต่ออีกหลายรอบ; expert-choice routing ปรับตัวระหว่าง loop ได้ แต่ทำให้ training กับ KV caching ยุ่งขึ้น
+- [[kv-cache]] — cache ของ key/value tensor ตอน transformer decode; ทำให้ attention ย้อนดู token เก่าเร็วขึ้น แต่กลายเป็นคอขวด memory bandwidth พอ context ยาวหรือใช้ model แบบ recursive-depth
+- [[chain-of-thought]] — trace การคิดกลางทางแบบเป็นข้อความ; ใช้จริงง่าย supervise ง่าย แต่กิน token/context/latency มากกว่า latent recurrence
+- [[residual-stream]] — ช่องทาง hidden state หลักของ transformer; ใน looped transformer มันกลายเป็น state ที่วิวัฒน์ไปเรื่อยๆ ของ recurrent dynamical system
+- [[interstellar-objects]] — วัตถุจากนอกระบบสุริยะที่วิ่งบนวิถี hyperbolic; รหัส "I" ตั้งขึ้นเพื่อ ʻOumuamua ปี 2017; ถึงปี 2026 เจอแล้วสามดวง (1I/2I/3I); ปัญหาคือมักเจอตอนขาออกแล้ว เลยเกิด Project Lyra กับ Comet Interceptor ของ ESA ที่ไปดักรอที่ L2
+- [[dark-comets]] — วัตถุที่หน้าตาเหมือนดาวเคราะห์น้อยแห้งๆ (ไม่มี coma ไม่มีหาง) แต่เร่งตัวเองแบบดาวหางตอนใกล้ดวงอาทิตย์; มาจากเจ็ทไฮโดรเจนที่มองไม่เห็นจากน้ำแข็งที่ผ่าน radiolysis; ถึงปี 2026 เจอ 14 ดวงในระบบสุริยะ; Hayabusa2 จะไปเยือน 1998 KY26 ปี 2031
+- [[occams-razor]] — เลือกคำอธิบายที่ง่ายสุดที่เข้ากับหลักฐาน; อย่าเพิ่มสมมติฐาน (เช่นเทคโนโลยีเอเลียน) ถ้าไม่จำเป็น; เป็น heuristic ไว้จัดอันดับ ไม่ใช่บทพิสูจน์; ʻOumuamua คือตัวอย่างประกอบ
+- [[n-gram-embeddings]] — embedding table ที่มี entry ให้กลุ่ม token สั้นๆ ไม่ใช่แค่ token เดี่ยว; source บอกว่า LongCat 2.0 ใช้ท่านี้ยัดความรู้จาก corpus แบบถูกกว่าการเพิ่ม MoE expert เฉยๆ
+- [[sparse-attention]] — attention สำหรับ context ยาวที่มองเฉพาะส่วนที่เกี่ยว; เวอร์ชันของ LongCat ทำตัวช่วยเลือกให้ถูกลงด้วย memory chunk ที่เดาได้, cache ข้าม layer และการเลือกแบบหยาบไปหาละเอียด
+- [[plan-mode-as-prompting]] — มุมมองว่า Plan mode ของ coding agent คือ scaffolding ฝั่ง prompt/harness ที่ให้ draft plan ที่มีประโยชน์ ไม่ใช่หลักฐานว่ามี planning engine เชิงสัญลักษณ์หรือ judgement ระดับ senior; demo อัปโหลด directory ของ Horvat โชว์ว่า Opus 4.7 ลด blind spot ได้ แต่ยังพลาดคำถามเรื่อง data/design
+- [[domain-model-persistence-separation]] — หลัก DDD: domain model กับ persistence เป็นคนละงาน; เก็บ business concept กับ invariant ไว้ใน type แล้ว map ลง database ผ่านชั้น adapter
+- [[domain-modeling]] — แนวทางออกแบบซอฟต์แวร์ให้โค้ดยึดตาม business concept, กฎ, invariant และภาษาที่ใช้ร่วมกัน ไม่ใช่แค่สะท้อน table หรือ payload
+- [[value-objects]] — object แบบ DDD ที่นิยามด้วยค่า ไม่ใช่ identity; ห่อ concept ที่มีความหมายอย่างเงิน สกุลเงิน identifier และ UTC timestamp ให้กฎอยู่ใกล้ข้อมูล
+- [[primitive-obsession]] — code smell ที่ concept สำคัญในโดเมนถูกแทนด้วย primitive ดิบๆ อย่าง string, decimal, int, GUID; กฎธุรกิจเลยต้องพึ่ง convention กับความจำของคน
+- [[object-relational-mapping]] — ชั้น ORM ที่ map object ของแอปลง table เชิงสัมพันธ์; เป็น adapter ที่มีประโยชน์ แต่อันตรายตอนข้อจำกัดของมันกดให้ domain model แบน
+- [[deep-agent-audit]] — audit โค้ดด้วย agent/fleet งบสูงสำหรับด่าน release หรืองานเสี่ยงสูง: หลาย agent ช่วยกันตรวจ codebase ออก finding พร้อมหลักฐาน severity วิธีแก้ และโน้ตการ verify; คุ้มก็ต่อเมื่อ finding ที่ยืนยันได้กับคุณภาพการตัดสินใจ คุ้มค่าเวลาที่ต้องอ่านรายงาน
+- [[research-taste]] — ศัพท์ของ OpenAI ใน GeneBench-Pro: สาย judgement call เชิงวิทยาศาสตร์ที่กำหนดรูปการวิเคราะห์ — ข้อมูลรองรับอะไรได้, diagnostics ควรเปลี่ยน model/estimand ยังไง, เมื่อไหร่ควรรื้อแผน, และผลไหนพร้อมเอาไปตัดสินใจ
+- [[ai-brain-fry]] — อาการสมองล้าจากใช้/คุม AI ในที่ทำงานเกินกำลัง; ตัวการไม่ใช่ "การใช้ AI" เท่ากับงานคุม งานตรวจ การสลับเครื่องมือ และการเปิด AI หลายตัวพร้อมกัน; โยง orchestration tax เข้ากับงานนอกสาย coding
+- [[bring-your-own-agent]] — กลยุทธ์ product: เก็บ agent ในแอปไว้ให้ผู้ใช้ทั่วไป แต่เปิดความเชี่ยวชาญของ product ออกมาเป็น skills, docs, MCP/API/CLI, resources และ deeplinks ให้ power user เอา model+harness+local context ของตัวเองมาใช้
+- [[dumb-zone]] — จุดที่ agent ยังมี context เหลือแต่คิดแย่ลง เพราะ active context เริ่มปนเปื้อน; ใช้ `/rewind` + `/compact` ที่รอยต่อ phase เพื่อเช็คและลดอาการ
+- [[three-learning-layers]] — Harrison Chase แบ่งจุดที่ agent เรียนรู้ได้เป็นสามชั้น: model (weights, ทำได้เฉพาะ lab) / harness (scaffold, พร้อมทำเป็น product) / context (memory+skills, เรียนจากผู้ใช้); แต่ละชั้นพัฒนาแยกกันได้ และทุกชั้นต้องมี scorer (คะแนนแบบ computational ที่ฟรี vs ให้คนตัดสิน); model เป็นของ lab ส่วน harness+context เป็นของเรา
+- [[agent-memory-types]] — memory ของ agent มี 3 แบบ: semantic (ข้อเท็จจริง) / episodic (ประสบการณ์ที่ผ่านมา) / procedural (วิธีรับมือแต่ละเคส); agent ที่พัฒนาตัวเองได้ต้องมีสองแบบหลัง แต่ setup ส่วนใหญ่มีแค่ semantic; ข้อความชุดเดียวใช้ได้ทั้งกับ agent, ผู้ใช้ หรือทั้งทีม
+- [[learning-from-users]] — สัญญาณที่แทบไม่มีใครเก็บ: การตัดสินใจจริงของคนที่ใช้ product ของเรา; เป็นสัญญาณเดียวที่เครื่องปลอมไม่ได้ (auto-score โดนปลอมได้ — Darwin Gödel Machine ปลอม log ตัวเอง); เก็บที่รอยต่อ agent↔user (AG-UI/CopilotKit) แล้วป้อนกลับเป็น procedural memory
+- [[queues-over-loops]] — Matt Pocock ตีกรอบ loop hype ใหม่: ไม่ต้องมี loop เดียววนตลอดกาล แค่มี queue ของงานที่ scope ชัดให้หลาย node (agent/dev) มาหยิบไปทำ; ดัน checkpoint แบบ human-in-the-loop ไปไว้ท้ายๆ; เสริม loop-engineering ไม่ได้ขัดกัน
+- [[afk-agents]] — งานแบบ away-from-keyboard: ส่งงานที่ scope ชัดให้ agent แล้วเลิกเฝ้า; ได้ "ตัวเราหลายตัว" ทำงานขนานกัน; งานที่ยังไม่ scope หรืองานวางแผนยังต้องมีคนอยู่ใน loop; จังหวะที่ AFK เข้าที่ = output ระเบิด; เพดานใหม่คือ bandwidth ของการ review
+- [[agent-experience]] — AX: ประสบการณ์ที่ agent เจอตอนเข้ามาทำงานใน codebase, product หรือ tool; DX ดี ≈ AX ดี; ครอบคลุมความชัดของ codebase, พื้นที่ review, primitive ของ product สำหรับ BYO agent, tool output ประหยัด token แบบ AXI และ planning artifact แบบ Lavish
+- [[strategic-vs-tactical-programming]] — การแบ่งของ Ousterhout; AI กินงาน tactical (เขียนโค้ด) ไปแล้ว คนเลยต้องเล่นฝั่ง strategic (ออกแบบ, interface, ตี scope); สกิลของเราคือเพดานของสิ่งที่ AI ทำได้; senior ได้ 10x ส่วน junior ได้นิดเดียว
+- [[skill-procedures-vs-abilities]] — skill ของ agent มีสองแบบตามว่าใครเป็นคนเรียกใช้: procedures (เราขับเอง: grill me, 2prd) กับ abilities (model ขับเอง: coding standards); Pocock ชอบ procedures เพราะเก็บความรู้ไว้ที่คน และกัน description รั่วเข้า context (ปิด model invocation)
+- [[knowledge-skills-wisdom]] — กรอบสอนงานของ Pocock: knowledge (รู้อะไร) + skills (muscle memory) ห่อเป็น skill ใช้ซ้ำได้; ส่วน wisdom (เมื่อไหร่/ที่ไหน) ห่อไม่ได้ ต้องลงมือทำในบริบทจริงเท่านั้น
+- [[bitter-lesson]] — บทเรียน ML ของ Sutton (ระยะยาว compute ดิบชนะการจูนมือ); เป็น tension ในเรื่อง harness-vs-model: อย่าผูกตัวเองกับทริคของ model ตัวเดียว แต่ก็อย่านั่งรอ compute เฉยๆ — เดิมพันกับพื้นฐานและ harness ที่ไม่ยึดติดกับ agent ไหน
+- [[ralph]] — loop ต้นตำรับของ Jeffrey Huntley: while-loop รัน Claude Code ด้วย prompt เดิมซ้ำจนงานเสร็จ; จุดกำเนิดกระแส agentic loop; Pocock แย้งว่าจริงๆ มันคือ AFK agent และมองเป็น queue จะตรงกว่า
+- [[agentic-code-review]] — สถาปัตยกรรม review สำหรับโค้ดที่ agent เขียน: แบ่ง tier ตาม blast radius, ขอ intent/หลักฐานก่อน review, คุมด่าน CI/test แบบ deterministic ให้เข้ม, ใช้ AI reviewer หลายเจ้าต่างกันเป็น sensor และให้คนถือความเป็นเจ้าของ merge ที่เสี่ยง
+- [[comprehension-debt]] — ช่องว่างระหว่างระบบทำงานจริงยังไง กับที่ทีมคิดว่ามันทำงานยังไง; โตขึ้นเรื่อยๆ เมื่อโค้ดจาก agent ไหลเร็วกว่าที่คนจะ review เก็บ intent และอัปเดต mental model ทัน
+- [[meta-harness]] — ชั้นควบคุมเหนือหลาย agent harness; ทำให้การประกอบงาน, policy แบบ stateful, การคุมต้นทุน/sandbox และ session ที่แชร์กัน เป็นมาตรฐานเดียว โดยยังสลับ model กับ harness ได้
+- [[developer-balance]] — ออกแบบ workflow ของ agent ให้ attention สุขภาพ judgement และการเรียนรู้ของคนยั่งยืน: กรองสัญญาณ, ให้ agent ตรวจงานตัวเอง, คุมทิศทางโดยไม่ต้องนั่งเฝ้าหน้าจอ และเปลี่ยน friction ใน session ให้เป็นการปรับปรุง harness
+- [[spec-driven-development]] — เขียน spec แล้วให้ agent generate โค้ด โดย spec เป็น source of truth (Spec Kit/Kiro/OpenSpec/BMAD, ดาวรวม 200k+); คำวิจารณ์หลัก: spec คือการทำนายพฤติกรรม model ไม่ใช่สัญญา; scope ที่ตรงจริงๆ = compliance, สัญญา B2B, onboarding — ที่ไหนก็ตามที่คนนอกทีมต้องอ่าน artifact
+- [[facts-first]] — เก็บความจริงของระบบเป็น assertion ที่รันได้ (test / property / contract) เช็คด้วย exit code ไม่ใช่ให้ model ตีความ; facts อยู่รอดข้าม model upgrade; lifecycle @draft→@spec→@implemented ใน git; เป็นบทสังเคราะห์ยุค AI ของสาย Hoare→Design by Contract→QuickCheck→Agent Behavioral Contracts; migration 90 วันแบบ audit→pivot→gate
+- [[intent-gap]] — Lahiri (Microsoft Research): โค้ดจาก AI "plausible by construction but not correct by construction"; ระยะห่างระหว่าง intent ของผู้ใช้กับสิ่งที่โปรแกรมทำจริง; spec ภาษาคนปิดช่องนี้ไม่ได้เพราะเช็คอัตโนมัติไม่ได้
+- [[llm-nondeterminism]] — LLM ไม่ deterministic แม้ temperature 0 (floating-point ไม่ associative, batch scheduling, fused-attention kernel); model 100B+ ให้ output ซ้ำเดิมแค่ 12.5% ของรอบ เทียบกับ 7–8B ที่นิ่งสนิท (งาน RAG ของ IBM); คำสั่งแบบ prose คือการ sample และย้าย model = เปลี่ยน interpreter
+- [[property-based-testing]] — เขียน property แบบ universally quantified แล้วให้เครื่อง generate input สุ่มเอง (QuickCheck/Hypothesis); เคส Quviq: PBT 450 บรรทัดคุม Erlang 60k บรรทัด เจอ 25 บั๊กรวม race condition (1:133); เช็ค behavior ไม่ใช่ implementation — เข้าทางโค้ดที่ AI เขียนพอดี
+- [[loop-engineering]] — Addy Osmani + mikelopster: เอาตัวเองออกจากบท prompter; ออกแบบระบบที่หางานเอง แจกงาน ตรวจงาน จดจำ และตัดสินใจว่าทำอะไรต่อ; ห้าชิ้นส่วน + memory; เส้นแบ่งใช้จริง = feedback gate/scorer ต้องชัด ไม่งั้น loop เผา token แล้วโยนงานกลับมาให้คน review อยู่ดี
+- [[git-worktrees]] — working directory แยกบน branch ของตัวเอง แต่แชร์ history repo เดียวกัน; ให้ agent หลายตัวทำงานขนานโดยไม่เหยียบไฟล์กัน; ตัดการชนเชิงกลไกออกได้ แต่เพดาน review ของคนยังอยู่; Treehouse ของ Kun Chen เพิ่มความสะดวกเรื่อง reuse/status/cleanup ของ worktree
+- [[cloud-agents]] — coding agent ที่รันบน cloud VM (มี env/deps/network ของตัวเอง) ขนานกันได้ ทิ้งไว้เป็นชั่วโมง/วันได้; การสร้างมัน = สร้างชั้น operating รอบตัว agent (environment + durability + conversation state ที่แยกออกมา + autonomy) ไม่ใช่แค่ยก agent local ขึ้น server
+- [[durable-execution]] — รัน workflow ยาวๆ ให้รอด crash/outage โดยไม่เสีย state และไม่ต้องเขียน retry/scheduling เอง; เหตุผลที่ Cursor ย้าย agent loop ไป Temporal (work-stealing 1-nine → 2-nines); มอง agent loop เป็น server process ที่รันยาว
+- [[agent-development-environment]] — "environment คือตัว product": dev environment ที่ครบคือปัจจัยใหญ่สุดต่อคุณภาพงานของ cloud agent; ของที่ขาดจะโผล่เป็นคุณภาพตกเงียบๆ (แล้วคนไปโทษ model) ไม่ใช่ crash; สุดท้ายต้องมี "enterprise IT สำหรับ agent" (redact secret, network policy, จัดการ credential)
+- [[self-healing-environments]] — ก้าวถัดจากการต้องเลือกว่าจะประคองมือหรือปล่อยเลย: ให้เครื่องมือ agent ไว้เข้าใจระบบตัวเอง รายงาน secret ที่หาย / network ที่โดนบล็อก แล้วซ่อมเองได้ ("autoinstall" ของ Cursor)
+- [[orchestration-tax]] — Addy Osmani: ช่องว่างเชิงโครงสร้างระหว่างของที่ agent ผลิตได้ กับของที่คนหนึ่งคน review/merge ไหว; เราคือ GIL/คอขวด serial ของ fleet ตัวเอง (Amdahl); วิธีแก้คือออกแบบ attention ไม่ใช่เพิ่ม agent — สเกลตามอัตรา review, จัดลำดับงาน, review เป็น batch, ใช้ lock กับงาน judgement เท่านั้น, กันเวลา serial ไว้
+- [[cognitive-surrender]] — รับโค้ดจาก agent ทั้งที่ยังไม่ได้มีความเห็นของตัวเอง เพราะ attention หมดแล้ว; เป็นอาการนำของ orchestration tax ก่อนจะโผล่บน dashboard; สะสมเป็น cognitive debt
+- [[model-honesty]] — model ควรอ้างแค่เท่าที่หลักฐานรองรับ: ยอมรับความไม่แน่ใจ ไม่โม้ progress; จุดขายของ Opus 4.8 (ปล่อยบั๊กของตัวเองหลุดน้อยลง ~4 เท่า); เป็นยาแก้ weak-success-criteria / missed-requirement / reward-hacking
+- [[dynamic-workflows]] — research preview ของ Claude Code (มากับ Opus 4.8): Claude วางแผนงานใหญ่เอง ยิง subagent ขนานเป็นร้อยตัวใน session เดียว ตรวจงานตัวเอง แล้วรายงาน; ตัวอย่าง = migrate ทั้ง codebase จน merge ได้โดยใช้ test suite เดิม
+- [[system-in-messages]] — Claude Messages API (Opus 4.8): ใส่ `system` เข้าไปใน messages array เพื่ออัปเดตคำสั่ง / permission / token budget / environment กลางคันได้ โดยไม่พัง prompt cache และไม่ต้องปลอมเป็น user turn
+- [[focal-models]] — กรอบของ JetBrains/Mellum2: model เล็กเร็วเฉพาะทางสำหรับ step ที่ยิงถี่ใน AI workflow เช่น routing, summarization, validation, RAG, subagents; มาเสริม frontier model ไม่ใช่มาแทน
+- [[software-ecology]] — ศึกษาแบบองค์รวมว่า ecosystem เชิง socio-technical ผลิตซอฟต์แวร์ยังไง; มอง developer เครื่องมือ และองค์กร เป็นระบบนิเวศที่วิวัฒน์ไปด้วยกัน
+- [[socio-technical-system]] — ระบบที่ส่วนคน (social) กับส่วนเทคนิค (technical) พันกันแน่น; internal developer environment ก็เป็นระบบแบบนี้
+- [[shared-fate]] — ระดับที่ชิ้นส่วนใน ecosystem ผูกชะตากัน; monorepo คือ shared fate สูง เลยต้องมี automated testing แบบรวมศูนย์
+- [[large-scale-changes]] — ความสามารถที่ให้ developer คนเดียวแก้โค้ดแบบประสานกัน ข้ามหลายล้านบรรทัด หลายพันไฟล์ ได้อย่างปลอดภัยด้วย automation
+- [[conways-law]] — กฎคลาสสิก: สถาปัตยกรรมซอฟต์แวร์จะสะท้อนโครงสร้างการสื่อสารขององค์กรที่ออกแบบมัน
+- [[10x-moment]] — จังหวะที่ AI/LLM เร่งการเขียนโค้ด 10 เท่าขึ้นไป; คอขวดเลยย้ายจาก implementation ไปอยู่ที่ verification กับการตัดสินใจเชิง software engineering
+- [[benchmark-contamination]] — model เคยเห็นเฉลยมาแล้วตอน pre-train; ทำคะแนน coding benchmark เฟ้อ; DeepSWE ตัดปัญหาด้วยการเขียนโจทย์ใหม่สดที่ไม่เคยถูก merge
+- [[behavioral-verifier]] — verifier ที่ทดสอบ behavior ของซอฟต์แวร์ ไม่ใช่ implementation; ของ DeepSWE มี false positive 0.3% เทียบกับ SWE-Bench Pro ที่ 8.5%
+- [[reward-hacking]] — model โกง verifier แทนที่จะแก้โจทย์จริง (Claude ไปขุดเฉลยจาก .git; model ซ่อน import ที่ห้ามใช้)
+- [[long-horizon-coding]] — งานโค้ดหลาย step ที่ต้องสำรวจเอง; prompt สั้นแต่ diff ใหญ่; จุดที่ช่องว่างระหว่าง model โผล่ให้เห็นจริง
+- [[missed-requirement]] — failure mode: agent ทำ branch ที่เห็นชัดจนจบ แต่ลืม requirement อีกเส้นที่ต้องทำคู่กัน (เคส Claude ส่งงานมา branch เดียว)
+- [[hashline]] — แก้โค้ดแบบระบุบรรทัดด้วย content hash สั้นๆ; ลดความพลาดตอนต้อง reproduce whitespace; ใน benchmark ของ Can ช่วย model อ่อนได้เยอะมาก
+- [[edit-tool-formats]] — patch vs str_replace vs fine-tuned merge vs Hashline; เลือก format ผิดหรือถูก มีผลต่อความสำเร็จของงานโค้ดพอๆ กับเลือก model
+- [[process-drag]] — Ball's framing: พิธีกรรมวิศวกรรมยุคเก่า (วางแผน จัด priority, review ตามคิว) กลายเป็นตัวถ่วงในโลกที่โค้ดมีล้นเหลือ
+- [[value-migration-from-code]] — Ball's framing: มูลค่าของซอฟต์แวร์ย้ายจากโค้ดไปอยู่ที่ data, distribution, ความเชื่อใจ, compliance และตำแหน่งทาง regulation
+- [[reorganize-around-models]] — Ball's framing: ผู้ชนะสร้างทีมเล็กๆ รอบตัว model; "agents are wasted when made to work like people"
+- [[frontier-camp]] — แพตเทิร์นเชิงองค์กรของ Ball: ทีมเล็กอิสระที่อยู่ตรงหน้าสุดของ model แล้วลากทั้งบริษัทไปสู่วิธีทำงานแบบใหม่
+- [[interaction-productivity]] — มอง productivity เป็นการส่งต่องานที่อีกฝ่ายรับจริงระหว่างคน; optimize ที่จุด handoff ไม่ใช่แค่นับ artifact ฝั่งคนผลิต
+- [[acceptance-bottleneck]] — คอขวดยุค AI: งานจะไปต่อได้ก็ต่อเมื่อมีคนเข้าใจ ยอมรับ และรับผิดชอบมันก่อน
+- [[ai-era-standard-balance]] — จัดสมดุล standard/template กันใหม่ เพราะ AI ทำให้ผลิต artifact ถูกลงมาก แต่การอ่านและการยอมรับยังจำกัดอยู่ที่คน
+- [[personalized-development-environment]] — ไอเดีย PDE ของ TJ DeVries: มองทั้งเครื่องของ developer เป็น workshop ที่ปรับแต่งได้และมี AI ช่วย ไม่ใช่แค่ editor
+- [[just-in-time-software]] — generate ความสามารถซอฟต์แวร์ชิ้นเล็กๆ ตอนที่ต้องใช้พอดี แล้ว cache ไว้ ปรับปรุงต่อจากประวัติ prompt/error
+- [[agent-handoff-documents]] — เอกสารส่งไม้ชั่วคราว ให้ agent ตัวใหม่ทำงานต่อได้พร้อม context, intent, path ของ artifact และ skill ที่แนะนำให้ใช้ต่อ
+- [[throwaway-prototyping]] — ใช้ prototype UI/logic แบบใช้แล้วทิ้งเป็น research spike ก่อนตัดสินใจลงมือ implement จริง
+- [[dual-axis-code-review]] — review diff ที่ agent เขียนแยกเป็นสองแกน: ตรงมาตรฐาน repo ไหม กับตรงตาม spec ไหม
+- [[writing-fragments]] — workflow เขียนงานด้วย AI แบบ fragment-first: เก็บเศษความคิดก่อน จัดเป็น beat แล้วค่อย review ตัว prose โดยไม่เสียเสียงของผู้เขียน
 - [[custom-editing-interfaces]] — การสั่งให้ AI สร้างเครื่องมือแก้ไขข้อมูลชั่วคราว (Throwaway Editors) ในรูปแบบ HTML เพื่อช่วยให้มนุษย์จัดการข้อมูลที่ซับซ้อนได้ง่ายขึ้น
 - [[html-artifacts]] — การใช้ HTML เป็นสื่อกลางหลักในการสื่อสารระหว่าง AI และมนุษย์ เพื่อเพิ่มความหนาแน่นของข้อมูลและความชัดเจนผ่านการแสดงผลที่หลากหลาย
-- [[automatic-speech-recognition]] — ASR: converting speech audio to text; model choice depends on WER, speed, language, timestamps, speaker labels, and keyword control
-- [[non-autoregressive-asr]] — ASR decoding style that avoids token-by-token generation; Granite Speech NAR edits a fast draft transcript for very high throughput
-- [[keyword-biasing]] — ASR prompt/control technique that nudges recognition toward provided names, acronyms, and domain terms
-- [[speaker-attributed-asr]] — ASR with speaker labels/diarization; useful for meetings, podcasts, interviews, and calls
-- [[word-error-rate]] — Core ASR metric measuring substitutions, deletions, and insertions against a reference transcript
-- [[dreaming]] — Anthropic batch process that reads transcripts across agents, produces curated diffs to memory; out-of-band, cross-agent perspective
-- [[agent-memory-filesystem]] — Memory modeled as a file system Claude manages with bash/grep; permission scopes, optimistic concurrency, version history
-- [[self-learning-agents]] — Vision: agents improve from their own and others' sessions via memory + dreaming, no retraining
-- [[live-service-stagnation]] — Critical state where core game maintenance and endgame progression stall in favor of short-term monetization
-- [[monkey-paw-balancing]] — Frustrating design pattern where a player buff is countered by a hidden or simultaneous nerf
-- [[speculative-decoding]] — Lossless inference speedup: small drafter guesses k tokens, big target verifies in one batched forward pass; exploits memory-bandwidth slack
-- [[multi-token-prediction]] — MTP: predicting multiple future tokens in one forward pass; doubles as a built-in drafter for speculative decoding (Gemma 4)
-- [[cognitive-debt]] — Mental model loss due to over-delegating codebase implementation to AI
-- [[skill-atrophy]] — The degradation of coding and critical thinking skills due to AI over-reliance
-- [[vendor-lock-in]] — Beyond API lock-in: locking an entire team's skills to a subsidized AI provider
-- [[agentic-search]] — using terminal tools (grep/find) to explore a codebase instead of RAG indexing
-- [[care-allocation]] — Treating attention/care as a scarce resource: care deeply about high-stake people/work, ignore low-value judgment noise
-- [[agent-native-infrastructure]] — Designing systems (docs, APIs, infra) for agent legibility and direct action (sensors/actuators)
-- [[agentic-engineering]] — Raising the ceiling; professional engineering discipline for AI agents; 10x+ speedup with quality control; Kun Chen's captain workflow shows the full stack from planning artifacts through validation pipelines, worktrees, long-running loops, and meta-agent coordination
-- [[ai-slop]] — Generic, low-quality, or tasteless AI output; result of poor prompting or lack of professional vocabulary
-- [[eh-gland]] — Engineering intuition (ต่อมเอ๊ะ) needed to spot AI errors; key human differentiator
-- [[horror-vacui]] — ความกลัวพื้นที่ว่างใน UI; นำไปสู่การอัดข้อมูลจนแน่นเกินไป (Visual Clutter)
-- [[jagged-intelligence]] — Peaks in hard tasks (code/math) but valleys in common sense (ghosts vs. animals); driven by verifiability
-- [[llm-knowledge-bases]] — The pattern of LLM-maintained personal wikis (what this wiki implements)
-- [[local-optimization-trap]] — Efficiency trap: optimizing non-bottleneck stages (like coding) without improving Lead Time
-- [[agentic-usage]] — Long-running, multi-step AI sessions with high compute demand; shift from autocomplete to agentic platforms
-- [[ast-based-chunking]] — Chunking code based on Abstract Syntax Tree structure using tree-sitter for better RAG quality
-- [[software-3-0]] — Programming by prompting; context window as the lever; LLM as the programmable computer
-- [[usage-based-billing]] — Consumption-based pricing model replacing flat-rate subscriptions for AI resources
-- [[verifiability]] — The core driver of AI progress: tasks that are easily measured (code/math) improve fastest via RL
-- [[vibe-coding]] — Raising the floor; programming by "vibing" with AI; humans as directors of implementation
-- [[github-ai-credits]] — GitHub's token-based currency for AI usage; replaces PRUs
-- [[llm-coding-pitfalls]] — Karpathy's four observations on LLM code-editing failure modes: hidden confusion, overcomplication, scope drift, weak success criteria
-- [[code-knowledge-graphs]] — Knowledge graphs built from codebase structure for AI agent awareness
-- [[graph-rag]] — Retrieval-Augmented Generation using knowledge graphs instead of vector stores
-- [[model-context-protocol]] — Open protocol (MCP) for connecting AI agents to external tools and data
-- [[diegetic-ui]] — UI that exists within the story world; character is aware of it (Iron Man HUD, Dead Space)
-- [[non-diegetic-ui]] — Traditional overlay UI external to the game world (health bars, menus, score counters)
-- [[spatial-ui]] — UI placed in the game's 3D space but invisible to characters (pathfinding lines, nameplates)
-- [[meta-ui]] — Screen-level effects reflecting character state (blood splatter, blur, shake)
-- [[glassmorphism]] — Frosted glass UI style with backdrop blur and transparency
-- [[brutalism]] — Raw, unpolished UI stripped of decorative convention
-- [[bullshitbench]] — Benchmark for LLM "bullshit detection": ability to reject nonsense or false premises
-- [[dissatisfaction-rate]] — Arena.ai metric: frequency of users disliking both anonymous model responses
-- [[reasoning-regression]] — Failure mode where increased thinking capacity leads to over-justifying nonsense
-- [[retro-futurism]] — The past's imagination of the future — five subgenres from 1930s Raygun Gothic to 1980s Cassette Futurism
-- [[cassette-futurism]] — 1970s–80s retro-futurism subgenre: clunky terminals, VHS noise, tape-era computing
-- [[atompunk]] — 1950s–60s retro-futurism subgenre: atomic age optimism, Fallout aesthetic
-- [[raygun-gothic]] — 1930s–50s retro-futurism subgenre: streamlined chrome, art deco geometry meets space age
-- [[soviet-cosmism]] — 1960s–80s retro-futurism subgenre: constructivist geometry, Soviet space program aesthetics, collectivist utopianism, three canonical palettes
-- [[noosphere]] — Vernadsky's concept of Earth's collective thinking layer; bridges Cosmism and modern collective intelligence
-- [[open-source-governance]] — Panutat's 2026 definition: Open source differentiation is governance (who decides what to ship)
-- [[papercut-features]] — Small UX frictions that big products ignore; differentiator for niche/fast-moving projects
-- [[tree-sitter]] — Framework for generating fast, error-tolerant parsers; used by editors, diff tools, and GitHub
-- [[tree-house]] — Helix's new tree-sitter integration crate with injection tree architecture
-- [[holographic-ui]] — Light-projected interface design: 5 color variants, glass panel primitives, mandatory animations, layout patterns
-- [[extension-members]] — C# 14 `extension` blocks: properties, static members, and operators alongside extension methods
-- [[field-keyword]] — C# 14 `field` keyword: compiler-synthesized backing field referenced inside property accessors
-- [[idea-file]] — Karpathy's concept: sharing abstract patterns for LLM agents to instantiate, rather than sharing code implementations
-- [[memex]] — Vannevar Bush's 1945 hypothetical personal knowledge device with associative trails; ideological ancestor of LLM wikis
-- [[advisor-strategy]] — Inversion of orchestrator-worker: cheap executor model escalates to expensive advisor model only at hard decisions
-- [[alternative-assets]] — Investments outside traditional stocks/bonds; key part of UHNW wealth management
-- [[tui]] — Terminal User Interfaces: alt-screen, keyboard-driven apps composed of viewport/list/input components
-- [[terminal-pager]] — Programs for navigating multi-page text via $PAGER; less, bat, delta, lore
+- [[automatic-speech-recognition]] — ASR: แปลงเสียงพูดเป็นข้อความ; เลือก model ตาม WER, ความเร็ว, ภาษา, timestamp, speaker label และการคุม keyword
+- [[non-autoregressive-asr]] — สไตล์ decode ของ ASR ที่ไม่ generate ทีละ token; Granite Speech NAR ใช้วิธีแก้ draft transcript ที่ทำมาเร็วๆ ได้ throughput สูงมาก
+- [[keyword-biasing]] — เทคนิค prompt/ควบคุม ASR ให้เอนไปทางชื่อ ตัวย่อ และศัพท์เฉพาะโดเมนที่เราป้อนให้
+- [[speaker-attributed-asr]] — ASR ที่ติด speaker label/diarization มาด้วย; เหมาะกับ meeting, podcast, งานสัมภาษณ์ และสายโทร
+- [[word-error-rate]] — metric มาตรฐานวัดความแม่นของ ASR: นับ substitution, deletion, insertion เทียบกับ transcript อ้างอิง
+- [[dreaming]] — กระบวนการ batch ของ Anthropic: อ่าน transcript ข้ามหลาย agent แล้วออก diff ที่คัดกรองแล้วไปปรับ memory; ทำนอกรอบ (out-of-band) จากมุมมองข้าม agent — เหมือนให้ agent "ฝัน" เพื่อเกลา memory ตัวเอง
+- [[agent-memory-filesystem]] — memory ที่จำลองเป็น file system ให้ Claude จัดการเองด้วย bash/grep; มี permission scope, optimistic concurrency และ version history
+- [[self-learning-agents]] — วิสัยทัศน์: agent เก่งขึ้นจาก session ของตัวเองและของตัวอื่นผ่าน memory + dreaming โดยไม่ต้อง retrain
+- [[live-service-stagnation]] — สภาวะวิกฤตของเกม live service: การดูแลระบบหลักกับ endgame progression หยุดนิ่ง เพราะไปทุ่มให้ monetization ระยะสั้น
+- [[monkey-paw-balancing]] — แพตเทิร์นบาลานซ์เกมที่ชวนหงุดหงิด: buff ผู้เล่นทีไร ต้องมี nerf ที่ซ่อนไว้หรือแถมมาพร้อมกันทุกที
+- [[speculative-decoding]] — เร่ง inference แบบไม่เสียคุณภาพ: model เล็ก (drafter) เดา k token แล้วให้ model ใหญ่ verify รวดเดียวใน forward pass เดียว; อาศัยช่องว่างที่เหลือของ memory bandwidth
+- [[multi-token-prediction]] — MTP: ทำนาย token อนาคตหลายตัวใน forward pass เดียว; แถมใช้เป็น drafter ในตัวสำหรับ speculative decoding ได้ (Gemma 4)
+- [[cognitive-debt]] — mental model ของ codebase ค่อยๆ หายไป เพราะโยน implementation ให้ AI มากเกิน
+- [[skill-atrophy]] — ทักษะเขียนโค้ดกับ critical thinking เสื่อมลง เพราะพึ่ง AI มากไปจนโยนการคิดให้มันหมด
+- [[vendor-lock-in]] — ไปไกลกว่า API lock-in: ทักษะของทั้งทีมไปผูกอยู่กับผู้ให้บริการ AI ที่ subsidize ราคาอยู่
+- [[agentic-search]] — ให้ agent สำรวจ codebase เองด้วยเครื่องมือ terminal (grep/find) แทนการทำ RAG indexing
+- [[care-allocation]] — มอง attention/ความใส่ใจเป็นทรัพยากรจำกัด: ทุ่มให้คนและงานที่ stake สูง แล้วปล่อยเสียงจุกจิกมูลค่าต่ำผ่านไป
+- [[agent-native-infrastructure]] — ออกแบบระบบ (docs, API, infra) ให้ agent อ่านรู้เรื่องและลงมือทำได้ตรงๆ (sensors/actuators)
+- [[agentic-engineering]] — ยกเพดานงาน: วินัยวิศวกรรมแบบมืออาชีพสำหรับ AI agent; เร็วขึ้น 10x+ พร้อมคุมคุณภาพ; captain workflow ของ Kun Chen โชว์ครบทั้ง stack ตั้งแต่ planning artifact ยัน validation pipeline, worktrees, loop รันยาว และการประสานงานผ่าน meta-agent
+- [[ai-slop]] — งาน AI แบบ generic คุณภาพต่ำ ไร้รสนิยม; ผลจาก prompt ห่วยหรือขาดคลังศัพท์แบบมืออาชีพ
+- [[eh-gland]] — ต่อมเอ๊ะ: สัญชาตญาณเชิงวิศวกรรมไว้จับ error ของ AI; จุดต่างสำคัญที่มนุษย์ยังมีเหนือกว่า
+- [[horror-vacui]] — ความกลัวพื้นที่ว่างใน UI (anti-pattern); นำไปสู่การอัดข้อมูลจนแน่นเกินไป (visual clutter)
+- [[jagged-intelligence]] — เก่งพุ่งในงานยากที่วัดผลได้ (โค้ด/คณิต) แต่ตกหลุมใน common sense (ผี vs สัตว์); ตัวขับคือ verifiability
+- [[llm-knowledge-bases]] — แพตเทิร์น wiki ส่วนตัวที่ให้ LLM ดูแลผ่าน Markdown/schema (wiki นี้ก็ทำตามแนวนี้)
+- [[local-optimization-trap]] — กับดัก efficiency: ไป optimize จุดที่ไม่ใช่คอขวด (เช่นการเขียนโค้ด) แต่ Lead Time ไม่ได้ดีขึ้น
+- [[agentic-usage]] — session AI แบบหลาย step รันยาว กิน compute หนัก; การย้ายจาก autocomplete ไปสู่แพลตฟอร์มแบบ agentic
+- [[ast-based-chunking]] — chunk โค้ดตามโครงสร้าง AST ด้วย tree-sitter เพื่อให้คุณภาพ RAG/retrieval ดีขึ้น
+- [[software-3-0]] — เขียนโปรแกรมด้วย prompt; context window คือคานงัด; LLM เป็นคอมพิวเตอร์ที่โปรแกรมได้ เป็น interpreter โดยมี prompt เป็นโค้ด
+- [[usage-based-billing]] — คิดเงินตามการใช้จริง (credits) แทน subscription เหมาจ่าย สำหรับทรัพยากร AI/agentic compute
+- [[verifiability]] — ตัวขับหลักของความก้าวหน้า AI: งานที่วัดผลง่าย (โค้ด/คณิต) พัฒนาเร็วสุดผ่าน RL
+- [[vibe-coding]] — ยกพื้นให้สูงขึ้น: เขียนโปรแกรมด้วยการ "vibe" ไปกับ AI; คนรับบทผู้กำกับของ implementation
+- [[github-ai-credits]] — สกุลเงินแบบ token ของ GitHub สำหรับการใช้ AI (Copilot/Agents); มาแทน PRUs
+- [[llm-coding-pitfalls]] — ข้อสังเกต 4 ข้อของ Karpathy เรื่อง failure mode ตอน LLM แก้โค้ด: งงแบบซ่อนไว้, ทำเวอร์เกินโจทย์, scope ไหล, เกณฑ์ความสำเร็จหลวม
+- [[code-knowledge-graphs]] — knowledge graph ที่สร้างจากโครงสร้าง codebase ให้ AI agent ใช้รับรู้และนำทางในโค้ด
+- [[graph-rag]] — Retrieval-Augmented Generation ที่ใช้ knowledge graph แทน vector store เพื่อ context ที่ดีกว่า
+- [[model-context-protocol]] — MCP: มาตรฐานเปิดสำหรับต่อ AI agent เข้ากับเครื่องมือและข้อมูลภายนอก
+- [[diegetic-ui]] — UI ที่อยู่ในโลกของเรื่องจริงๆ ตัวละครมองเห็นและรับรู้มัน (HUD ของ Iron Man, Dead Space)
+- [[non-diegetic-ui]] — UI overlay แบบดั้งเดิมที่อยู่นอกโลกของเกม (หลอดเลือด เมนู ตัวนับคะแนน)
+- [[spatial-ui]] — UI ที่วางอยู่ในพื้นที่ 3D ของเกม แต่ตัวละครมองไม่เห็น (เส้นนำทาง, nameplate)
+- [[meta-ui]] — เอฟเฟกต์ระดับหน้าจอที่สะท้อนสภาพตัวละคร (เลือดกระเซ็นบนจอ ภาพเบลอ จอสั่น)
+- [[glassmorphism]] — สไตล์ UI แบบกระจกฝ้า: backdrop blur โปร่งแสง มีมิติความลึก
+- [[brutalism]] — UI แบบดิบๆ ไม่ขัดเงา ถอดขนบการตกแต่งออกหมด
+- [[bullshitbench]] — benchmark ของ Arena.ai วัดการ "จับ bullshit" ของ LLM: กล้าปัดเรื่องมั่วหรือ premise ที่ผิดทิ้งไหม
+- [[dissatisfaction-rate]] — metric ของ Arena.ai (LMSYS): ความถี่ที่ผู้ใช้กดไม่ชอบคำตอบทั้งสอง model ใน blind test
+- [[reasoning-regression]] — failure mode: พอคิดได้เยอะขึ้น model กลับ "คิดมาก" จนหาเหตุผลเข้าข้าง premise ผิดๆ ซะเอง
+- [[retro-futurism]] — จินตนาการถึงอนาคตของคนยุคก่อน — ห้า subgenre ตั้งแต่ Raygun Gothic ยุค 1930s ถึง Cassette Futurism ยุค 1980s
+- [[cassette-futurism]] — subgenre ของ retro-futurism ยุค 1970s–80s: terminal เทอะทะ, CRT, สัญญาณรบกวนแบบ VHS, คอมพิวเตอร์ยุคเทป
+- [[atompunk]] — subgenre ของ retro-futurism ยุค 1950s–60s: มองโลกแง่ดีแบบยุคปรมาณู สุนทรียะสาย Fallout
+- [[raygun-gothic]] — subgenre ของ retro-futurism ยุค 1930s–50s: โครเมียมทรง streamline เรขาคณิต art deco มาเจอยุคอวกาศ
+- [[soviet-cosmism]] — subgenre ของ retro-futurism ยุค 1960s–80s: เรขาคณิตแบบ constructivist สุนทรียะโครงการอวกาศโซเวียต utopia แบบรวมหมู่ มีชุดสีหลักสามชุด
+- [[noosphere]] — แนวคิดของ Vernadsky: ชั้น "ความคิดรวมหมู่" ของโลก; สะพานเชื่อม Cosmism กับ collective intelligence ยุคใหม่
+- [[open-source-governance]] — นิยามปี 2026 ของ Panutat: จุดต่างของ open source อยู่ที่ governance (ใครเป็นคนตัดสินว่าจะ ship อะไร) ไม่ใช่แค่ตัวโค้ด
+- [[papercut-features]] — friction เล็กๆ ทาง UX ที่ product ใหญ่มองข้าม; กลายเป็นจุดขายของโปรเจกต์ niche ที่ขยับตัวเร็ว
+- [[tree-sitter]] — framework สำหรับ generate parser ที่เร็วและทน error; editor, diff tool และ GitHub ใช้กันทั่ว
+- [[tree-house]] — crate integration ตัวใหม่ของ Helix สำหรับ tree-sitter; สถาปัตยกรรม injection tree ที่รองรับหลายภาษาซ้อนกันแบบซับซ้อน
+- [[holographic-ui]] — ดีไซน์ interface แบบแสงฉาย: สี 5 variant, primitive แบบ glass panel มีแสง glow, animation แบบบังคับ, แพตเทิร์นการจัด layout
+- [[extension-members]] — บล็อก `extension` ใน C# 14: เพิ่ม property, static member และ operator ให้ type ได้ ไม่ใช่แค่ extension method
+- [[field-keyword]] — keyword `field` ใน C# 14: backing field ที่ compiler สร้างให้ อ้างถึงได้จากใน property accessor
+- [[idea-file]] — แนวคิดของ Karpathy: แชร์แพตเทิร์นเชิงนามธรรมให้ LLM agent เอาไป instantiate เอง แทนที่จะแชร์โค้ด implementation
+- [[memex]] — อุปกรณ์ความรู้ส่วนตัวในจินตนาการของ Vannevar Bush ปี 1945 ที่เชื่อมโยงด้วย associative trail; บรรพบุรุษเชิงความคิดของ LLM wiki
+- [[advisor-strategy]] — กลับหัว orchestrator-worker: ให้ model ถูกเป็นคนลงมือ แล้วค่อย escalate ไปหา model แพงเฉพาะตอนเจอจุดตัดสินใจยาก
+- [[alternative-assets]] — การลงทุนนอกเหนือหุ้น/พันธบัตรแบบดั้งเดิม; ชิ้นส่วนสำคัญของ wealth management สาย UHNW
+- [[tui]] — Terminal User Interface: แอปใน terminal แบบ alt-screen ขับด้วยคีย์บอร์ด ประกอบขึ้นจาก component อย่าง viewport/list/input
+- [[terminal-pager]] — โปรแกรมไว้เลื่อนอ่านข้อความยาวหลายหน้าใน terminal ผ่าน $PAGER; less, bat, delta, lore
 - [[adaptive-thinking]] — โหมดการคิดแบบปรับเปลี่ยนได้ใน Opus 4.7; บังคับใช้ใน Claude Code xhigh effort; ซ่อน thinking content โดยปกติ
-- [[agent-client-protocol]] — Open standard (ACP) by Zed for AI agent-IDE communication
-- [[agent-enablement-role]] — New corporate role bridging chatbot-to-agent automation; workflow design + context + eval + HITL
-- [[agent-runtime-untrusted]] — Architectural stance: model runtime is unsafe; enforce security by construction/containers
-- [[agent-swarm]] — Multi-agent scaling pattern (Kimi K2.6); hundreds of subagents for long-horizon tasks
-- [[agentic-search]] — AI capability to autonomously explore code via terminal tools; vs. traditional RAG
-- [[alignment-bottleneck]] — Shift in engineering effort from individual productivity to team/agent alignment
-- [[ast-based-chunking]] — Chunking code via AST structure (tree-sitter) for better retrieval context
-- [[auto-mode]] — Claude Code permission mode: classifier-gated auto-approval of safe tool calls
-- [[bullshitbench]] — Arena.ai benchmark for model nonsense detection; rejects false premises
-- [[cassette-futurism]] — 1970s–80s retro-futurism: clunky terminals, CRT, VHS noise, tape Computing
-- [[cheaper-to-correct]] — Goal: reduce "ceremony" and friction in agent correction; Playback Pattern
-- [[clanker-slop]] — Mass-produced AI PR/issue spam that drains OSS maintainer attention
-- [[claude-md]] — CLAUDE.md: project-level Markdown system prompt for Claude Code; 3-layer priority
-- [[code-is-free]] — Lopopolo's thesis: AI makes code implementation cost zero; maintenance/review are the new costs
-- [[code-knowledge-graphs]] — Codebase structure indexed as a graph for agent context and navigation
-- [[cognitive-debt]] — Mental model loss due to over-delegating codebase implementation to AI
-- [[collaborative-ai-engineering]] — Team-based AI engineering focusing on alignment and ACE-style environments
-- [[compaction]] — Claude Code session cleanup: summarizing history to prevent context rot; best when guided and done at phase boundaries, not mid-confusion
-- [[context-rot]] — Performance degradation as context window fills; includes the "dumb zone" where capacity remains but active-context quality drops
-- [[delegation-mindset]] — Shifting from micromanagement to goal-driven delegation; front-loading intent
-- [[diegetic-ui]] — Narrative-world UI (Iron Man HUD); character is aware of the interface
-- [[dissatisfaction-rate]] — LMSYS metric: frequency of users disliking both model answers in blind tests
-- [[domain-to-ai-translator]] — Engineering role focused on mapping business logic to AI-legible prompts/harnesses
-- [[dreaming]] — Anthropic out-of-band memory curation; agents "dream" over transcripts to improve memory
-- [[effort-levels]] — API control for thinking intensity; medium/high/xhigh/max; cost vs capability trade-off
-- [[eh-gland]] — Engineering intuition (ต่อมเอ๊ะ) needed to spot AI errors; key human differentiator
-- [[engineering-role-shift]] — Transition from implementer to director/reviewer; upstream/downstream expansion
-- [[extension-members]] — C# 14 feature: adding properties/operators to types via extension blocks
-- [[field-keyword]] — C# 14 feature: context keyword for property-backing fields
-- [[financial-poetry]] — Narrative-heavy financial content; simplifies complex PB concepts for broad audiences
-- [[find-vs-filter]] — Review pattern: split coverage (find) from severity/relevance (filter)
-- [[github-ai-credits]] — Token-based currency for GitHub AI resources (Copilot/Agents)
-- [[glassmorphism]] — UI style: frosted glass, backdrop blur, transparency, depth
-- [[graduated-autonomy]] — L1–L4 framework for AI agent independence and required controls
-- [[graph-rag]] — Retrieval-Augmented Generation using knowledge graphs for better context
-- [[grounding]] — Prompting discipline: requiring agents to cite code evidence before making changes
-- [[grpo]] — Group Relative Policy Optimization: DeepSeek's efficient RL without value model
-- [[harness-engineering]] — Engineering the pipeline of review/test/audit agents surrounding a core task
-- [[harness-guides-sensors]] — Böckeler's mental model: the user harness as a control system of guides (feedforward) + sensors (feedback), computational vs inferential, steering loop, regulation categories (maintainability/architecture/behaviour), harnessability, harness templates
-- [[harness-ratchet]] — Discipline of turning observed agent failures into durable harness constraints: rules, hooks, tests, lint, gates, or reviewer agents
-- [[holographic-ui]] — Light-projected interface style: glass panels, glow, mandatory animation
-- [[horror-vacui]] — UI anti-pattern: fear of empty space leading to visual over-saturation
-- [[host-bridge]] — thClaws concept: bridging agent dashboards to local host environments
-- [[hybrid-memory]] — Mercury architecture: Markdown for humans, structured substrate for agents
-- [[idea-file]] — Sharing abstract patterns/instructions for agents rather than code implementations
-- [[instruction-budget]] — The ~250 instruction "dumb zone" limit for model attention in prompts
-- [[jagged-intelligence]] — Model behavior: peaks in hard verifiable tasks, valleys in common sense
-- [[judgement-vs-automation]] — Skill framework: automate the predictable, preserve human judgment for the rest
-- [[just-in-time-context]] — Fetching relevant code context exactly when needed to minimize token usage
-- [[keyword-biasing]] — ASR nudge technique to prioritize specific names/terms in recognition
-- [[lead-time]] — Core engineering metric: from idea to production; AI coding speed ≠ lower lead time
-- [[limit-wip]] — Kanban principle: restrict work-in-progress to expose bottlenecks
-- [[live-service-stagnation]] — Game-dev failure: revenue focus stalls core system maintenance and endgame
-- [[llm-coding-pitfalls]] — Karpathy's observations: hidden confusion, overcomplication, scope drift
-- [[llm-knowledge-bases]] — LLM-maintained personal wikis (like this one) using Markdown/schema
-- [[local-optimization-trap]] — Pitfall: optimizing a non-bottleneck (coding) while ignoring the real constraint
-- [[long-running-agents]] — Agents with multi-day or long-task state; Google Cloud's 5 patterns for persistence/HITL plus Kun Chen's smaller personal-loop version via Good Night Have Fun with objective, caps, and stop condition
-- [[malleable-tools]] — Minimalist, self-modifying tools (pi-agent) vs. heavyweight "spaceship" agents
-- [[memex]] — The associatively-linked personal knowledge device; 1945 Memex as LLM-wiki ancestor
-- [[memory-decay]] — Mercury concept: machine memory that fades over time to prevent context rot
-- [[memory-drift]] — Failure mode: agent behavior warps due to accumulated atypical experience
-- [[memory-scoring]] — Mercury concept: ranking importance of memory fragments for injection
-- [[merkle-tree-sync]] — Performance: incremental codebase sync for agents using Merkle hashes
-- [[meta-ui]] — UI reflecting character state on the lens (blood, blur, screen shake)
-- [[mixture-of-experts]] — MoE: routing tokens to specialized subnetworks for efficiency (DeepSeek/GPT-4/Mellum2/LongCat 2.0)
-- [[mla-attention]] — Multi-head Latent Attention: DeepSeek technique reducing KV cache size
-- [[model-choice-by-expertise]] — Heuristic: domain expert = Sonnet is enough; no knowledge = pay for Opus
-- [[model-context-protocol]] — MCP: open standard for agent-tool communication
-- [[model-cyber-capability-emergence]] — Cyber capabilities emerge as a side effect of general intelligence (Mythos)
-- [[monkey-paw-balancing]] — Balance pattern: any buff must be offset by a simultaneous nerf
-- [[multi-token-prediction]] — Predicting multiple future tokens at once for speed (Gemma 4/MTP)
-- [[non-autoregressive-asr]] — High-throughput ASR decoding style without token-by-token generation
-- [[non-diegetic-ui]] — Traditional overlay UI (health bars) external to the narrative world
-- [[noosphere]] — Vernadsky's concept: the Earth's layer of collective thinking/intelligence
-- [[open-source-governance]] — Differentiation through who decides what to ship, not just the code
-- [[open-weight-models]] — Models shared as weights (Gemma/DeepSeek/Mellum2) but not necessarily fully open source; useful for private/local deployment
-- [[papercut-features]] — Small UX wins/fixes that differentiate niche products from giants
-- [[playback-pattern]] — Alignment: agent restates "Stated, Inferred, Out-of-scope" before acting
-- [[plugin-manager]] — Tooling to manage life cycle, versions, and dependencies of software extensions
-- [[pr-dependency-dag]] — Orchestration: representing parallel branch changes as a dependency graph
-- [[private-banking]] — High-net-worth wealth management; focus on protection and bespoke service
-- [[product-overhang]] — Potential of an existing product that hasn't been fully exploited or shipped
-- [[progressive-disclosure]] — Lazy-loading context/tools to keep agents within instruction budgets
-- [[rabbit-hole]] — Deep, recursive investigation paths in complex agentic coding tasks
-- [[raygun-gothic]] — 1930s–50s retro-futurism: chrome, art deco, streamlined space-age
-- [[reasoning-regression]] — Failure: model "over-thinks" itself into justifying a false premise
-- [[retro-futurism]] — Visual spectrum of the past's future; Raygun Gothic to Cassette Futurism
-- [[selective-injection]] — Mercury concept: picking only high-score memory fragments for the context window
-- [[self-learning-agents]] — Agents that improve from their own sessions via memory/dreaming
-- [[semantic-retrieval]] — Code exploration via vector search/RAG instead of grep
-- [[shift-left-testing]] — Moving testing earlier in the pipeline; critical for AI coding speed
-- [[skill-atrophy]] — Loss of human coding ability due to over-delegating thinking to AI
-- [[software-3-0]] — Context-window programming; LLM as interpreter; prompts as code
-- [[soviet-cosmism]] — 1960s–80s retro-futurism: constructivist, space program, collectivist
-- [[spatial-ui]] — UI placed in 3D game world but invisible to the character
-- [[speaker-attributed-asr]] — ASR with speaker labeling and diarization
-- [[speculative-decoding]] — Inference speedup: draft-and-verify with small/large model pair
-- [[sputnik-moment-ai]] — Geopolitical/technical wake-up call (DeepSeek) regarding AI efficiency
-- [[stop-slop-concept]] — Discipline of removing "AI tells" and generic fluff from model output
-- [[subagent-patterns]] — Orchestration: fan-out (parallel) vs pipeline (serial) agent teams
-- [[task-budgets]] — Advisory model-aware token limits distinct from hard max_tokens caps
-- [[taste-paradox]] — The catch-22 of needing judgment to use AI that helps you build judgment
-- [[team-pulse]] — Alignment: agent-to-human feedback loop regarding team progress and health
-- [[terminal-pager]] — CLI tools ($PAGER) for navigating multi-page text output
-- [[terminalbench]] — Benchmark for terminal-based agent capabilities
-- [[theory-of-constraints]] — Identifying and elevating the single most restrictive bottleneck in a system
-- [[token-billionaire]] — Lopopolo's persona: ignoring token cost to prioritize verification/correctness
-- [[token-optimization]] — Proxy-level (RTK) or model-level compression of context/output
-- [[tree-house]] — Helix's tree-sitter integration; handles complex multi-language injections
-- [[tree-sitter]] — Parsing framework for fast, error-tolerant codebase analysis
-- [[tree-structured-sessions]] — pi-agent's branching session history for non-linear exploration
-- [[tui]] — Terminal User Interfaces; rich keyboard-driven terminal applications
-- [[usage-based-billing]] — Consumption pricing (Credits) for agentic compute resources
-- [[vendor-lock-in]] — Team dependency on specific reasoning-model providers
-- [[verifiability]] — The core driver of progress: tasks that can be measured improve fastest
-- [[vibe-coding]] — Directional programming via AI; human as curator of "vibes" and implementation
-- [[vibecoded-slop]] — Poorly verified, generic code resulting from vibe coding without judgment
-- [[vim-pack]] — Neovim 0.12 built-in plugin manager; lightweight Lua API
-- [[word-error-rate]] — The standard metric for ASR accuracy
-- [[wtf-primitives]] — Worker-Trigger-Function: the building blocks of the iii harness backend
+- [[agent-client-protocol]] — ACP: มาตรฐานเปิดจาก Zed สำหรับให้ AI agent คุยกับ IDE
+- [[agent-enablement-role]] — role ใหม่ในองค์กรที่พาไปจาก chatbot สู่ automation ด้วย agent: ออกแบบ workflow + จัด context + ทำ eval + วาง HITL
+- [[agent-runtime-untrusted]] — จุดยืนเชิงสถาปัตยกรรม: runtime ของ model ถือว่าไม่ปลอดภัย; บังคับ security ด้วยโครงสร้าง/container ไม่ใช่ด้วยความหวัง
+- [[agent-swarm]] — แพตเทิร์นสเกลแบบ multi-agent (Kimi K2.6); ปล่อย subagent เป็นร้อยตัวลุยงาน long-horizon
+- [[alignment-bottleneck]] — แรงวิศวกรรมย้ายจาก productivity รายคน มาอยู่ที่การทำให้ทีมกับ agent align ตรงกัน
+- [[auto-mode]] — permission mode ของ Claude Code: ใช้ classifier คัดอนุมัติ tool call ที่ปลอดภัยให้อัตโนมัติ
+- [[cheaper-to-correct]] — เป้าหมาย: ลด "พิธีรีตอง" กับ friction เวลาต้องแก้ทางให้ agent; ใช้คู่กับ Playback Pattern
+- [[clanker-slop]] — PR/issue spam จาก AI ที่ปั๊มออกมาเป็นแมส สูบ attention ของ maintainer ฝั่ง OSS
+- [[claude-md]] — CLAUDE.md: system prompt ระดับโปรเจกต์ในรูป Markdown ของ Claude Code; มีลำดับความสำคัญ 3 ชั้น
+- [[code-is-free]] — ธีสิสของ Lopopolo: AI ทำให้ต้นทุนเขียนโค้ดเป็นศูนย์; ต้นทุนใหม่คือ maintenance กับ review
+- [[collaborative-ai-engineering]] — AI engineering แบบทีม เน้นเรื่อง alignment กับ environment สไตล์ ACE
+- [[compaction]] — การเก็บกวาด session ของ Claude Code: สรุปประวัติเพื่อกัน context เน่า; ได้ผลสุดตอนกำกับเองและทำที่รอยต่อ phase ไม่ใช่กลางความงง
+- [[context-rot]] — ประสิทธิภาพตกลงเรื่อยๆ เมื่อ context window เต็มขึ้น; รวมถึง "dumb zone" ที่ความจุยังเหลือแต่คุณภาพ active context ตก
+- [[delegation-mindset]] — เปลี่ยนจาก micromanage เป็นมอบหมายงานตามเป้า; ยัด intent ให้ครบตั้งแต่ต้นทาง
+- [[domain-to-ai-translator]] — role วิศวกรที่เน้นแปล business logic ให้เป็น prompt/harness ที่ AI อ่านรู้เรื่อง
+- [[effort-levels]] — ตัวคุมความเข้มการคิดฝั่ง API: medium/high/xhigh/max; แลกกันระหว่างค่าใช้จ่ายกับความสามารถ
+- [[engineering-role-shift]] — เปลี่ยนบทบาทจากคนลงมือ implement เป็นผู้กำกับ/ผู้ review; งานขยายออกทั้ง upstream และ downstream
+- [[financial-poetry]] — คอนเทนต์การเงินสายเล่าเรื่อง; ย่อยเรื่อง private banking ยากๆ ให้คนวงกว้างเข้าใจ
+- [[find-vs-filter]] — แพตเทิร์นการ review: แยกขั้นกวาดหาให้ครบ (find) ออกจากขั้นตัดสิน severity/ความเกี่ยวข้อง (filter)
+- [[graduated-autonomy]] — framework L1–L4 ว่า agent อิสระได้แค่ไหน และแต่ละระดับต้องมีการควบคุมอะไรบ้าง
+- [[grounding]] — วินัยการ prompt: บังคับให้ agent อ้างหลักฐานจากโค้ดก่อนลงมือแก้
+- [[grpo]] — Group Relative Policy Optimization: วิธี RL แบบประหยัดของ DeepSeek ที่ไม่ต้องมี value model
+- [[harness-engineering]] — วิศวกรรม pipeline ของเหล่า agent สาย review/test/audit ที่ล้อมงานหลักเอาไว้
+- [[harness-guides-sensors]] — mental model ของ Böckeler: harness ฝั่งผู้ใช้คือระบบควบคุมที่มี guides (feedforward) + sensors (feedback), แบบ computational vs inferential, มี steering loop, หมวด regulation (maintainability/architecture/behaviour), แนวคิด harnessability และ harness template
+- [[harness-ratchet]] — วินัยแปลง failure ของ agent ที่เห็นตรงหน้า ให้กลายเป็นข้อบังคับถาวรใน harness: rule, hook, test, lint, gate หรือ reviewer agent
+- [[host-bridge]] — concept ของ thClaws: เชื่อม dashboard ของ agent เข้ากับ environment บนเครื่อง host จริง
+- [[hybrid-memory]] — สถาปัตยกรรมของ Mercury: Markdown ไว้ให้คนอ่าน substrate แบบ structured ไว้ให้ agent ใช้
+- [[instruction-budget]] — ลิมิต "dumb zone" ราวๆ 250 คำสั่ง ที่ attention ของ model ใน prompt รับไหว
+- [[judgement-vs-automation]] — กรอบทักษะ: อะไรที่คาดเดาได้ก็ automate ไป ส่วนที่เหลือเก็บ judgement ของคนไว้
+- [[just-in-time-context]] — ดึง context โค้ดที่เกี่ยวมาตอนต้องใช้พอดี เพื่อประหยัด token
+- [[lead-time]] — metric วิศวกรรมตัวหลัก: จากไอเดียถึง production; AI เขียนโค้ดเร็วขึ้น ≠ lead time สั้นลง
+- [[limit-wip]] — หลัก Kanban: จำกัดงานค้างระหว่างทำ (WIP) เพื่อให้คอขวดโผล่ออกมาให้เห็น
+- [[long-running-agents]] — agent ที่ถืองาน/state ข้ามหลายวัน; 5 แพตเทิร์นของ Google Cloud เรื่อง persistence/HITL บวกเวอร์ชัน loop ส่วนตัวย่อส่วนของ Kun Chen ผ่าน Good Night Have Fun ที่กำหนด objective, เพดาน และเงื่อนไขหยุด
+- [[malleable-tools]] — เครื่องมือ minimal ที่แก้ตัวเองได้ (pi-agent) เทียบกับ agent สาย "ยานแม่" ตัวหนักๆ
+- [[memory-decay]] — concept ของ Mercury: ให้ memory ของเครื่องค่อยๆ จางไปตามเวลา เพื่อกัน context เน่า
+- [[memory-drift]] — failure mode: พฤติกรรมของ agent เพี้ยนไป เพราะสะสมประสบการณ์ผิดปกติเข้าไปเรื่อยๆ
+- [[memory-scoring]] — concept ของ Mercury: ให้คะแนนความสำคัญของเศษ memory ก่อนเลือกฉีดเข้า context
+- [[merkle-tree-sync]] — เรื่อง performance: sync codebase แบบ incremental ให้ agent ด้วย Merkle hash
+- [[mixture-of-experts]] — MoE: route token ไปหา subnetwork เฉพาะทางเพื่อความคุ้มค่า compute (DeepSeek/GPT-4/Mellum2/LongCat 2.0)
+- [[mla-attention]] — Multi-head Latent Attention: เทคนิคของ DeepSeek ที่ย่อขนาด KV cache
+- [[model-choice-by-expertise]] — heuristic เลือก model: เราเชี่ยวชาญโดเมนเองอยู่แล้ว Sonnet ก็พอ; ไม่รู้เรื่องเลยค่อยจ่ายค่า Opus
+- [[model-cyber-capability-emergence]] — ความสามารถด้าน cyber โผล่มาเองเป็นผลพลอยได้ของ intelligence ทั่วไป (Mythos)
+- [[open-weight-models]] — model ที่แจก weights (Gemma/DeepSeek/Mellum2) แต่ไม่จำเป็นต้อง open source เต็มตัว; เหมาะกับการ deploy แบบ private/local
+- [[playback-pattern]] — ท่า alignment: ให้ agent ทวนก่อนลงมือ ว่าอะไรคือ "Stated, Inferred, Out-of-scope"
+- [[plugin-manager]] — เครื่องมือจัดการ life cycle, เวอร์ชัน และ dependency ของ extension ต่างๆ
+- [[pr-dependency-dag]] — ท่า orchestration: มองการแก้หลาย branch ขนานกันเป็น dependency graph
+- [[private-banking]] — wealth management สำหรับคนทรัพย์สินสูง; เน้นปกป้องทรัพย์กับบริการที่ตัดเฉพาะราย
+- [[product-overhang]] — ศักยภาพของ product ที่มีอยู่แล้ว แต่ยังไม่ถูกใช้หรือ ship ออกมาเต็มที่
+- [[progressive-disclosure]] — โหลด context/tool แบบ lazy เพื่อให้ agent อยู่ใน instruction budget
+- [[rabbit-hole]] — เส้นทางสืบสวนที่ลึกและวนซ้ำเป็นชั้นๆ ในงาน agentic coding ที่ซับซ้อน
+- [[selective-injection]] — concept ของ Mercury: เลือกเฉพาะเศษ memory คะแนนสูง ฉีดเข้า context window
+- [[semantic-retrieval]] — สำรวจโค้ดผ่าน vector search/RAG แทนการใช้ grep
+- [[shift-left-testing]] — เลื่อนการ test มาไว้ต้นๆ ของ pipeline; ยิ่งจำเป็นเมื่อ AI ทำให้เขียนโค้ดได้เร็วขึ้น
+- [[sputnik-moment-ai]] — เสียงปลุกเชิงภูมิรัฐศาสตร์/เทคนิคเรื่อง efficiency ของ AI (เคส DeepSeek)
+- [[stop-slop-concept]] — วินัยการขูด "กลิ่น AI" กับ fluff แบบ generic ออกจาก output ของ model
+- [[subagent-patterns]] — ท่า orchestration: ทีม agent แบบ fan-out (ขนาน) กับแบบ pipeline (เรียงต่อกัน)
+- [[task-budgets]] — ลิมิต token แบบ advisory ที่ model รับรู้เอง คนละเรื่องกับ max_tokens ที่ตัดจริง
+- [[taste-paradox]] — catch-22: ต้องมี judgement ถึงจะใช้ AI ได้ดี แต่ AI นั่นแหละคือตัวช่วยสร้าง judgement
+- [[team-pulse]] — เรื่อง alignment: ลูป feedback จาก agent กลับมาหาคน ว่าความคืบหน้าและสุขภาพของทีมเป็นยังไง
+- [[terminalbench]] — benchmark วัดความสามารถของ agent ในงานสาย terminal
+- [[theory-of-constraints]] — หาคอขวดตัวเดียวที่รั้งระบบมากที่สุด แล้วยกมันขึ้นก่อน
+- [[token-billionaire]] — persona ของ Lopopolo: ไม่สนค่า token เอา verification กับความถูกต้องมาก่อน
+- [[token-optimization]] — บีบอัด context/output ที่ระดับ proxy (RTK) หรือระดับ model
+- [[tree-structured-sessions]] — ประวัติ session แบบแตกกิ่งของ pi-agent สำหรับสำรวจงานแบบไม่เป็นเส้นตรง
+- [[vibecoded-slop]] — โค้ด generic ที่แทบไม่ได้ verify; ผลของ vibe coding แบบไร้ judgement
+- [[vim-pack]] — plugin manager ในตัวของ Neovim 0.12; Lua API แบบเบาๆ
+- [[wtf-primitives]] — Worker-Trigger-Function: บล็อกพื้นฐานของ backend ใน harness ตัว iii
 - [[deep-modules]] — โมดูลที่มี Interface เรียบง่ายแต่ซ่อนความซับซ้อนไว้ข้างใน (Information Hiding); หัวใจสำคัญของการปล่อยให้ AI จัดการ implementation
 - [[grill-me]] — ทักษะการสั่งให้ AI สัมภาษณ์เราอย่างไม่ลดละจนกว่าจะถึงจุดที่เรียกว่า Shared Design Concept เพื่อลดความผิดพลาดในการทำงาน
 - [[software-entropy]] — สภาวะที่ซอฟต์แวร์ค่อยๆ เสื่อมสภาพและวุ่นวายขึ้นเมื่อมีการแก้ไขโดยขาดการออกแบบที่ดี; AI สามารถเร่งสปีด entropy ได้ถ้าไม่มีการคุม
