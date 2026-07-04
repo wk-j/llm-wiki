@@ -3,8 +3,8 @@ title: Long-running Agents / Agent ที่อยู่ข้ามวัน
 type: concept
 tags: [ai, agents, long-running, architecture, memory, orchestration]
 created: 2026-04-23
-updated: 2026-07-02
-sources: [google-cloud-long-running-agent-patterns.md, l8-principals-agentic-engineering-workflow-kun-chen.md, aom-fable-elysia-2-audit.md]
+updated: 2026-07-04
+sources: [google-cloud-long-running-agent-patterns.md, l8-principals-agentic-engineering-workflow-kun-chen.md, aom-fable-elysia-2-audit.md, stop-building-ai-agents-old-way.md]
 ---
 
 # Long-running Agents / Agent ที่อยู่ข้ามวัน
@@ -155,6 +155,14 @@ Addy ให้คำถามตัดสินใจง่าย ๆ:
 
 **ผลคือ:** long-running agent ไม่ได้มีไว้แค่ผลิต code. มันใช้เป็น reviewer ที่อ่านนานกว่าคนไหวได้ แต่ต้องมี gate ให้มนุษย์ตัดสินใจจากหลักฐาน.
 
+## Long-running แบบ control system 7 ชิ้น
+
+[[prompt-engineering|Prompt Engineering]] ใน [[stop-building-ai-agents-old-way]] ให้กรอบที่เล็กกว่า enterprise platform ของ Google แต่ใช้งานตรงกับ agent loop ทั่วไป: agent ตัวหลักเป็น executor และต้องถูกครอบด้วย 7 ชิ้นคือ goal, evaluator, verifier, outer loop, orchestration, observability, และ memory.
+
+มุมที่ต่างจาก Google คือคลิปนี้ไม่ได้เริ่มจาก runtime ที่ pause/resume ได้ 7 วัน แต่เริ่มจากคำถามว่า "ทำยังไงไม่ให้ agent รันยาวแล้วหลุดทาง". คำตอบคือ goal ต้องวัดได้เหมือน contract, evaluator ต้องแยกจาก executor, verifier ต้องเป็น proof, loop ต้องกัน early stopping, role orchestration ต้องคุม cost/quality, [[agent-observability|observability]] ต้องทำให้เห็น run ระหว่างทาง, และ [[session-mining|session mining]] ต้องเปลี่ยน failure เดิมเป็น rule.
+
+**ได้อะไร:** long-running agent มีได้สองระดับ: platform pattern สำหรับ state/durability และ control pattern สำหรับไม่ให้ executor หลุดเป้าระหว่างทำงาน.
+
 ## See also
 
 - [[google-cloud-long-running-agent-patterns]]
@@ -172,6 +180,9 @@ Addy ให้คำถามตัดสินใจง่าย ๆ:
 - [[advisor-strategy]]
 - [[claude-code-session-management]]
 - [[loop-engineering]]
+- [[stop-building-ai-agents-old-way]]
+- [[agent-observability]]
+- [[session-mining]]
 - [[l8-principals-agentic-engineering-workflow-kun-chen]]
 - [[good-night-have-fun]]
 - [[deep-agent-audit]]

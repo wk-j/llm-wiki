@@ -1,5 +1,17 @@
 # Log
 
+## [2026-07-04] ingest | Prompt Engineering — Stop Building AI Agents the Old Way
+
+Ingested the user-provided YouTube transcript from Prompt Engineering about designing long-running agents as a controlled system rather than a single autonomous executor. Treated the Latitude section as sponsor/product claims until checked against Latitude repo/docs directly.
+
+- Created source page: `[[stop-building-ai-agents-old-way]]`
+- Created entity page: `[[latitude]]`
+- Created concept pages: `[[agent-observability]]`, `[[session-mining]]`
+- Updated entity page: `[[prompt-engineering]]`
+- Updated concepts: `[[long-running-agents]]`, `[[loop-engineering]]`, `[[orchestration-tax]]`, `[[harness-guides-sensors]]`, `[[harness-ratchet]]`, `[[agent-memory-types]]`, `[[harness-engineering]]`, and `[[coding-harness]]`
+- Updated `[[index]]`, `[[log]]`, and `hotcache.md`
+
+Key takeaways: (1) The source frames a long-running agent as executor plus seven controls: measurable goal, separate evaluator, verifiers, outer loop, role/model orchestration, observability, and memory. (2) Goal is treated as a contract: done means end state + success criteria + constraints + budget, not a vague instruction. (3) Evaluator and executor should be separated so the agent that did the work is not grading its own output. (4) Verifiers turn "done" from a claim into proof, with deterministic checks first and agent/held-out/screenshot evals on top. (5) Agent observability is a live control page during the run, not just a report after the fact. (6) Session mining turns repeated failures from prior runs into durable rules/evals/hooks, connecting memory to harness ratchet.
 
 ## [2026-07-03] ingest | Economy Media — How AI Became More Expensive Than The Workers It Replaced
 

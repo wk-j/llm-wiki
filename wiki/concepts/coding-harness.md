@@ -3,8 +3,8 @@ title: Coding Harness
 type: concept
 tags: [ai, tools, agents, software-engineering, harness]
 created: 2026-04-18
-updated: 2026-07-02
-sources: [alex-ker-harnesses-optimize.md, building-pi-world-of-slop.md, Agent Harness Engineering.md, software-writing-software-gone-right.md, improved-15-llms-harness-changed.md, "Introducing Omnigent A Meta-Harness to Combine, Control and Share Your Agents.md", "Matt Pocock’s Agentic Engineering Workflow (just copy him).md", "i don't want to use your agent — @RhysSullivan.md", l8-principals-agentic-engineering-workflow-kun-chen.md, aom-fable-elysia-2-audit.md, zoran-horvat-claude-no-planning-engine.md, planning-mode-dangerous-illusion.md]
+updated: 2026-07-04
+sources: [alex-ker-harnesses-optimize.md, building-pi-world-of-slop.md, Agent Harness Engineering.md, software-writing-software-gone-right.md, improved-15-llms-harness-changed.md, "Introducing Omnigent A Meta-Harness to Combine, Control and Share Your Agents.md", "Matt Pocock’s Agentic Engineering Workflow (just copy him).md", "i don't want to use your agent — @RhysSullivan.md", l8-principals-agentic-engineering-workflow-kun-chen.md, aom-fable-elysia-2-audit.md, zoran-horvat-claude-no-planning-engine.md, planning-mode-dangerous-illusion.md, stop-building-ai-agents-old-way.md]
 ---
 
 # Coding Harness / ตัวครอบของ Coding Agent
@@ -71,6 +71,8 @@ sources: [alex-ker-harnesses-optimize.md, building-pi-world-of-slop.md, Agent Ha
 | observability | logs, traces, cost, latency meter |
 
 หลักเช็คง่าย ๆ: ถ้าบอกไม่ได้ว่า component หนึ่งมีไว้สร้าง behavior อะไร ก็ควรเอาออก เพราะ component ทุกตัวกิน context, latency, หรือ maintenance cost
+
+[[prompt-engineering|Prompt Engineering]] ใน [[stop-building-ai-agents-old-way]] ให้ taxonomy อีกแบบสำหรับ long-running agent: goal, evaluator, verifier, outer loop, orchestration, observability, memory. มันไม่ได้ขัดกับตารางนี้ แต่เป็นมุมที่จัดตาม "agent พังเพราะอะไร": goal กัน intent drift, evaluator/verifier กัน agent ให้เกรดตัวเอง, loop กันการหยุดเร็วเกินไป, orchestration กันใช้ model ผิดบทบาท, observability กัน run มืด, memory กันผิดซ้ำ.
 
 ## Harness Ratchet
 

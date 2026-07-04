@@ -1,6 +1,7 @@
 # Index
 
 ## Sources
+- [[stop-building-ai-agents-old-way]] — Prompt Engineering (YouTube transcript): สูตรสำหรับ long-running agent ที่รันได้นานโดยไม่หลุดทาง; 7 component คือ goal เป็น contract, evaluator แยกจาก executor, verifier เป็น proof, outer loop กัน early stop, role orchestration คุม cost/quality, observability/dashboard/trace และ session mining ที่เปลี่ยน failure เก่าเป็น rule; มี sponsor claim ของ Latitude ที่ยังควรตรวจจาก repo/docs ตรง
 - [[field-guide-to-fable-finding-unknowns]] — Thariq Shihipar / @trq212 (บทความบน X, ingest 2026-07-04): มองการทำงานกับ Claude Fable 5 ผ่านเลนส์ map vs territory — คุณภาพงานติดอยู่ที่ตัวเราว่าเคลียร์ unknowns ได้แค่ไหน; มี 4-quadrant ของ unknowns กับเทคนิคก่อน/ระหว่าง/หลังลงมือ (blind spot pass, brainstorm/prototype, interview, references, implementation plan/notes, pitch, quiz); วิดีโอเปิดตัว Fable ตัดต่อด้วย Claude Code ทั้งหมด
 - [[how-ai-became-more-expensive-than-workers-it-replaced]] — Economy Media (YouTube, 2026-07-02): ชี้ว่า AI ในองค์กรอาจแพงกว่าแรงงานที่มันมาแทน — พอ token-based pricing บวก tokenmaxxing บวก data center ขาดแคลน แล้ว agent ถูกใช้กันทั้งบริษัท ต้นทุนก็บาน; ตัวเลขของ Microsoft/Meta/Anthropic/OpenAI/Bloomberg/Reuters/Gartner ยังอิงตามแหล่ง ยังไม่ได้ตรวจ
 - [[review-lite-cohr-nok-aaoi]] — คุณพ่อนักลงทุน (YouTube ไทย, 2026-06-28): เทียบ Lumentum/LITE, Coherent/COHR, Nokia/NOK, AAOI, AXT ในธีม photonics ของ AI data center; มอง photonic interconnect เป็นคอขวดตัวถัดไปหลัง GPU/memory อธิบายข้อจำกัด wafer Indium Phosphide / กำลังผลิต 6 นิ้ว แล้วแยกเจ้าตลาดตัวจริงออกจากหุ้น pure-play เสี่ยงสูงและหุ้นวัตถุดิบต้นน้ำ; transcript กับตัวเลขการเงินยังอิงตามแหล่ง ยังไม่ได้ตรวจ
@@ -156,7 +157,8 @@
 - [[curiosity-channel]] — ช่อง YouTube วิทยาศาสตร์ไทย (คนช่างสงสัย); source ของ recap ʻOumuamua ปี 2026; เล่าวิทยาศาสตร์เป็นภาษาพูด ปิดท้ายด้วยวิธีคิดแบบ Occam's razor
 - [[longcat-2-0]] — model ของ Meituan ตามที่ Prompt Engineering เล่า: MoE ขนาด 1.6T พารามิเตอร์ active 48B ต่อ token เทรนบนชิป AI ทำเองกว่า 50,000 ตัวด้วยข้อมูล 35T token โดยไม่ใช้ NVIDIA GPU/Google TPU; ตัวเลขยังเป็นคำกล่าวอ้างจาก source รอตรวจกับแหล่งปฐมภูมิและบุคคลที่สาม
 - [[meituan]] — บริษัทอินเทอร์เน็ต/บริการของจีน เจ้าของ LongCat 2.0 ใน source ที่ให้มา; ตัวอย่างว่าความสามารถ AI ย้ายจาก lab เฉพาะทางไปอยู่กับแพลตฟอร์มจีนรายใหญ่ที่อยากมี hardware/software stack ของตัวเอง
-- [[prompt-engineering]] — ช่อง YouTube อธิบายงาน AI engineering; source ของ ingest เรื่อง LongCat 2.0 / จีนยืนบน hardware ตัวเอง; ใช้เป็นการตีความจากบุคคลที่สาม ไม่ใช่หลักฐานตรงจาก Meituan
+- [[prompt-engineering]] — ช่อง YouTube อธิบายงาน AI engineering; source ของ ingest เรื่อง LongCat 2.0 / จีนยืนบน hardware ตัวเอง และคลิป long-running agent 7 component; ใช้เป็นการตีความจากบุคคลที่สาม ไม่ใช่หลักฐานตรงจาก product/lab ที่ถูกพูดถึง
+- [[latitude]] — เครื่องมือ agent observability ที่ Prompt Engineering โปรโมตในคลิป Stop Building AI Agents the Old Way; claim จาก source คือ trace cost/latency/span tree, search trace, cluster conversation, issue view, monitor/eval จาก failure และ MCP server ดึง trace เข้า editor; ยังไม่ได้ตรวจ repo/docs ตรง
 - [[bycloud]] — ช่องอธิบาย AI/LLM เจ้าของคลิป looped transformer; มีประโยชน์ในฐานะ source สังเคราะห์ชั้นสองที่โยง recurrence, stability, mechanistic analysis, adaptive recursive depth และ tradeoff ของ KV cache เข้าด้วยกัน
 - [[crusoe]] — บริษัท AI infrastructure ที่ถูกโปรโมตใน source ของ bycloud ว่าให้บริการ serverless fine-tuning; ข้อมูลมาจากช่วงสปอนเซอร์/บริบทขายของ ไม่ใช่การประเมินอิสระ
 - [[intuitive-ai-academy]] — โปรเจกต์คอร์สสอน LLM ของ bycloud; ถูกโปรโมตในคลิป looped transformer ว่าเป็นการสอน AI แบบเอา intuition นำ
@@ -531,6 +533,7 @@
 - [[agent-enablement-role]] — role ใหม่ในองค์กรที่พาไปจาก chatbot สู่ automation ด้วย agent: ออกแบบ workflow + จัด context + ทำ eval + วาง HITL
 - [[agent-runtime-untrusted]] — จุดยืนเชิงสถาปัตยกรรม: runtime ของ model ถือว่าไม่ปลอดภัย; บังคับ security ด้วยโครงสร้าง/container ไม่ใช่ด้วยความหวัง
 - [[agent-swarm]] — แพตเทิร์นสเกลแบบ multi-agent (Kimi K2.6); ปล่อย subagent เป็นร้อยตัวลุยงาน long-horizon
+- [[agent-observability]] — การมองเห็น run ของ agent ผ่าน trace, cost, latency, error, artifact, key decision และ dashboard ที่เป็นหน้าควบคุม; สำคัญกับ long-running agent เพราะช่วยให้คน step in ตรงจุดแทนอ่าน transcript ดิบทั้งหมด
 - [[alignment-bottleneck]] — แรงวิศวกรรมย้ายจาก productivity รายคน มาอยู่ที่การทำให้ทีมกับ agent align ตรงกัน
 - [[auto-mode]] — permission mode ของ Claude Code: ใช้ classifier คัดอนุมัติ tool call ที่ปลอดภัยให้อัตโนมัติ
 - [[cheaper-to-correct]] — เป้าหมาย: ลด "พิธีรีตอง" กับ friction เวลาต้องแก้ทางให้ agent; ใช้คู่กับ Playback Pattern
@@ -559,7 +562,7 @@
 - [[just-in-time-context]] — ดึง context โค้ดที่เกี่ยวมาตอนต้องใช้พอดี เพื่อประหยัด token
 - [[lead-time]] — metric วิศวกรรมตัวหลัก: จากไอเดียถึง production; AI เขียนโค้ดเร็วขึ้น ≠ lead time สั้นลง
 - [[limit-wip]] — หลัก Kanban: จำกัดงานค้างระหว่างทำ (WIP) เพื่อให้คอขวดโผล่ออกมาให้เห็น
-- [[long-running-agents]] — agent ที่ถืองาน/state ข้ามหลายวัน; 5 แพตเทิร์นของ Google Cloud เรื่อง persistence/HITL บวกเวอร์ชัน loop ส่วนตัวย่อส่วนของ Kun Chen ผ่าน Good Night Have Fun ที่กำหนด objective, เพดาน และเงื่อนไขหยุด
+- [[long-running-agents]] — agent ที่ถืองาน/state ข้ามหลายวัน; รวม 5 แพตเทิร์นของ Google Cloud เรื่อง persistence/HITL, loop ส่วนตัวย่อของ Kun Chen ผ่าน Good Night Have Fun, และสูตร 7 component ของ Prompt Engineering (goal/evaluator/verifier/outer loop/orchestration/observability/memory)
 - [[malleable-tools]] — เครื่องมือ minimal ที่แก้ตัวเองได้ (pi-agent) เทียบกับ agent สาย "ยานแม่" ตัวหนักๆ
 - [[memory-decay]] — concept ของ Mercury: ให้ memory ของเครื่องค่อยๆ จางไปตามเวลา เพื่อกัน context เน่า
 - [[memory-drift]] — failure mode: พฤติกรรมของ agent เพี้ยนไป เพราะสะสมประสบการณ์ผิดปกติเข้าไปเรื่อยๆ
@@ -578,6 +581,7 @@
 - [[progressive-disclosure]] — โหลด context/tool แบบ lazy เพื่อให้ agent อยู่ใน instruction budget
 - [[rabbit-hole]] — เส้นทางสืบสวนที่ลึกและวนซ้ำเป็นชั้นๆ ในงาน agentic coding ที่ซับซ้อน
 - [[selective-injection]] — concept ของ Mercury: เลือกเฉพาะเศษ memory คะแนนสูง ฉีดเข้า context window
+- [[session-mining]] — ย้อนดู run/session เก่าของ agent เพื่อหา failure หรือ wrong path ที่เกิดซ้ำ แล้วเปลี่ยนเป็น rule, eval, hook, memory หรือ instruction; เป็นทางปฏิบัติที่กลั่น episodic memory เป็น procedural memory และเป็นวัตถุดิบของ harness ratchet
 - [[semantic-retrieval]] — สำรวจโค้ดผ่าน vector search/RAG แทนการใช้ grep
 - [[shift-left-testing]] — เลื่อนการ test มาไว้ต้นๆ ของ pipeline; ยิ่งจำเป็นเมื่อ AI ทำให้เขียนโค้ดได้เร็วขึ้น
 - [[sputnik-moment-ai]] — เสียงปลุกเชิงภูมิรัฐศาสตร์/เทคนิคเรื่อง efficiency ของ AI (เคส DeepSeek)

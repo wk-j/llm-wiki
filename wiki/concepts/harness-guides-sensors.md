@@ -3,8 +3,8 @@ title: Harness Guides & Sensors
 type: concept
 tags: [ai, agents, harness, software-engineering, feedback-loop, cybernetics]
 created: 2026-06-08
-updated: 2026-06-16
-sources: [harness-engineering-bockeler.md, How to Keep Shipping When You Walk Away from Your Desk — Zack Proser, WorkOS.md, Agentic Code Review.md]
+updated: 2026-07-04
+sources: [harness-engineering-bockeler.md, How to Keep Shipping When You Walk Away from Your Desk — Zack Proser, WorkOS.md, Agentic Code Review.md, stop-building-ai-agents-old-way.md]
 ---
 
 # Harness Guides & Sensors / บังเหียนที่ทำจาก "ตัวนำทาง" กับ "ตัวเซ็นเซอร์"
@@ -61,6 +61,8 @@ sources: [harness-engineering-bockeler.md, How to Keep Shipping When You Walk Aw
 
 **ได้อะไร:** harness ไม่ใช่ของตั้งครั้งเดียวจบ แต่เป็นงานวิศวกรรมที่ทำต่อเนื่อง
 
+[[prompt-engineering|Prompt Engineering]] ใน [[stop-building-ai-agents-old-way]] ให้ตัวอย่าง steering loop อีกแบบผ่าน [[session-mining|session mining]]: ย้อนดู run เก่า, หา failed check หรือ wrong path ที่ซ้ำ, แล้วเขียนกลับเป็น rule ใน `AGENTS.md`, `prompt.md`, หรือ config. นี่คือการเปลี่ยน episodic failure ให้เป็น guide/sensor ของรอบต่อไป.
+
 ## keep quality left (วางด่านให้ซ้ายสุดเท่าที่ทำได้)
 
 มาจากวินัยสาย [[shift-left-testing|continuous integration / shift-left]]: เจอปัญหายิ่งเร็ว ยิ่งแก้ถูก เลยต้องกระจาย sensor ไปตาม lifecycle ตามต้นทุน/ความเร็ว/ความสำคัญ
@@ -107,6 +109,8 @@ Böckeler มองว่า harness ทำตัวเหมือน **cyberne
 - [[facts-first]] / [[spec-driven-development]] — critique ของ Wasowski อ่านผ่านกรอบนี้ได้ตรง ๆ: prose spec คือ guide แบบ inferential (ต้องให้ model ตีความ, [[llm-nondeterminism|non-deterministic]]) ส่วน executable fact คือ sensor แบบ computational — facts-first คือการย้ายน้ำหนักจากฝั่งแรกไปฝั่งหลัง
 - [[developer-balance]] — verification gate ทำให้ agent ปิด loop เองได้ คนจึงใช้ attention กับ judgement แทนการเฝ้ารายละเอียด
 - [[agentic-code-review]] — ตัวอย่างการจัด sensor สำหรับ review: CI/type/lint/test เป็น computational sensor ที่ต้องแข็ง, AI reviewers อย่าง [[coderabbit|CodeRabbit]] หรือ [[greptile|Greptile]] เป็น inferential sensor ที่ช่วยจัด risk, ส่วนมนุษย์เป็น owner ของ judgement และ merge
+- [[agent-observability]] — observability เป็น sensor และ feedback surface สำหรับ run ที่ยาว: trace, cost, latency, error, artifact, และ key decision ต้องย้อนกลับเข้า loop ได้
+- [[session-mining]] — steering loop ที่ใช้ประวัติ session เพื่อเพิ่ม rule/eval/hook อย่างมีที่มา
 
 ## ปัญหาที่ยังเปิดอยู่ (จากบทความ)
 
@@ -131,3 +135,5 @@ Böckeler มองว่า harness ทำตัวเหมือน **cyberne
 - [[what-weve-learned-building-cloud-agents]]
 - [[instruction-budget]]
 - [[agentic-code-review]]
+- [[agent-observability]]
+- [[session-mining]]
