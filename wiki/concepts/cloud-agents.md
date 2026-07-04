@@ -3,8 +3,8 @@ title: Cloud Agents
 type: concept
 tags: [ai, agents, cloud-agents, infrastructure, harness, durable-execution, orchestration]
 created: 2026-06-05
-updated: 2026-06-05
-sources: [What we’ve learned building cloud agents.md]
+updated: 2026-07-05
+sources: [What we’ve learned building cloud agents.md, piyalitt-codex-keynote-attention-not-token.md]
 ---
 
 # Cloud Agents / Agent ที่รันบนคลาวด์
@@ -42,6 +42,16 @@ harness ต้องตัดสินตลอดว่าอะไรควร
 ## ทิศทางถัดไป: self-healing
 
 เป้าหมายคือก้าวพ้นทางเลือก binary ระหว่าง "จูงมือ" กับ "หลบให้ทำเอง" — ให้ agent มี tool เข้าใจระบบรอบตัวมัน รายงานเองเมื่อ secret หาย/network บล็อก แล้วแก้เอง. ดู [[self-healing-environments]].
+
+## มุม Codex Cloud (keynote 2026-07)
+
+[[piyalitt-codex-keynote-attention-not-token]] สรุปภาพจากทีม [[openai-codex|Codex]] ที่สอดคล้องกับแนวคิด cloud agent แต่เน้น **ไม่มีเส้นแบ่ง local/cloud**:
+
+- การเปิดตัวใหญ่ครั้งแรกของ Codex คือ **Codex Cloud** — กำลังมีอัปเกรดสำคัญตามมา
+- ภาพอนาคต: agent เดียวคุยได้ทุกที่ มันคิดเองว่างานนี้ต้องใช้สภาพแวดล้อมแบบไหน แล้วหยิบทรัพยากรที่มี
+- ยกมือในห้อง: ใครเคยเปิดโน้ตบุ๊กทิ้งไว้เต็มออฟฟิศให้ agent รันต่อ — สิ่งที่ทุกคนต้องการคือปิดเครื่องตัวเองแล้วให้งานหลายชิ้นรันขนานแยกขาดกัน
+
+**ข้อเปิด:** ทำนายของ Theo (อ้างบนเวทีว่า unified local/cloud จะมาเร็วกว่า 6 เดือน) ยังไม่ได้ระบุแหล่งต้นฉบับในโพสต์ — เก็บเป็น open question
 
 ## เทียบกับ pattern อื่นในวิกิ
 

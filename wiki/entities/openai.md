@@ -3,8 +3,8 @@ title: OpenAI
 type: entity
 tags: [ai, labs, models, organizations]
 created: 2026-04-24
-updated: 2026-07-03
-sources: [piyalitt-gpt-5-5-launch.md, microsoft-openai-partnership-2026.md, ryan-lopopolo-harness-engineering.md, https://openai.com/index/introducing-genebench-pro/, how-perplexity-lost-ai-war.md, how-ai-became-more-expensive-than-workers-it-replaced.md]
+updated: 2026-07-05
+sources: [piyalitt-gpt-5-5-launch.md, microsoft-openai-partnership-2026.md, ryan-lopopolo-harness-engineering.md, https://openai.com/index/introducing-genebench-pro/, how-perplexity-lost-ai-war.md, how-ai-became-more-expensive-than-workers-it-replaced.md, piyalitt-codex-keynote-attention-not-token.md]
 ---
 
 # OpenAI / โอเพนเอไอ
@@ -35,6 +35,7 @@ AI lab ในสหรัฐฯ — สร้าง ChatGPT, ตระกูล 
 | โมเดล | ตำแหน่ง | หมายเหตุ |
 |---|---|---|
 | **[[gpt-5-5]]** | Flagship (เปิดตัว 2026-04-23) | Agentic coding + knowledge work SOTA; 2× ราคา GPT-5.4 |
+| **[[gpt-5-6-sol\|GPT-5.6]]** (ตระกูล) | Preview ก่อนงาน World's Fair 2026 | Terra/Luna/value tier + frontier บน Cerebras — ดู [[value-maxing]] |
 | GPT-5.5 Pro | Flagship Pro | API $30/$180 per 1M tokens; สำหรับงานที่ต้องการคุณภาพสูงสุด |
 | GPT-5.4 | รุ่นก่อน | ยังเป็น baseline สำหรับเปรียบเทียบหลายตัว |
 
@@ -61,6 +62,10 @@ AI lab ในสหรัฐฯ — สร้าง ChatGPT, ตระกูล 
 
 - **SWE-Bench Pro memorization signal** — Anthropic ฟ้องไว้ใน model card ของ GPT-5.5 ว่ามี sign ของการจำ; [[piyalitt-ittichaiwong|Piyalitt]] ตีความว่าเป็นความพลาด ไม่ใช่การ benchmaxx ตั้งใจ — เป็นอีกเคสที่ทำให้ SWE-Bench Pro โดยเดี่ยวๆ เป็น axis ที่ควรระวัง (ดู [[kimi-k2-6]] ด้วย — benchmark table ถูก curate)
 - **[[genebench-pro|GeneBench-Pro]]** — benchmark วิจัย computational biology ที่ OpenAI เปิดตัว 2026-06-30 เพื่อวัด [[research-taste|research taste]]: ambiguity handling, QC, causal/statistical choices, และ decision-readiness. ผลในบทความ: [[gpt-5-6-sol|GPT-5.6 Sol]] ได้ 28.7% ที่ highest reasoning และ 31.5% ใน Pro mode แต่ยังต่ำกว่าหนึ่งในสาม จึงเป็นหลักฐานว่า scientific judgement ยังไม่อิ่มตัว
+
+## จังหวะปล่อย model (keynote Codex, 2026-07)
+
+จาก [[piyalitt-codex-keynote-attention-not-token]]: OpenAI ปล่อย model ใหม่จากเคยทุก ~15 เดือน ตอนนี้เหลือ ~ทุก 6 สัปดาห์ — สัปดาห์ก่อน [[ai-engineer-worlds-fair|AI Engineer World's Fair]] เพิ่ง preview ตระกูล GPT-5.6. ตัวเลขยัง source-attributed ผ่านโพสต์ Piyalitt
 
 ## Community presence
 

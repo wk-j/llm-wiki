@@ -3,8 +3,8 @@ title: Codex (OpenAI)
 type: entity
 tags: [ai, tools, cli, coding, harness]
 created: 2026-04-18
-updated: 2026-06-28
-sources: [alex-ker-harnesses-optimize.md, Piyalitt Ittichaiwong - GPT-5.5 Launch.md, "รู้จักกับ Loop Engineering — mikelopster transcript"]
+updated: 2026-07-05
+sources: [alex-ker-harnesses-optimize.md, Piyalitt Ittichaiwong - GPT-5.5 Launch.md, "รู้จักกับ Loop Engineering — mikelopster transcript", piyalitt-codex-keynote-attention-not-token.md]
 ---
 
 # Codex (OpenAI)
@@ -40,6 +40,22 @@ Coding harness จาก [[openai|OpenAI]] — เป็นหนึ่งใน
 
 มุมนี้ทำให้ Codex อยู่ในกลุ่มเดียวกับ [[claude-code|Claude Code]] ในฐานะ coding harness ที่เริ่มรองรับ workflow แบบ [[loop-engineering|loop engineering]]. แต่ข้อจำกัดเหมือนกัน: ถ้า feedback gate ไม่ชัด หรือ output ยังต้องให้คนตัดสินทุกครั้ง ก็จะกลายเป็น [[orchestration-tax|orchestration tax]] มากกว่าการเพิ่ม throughput.
 
+## Keynote AI Engineer World's Fair (สรุป Piyalitt, 2026-07)
+
+จาก [[piyalitt-codex-keynote-attention-not-token]] — [[romain-huet|Romain Huet]] และ [[alexander-embiricos|Alexander Embiricos]] นำ keynote ก่อนส่งไม้ต่อ [[peter-steinberger|Peter Steinberger]]:
+
+**ผลิตภัณฑ์ปี 2026:** Codex app, Goal Mode, Remote — ทีมใช้ Codex สร้าง Codex เอง. agent ทำได้แทบทุกอย่างบนคอมพิวเตอร์ ไม่ได้ช่วยแค่ตอนเขียน code แต่ช่วยก่อน (ทำไมงานนี้ต้องเกิด) และหลัง (review, deploy).
+
+**Codex app:** chat เรียบง่ายที่ใช้ได้ทั้ง coding และงานอื่น — เริ่มจากคุยแล้วค่อยลงลึก ตรงข้าม IDE ที่บังคับเริ่มจาก code. เคยโดนค้านหนักตอน pitch (ไม่มีวันออกจาก terminal) วันนี้คนกลุ่มเดียวกันกลายเป็นผู้ใช้.
+
+**Stack เปิดทุกชั้น:** harness open source, `AGENTS.md` เป็นชื่อกลาง, model OpenAI เป็นค่าเริ่มต้นไม่ล็อก, harness ใช้ใน post-training. App Server ขยายได้ถึง iOS, browser ในตัว, plugin (browser use, computer use, data science, design). subscription ใช้ได้ใน OpenCode, Pi, Droid, OpenClaw, Xcode, JetBrains.
+
+**Codex Cloud:** การเปิดตัวใหญ่ครั้งแรก — ภาพอนาคตไม่มีเส้นแบ่ง local/cloud; agent เดียวเลือกสภาพแวดล้อมเอง.
+
+**[[value-maxing|Value maxing]]:** ฉลาด+ถูก+เร็วพร้อมกัน (Terra, Luna, Cerebras 750 t/s — ตัวเลขยัง source-attributed).
+
+**บทเรียน Peter:** manager agent + worker, [[inner-loop-outer-loop|inner/outer loop]], [[attention-bottleneck|attention]] เป็นคอขวดที่ซื้อเพิ่มไม่ได้.
+
 ## ดูเพิ่ม
 
 - [[claude-code]]
@@ -52,3 +68,7 @@ Coding harness จาก [[openai|OpenAI]] — เป็นหนึ่งใน
 - [[model-context-protocol]]
 - [[loop-engineering]]
 - [[mikelopster-loop-engineering]]
+- [[piyalitt-codex-keynote-attention-not-token]]
+- [[peter-steinberger]]
+- [[value-maxing]]
+- [[ai-engineer-worlds-fair]]

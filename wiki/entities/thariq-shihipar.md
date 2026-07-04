@@ -3,7 +3,7 @@ title: Thariq Shihipar
 type: entity
 tags: [ai, claude-code, anthropic, engineering, html]
 created: 2026-05-25
-updated: 2026-07-04
+updated: 2026-07-05
 sources: [thariq-html-effectiveness.md, "Using Claude Code Session Management & 1M Context.md", a-field-guide-to-fable-finding-your-unknowns.md]
 ---
 
@@ -21,7 +21,7 @@ Thariq เสนอว่าเมื่อ agent ทำงานซับซ้
 
 แนวคิดของเขาไม่ได้หยุดที่เอกสารสวยขึ้น แต่ไปถึง [[custom-editing-interfaces|Custom Editing Interfaces]]: ให้ Claude Code สร้าง HTML editor เฉพาะกิจที่มนุษย์ปรับค่า ลากวาง เลือก option หรือ annotate แล้ว export ผลกลับไปเป็น prompt, JSON, Markdown หรือ diff
 
-ใน field guide ปี 2026-07 เขาขยับขึ้นอีกชั้น: พอ model แรงถึงระดับ Fable 5 คอขวดของคุณภาพงานคือความสามารถของ *ผู้ใช้* ในการเคลียร์ unknowns ของตัวเอง — HTML artifacts, brainstorm, interview, reference, implementation notes และ quiz คือชุดเครื่องมือสำหรับหา unknowns ก่อน/ระหว่าง/หลังลงมือ
+ใน field guide ปี 2026-07 เขาขยับขึ้นอีกชั้น: พอ model แรงถึงระดับ Fable 5 คอขวดของคุณภาพงานคือความสามารถของ *ผู้ใช้* ในการเคลียร์ unknowns ของตัวเอง — HTML artifacts, brainstorm, interview, reference, implementation notes และ quiz คือชุดเครื่องมือสำหรับหา unknowns ก่อน/ระหว่าง/หลังลงมือ. [[piyalitt-codex-keynote-attention-not-token|Piyalitt]] สรุป frame นี้เป็นภาษาไทยก่อนเข้า keynote Codex (2026-07) และเชื่อมกับ [[attention-bottleneck]] ว่าทักษะที่คุ้มลงทุนคือรู้จักสิ่งที่ยังไม่รู้
 
 ## ความเกี่ยวข้องใน wiki
 
@@ -37,3 +37,4 @@ Thariq เสนอว่าเมื่อ agent ทำงานซับซ้
 - [[custom-editing-interfaces]]
 - [[map-vs-territory]]
 - [[unknowns-matrix]]
+- [[piyalitt-codex-keynote-attention-not-token]]

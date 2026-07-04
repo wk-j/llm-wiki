@@ -1,5 +1,18 @@
 # Log
 
+## [2026-07-05] ingest | Piyalitt Ittichaiwong — Codex Keynote / Attention Not Token
+
+Ingested Piyalitt Ittichaiwong's Thai Facebook post summarizing the OpenAI Codex keynote at AI Engineer World's Fair (Romain Huet, Alexander Embiricos, Peter Steinberger). Opens with a short recap of Thariq Shihipar's map-vs-territory / unknowns frame (cross-links existing Fable ingest). Preserved source-attributed numeric claims (GPT-5.6 Terra/Luna, Cerebras 750 t/s, Terminal Bench, model release cadence) until checked against OpenAI directly.
+
+- Created source page: `[[piyalitt-codex-keynote-attention-not-token]]`
+- Created entity pages: `[[peter-steinberger]]`, `[[romain-huet]]`, `[[alexander-embiricos]]`, `[[ai-engineer-worlds-fair]]`
+- Created concept pages: `[[value-maxing]]`, `[[attention-bottleneck]]`, `[[inner-loop-outer-loop]]`
+- Updated entity pages: `[[piyalitt-ittichaiwong]]`, `[[openai-codex]]`, `[[openai]]`, `[[gpt-5-6-sol]]`
+- Updated concept pages: `[[loop-engineering]]`, `[[orchestration-tax]]`, `[[unknowns-matrix]]`, `[[cloud-agents]]`
+- Updated `[[index]]`, `[[log]]`, and `hotcache.md`
+
+Key takeaways: (1) As models improve, the bottleneck shifts from AI capability to human ability to clarify unknowns and spend attention wisely. (2) OpenAI/Codex frames engineering as returning to its roots — problem-solving and system design — not typing code. (3) Codex stack is open at every layer (harness, AGENTS.md, App Server, plugins) using the same pieces shipped to developers. (4) Value maxing (smart + cheap + fast together) replaces token maxing as the executive conversation. (5) Peter Steinberger's workflow evolved from 10-terminal polling to a single manager agent with inner/outer loop separation; attention is the non-scalable bottleneck after token and compute. (6) Open question preserved: no one has solved an agent that designs the full loop for you from a goal alone.
+
 ## [2026-07-04] ingest | Jan-Niklas Wortmann — Code Isn't Free / Mario Zechner
 
 Ingested the user-provided YouTube transcript of Jan-Niklas Wortmann interviewing Mario Zechner about pi, AI coding workflows, local inference, spec-driven development, clanker load, security, and token budgets. Preserved existing `[[code-is-free]]` claims as an implementation-cost thesis, while adding Mario's counterclaim that ownership and consequences of code are not free.

@@ -1,6 +1,7 @@
 # Index
 
 ## Sources
+- [[piyalitt-codex-keynote-attention-not-token]] — Piyalitt Ittichaiwong (Facebook, 2026-07-05): สรุป keynote Codex ที่ AI Engineer World's Fair (Romain Huet, Alexander Embiricos, Peter Steinberger); เปิดด้วย Thariq/unknowns แล้วลงลึก engineering ไม่ตาย, Codex app/stack เปิด, value maxing, Codex Cloud, attention เป็นคอขวดใหม่แทน token, inner/outer loop ของ manager agent
 - [[code-isnt-free-mario-zechner-hard-truths-coding-ai]] — Jan-Niklas Wortmann สัมภาษณ์ Mario Zechner เรื่อง pi และ hard truths ของ AI coding: code generation ถูกลง แต่ ownership ไม่ฟรี; spec-driven dev เสี่ยงเป็น hyper-waterfall; async/parallel agent ดีเฉพาะเมื่อไม่ทำลาย thinking time; local AI เริ่มพอใช้กับงานขอบเขตชัด; open source ต้องมี intake protocol กัน clanker PR flood
 - [[stop-building-ai-agents-old-way]] — Prompt Engineering (YouTube transcript): สูตรสำหรับ long-running agent ที่รันได้นานโดยไม่หลุดทาง; 7 component คือ goal เป็น contract, evaluator แยกจาก executor, verifier เป็น proof, outer loop กัน early stop, role orchestration คุม cost/quality, observability/dashboard/trace และ session mining ที่เปลี่ยน failure เก่าเป็น rule; มี sponsor claim ของ Latitude ที่ยังควรตรวจจาก repo/docs ตรง
 - [[field-guide-to-fable-finding-unknowns]] — Thariq Shihipar / @trq212 (บทความบน X, ingest 2026-07-04): มองการทำงานกับ Claude Fable 5 ผ่านเลนส์ map vs territory — คุณภาพงานติดอยู่ที่ตัวเราว่าเคลียร์ unknowns ได้แค่ไหน; มี 4-quadrant ของ unknowns กับเทคนิคก่อน/ระหว่าง/หลังลงมือ (blind spot pass, brainstorm/prototype, interview, references, implementation plan/notes, pitch, quiz); วิดีโอเปิดตัว Fable ตัดต่อด้วย Claude Code ทั้งหมด
@@ -172,7 +173,7 @@
 - [[fable]] — Claude Fable 5 model ของ Anthropic ในตระกูล Claude (ยืนยันจาก field guide ของ trq212); ก่อนหน้านี้โผล่ใน audit Elysia 2 ของ Aom ผ่าน ultracode auto mode ที่ spawn agent ราว 100 ตัว; Thariq เคลมว่าเป็น model แรกที่คุณภาพงานไปติดคอขวดตรงที่ผู้ใช้ต้องเคลียร์ unknowns เอง; spec/tier/ราคายังไม่ชัด
 - [[elysia-2]] — codebase/โปรเจกต์ในโพสต์ audit ของ Aom; เป็นเคส release readiness จริงที่ smoke/plugin check กับ AI reviewer หลายตัวบอกว่าพร้อม RC/stable แต่ Fable กลับรายงาน blocker ที่ลึกกว่านั้น
 - [[genebench-pro]] — benchmark ระดับงานวิจัยของ OpenAI สำหรับ agent สาย computational biology; โจทย์สังเคราะห์ 129 ข้อใน 10 โดเมน วัด research taste, การรับมือความกำกวม, QC, การเลือกวิธี causal/statistical และความพร้อมใช้ตัดสินใจ ไม่ใช่ความรู้ตามตำรา
-- [[gpt-5-6-sol]] — GPT-5.6 ของ OpenAI ตัวที่รายงานว่าแรงสุดบน GeneBench-Pro; pass rate 28.7% ที่ reasoning สูงสุด และ 31.5% ใน Pro mode; ตัวเลขมาจาก source GeneBench-Pro อย่างเดียว
+- [[gpt-5-6-sol]] — ตระกูล GPT-5.6 ของ OpenAI; GeneBench-Pro + keynote claims (Terra, Luna, Cerebras 750 t/s) — ตัวเลข keynote ยัง source-attributed
 - [[hugging-face]] — แพลตฟอร์ม model/dataset ด้าน AI; เป็นที่วางแพ็กเกจโจทย์ตัวอย่าง GeneBench-Pro 10 ข้อที่ OpenAI เปิด public
 - [[artificial-analysis]] — องค์กร/แพลตฟอร์ม benchmark AI; OpenAI วางแผนส่งชุดย่อย GeneBench-Pro 50 ข้อให้เอาไป benchmark อิสระแบบบุคคลที่สาม
 - [[techsauce]] — สื่อเทค/ธุรกิจไทยสาย ecosystem; สรุปเฟรม AI Brain Fry เรื่องความล้าจากการใช้ AI ในที่ทำงานให้คนอ่านไทย
@@ -291,7 +292,7 @@
 - [[nattee-niparnan]] — อาจารย์ CEDT จุฬาฯ; ดูแล cafe-grader; เขียนซีรีส์ "วิศวฯคอมจะอยู่อย่างไรในยุค LLM ครองเมือง"; เจ้าของ framing "taste paradox"
 - [[alex-ker]] — engineer (@thealexker, GitHub AlexKer); เขียน "Harnesses are everything"; contributor ของ Roo Code / DeepAgent CLI / HumanLayer; เคยทำ gpt-oss-swarm ที่ Baseten
 - [[humanlayer]] — บริษัท harness แบบ open-source; ที่มาของ framing "dumb zone" เรื่อง instruction budget กับ prompt framework แบบ R.P.I.
-- [[openai-codex]] — coding harness ของ OpenAI; เรื่อง skills progressive disclosure เดินทางเดียวกับ Claude Code แต่จัดการ MCP คนละแบบ
+- [[openai-codex]] — coding harness ของ OpenAI; Codex app/Goal Mode/Remote/Codex Cloud; stack เปิดทุกชั้น (harness, AGENTS.md, App Server, plugins); เรื่อง skills progressive disclosure เดินทางเดียวกับ Claude Code แต่จัดการ MCP คนละแบบ
 - [[opencode]] — coding harness แบบ open-source; โหลด tool definitions ของ MCP ทั้งหมดตั้งแต่เปิดโปรแกรม; docs เตือนเองว่าอย่าใช้ server เยอะ
 - [[tauri]] — framework ทำ desktop app ด้วย Rust ใช้ webview ของ OS; bundle เล็ก security แน่น; แต่ลำบากถ้า logic หนักๆ ของ app อยู่ใน runtime ที่ไม่ใช่ Rust
 - [[ubs]] — investment bank และบริษัท wealth management รายใหญ่ของสวิส
@@ -317,7 +318,11 @@
 - [[gpui]] — UI framework ของ Zed เขียนด้วย Rust ใช้ GPU เร่ง; ส่งข้อมูลเข้า shader ตรงๆ ได้ latency ต่ำกว่า millisecond
 - [[gemini-enterprise-agent-platform]] — platform managed agents ของ Google Cloud: Agent Runtime (เก็บ state 7 วัน), ADK, Mission Control, Memory Bank/Profiles, Agent Identity/Registry/Gateway, Observability, BYOC
 - [[hardik-pandya]] — ผู้สร้าง skill Stop Slop
-- [[piyalitt-ittichaiwong]] — นักวิจัย PhD ชาวไทย เขียนโปรแกรมมา 20 ปี; ได้ทดลอง frontier models ก่อนใคร (GPT-5.5); ผลักดัน OpenAI Codex Community Thailand; co-organizer งาน OpenAI × Thai AI Society Hackathon
+- [[piyalitt-ittichaiwong]] — นักวิจัย PhD ชาวไทย เขียนโปรแกรมมา 20 ปี; ได้ทดลอง frontier models ก่อนใคร (GPT-5.5); ผลักดัน OpenAI Codex Community Thailand; สรุป keynote Codex/attention bottleneck และ benchmark recap เป็นภาษาไทยบน Facebook
+- [[peter-steinberger]] — the Clawfather ผู้สร้าง OpenClaw ที่ร่วมงาน OpenAI; ยก manager-agent loop, inner/outer loop และ thesis ว่า attention (ไม่ใช่ token) เป็นคอขวดใหม่
+- [[romain-huet]] — หัวหน้า Developer Experience ของ OpenAI; co-present Codex keynote เรื่องจังหวะปล่อย model และวิวัฒน์ coding experience (DevDay 2024→2025)
+- [[alexander-embiricos]] — หัวหน้าฝ่ายผลิตภัณฑ์ Codex; เล่าเบื้องหลัง Codex app ที่เคยโดนค้าน และมุม product เรื่อง value maxing
+- [[ai-engineer-worlds-fair]] — งานรวมตัว AI engineer กว่า 7,000 คน; เวที Codex keynote ที่ Piyalitt สรุป (2026-07)
 - [[openai]] — lab ด้าน AI; ผู้สร้าง ChatGPT, ตระกูล GPT และ Codex; ปี 2026 เป็นคู่แข่ง Anthropic กับ Moonshot AI บนสนาม frontier model
 - [[gpt-5-5]] — model เรือธงของ OpenAI (2026-04-23): SOTA ด้าน agentic coding (Terminal-Bench 2.0 82.7%, CyberGym 81.8%); ctx 400K/1M; $5/$30 ต่อ 1M tokens; ความสามารถเฉียด Mythos Preview แต่เปิดให้ใช้วงกว้าง; แพงกว่า GPT-5.4 เท่าตัว และแพงกว่า Opus 4.7 นิดหน่อย (pricing inversion)
 - [[aaron-levie]] — co-founder/CEO ของ Box; คอมเมนต์เรื่อง enterprise AI บน X; มองจากมุมบริษัทที่เอา AI ไปใช้งาน ไม่ใช่ฝั่งคนสร้าง model
@@ -428,13 +433,16 @@
 - [[intent-gap]] — Lahiri (Microsoft Research): โค้ดจาก AI "plausible by construction but not correct by construction"; ระยะห่างระหว่าง intent ของผู้ใช้กับสิ่งที่โปรแกรมทำจริง; spec ภาษาคนปิดช่องนี้ไม่ได้เพราะเช็คอัตโนมัติไม่ได้
 - [[llm-nondeterminism]] — LLM ไม่ deterministic แม้ temperature 0 (floating-point ไม่ associative, batch scheduling, fused-attention kernel); model 100B+ ให้ output ซ้ำเดิมแค่ 12.5% ของรอบ เทียบกับ 7–8B ที่นิ่งสนิท (งาน RAG ของ IBM); คำสั่งแบบ prose คือการ sample และย้าย model = เปลี่ยน interpreter
 - [[property-based-testing]] — เขียน property แบบ universally quantified แล้วให้เครื่อง generate input สุ่มเอง (QuickCheck/Hypothesis); เคส Quviq: PBT 450 บรรทัดคุม Erlang 60k บรรทัด เจอ 25 บั๊กรวม race condition (1:133); เช็ค behavior ไม่ใช่ implementation — เข้าทางโค้ดที่ AI เขียนพอดี
-- [[loop-engineering]] — Addy Osmani + mikelopster: เอาตัวเองออกจากบท prompter; ออกแบบระบบที่หางานเอง แจกงาน ตรวจงาน จดจำ และตัดสินใจว่าทำอะไรต่อ; ห้าชิ้นส่วน + memory; เส้นแบ่งใช้จริง = feedback gate/scorer ต้องชัด ไม่งั้น loop เผา token แล้วโยนงานกลับมาให้คน review อยู่ดี
+- [[loop-engineering]] — Addy Osmani + mikelopster + Peter Steinberger: เอาตัวเองออกจากบท prompter; ออกแบบระบบที่หางานเอง แจกงาน ตรวจงาน จดจำ และตัดสินใจว่าทำอะไรต่อ; manager/worker loop; ห้าชิ้นส่วน + memory; feedback gate/scorer ต้องชัด
+- [[inner-loop-outer-loop]] — agent วิ่ง inner execution loop (สืบ แก้ test รีวิว); มนุษย์ตัดสินใน outer loop (เป้าหมาย อนุมัติ PR); ตัวอย่างจาก Peter Steinberger บนเวที Codex
 - [[git-worktrees]] — working directory แยกบน branch ของตัวเอง แต่แชร์ history repo เดียวกัน; ให้ agent หลายตัวทำงานขนานโดยไม่เหยียบไฟล์กัน; ตัดการชนเชิงกลไกออกได้ แต่เพดาน review ของคนยังอยู่; Treehouse ของ Kun Chen เพิ่มความสะดวกเรื่อง reuse/status/cleanup ของ worktree
-- [[cloud-agents]] — coding agent ที่รันบน cloud VM (มี env/deps/network ของตัวเอง) ขนานกันได้ ทิ้งไว้เป็นชั่วโมง/วันได้; การสร้างมัน = สร้างชั้น operating รอบตัว agent (environment + durability + conversation state ที่แยกออกมา + autonomy) ไม่ใช่แค่ยก agent local ขึ้น server
+- [[cloud-agents]] — coding agent ที่รันบน cloud VM ขนานกันได้ ทิ้งไว้เป็นชั่วโมง/วันได้; Cursor เน้น operating layer; Codex keynote เพิ่มภาพ unified local/cloud โดยไม่มีเส้นแบ่งบังคับ
+- [[value-maxing]] — แนวคิด Codex: รีดคุณค่า (ฉลาด+ถูก+เร็วพร้อมกัน) ไม่ใช่ token maxing; Terra/Luna/Cerebras เป็นตัวอย่างบนเวที
+- [[attention-bottleneck]] — Peter Steinberger: พอแก้ token/compute แล้ว คอขวดหลักกลายเป็น attention ที่ซื้อเพิ่มไม่ได้; จ้อง agent ที่ไม่จำเป็น = เผา attention เปล่า
 - [[durable-execution]] — รัน workflow ยาวๆ ให้รอด crash/outage โดยไม่เสีย state และไม่ต้องเขียน retry/scheduling เอง; เหตุผลที่ Cursor ย้าย agent loop ไป Temporal (work-stealing 1-nine → 2-nines); มอง agent loop เป็น server process ที่รันยาว
 - [[agent-development-environment]] — "environment คือตัว product": dev environment ที่ครบคือปัจจัยใหญ่สุดต่อคุณภาพงานของ cloud agent; ของที่ขาดจะโผล่เป็นคุณภาพตกเงียบๆ (แล้วคนไปโทษ model) ไม่ใช่ crash; สุดท้ายต้องมี "enterprise IT สำหรับ agent" (redact secret, network policy, จัดการ credential)
 - [[self-healing-environments]] — ก้าวถัดจากการต้องเลือกว่าจะประคองมือหรือปล่อยเลย: ให้เครื่องมือ agent ไว้เข้าใจระบบตัวเอง รายงาน secret ที่หาย / network ที่โดนบล็อก แล้วซ่อมเองได้ ("autoinstall" ของ Cursor)
-- [[orchestration-tax]] — Addy Osmani: ช่องว่างเชิงโครงสร้างระหว่างของที่ agent ผลิตได้ กับของที่คนหนึ่งคน review/merge ไหว; เราคือ GIL/คอขวด serial ของ fleet ตัวเอง (Amdahl); วิธีแก้คือออกแบบ attention ไม่ใช่เพิ่ม agent — สเกลตามอัตรา review, จัดลำดับงาน, review เป็น batch, ใช้ lock กับงาน judgement เท่านั้น, กันเวลา serial ไว้
+- [[orchestration-tax]] — Addy Osmani + Peter Steinberger: ช่องว่างระหว่างของที่ agent ผลิตได้ กับที่คน review/merge ไหว; attention เป็นทรัพยากรที่ซื้อเพิ่มไม่ได้; วิธีแก้ = outer loop + architect attention
 - [[cognitive-surrender]] — รับโค้ดจาก agent ทั้งที่ยังไม่ได้มีความเห็นของตัวเอง เพราะ attention หมดแล้ว; เป็นอาการนำของ orchestration tax ก่อนจะโผล่บน dashboard; สะสมเป็น cognitive debt
 - [[model-honesty]] — model ควรอ้างแค่เท่าที่หลักฐานรองรับ: ยอมรับความไม่แน่ใจ ไม่โม้ progress; จุดขายของ Opus 4.8 (ปล่อยบั๊กของตัวเองหลุดน้อยลง ~4 เท่า); เป็นยาแก้ weak-success-criteria / missed-requirement / reward-hacking
 - [[dynamic-workflows]] — research preview ของ Claude Code (มากับ Opus 4.8): Claude วางแผนงานใหญ่เอง ยิง subagent ขนานเป็นร้อยตัวใน session เดียว ตรวจงานตัวเอง แล้วรายงาน; ตัวอย่าง = migrate ทั้ง codebase จน merge ได้โดยใช้ test suite เดิม
