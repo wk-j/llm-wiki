@@ -3,8 +3,8 @@ title: Skill Atrophy
 type: concept
 tags: [psychology, ai, learning]
 created: 2026-05-05
-updated: 2026-06-11
-sources: [agentic-coding-trap.md, How to Keep Shipping When You Walk Away from Your Desk — Zack Proser, WorkOS.md]
+updated: 2026-07-04
+sources: [agentic-coding-trap.md, How to Keep Shipping When You Walk Away from Your Desk — Zack Proser, WorkOS.md, code-isnt-free-mario-zechner-hard-truths-coding-ai.md]
 ---
 
 # Skill Atrophy / ภาวะทักษะถดถอย
@@ -23,6 +23,14 @@ sources: [agentic-coding-trap.md, How to Keep Shipping When You Walk Away from Y
 
 **ได้อะไร:** ใช้ AI เร่งการเรียนโดยไม่ยกการสร้าง judgement ให้ AI ไปด้วย.
 
+## Friction ที่สอน กับ friction ที่ขวาง
+
+[[mario-zechner|Mario Zechner]] แยกเรื่องนี้ชัดใน [[code-isnt-free-mario-zechner-hard-truths-coding-ai|Code Isn't Free]]. เขาเชื่อว่าการเรียนโปรแกรมต้องมี pain และ friction เพราะมันสร้าง mental model. แต่ friction ทุกชนิดไม่ได้มีค่าเท่ากัน. ตอนเขาเรียน electronics เขาให้ agent เขียน code MCU ส่วนที่เขารู้พื้นฐานดีอยู่แล้ว เพื่อเอาแรงไปเรียนวงจรจริง.
+
+ดังนั้นคำถามที่ดีกว่า "ใช้ AI ตอนเรียนได้ไหม" คือ **friction ตรงนี้กำลังสอน skill ที่เราต้องการอยู่หรือเปล่า**. ถ้าใช่ ควรทำเอง. ถ้าไม่ใช่ และเป็นแค่งานประกอบที่ขวางการเรียนเรื่องหลัก agent อาจช่วยได้.
+
+**ผลคือ:** ป้องกัน skill atrophy ด้วยการเลือก friction ไม่ใช่ด้วยการห้าม AI แบบกว้าง ๆ.
+
 ## See also
 
 - [[cognitive-debt]]
@@ -30,3 +38,4 @@ sources: [agentic-coding-trap.md, How to Keep Shipping When You Walk Away from Y
 - [[agentic-engineering]]
 - [[developer-balance]]
 - [[how-to-keep-shipping-away-from-desk]]
+- [[code-isnt-free-mario-zechner-hard-truths-coding-ai]]

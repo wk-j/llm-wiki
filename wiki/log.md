@@ -1,5 +1,17 @@
 # Log
 
+## [2026-07-04] ingest | Jan-Niklas Wortmann — Code Isn't Free / Mario Zechner
+
+Ingested the user-provided YouTube transcript of Jan-Niklas Wortmann interviewing Mario Zechner about pi, AI coding workflows, local inference, spec-driven development, clanker load, security, and token budgets. Preserved existing `[[code-is-free]]` claims as an implementation-cost thesis, while adding Mario's counterclaim that ownership and consequences of code are not free.
+
+- Created source page: `[[code-isnt-free-mario-zechner-hard-truths-coding-ai]]`
+- Created entity pages: `[[jan-niklas-wortmann]]`, `[[earendil]]`, and `[[armin-ronacher]]`
+- Updated entity pages: `[[mario-zechner]]`, `[[pi-agent]]`, `[[claude-code]]`, and `[[github]]`
+- Updated concept pages: `[[code-is-free]]`, `[[orchestration-tax]]`, `[[spec-driven-development]]`, `[[clanker-slop]]`, `[[developer-balance]]`, `[[open-weight-models]]`, and `[[skill-atrophy]]`
+- Updated `[[index]]`, `[[log]]`, and `hotcache.md`
+
+Key takeaways: (1) Code generation is cheaper, but code is not free because consequences arrive later as review, maintenance, comprehension, security, and ownership costs. (2) Mario's pi workflow uses agents for analysis, options, examples, implementation, and feedback loops, but keeps human judgement at boundary/interface/test decisions. (3) Spec-driven development can become "hyper-waterfall" when prose specs replace architecture thinking and verification, though the wiki keeps the existing caveat that specs still matter where humans outside the team read the artifact. (4) Local AI is already viable for scoped tasks where latency/privacy/cost matter more than frontier-level reasoning. (5) Open source needs an intake protocol for clanker load: short human-written issues, whitelist/vouching, auto-close defaults, and explicit triage markers.
+
 ## [2026-07-04] ingest | Prompt Engineering — Stop Building AI Agents the Old Way
 
 Ingested the user-provided YouTube transcript from Prompt Engineering about designing long-running agents as a controlled system rather than a single autonomous executor. Treated the Latitude section as sponsor/product claims until checked against Latitude repo/docs directly.

@@ -3,8 +3,8 @@ title: Clanker Slop
 type: concept
 tags: [ai, spam, open-source, critique]
 created: 2026-04-28
-updated: 2026-05-03
-sources: [mario-zechner-pi-agent.md, building-pi-world-of-slop.md]
+updated: 2026-07-04
+sources: [mario-zechner-pi-agent.md, building-pi-world-of-slop.md, code-isnt-free-mario-zechner-hard-truths-coding-ai.md]
 ---
 
 # Clanker Slop / ขยะจากหุ่นยนต์
@@ -27,8 +27,19 @@ sources: [mario-zechner-pi-agent.md, building-pi-world-of-slop.md]
 - **Human Voice Gate**: ขอให้ผู้ส่งเขียน issue สั้นๆ ด้วยเสียงของตัวเองก่อน ถ้าดูเป็นมนุษย์จริงจึงค่อย vouch รอบถัดไป
 - **OSS Vacation**: ปิด tracker ชั่วคราวเมื่อภาระเกินรับไหว เป็น social protocol เพื่อรักษา attention ของ maintainer ไม่ใช่แค่ technical filter
 
+## Pi intake protocol
+
+ใน [[code-isnt-free-mario-zechner-hard-truths-coding-ai|Code Isn't Free]], [[mario-zechner|Mario]] ให้ตัวเลขจาก [[pi-agent|pi]]: จากยุคก่อน agent ที่โปรเจกต์ open source ใหญ่อาจได้ PR หนึ่งถึงสองอันต่อสัปดาห์ ตอนนี้เขาเจอ PR จาก clanker วันละ 50-60 อัน. หลาย PR มีคำอธิบายยาวมากและแก้ไฟล์ตั้งแต่ 10 ถึง 1,000 ไฟล์.
+
+วิธีที่เขาใช้คือปิด PR โดยปริยาย แล้วให้คนเขียน issue สั้น ๆ ด้วยเสียงของตัวเองก่อน: ต้องบอกว่าจะทำอะไร ทำไปทำไม และเข้าใจ solution อย่างไร. ถ้าผ่าน เขาจะตอบว่า looks good และ workflow จะ whitelist account นั้นให้ส่ง PR ได้โดยไม่โดนปิดอัตโนมัติ.
+
+เขายัง auto-close issue เพื่อคุม noise แล้วกลับมาอ่านจาก marker `last read` เปิดเฉพาะ issue ที่มีค่า. จาก 50 issue ล่าสุดที่เล่า มีแค่ 2 issue ที่รอดกลับมาเปิด.
+
+**ผลคือ:** defense ที่ได้ผลไม่ใช่จับว่า text เขียนโดย AI หรือไม่ แต่คือพิสูจน์ว่ามีมนุษย์เข้าใจปัญหาอยู่หลัง diff.
+
 ## ดูเพิ่ม
 
 - [[vibecoded-slop]] — แนวคิดเดียวกันในฝั่งซอฟต์แวร์
 - [[vouch-oss]]
 - [[alignment-bottleneck]]
+- [[code-isnt-free-mario-zechner-hard-truths-coding-ai]]

@@ -1,6 +1,7 @@
 # Index
 
 ## Sources
+- [[code-isnt-free-mario-zechner-hard-truths-coding-ai]] — Jan-Niklas Wortmann สัมภาษณ์ Mario Zechner เรื่อง pi และ hard truths ของ AI coding: code generation ถูกลง แต่ ownership ไม่ฟรี; spec-driven dev เสี่ยงเป็น hyper-waterfall; async/parallel agent ดีเฉพาะเมื่อไม่ทำลาย thinking time; local AI เริ่มพอใช้กับงานขอบเขตชัด; open source ต้องมี intake protocol กัน clanker PR flood
 - [[stop-building-ai-agents-old-way]] — Prompt Engineering (YouTube transcript): สูตรสำหรับ long-running agent ที่รันได้นานโดยไม่หลุดทาง; 7 component คือ goal เป็น contract, evaluator แยกจาก executor, verifier เป็น proof, outer loop กัน early stop, role orchestration คุม cost/quality, observability/dashboard/trace และ session mining ที่เปลี่ยน failure เก่าเป็น rule; มี sponsor claim ของ Latitude ที่ยังควรตรวจจาก repo/docs ตรง
 - [[field-guide-to-fable-finding-unknowns]] — Thariq Shihipar / @trq212 (บทความบน X, ingest 2026-07-04): มองการทำงานกับ Claude Fable 5 ผ่านเลนส์ map vs territory — คุณภาพงานติดอยู่ที่ตัวเราว่าเคลียร์ unknowns ได้แค่ไหน; มี 4-quadrant ของ unknowns กับเทคนิคก่อน/ระหว่าง/หลังลงมือ (blind spot pass, brainstorm/prototype, interview, references, implementation plan/notes, pitch, quiz); วิดีโอเปิดตัว Fable ตัดต่อด้วย Claude Code ทั้งหมด
 - [[how-ai-became-more-expensive-than-workers-it-replaced]] — Economy Media (YouTube, 2026-07-02): ชี้ว่า AI ในองค์กรอาจแพงกว่าแรงงานที่มันมาแทน — พอ token-based pricing บวก tokenmaxxing บวก data center ขาดแคลน แล้ว agent ถูกใช้กันทั้งบริษัท ต้นทุนก็บาน; ตัวเลขของ Microsoft/Meta/Anthropic/OpenAI/Bloomberg/Reuters/Gartner ยังอิงตามแหล่ง ยังไม่ได้ตรวจ
@@ -117,6 +118,9 @@
 - [[thclaws-marketplace-panutat]] — Panutat Tejasen (2026-04-30): thClaws v0.7.0 Marketplace; Enterprise Security; Private Marketplace; แนวคิด Host Bridge; Rabbit Holes ในการ coding
 
 ## Entities
+- [[jan-niklas-wortmann]] — interviewer / creator ด้าน AI coding; สัมภาษณ์ Mario Zechner ใน source "Code Isn't Free" แล้วดึง tension เรื่อง agent productivity, SDD, local AI, token budget และ clanker load
+- [[earendil]] — บริษัท/ทีมที่ Mario Zechner เข้าร่วมเพื่อทำ pi ต่อ; source นี้วางเป็นบริบทของเป้าหมาย pi ระยะยาว ทั้ง application layer, local inference, durability, observability และ SDK หลาย environment
+- [[armin-ronacher]] — developer open source ที่ทำงานกับ Mario ที่ Earendil และเริ่มช่วยถือ pi; รายละเอียดบทบาทยังอิงจากบทสัมภาษณ์นี้
 - [[boris-cherny]] — engineer ที่ Anthropic ผู้สร้าง Claude Code; ถูกอ้างใน loop-engineering ("my job is to write loops") และ Thariq ยกเป็นตัวอย่าง agentic coder ที่เหลือ unknowns น้อย
 - [[economy-media]] — ช่อง YouTube สายเศรษฐศาสตร์/ธุรกิจ; เป็น source ของ ingest เรื่องต้นทุน token AI สลับข้างกับค่าแรงคน; ใช้เป็นแหล่งอธิบายชั้นสอง ไม่ใช่รายงานปฐมภูมิ
 - [[khunpho-naklongthun]] — ช่อง YouTube ลงทุนไทย เจ้าของคลิปเทียบหุ้น photonics LITE/COHR/NOK/AAOI; ใช้เป็นตัวอธิบายการลงทุนชั้นสอง ไม่ใช่ข้อมูลตรงจากบริษัท
@@ -537,9 +541,9 @@
 - [[alignment-bottleneck]] — แรงวิศวกรรมย้ายจาก productivity รายคน มาอยู่ที่การทำให้ทีมกับ agent align ตรงกัน
 - [[auto-mode]] — permission mode ของ Claude Code: ใช้ classifier คัดอนุมัติ tool call ที่ปลอดภัยให้อัตโนมัติ
 - [[cheaper-to-correct]] — เป้าหมาย: ลด "พิธีรีตอง" กับ friction เวลาต้องแก้ทางให้ agent; ใช้คู่กับ Playback Pattern
-- [[clanker-slop]] — PR/issue spam จาก AI ที่ปั๊มออกมาเป็นแมส สูบ attention ของ maintainer ฝั่ง OSS
+- [[clanker-slop]] — PR/issue spam จาก AI ที่ปั๊มออกมาเป็นแมส สูบ attention ของ maintainer ฝั่ง OSS; เคส pi ใช้ issue สั้นเสียงมนุษย์ + whitelist + auto-close เป็น intake protocol
 - [[claude-md]] — CLAUDE.md: system prompt ระดับโปรเจกต์ในรูป Markdown ของ Claude Code; มีลำดับความสำคัญ 3 ชั้น
-- [[code-is-free]] — ธีสิสของ Lopopolo: AI ทำให้ต้นทุนเขียนโค้ดเป็นศูนย์; ต้นทุนใหม่คือ maintenance กับ review
+- [[code-is-free]] — ธีสิสของ Lopopolo/Ball ว่า implementation ถูกลงจนไม่ใช่คอขวดเดิม; caveat จาก Economy Media/Mario คือ token, review, comprehension, ownership และ maintenance ยังไม่ฟรี
 - [[collaborative-ai-engineering]] — AI engineering แบบทีม เน้นเรื่อง alignment กับ environment สไตล์ ACE
 - [[compaction]] — การเก็บกวาด session ของ Claude Code: สรุปประวัติเพื่อกัน context เน่า; ได้ผลสุดตอนกำกับเองและทำที่รอยต่อ phase ไม่ใช่กลางความงง
 - [[context-rot]] — ประสิทธิภาพตกลงเรื่อยๆ เมื่อ context window เต็มขึ้น; รวมถึง "dumb zone" ที่ความจุยังเหลือแต่คุณภาพ active context ตก
@@ -572,7 +576,7 @@
 - [[mla-attention]] — Multi-head Latent Attention: เทคนิคของ DeepSeek ที่ย่อขนาด KV cache
 - [[model-choice-by-expertise]] — heuristic เลือก model: เราเชี่ยวชาญโดเมนเองอยู่แล้ว Sonnet ก็พอ; ไม่รู้เรื่องเลยค่อยจ่ายค่า Opus
 - [[model-cyber-capability-emergence]] — ความสามารถด้าน cyber โผล่มาเองเป็นผลพลอยได้ของ intelligence ทั่วไป (Mythos)
-- [[open-weight-models]] — model ที่แจก weights (Gemma/DeepSeek/Mellum2) แต่ไม่จำเป็นต้อง open source เต็มตัว; เหมาะกับการ deploy แบบ private/local
+- [[open-weight-models]] — model ที่แจก weights (Gemma/DeepSeek/Mellum2/Qwen) แต่ไม่จำเป็นต้อง open source เต็มตัว; เหมาะกับ private/local deployment โดยเฉพาะ task ขอบเขตชัดที่ latency/privacy/cost สำคัญ
 - [[playback-pattern]] — ท่า alignment: ให้ agent ทวนก่อนลงมือ ว่าอะไรคือ "Stated, Inferred, Out-of-scope"
 - [[plugin-manager]] — เครื่องมือจัดการ life cycle, เวอร์ชัน และ dependency ของ extension ต่างๆ
 - [[pr-dependency-dag]] — ท่า orchestration: มองการแก้หลาย branch ขนานกันเป็น dependency graph

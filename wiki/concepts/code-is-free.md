@@ -3,8 +3,8 @@ title: Code is Free
 type: concept
 tags: [ai, software-engineering, economy, agents]
 created: 2026-04-28
-updated: 2026-07-03
-sources: [ryan-lopopolo-harness-engineering.md, software-after-software.md, how-ai-became-more-expensive-than-workers-it-replaced.md]
+updated: 2026-07-04
+sources: [ryan-lopopolo-harness-engineering.md, software-after-software.md, how-ai-became-more-expensive-than-workers-it-replaced.md, code-isnt-free-mario-zechner-hard-truths-coding-ai.md]
 ---
 
 # Code is Free / โค้ดไม่มีต้นทุนการผลิต
@@ -22,6 +22,14 @@ sources: [ryan-lopopolo-harness-engineering.md, software-after-software.md, how-
 วิดีโอ [[how-ai-became-more-expensive-than-workers-it-replaced|How AI Became More Expensive Than The Workers It Replaced]] ทำให้ต้องอ่านคำว่า “free” แบบมีขอบเขต. ในงาน coding คลิปยังบอกว่า AI ถูกกว่าคนอย่างชัดเจน แต่เมื่อองค์กรเอา AI ไปใช้กว้าง ๆ บิล token, [[tokenmaxxing|tokenmaxxing]], และงานตรวจของคนอาจทำให้ต้นทุนรวมสูงกว่าที่คำขวัญนี้ทำให้รู้สึก
 
 ดังนั้นหน้านี้ไม่ได้ถูกลบล้าง แต่ต้องตีความว่า “code production ถูกลงมาก” ไม่ใช่ “AI ไม่มีต้นทุน” หรือ “ทุกงานถูกกว่าแรงงานมนุษย์เสมอ” จุดขาดแคลนยังรวม [[ai-token-economics|token budget]] และ [[enterprise-ai-roi|ROI ของทั้ง workflow]] ด้วย
+
+## Mario's caveat: code isn't free
+
+[[mario-zechner|Mario Zechner]] โต้คำอ่านแบบสุดโต่งใน [[code-isnt-free-mario-zechner-hard-truths-coding-ai|Code Isn't Free]]. เขาไม่ได้เถียงว่า agent ทำให้เขียนโค้ดเร็วขึ้น. เขาเถียงว่าผลของโค้ดยังต้องมีคนรับ. ถ้า agent สร้าง 500,000 บรรทัดในหนึ่งสัปดาห์ แต่ไม่มีใครเข้าใจหรือ maintain ได้ ต้นทุนไม่ได้หายไป. มันถูกเลื่อนไปเป็น bug, review load, refactor, incident, และ cognitive debt.
+
+จุดที่เขายอมรับว่าคุ้มคือ **ใช้โค้ดราคาถูกเป็น probe**. ให้ agent ลองหลายทางเพื่อสำรวจ solution space แล้วใช้ผลลัพธ์เพื่อสร้างความเข้าใจ. แต่ code จาก exploration ไม่ควรถูกนับเป็น asset ที่พร้อม merge โดยอัตโนมัติ.
+
+**สรุป tension:** Lopopolo/Ball ชี้ว่า implementation ไม่ใช่คอขวดเดิมแล้ว. Mario เตือนว่า ownership, comprehension, และ maintenance ยังไม่ฟรี.
 
 ## ผลกระทบต่อการทำงาน
 1. **Parallel Implementation**: แทนที่จะเลือกวิธีที่ดีที่สุดเพียงวิธีเดียว เราสามารถสั่ง Agent 5 ตัวให้เขียนโค้ด 5 แบบพร้อมกัน แล้วเลือกแบบที่ผ่าน test และดีที่สุดมาใช้งาน
@@ -57,3 +65,4 @@ Ball ขยายต่อไปอีกขั้น: ถ้า code abundance 
 - [[ai-labor-cost-reversal]]
 - [[ai-token-economics]]
 - [[enterprise-ai-roi]]
+- [[code-isnt-free-mario-zechner-hard-truths-coding-ai]]

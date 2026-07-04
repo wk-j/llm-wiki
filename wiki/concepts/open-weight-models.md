@@ -3,8 +3,8 @@ title: Open-weight Models
 type: concept
 tags: [ai, open-source, deepseek, philosophy, deployment]
 created: 2026-04-27
-updated: 2026-07-03
-sources: [deepseek-wikipedia.md, Mellum2 Goes Open Source A Fast Model for AI Workflows  The JetBrains AI Blog.md, chinas-models-no-longer-need-western-hardware.md]
+updated: 2026-07-04
+sources: [deepseek-wikipedia.md, Mellum2 Goes Open Source A Fast Model for AI Workflows  The JetBrains AI Blog.md, chinas-models-no-longer-need-western-hardware.md, code-isnt-free-mario-zechner-hard-truths-coding-ai.md]
 ---
 
 # Open-weight Models / โอเพนเวต โมเดล
@@ -25,6 +25,10 @@ sources: [deepseek-wikipedia.md, Mellum2 Goes Open Source A Fast Model for AI Wo
 
 [[longcat-2-0|LongCat 2.0]] เพิ่มคำถามอีกชั้น: open-weight มีความหมายแค่ไหนถ้า model ใหญ่ขึ้นจนการรันจริงต้องพึ่ง hardware/software stack เฉพาะทาง. วิดีโอ [[chinas-models-no-longer-need-western-hardware|China's Models No Longer Need Western Hardware]] บอกว่า weights ของ LongCat จะตามมา แต่ในช่วงคลิปยังเป็น "coming soon" จึงควรแยกสถานะ **ประกาศจะปล่อย** ออกจาก **ปล่อย weights จริงแล้ว**.
 
+[[mario-zechner|Mario Zechner]] เพิ่มมุม local inference ใน [[code-isnt-free-mario-zechner-hard-truths-coding-ai|Code Isn't Free]]. เขามองว่า local AI ยัง setup ยากและไม่เหมาะทุกงาน แต่ model เล็กเริ่มพอแล้วสำหรับ application ที่ขอบเขตชัด เช่น toy robot สำหรับเด็กที่ใช้ speech-to-text, text-to-speech, และ LLM เล็กบน MacBook M1. ตัวเลขที่เขาเล่า: pipeline หนึ่งกิน unified memory ราว 14GB และให้ประสบการณ์ดีพอสำหรับ chatbot + camera + motor.
+
+บทเรียนคือ open-weight/local model ไม่ต้องชนะ frontier model ทุกมิติ. ถ้า task ต้องการ latency, privacy, หรือ cost control และ quality threshold ไม่สูงเท่างาน coding ยาก ๆ local model ก็เริ่มมีที่ทางจริง.
+
 ## Why this helps / ผลคือ
 
 - **Democratization:** ช่วยให้เทคโนโลยี AI ระดับโลกเข้าถึงได้ง่ายขึ้น ไม่ถูกผูกขาดโดยยักษ์ใหญ่เพียงไม่กี่ราย
@@ -38,3 +42,4 @@ sources: [deepseek-wikipedia.md, Mellum2 Goes Open Source A Fast Model for AI Wo
 - [[mellum2]]
 - [[focal-models]]
 - [[longcat-2-0]]
+- [[code-isnt-free-mario-zechner-hard-truths-coding-ai]]
