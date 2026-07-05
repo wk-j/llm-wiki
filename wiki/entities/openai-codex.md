@@ -44,11 +44,11 @@ Coding harness จาก [[openai|OpenAI]] — เป็นหนึ่งใน
 
 จาก [[piyalitt-codex-keynote-attention-not-token]] — [[romain-huet|Romain Huet]] และ [[alexander-embiricos|Alexander Embiricos]] นำ keynote ก่อนส่งไม้ต่อ [[peter-steinberger|Peter Steinberger]]:
 
-**ผลิตภัณฑ์ปี 2026:** Codex app, Goal Mode, Remote — ทีมใช้ Codex สร้าง Codex เอง. agent ทำได้แทบทุกอย่างบนคอมพิวเตอร์ ไม่ได้ช่วยแค่ตอนเขียน code แต่ช่วยก่อน (ทำไมงานนี้ต้องเกิด) และหลัง (review, deploy).
+**ผลิตภัณฑ์ปี 2026:** Codex app, Goal Mode, Remote — ทีมใช้ Codex สร้าง Codex เอง. agent เริ่มทำงานบนคอมพิวเตอร์ได้แทบทุกอย่างแล้ว ไม่ได้ช่วยแค่ตอนเขียน code แต่ช่วยตั้งแต่ก่อนเขียน (ทำไมงานนี้ต้องเกิด) ไปจนถึงหลังเขียน (review, deploy).
 
-**Codex app:** chat เรียบง่ายที่ใช้ได้ทั้ง coding และงานอื่น — เริ่มจากคุยแล้วค่อยลงลึก ตรงข้าม IDE ที่บังคับเริ่มจาก code. เคยโดนค้านหนักตอน pitch (ไม่มีวันออกจาก terminal) วันนี้คนกลุ่มเดียวกันกลายเป็นผู้ใช้.
+**Codex app:** chat เรียบง่ายที่ใช้ได้ทั้ง coding และงานอื่น — เริ่มจากคุยให้เข้าใจก่อน แล้วค่อยลงลึก ตรงข้ามกับ IDE ที่มักบังคับให้เริ่มจาก code. ตอน pitch เคยโดนค้านหนักว่า developer ไม่มีวันออกจาก terminal แต่วันนี้คนกลุ่มเดียวกันกลายเป็นผู้ใช้.
 
-**Stack เปิดทุกชั้น:** harness open source, `AGENTS.md` เป็นชื่อกลาง, model OpenAI เป็นค่าเริ่มต้นไม่ล็อก, harness ใช้ใน post-training. App Server ขยายได้ถึง iOS, browser ในตัว, plugin (browser use, computer use, data science, design). subscription ใช้ได้ใน OpenCode, Pi, Droid, OpenClaw, Xcode, JetBrains.
+**Stack เปิดทุกชั้น:** harness open source, `AGENTS.md` เป็นชื่อกลาง, model ของ OpenAI เป็นค่าเริ่มต้นแต่ไม่ล็อก, และ harness ชุดเดียวกันถูกใช้ใน post-training. App Server ขยายได้ถึง iOS, browser ในตัว, plugin (browser use, computer use, data science, design). subscription ใช้ได้ใน OpenCode, Pi, Droid, OpenClaw, Xcode, JetBrains.
 
 **Codex Cloud:** การเปิดตัวใหญ่ครั้งแรก — ภาพอนาคตไม่มีเส้นแบ่ง local/cloud; agent เดียวเลือกสภาพแวดล้อมเอง.
 

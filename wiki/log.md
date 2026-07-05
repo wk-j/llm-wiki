@@ -1,5 +1,14 @@
 # Log
 
+## [2026-07-05] maintain | Thai polish for Codex keynote cluster
+
+Polished Thai prose in the Codex keynote cluster after review found the first ingest too English-shaped. Kept the same claims, sources, and page structure, but rewrote stiff summary sentences into more natural Thai, reduced note-like dash chains, fixed a typo in `[[value-maxing]]`, and expanded Romain Huet / Alexander Embiricos entity pages from bullet notes into short standalone prose.
+
+- Updated source page: `[[piyalitt-codex-keynote-attention-not-token]]`
+- Updated concept pages: `[[attention-bottleneck]]`, `[[inner-loop-outer-loop]]`, `[[value-maxing]]`
+- Updated entity pages: `[[romain-huet]]`, `[[alexander-embiricos]]`, `[[peter-steinberger]]`, `[[openai-codex]]`
+- Updated `[[log]]` and `hotcache.md`
+
 ## [2026-07-05] ingest | Piyalitt Ittichaiwong — Codex Keynote / Attention Not Token
 
 Ingested Piyalitt Ittichaiwong's Thai Facebook post summarizing the OpenAI Codex keynote at AI Engineer World's Fair (Romain Huet, Alexander Embiricos, Peter Steinberger). Opens with a short recap of Thariq Shihipar's map-vs-territory / unknowns frame (cross-links existing Fable ingest). Preserved source-attributed numeric claims (GPT-5.6 Terra/Luna, Cerebras 750 t/s, Terminal Bench, model release cadence) until checked against OpenAI directly.

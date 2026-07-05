@@ -9,14 +9,13 @@ sources: [piyalitt-codex-keynote-attention-not-token.md]
 
 # Romain Huet
 
-**Romain Huet** คือหัวหน้าฝ่าย **Developer Experience** ของ [[openai|OpenAI]] — co-present keynote ของทีม [[openai-codex|Codex]] ใน [[ai-engineer-worlds-fair|AI Engineer World's Fair]] คู่กับ [[alexander-embiricos|Alexander Embiricos]] (สรุปใน [[piyalitt-codex-keynote-attention-not-token]])
+**Romain Huet** คือหัวหน้าฝ่าย **Developer Experience** ของ [[openai|OpenAI]]. ใน keynote ของทีม [[openai-codex|Codex]] ที่ [[ai-engineer-worlds-fair|AI Engineer World's Fair]] เขาขึ้นเวทีคู่กับ [[alexander-embiricos|Alexander Embiricos]] เพื่อเล่าว่า OpenAI มองบทบาท engineer หลังยุค coding agent อย่างไร (สรุปใน [[piyalitt-codex-keynote-attention-not-token]])
 
 ## บทบาทบนเวที
 
-- เปรียบงานกับ **World's Fair** ในอดีต — อนาคต engineering ถูกสร้างต่อหน้าสาธารณะโดยคนในห้อง
-- ยืนยันจุดยืน Codex: **AI engineer กำลังกินโลก** — engineering ไม่ตาย แต่กลับสู่รากเหง้า (แก้ปัญหา + วิทยาศาสตร์ + การออกแบบ + วิจารณญาณ + จินตนาการ)
-- เล่าจังหวะปล่อย model ของ OpenAI: จากทุก ~15 เดือน → ~ทุก 6 สัปดาห์; preview GPT-5.6 สัปดาห์ก่อนงาน
-- ย้อน **DevDay 2024 vs 2025**: ปีแรก demo drone ด้วย o1-preview แบบลุ้น (โอกาสรอด ~3/4 → ฉายา "the demo god"); ปีถัดมาปล่อย agent คุมกล้องและไฟทั้งงานได้
+Romain ตั้งฉาก keynote ด้วยภาพ **World's Fair** ในอดีต คืออนาคตไม่ได้มาจากห้องปิด แต่มาจากคนที่ลงมือสร้างต่อหน้าสาธารณะ. จากนั้นเขาดึงเข้าประเด็นหลักของ Codex: **AI engineer กำลังกินโลก** ไม่ใช่เพราะ engineering ตาย แต่เพราะงาน engineering กลับไปใกล้แก่นเดิมกว่าเดิม — แก้ปัญหา ใช้วิทยาศาสตร์ ออกแบบระบบ มีวิจารณญาณ และมีจินตนาการ
+
+เขายังใช้จังหวะปล่อย model ของ OpenAI เป็นหลักฐานว่าพื้นที่นี้เร็วขึ้นมาก จากเดิมประมาณทุก 15 เดือน เหลือราวทุก 6 สัปดาห์. ตัวอย่างบนเวทีคือการเทียบ **DevDay 2024 กับ DevDay 2025**: ปีแรกเขา demo drone ด้วย o1-preview แบบยังต้องลุ้น ส่วนปีถัดมา agent คุมกล้องและไฟทั้งงานได้แล้ว
 
 ## ดูเพิ่ม
 

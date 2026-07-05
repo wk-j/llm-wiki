@@ -9,7 +9,7 @@ sources: [piyalitt-codex-keynote-attention-not-token.md, How to Keep Shipping Wh
 
 # Attention Bottleneck / คอขวด attention
 
-**Attention bottleneck** คือข้อสังเกตจาก [[peter-steinberger|Peter Steinberger]] บนเวที Codex keynote (สรุปใน [[piyalitt-codex-keynote-attention-not-token]]): พอแก้ข้อจำกัด **token** (ด้วยการเข้าไปทำงานที่ OpenAI) และ **compute** (ด้วย test box แยกเครื่อง) แล้ว ข้อจำกัดหลักของวันนี้กลายเป็น **attention** — และต่างจากสองอย่างแรกตรงที่ **เพิ่มไม่ได้**
+**Attention bottleneck** คือข้อสังเกตจาก [[peter-steinberger|Peter Steinberger]] บนเวที Codex keynote (สรุปใน [[piyalitt-codex-keynote-attention-not-token]]): พอข้อจำกัดเรื่อง **token** และ **compute** เริ่มแก้ได้ ข้อจำกัดจริงของงาน agent กลับกลายเป็น **attention** ของมนุษย์. จุดที่น่ากลัวคือ attention ไม่เหมือน token หรือ compute เพราะซื้อเพิ่มไม่ได้ง่าย ๆ
 
 > "ตอนนี้สิ่งที่จำกัดผมมากที่สุดไม่ใช่ token หรือ compute อีกต่อไป แต่คือ attention และมันเพิ่มไม่ได้"
 > — Peter Steinberger (อ้างในโพสต์ Piyalitt)
@@ -24,29 +24,29 @@ Peter เล่าลำดับชัด:
 | ถัดมา | compute | เช่า/แยกเครื่องได้ (test box) |
 | วันนี้ | attention | มีเท่าเดิมทุกวัน |
 
-ทักษะที่คุ้มลงทุนที่สุดในยุคนี้จึงกลายเป็น **การตัดสินใจว่าจะใช้ attention ไปกับอะไร** — ไม่ใช่การสั่งให้ model เก่งขึ้นอย่างเดียว
+ทักษะที่คุ้มลงทุนที่สุดในยุคนี้จึงไม่ใช่แค่สั่งให้ model เก่งขึ้น แต่คือ **เลือกให้ได้ว่าจะใช้ attention ไปกับอะไร**
 
 ## อาการ: จ้อง agent ที่ไม่จำเป็นแล้ว
 
-Peter ถามกลางเวที: เรายังนั่งจ้อง agent ระหว่าง code ไหลผ่านหน้าจออยู่ไหม?
+Peter ถามกลางเวทีว่า เรายังนั่งจ้อง agent ระหว่าง code ไหลผ่านหน้าจออยู่ไหม?
 
-- **Model รุ่นก่อน:** พฤติกรรมนี้จำเป็น — เห็น agent เลี้ยวผิดต้องกด escape ดึงกลับ
-- **Model รุ่นล่าสุด:** เข้าใจเจตนาได้ดีขนาดที่การนั่งดู code ถูกเขียนกลายเป็น **การเผา attention เปล่า ๆ**
+- **Model รุ่นก่อน:** การจ้องยังจำเป็น — พอเห็น agent เลี้ยวผิด ต้องกด escape ดึงกลับทันที
+- **Model รุ่นล่าสุด:** เข้าใจเจตนาได้ดีขึ้นมาก จนการนั่งดู code ถูกเขียนเริ่มกลายเป็น **การเผา attention เปล่า ๆ**
 
-ระบบที่ดีต้องรบกวนเราเฉพาะจังหวะที่ **การตัดสินใจของมนุษย์สร้างความแตกต่างได้จริง** — ไม่ใช่ทุก keystroke ของ agent
+ระบบที่ดีควรรบกวนเราเฉพาะจังหวะที่ **การตัดสินใจของมนุษย์สร้างความแตกต่างได้จริง** ไม่ใช่ทุก keystroke ของ agent
 
 ## ความสัมพันธ์กับ orchestration tax
 
-[[orchestration-tax|Orchestration tax]] อธิบายภาพเดียวกันในมุม concurrency: เปิด agent ถูก ปิดงาน (review/merge) แพง เพราะมีมนุษย์คนเดียว. [[zack-proser|Zack Proser]] และ [[simon-willison|Simon Willison]] ให้หลักฐานหน้างานว่า agent ไม่ใช่คอขวดแล้ว — **คนต่างหาก**
+[[orchestration-tax|Orchestration tax]] อธิบายภาพเดียวกันในมุม concurrency: เปิด agent ถูก แต่ปิดงาน (review/merge) แพง เพราะสุดท้ายมีมนุษย์คนเดิมเป็นคนตัดสิน. [[zack-proser|Zack Proser]] และ [[simon-willison|Simon Willison]] ให้หลักฐานหน้างานว่า agent ไม่ใช่คอขวดแล้ว — **คนต่างหาก**
 
-Attention bottleneck เป็นการตั้งชื่อใหม่จากมุม **ทรัพยากรที่ซื้อเพิ่มไม่ได้** (สมาธิ/เวลาตัดสินใจ) แทนมุม queue ก่อน review. สองหน้าเสริมกัน:
+Attention bottleneck ตั้งชื่อคอขวดนี้จากมุม **ทรัพยากรที่ซื้อเพิ่มไม่ได้** คือสมาธิและเวลาตัดสินใจ. ส่วน orchestration tax มองจากคิวงานที่รอ review. สองหน้าเสริมกัน:
 
 - Orchestration tax → สถาปัตยกรรมรอบ review bandwidth
-- Attention bottleneck → ออกแบบ loop ให้มนุษย์อยู่ [[inner-loop-outer-loop|outer loop]] ไม่ polling inner loop
+- Attention bottleneck → ออกแบบ loop ให้มนุษย์อยู่ [[inner-loop-outer-loop|outer loop]] ไม่ต้องนั่ง polling งานชั้นใน
 
 ## เชื่อมกับ unknowns
 
-[[piyalitt-codex-keynote-attention-not-token]] เปิดโพสต์ด้วย [[thariq-shihipar|Thariq]]: ยิ่ง model เก่ง คอขวดยิ่งย้ายมาที่เรา clarify unknowns ได้ดีแค่ไหน. Attention ที่เผาไปกับการจ้อง agent หรืออ่าน transcript ยาว ๆ คือ attention ที่ไม่ได้ใช้เคลียร์ unknowns ก่อนลงมือ — ซึ่งแพงกว่ามากตอนแก้ทีหลัง (ดู [[unknowns-matrix]])
+[[piyalitt-codex-keynote-attention-not-token]] เปิดโพสต์ด้วย [[thariq-shihipar|Thariq]]: ยิ่ง model เก่ง คอขวดยิ่งย้ายมาที่เราทำ unknowns ให้ชัดได้ดีแค่ไหน. Attention ที่หมดไปกับการจ้อง agent หรืออ่าน transcript ยาว ๆ คือ attention ที่ไม่ได้ใช้เคลียร์ unknowns ก่อนลงมือ และมักแพงกว่ามากเมื่อมาแก้ทีหลัง (ดู [[unknowns-matrix]])
 
 ## See also
 
