@@ -4,7 +4,7 @@ type: entity
 tags: [ai, claude-code, anthropic, engineering, html]
 created: 2026-05-25
 updated: 2026-07-05
-sources: [thariq-html-effectiveness.md, "Using Claude Code Session Management & 1M Context.md", a-field-guide-to-fable-finding-your-unknowns.md]
+sources: [thariq-html-effectiveness.md, "Using Claude Code Session Management & 1M Context.md", a-field-guide-to-fable-finding-your-unknowns.md, fables-judgement-simon-willison.md]
 ---
 
 # Thariq Shihipar / Thariq Shihipar
@@ -23,6 +23,10 @@ Thariq เสนอว่าเมื่อ agent ทำงานซับซ้
 
 ใน field guide ปี 2026-07 เขาขยับขึ้นอีกชั้น: พอ model แรงถึงระดับ Fable 5 คอขวดของคุณภาพงานคือความสามารถของ *ผู้ใช้* ในการเคลียร์ unknowns ของตัวเอง — HTML artifacts, brainstorm, interview, reference, implementation notes และ quiz คือชุดเครื่องมือสำหรับหา unknowns ก่อน/ระหว่าง/หลังลงมือ. [[piyalitt-codex-keynote-attention-not-token|Piyalitt]] สรุป frame นี้เป็นภาษาไทยก่อนเข้า keynote Codex (2026-07) และเชื่อมกับ [[attention-bottleneck]] ว่าทักษะที่คุ้มลงทุนคือรู้จักสิ่งที่ยังไม่รู้
 
+## Fireside Chat ที่ AI Engineer World's Fair (2026-07)
+
+Thariq ร่วมวง Fireside Chat กับ [[cat-wu|Cat Wu]] โดยมี [[simon-willison|Simon Willison]] เป็นพิธีกร ที่งาน [[ai-engineer-worlds-fair|AI Engineer World's Fair]]. เคล็ดที่ Simon ยกมาใน [[fables-judgement-simon-willison|โพสต์ Fable's judgement]] คือ ให้ [[fable|Fable]] (และ Opus บางส่วน) **ใช้ดุลพินิจเองว่าจะทำงานยังไง** แทนสั่งกฎตายตัว เช่นเรื่องเมื่อไหร่ควรเขียน test — ดู [[judgement-based-prompting]].
+
 ## ความเกี่ยวข้องใน wiki
 
 มุมของ Thariq เชื่อมกับ [[interaction-productivity|Interaction Productivity]] เพราะ HTML artifact ที่ดีช่วยให้ความเข้าใจข้ามจาก agent ไปหามนุษย์และจากมนุษย์กลับเข้า agent ได้เร็วขึ้น เทคนิค interview ของเขาซ้อนทับกับ [[grill-me|Grill Me]] ของ Matt Pocock และ quiz pattern ของเขาเป็นคำตอบเชิงปฏิบัติต่อ [[comprehension-debt]]
@@ -38,3 +42,6 @@ Thariq เสนอว่าเมื่อ agent ทำงานซับซ้
 - [[map-vs-territory]]
 - [[unknowns-matrix]]
 - [[piyalitt-codex-keynote-attention-not-token]]
+- [[fables-judgement-simon-willison]]
+- [[judgement-based-prompting]]
+- [[cat-wu]]

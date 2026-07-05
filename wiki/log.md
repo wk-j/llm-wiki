@@ -1141,3 +1141,10 @@ Rewrote every entry description in `wiki/index.md` into Thai per user request (p
 - Rewrote `[[index]]` (584 lines, all descriptions Thai)
 - Updated `CLAUDE.md` (index-format and bilingual-content sections)
 - Updated `[[log]]` and `hotcache.md`
+
+## [2026-07-05] ingest | Fable's judgement — Simon Willison
+Ingested Simon Willison's blog post "Fable's judgement" (https://simonwillison.net/2026/Jul/3/judgement/, 2026-07-03; source supplied by user). Main frame: one theme in three layers — let Fable/Opus use their own judgement about *how* to work instead of dictating rules. (1) From the Fireside Chat Simon hosted with Cat Wu & Thariq Shihipar (Claude Code team) at AI Engineer World's Fair: rather than a rule like "only test larger features," just tell Fable to use its judgement about when to write tests. (2) Jesse Vincent's cost tip: to stretch the Fable allowance before a price increase, tell Fable to pick a cheaper model itself for small tasks. (3) Simon prompted Claude Code to delegate all coding tasks to a lower-power model in a subagent, using its judgement; Claude saved this as a `feedback` memory file (delegate-coding-to-subagents.md) — same memory format this wiki uses. Result (self-reported): more work done, Fable allowance shrinking slower.
+- Created `[[fables-judgement-simon-willison]]` (source), `[[judgement-based-prompting]]` (concept), `[[cat-wu]]` and `[[jesse-vincent]]` (entities)
+- Updated `[[simon-willison]]`, `[[fable]]`, `[[thariq-shihipar]]`, `[[ai-engineer-worlds-fair]]`, `[[advisor-strategy]]`, `[[delegation-mindset]]`
+- Preserved tensions: judgement-based prompting sits against prescriptive CLAUDE.md rule-writing ([[cyril-xbt-claude-md-guide]]) and against handing off too much judgement ([[cognitive-surrender]] / [[orchestration-tax]]); the "let model pick the model" idea moves the model-selection decision from human ([[model-choice-by-expertise]]) to the model itself. Simon's result is a single-person field report, not a benchmark.
+- Updated `[[index]]`, `[[log]]`, and `hotcache.md`

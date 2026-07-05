@@ -1,6 +1,7 @@
 # Index
 
 ## Sources
+- [[fables-judgement-simon-willison]] — Simon Willison (บล็อก, 2026-07-03): เคล็ดสามชั้นธีมเดียว — ปล่อยให้ Fable/Opus ใช้ดุลพินิจเองแทนสั่งกฎตายตัว (เช่นเมื่อไหร่ควรเขียน test จาก Fireside Chat กับ Cat Wu/Thariq), เคล็ด Jesse Vincent ให้ Fable เลือก model ที่ถูกลงเองเพื่อยืดโควตาก่อนขึ้นราคา, แล้ว Simon สั่ง Claude Code ให้ delegate งาน coding ไป subagent ที่ power ต่ำกว่า จน Claude เซฟเป็น feedback memory file
 - [[piyalitt-codex-keynote-attention-not-token]] — Piyalitt Ittichaiwong (Facebook, 2026-07-05): สรุป keynote Codex ที่ AI Engineer World's Fair (Romain Huet, Alexander Embiricos, Peter Steinberger); เปิดด้วย Thariq/unknowns แล้วลงลึก engineering ไม่ตาย, Codex app/stack เปิด, value maxing, Codex Cloud, attention เป็นคอขวดใหม่แทน token, inner/outer loop ของ manager agent
 - [[code-isnt-free-mario-zechner-hard-truths-coding-ai]] — Jan-Niklas Wortmann สัมภาษณ์ Mario Zechner เรื่อง pi และ hard truths ของ AI coding: code generation ถูกลง แต่ ownership ไม่ฟรี; spec-driven dev เสี่ยงเป็น hyper-waterfall; async/parallel agent ดีเฉพาะเมื่อไม่ทำลาย thinking time; local AI เริ่มพอใช้กับงานขอบเขตชัด; open source ต้องมี intake protocol กัน clanker PR flood
 - [[stop-building-ai-agents-old-way]] — Prompt Engineering (YouTube transcript): สูตรสำหรับ long-running agent ที่รันได้นานโดยไม่หลุดทาง; 7 component คือ goal เป็น contract, evaluator แยกจาก executor, verifier เป็น proof, outer loop กัน early stop, role orchestration คุม cost/quality, observability/dashboard/trace และ session mining ที่เปลี่ยน failure เก่าเป็น rule; มี sponsor claim ของ Latitude ที่ยังควรตรวจจาก repo/docs ตรง
@@ -119,6 +120,8 @@
 - [[thclaws-marketplace-panutat]] — Panutat Tejasen (2026-04-30): thClaws v0.7.0 Marketplace; Enterprise Security; Private Marketplace; แนวคิด Host Bridge; Rabbit Holes ในการ coding
 
 ## Entities
+- [[cat-wu]] — สมาชิกทีม Claude Code ที่ Anthropic; แขก Fireside Chat ที่ Simon Willison เป็นพิธีกรที่ AI Engineer World's Fair — ต้นทางเคล็ดให้ Fable ใช้ดุลพินิจเอง
+- [[jesse-vincent]] — developer สาย AI coding; เจ้าของเคล็ดใน "Fable's judgement" ให้บอก Fable ไปเลือก model ที่ถูกลงเองสำหรับงานเล็กเพื่อยืดโควตา
 - [[jan-niklas-wortmann]] — interviewer / creator ด้าน AI coding; สัมภาษณ์ Mario Zechner ใน source "Code Isn't Free" แล้วดึง tension เรื่อง agent productivity, SDD, local AI, token budget และ clanker load
 - [[earendil]] — บริษัท/ทีมที่ Mario Zechner เข้าร่วมเพื่อทำ pi ต่อ; source นี้วางเป็นบริบทของเป้าหมาย pi ระยะยาว ทั้ง application layer, local inference, durability, observability และ SDK หลาย environment
 - [[armin-ronacher]] — developer open source ที่ทำงานกับ Mario ที่ Earendil และเริ่มช่วยถือ pi; รายละเอียดบทบาทยังอิงจากบทสัมภาษณ์นี้
@@ -358,6 +361,7 @@
 - [[marc-brooker]] — senior engineer ที่ AWS (Lambda/Aurora); ฝั่งปกป้อง SDD ตัวจริง: มอง spec เป็น artifact ที่ explicit มี version และมีชีวิต ใช้วนซ้ำได้จริง
 
 ## Concepts
+- [[judgement-based-prompting]] — สั่ง coding agent ด้วยดุลพินิจแทนกฎตายตัว: บอกให้ model ตัดสินใจเองว่าเมื่อไหร่ควรเขียน test หรือควรเลือก model ตัวไหน แทนเขียนกฎครอบทุกเคส; ใช้ได้เมื่อดุลพินิจ model ดีพอและยังต้องรีวิวผล — ต่างจาก judgement-vs-automation ที่พูดถึงว่างานประเภทไหนจะถูก automate
 - [[map-vs-territory]] — "แผนที่ไม่ใช่พื้นที่จริง" ของ Korzybski เอามาใช้กับ agentic coding: map = prompt/skills/context ที่ให้ agent ส่วน territory = โค้ดจริงกับข้อจำกัดโลกจริง; ส่วนต่างคือ unknowns และพอ model เก่งขึ้น คอขวดก็ย้ายมาอยู่ที่ map ของเราเอง
 - [[unknowns-matrix]] — ตาราง 4 ช่องของ Thariq (known knowns / known unknowns / unknown knowns / unknown unknowns) พร้อมเทคนิคประจำแต่ละช่วงงาน: blind spot pass, brainstorm/prototype, interview, reference, implementation plan, implementation notes, pitch/explainer, quiz
 - [[tokenmaxxing]] — เผา token AI เยอะๆ เพื่อโชว์สถานะหรือทำ KPI ไม่ใช่เพราะงานต้องใช้จริง; ดัน demand กับบิล enterprise ให้บวมโดยไม่ได้พิสูจน์ว่า productivity เพิ่ม

@@ -3,8 +3,8 @@ title: Delegation Mindset
 type: concept
 tags: [ai, prompting, claude, claude-code, coding-harness, workflow]
 created: 2026-04-20
-updated: 2026-04-23
-sources: [Claude Opus 4.7 Isn't a Drop-in Replacement for 4.6.md]
+updated: 2026-07-05
+sources: [Claude Opus 4.7 Isn't a Drop-in Replacement for 4.6.md, fables-judgement-simon-willison.md]
 ---
 
 # Delegation Mindset / วิธีคิดแบบมอบงาน
@@ -71,6 +71,10 @@ Pachaar เสนอ delegation ที่ระดับ prompt (วิธีเ
 
 ดูต่อที่ [[reorganize-around-models]] ซึ่งเป็น implication ระดับ org chart ของ Ball
 
+## มอบงานให้ subagent ที่ถูกลง
+
+[[fables-judgement-simon-willison|Simon Willison]] (2026-07) แสดง delegation อีกชั้น: สั่ง Claude Code ว่างาน coding ให้ **เลือก model ที่ถูกลงเองแล้วรันใน [[subagent-patterns|subagent]]**. main loop เก็บ judgment, review, และ synthesis ไว้; งานเขียน code จริงส่งให้ worker ที่ถูกกว่า (sonnet สำหรับงานจริงจัง, haiku สำหรับงานจิ๊บ ๆ) แล้วรีวิวผลก่อน commit. เป็น delegation mindset ที่ผสมกับ [[judgement-based-prompting]] — ให้ model ใช้ดุลพินิจเลือกทั้งว่างานไหนควรมอบ และมอบให้ model ตัวไหน.
+
 ## ดูเพิ่มเติม
 
 - [[claude-opus-4-7]]
@@ -82,4 +86,7 @@ Pachaar เสนอ delegation ที่ระดับ prompt (วิธีเ
 - [[harness-engineering]]
 - [[software-after-software]]
 - [[reorganize-around-models]]
+- [[fables-judgement-simon-willison]]
+- [[judgement-based-prompting]]
+- [[subagent-patterns]]
 
