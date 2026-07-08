@@ -1,6 +1,7 @@
 # Index
 
 ## Sources
+- [[claude-in-microsoft-foundry]] — Anthropic (blog, 2026-06-29): Claude เป็น generally available บน Microsoft Foundry แล้ว — เรื่อง distribution ระดับองค์กร ไม่ใช่ความสามารถ model; รัน Opus 4.8 + Haiku 4.5 ในสภาพแวดล้อม Azure ของตัวเอง ผ่าน Messages API (prompt caching + extended thinking), เลือก data zone ได้ (เช่น US) โดย Anthropic เป็นผู้รัน inference/data processor, unified invoicing และเอา Azure commitment มาจ่ายได้; ลูกค้าตัวอย่าง NVIDIA (GB300)/Bolt/Everstar/Momentic เป็น marketing claim ที่ยังไม่ตรวจอิสระ
 - [[fables-judgement-simon-willison]] — Simon Willison (บล็อก, 2026-07-03): เคล็ดสามชั้นธีมเดียว — ปล่อยให้ Fable/Opus ใช้ดุลพินิจเองแทนสั่งกฎตายตัว (เช่นเมื่อไหร่ควรเขียน test จาก Fireside Chat กับ Cat Wu/Thariq), เคล็ด Jesse Vincent ให้ Fable เลือก model ที่ถูกลงเองเพื่อยืดโควตาก่อนขึ้นราคา, แล้ว Simon สั่ง Claude Code ให้ delegate งาน coding ไป subagent ที่ power ต่ำกว่า จน Claude เซฟเป็น feedback memory file
 - [[piyalitt-codex-keynote-attention-not-token]] — Piyalitt Ittichaiwong (Facebook, 2026-07-05): สรุป keynote Codex ที่ AI Engineer World's Fair (Romain Huet, Alexander Embiricos, Peter Steinberger); เปิดด้วย Thariq/unknowns แล้วลงลึก engineering ไม่ตาย, Codex app/stack เปิด, value maxing, Codex Cloud, attention เป็นคอขวดใหม่แทน token, inner/outer loop ของ manager agent
 - [[code-isnt-free-mario-zechner-hard-truths-coding-ai]] — Jan-Niklas Wortmann สัมภาษณ์ Mario Zechner เรื่อง pi และ hard truths ของ AI coding: code generation ถูกลง แต่ ownership ไม่ฟรี; spec-driven dev เสี่ยงเป็น hyper-waterfall; async/parallel agent ดีเฉพาะเมื่อไม่ทำลาย thinking time; local AI เริ่มพอใช้กับงานขอบเขตชัด; open source ต้องมี intake protocol กัน clanker PR flood
@@ -120,6 +121,8 @@
 - [[thclaws-marketplace-panutat]] — Panutat Tejasen (2026-04-30): thClaws v0.7.0 Marketplace; Enterprise Security; Private Marketplace; แนวคิด Host Bridge; Rabbit Holes ในการ coding
 
 ## Entities
+- [[microsoft-foundry]] — แพลตฟอร์ม AI องค์กรของ Microsoft ที่รันบน Azure; หนึ่งในช่องทางเสิร์ฟ Claude (คู่กับ Bedrock/Vertex) และเป็นที่ Claude เป็น GA ตั้งแต่ 2026-06-29
+- [[azure]] — cloud ของ Microsoft; สภาพแวดล้อมองค์กรที่ model ไปวางไว้ให้ใช้ (Microsoft Foundry รันบน Azure) พร้อม identity/billing/governance เดิม
 - [[cat-wu]] — สมาชิกทีม Claude Code ที่ Anthropic; แขก Fireside Chat ที่ Simon Willison เป็นพิธีกรที่ AI Engineer World's Fair — ต้นทางเคล็ดให้ Fable ใช้ดุลพินิจเอง
 - [[jesse-vincent]] — developer สาย AI coding; เจ้าของเคล็ดใน "Fable's judgement" ให้บอก Fable ไปเลือก model ที่ถูกลงเองสำหรับงานเล็กเพื่อยืดโควตา
 - [[jan-niklas-wortmann]] — interviewer / creator ด้าน AI coding; สัมภาษณ์ Mario Zechner ใน source "Code Isn't Free" แล้วดึง tension เรื่อง agent productivity, SDD, local AI, token budget และ clanker load
@@ -361,6 +364,8 @@
 - [[marc-brooker]] — senior engineer ที่ AWS (Lambda/Aurora); ฝั่งปกป้อง SDD ตัวจริง: มอง spec เป็น artifact ที่ explicit มี version และมีชีวิต ใช้วนซ้ำได้จริง
 
 ## Concepts
+- [[enterprise-model-deployment]] — จะเอา frontier model ไปวางให้องค์กรใหญ่ใช้ยังไง: เอา model ไปอยู่บนคลาวด์ที่ลูกค้าใช้แล้ว (Azure/Bedrock/Vertex) พร้อม data residency, data processor, unified billing และ governance/identity แบบ native; tradeoff hosted-on-cloud (governance native) vs hosted-on-vendor (ฟีเจอร์ API เต็ม)
+- [[data-residency]] — ข้อกำหนดว่าข้อมูลต้องอยู่/ประมวลผลในเขตที่กำหนด; data zone (เช่น US) ทำให้เอา model เข้าองค์กรได้โดยไม่ชนกฎ compliance — เป็นเงื่อนไขซื้อ ไม่ใช่แค่ฟีเจอร์
 - [[judgement-based-prompting]] — สั่ง coding agent ด้วยดุลพินิจแทนกฎตายตัว: บอกให้ model ตัดสินใจเองว่าเมื่อไหร่ควรเขียน test หรือควรเลือก model ตัวไหน แทนเขียนกฎครอบทุกเคส; ใช้ได้เมื่อดุลพินิจ model ดีพอและยังต้องรีวิวผล — ต่างจาก judgement-vs-automation ที่พูดถึงว่างานประเภทไหนจะถูก automate
 - [[map-vs-territory]] — "แผนที่ไม่ใช่พื้นที่จริง" ของ Korzybski เอามาใช้กับ agentic coding: map = prompt/skills/context ที่ให้ agent ส่วน territory = โค้ดจริงกับข้อจำกัดโลกจริง; ส่วนต่างคือ unknowns และพอ model เก่งขึ้น คอขวดก็ย้ายมาอยู่ที่ map ของเราเอง
 - [[unknowns-matrix]] — ตาราง 4 ช่องของ Thariq (known knowns / known unknowns / unknown knowns / unknown unknowns) พร้อมเทคนิคประจำแต่ละช่วงงาน: blind spot pass, brainstorm/prototype, interview, reference, implementation plan, implementation notes, pitch/explainer, quiz

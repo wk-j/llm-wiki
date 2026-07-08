@@ -1,5 +1,16 @@
 # Log
 
+## [2026-07-08] ingest | Claude in Microsoft Foundry (GA)
+
+Ingested Anthropic's blog announcement "Claude in Microsoft Foundry is now generally available" (2026-06-29; source supplied by user). A distribution/deployment story, not a model-capability story: Claude Opus 4.8 + Claude Haiku 4.5 are GA on Microsoft Foundry (Microsoft's Azure-based enterprise AI platform) via the Messages API with prompt caching and extended thinking. Two deploy paths (hosted on Azure = native identity/billing/governance vs hosted on Anthropic = full API feature set), a US data zone option for residency with Anthropic as inference operator/data processor, unified invoicing, and Microsoft Enterprise Agreement customers can apply Azure commitments toward Claude. Customer examples: NVIDIA (autonomous agents on GB300 GPUs), Bolt, Everstar (nuclear safety analysis, 200 human-days → 1 day), Momentic (millions of tokens/min) — kept source-attributed as marketing claims.
+
+- Created source page: `[[claude-in-microsoft-foundry]]`
+- Created concept pages: `[[enterprise-model-deployment]]`, `[[data-residency]]`
+- Created entity pages: `[[microsoft-foundry]]`, `[[azure]]`
+- Updated entity pages: `[[anthropic]]`, `[[microsoft]]`, `[[nvidia]]`, `[[claude-opus-4-8]]`
+- Preserved tension: this partnership (Microsoft selling Claude on Azure) sits at a different layer than the `[[how-ai-became-more-expensive-than-workers-it-replaced]]` claim that Microsoft told internal engineers to stop using Claude Code on cost — platform-seller vs internal-user, not a contradiction.
+- Updated `wiki/index.md`, `[[log]]`, and `hotcache.md`
+
 ## [2026-07-05] maintain | Thai polish for Codex keynote cluster
 
 Polished Thai prose in the Codex keynote cluster after review found the first ingest too English-shaped. Kept the same claims, sources, and page structure, but rewrote stiff summary sentences into more natural Thai, reduced note-like dash chains, fixed a typo in `[[value-maxing]]`, and expanded Romain Huet / Alexander Embiricos entity pages from bullet notes into short standalone prose.

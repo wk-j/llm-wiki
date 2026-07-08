@@ -3,8 +3,8 @@ title: Claude Opus 4.8
 type: entity
 tags: [ai, models, anthropic, claude, opus, honesty, alignment]
 created: 2026-05-29
-updated: 2026-05-29
-sources: [Piyalitt Ittichaiwong - Opus 4.8 Launch Recap.md]
+updated: 2026-07-08
+sources: [Piyalitt Ittichaiwong - Opus 4.8 Launch Recap.md, claude-in-microsoft-foundry.md]
 ---
 
 # Claude Opus 4.8
@@ -66,6 +66,7 @@ sources: [Piyalitt Ittichaiwong - Opus 4.8 Launch Recap.md]
 - ผลิตภัณฑ์ Claude (claude.ai, Cowork, [[claude-code|Claude Code]])
 - Claude API (`claude-opus-4-8`)
 - เปิดให้ใช้ "ทุกที่" ตั้งแต่วันประกาศ
+- **[[microsoft-foundry|Microsoft Foundry]]** — generally available บน [[azure|Azure]] ตั้งแต่ 2026-06-29 (คู่กับ Claude Haiku 4.5) ผ่าน Messages API รองรับ prompt caching + extended thinking; ดู [[claude-in-microsoft-foundry]]
 
 ## ดูเพิ่ม
 
