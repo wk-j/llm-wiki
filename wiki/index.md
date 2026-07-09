@@ -1,6 +1,7 @@
 # Index
 
 ## Sources
+- [[bun-in-rust]] — Jarred Sumner / Bun (blog, 2026-07-08): field report การ rewrite Bun จาก Zig เป็น Rust ด้วย Claude Code + pre-release Fable 5; แกนคือ stability/memory safety, mechanical port ก่อน idiomatic refactor, dynamic workflows ราว 50 ตัว, peak 64 Claudes, adversarial reviewers, compiler errors เป็น queue, test suite/CI/fuzzing เป็น oracle, cost ราว $165k และผลลัพธ์ v1.4.0 ที่ source อ้างว่าเร็วขึ้น/เล็กลง/leak ลดลง
 - [[claude-in-microsoft-foundry]] — Anthropic (blog, 2026-06-29): Claude เป็น generally available บน Microsoft Foundry แล้ว — เรื่อง distribution ระดับองค์กร ไม่ใช่ความสามารถ model; รัน Opus 4.8 + Haiku 4.5 ในสภาพแวดล้อม Azure ของตัวเอง ผ่าน Messages API (prompt caching + extended thinking), เลือก data zone ได้ (เช่น US) โดย Anthropic เป็นผู้รัน inference/data processor, unified invoicing และเอา Azure commitment มาจ่ายได้; ลูกค้าตัวอย่าง NVIDIA (GB300)/Bolt/Everstar/Momentic เป็น marketing claim ที่ยังไม่ตรวจอิสระ
 - [[fables-judgement-simon-willison]] — Simon Willison (บล็อก, 2026-07-03): เคล็ดสามชั้นธีมเดียว — ปล่อยให้ Fable/Opus ใช้ดุลพินิจเองแทนสั่งกฎตายตัว (เช่นเมื่อไหร่ควรเขียน test จาก Fireside Chat กับ Cat Wu/Thariq), เคล็ด Jesse Vincent ให้ Fable เลือก model ที่ถูกลงเองเพื่อยืดโควตาก่อนขึ้นราคา, แล้ว Simon สั่ง Claude Code ให้ delegate งาน coding ไป subagent ที่ power ต่ำกว่า จน Claude เซฟเป็น feedback memory file
 - [[piyalitt-codex-keynote-attention-not-token]] — Piyalitt Ittichaiwong (Facebook, 2026-07-05): สรุป keynote Codex ที่ AI Engineer World's Fair (Romain Huet, Alexander Embiricos, Peter Steinberger); เปิดด้วย Thariq/unknowns แล้วลงลึก engineering ไม่ตาย, Codex app/stack เปิด, value maxing, Codex Cloud, attention เป็นคอขวดใหม่แทน token, inner/outer loop ของ manager agent
@@ -121,6 +122,12 @@
 - [[thclaws-marketplace-panutat]] — Panutat Tejasen (2026-04-30): thClaws v0.7.0 Marketplace; Enterprise Security; Private Marketplace; แนวคิด Host Bridge; Rabbit Holes ในการ coding
 
 ## Entities
+- [[bun]] — JavaScript runtime/toolchain ของ Jarred Sumner; เคส rewrite จาก Zig เป็น Rust ทำให้เป็นหลักฐานใหญ่ของ dynamic workflows, LSC, test-suite-as-oracle และ adversarial review ในงาน production
+- [[jarred-sumner]] — ผู้สร้าง Bun และผู้เขียน "Bun in Rust"; ตัวอย่างบทบาท agentic engineer ที่ออกแบบ workflow/guardrail/review process มากกว่าเขียนทุกบรรทัดเอง
+- [[rust]] — ภาษา systems ที่ Bun ย้ายมาใช้เพื่อ memory safety, ownership/lifetime และ `Drop`; ใน source นี้เป็นเครื่องมือย้าย bug class จาก production/fuzzing มาใกล้ compiler/review มากขึ้น
+- [[zig]] — ภาษา systems ที่ Bun รุ่นแรกใช้; Jarred ย้ำว่า Zig ทำให้ Bun เกิดขึ้นได้ แต่ cleanup แบบ explicit ด้วย `defer` ไม่พอกับ lifetime mix ที่ Bun เจอ
+- [[javascriptcore]] — JavaScript engine ของ Safari ที่ Bun embed; ทำให้ Rust rewrite ยังต้องมี `unsafe` เพราะข้าม boundary ไป C/C++
+- [[prisma]] — database/developer-tools company; ใน source Bun อ้างว่า Prisma Compute public beta รันบน Rust rewrite ของ Bun และเจอ stability ดีขึ้น
 - [[microsoft-foundry]] — แพลตฟอร์ม AI องค์กรของ Microsoft ที่รันบน Azure; หนึ่งในช่องทางเสิร์ฟ Claude (คู่กับ Bedrock/Vertex) และเป็นที่ Claude เป็น GA ตั้งแต่ 2026-06-29
 - [[azure]] — cloud ของ Microsoft; สภาพแวดล้อมองค์กรที่ model ไปวางไว้ให้ใช้ (Microsoft Foundry รันบน Azure) พร้อม identity/billing/governance เดิม
 - [[cat-wu]] — สมาชิกทีม Claude Code ที่ Anthropic; แขก Fireside Chat ที่ Simon Willison เป็นพิธีกรที่ AI Engineer World's Fair — ต้นทางเคล็ดให้ Fable ใช้ดุลพินิจเอง
@@ -364,6 +371,7 @@
 - [[marc-brooker]] — senior engineer ที่ AWS (Lambda/Aurora); ฝั่งปกป้อง SDD ตัวจริง: มอง spec เป็น artifact ที่ explicit มี version และมีชีวิต ใช้วนซ้ำได้จริง
 
 ## Concepts
+- [[adversarial-review-loops]] — pattern แยก agent เขียนโค้ดออกจาก reviewer ที่ถูกสั่งให้ assume ว่า diff ผิด; เคส Bun ใช้ 1 implementer + 2 adversarial reviewers + 1 fixer เพื่อจับ bug ที่ compile ผ่านแต่ semantics พัง
 - [[enterprise-model-deployment]] — จะเอา frontier model ไปวางให้องค์กรใหญ่ใช้ยังไง: เอา model ไปอยู่บนคลาวด์ที่ลูกค้าใช้แล้ว (Azure/Bedrock/Vertex) พร้อม data residency, data processor, unified billing และ governance/identity แบบ native; tradeoff hosted-on-cloud (governance native) vs hosted-on-vendor (ฟีเจอร์ API เต็ม)
 - [[data-residency]] — ข้อกำหนดว่าข้อมูลต้องอยู่/ประมวลผลในเขตที่กำหนด; data zone (เช่น US) ทำให้เอา model เข้าองค์กรได้โดยไม่ชนกฎ compliance — เป็นเงื่อนไขซื้อ ไม่ใช่แค่ฟีเจอร์
 - [[judgement-based-prompting]] — สั่ง coding agent ด้วยดุลพินิจแทนกฎตายตัว: บอกให้ model ตัดสินใจเองว่าเมื่อไหร่ควรเขียน test หรือควรเลือก model ตัวไหน แทนเขียนกฎครอบทุกเคส; ใช้ได้เมื่อดุลพินิจ model ดีพอและยังต้องรีวิวผล — ต่างจาก judgement-vs-automation ที่พูดถึงว่างานประเภทไหนจะถูก automate

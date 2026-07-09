@@ -3,8 +3,8 @@ title: Git Worktrees for Parallel Agents
 type: concept
 tags: [ai, agents, git, isolation, parallel, orchestration, worktree]
 created: 2026-06-09
-updated: 2026-07-01
-sources: ["Loop Engineering..md", l8-principals-agentic-engineering-workflow-kun-chen.md]
+updated: 2026-07-09
+sources: ["Loop Engineering..md", l8-principals-agentic-engineering-workflow-kun-chen.md, bun-in-rust.md]
 ---
 
 # Git Worktrees for Parallel Agents / worktree สำหรับ agent ขนาน
@@ -46,6 +46,14 @@ worktree เอา friction เชิงกลไกของการรัน 
 
 **ได้อะไร:** parallel agent workflow ต้องแก้ทั้ง collision ของไฟล์และ collision ในหัวคน. Worktree แก้ข้อแรก, Treehouse แก้ข้อสอง.
 
+## Bun: worktree ช่วย แต่ resource ยังมีเพดาน
+
+[[bun-in-rust|Bun in Rust]] เพิ่ม caveat จากงาน production ใหญ่. ตอนแรก Claude หลายตัวรันใน checkout เดียวกันแล้วเหยียบกันเองผ่าน `git stash`, `git stash pop`, และ `git reset`. Jarred เลยห้ามคำสั่ง git ที่ไม่ commit ไฟล์เฉพาะ และสุดท้าย shard เป็น 4 workflow / 4 worktrees โดยแต่ละ workflow มี 16 Claudes.
+
+แต่ worktree ไม่ได้ฟรี. Repo Bun ใหญ่จนถ้าแยก worktree มากเกินไป disk จะเต็ม และ command ช้าอย่าง `grep` บน EC2 ที่ IOPS ต่ำ freeze disk reads/writes ได้หลายนาที.
+
+**ผลคือ:** worktree แก้ collision ของ working directory แต่ไม่ได้แก้ disk space, I/O, command policy หรือ review throughput. Parallel agent ต้องออกแบบ infrastructure รอบ worktree ด้วย.
+
 ## See also
 
 - [[loop-engineering]]
@@ -56,3 +64,4 @@ worktree เอา friction เชิงกลไกของการรัน 
 - [[cognitive-surrender]]
 - [[l8-principals-agentic-engineering-workflow-kun-chen]]
 - [[treehouse]]
+- [[bun-in-rust]]
