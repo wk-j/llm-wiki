@@ -3,8 +3,8 @@ title: Agentic Engineering
 type: concept
 tags: [ai, engineering, agents, automation]
 created: 2026-04-30
-updated: 2026-07-01
-sources: [Andrej Karpathy From Vibe Coding to Agentic Engineering.md, l8-principals-agentic-engineering-workflow-kun-chen.md]
+updated: 2026-07-12
+sources: [Andrej Karpathy From Vibe Coding to Agentic Engineering.md, l8-principals-agentic-engineering-workflow-kun-chen.md, new-skills-v1-1-wayfinder-research-implement-to-spec-to-tickets.md]
 ---
 
 # Agentic Engineering / วิศวกรรมเชิงเอเจนท์
@@ -41,6 +41,18 @@ sources: [Andrej Karpathy From Vibe Coding to Agentic Engineering.md, l8-princip
 
 **ผลคือ:** leverage ไม่ได้มาจาก agent จำนวนมากอย่างเดียว แต่มาจาก harness ที่ทำให้ agent ทำงานยาว ตรวจตัวเองได้ และเรียกคนเฉพาะตอนที่ต้องใช้วิจารณญาณ.
 
+## Skills v1.1 lifecycle: Matt Pocock
+
+[[new-skills-v1-1-wayfinder-research-implement-to-spec-to-tickets|Skills v1.1]] ของ [[matt-pocock|Matt Pocock]] เติม lifecycle แบบเป็นขั้นให้ภาพ Agentic Engineering:
+
+`grill / wayfind → to-spec → to-tickets → implement → code review → commit`
+
+งานเล็กเริ่มด้วย [[grill-me|grilling]] เพื่อปิด decision. งานใหญ่ที่ยังมองเส้นทางไม่ครบเริ่มด้วย [[wayfinding]] แล้วปิด research/prototype/grilling ticket ทีละ session. เมื่อ map ชัดจึงกลั่นเป็น spec และแตกเป็น implementation ticket. `/implement` ใช้ TDD ตาม seam ที่ตกลง รัน type check/test ระหว่างทาง แล้วส่งเข้า [[dual-axis-code-review|review สองแกน]] ก่อน commit.
+
+โครงนี้ไม่ใช่ [[specs-to-code]] แบบ “เขียน spec แล้วเชื่อ output”. Spec เป็น handoff ตรงกลาง แต่ก่อนหน้า spec มี human decision gates และหลัง spec ยังมี test, review และ repo standards. อย่างไรก็ดี lifecycle นี้ยังเป็น opinionated workflow ของ Pocock ไม่ใช่มาตรฐานสากล.
+
+**ได้อะไร:** หลักกว้างเรื่อง spec, verification และ coordination กลายเป็นเส้นทางที่บอกว่าแต่ละ session รับ artifact อะไรและส่งอะไรต่อ.
+
 ## บทบาทที่เปลี่ยนไป: Tactical vs Strategic
 [[matt-pocock]] เสริมมุมมองว่าใน Agentic Engineering:
 - **AI คือ Tactical Sergeant**: รับหน้าที่ "จ่า" คอยคุมการรบหน้างาน จัดการรายละเอียดโค้ดและ implementation
@@ -58,3 +70,4 @@ sources: [Andrej Karpathy From Vibe Coding to Agentic Engineering.md, l8-princip
 - [[kun-chen]]
 - [[no-mistakes]]
 - [[first-mate]]
+- [[new-skills-v1-1-wayfinder-research-implement-to-spec-to-tickets]]

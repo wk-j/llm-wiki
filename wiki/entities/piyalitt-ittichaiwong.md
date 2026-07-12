@@ -3,8 +3,8 @@ title: Piyalitt Ittichaiwong
 type: entity
 tags: [people, thai, ai, medical, phd]
 created: 2026-04-24
-updated: 2026-07-05
-sources: [Piyalitt Ittichaiwong - GPT-5.5 Launch.md, Piyalitt Ittichaiwong - DeepSWE FrontierSWE Benchmark.md, Piyalitt Ittichaiwong - Opus 4.8 Launch Recap.md, piyalitt-codex-keynote-attention-not-token.md]
+updated: 2026-07-12
+sources: [Piyalitt Ittichaiwong - GPT-5.5 Launch.md, Piyalitt Ittichaiwong - DeepSWE FrontierSWE Benchmark.md, Piyalitt Ittichaiwong - Opus 4.8 Launch Recap.md, piyalitt-codex-keynote-attention-not-token.md, gpt-5-6-and-openai-build-week-aimeowyak.md]
 ---
 
 # Piyalitt Ittichaiwong
@@ -34,6 +34,7 @@ sources: [Piyalitt Ittichaiwong - GPT-5.5 Launch.md, Piyalitt Ittichaiwong - Dee
 - **[[piyalitt-deepswe-benchmark]]** (2026-05-27) — สรุป benchmark DeepSWE + FrontierSWE เพื่อตอบคำถาม "เขียนโปรแกรมใช้ AI ตัวไหนดี"; เน้นว่า benchmark ที่ปลอดการปนเปื้อนและ verifier ที่ตรวจพฤติกรรมเผยช่องว่างจริงของ model
 - **[[piyalitt-opus-4-8-recap]]** (2026-05-28) — สรุปบทความเปิดตัว [[claude-opus-4-8|Claude Opus 4.8]] เป็นภาษาไทย; จุดขายคือ [[model-honesty|ความซื่อสัตย์]] + alignment ใกล้ Mythos; ของใหม่คือ [[dynamic-workflows|dynamic workflows]] และ [[effort-levels|effort control]] บน UI
 - **[[piyalitt-codex-keynote-attention-not-token]]** (2026-07-05) — สรุป keynote Codex ที่ [[ai-engineer-worlds-fair|AI Engineer World's Fair]] (Romain Huet, Alexander Embiricos, [[peter-steinberger|Peter Steinberger]]); เปิดด้วยสรุป Thariq เรื่อง [[unknowns-matrix|unknowns]] แล้วลงลึก engineering ไม่ตาย, Codex app/stack เปิด, [[value-maxing|value maxing]], Codex Cloud, และ thesis ว่า [[attention-bottleneck|attention]] ไม่ใช่ token คือคอขวดใหม่
+- **[[gpt-5-6-and-openai-build-week-aimeowyak]]** (2026-07-12) — ไลฟ์ AIMeowYak × Connected Human AI รีวิว GPT-5.6 แบบ demo สด เทียบ Fable/Grok/GLM, เจาะ GPT Live กับ [[computer-use|computer use]], เตือน `ultra` เรื่อง RAM/token และประกาศ OpenAI Build Week Bangkok; เก็บผลทดสอบเป็น field report เพราะ harness/effort ต่างกัน
 
 ## ดูเพิ่ม
 
@@ -45,3 +46,4 @@ sources: [Piyalitt Ittichaiwong - GPT-5.5 Launch.md, Piyalitt Ittichaiwong - Dee
 - [[frontierswe]]
 - [[openai-codex]]
 - [[peter-steinberger]]
+- [[gpt-5-6-and-openai-build-week-aimeowyak]]

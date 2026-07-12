@@ -3,8 +3,8 @@ title: Codex (OpenAI)
 type: entity
 tags: [ai, tools, cli, coding, harness]
 created: 2026-04-18
-updated: 2026-07-05
-sources: [alex-ker-harnesses-optimize.md, Piyalitt Ittichaiwong - GPT-5.5 Launch.md, "รู้จักกับ Loop Engineering — mikelopster transcript", piyalitt-codex-keynote-attention-not-token.md]
+updated: 2026-07-12
+sources: [alex-ker-harnesses-optimize.md, Piyalitt Ittichaiwong - GPT-5.5 Launch.md, "รู้จักกับ Loop Engineering — mikelopster transcript", piyalitt-codex-keynote-attention-not-token.md, gpt-5-6-and-openai-build-week-aimeowyak.md]
 ---
 
 # Codex (OpenAI)
@@ -56,6 +56,14 @@ Coding harness จาก [[openai|OpenAI]] — เป็นหนึ่งใน
 
 **บทเรียน Peter:** manager agent + worker, [[inner-loop-outer-loop|inner/outer loop]], [[attention-bottleneck|attention]] เป็นคอขวดที่ซื้อเพิ่มไม่ได้.
 
+## Computer use ใน field report GPT-5.6
+
+[[gpt-5-6-and-openai-build-week-aimeowyak|ไลฟ์ AIMeowYak]] มอง [[computer-use|computer use]] เป็นจุดเด่นที่สุดของ Codex + GPT-5.6: agent เปิด browser, คลิกเร็ว, ทำงานเบื้องหลังบน Mac และเปิดหลายงานคู่ขนานได้ ตัวอย่างคืออ่านเว็บ subscription ที่ผู้ใช้ล็อกอินอยู่ สรุปเป็น PowerPoint และใช้สิทธิ์สถาบันของผู้ใช้ดาวน์โหลด paper ฉบับเต็ม
+
+แหล่งเดียวกันมอง Codex เป็น superset ของ Work สำหรับผู้ใช้สาย technical เพราะมี workflow เรื่อง repo/PR เพิ่มมา แต่บอกว่า Work ยังเหมาะกับคนที่ไม่อยากยุ่งกับ Git และต้องการงานเอกสารทั่วไป นี่เป็นการจัดตำแหน่งจากผู้ใช้ ไม่ใช่คำจำกัดความทางการของ OpenAI
+
+จุดเสี่ยงตามมาคือ model ที่มี agency สูงอาจทำเกินสั่งหรือก่อค่าใช้จ่ายโดยไม่ถาม จึงต้องมี permission, budget และ approval gate โดยเฉพาะ action ที่ส่งข้อมูล ซื้อ ลบ หรือใช้ API แพง
+
 ## ดูเพิ่ม
 
 - [[claude-code]]
@@ -71,4 +79,6 @@ Coding harness จาก [[openai|OpenAI]] — เป็นหนึ่งใน
 - [[piyalitt-codex-keynote-attention-not-token]]
 - [[peter-steinberger]]
 - [[value-maxing]]
+- [[computer-use]]
+- [[gpt-5-6-and-openai-build-week-aimeowyak]]
 - [[ai-engineer-worlds-fair]]

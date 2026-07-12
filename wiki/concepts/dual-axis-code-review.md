@@ -3,13 +3,13 @@ title: Dual-Axis Code Review
 type: concept
 tags: [ai, code-review, agents, software-engineering, skills]
 created: 2026-05-12
-updated: 2026-05-12
-sources: ["New Skills! handoff, prototype, review and writing-*  Skills Changelog.md"]
+updated: 2026-07-12
+sources: ["New Skills! handoff, prototype, review and writing-*  Skills Changelog.md", new-skills-v1-1-wayfinder-research-implement-to-spec-to-tickets.md]
 ---
 
 # Dual-Axis Code Review / รีวิวโค้ดสองแกน
 
-**Dual-axis code review** คือแนวคิดการรีวิว diff ด้วยสองคำถามแยกกัน: โค้ดทำตามมาตรฐานของ repo ไหม และโค้ดทำตาม spec จริงไหม. [[matt-pocock|Matt Pocock]] เสนอเป็นทิศทางของ skill `/review` ที่ยังอยู่ระหว่างพัฒนา
+**Dual-axis code review** คือแนวคิดการรีวิว diff ด้วยสองคำถามแยกกัน: โค้ดทำตามมาตรฐานของ repo ไหม และโค้ดทำตาม spec จริงไหม. [[matt-pocock|Matt Pocock]] เคยเสนอเป็น skill `/review` ที่อยู่ระหว่างพัฒนา และใน [[new-skills-v1-1-wayfinder-research-implement-to-spec-to-tickets|Skills v1.1]] มันถูกนำมาใช้จริงเป็นส่วนของ implementation lifecycle แล้ว.
 
 ## ปัญหาที่ต้องแยกเป็นสองแกน
 
@@ -47,6 +47,14 @@ Standards ยากกว่า เพราะมาตรฐานของแ
 
 **ผลคือ:** มนุษย์ยังตัดสินใจสุดท้าย แต่ agent ช่วยแยกความเสี่ยงเป็นสองกองที่อ่านง่ายกว่าเดิม
 
+## v1.1 เพิ่ม refactoring smells
+
+v1.1 เติม vocabulary จากหนังสือ *Refactoring* ของ Martin Fowler เข้า standards axis เช่น mysterious name, duplicated code, feature envy, data clumps, primitive obsession, repeated switches, divergent change, speculative generality และ message chains.
+
+แนวคิดคือ model รู้จักคำเหล่านี้จาก training priors อยู่แล้ว. Skill จึงไม่ต้องอธิบายตำราทั้งเล่ม แค่เรียกชื่อพร้อม gloss สั้น ๆ เพื่อเปิด lens ให้ reviewer มองหา. Pocock รายงานว่าทดลองสองสัปดาห์แล้วช่วยคุณภาพ code มาก แต่เป็น field report ของผู้สร้าง ยังไม่ใช่การทดลองเปรียบเทียบ.
+
+**ได้อะไร:** standards axis ตรวจได้ลึกกว่า formatting/convention และชี้ design smell ด้วยภาษาที่ทีมตามแก้ต่อได้.
+
 ## See also
 
 - [[new-skills-handoff-prototype-review-writing]]
@@ -56,3 +64,4 @@ Standards ยากกว่า เพราะมาตรฐานของแ
 - [[code-is-free]]
 - [[software-entropy]]
 - [[alignment-bottleneck]]
+- [[new-skills-v1-1-wayfinder-research-implement-to-spec-to-tickets]]

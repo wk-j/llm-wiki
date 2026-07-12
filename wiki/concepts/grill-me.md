@@ -3,8 +3,8 @@ title: Grill Me
 type: concept
 tags: [ai-skill, planning, alignment, pocock]
 created: 2026-05-09
-updated: 2026-07-04
-sources: [matt-pocock-software-fundamentals.md, "New Skills! handoff, prototype, review and writing-*  Skills Changelog.md", "Matt Pocock’s Agentic Engineering Workflow (just copy him).md", a-field-guide-to-fable-finding-your-unknowns.md]
+updated: 2026-07-12
+sources: [matt-pocock-software-fundamentals.md, "New Skills! handoff, prototype, review and writing-*  Skills Changelog.md", "Matt Pocock’s Agentic Engineering Workflow (just copy him).md", a-field-guide-to-fable-finding-your-unknowns.md, wayfinder-skill.md, new-skills-v1-1-wayfinder-research-implement-to-spec-to-tickets.md]
 ---
 
 # Grill Me / ทักษะการตั้งคำถามไล่บี้
@@ -42,6 +42,14 @@ David เสริมเวอร์ชันของตัวเอง: แท
 
 จุดที่เพิ่มจากมุมของ Pocock คือเกณฑ์จัดลำดับ: ถามเรื่องที่คำตอบ *เปลี่ยน architecture* ก่อน เพราะนั่นคือ [[unknowns-matrix|unknown]] ที่แพงที่สุดถ้าไปเจอทีหลัง — สองแหล่งอิสระ (educator ภายนอก + คนในทีมผู้สร้างเครื่องมือ) มาบรรจบที่วิธีเดียวกัน ทำให้ pattern นี้น่าเชื่อขึ้น
 
+## v1.1: confirmation gate และ facts vs decisions
+
+[[new-skills-v1-1-wayfinder-research-implement-to-spec-to-tickets|Skills v1.1]] เพิ่ม boundary ให้ grilling ชัดขึ้น. Agent ควรสำรวจ codebase เพื่อหา **facts** เอง แต่ **decisions** ต้องถามผู้ใช้. ถ้า agent ตอบ decision แทนคน เท่ากับมัน “grill ตัวเอง” และเปลี่ยน best guess เป็น intent โดยไม่มีเจ้าของยืนยัน.
+
+ตอนจบยังมี confirmation gate: ห้าม enact plan จนผู้ใช้ยืนยันว่า shared understanding ตรงกัน. Gate นี้แก้ failure mode ที่ session ถามครบแล้วไหลไป implementation ทันที.
+
+**ผลคือ:** skill แยกงานค้นข้อมูลออกจากงานใช้วิจารณญาณ และรักษาคนไว้ตรง decision boundary.
+
 ## ดูเพิ่ม
 - [[matt-pocock]]
 - [[field-guide-to-fable-finding-unknowns]]
@@ -54,3 +62,5 @@ David เสริมเวอร์ชันของตัวเอง: แท
 - [[alignment-bottleneck]]
 - [[agent-handoff-documents]]
 - [[throwaway-prototyping]]
+- [[wayfinding]]
+- [[new-skills-v1-1-wayfinder-research-implement-to-spec-to-tickets]]

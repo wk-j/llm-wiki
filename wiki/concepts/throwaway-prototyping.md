@@ -3,8 +3,8 @@ title: Throwaway Prototyping
 type: concept
 tags: [ai, prototyping, workflow, ui, software-engineering]
 created: 2026-05-12
-updated: 2026-07-04
-sources: ["New Skills! handoff, prototype, review and writing-*  Skills Changelog.md", a-field-guide-to-fable-finding-your-unknowns.md]
+updated: 2026-07-12
+sources: ["New Skills! handoff, prototype, review and writing-*  Skills Changelog.md", a-field-guide-to-fable-finding-your-unknowns.md, new-skills-v1-1-wayfinder-research-implement-to-spec-to-tickets.md]
 ---
 
 # Throwaway Prototyping / Prototype แบบทิ้งได้
@@ -53,6 +53,10 @@ Prototype ที่ดีควรถูกส่งต่อให้ implement
 3. Handoff ผล prototype ไปให้ implementation agent
 4. Review ผลจริงตาม spec และ repo standards
 
+ใน [[new-skills-v1-1-wayfinder-research-implement-to-spec-to-tickets|Skills v1.1]], prototype ยังเป็น ticket type ของ [[wayfinding]]. มันอยู่ก่อน spec และใช้เมื่อ decision ต้องตอบจากของจริงว่า “ควรหน้าตาอย่างไร” หรือ “ควรทำงานอย่างไร”. Pocock แนะนำ Wayfinder + prototype เป็นพิเศษกับ frontend เพราะข้อความล้วนถ่ายทอด interaction และ taste ได้ไม่ครบ.
+
+**ผลคือ:** prototype ไม่ได้เป็นแค่ handoff ชั่วคราว แต่กลายเป็น primary evidence ของ decision บน issue map ก่อนกลั่นเป็น spec.
+
 ## ข้อควรระวัง
 
 คำว่า throwaway ต้องจริง. ถ้า prototype ถูกยกเข้า production แบบไม่ตรวจ จะกลายเป็น [[vibecoded-slop|vibecoded slop]] อีกแบบหนึ่ง
@@ -70,3 +74,5 @@ Prototype มีไว้หาคำตอบ ไม่ใช่เลี่ย
 - [[ai-orchestrator]]
 - [[custom-editing-interfaces]]
 - [[html-artifacts]]
+- [[wayfinding]]
+- [[new-skills-v1-1-wayfinder-research-implement-to-spec-to-tickets]]

@@ -3,8 +3,8 @@ title: Queues over Loops
 type: concept
 tags: [ai, agents, loops, afk, workflow, orchestration]
 created: 2026-06-21
-updated: 2026-06-28
-sources: ["Matt Pocock’s Agentic Engineering Workflow (just copy him).md", "รู้จักกับ Loop Engineering — mikelopster transcript"]
+updated: 2026-07-12
+sources: ["Matt Pocock’s Agentic Engineering Workflow (just copy him).md", "รู้จักกับ Loop Engineering — mikelopster transcript", wayfinder-skill.md]
 ---
 
 # Queues over Loops / มองงานเป็นคิว ไม่ใช่ลูป
@@ -64,3 +64,4 @@ Matt ไม่ได้ปฏิเสธ [[loop-engineering|loop engineering]] 
 - [[sandcastle]]
 - [[agentic-code-review]]
 - [[mikelopster-loop-engineering]]
+- [[wayfinding]]

@@ -3,8 +3,8 @@ title: Specs-to-Code
 type: concept
 tags: [ai-coding, automation, workflow, hype]
 created: 2026-05-09
-updated: 2026-06-11
-sources: [matt-pocock-software-fundamentals.md, "Stop Writing Specs. Start Writing Facts. The Entire SDD Movement Is Already Obsolete..md"]
+updated: 2026-07-12
+sources: [matt-pocock-software-fundamentals.md, "Stop Writing Specs. Start Writing Facts. The Entire SDD Movement Is Already Obsolete..md", new-skills-v1-1-wayfinder-research-implement-to-spec-to-tickets.md]
 ---
 
 # Specs-to-Code / จากสเปกสู่โค้ด (โดยไม่ดูไส้ใน)
@@ -30,6 +30,14 @@ sources: [matt-pocock-software-fundamentals.md, "Stop Writing Specs. Start Writi
 ## สิ่งที่ควรจะเป็น
 แทนที่จะละทิ้งโค้ด มนุษย์ควรใช้ AI เป็นเครื่องมือช่วยในการ implement แต่ยังต้องรักษาอำนาจในการตัดสินใจเชิงสถาปัตยกรรม (Architectural decisions) และตรวจสอบความถูกต้องของโค้ดที่ออกมาเสมอ โดยอาจใช้ [[html-artifacts]] เพื่อสร้างแผนงาน (Plans) ที่อ่านง่ายและมีรายละเอียดครบถ้วนแทนการใช้ Markdown เพียงอย่างเดียว
 
+## `/to-spec` ไม่ได้แปลว่า Specs-to-Code
+
+ชื่อ `/to-spec` ใน [[new-skills-v1-1-wayfinder-research-implement-to-spec-to-tickets|Skills v1.1]] อาจดูเหมือนพากลับมาหา pattern นี้ แต่ flow ที่ Pocock เสนอมี boundary เพิ่มทั้งสองฝั่ง. ก่อน spec มี grilling/Wayfinder, prototype และ human decisions. หลัง spec มี ticket ต่อ session, TDD, type checking, tests, [[dual-axis-code-review|review สองแกน]] และ commit.
+
+ดังนั้น tension ที่ควรเก็บคือ: Pocock ยังใช้ spec เป็น artifact กลาง แม้เขาวิจารณ์การ generate code แบบไม่ดูไส้ใน. สำหรับเขา ปัญหาไม่ใช่ “มี spec” แต่คือการเชื่อว่า spec ตัด judgement, verification และ ownership ออกจากวงจรได้.
+
+**ผลคือ:** `/to-spec` เป็น handoff ใน engineering lifecycle ไม่ใช่เครื่อง compile prose เป็น code ที่ไว้ใจได้ทันที.
+
 ## ดูเพิ่ม
 - [[matt-pocock]]
 - [[vibe-coding]]
@@ -38,3 +46,4 @@ sources: [matt-pocock-software-fundamentals.md, "Stop Writing Specs. Start Writi
 - [[html-artifacts]] — สื่อกลางที่ช่วยให้ specs อ่านง่ายและตรวจสอบได้จริง
 - [[spec-driven-development]] — movement เต็มรูปของแนวคิดนี้ พร้อมขอบเขตที่มันยังชนะ
 - [[facts-first]] — ข้อเสนอทดแทน: เขียน fact ที่รันได้แทน spec ที่ต้องตีความ
+- [[new-skills-v1-1-wayfinder-research-implement-to-spec-to-tickets]]

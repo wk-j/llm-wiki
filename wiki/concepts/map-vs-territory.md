@@ -3,8 +3,8 @@ title: Map vs Territory
 type: concept
 tags: [ai, agents, prompting, mental-model, epistemology]
 created: 2026-07-04
-updated: 2026-07-04
-sources: [a-field-guide-to-fable-finding-your-unknowns.md]
+updated: 2026-07-12
+sources: [a-field-guide-to-fable-finding-your-unknowns.md, wayfinder-skill.md]
 ---
 
 # Map vs Territory / แผนที่ไม่ใช่พื้นที่จริง
@@ -43,3 +43,4 @@ sources: [a-field-guide-to-fable-finding-your-unknowns.md]
 - [[intent-gap]]
 - [[fable]]
 - [[thariq-shihipar]]
+- [[wayfinding]]

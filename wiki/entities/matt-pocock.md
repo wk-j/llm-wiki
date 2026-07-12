@@ -3,8 +3,8 @@ title: Matt Pocock
 type: entity
 tags: [developer, typescript, ai, automation]
 created: 2026-04-25
-updated: 2026-06-29
-sources: [matt-pocock-software-fundamentals.md, "New Skills! handoff, prototype, review and writing-*  Skills Changelog.md", "Matt Pocock’s Agentic Engineering Workflow (just copy him).md", matt-pocock-dumb-zone-compaction.md]
+updated: 2026-07-12
+sources: [matt-pocock-software-fundamentals.md, "New Skills! handoff, prototype, review and writing-*  Skills Changelog.md", "Matt Pocock’s Agentic Engineering Workflow (just copy him).md", matt-pocock-dumb-zone-compaction.md, wayfinder-skill.md, new-skills-v1-1-wayfinder-research-implement-to-spec-to-tickets.md]
 ---
 
 # Matt Pocock
@@ -41,7 +41,7 @@ Pocock เชื่อว่า **"Software Fundamentals Matter More Than Ever"*
 - **[[skill-procedures-vs-abilities|Skills = procedures, not abilities]]** — ชอบ skill ที่ user สั่งเอง เก็บความรู้ไว้ในหัวคน ไม่ leak description เข้า context
 - **Self-improving systems** — "ถ้ามีคนขโมยจักรยานเรื่อย ๆ ก็ซื้อกุญแจล็อก": อย่าแค่ให้ model แพง ๆ เจอ bug ลึก ให้รัน cron review ด้วย model ถูก ๆ แทน
 - **Setup** — [[claude-code|Claude Code]] + [[claude-opus-4-8|Opus 4.8]] effort `medium`; งาน AFK ผ่าน [[sandcastle|Sandcastle]] บน GitHub Actions; รอ ~1 เดือนก่อนรับ model ใหม่; ยังไม่ตัดสินใจเรื่อง Fable
-- **Skills repo** — `github.com/mattpocockuk/skills` (`npx skills latest add`), เว็บ/นิวส์เลตเตอร์ที่ aihero.dev
+- **Skills repo** — `github.com/mattpocock/skills` (`npx skills latest add`), เว็บ/นิวส์เลตเตอร์ที่ aihero.dev
 
 **ทักษะของคุณคือเพดานของ AI** ("your skills are the ceiling on what AI can do") — AI ทำให้ senior เก่งขึ้น 10 เท่า แต่ junior ได้นิดเดียว ดู [[strategic-vs-tactical-programming]]
 
@@ -51,10 +51,25 @@ Pocock เชื่อว่า **"Software Fundamentals Matter More Than Ever"*
 
 มุมนี้ต่อจาก harness-first ของเขาโดยตรง: session management เป็นส่วนหนึ่งของ [[coding-harness|harness]] ที่คนควบคุมได้. เขาไม่ได้เสนอให้ compact ตลอดเวลา แต่ให้ compact ตอนมี phase boundary ที่สรุป state ได้จริง.
 
+## Wayfinder: วางแผนข้ามหลาย session (2026-07)
+
+ใน [[wayfinder-skill|Wayfinder Skill]], Pocock เสนอ [[wayfinding|wayfinding]] สำหรับ effort ที่ใหญ่เกินหนึ่ง agent session และยังมองเส้นทางไม่ครบ. ให้ตั้ง destination ก่อน แล้วเก็บ state ไว้ใน issue map. คำถามที่คมแล้วกลายเป็น ticket; เรื่องที่ยังตั้งคำถามไม่ได้อยู่ใน fog; ticket ที่เปิด ไม่มี blocker และไม่มี assignee คือ frontier ที่ session ถัดไปหยิบได้.
+
+แนวคิดนี้ต่อจาก [[queues-over-loops]] โดยตรง แต่เปลี่ยนจากคิว execution มาเป็นคิวของ decision และ investigation. แต่ละ session claim และปิดได้หนึ่ง ticket แล้วค่อยอัปเดต map ตามสิ่งที่เพิ่งรู้. งานจึงขนานได้โดยไม่ต้อง pretend ว่า roadmap ทั้งก้อนชัดตั้งแต่ต้น.
+
+## Skills v1.1: lifecycle เต็มเส้น (2026-07)
+
+ใน [[new-skills-v1-1-wayfinder-research-implement-to-spec-to-tickets|Skills v1.1 changelog]], Pocock ประกอบ skill ที่มีให้เป็น flow เต็ม: `grill/wayfind → spec → tickets → implement → review → commit`. `/to-PRD` เปลี่ยนเป็น `/to-spec`; `/to-issues` เปลี่ยนเป็น `/to-tickets`; และ `/review` ที่เคยอยู่ระหว่างทำถูกนำมาใช้จริงพร้อม refactoring smells.
+
+การเปลี่ยนที่สำคัญกว่าชื่อคือ boundary ของ judgement. Agent หา facts จาก repo ได้เอง แต่ decisions ต้องถามคน. Grilling จึงมี confirmation gate ห้ามรีบ implement ก่อน shared understanding ได้รับการยืนยัน. ส่วน implementation ใช้ TDD/test/type check แล้วส่งต่อให้ review สองแกน.
+
 ## ดูเพิ่ม
 - [[matt-pocock-software-fundamentals]]
 - [[matt-pocock-agentic-workflow]]
 - [[matt-pocock-dumb-zone-compaction]]
+- [[wayfinder-skill]]
+- [[wayfinding]]
+- [[new-skills-v1-1-wayfinder-research-implement-to-spec-to-tickets]]
 - [[matt-pocock-4-ai-terms]]
 - [[new-skills-handoff-prototype-review-writing]]
 - [[david-ondrej]]
