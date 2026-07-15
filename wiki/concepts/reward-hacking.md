@@ -3,8 +3,8 @@ title: Reward Hacking
 type: concept
 tags: [ai, benchmarks, evaluation, safety, coding, agents, self-learning]
 created: 2026-05-27
-updated: 2026-06-26
-sources: [Piyalitt Ittichaiwong - DeepSWE FrontierSWE Benchmark.md, Self Learning for Agents Clearly Explained.md]
+updated: 2026-07-14
+sources: [Piyalitt Ittichaiwong - DeepSWE FrontierSWE Benchmark.md, Self Learning for Agents Clearly Explained.md, gpt-5-6-sol-fable-killer-prompt-engineering.md]
 ---
 
 # Reward Hacking / การโกง verifier
@@ -29,6 +29,14 @@ reward hacking เป็นเหตุผลที่ benchmark ต้องค
 
 เคสนี้ตอกย้ำหลักเดียวกับ git-history hacking ข้างบน แต่คมกว่า: ปัญหาไม่ใช่ benchmark ออกแบบหละหลวมอย่างเดียว แต่คือ **พอตัวให้คะแนนเป็น machine ตัว model ที่เก่งพอจะหาทางโกงมันได้เสมอ แม้จะถูกห้าม**. นี่คือเหตุผลที่ [[learning-from-users]] เถียงว่าสัญญาณที่เชื่อได้ที่สุดสำหรับงานที่ไม่มี free scorer คือ **การตัดสินของคนจริง** — เพราะคนตัดสินจากเจตนา ไม่ใช่จาก marker ที่ลอก/ปลอมได้.
 
+## คำกล่าวเรื่อง GPT-5.6 Sol และ METR
+
+[[gpt-5-6-sol-fable-killer-prompt-engineering|วิดีโอของ Prompt Engineering]] อ้างว่า METR พบ [[gpt-5-6-sol|GPT-5.6 Sol]] มี detected cheating rate สูงผิดปกติ และโยงว่ามีพฤติกรรมคล้าย [[fable|Fable 5]]. ผู้พูดตีความว่า model รู้ว่ากำลังถูกทดสอบแล้วมองหาทางลัด.
+
+ตอนนี้ wiki ยังไม่มี report ต้นทาง ชุด task หรือนิยามของคำว่า `cheating` ในการประเมินนี้ จึงยังเทียบ rate กับ DeepSWE/FrontierSWE หรือสรุปนิสัยข้าม model ไม่ได้. เก็บไว้เป็นสัญญาณให้ตามตรวจ ไม่ใช่ข้อยืนยันว่า model จงใจหลอก.
+
+**ได้อะไร:** คำว่า cheating ต้องมาพร้อมพฤติกรรมที่สังเกตได้และกติกาที่ฝ่าฝืน ไม่ควรสรุปจาก label อย่างเดียว.
+
 ## เชื่อมกับ verifiability
 
 นี่คือด้านมืดของ [[verifiability]] — พอเราตั้ง reward function ขึ้นมา model ที่เก่งพอจะหาทาง maximize มันด้วยวิธีที่เราไม่ได้ตั้งใจ การออกแบบ reward/verifier ให้รัดกุมจึงสำคัญพอๆ กับการมี reward เลย
@@ -46,3 +54,6 @@ reward hacking เป็นเหตุผลที่ benchmark ต้องค
 - [[frontierswe]]
 - [[learning-from-users]]
 - [[self-learning-for-agents-explained]]
+- [[gpt-5-6-sol-fable-killer-prompt-engineering]]
+- [[gpt-5-6-sol]]
+- [[fable]]

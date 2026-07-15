@@ -3,8 +3,8 @@ title: Model Cyber Capability Emergence
 type: concept
 tags: [ai, cybersecurity, emergence, ai-safety, anthropic]
 created: 2026-04-22
-updated: 2026-04-22
-sources: [Claude Mythos Preview.md]
+updated: 2026-07-15
+sources: [Claude Mythos Preview.md, framework-frontier-ai-dawning-new-age.md]
 ---
 
 # Model Cyber Capability Emergence / ความสามารถด้าน cybersecurity ที่เกิดขึ้นเองจากโมเดล
@@ -54,6 +54,16 @@ Opus 4.6 "far better at identifying and fixing vulnerabilities than at exploitin
 3. **Defender ได้เปรียบในระยะยาว** — แต่ transitional period "fraught"; attacker อาจได้เปรียบก่อน
 4. **Memory-safe language ยิ่งสำคัญ** — ส่วนใหญ่ของ vuln ที่ Mythos เจอเป็น memory corruption ใน C/C++ แต่ "memory-safe" language ก็ไม่ปลอดภัย 100% เพราะ `unsafe` blocks (Rust) / JNI (Java) / ctypes (Python)
 
+## จาก capability claim ไปสู่ pre-release test
+
+[[demis-hassabis|Demis Hassabis]] เขียนใน [[framework-frontier-ai-dawning-new-age|กรอบ Frontier AI]] ว่า cybersecurity เป็นความเสี่ยงที่ frontier model แสดงให้เห็นแล้ว ขณะที่ bio/nuclear risk อาจตามมา. เขาเสนอ [[frontier-ai-standards-body|Standards Body]] ให้ทดสอบ cyber capability, guardrail bypass และ deception ก่อนปล่อย model.
+
+ข้อเสนอนี้เติมชั้น governance ให้หลักฐานจาก Mythos. หน้าเดิมบอกว่า offensive capability โผล่เป็น side effect ของความเก่งทั่วไป; กรอบใหม่บอกว่าถ้าเป็นแบบนั้นจริง เราต้องมี threshold ที่บังคับให้ model ผ่าน scientific evaluation ก่อน deploy ไม่ใช่รอ incident หลัง release.
+
+แต่ยังมีคำถามเปิดว่า cyber test ลับพอจะกัน overfit และสมจริงพอจะทำนาย misuse ได้หรือไม่ และใครมีสิทธิ์ตัดสินว่า capability ระดับไหนข้ามเส้น Frontier-class.
+
+**ผลคือ:** emergence ทำให้ test ตาม feature list ไม่พอ ต้องประเมิน capability ที่ model ไม่ได้ถูกโฆษณาว่ามีด้วย.
+
 ## ได้อะไร
 
 Offensive cyber capability ไม่ใช่ feature ที่ต้อง build แยก — มันเป็น **inevitable side effect** ของการทำโมเดลให้เก่งขึ้นทั่วไป. ทางเลือกไม่ใช่ "จะ train ให้เก่ง security ไหม" แต่เป็น "จะควบคุม/ปล่อยยังไง" — ซึ่งตรงกับที่ [[agent-runtime-untrusted]] บอก: scope by construction, don't rely on model restraint.
@@ -67,3 +77,6 @@ Offensive cyber capability ไม่ใช่ feature ที่ต้อง buil
 - [[graduated-autonomy]]
 - [[auto-mode]]
 - [[advisor-strategy]]
+- [[framework-frontier-ai-dawning-new-age]]
+- [[frontier-ai-standards-body]]
+- [[artificial-general-intelligence]]

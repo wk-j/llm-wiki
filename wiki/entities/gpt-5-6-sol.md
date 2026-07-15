@@ -3,8 +3,8 @@ title: GPT-5.6 Sol
 type: entity
 tags: [ai, models, openai, gpt, science]
 created: 2026-07-01
-updated: 2026-07-12
-sources: [https://openai.com/index/introducing-genebench-pro/, piyalitt-codex-keynote-attention-not-token.md, gpt-5-6-and-openai-build-week-aimeowyak.md]
+updated: 2026-07-14
+sources: ["https://openai.com/index/introducing-genebench-pro/", piyalitt-codex-keynote-attention-not-token.md, gpt-5-6-and-openai-build-week-aimeowyak.md, gpt-5-6-sol-fable-killer-prompt-engineering.md]
 ---
 
 # GPT-5.6 Sol / ตระกูล GPT-5.6
@@ -49,9 +49,17 @@ OpenAI preview ตระกูล 5.6 สัปดาห์ก่อนงาน
 
 ไลฟ์ยังเก็บความตึงไว้สองด้าน: GPT-5.6 ทำ coding/demo ซับซ้อนได้ดีขึ้นมาก แต่ high-agency behavior ทำให้มันอาจทำเกินสั่งหรือเผาค่าใช้จ่ายโดยไม่ถาม จึงต้องเพิ่ม permission, budget และ approval gate ตามความสามารถที่เพิ่มขึ้น
 
+## มุม cost, งานยาว และ automated research (Prompt Engineering, 2026-07-14)
+
+[[gpt-5-6-sol-fable-killer-prompt-engineering|รีวิวของ Prompt Engineering]] วาง Sol เป็นคู่แข่งตรงของ [[fable|Claude Fable 5]] และบอกว่าเรื่องใหญ่คือ cost-efficiency: coding/terminal benchmark บางชุดสูสีหรือดีกว่าในต้นทุนต่ำกว่า. แต่ผู้พูดก็ทักว่าบางกราฟใช้ effort ฝั่ง Claude ไม่ถึงระดับสูงสุด จึงยังเทียบแบบ apples-to-apples ไม่ได้.
+
+คลิปเพิ่มอีกสองมุม. หนึ่งคือ early tester ปล่อย model วนสร้าง Manhattan แบบ voxel เกือบหนึ่งสัปดาห์ ซึ่งเป็นตัวอย่างของ [[loop-engineering|loop engineering]]. สองคือคำกล่าวว่า OpenAI ใช้ Sol ทำ internal research, optimize AI infrastructure และออกแบบ experiment เพื่อ post-train Luna. ถ้าตรงกับเอกสารต้นทาง ส่วนหลังคือ [[self-learning-agents|self-improvement ที่เปลี่ยน model]] ไม่ใช่การเรียนผ่าน memory อย่างเดียว.
+
+อย่างไรก็ดี ผู้พูดยังเข้าใช้ Sol ไม่ได้และ demo ตัวติดตาม ISS บนรุ่นที่เขาใช้มีแผนที่แสดงไม่ครบ. หน้า wiki จึงเก็บคำว่า “Fable killer” เป็นคำถามเปิด: benchmark กับราคาให้เหตุผลว่าน่าจับตา แต่ประสบการณ์ตรงในคลิปยังไม่ยืนยันคำโฆษณา.
+
 ## ข้อควรระวัง
 
-หน้านี้รวมข้อมูลจาก GeneBench-Pro (OpenAI blog), keynote summary และไลฟ์รีวิวผ่าน Piyalitt — ยังไม่ควรสรุป capability กว้าง ๆ นอกเหนือจากแหล่งเหล่านี้. ชื่อ variant, effort tier, ราคา, ความเร็ว และ benchmark ที่อ้างในไลฟ์ควรตรวจกับเอกสาร OpenAI/แหล่งต้นทางก่อนอ้างเป็นข้อเท็จจริง
+หน้านี้รวมข้อมูลจาก GeneBench-Pro (OpenAI blog), keynote summary และรีวิวจาก Piyalitt/Prompt Engineering — ยังไม่ควรสรุป capability กว้าง ๆ นอกเหนือจากแหล่งเหล่านี้. ชื่อ variant, effort tier, ราคา, ความเร็ว, benchmark, ARC-AGI-3 และ cheating rate ควรตรวจกับเอกสาร OpenAI/ผู้ประเมินต้นทางก่อนอ้างเป็นข้อเท็จจริง
 
 ## See also
 
@@ -64,3 +72,7 @@ OpenAI preview ตระกูล 5.6 สัปดาห์ก่อนงาน
 - [[piyalitt-codex-keynote-attention-not-token]]
 - [[gpt-5-6-and-openai-build-week-aimeowyak]]
 - [[computer-use]]
+- [[gpt-5-6-sol-fable-killer-prompt-engineering]]
+- [[fable]]
+- [[self-learning-agents]]
+- [[reward-hacking]]

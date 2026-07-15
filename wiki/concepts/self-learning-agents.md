@@ -3,63 +3,132 @@ title: Self-Learning Agents
 type: concept
 tags: [agent-memory, multi-agent, anthropic, vision, self-learning]
 created: 2026-05-09
-updated: 2026-06-26
-sources: [memory-and-dreaming-self-learning-agents, Self Learning for Agents Clearly Explained.md]
+updated: 2026-07-15
+sources: [memory-and-dreaming-self-learning-agents, Self Learning for Agents Clearly Explained.md, gpt-5-6-sol-fable-killer-prompt-engineering.md, framework-frontier-ai-dawning-new-age.md]
 ---
 
-# Self-Learning Agents / agent ที่เรียนรู้เอง
+# Self-Learning Agents / Agent ที่เก่งขึ้นจากประสบการณ์เดิม
 
-แนวคิดที่ [[anthropic|Anthropic]] วาง memory เป็น primitive ตัวต่อไป — agent ที่ "เก่งขึ้นเอง" จากงานของตัวเองและของ agent ตัวอื่นในระบบเดียวกัน โดย**ไม่ต้อง retrain โมเดล** ทุกอย่างเกิดจากการสะสมและ curate memory ระหว่างที่รัน
+คำว่า **self-learning agent** ชวนให้คิดว่า AI ฝึกสมองตัวเองใหม่อยู่ตลอด แต่ระบบที่ถูกเรียกแบบนี้ส่วนใหญ่ไม่ได้ทำถึงขั้นนั้น หลายระบบแค่จดสิ่งที่เคยทำไว้ แล้วอ่านบันทึกนั้นก่อนเริ่มงานครั้งต่อไป
 
-> ภาพรวมก่อนลงรายละเอียด: คำว่า "agent เรียนรู้เอง" จริง ๆ แตกได้เป็น 3 ชั้น (model / harness / context — ดู [[three-learning-layers]]). สิ่งที่ Anthropic ทำในหน้านี้คือ **ชั้น context** เป็นหลัก: เรียนผ่าน memory ที่เป็น text นอก model ไม่ใช่การแก้ weight. นั่นคือชั้นที่ product เกือบทุกตัวควรเริ่ม เพราะคุณเป็นเจ้าของมัน ส่วน weight เป็นของ lab.
+เวลาเจอคำว่า “เรียนรู้เอง” จึงต้องถามก่อนว่า **ส่วนไหนของระบบเปลี่ยน** เพราะมีได้สามแบบ และผลไม่เหมือนกันเลย
 
-## 3 อย่างที่ agent เรียนได้จาก memory
+## การเรียนรู้มีสามแบบ
 
-จาก talk ของ Mahes ([[anthropic|Anthropic]] PM, 2026-05-09):
+| สิ่งที่เปลี่ยน | อธิบายง่าย ๆ | ตัวอย่าง |
+|---|---|---|
+| **Context** | ตัว AI เหมือนเดิม แต่ได้อ่านบันทึกหรือคู่มือใหม่ | memory, skill, `AGENTS.md` |
+| **Harness** | ตัว AI เหมือนเดิม แต่วิธีแจกงาน ใช้ tool และตรวจคำตอบเปลี่ยน | loop, test, rule, reviewer |
+| **Model** | ฝึกตัว AI ใหม่จนค่าภายในเปลี่ยน | fine-tune, post-training |
 
-1. **เรื่อง task** — success criteria, common mistake, strategy ที่ใช้ได้/ไม่ได้
-2. **เรื่อง environment** — codebase ที่ทำงานด้วย, ไฟล์/asset ที่ต้อง keep up to date
-3. **เรื่อง agent ตัวอื่น** — เห็น session ของคนอื่น (ผ่าน [[dreaming]]) แล้วเอามารวม
+ลองนึกถึงพนักงานคนเดิม:
 
-ข้อ 3 คือสิ่งที่ Mahes บอกว่าตื่นเต้นที่สุด เพราะ multi-agent system ขนาดใหญ่ที่ทำงานใน environment เดียวกัน จะค่อยๆ ก่อ "world model" ของระบบนั้นขึ้นมาเอง
+- แจกคู่มือฉบับใหม่ให้เขาอ่าน = เปลี่ยน **context**
+- ปรับขั้นตอนทำงานและเพิ่มคนตรวจ = เปลี่ยน **harness**
+- ส่งเขาไปฝึกจนมีทักษะใหม่ = เปลี่ยน **model**
 
-## โครงที่ Anthropic วางให้
+กรอบเต็มอยู่ที่ [[three-learning-layers|การเรียนรู้สามชั้น]] แต่ใจความที่ต้องจำมีแค่นี้: การเพิ่ม memory ไม่ได้แปลว่า model ฉลาดขึ้น ตัว model ยังเป็นตัวเดิม
 
-Self-learning ใน Managed Agents ตั้งอยู่บน 2 primitive:
+## แบบของ Anthropic คือให้ Agent จำงานเก่า
 
-1. **[[agent-memory-filesystem|Memory as file system]]** — Claude อ่าน/เขียน memory ใน-session เอง
-2. **[[dreaming|Dreaming]]** — batch process นอก session อ่าน transcript ข้าม agent หา pattern ที่ตัวเดียวมองไม่เห็น แล้ว curate memory store
+แนวทางของ [[anthropic|Anthropic]] ใน [[memory-and-dreaming-self-learning-agents|Memory and Dreaming]] อยู่ที่ชั้น **context** เป็นหลัก ระบบมีสองส่วน:
 
-ผลคือวงจร "เรียนระหว่างทำ → ฝันรวมความรู้ตอน idle → ตื่นมาเริ่มงานใหม่ที่เก่งขึ้น" — แอบมีกลิ่น cognitive science (memory consolidation ระหว่างนอนหลับ) ปนอยู่ในการตั้งชื่อ
+1. **[[agent-memory-filesystem|Memory]]** — Agent เขียนบันทึกว่างานนี้ทำอย่างไร อะไรพลาด และควรระวังอะไร
+2. **[[dreaming|Dreaming]]** — งานเบื้องหลังที่อ่านบทสนทนาเก่าจาก Agent หลายตัว แล้วจัดบันทึกให้ดีขึ้น
 
-## หลักฐานเบื้องต้น (early customer)
+Dreaming อาจรวมเรื่องซ้ำ ลบข้อมูลเก่า หรือดึงปัญหาที่เกิดซ้ำหลายครั้งขึ้นมาเป็นกฎกลาง จากนั้น Agent ตัวต่อไปก็อ่าน memory ชุดใหม่ก่อนเริ่มงาน
 
-- **Rocketin** — internal knowledge agent: first-pass mistake ลด **90%**
-- **[[harvey-ai|Harvey]]** — legal benchmark: task completion rate **6 เท่า** หลังเปิด dreaming
+ลำดับจึงเป็นแบบนี้:
 
-ตัวเลขพวกนี้คือ "เก่งขึ้นจาก memory ล้วนๆ" โมเดลข้างหลังเป็นตัวเดิม
+`ทำงาน → จดสิ่งที่เจอ → รวมบทเรียนจากหลายงาน → ปรับ memory → ใช้กับงานรอบต่อไป`
 
-## เทียบกับ "self-improvement" รูปแบบอื่น
+ไม่มีขั้นตอนไหนฝึก model ใหม่ ความเก่งที่เพิ่มขึ้นมาจากการมีบันทึกที่ดีกว่าเดิม
 
-- **RLHF / fine-tune** — แก้ที่ weight ของโมเดล ใช้เวลานาน + ต้องใช้ infrastructure training
-- **In-context learning** — โผล่ใน prompt session เดียวจบ ไม่ accumulate
-- **Self-learning agents (memory-based)** — accumulate ข้าม session, ข้าม agent, อยู่ที่ "ภายนอกโมเดล" — ปรับได้เร็วและ portable
+**ได้อะไร:** วิธีนี้ใช้กับ product ได้ง่ายกว่า fine-tune เพราะแก้ข้อความได้ ตรวจย้อนหลังได้ และย้อนกลับไปใช้ฉบับเก่าได้
 
-## ที่ทางในแผนที่ 3 ชั้น
+## Agent จำอะไรได้บ้าง
 
-[[ataiiam|@ataiiam]] ใน [[self-learning-for-agents-explained]] วางแนวทางแบบ Anthropic ลงในแผนที่ที่ใหญ่กว่า — เทียบกับเจ้าอื่นได้ชัดขึ้น:
+Mahes จาก Anthropic แบ่งสิ่งที่ Agent เก็บจากงานเก่าไว้สามกลุ่ม:
 
-- **Layer Model** (เรียนที่ weight) — Karpathy AutoResearch, MIT SEAL, DeepMind AlphaEvolve. รันได้แค่ที่มี "คะแนนฟรี" (code/math) → อยู่แต่ใน lab ไม่ใช่ที่ที่ product ส่วนใหญ่ควรแตะ
-- **Layer Harness** (เรียนที่ scaffold) — [[loop-engineering|loop engineering]], LangChain Deep Agents (เขียน harness ใหม่จาก trace), Self-Harness, [[microsoft|Microsoft]] Agent Framework. ทำได้ใน product แต่ "harness จับได้ ≠ agent ฉลาดขึ้น"
-- **Layer Context** (เรียนที่ memory + skill) — **ตรงนี้คือที่ที่ Anthropic อยู่**: [[dreaming]] = "เขียน memory ใหม่เบื้องหลัง" เวอร์ชัน Anthropic เทียบกับ [[letta|Letta]]/OpenClaw ที่ทำไอเดียเดียวกัน. memory แบ่งเป็น semantic/episodic/procedural ([[agent-memory-types]]) — self-learning จริงต้องใช้สองชนิดหลัง
+1. **วิธีทำงานนั้น** — แบบไหนสำเร็จ แบบไหนมักพลาด และเกณฑ์ว่างานเสร็จคืออะไร
+2. **สภาพแวดล้อม** — codebase อยู่ตรงไหน ใช้ไฟล์ใด และระบบมีข้อจำกัดอะไร
+3. **บทเรียนจาก Agent ตัวอื่น** — ถ้าหลายตัวใช้ memory ร่วมกัน ตัวหนึ่งไม่ต้องพลาดซ้ำในเรื่องที่อีกตัวเจอไปแล้ว
 
-ส่วนที่ thread ชูเพิ่มและหน้านี้ยังไม่ครอบ: สัญญาณที่ดีที่สุดไม่ใช่ run ของ agent เอง แต่คือ **การตัดสินของ user จริง** ที่ปลอมไม่ได้ ดู [[learning-from-users]].
+ตัวอย่างเช่น Agent ตัวแรกพบว่า test ชุดหนึ่งต้องตั้งค่า timezone ก่อนรัน มันจดไว้ใน memory. วันต่อมา Agent อีกตัวอ่านเจอ จึงตั้งค่าก่อนและไม่เสียเวลาตาม error เดิม
 
-## ความเสี่ยง / สิ่งที่ยังไม่ตอบ
+**ผลคือ:** สิ่งที่ดีขึ้นไม่ใช่พลังคิดดิบ แต่คือ Agent เริ่มงานด้วยข้อมูลที่ครบกว่าเดิม
 
-- **Memory ผิดสะสม** — ถ้า agent หลายตัวเชื่อสิ่งเดียวกันที่ผิด dreaming จะแยก signal จาก noise ได้แค่ไหน
-- **Staleness** — environment เปลี่ยน memory เก่ายังใช้ได้ไหม → [[memory-decay]] กับ verification step ของ dreaming พยายามตอบเรื่องนี้
-- **Drift ข้าม agent** — multi-agent ที่ใช้ memory ร่วมอาจเริ่ม converge ไปทางเดียวกันและสูญเสีย diversity ของ approach
+## ตัวเลขที่ Anthropic รายงาน
+
+แหล่งข่าวยกผลจากลูกค้ากลุ่มแรกสองราย:
+
+- Rocketin รายงานว่าความผิดพลาดในคำตอบรอบแรกลดลง **90%**
+- [[harvey-ai|Harvey]] รายงานว่าอัตราทำงานสำเร็จใน legal benchmark บาง scenario เพิ่มขึ้น **6 เท่า** หลังเปิด Dreaming
+
+ตัวเลขเหล่านี้เป็นรายงานจากแหล่งต้นทางและลูกค้ากลุ่มแรก ยังไม่ใช่การทดสอบอิสระ สิ่งที่พอบอกได้คือ model เดิมอาจทำงานดีขึ้นเมื่อ memory ดีขึ้น ไม่ได้พิสูจน์ว่าวิธีนี้ได้ผลเท่ากันกับทุกงาน
+
+## แล้ว Harness เรียนรู้ได้อย่างไร
+
+Harness คือระบบรอบตัว model เช่น prompt, tool, loop และตัวตรวจคำตอบ สมมติ Agent เขียน code แล้ว test ไม่ผ่าน Harness อาจส่ง error กลับไปให้แก้และวนใหม่ แบบนี้ช่วยให้งานรอบนั้นดีขึ้น
+
+แต่ถ้าจบรอบแล้วไม่บันทึกอะไรไว้ Agent อาจพลาดแบบเดิมในวันถัดไป การวนแก้จึงยังไม่ใช่ “การเรียนรู้ข้ามงาน” จนกว่าจะเปลี่ยน failure ที่พบให้เป็น rule, test, skill หรือ memory ถาวร
+
+**ได้อะไร:** ตัวตรวจช่วยจับผิดวันนี้ ส่วน memory กับ rule ช่วยไม่ให้ผิดซ้ำพรุ่งนี้
+
+## การฝึก Model ใหม่เป็นอีกเรื่องหนึ่ง
+
+ชั้น model แพงและควบคุมยากกว่า เพราะต้องเปลี่ยนค่าภายในของ AI จริง เช่น fine-tune หรือ post-train ด้วยข้อมูลและคะแนนชุดใหม่ งานแบบนี้มักอยู่ในห้องวิจัย
+
+[[google-deepmind|AlphaEvolve]] อยู่ใกล้เรื่องนี้แต่ต้องแยกให้ชัด ตัว AlphaEvolve ค้นหา **code** ที่ดีขึ้นด้วยการทดสอบซ้ำ ๆ แหล่งข่าวอ้างว่า code ที่พบช่วยให้การฝึก AI เร็วขึ้น ไม่ได้หมายความว่า AlphaEvolve แก้ค่าภายในของตัวเองทุกครั้ง
+
+ตัวอย่างที่ใกล้กับการเปลี่ยน model โดยตรงกว่ามาจาก [[gpt-5-6-sol-fable-killer-prompt-engineering|วิดีโอของ Prompt Engineering]] ซึ่งอ้างว่า [[gpt-5-6-sol|GPT-5.6 Sol]] ช่วยออกแบบการทดลองเพื่อ post-train Luna
+
+กรณี GPT-5.6 ยังเป็นคำกล่าวผ่านวิดีโอ Wiki ยังไม่ได้ตรวจวิธีทดลอง ตัวเลข หรือระดับความอิสระจากรายงานต้นทาง จึงยังไม่ควรสรุปว่า Sol “วิจัยและฝึก model อื่นเอง” โดยไม่มีคนกำกับ
+
+**ผลคือ:** การจำบทเรียนกับการฝึก model ใหม่อาจถูกเรียกว่า self-improvement เหมือนกัน แต่ต้นทุน หลักฐาน และความเสี่ยงต่างกันมาก
+
+## ใครเป็นคนบอกว่าดีขึ้น
+
+ระบบเรียนรู้ได้ก็ต่อเมื่อมีคนหรือเครื่องบอกว่าคำตอบใหม่ดีกว่าเดิม
+
+- **Code และคณิตศาสตร์** มี test หรือคะแนนที่เครื่องตรวจได้ จึงวนอัตโนมัติได้ง่าย
+- **งานเขียน งาน support และการตัดสินเชิงธุรกิจ** ไม่มีคะแนนตายตัว ต้องอาศัยความเห็นจากคนจริง
+
+ถ้าปล่อยให้ Agent ให้คะแนนตัวเอง มันอาจเลือกทางลัดหรือทำให้ตัวเลขดูดีโดยไม่ได้แก้ปัญหาจริง ดู [[reward-hacking|reward hacking]]. [[learning-from-users|การตัดสินจากผู้ใช้จริง]] จึงสำคัญกับงานที่ test อัตโนมัติตอบไม่ได้
+
+**ได้อะไร:** ก่อนเชื่อว่า Agent เก่งขึ้น ต้องรู้ว่าใครให้คะแนน และคะแนนนั้นตรงกับผลที่คนต้องการจริงหรือไม่
+
+## พอระบบแก้ตัวเองได้ ความเสี่ยงก็เปลี่ยน
+
+[[demis-hassabis|Demis Hassabis]] เตือนใน [[framework-frontier-ai-dawning-new-age|กรอบ Frontier AI]] ว่าระบบที่ทำงานเองมากขึ้นและปรับปรุงตัวเองเป็นลูปต้องมีเครื่องควบคุมที่แข็งแรง
+
+ความเสี่ยงขึ้นอยู่กับชั้นที่เปลี่ยน:
+
+- memory ผิด ทำให้งานรอบต่อไปเริ่มจากข้อมูลผิด
+- harness ผิด อาจเปลี่ยน permission หรือตัวตรวจจนเปิดช่องอันตราย
+- model ที่ช่วยฝึก model รุ่นต่อไป อาจเร่งความสามารถเร็วกว่าที่คนประเมินทัน
+
+ข้อเสนอ [[frontier-ai-standards-body|Frontier AI Standards Body]] จึงไม่ได้ดูแค่คะแนนความฉลาด แต่ต้องดูพฤติกรรมของ Agent การข้ามข้อห้าม และการหลอกตัวตรวจด้วย
+
+## จุดที่ยังต้องระวัง
+
+- **จำเรื่องผิด** — ถ้าบันทึกผิดแล้ว Agent หลายตัวอ่านต่อ ความผิดจะกระจาย
+- **ข้อมูลเก่า** — environment เปลี่ยน แต่ memory ยังเล่าโลกแบบเดิม ดู [[memory-decay]]
+- **คิดเหมือนกันหมด** — Agent หลายตัวอ่าน memory ชุดเดียว อาจเลิกลองวิธีอื่น
+- **กติกาเพี้ยน** — Harness หรือ model เปลี่ยนเร็ว แต่ policy และตัวตรวจตามไม่ทัน
+- **วัดผิดเรื่อง** — คะแนนดีขึ้น แต่ผลที่ผู้ใช้ต้องการจริงกลับแย่ลง
+
+## เช็กลิสต์เวลาเจอคำว่า Self-Learning
+
+ถามห้าข้อนี้ก่อน:
+
+1. อะไรเปลี่ยน—memory, workflow หรือ model
+2. ใครตัดสินว่าของใหม่ดีกว่าเดิม
+3. บทเรียนถูกเก็บไว้ที่ไหน
+4. คนตรวจหรือย้อนกลับการเปลี่ยนแปลงได้ไหม
+5. หลักฐานมาจากการทดสอบอิสระหรือคำกล่าวของผู้สร้าง
+
+ตอบไม่ได้ก็ยังเร็วเกินไปที่จะบอกว่าระบบ “เรียนรู้เอง”
 
 ## See also
 
@@ -76,3 +145,8 @@ Self-learning ใน Managed Agents ตั้งอยู่บน 2 primitive:
 - [[memory-decay]]
 - [[hybrid-memory]]
 - [[letta]]
+- [[gpt-5-6-sol-fable-killer-prompt-engineering]]
+- [[gpt-5-6-sol]]
+- [[framework-frontier-ai-dawning-new-age]]
+- [[frontier-ai-standards-body]]
+- [[artificial-general-intelligence]]

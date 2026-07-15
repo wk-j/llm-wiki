@@ -1191,3 +1191,29 @@ Ingested Matt Pocock's YouTube changelog "New Skills! v1.1 brings /wayfinder, /r
 - Updated concepts: `[[agentic-engineering]]`, `[[grill-me]]`, `[[dual-axis-code-review]]`, `[[throwaway-prototyping]]`, `[[wayfinding]]`, `[[specs-to-code]]`
 - Updated prior source summary: `[[new-skills-handoff-prototype-review-writing]]`
 - Updated `[[index]]` and `hotcache.md`
+
+## [2026-07-14] ingest | GPT 5.6 Sol: Fable Killer?
+Ingested Prompt Engineering's YouTube transcript reviewing GPT-5.6 Sol against Claude Fable 5. Main takeaways: (1) the release story is cost-efficiency at near-frontier performance, but benchmark comparisons remain sensitive to effort, harness and budget; (2) improved UI taste and a week-long voxel Manhattan run suggest stronger coding/loop capability, while the creator's own ISS tracker rendered an incomplete world map; (3) the video claims OpenAI used Sol for recursive self-improvement, research-infrastructure debugging, chip optimization and post-training Luna, but the internal metrics and autonomy level have not been checked against primary reports; (4) a reported high METR cheating rate links stronger models to reward-hacking risk, yet the video does not define the evaluator's task or label; (5) the creator could not access Sol during recording, so “Fable killer” remains an open question rather than a conclusion. Preserved existing Fable field reports and GPT-5.6 claims; added the matched-comparison question instead of overwriting either side.
+- Created source: `[[gpt-5-6-sol-fable-killer-prompt-engineering]]`
+- Updated entities: `[[prompt-engineering]]`, `[[gpt-5-6-sol]]`, `[[fable]]`
+- Updated concepts: `[[ai-token-economics]]`, `[[self-learning-agents]]`, `[[reward-hacking]]`, `[[loop-engineering]]`
+- Updated `[[index]]`, `[[log]]`, and `hotcache.md`
+
+## [2026-07-15] ingest | A Framework for Frontier AI and the Dawning of a New Age
+Ingested Demis Hassabis's X article on AGI, frontier risks and a proposed US-led Frontier AI Standards Body. Main takeaways: (1) Hassabis forecasts AGI within a few years and compares its impact with fire/electricity, but the same article says nobody knows what happens next and experts disagree, so the timeline and post-scarcity vision remain attributed forecasts; (2) cyber risk is presented as already visible, with bio/nuclear and recursively self-improving agent risks ahead; (3) the proposed body would define capability thresholds for Frontier-class models and Frontier Labs, begin with voluntary review up to 30 days before release, then become a mandatory US market gate once validated; (4) evaluations would cover high-risk domains, guardrail bypass and deception, refresh perhaps quarterly, retire saturated tests and grow independent held-out tests plus third-party auditors; (5) the framework applies regardless of country or open/closed status while exempting non-frontier startups/academia; (6) unresolved tensions include industry funding vs capture, secret tests vs due process, open-weight enforceability, benchmark gaming, slowdown authority and international coordination. Preserved uncertainty rather than turning the proposal into current policy or the AGI timeline into consensus.
+- Created source: `[[framework-frontier-ai-dawning-new-age]]`
+- Created entity: `[[demis-hassabis]]`
+- Created concepts: `[[artificial-general-intelligence]]`, `[[frontier-ai-standards-body]]`
+- Updated entity: `[[google-deepmind]]`
+- Updated concepts: `[[self-learning-agents]]`, `[[model-cyber-capability-emergence]]`, `[[benchmark-contamination]]`, `[[open-weight-models]]`
+- Updated `[[index]]`, `[[log]]`, and `hotcache.md`
+
+## [2026-07-15] maintain | Rewrite Google DeepMind for Thai readability
+Rewrote `[[google-deepmind]]` after user feedback that the page was difficult for Thai readers. Kept the same claims and source boundaries, but replaced unexplained phrases such as “self-learning model layer,” “free scorer,” and “frontier capability” with a step-by-step explanation. The page now introduces Google DeepMind first, explains AlphaEvolve's five-step loop with concrete language, states where automatic scoring works and fails, then separates Demis Hassabis's AGI forecast from his proposed Frontier AI Standards Body. Added a final checklist distinguishing reported AlphaEvolve results, forecasts, hoped-for outcomes and policy proposals.
+- Updated entity: `[[google-deepmind]]`
+- Updated `[[index]]`, `[[log]]`, and `hotcache.md`
+
+## [2026-07-15] maintain | Rewrite Self-Learning Agents for Thai readability
+Rewrote `[[self-learning-agents]]` after the same readability issue found on `[[google-deepmind]]`. The old page introduced model/harness/context, scorer, dreaming and recursive self-improvement through dense mixed-language paragraphs. The new page opens with a three-row plain-language table and a workplace analogy, then explains Anthropic Memory + Dreaming as a concrete flow. It separates context updates, harness changes and model training; keeps Rocketin/Harvey/GPT-5.6 numbers source-attributed; explains why machine scoring works for code/math but human judgement is needed elsewhere; and ends with a five-question checklist for evaluating self-learning claims.
+- Updated concept: `[[self-learning-agents]]`
+- Updated `[[index]]`, `[[log]]`, and `hotcache.md`

@@ -1,6 +1,8 @@
 # Index
 
 ## Sources
+- [[framework-frontier-ai-dawning-new-age]] — Demis Hassabis (X article, ingest 2026-07-15): คาด AGI อาจมาในอีกไม่กี่ปีและเสนอ Frontier AI Standards Body แบบ public-private/SRO; จัด model ตาม capability threshold, เริ่ม voluntary review ก่อน release 30 วันแล้วค่อยเป็น US market gate, หมุน held-out test รายไตรมาส, ใช้กับ open/closed ทุกประเทศแต่ยกเว้น non-frontier; timeline, post-scarcity และกลไกบังคับใช้ยังเป็น forecast/ข้อเสนอ
+- [[gpt-5-6-sol-fable-killer-prompt-engineering]] — Prompt Engineering (YouTube, ingest 2026-07-14): รีวิว GPT-5.6 Sol เทียบ Fable 5 โดยชู cost-efficiency, coding/UI, loop ที่รันหลายวัน และ automated research; ผู้พูดยังเข้าใช้ Sol ไม่ได้และ demo ISS มี visual bug จึงเก็บคำว่า “Fable killer” เป็นคำถามเปิด พร้อม caveat เรื่อง effort/harness, ตัวเลข benchmark และ cheating claim ที่ยังไม่ได้ตรวจต้นทาง
 - [[new-skills-v1-1-wayfinder-research-implement-to-spec-to-tickets]] — Matt Pocock (YouTube, Skills v1.1, ingest 2026-07-12): ประกอบ lifecycle เต็ม `grill/wayfind → spec → tickets → implement → review → commit`; rename `/to-PRD`→`/to-spec`, `/to-issues`→`/to-tickets`; เพิ่ม facts-vs-decisions gate ให้ grilling, ใช้ review สองแกน + refactoring smells, วาง research/prototype ไว้ก่อน spec และลด TDD เป็น red-green reference สำหรับ AFK agent
 - [[wayfinder-skill]] — Matt Pocock (`SKILL.md`, ingest 2026-07-12): วางแผน effort ที่ใหญ่เกินหนึ่ง agent session ผ่าน issue map; ตั้ง destination ก่อน, แยกคำถามคมเป็น ticket กับเรื่องที่ยังถามไม่ได้เป็น fog, ใช้ dependency + assignee หา frontier ให้หลาย session ทำงานขนาน และปิดทีละหนึ่ง decision โดยยังไม่รีบทำ deliverable
 - [[gpt-5-6-and-openai-build-week-aimeowyak]] — AIMeowYak / Piyalitt Ittichaiwong × Connected Human AI (YouTube live, 2026-07-12): รีวิว GPT-5.6 หลังเปิดใช้จริง เทียบ Fable/Grok/GLM ผ่าน one-shot demo, แนะนำเลือก variant คู่ effort, เตือน `ultra` เรื่อง subagent/RAM/token, เจาะ GPT Live กับ computer use และประกาศ OpenAI Build Week Bangkok; ผลทดสอบยัง source-attributed เพราะ harness/effort ต่างกันและ transcript เพี้ยนหลายจุด
@@ -125,6 +127,7 @@
 - [[thclaws-marketplace-panutat]] — Panutat Tejasen (2026-04-30): thClaws v0.7.0 Marketplace; Enterprise Security; Private Marketplace; แนวคิด Host Bridge; Rabbit Holes ในการ coding
 
 ## Entities
+- [[demis-hassabis]] — นักวิจัย AI และผู้ร่วมก่อตั้ง DeepMind; คาด AGI อาจมาในอีกไม่กี่ปี พร้อมเสนอ Standards Body ที่กำกับ frontier model ตาม capability/risk; forecast ไม่ใช่ฉันทามติและองค์กรที่เสนอยังไม่ได้ตั้ง
 - [[bun]] — JavaScript runtime/toolchain ของ Jarred Sumner; เคส rewrite จาก Zig เป็น Rust ทำให้เป็นหลักฐานใหญ่ของ dynamic workflows, LSC, test-suite-as-oracle และ adversarial review ในงาน production
 - [[jarred-sumner]] — ผู้สร้าง Bun และผู้เขียน "Bun in Rust"; ตัวอย่างบทบาท agentic engineer ที่ออกแบบ workflow/guardrail/review process มากกว่าเขียนทุกบรรทัดเอง
 - [[rust]] — ภาษา systems ที่ Bun ย้ายมาใช้เพื่อ memory safety, ownership/lifetime และ `Drop`; ใน source นี้เป็นเครื่องมือย้าย bug class จาก production/fuzzing มาใกล้ compiler/review มากขึ้น
@@ -178,7 +181,7 @@
 - [[curiosity-channel]] — ช่อง YouTube วิทยาศาสตร์ไทย (คนช่างสงสัย); source ของ recap ʻOumuamua ปี 2026; เล่าวิทยาศาสตร์เป็นภาษาพูด ปิดท้ายด้วยวิธีคิดแบบ Occam's razor
 - [[longcat-2-0]] — model ของ Meituan ตามที่ Prompt Engineering เล่า: MoE ขนาด 1.6T พารามิเตอร์ active 48B ต่อ token เทรนบนชิป AI ทำเองกว่า 50,000 ตัวด้วยข้อมูล 35T token โดยไม่ใช้ NVIDIA GPU/Google TPU; ตัวเลขยังเป็นคำกล่าวอ้างจาก source รอตรวจกับแหล่งปฐมภูมิและบุคคลที่สาม
 - [[meituan]] — บริษัทอินเทอร์เน็ต/บริการของจีน เจ้าของ LongCat 2.0 ใน source ที่ให้มา; ตัวอย่างว่าความสามารถ AI ย้ายจาก lab เฉพาะทางไปอยู่กับแพลตฟอร์มจีนรายใหญ่ที่อยากมี hardware/software stack ของตัวเอง
-- [[prompt-engineering]] — ช่อง YouTube อธิบายงาน AI engineering; source ของ ingest เรื่อง LongCat 2.0 / จีนยืนบน hardware ตัวเอง และคลิป long-running agent 7 component; ใช้เป็นการตีความจากบุคคลที่สาม ไม่ใช่หลักฐานตรงจาก product/lab ที่ถูกพูดถึง
+- [[prompt-engineering]] — ช่อง YouTube อธิบายงาน AI engineering; ครอบคลุม LongCat 2.0, long-running agent 7 component และรีวิว GPT-5.6 Sol เทียบ Fable 5; ใช้เป็นการตีความจากบุคคลที่สาม ไม่ใช่หลักฐานตรงจาก product/lab ที่ถูกพูดถึง
 - [[latitude]] — เครื่องมือ agent observability ที่ Prompt Engineering โปรโมตในคลิป Stop Building AI Agents the Old Way; claim จาก source คือ trace cost/latency/span tree, search trace, cluster conversation, issue view, monitor/eval จาก failure และ MCP server ดึง trace เข้า editor; ยังไม่ได้ตรวจ repo/docs ตรง
 - [[bycloud]] — ช่องอธิบาย AI/LLM เจ้าของคลิป looped transformer; มีประโยชน์ในฐานะ source สังเคราะห์ชั้นสองที่โยง recurrence, stability, mechanistic analysis, adaptive recursive depth และ tradeoff ของ KV cache เข้าด้วยกัน
 - [[crusoe]] — บริษัท AI infrastructure ที่ถูกโปรโมตใน source ของ bycloud ว่าให้บริการ serverless fine-tuning; ข้อมูลมาจากช่วงสปอนเซอร์/บริบทขายของ ไม่ใช่การประเมินอิสระ
@@ -186,10 +189,10 @@
 - [[zoran-horvat]] — นักสอน .NET/software / Zoran on C#; เชียร์ rich domain model มากกว่าการกด model ให้แบนตาม persistence และวิจารณ์ Claude Plan mode ว่าเป็นแค่ prompt scaffolding ไม่ใช่วิจารณญาณทาง engineering จริง
 - [[entity-framework-core]] — ORM ฝั่ง .NET ของ Microsoft; ในโพสต์ของ Horvat เป็นตัวอย่างเครื่องมือ map nested value object, converter, private constructor และ query แบบ domain-rich ลง relational persistence
 - [[aom-khunpanitchot]] — คนทำ software/AI ชาวไทย จาก field report บน Facebook เรื่อง Fable/Elysia 2; เขียนในมุมเจ้าของ codebase Elysia 2 ที่ประเมินผล audit จาก AI ว่าพร้อม release หรือยัง
-- [[fable]] — Claude Fable 5 model ของ Anthropic ในตระกูล Claude (ยืนยันจาก field guide ของ trq212); ก่อนหน้านี้โผล่ใน audit Elysia 2 ของ Aom ผ่าน ultracode auto mode ที่ spawn agent ราว 100 ตัว; Thariq เคลมว่าเป็น model แรกที่คุณภาพงานไปติดคอขวดตรงที่ผู้ใช้ต้องเคลียร์ unknowns เอง; spec/tier/ราคายังไม่ชัด
+- [[fable]] — Claude Fable 5 model ของ Anthropic; มี field report จาก Elysia audit, field guide, judgement prompting และ Bun rewrite; รีวิว Prompt Engineering ใช้เป็นเส้นมาตรฐานเทียบ GPT-5.6 Sol แต่ยังไม่มีการเทียบแบบคุม prompt/harness/effort/budget เท่ากัน
 - [[elysia-2]] — codebase/โปรเจกต์ในโพสต์ audit ของ Aom; เป็นเคส release readiness จริงที่ smoke/plugin check กับ AI reviewer หลายตัวบอกว่าพร้อม RC/stable แต่ Fable กลับรายงาน blocker ที่ลึกกว่านั้น
 - [[genebench-pro]] — benchmark ระดับงานวิจัยของ OpenAI สำหรับ agent สาย computational biology; โจทย์สังเคราะห์ 129 ข้อใน 10 โดเมน วัด research taste, การรับมือความกำกวม, QC, การเลือกวิธี causal/statistical และความพร้อมใช้ตัดสินใจ ไม่ใช่ความรู้ตามตำรา
-- [[gpt-5-6-sol]] — ตระกูล GPT-5.6 ของ OpenAI; GeneBench-Pro + keynote claims (Terra, Luna, Cerebras 750 t/s) — ตัวเลข keynote ยัง source-attributed
+- [[gpt-5-6-sol]] — ตระกูล GPT-5.6 ของ OpenAI; มี GeneBench-Pro, keynote/field report เรื่อง variant×effort, cost-efficiency, loop หลายวัน และ claim ว่า Sol ช่วย post-train Luna; ตัวเลข benchmark/ราคา/cheating ยัง source-attributed
 - [[hugging-face]] — แพลตฟอร์ม model/dataset ด้าน AI; เป็นที่วางแพ็กเกจโจทย์ตัวอย่าง GeneBench-Pro 10 ข้อที่ OpenAI เปิด public
 - [[artificial-analysis]] — องค์กร/แพลตฟอร์ม benchmark AI; OpenAI วางแผนส่งชุดย่อย GeneBench-Pro 50 ข้อให้เอาไป benchmark อิสระแบบบุคคลที่สาม
 - [[techsauce]] — สื่อเทค/ธุรกิจไทยสาย ecosystem; สรุปเฟรม AI Brain Fry เรื่องความล้าจากการใช้ AI ในที่ทำงานให้คนอ่านไทย
@@ -204,7 +207,7 @@
 - [[ag-ui]] — Agent-User Interaction Protocol; มาตรฐานเปิดที่ stream ทุก event ของ app/user/agent แบบ real time; ทำให้จุดที่ agent พลาดกับจุดที่คนเข้ามาแก้อยู่ที่เดียวกัน (ต่างจาก MCP ที่อยู่ชั้น agent↔tool)
 - [[langchain]] — บริษัท AI agent ของ Harrison Chase; ต้นทางของการแบ่ง 3 ชั้น, "the art of loop engineering" (Sydney Runkle) และ Deep Agents (harness เขียนตัวเองใหม่จาก trace โดย model ถูกแช่แข็ง); คนละอย่างกับ Chase AI
 - [[letta]] — แพลตฟอร์ม memory สำหรับ agent; weights แช่แข็ง แต่เรียนรู้ใน plain text ที่แก้ได้; มี agent อีกตัวคอยเขียน core memory ใหม่ตอนว่าง (sleep-time compute); weights อยู่ชั่วคราว text อยู่ยาว
-- [[google-deepmind]] — lab AI ของ Google; AlphaEvolve คือ self-learning ระดับ model layer ที่น่าเชื่อสุด (attention kernel +32.5%, ทำลายสถิติ matmul ปี 1969, AI เร่งการเทรนของตัวเอง) แต่ใช้ได้เฉพาะที่มี scorer ฟรีเท่านั้น
+- [[google-deepmind]] — ห้องวิจัย AI ของ Google; AlphaEvolve ให้ AI เสนอ code แล้วใช้โปรแกรมทดสอบ เก็บคำตอบที่ดีขึ้น และวนต่อ เหมาะกับงานที่เครื่องให้คะแนนได้ชัด; Demis Hassabis เสนอหน่วยภายนอกตรวจ model เสี่ยงสูงก่อนปล่อย โดย timeline AGI ยังเป็นคำคาดการณ์
 - [[meta]] — big tech; การ log keystroke บนแล็ปท็อปพนักงานปี 2026 คือวิธี "มองข้ามไหล่" เพื่อเก็บ signal จากคน (เห็นคน ไม่เห็น agent; ล้ำ privacy)
 - [[david-ondrej]] — creator สาย AI / โฮสต์ podcast; สัมภาษณ์ Matt Pocock (2026-06-19); รับบท "true believer" ฝั่ง model-first ไว้ชนกับจุดยืน harness-first ของ Pocock
 - [[jeffrey-huntley]] — engineer; ผู้เขียน Ralph loop (while loop ที่รัน Claude Code วนซ้ำ) ต้นตอกระแส "agentic loop" ปี 2026
@@ -374,6 +377,8 @@
 - [[marc-brooker]] — senior engineer ที่ AWS (Lambda/Aurora); ฝั่งปกป้อง SDD ตัวจริง: มอง spec เป็น artifact ที่ explicit มี version และมีชีวิต ใช้วนซ้ำได้จริง
 
 ## Concepts
+- [[artificial-general-intelligence]] — AGI คือ AI ที่มีความสามารถทางความคิดกว้างระดับมนุษย์; Demis Hassabis นิยามว่า “ทุกความสามารถที่สมองมี” และคาดว่าอาจมาในไม่กี่ปี แต่ยอมรับ uncertainty สูง; แยกจาก Frontier-class ซึ่งเป็น threshold เชิงปฏิบัติที่กำกับได้ก่อนพิสูจน์ AGI
+- [[frontier-ai-standards-body]] — ข้อเสนอหน่วยกำกับ frontier model ของสหรัฐฯ: board อิสระ+open-source reps, industry-funded compute, capability threshold, voluntary review 30 วัน→mandatory market gate, quarterly held-out tests, third-party auditors และ risk-tiering ที่ใช้กับ open/closed; ยังมีคำถามเรื่อง capture, enforcement และ slowdown authority
 - [[wayfinding]] — วางแผนงานใหญ่แบบยอมรับว่ายังเห็นเส้นทางไม่ครบ: destination กำหนดปลายทาง, frontier คือคำถามพร้อมหยิบ, blocked ticket คือคำถามที่ต้องรอ และ fog คือพื้นที่ใน scope ที่ยังตั้งคำถามไม่ได้; map ค่อยละเอียดขึ้นตาม decision แทนการเดา roadmap ทั้งก้อนล่วงหน้า
 - [[computer-use]] — ให้ AI agent มองหน้าจอ คลิก พิมพ์ และใช้ session ของผู้ใช้ทำงานผ่าน UI; ปลดล็อกเว็บที่ไม่มี API/อยู่หลัง login แต่ต้องมี permission, budget, log และ human approval ก่อน action แพงหรือย้อนยาก
 - [[adversarial-review-loops]] — pattern แยก agent เขียนโค้ดออกจาก reviewer ที่ถูกสั่งให้ assume ว่า diff ผิด; เคส Bun ใช้ 1 implementer + 2 adversarial reviewers + 1 fixer เพื่อจับ bug ที่ compile ผ่านแต่ semantics พัง
@@ -383,7 +388,7 @@
 - [[map-vs-territory]] — "แผนที่ไม่ใช่พื้นที่จริง" ของ Korzybski เอามาใช้กับ agentic coding: map = prompt/skills/context ที่ให้ agent ส่วน territory = โค้ดจริงกับข้อจำกัดโลกจริง; ส่วนต่างคือ unknowns และพอ model เก่งขึ้น คอขวดก็ย้ายมาอยู่ที่ map ของเราเอง
 - [[unknowns-matrix]] — ตาราง 4 ช่องของ Thariq (known knowns / known unknowns / unknown knowns / unknown unknowns) พร้อมเทคนิคประจำแต่ละช่วงงาน: blind spot pass, brainstorm/prototype, interview, reference, implementation plan, implementation notes, pitch/explainer, quiz
 - [[tokenmaxxing]] — เผา token AI เยอะๆ เพื่อโชว์สถานะหรือทำ KPI ไม่ใช่เพราะงานต้องใช้จริง; ดัน demand กับบิล enterprise ให้บวมโดยไม่ได้พิสูจน์ว่า productivity เพิ่ม
-- [[ai-token-economics]] — unit economics ของการใช้ LLM/agent: ราคา token, รูปแบบการใช้, supply ฝั่ง infrastructure, การ subsidize model และต้นทุนต่อ token เล็กๆ ที่คูณจนใหญ่ในสเกล enterprise
+- [[ai-token-economics]] — unit economics ของ LLM/agent: แยก unit efficiency ออกจาก total workflow cost และวัด cost ต่อ output ที่ผ่านเกณฑ์หลังรวม compute, latency, review กับ rework
 - [[enterprise-ai-roi]] — คำถาม ROI ของ AI ระดับองค์กร: บิล token/API, ค่าคุมงาน, งานแก้ซ้ำ, governance เทียบกับผลลัพธ์ workflow จริงและแรงงานที่ประหยัดได้
 - [[ai-labor-cost-reversal]] — จุดที่ AI พลิกจากถูกกว่าแรงงานคน มาเทียบเท่าหรือแพงกว่าในบางงาน; source ยังมองว่างาน coding ถูกกว่าอยู่ ส่วน call center/data entry ยังไม่ชี้ขาด
 - [[photonic-interconnects]] — ส่งข้อมูลด้วยแสงใน data center/network; source เรื่อง LITE/COHR/NOK/AAOI มองว่าอาจเป็นคอขวด AI infrastructure ตัวถัดไปหลัง GPU, memory, CPU แต่ไม่ได้แปลว่าจะเป็นธุรกิจ margin สูงโดยอัตโนมัติ
@@ -455,7 +460,7 @@
 - [[intent-gap]] — Lahiri (Microsoft Research): โค้ดจาก AI "plausible by construction but not correct by construction"; ระยะห่างระหว่าง intent ของผู้ใช้กับสิ่งที่โปรแกรมทำจริง; spec ภาษาคนปิดช่องนี้ไม่ได้เพราะเช็คอัตโนมัติไม่ได้
 - [[llm-nondeterminism]] — LLM ไม่ deterministic แม้ temperature 0 (floating-point ไม่ associative, batch scheduling, fused-attention kernel); model 100B+ ให้ output ซ้ำเดิมแค่ 12.5% ของรอบ เทียบกับ 7–8B ที่นิ่งสนิท (งาน RAG ของ IBM); คำสั่งแบบ prose คือการ sample และย้าย model = เปลี่ยน interpreter
 - [[property-based-testing]] — เขียน property แบบ universally quantified แล้วให้เครื่อง generate input สุ่มเอง (QuickCheck/Hypothesis); เคส Quviq: PBT 450 บรรทัดคุม Erlang 60k บรรทัด เจอ 25 บั๊กรวม race condition (1:133); เช็ค behavior ไม่ใช่ implementation — เข้าทางโค้ดที่ AI เขียนพอดี
-- [[loop-engineering]] — Addy Osmani + mikelopster + Peter Steinberger: เอาตัวเองออกจากบท prompter; ออกแบบระบบที่หางานเอง แจกงาน ตรวจงาน จดจำ และตัดสินใจว่าทำอะไรต่อ; manager/worker loop; ห้าชิ้นส่วน + memory; feedback gate/scorer ต้องชัด
+- [[loop-engineering]] — ออกแบบระบบที่หางาน แจกงาน ตรวจ จดจำ และเลือกขั้นต่อไปเอง; manager/worker loop + memory; feedback gate/scorer ต้องชัด โดยเดโม GPT-5.6 เตือนว่ารันได้เป็นสัปดาห์ยังไม่แปลว่า artifact ถูกทุกมิติ
 - [[inner-loop-outer-loop]] — agent วิ่ง inner execution loop (สืบ แก้ test รีวิว); มนุษย์ตัดสินใน outer loop (เป้าหมาย อนุมัติ PR); ตัวอย่างจาก Peter Steinberger บนเวที Codex
 - [[git-worktrees]] — working directory แยกบน branch ของตัวเอง แต่แชร์ history repo เดียวกัน; ให้ agent หลายตัวทำงานขนานโดยไม่เหยียบไฟล์กัน; ตัดการชนเชิงกลไกออกได้ แต่เพดาน review ของคนยังอยู่; Treehouse ของ Kun Chen เพิ่มความสะดวกเรื่อง reuse/status/cleanup ของ worktree
 - [[cloud-agents]] — coding agent ที่รันบน cloud VM ขนานกันได้ ทิ้งไว้เป็นชั่วโมง/วันได้; Cursor เน้น operating layer; Codex keynote เพิ่มภาพ unified local/cloud โดยไม่มีเส้นแบ่งบังคับ
@@ -476,9 +481,9 @@
 - [[large-scale-changes]] — ความสามารถที่ให้ developer คนเดียวแก้โค้ดแบบประสานกัน ข้ามหลายล้านบรรทัด หลายพันไฟล์ ได้อย่างปลอดภัยด้วย automation
 - [[conways-law]] — กฎคลาสสิก: สถาปัตยกรรมซอฟต์แวร์จะสะท้อนโครงสร้างการสื่อสารขององค์กรที่ออกแบบมัน
 - [[10x-moment]] — จังหวะที่ AI/LLM เร่งการเขียนโค้ด 10 เท่าขึ้นไป; คอขวดเลยย้ายจาก implementation ไปอยู่ที่ verification กับการตัดสินใจเชิง software engineering
-- [[benchmark-contamination]] — model เคยเห็นเฉลยมาแล้วตอน pre-train; ทำคะแนน coding benchmark เฟ้อ; DeepSWE ตัดปัญหาด้วยการเขียนโจทย์ใหม่สดที่ไม่เคยถูก merge
+- [[benchmark-contamination]] — model เคยเห็นเฉลยทำให้คะแนนเฟ้อ; DeepSWE ใช้โจทย์ใหม่ ส่วนข้อเสนอ Frontier Standards Body เพิ่ม held-out test ที่หมุนรายไตรมาส เพราะเมื่อ benchmark เป็น market gate แรงจูงใจให้ train-to-test จะสูงขึ้นมาก
 - [[behavioral-verifier]] — verifier ที่ทดสอบ behavior ของซอฟต์แวร์ ไม่ใช่ implementation; ของ DeepSWE มี false positive 0.3% เทียบกับ SWE-Bench Pro ที่ 8.5%
-- [[reward-hacking]] — model โกง verifier แทนที่จะแก้โจทย์จริง (Claude ไปขุดเฉลยจาก .git; model ซ่อน import ที่ห้ามใช้)
+- [[reward-hacking]] — model หาทางผ่าน verifier แทนแก้ตามเจตนา; มีเคสขุดเฉลยจาก `.git`, ซ่อน import และ claim จากคลิปว่า METR พบ GPT-5.6 Sol/Fable 5 มี cheating สูง ซึ่งยังรอตรวจ report กับนิยามต้นทาง
 - [[long-horizon-coding]] — งานโค้ดหลาย step ที่ต้องสำรวจเอง; prompt สั้นแต่ diff ใหญ่; จุดที่ช่องว่างระหว่าง model โผล่ให้เห็นจริง
 - [[missed-requirement]] — failure mode: agent ทำ branch ที่เห็นชัดจนจบ แต่ลืม requirement อีกเส้นที่ต้องทำคู่กัน (เคส Claude ส่งงานมา branch เดียว)
 - [[hashline]] — แก้โค้ดแบบระบุบรรทัดด้วย content hash สั้นๆ; ลดความพลาดตอนต้อง reproduce whitespace; ใน benchmark ของ Can ช่วย model อ่อนได้เยอะมาก
@@ -505,7 +510,7 @@
 - [[word-error-rate]] — metric มาตรฐานวัดความแม่นของ ASR: นับ substitution, deletion, insertion เทียบกับ transcript อ้างอิง
 - [[dreaming]] — กระบวนการ batch ของ Anthropic: อ่าน transcript ข้ามหลาย agent แล้วออก diff ที่คัดกรองแล้วไปปรับ memory; ทำนอกรอบ (out-of-band) จากมุมมองข้าม agent — เหมือนให้ agent "ฝัน" เพื่อเกลา memory ตัวเอง
 - [[agent-memory-filesystem]] — memory ที่จำลองเป็น file system ให้ Claude จัดการเองด้วย bash/grep; มี permission scope, optimistic concurrency และ version history
-- [[self-learning-agents]] — วิสัยทัศน์: agent เก่งขึ้นจาก session ของตัวเองและของตัวอื่นผ่าน memory + dreaming โดยไม่ต้อง retrain
+- [[self-learning-agents]] — คำว่า Agent “เรียนรู้เอง” อาจหมายถึงสามเรื่อง: อ่าน memory ใหม่, ใช้ workflow ใหม่ หรือฝึก model ใหม่; หน้าอธิบาย Memory+Dreaming ของ Anthropic, ขอบเขตของการให้คะแนนอัตโนมัติ, ตัวอย่าง AlphaEvolve/GPT-5.6 และเช็กลิสต์ห้าข้อก่อนเชื่อ claim
 - [[live-service-stagnation]] — สภาวะวิกฤตของเกม live service: การดูแลระบบหลักกับ endgame progression หยุดนิ่ง เพราะไปทุ่มให้ monetization ระยะสั้น
 - [[monkey-paw-balancing]] — แพตเทิร์นบาลานซ์เกมที่ชวนหงุดหงิด: buff ผู้เล่นทีไร ต้องมี nerf ที่ซ่อนไว้หรือแถมมาพร้อมกันทุกที
 - [[speculative-decoding]] — เร่ง inference แบบไม่เสียคุณภาพ: model เล็ก (drafter) เดา k token แล้วให้ model ใหญ่ verify รวดเดียวใน forward pass เดียว; อาศัยช่องว่างที่เหลือของ memory bandwidth
@@ -605,8 +610,8 @@
 - [[mixture-of-experts]] — MoE: route token ไปหา subnetwork เฉพาะทางเพื่อความคุ้มค่า compute (DeepSeek/GPT-4/Mellum2/LongCat 2.0)
 - [[mla-attention]] — Multi-head Latent Attention: เทคนิคของ DeepSeek ที่ย่อขนาด KV cache
 - [[model-choice-by-expertise]] — heuristic เลือก model: เราเชี่ยวชาญโดเมนเองอยู่แล้ว Sonnet ก็พอ; ไม่รู้เรื่องเลยค่อยจ่ายค่า Opus
-- [[model-cyber-capability-emergence]] — ความสามารถด้าน cyber โผล่มาเองเป็นผลพลอยได้ของ intelligence ทั่วไป (Mythos)
-- [[open-weight-models]] — model ที่แจก weights (Gemma/DeepSeek/Mellum2/Qwen) แต่ไม่จำเป็นต้อง open source เต็มตัว; เหมาะกับ private/local deployment โดยเฉพาะ task ขอบเขตชัดที่ latency/privacy/cost สำคัญ
+- [[model-cyber-capability-emergence]] — ความสามารถ offensive/defensive cyber โผล่เป็นผลพลอยได้ของ intelligence ทั่วไป; กรอบ Demis Hassabis เพิ่มข้อเสนอให้ pre-release test capability ที่ไม่ได้ถูกโฆษณา รวม guardrail bypass/deception
+- [[open-weight-models]] — model ที่แจก weights แต่ไม่จำเป็นต้อง open source เต็มตัว; เหมาะกับ private/local deployment ทว่าเมื่อข้าม Frontier-class จะเกิดโจทย์ใหม่ เพราะ weights ที่แพร่แล้วเรียกคืน/patch แบบ closed API ไม่ได้
 - [[playback-pattern]] — ท่า alignment: ให้ agent ทวนก่อนลงมือ ว่าอะไรคือ "Stated, Inferred, Out-of-scope"
 - [[plugin-manager]] — เครื่องมือจัดการ life cycle, เวอร์ชัน และ dependency ของ extension ต่างๆ
 - [[pr-dependency-dag]] — ท่า orchestration: มองการแก้หลาย branch ขนานกันเป็น dependency graph

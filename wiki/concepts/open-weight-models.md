@@ -3,8 +3,8 @@ title: Open-weight Models
 type: concept
 tags: [ai, open-source, deepseek, philosophy, deployment]
 created: 2026-04-27
-updated: 2026-07-04
-sources: [deepseek-wikipedia.md, Mellum2 Goes Open Source A Fast Model for AI Workflows  The JetBrains AI Blog.md, chinas-models-no-longer-need-western-hardware.md, code-isnt-free-mario-zechner-hard-truths-coding-ai.md]
+updated: 2026-07-15
+sources: [deepseek-wikipedia.md, Mellum2 Goes Open Source A Fast Model for AI Workflows  The JetBrains AI Blog.md, chinas-models-no-longer-need-western-hardware.md, code-isnt-free-mario-zechner-hard-truths-coding-ai.md, framework-frontier-ai-dawning-new-age.md]
 ---
 
 # Open-weight Models / โอเพนเวต โมเดล
@@ -29,6 +29,16 @@ sources: [deepseek-wikipedia.md, Mellum2 Goes Open Source A Fast Model for AI Wo
 
 บทเรียนคือ open-weight/local model ไม่ต้องชนะ frontier model ทุกมิติ. ถ้า task ต้องการ latency, privacy, หรือ cost control และ quality threshold ไม่สูงเท่างาน coding ยาก ๆ local model ก็เริ่มมีที่ทางจริง.
 
+## ถ้า open-weight ข้ามเส้น Frontier-class
+
+[[framework-frontier-ai-dawning-new-age|กรอบของ Demis Hassabis]] เสนอว่า [[frontier-ai-standards-body|การประเมิน Frontier AI]] ควรใช้กับ model ที่ข้าม capability threshold ไม่ว่าจะ open หรือ closed และมาจากประเทศใด Board ควรมีตัวแทน open source ส่วน model ที่ยังไม่ถึง frontier threshold จาก startup/academia ได้รับการยกเว้น.
+
+หลักนี้ดูเท่าเทียม แต่บังคับใช้ไม่เหมือนกัน. Closed API มีเจ้าของคุม release และ patch หลังพบ vulnerability. Open-weight model ถูกดาวน์โหลด, fork, fine-tune และ deploy นอกเขตอำนาจได้. คำถามจึงไม่ใช่แค่ว่าต้อง test หรือไม่ แต่ test ที่จุดไหน—ก่อนปล่อย weights, ก่อน deploy ระบบใหญ่ หรือทั้งสองจุด.
+
+อีกความตึงคือ threshold cliff. ถ้าข้ามเส้นแล้ว compliance cost กระโดด ผู้พัฒนาอาจไม่เปิด weights, ลดการเผยข้อมูล หรือปรับ model ให้อยู่ใต้เกณฑ์. กติกาที่ตั้งใจปกป้อง open ecosystem อาจทำให้ open model frontier น้อยลงได้.
+
+**ผลคือ:** risk-tiering ตาม capability เป็นจุดเริ่มที่ดี แต่ governance ต้องยอมรับว่า weights ที่แพร่แล้วเรียกคืนไม่ได้เหมือนปิด API.
+
 ## Why this helps / ผลคือ
 
 - **Democratization:** ช่วยให้เทคโนโลยี AI ระดับโลกเข้าถึงได้ง่ายขึ้น ไม่ถูกผูกขาดโดยยักษ์ใหญ่เพียงไม่กี่ราย
@@ -43,3 +53,5 @@ sources: [deepseek-wikipedia.md, Mellum2 Goes Open Source A Fast Model for AI Wo
 - [[focal-models]]
 - [[longcat-2-0]]
 - [[code-isnt-free-mario-zechner-hard-truths-coding-ai]]
+- [[frontier-ai-standards-body]]
+- [[framework-frontier-ai-dawning-new-age]]
