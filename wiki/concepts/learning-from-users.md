@@ -3,8 +3,8 @@ title: Learning From Users (the unfakeable signal)
 type: concept
 tags: [ai, agents, self-learning, human-in-the-loop, context-engineering, copilotkit]
 created: 2026-06-26
-updated: 2026-06-26
-sources: [Self Learning for Agents Clearly Explained.md]
+updated: 2026-07-16
+sources: [Self Learning for Agents Clearly Explained.md, migel-tissera-x-android-behavioral-fingerprinting.md]
 ---
 
 # Learning From Users / เรียนจาก user คือสัญญาณที่คุณพลาด
@@ -40,6 +40,14 @@ sources: [Self Learning for Agents Clearly Explained.md]
 
 > ได้อะไร: agent ที่ "ยิ่งคนใช้ยิ่งเก่งขึ้น" ไม่ได้มาจาก model ที่ฉลาดกว่า แต่มาจากการเก็บการแก้ของคน — สัญญาณที่ free, ปลอมไม่ได้ และมีอยู่แล้วในทุก interaction ที่คุณไม่ได้อ่าน.
 
+## Signal คล้ายกัน แต่จุดประสงค์อาจคนละเรื่อง
+
+[[migel-tissera-x-android-behavioral-fingerprinting|field report เรื่อง X Android]] เพิ่มตัวอย่างที่ช่วยกันการเหมารวม ผู้เขียนรายงาน SDK ที่เก็บ timing ของ keystroke, touch, clipboard event และ sensor เพื่อทำ [[behavioral-biometrics|behavioral fingerprinting]] โดยคาดว่าอาจใช้กัน fraud. Signal ดิบหน้าตาคล้ายวิธี “มองข้ามไหล่” แต่เป้าหมายคือจำแนก identity/risk ไม่ใช่เรียนว่าคนตัดสินใจแก้ agent อย่างไร
+
+การเห็น click หรือ keystroke จึงยังไม่ใช่ learning signal ที่มีความหมาย ต้องรู้ทั้ง context, สิ่งที่ agent เสนอ, สิ่งที่คนเปลี่ยน และเหตุผลของการเปลี่ยนด้วย อีกด้าน การตั้งชื่อว่า anti-fraud ก็ไม่ทำให้การเก็บ app-wide ได้สัดส่วนโดยอัตโนมัติ
+
+**ผลคือ:** แยก `เก็บพฤติกรรม`, `จำแนกความเสี่ยง` และ `เรียนจากการตัดสิน` ออกจากกัน แม้ทั้งสามจะเริ่มจาก event ชุดคล้ายกัน
+
 ## ข้อควรระวัง (wiki)
 
 - ตอนท้าย thread เป็น pitch ขาย **CopilotKit Intelligence** (self-hostable, อ้างว่า live ที่ Fortune 500). ข้อสรุป "context-from-users ดีที่สุด" บังเอิญตรงกับสินค้าของคนเขียนพอดี — กรอบยังมีค่า แต่อ่านโดยรู้ตรงนี้
@@ -57,3 +65,5 @@ sources: [Self Learning for Agents Clearly Explained.md]
 - [[meta]]
 - [[memory-decay]]
 - [[agentic-code-review]]
+- [[behavioral-biometrics]]
+- [[migel-tissera-x-android-behavioral-fingerprinting]]

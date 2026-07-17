@@ -3,8 +3,8 @@ title: Open-weight Models
 type: concept
 tags: [ai, open-source, deepseek, philosophy, deployment]
 created: 2026-04-27
-updated: 2026-07-15
-sources: [deepseek-wikipedia.md, Mellum2 Goes Open Source A Fast Model for AI Workflows  The JetBrains AI Blog.md, chinas-models-no-longer-need-western-hardware.md, code-isnt-free-mario-zechner-hard-truths-coding-ai.md, framework-frontier-ai-dawning-new-age.md]
+updated: 2026-07-17
+sources: [deepseek-wikipedia.md, Mellum2 Goes Open Source A Fast Model for AI Workflows  The JetBrains AI Blog.md, chinas-models-no-longer-need-western-hardware.md, code-isnt-free-mario-zechner-hard-truths-coding-ai.md, framework-frontier-ai-dawning-new-age.md, kimi-k3-explained-prompt-engineering.md]
 ---
 
 # Open-weight Models / โอเพนเวต โมเดล
@@ -28,6 +28,19 @@ sources: [deepseek-wikipedia.md, Mellum2 Goes Open Source A Fast Model for AI Wo
 [[mario-zechner|Mario Zechner]] เพิ่มมุม local inference ใน [[code-isnt-free-mario-zechner-hard-truths-coding-ai|Code Isn't Free]]. เขามองว่า local AI ยัง setup ยากและไม่เหมาะทุกงาน แต่ model เล็กเริ่มพอแล้วสำหรับ application ที่ขอบเขตชัด เช่น toy robot สำหรับเด็กที่ใช้ speech-to-text, text-to-speech, และ LLM เล็กบน MacBook M1. ตัวเลขที่เขาเล่า: pipeline หนึ่งกิน unified memory ราว 14GB และให้ประสบการณ์ดีพอสำหรับ chatbot + camera + motor.
 
 บทเรียนคือ open-weight/local model ไม่ต้องชนะ frontier model ทุกมิติ. ถ้า task ต้องการ latency, privacy, หรือ cost control และ quality threshold ไม่สูงเท่างาน coding ยาก ๆ local model ก็เริ่มมีที่ทางจริง.
+
+## Kimi K3: เปิด weights ไม่ได้แปลว่ารัน local ง่าย
+
+[[kimi-k3-explained-prompt-engineering|วิดีโอ Kimi K3]] เสนอกรณีตรงข้ามกับ model local ขนาดเล็ก. ผู้พูดเรียก [[kimi-k3|K3]] ว่า open-weight frontier model ด้าน agentic coding แต่บอกว่าขนาด 3T parameters ใหญ่เกิน consumer hardware. ผู้ใช้ทั่วไปจึงน่าจะเรียกผ่าน inference provider มากกว่ารันเอง.
+
+ตรงนี้แยกประโยชน์ของ open-weight ออกเป็นสองระดับ:
+
+- คนทั่วไปได้ประโยชน์ทางอ้อม เมื่อบริษัทอื่นเอา base ไป post-train หรือทำ product ต่อ
+- องค์กรที่มี compute มากอาจ self-host เพื่อคุม data และปรับ weights เอง
+
+แต่ release status ยังไม่ชัดจากแหล่งนี้ เพราะ title/description เรียก open-weights ขณะที่ transcript พูดถึง “เมื่อ weights พร้อม”. จึงต้องแยก **ประกาศว่าจะเปิด**, **เผย license**, และ **ดาวน์โหลด weights ได้จริง**.
+
+**ผลคือ:** openness ลดข้อจำกัดด้านสิทธิ์และการต่อยอดได้ แต่ไม่ได้ลบข้อจำกัดด้าน hardware, serving cost หรือ privacy เมื่อยังต้องพึ่ง provider.
 
 ## ถ้า open-weight ข้ามเส้น Frontier-class
 
@@ -55,3 +68,5 @@ sources: [deepseek-wikipedia.md, Mellum2 Goes Open Source A Fast Model for AI Wo
 - [[code-isnt-free-mario-zechner-hard-truths-coding-ai]]
 - [[frontier-ai-standards-body]]
 - [[framework-frontier-ai-dawning-new-age]]
+- [[kimi-k3]]
+- [[kimi-k3-explained-prompt-engineering]]

@@ -3,8 +3,8 @@ title: Self-Learning Agents
 type: concept
 tags: [agent-memory, multi-agent, anthropic, vision, self-learning]
 created: 2026-05-09
-updated: 2026-07-15
-sources: [memory-and-dreaming-self-learning-agents, Self Learning for Agents Clearly Explained.md, gpt-5-6-sol-fable-killer-prompt-engineering.md, framework-frontier-ai-dawning-new-age.md]
+updated: 2026-07-17
+sources: [memory-and-dreaming-self-learning-agents, Self Learning for Agents Clearly Explained.md, gpt-5-6-sol-fable-killer-prompt-engineering.md, framework-frontier-ai-dawning-new-age.md, kimi-k3-explained-prompt-engineering.md]
 ---
 
 # Self-Learning Agents / Agent ที่เก่งขึ้นจากประสบการณ์เดิม
@@ -85,6 +85,10 @@ Harness คือระบบรอบตัว model เช่น prompt, tool,
 
 กรณี GPT-5.6 ยังเป็นคำกล่าวผ่านวิดีโอ Wiki ยังไม่ได้ตรวจวิธีทดลอง ตัวเลข หรือระดับความอิสระจากรายงานต้นทาง จึงยังไม่ควรสรุปว่า Sol “วิจัยและฝึก model อื่นเอง” โดยไม่มีคนกำกับ
 
+[[kimi-k3-explained-prompt-engineering|วิดีโอ Kimi K3]] เพิ่มอีก pattern: บริษัทอาจเริ่มจาก open-weight base แล้ว post-train ต่อให้เหมาะกับ product ของตัวเอง. ผู้พูดอ้าง Cursor, Cognition/Windsurf และ Thinking Machines เป็นตัวอย่างจาก Kimi รุ่นก่อน แต่ transcript ถอดชื่อไม่คงที่และไม่ได้อธิบาย data, reward หรือวิธี train.
+
+กรณีนี้จึงยังไม่ใช่ “agent เรียนรู้เอง”. เป็นองค์กรเอา model ไปฝึกต่อด้วย pipeline ของตน และต้องแยกผลจาก weights ใหม่ออกจากผลของ harness ที่ห่ออยู่รอบ model.
+
 **ผลคือ:** การจำบทเรียนกับการฝึก model ใหม่อาจถูกเรียกว่า self-improvement เหมือนกัน แต่ต้นทุน หลักฐาน และความเสี่ยงต่างกันมาก
 
 ## ใครเป็นคนบอกว่าดีขึ้น
@@ -148,5 +152,7 @@ Harness คือระบบรอบตัว model เช่น prompt, tool,
 - [[gpt-5-6-sol-fable-killer-prompt-engineering]]
 - [[gpt-5-6-sol]]
 - [[framework-frontier-ai-dawning-new-age]]
+- [[kimi-k3-explained-prompt-engineering]]
+- [[kimi-k3]]
 - [[frontier-ai-standards-body]]
 - [[artificial-general-intelligence]]

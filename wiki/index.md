@@ -1,6 +1,8 @@
 # Index
 
 ## Sources
+- [[kimi-k3-explained-prompt-engineering]] — Prompt Engineering (YouTube, ingest 2026-07-17): วาง Kimi K3 เป็น open-weight frontier specialist ด้าน agentic coding ไม่ใช่ general winner; claim 3T MoE, 896 experts/16 ต่อ token, native vision, context 1M และ token efficiency ยังเป็น third-party summary โดย release status, benchmark protocol และตัวอย่างบริษัทที่ post-train Kimi ยังต้องตรวจต้นทาง
+- [[migel-tissera-x-android-behavioral-fingerprinting]] — Migel Tissera (X thread, ingest 2026-07-16): reverse-engineering field report ว่า X Android APK มี SDK สองตัวรองรับ app-wide behavioral fingerprinting จากจังหวะพิมพ์ clipboard/touch event รูปใหม่ sensor และ device ID; ยัง inactive ใน session ที่ตรวจ, clipboard ไม่เก็บ text content ตามผู้เขียน แต่ความหมายของ keyboard `character delta` ยังไม่ชัด และ X Money/X Pay anti-fraud ยังเป็น hypothesis
 - [[framework-frontier-ai-dawning-new-age]] — Demis Hassabis (X article, ingest 2026-07-15): คาด AGI อาจมาในอีกไม่กี่ปีและเสนอ Frontier AI Standards Body แบบ public-private/SRO; จัด model ตาม capability threshold, เริ่ม voluntary review ก่อน release 30 วันแล้วค่อยเป็น US market gate, หมุน held-out test รายไตรมาส, ใช้กับ open/closed ทุกประเทศแต่ยกเว้น non-frontier; timeline, post-scarcity และกลไกบังคับใช้ยังเป็น forecast/ข้อเสนอ
 - [[gpt-5-6-sol-fable-killer-prompt-engineering]] — Prompt Engineering (YouTube, ingest 2026-07-14): รีวิว GPT-5.6 Sol เทียบ Fable 5 โดยชู cost-efficiency, coding/UI, loop ที่รันหลายวัน และ automated research; ผู้พูดยังเข้าใช้ Sol ไม่ได้และ demo ISS มี visual bug จึงเก็บคำว่า “Fable killer” เป็นคำถามเปิด พร้อม caveat เรื่อง effort/harness, ตัวเลข benchmark และ cheating claim ที่ยังไม่ได้ตรวจต้นทาง
 - [[new-skills-v1-1-wayfinder-research-implement-to-spec-to-tickets]] — Matt Pocock (YouTube, Skills v1.1, ingest 2026-07-12): ประกอบ lifecycle เต็ม `grill/wayfind → spec → tickets → implement → review → commit`; rename `/to-PRD`→`/to-spec`, `/to-issues`→`/to-tickets`; เพิ่ม facts-vs-decisions gate ให้ grilling, ใช้ review สองแกน + refactoring smells, วาง research/prototype ไว้ก่อน spec และลด TDD เป็น red-green reference สำหรับ AFK agent
@@ -127,6 +129,8 @@
 - [[thclaws-marketplace-panutat]] — Panutat Tejasen (2026-04-30): thClaws v0.7.0 Marketplace; Enterprise Security; Private Marketplace; แนวคิด Host Bridge; Rabbit Holes ในการ coding
 
 ## Entities
+- [[migel-tissera]] — ผู้เขียน field report วิเคราะห์ X Android และผู้เผยแพร่เครื่องมือ apksaw; รายงาน SDK behavioral fingerprinting ที่ยัง inactive ใน session ของเขา จึงต้องอ่านเป็นหลักฐานจากผู้วิเคราะห์คนเดียวและตรวจซ้ำจาก APK/runtime trace
+- [[x-twitter]] — social platform เดิมชื่อ Twitter; source นี้พูดเฉพาะ Android app และพบ dormant capability ไม่ใช่หลักฐานว่า X เปิดเก็บข้อมูลดังกล่าวกับผู้ใช้ทั้งหมด; X Money/X Pay anti-fraud ยังเป็นสมมติฐานของผู้เขียน
 - [[demis-hassabis]] — นักวิจัย AI และผู้ร่วมก่อตั้ง DeepMind; คาด AGI อาจมาในอีกไม่กี่ปี พร้อมเสนอ Standards Body ที่กำกับ frontier model ตาม capability/risk; forecast ไม่ใช่ฉันทามติและองค์กรที่เสนอยังไม่ได้ตั้ง
 - [[bun]] — JavaScript runtime/toolchain ของ Jarred Sumner; เคส rewrite จาก Zig เป็น Rust ทำให้เป็นหลักฐานใหญ่ของ dynamic workflows, LSC, test-suite-as-oracle และ adversarial review ในงาน production
 - [[jarred-sumner]] — ผู้สร้าง Bun และผู้เขียน "Bun in Rust"; ตัวอย่างบทบาท agentic engineer ที่ออกแบบ workflow/guardrail/review process มากกว่าเขียนทุกบรรทัดเอง
@@ -181,7 +185,7 @@
 - [[curiosity-channel]] — ช่อง YouTube วิทยาศาสตร์ไทย (คนช่างสงสัย); source ของ recap ʻOumuamua ปี 2026; เล่าวิทยาศาสตร์เป็นภาษาพูด ปิดท้ายด้วยวิธีคิดแบบ Occam's razor
 - [[longcat-2-0]] — model ของ Meituan ตามที่ Prompt Engineering เล่า: MoE ขนาด 1.6T พารามิเตอร์ active 48B ต่อ token เทรนบนชิป AI ทำเองกว่า 50,000 ตัวด้วยข้อมูล 35T token โดยไม่ใช้ NVIDIA GPU/Google TPU; ตัวเลขยังเป็นคำกล่าวอ้างจาก source รอตรวจกับแหล่งปฐมภูมิและบุคคลที่สาม
 - [[meituan]] — บริษัทอินเทอร์เน็ต/บริการของจีน เจ้าของ LongCat 2.0 ใน source ที่ให้มา; ตัวอย่างว่าความสามารถ AI ย้ายจาก lab เฉพาะทางไปอยู่กับแพลตฟอร์มจีนรายใหญ่ที่อยากมี hardware/software stack ของตัวเอง
-- [[prompt-engineering]] — ช่อง YouTube อธิบายงาน AI engineering; ครอบคลุม LongCat 2.0, long-running agent 7 component และรีวิว GPT-5.6 Sol เทียบ Fable 5; ใช้เป็นการตีความจากบุคคลที่สาม ไม่ใช่หลักฐานตรงจาก product/lab ที่ถูกพูดถึง
+- [[prompt-engineering]] — ช่อง YouTube อธิบายงาน AI engineering; ครอบคลุม LongCat 2.0, long-running agent, GPT-5.6 Sol และ Kimi K3; ใช้เป็นการตีความจากบุคคลที่สาม โดยตัวเลข product/benchmark/post-training ต้องกลับไปตรวจแหล่งตรง
 - [[latitude]] — เครื่องมือ agent observability ที่ Prompt Engineering โปรโมตในคลิป Stop Building AI Agents the Old Way; claim จาก source คือ trace cost/latency/span tree, search trace, cluster conversation, issue view, monitor/eval จาก failure และ MCP server ดึง trace เข้า editor; ยังไม่ได้ตรวจ repo/docs ตรง
 - [[bycloud]] — ช่องอธิบาย AI/LLM เจ้าของคลิป looped transformer; มีประโยชน์ในฐานะ source สังเคราะห์ชั้นสองที่โยง recurrence, stability, mechanistic analysis, adaptive recursive depth และ tradeoff ของ KV cache เข้าด้วยกัน
 - [[crusoe]] — บริษัท AI infrastructure ที่ถูกโปรโมตใน source ของ bycloud ว่าให้บริการ serverless fine-tuning; ข้อมูลมาจากช่วงสปอนเซอร์/บริบทขายของ ไม่ใช่การประเมินอิสระ
@@ -189,12 +193,12 @@
 - [[zoran-horvat]] — นักสอน .NET/software / Zoran on C#; เชียร์ rich domain model มากกว่าการกด model ให้แบนตาม persistence และวิจารณ์ Claude Plan mode ว่าเป็นแค่ prompt scaffolding ไม่ใช่วิจารณญาณทาง engineering จริง
 - [[entity-framework-core]] — ORM ฝั่ง .NET ของ Microsoft; ในโพสต์ของ Horvat เป็นตัวอย่างเครื่องมือ map nested value object, converter, private constructor และ query แบบ domain-rich ลง relational persistence
 - [[aom-khunpanitchot]] — คนทำ software/AI ชาวไทย จาก field report บน Facebook เรื่อง Fable/Elysia 2; เขียนในมุมเจ้าของ codebase Elysia 2 ที่ประเมินผล audit จาก AI ว่าพร้อม release หรือยัง
-- [[fable]] — Claude Fable 5 model ของ Anthropic; มี field report จาก Elysia audit, field guide, judgement prompting และ Bun rewrite; รีวิว Prompt Engineering ใช้เป็นเส้นมาตรฐานเทียบ GPT-5.6 Sol แต่ยังไม่มีการเทียบแบบคุม prompt/harness/effort/budget เท่ากัน
+- [[fable]] — Claude Fable 5 model ของ Anthropic; มี field report จาก Elysia audit, field guide, judgement prompting และ Bun rewrite; รีวิว Prompt Engineering ใช้เป็นเส้นเทียบทั้ง GPT-5.6 Sol และ Kimi K3 แต่ยังไม่มี matched comparison ที่คุม prompt/harness/effort/budget เท่ากัน
 - [[elysia-2]] — codebase/โปรเจกต์ในโพสต์ audit ของ Aom; เป็นเคส release readiness จริงที่ smoke/plugin check กับ AI reviewer หลายตัวบอกว่าพร้อม RC/stable แต่ Fable กลับรายงาน blocker ที่ลึกกว่านั้น
 - [[genebench-pro]] — benchmark ระดับงานวิจัยของ OpenAI สำหรับ agent สาย computational biology; โจทย์สังเคราะห์ 129 ข้อใน 10 โดเมน วัด research taste, การรับมือความกำกวม, QC, การเลือกวิธี causal/statistical และความพร้อมใช้ตัดสินใจ ไม่ใช่ความรู้ตามตำรา
 - [[gpt-5-6-sol]] — ตระกูล GPT-5.6 ของ OpenAI; มี GeneBench-Pro, keynote/field report เรื่อง variant×effort, cost-efficiency, loop หลายวัน และ claim ว่า Sol ช่วย post-train Luna; ตัวเลข benchmark/ราคา/cheating ยัง source-attributed
 - [[hugging-face]] — แพลตฟอร์ม model/dataset ด้าน AI; เป็นที่วางแพ็กเกจโจทย์ตัวอย่าง GeneBench-Pro 10 ข้อที่ OpenAI เปิด public
-- [[artificial-analysis]] — องค์กร/แพลตฟอร์ม benchmark AI; OpenAI วางแผนส่งชุดย่อย GeneBench-Pro 50 ข้อให้เอาไป benchmark อิสระแบบบุคคลที่สาม
+- [[artificial-analysis]] — องค์กร/แพลตฟอร์ม benchmark AI; OpenAI วางแผนส่ง GeneBench-Pro subset ให้ประเมิน และวิดีโอ Kimi K3 อาจอ้าง index ของที่นี่ แต่ชื่อ index, snapshot และ protocol ยังไม่ชัด
 - [[techsauce]] — สื่อเทค/ธุรกิจไทยสาย ecosystem; สรุปเฟรม AI Brain Fry เรื่องความล้าจากการใช้ AI ในที่ทำงานให้คนอ่านไทย
 - [[harvard-business-review]] — สื่อด้าน management ที่ Techsauce อ้างเป็นบริบทต้นทางของ AI Brain Fry; รายละเอียดบทความ HBR ต้นฉบับยังค้างอยู่ จนกว่าจะ ingest ตรง
 - [[rhys-sullivan]] — คนเขียนบน X เจ้าของ "i don't want to use your agent"; มองว่าความเชี่ยวชาญของ product ควรออกมาเป็น skills/MCP/API/CLI ที่เสียบเข้า agent ตัวหลักที่ผู้ใช้ใช้อยู่ทุกวัน
@@ -318,8 +322,9 @@
 - [[electron]] — framework ทำ desktop app แบบ Chromium + Node.js; ได้เปรียบเมื่อ logic ของ app เป็น JS/Node/Bun อยู่แล้ว (รัน in-process ไม่ต้องมี sidecar)
 - [[owasp]] — มูลนิธิ OWASP; ออก APTS, WSTG, ASVS, Top 10 และ Agentic Apps Top 10 ปี 2026
 - [[somkiat-khitwongwattana]] — software engineer ชาวไทย a.k.a. **Akexorcist** (akexorcist.dev); สาย Android มายาวนาน; เขียนภาษาไทยเรื่องการทำงานจริงกับ LLM/Agent workflow
-- [[moonshot-ai]] — lab AI จีนเบื้องหลังตระกูล Kimi; ผู้ท้าชิงสาย open-source ด้าน coding; มี Kimi Code, Agent Swarm, Claw Groups
-- [[kimi-k2-6]] — model เรือธง open-source ของ Moonshot AI (2026-04): context 262k, agent swarm ได้ถึง 300 sub-agents; วางตัวชนกับ GPT-5.4 / Opus 4.6 / Gemini 3.1 Pro ด้านการเขียนโค้ด
+- [[moonshot-ai]] — lab AI จีนเบื้องหลังตระกูล Kimi; K2.6 เน้น long-horizon coding/agent swarm ส่วน K3 ถูก third-party วางเป็น 3T open-weight frontier specialist พร้อม native vision และ context 1M ที่ยังต้องตรวจต้นทาง
+- [[kimi-k2-6]] — model เรือธง open-source ของ Moonshot AI ตอนเปิดตัว 2026-04: context 262k, agent swarm ได้ถึง 300 sub-agents; วางตัวชน GPT-5.4 / Opus 4.6 / Gemini 3.1 Pro ด้าน coding ก่อนมี coverage ของ K3
+- [[kimi-k3]] — model ของ Moonshot AI ที่ Prompt Engineering วางเป็น open-weight specialist ด้าน agentic coding; claim 3T MoE, 896 experts/16 active ต่อ token, native vision และ context 1M ยังเป็นข้อมูลจาก transcript และ release status ยังไม่ชัด
 - [[mellum2]] — model MoE 12B ของ JetBrains (Apache 2.0) สำหรับงาน AI ที่ต้องเร็ว: routing, summarization, RAG, subagent steps, และ deploy แบบ private/local; ตัวอย่างของ focal-model design
 - [[cyril-xbt]] — content creator บน X (@cyrilXBT); เขียนคู่มือ CLAUDE.md 7 section แบบฟันธงชัด; solo builder สาย AI + crypto + productivity
 - [[claude-mythos-preview]] — model frontier-preview ของ Anthropic; เก่งสุดในภาพรวม; หาและ exploit zero-days ได้เองในทุก OS และ browser หลัก; เลยถูกจำกัดการปล่อยผ่าน Project Glasswing
@@ -377,6 +382,8 @@
 - [[marc-brooker]] — senior engineer ที่ AWS (Lambda/Aurora); ฝั่งปกป้อง SDD ตัวจริง: มอง spec เป็น artifact ที่ explicit มี version และมีชีวิต ใช้วนซ้ำได้จริง
 
 ## Concepts
+- [[behavioral-biometrics]] — ใช้จังหวะพิมพ์ touch/motion/device signal เพื่อจำแนกคน bot หรือ account takeover โดยไม่จำเป็นต้องอ่านข้อความ; metadata หลายชั้นยัง fingerprint ได้ และ anti-fraud ที่ชอบธรรมก็ต้องจำกัด scope, retention, consent, false positive และสิทธิ์ appeal
+- [[mobile-app-reverse-engineering]] — แกะ APK และสังเกต runtime เพื่อดู code/SDK/config/data flow; ต้องแยก static capability ออกจาก activation และ collection จริง พร้อมเก็บ version/hash/trace ให้ตรวจซ้ำ โดย coding agent ช่วยค้นได้แต่ไม่แทน provenance
 - [[artificial-general-intelligence]] — AGI คือ AI ที่มีความสามารถทางความคิดกว้างระดับมนุษย์; Demis Hassabis นิยามว่า “ทุกความสามารถที่สมองมี” และคาดว่าอาจมาในไม่กี่ปี แต่ยอมรับ uncertainty สูง; แยกจาก Frontier-class ซึ่งเป็น threshold เชิงปฏิบัติที่กำกับได้ก่อนพิสูจน์ AGI
 - [[frontier-ai-standards-body]] — ข้อเสนอหน่วยกำกับ frontier model ของสหรัฐฯ: board อิสระ+open-source reps, industry-funded compute, capability threshold, voluntary review 30 วัน→mandatory market gate, quarterly held-out tests, third-party auditors และ risk-tiering ที่ใช้กับ open/closed; ยังมีคำถามเรื่อง capture, enforcement และ slowdown authority
 - [[wayfinding]] — วางแผนงานใหญ่แบบยอมรับว่ายังเห็นเส้นทางไม่ครบ: destination กำหนดปลายทาง, frontier คือคำถามพร้อมหยิบ, blocked ticket คือคำถามที่ต้องรอ และ fog คือพื้นที่ใน scope ที่ยังตั้งคำถามไม่ได้; map ค่อยละเอียดขึ้นตาม decision แทนการเดา roadmap ทั้งก้อนล่วงหน้า
@@ -388,7 +395,7 @@
 - [[map-vs-territory]] — "แผนที่ไม่ใช่พื้นที่จริง" ของ Korzybski เอามาใช้กับ agentic coding: map = prompt/skills/context ที่ให้ agent ส่วน territory = โค้ดจริงกับข้อจำกัดโลกจริง; ส่วนต่างคือ unknowns และพอ model เก่งขึ้น คอขวดก็ย้ายมาอยู่ที่ map ของเราเอง
 - [[unknowns-matrix]] — ตาราง 4 ช่องของ Thariq (known knowns / known unknowns / unknown knowns / unknown unknowns) พร้อมเทคนิคประจำแต่ละช่วงงาน: blind spot pass, brainstorm/prototype, interview, reference, implementation plan, implementation notes, pitch/explainer, quiz
 - [[tokenmaxxing]] — เผา token AI เยอะๆ เพื่อโชว์สถานะหรือทำ KPI ไม่ใช่เพราะงานต้องใช้จริง; ดัน demand กับบิล enterprise ให้บวมโดยไม่ได้พิสูจน์ว่า productivity เพิ่ม
-- [[ai-token-economics]] — unit economics ของ LLM/agent: แยก unit efficiency ออกจาก total workflow cost และวัด cost ต่อ output ที่ผ่านเกณฑ์หลังรวม compute, latency, review กับ rework
+- [[ai-token-economics]] — unit economics ของ LLM/agent: แยก unit efficiency ออกจาก total workflow cost; กรณี GPT-5.6/Kimi K3 ย้ำให้วัดราคาต่อ output ที่ผ่านเกณฑ์หลังรวม token, latency, retry, review และ rework
 - [[enterprise-ai-roi]] — คำถาม ROI ของ AI ระดับองค์กร: บิล token/API, ค่าคุมงาน, งานแก้ซ้ำ, governance เทียบกับผลลัพธ์ workflow จริงและแรงงานที่ประหยัดได้
 - [[ai-labor-cost-reversal]] — จุดที่ AI พลิกจากถูกกว่าแรงงานคน มาเทียบเท่าหรือแพงกว่าในบางงาน; source ยังมองว่างาน coding ถูกกว่าอยู่ ส่วน call center/data entry ยังไม่ชี้ขาด
 - [[photonic-interconnects]] — ส่งข้อมูลด้วยแสงใน data center/network; source เรื่อง LITE/COHR/NOK/AAOI มองว่าอาจเป็นคอขวด AI infrastructure ตัวถัดไปหลัง GPU, memory, CPU แต่ไม่ได้แปลว่าจะเป็นธุรกิจ margin สูงโดยอัตโนมัติ
@@ -442,7 +449,7 @@
 - [[dumb-zone]] — จุดที่ agent ยังมี context เหลือแต่คิดแย่ลง เพราะ active context เริ่มปนเปื้อน; ใช้ `/rewind` + `/compact` ที่รอยต่อ phase เพื่อเช็คและลดอาการ
 - [[three-learning-layers]] — Harrison Chase แบ่งจุดที่ agent เรียนรู้ได้เป็นสามชั้น: model (weights, ทำได้เฉพาะ lab) / harness (scaffold, พร้อมทำเป็น product) / context (memory+skills, เรียนจากผู้ใช้); แต่ละชั้นพัฒนาแยกกันได้ และทุกชั้นต้องมี scorer (คะแนนแบบ computational ที่ฟรี vs ให้คนตัดสิน); model เป็นของ lab ส่วน harness+context เป็นของเรา
 - [[agent-memory-types]] — memory ของ agent มี 3 แบบ: semantic (ข้อเท็จจริง) / episodic (ประสบการณ์ที่ผ่านมา) / procedural (วิธีรับมือแต่ละเคส); agent ที่พัฒนาตัวเองได้ต้องมีสองแบบหลัง แต่ setup ส่วนใหญ่มีแค่ semantic; ข้อความชุดเดียวใช้ได้ทั้งกับ agent, ผู้ใช้ หรือทั้งทีม
-- [[learning-from-users]] — สัญญาณที่แทบไม่มีใครเก็บ: การตัดสินใจจริงของคนที่ใช้ product ของเรา; เป็นสัญญาณเดียวที่เครื่องปลอมไม่ได้ (auto-score โดนปลอมได้ — Darwin Gödel Machine ปลอม log ตัวเอง); เก็บที่รอยต่อ agent↔user (AG-UI/CopilotKit) แล้วป้อนกลับเป็น procedural memory
+- [[learning-from-users]] — สัญญาณที่แทบไม่มีใครเก็บ: การตัดสินใจจริงของคนที่ใช้ product; เก็บที่รอยต่อ agent↔user แล้วป้อนกลับเป็น procedural memory; ต้องแยกจาก behavioral biometrics ที่ใช้ click/keystroke คล้ายกันเพื่อจำแนก identity/risk ไม่ใช่เรียนเหตุผลที่คนแก้ agent
 - [[queues-over-loops]] — Matt Pocock ตีกรอบ loop hype ใหม่: ไม่ต้องมี loop เดียววนตลอดกาล แค่มี queue ของงานที่ scope ชัดให้หลาย node (agent/dev) มาหยิบไปทำ; ดัน checkpoint แบบ human-in-the-loop ไปไว้ท้ายๆ; เสริม loop-engineering ไม่ได้ขัดกัน
 - [[afk-agents]] — งานแบบ away-from-keyboard: ส่งงานที่ scope ชัดให้ agent แล้วเลิกเฝ้า; ได้ "ตัวเราหลายตัว" ทำงานขนานกัน; งานที่ยังไม่ scope หรืองานวางแผนยังต้องมีคนอยู่ใน loop; จังหวะที่ AFK เข้าที่ = output ระเบิด; เพดานใหม่คือ bandwidth ของการ review
 - [[agent-experience]] — AX: ประสบการณ์ที่ agent เจอตอนเข้ามาทำงานใน codebase, product หรือ tool; DX ดี ≈ AX ดี; ครอบคลุมความชัดของ codebase, พื้นที่ review, primitive ของ product สำหรับ BYO agent, tool output ประหยัด token แบบ AXI และ planning artifact แบบ Lavish
@@ -510,7 +517,7 @@
 - [[word-error-rate]] — metric มาตรฐานวัดความแม่นของ ASR: นับ substitution, deletion, insertion เทียบกับ transcript อ้างอิง
 - [[dreaming]] — กระบวนการ batch ของ Anthropic: อ่าน transcript ข้ามหลาย agent แล้วออก diff ที่คัดกรองแล้วไปปรับ memory; ทำนอกรอบ (out-of-band) จากมุมมองข้าม agent — เหมือนให้ agent "ฝัน" เพื่อเกลา memory ตัวเอง
 - [[agent-memory-filesystem]] — memory ที่จำลองเป็น file system ให้ Claude จัดการเองด้วย bash/grep; มี permission scope, optimistic concurrency และ version history
-- [[self-learning-agents]] — คำว่า Agent “เรียนรู้เอง” อาจหมายถึงสามเรื่อง: อ่าน memory ใหม่, ใช้ workflow ใหม่ หรือฝึก model ใหม่; หน้าอธิบาย Memory+Dreaming ของ Anthropic, ขอบเขตของการให้คะแนนอัตโนมัติ, ตัวอย่าง AlphaEvolve/GPT-5.6 และเช็กลิสต์ห้าข้อก่อนเชื่อ claim
+- [[self-learning-agents]] — คำว่า Agent “เรียนรู้เอง” อาจหมายถึงอ่าน memory ใหม่, เปลี่ยน harness หรือฝึก model; ครอบคลุม Memory+Dreaming, AlphaEvolve/GPT-5.6 และ Kimi เป็น base สำหรับ post-training โดยแยก model learning ออกจาก product harness
 - [[live-service-stagnation]] — สภาวะวิกฤตของเกม live service: การดูแลระบบหลักกับ endgame progression หยุดนิ่ง เพราะไปทุ่มให้ monetization ระยะสั้น
 - [[monkey-paw-balancing]] — แพตเทิร์นบาลานซ์เกมที่ชวนหงุดหงิด: buff ผู้เล่นทีไร ต้องมี nerf ที่ซ่อนไว้หรือแถมมาพร้อมกันทุกที
 - [[speculative-decoding]] — เร่ง inference แบบไม่เสียคุณภาพ: model เล็ก (drafter) เดา k token แล้วให้ model ใหญ่ verify รวดเดียวใน forward pass เดียว; อาศัยช่องว่างที่เหลือของ memory bandwidth
@@ -607,11 +614,11 @@
 - [[memory-drift]] — failure mode: พฤติกรรมของ agent เพี้ยนไป เพราะสะสมประสบการณ์ผิดปกติเข้าไปเรื่อยๆ
 - [[memory-scoring]] — concept ของ Mercury: ให้คะแนนความสำคัญของเศษ memory ก่อนเลือกฉีดเข้า context
 - [[merkle-tree-sync]] — เรื่อง performance: sync codebase แบบ incremental ให้ agent ด้วย Merkle hash
-- [[mixture-of-experts]] — MoE: route token ไปหา subnetwork เฉพาะทางเพื่อความคุ้มค่า compute (DeepSeek/GPT-4/Mellum2/LongCat 2.0)
+- [[mixture-of-experts]] — MoE: route token ไปหา subnetwork บางส่วนเพื่อลด active compute; ตัวอย่างตั้งแต่ Mellum2/LongCat ถึง claim Kimi K3 3T ที่มี 896 experts และใช้ 16 ต่อ token แต่ยังใหญ่ระดับ enterprise
 - [[mla-attention]] — Multi-head Latent Attention: เทคนิคของ DeepSeek ที่ย่อขนาด KV cache
 - [[model-choice-by-expertise]] — heuristic เลือก model: เราเชี่ยวชาญโดเมนเองอยู่แล้ว Sonnet ก็พอ; ไม่รู้เรื่องเลยค่อยจ่ายค่า Opus
 - [[model-cyber-capability-emergence]] — ความสามารถ offensive/defensive cyber โผล่เป็นผลพลอยได้ของ intelligence ทั่วไป; กรอบ Demis Hassabis เพิ่มข้อเสนอให้ pre-release test capability ที่ไม่ได้ถูกโฆษณา รวม guardrail bypass/deception
-- [[open-weight-models]] — model ที่แจก weights แต่ไม่จำเป็นต้อง open source เต็มตัว; เหมาะกับ private/local deployment ทว่าเมื่อข้าม Frontier-class จะเกิดโจทย์ใหม่ เพราะ weights ที่แพร่แล้วเรียกคืน/patch แบบ closed API ไม่ได้
+- [[open-weight-models]] — model ที่แจก weights แต่ไม่จำเป็นต้อง open source เต็มตัว; Kimi K3 เพิ่มโจทย์ว่า model อาจ open และ frontier แต่ยังใหญ่เกิน local consumer ทำให้ privacy/post-training benefit กระจุกกับองค์กรที่มี compute
 - [[playback-pattern]] — ท่า alignment: ให้ agent ทวนก่อนลงมือ ว่าอะไรคือ "Stated, Inferred, Out-of-scope"
 - [[plugin-manager]] — เครื่องมือจัดการ life cycle, เวอร์ชัน และ dependency ของ extension ต่างๆ
 - [[pr-dependency-dag]] — ท่า orchestration: มองการแก้หลาย branch ขนานกันเป็น dependency graph
