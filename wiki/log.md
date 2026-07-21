@@ -1233,3 +1233,11 @@ Ingested Prompt Engineering's YouTube transcript on Kimi K3. Main takeaways: (1)
 - Updated entities: `[[prompt-engineering]]`, `[[moonshot-ai]]`, `[[kimi-k2-6]]`, `[[fable]]`, `[[artificial-analysis]]`
 - Updated concepts: `[[open-weight-models]]`, `[[mixture-of-experts]]`, `[[ai-token-economics]]`, `[[self-learning-agents]]`
 - Updated `[[index]]`, `[[log]]`, and `hotcache.md`
+
+## [2026-07-21] ingest | Ten Lessons from Building Bots, Toys, and Tools with AI
+Ingested a Facebook post supplied by the user from `@teepagorn` describing ten field lessons from building bots, toys and tools with AI almost daily. Main takeaways: (1) AI reduces syntax/typing work but makes system design, state/data-flow decisions and problem decomposition more important; (2) folder/file structure is shared context for humans and AI; (3) context matters as much as prompt, but one-off high-context work may cost more to transfer than to do manually; (4) skill stacking lets breadth choose and connect domains while depth remains necessary to detect hallucinations; (5) taste becomes the bottleneck when generation is cheap, with “70→90%” kept as the author's heuristic rather than a benchmark; (6) build the smallest self-usable thing, test multiple directions quickly and delete dead ends without sunk-cost attachment; (7) problem framing and knowing when not to delegate remain human work; (8) AI is framed as a multiplier of existing knowledge and interest. Preserved tensions instead of flattening them: skill stacking versus Nattee's shrinking-generalist-moat claim, AI “filling depth” versus “not adding what was absent,” and high-context delegation versus reusable context infrastructure. Provenance remains limited because the supplied text has no author name, post date or post-level permalink; “Search results” appears to be a generic Facebook page title.
+- Created source: `[[teepagorn-ten-lessons-building-with-ai]]`
+- Created concepts: `[[skill-stacking]]`, `[[context-engineering]]`
+- Updated concepts: `[[agentic-engineering]]`, `[[engineering-role-shift]]`, `[[taste-paradox]]`, `[[throwaway-prototyping]]`, `[[just-in-time-context]]`, `[[software-ecology]]`
+- No author entity was created because the supplied source identifies only the `@teepagorn` handle and leaves the author field blank.
+- Updated `[[index]]`, `[[log]]`, and `hotcache.md`

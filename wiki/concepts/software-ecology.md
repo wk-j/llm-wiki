@@ -3,8 +3,8 @@ title: Software Ecology
 type: concept
 tags: [ai, systems-thinking, software-ecology, socio-technical]
 created: 2026-05-28
-updated: 2026-05-28
-sources: [software-engineering-at-the-tipping-point.md]
+updated: 2026-07-21
+sources: [software-engineering-at-the-tipping-point.md, teepagorn-ten-lessons-building-with-ai.md]
 ---
 
 # Software Ecology / นิเวศวิทยาซอฟต์แวร์
@@ -34,6 +34,14 @@ sources: [software-engineering-at-the-tipping-point.md]
 
 **Why this helps:** การมองซอฟต์แวร์ผ่านมุมนิเวศวิทยาซอฟต์แวร์ช่วยป้องกันหลุมพราง "การเพิ่มประสิทธิภาพเฉพาะจุดที่ไร้ค่า" (Local Optimization Trap) และทำให้เราเห็นภาพรวมว่าต้องเพิ่มกำลัง (capacity) ของระบบนิเวศในทุกๆ จุดที่เชื่อมโยงกันอย่างสมดุล
 
+## ตัวคูณระดับคน กับ amplifier ระดับทีม
+
+[[teepagorn-ten-lessons-building-with-ai|Teepagorn]] ใช้ภาพใกล้กันว่า AI เป็น “ตัวคูณสิ่งที่เรามีอยู่แล้ว” คนรู้บัญชีจึงน่าจะใช้ AI สร้างโปรแกรมบัญชีได้ดีกว่าคนที่ไม่รู้บัญชีเลย เพราะตั้งคำถาม ตรวจความถูกต้อง และชี้ทิศได้
+
+มุมนี้ช่วยขยายภาพ แต่ยังไม่ใช่หลักฐานชุดเดียวกับ DORA. Teepagorn เล่าระดับ **ความรู้และ taste ของคนคนเดียว** ส่วน DORA พูดระดับ **แนวปฏิบัติและวัฒนธรรมของทีม** ทั้งสองระดับอาจเสริมกันหรือหักล้างกันก็ได้ เช่น คนเก่งอาจสร้างของดีเร็วขึ้น แต่ถ้าทีมไม่มี review และ maintenance ของนั้นก็ยังกลายเป็นหนี้ได้
+
+**ผลคือ:** เวลาพูดว่า AI เป็น amplifier ต้องบอกด้วยว่ากำลังขยายอะไร — ความสามารถคน, workflow ของทีม หรือโครงสร้างองค์กร.
+
 ---
 
 ## See also
@@ -44,3 +52,4 @@ sources: [software-engineering-at-the-tipping-point.md]
 - [[10x-moment]]
 - [[conways-law]]
 - [[local-optimization-trap]]
+- [[teepagorn-ten-lessons-building-with-ai]]

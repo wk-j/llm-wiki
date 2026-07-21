@@ -3,8 +3,8 @@ title: Throwaway Prototyping
 type: concept
 tags: [ai, prototyping, workflow, ui, software-engineering]
 created: 2026-05-12
-updated: 2026-07-12
-sources: ["New Skills! handoff, prototype, review and writing-*  Skills Changelog.md", a-field-guide-to-fable-finding-your-unknowns.md, new-skills-v1-1-wayfinder-research-implement-to-spec-to-tickets.md]
+updated: 2026-07-21
+sources: ["New Skills! handoff, prototype, review and writing-*  Skills Changelog.md", a-field-guide-to-fable-finding-your-unknowns.md, new-skills-v1-1-wayfinder-research-implement-to-spec-to-tickets.md, teepagorn-ten-lessons-building-with-ai.md]
 ---
 
 # Throwaway Prototyping / Prototype แบบทิ้งได้
@@ -57,6 +57,14 @@ Prototype ที่ดีควรถูกส่งต่อให้ implement
 
 **ผลคือ:** prototype ไม่ได้เป็นแค่ handoff ชั่วคราว แต่กลายเป็น primary evidence ของ decision บน issue map ก่อนกลั่นเป็น spec.
 
+## สร้างให้ตัวเองใช้ แล้วลองหลายทางเร็ว ๆ
+
+[[teepagorn-ten-lessons-building-with-ai|Teepagorn]] เติมวิธีใช้ prototype ในงานส่วนตัวสามข้อ: ทำชิ้นเล็กที่สุดที่ใช้ได้, เป็นผู้ใช้คนแรกของตัวเอง และลดต้นทุนให้ลองสามแบบในหนึ่งชั่วโมงได้ พอได้จับของจริง friction จะโผล่เร็วกว่าการคิดระบบทั้งก้อนอยู่ในหัว
+
+แนวนี้ต่างจาก throwaway prototype แบบเคร่งนิดหนึ่ง เพราะชิ้นทดลองที่ดีอาจถูกเก็บเป็นตัวต่อของระบบใหญ่ภายหลัง แต่ก่อน reuse ต้องแยกให้ชัดว่าส่วนไหนเป็นบทเรียน ส่วนไหนเป็น code ที่ผ่านมาตรฐาน production แล้ว การ “เสียดายน้อยลง” ช่วยให้ลบทางตันได้ ไม่ได้แปลว่าทุก draft พร้อมประกอบเข้าของจริง
+
+**ได้อะไร:** ใช้ความเร็วของ AI ซื้อ feedback และ option มากขึ้น โดยไม่เปลี่ยน code ทดลองให้เป็นหนี้ถาวร.
+
 ## ข้อควรระวัง
 
 คำว่า throwaway ต้องจริง. ถ้า prototype ถูกยกเข้า production แบบไม่ตรวจ จะกลายเป็น [[vibecoded-slop|vibecoded slop]] อีกแบบหนึ่ง
@@ -76,3 +84,4 @@ Prototype มีไว้หาคำตอบ ไม่ใช่เลี่ย
 - [[html-artifacts]]
 - [[wayfinding]]
 - [[new-skills-v1-1-wayfinder-research-implement-to-spec-to-tickets]]
+- [[teepagorn-ten-lessons-building-with-ai]]

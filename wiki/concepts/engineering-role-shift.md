@@ -3,8 +3,8 @@ title: Engineering Role Shift
 type: concept
 tags: [ai, software-engineering, career, roles]
 created: 2026-04-15
-updated: 2026-05-27
-sources: [software-engineer-role-ai-era.md, llm-era-computer-engineering-nattee.md, aaron-levie-agent-automation-jobs.md, llm-era-computer-engineering-ep3-nattee.md, software-after-software.md]
+updated: 2026-07-21
+sources: [software-engineer-role-ai-era.md, llm-era-computer-engineering-nattee.md, aaron-levie-agent-automation-jobs.md, llm-era-computer-engineering-ep3-nattee.md, software-after-software.md, teepagorn-ten-lessons-building-with-ai.md]
 ---
 
 # Engineering Role Shift / การเปลี่ยนขั้วของบทบาทวิศวกร
@@ -28,6 +28,19 @@ sources: [software-engineer-role-ai-era.md, llm-era-computer-engineering-nattee.
 - **AI ทำงานกว้างได้ดีกว่าคน**: งานที่เคยต้องใช้เวลาศึกษา (เช่น config Cisco/Huawei switch, เขียน Grafana dashboard, เซ็ต VM ใน Proxmox) ตอนนี้ AI สามารถทำแทนได้ทันทีด้วยคำสั่งเดียว
 - **จุดแข็งกลายเป็นจุดอ่อน**: ความรู้ระดับผิวเผิน (พอทำได้) ไม่มีค่าตัวอีกต่อไป เพราะใครที่มี AI ก็ "พอทำได้" เหมือนกัน
 - **ทางรอด**: ต้องเลือก "ลึก" ในบางด้านเพื่อสร้าง [[eh-gland|ต่อมเอ๊ะ]] ที่แข็งแรงพอจะคุม AI ในด้านนั้นๆ ได้ การรู้กว้างยังจำเป็นแต่ต้องใช้เพื่อ "ปิดจุดอ่อน" โดยมี AI เป็นตัวช่วย ไม่ใช่ใช้เป็นจุดขายหลักอีกต่อไป
+
+## คำถามเปิด: generalist moat หด แต่ skill stacking โตได้พร้อมกันไหม
+
+[[teepagorn-ten-lessons-building-with-ai|Teepagorn]] เสนออีกมุมว่า [[skill-stacking|การรู้หลายด้าน]] ราว 70% กลับมีค่าขึ้น เพราะคนมองออกว่าจะต่อ code, design, marketing และ psychology อย่างไร แล้วให้ AI เติมรายละเอียดแต่ละด้าน มุมนี้ดูเหมือนชนกับข้อสังเกตของ Nattee ว่าความรู้กว้างระดับผิวเสีย moat ไปแล้ว
+
+Wiki ยังไม่รวมสอง claim ให้เหลือคำตอบเดียว เพราะอาจพูดถึงคุณค่าคนละแบบ:
+
+- Nattee พูดถึง **ความได้เปรียบจากการทำงานกว้าง ๆ** ซึ่ง AI ทำแทนได้ง่ายขึ้น
+- Teepagorn พูดถึง **ความได้เปรียบจากการเชื่อมหลายโดเมน** เพื่อเลือกว่าจะสร้างอะไรและสั่ง AI ไปทางไหน
+
+จุดที่ทั้งคู่ตรงกันคือ breadth อย่างเดียวไม่พอ คนยังต้องลึกบางจุดเพื่อจับความผิดและตัดสินคุณภาพ คำถามที่เหลือคือ anchor domain ต้องลึกแค่ไหน และ “70%” พอสำหรับการ review งานเสี่ยงระดับใด
+
+**ผลคือ:** อย่าแปลว่าอนาคตต้องเป็น specialist ล้วนหรือ generalist ล้วน ต้องดูว่าทักษะกว้างนั้นใช้เชื่อม decision หรือเพียงทำงาน routine ที่ AI รับไปแล้ว.
 
 ## ทำไมส่วนกลางถึงหายไป
 
@@ -112,3 +125,5 @@ Ball กดดันเรื่อง "ability to keep up matters more than hea
 - [[thorsten-ball]]
 - [[reorganize-around-models]]
 - [[frontier-camp]]
+- [[skill-stacking]]
+- [[teepagorn-ten-lessons-building-with-ai]]

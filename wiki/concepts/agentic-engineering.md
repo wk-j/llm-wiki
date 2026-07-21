@@ -3,8 +3,8 @@ title: Agentic Engineering
 type: concept
 tags: [ai, engineering, agents, automation]
 created: 2026-04-30
-updated: 2026-07-12
-sources: [Andrej Karpathy From Vibe Coding to Agentic Engineering.md, l8-principals-agentic-engineering-workflow-kun-chen.md, new-skills-v1-1-wayfinder-research-implement-to-spec-to-tickets.md]
+updated: 2026-07-21
+sources: [Andrej Karpathy From Vibe Coding to Agentic Engineering.md, l8-principals-agentic-engineering-workflow-kun-chen.md, new-skills-v1-1-wayfinder-research-implement-to-spec-to-tickets.md, teepagorn-ten-lessons-building-with-ai.md]
 ---
 
 # Agentic Engineering / วิศวกรรมเชิงเอเจนท์
@@ -41,6 +41,20 @@ sources: [Andrej Karpathy From Vibe Coding to Agentic Engineering.md, l8-princip
 
 **ผลคือ:** leverage ไม่ได้มาจาก agent จำนวนมากอย่างเดียว แต่มาจาก harness ที่ทำให้ agent ทำงานยาว ตรวจตัวเองได้ และเรียกคนเฉพาะตอนที่ต้องใช้วิจารณญาณ.
 
+## เวอร์ชันคนเดียว: ออกแบบ แตกงาน ให้ context แล้วตรวจ
+
+[[teepagorn-ten-lessons-building-with-ai|บันทึก 10 ข้อจากการสร้างของด้วย AI]] เติมภาพ Agentic Engineering ระดับคนทำของแทบทุกวัน โดยไม่ต้องเริ่มจาก agent swarm หรือ orchestration ใหญ่ ๆ วงรอบของผู้เขียนคือ:
+
+1. ใช้ความรู้โดเมนกับ taste เลือกปัญหาและออกแบบระบบ
+2. จัด folder/file structure ให้ทั้งคนและ AI หาเรื่องเจอ
+3. แตกงานเป็นก้อนเล็ก แล้วให้ [[context-engineering|context]] เฉพาะก้อน
+4. สร้างของชิ้นเล็กให้ตัวเองลองและตรวจทีละรอบ
+5. ใช้ความรู้จับ hallucination ก่อนเกลางานต่อ
+
+จุดสำคัญคือ throughput ของ AI ไม่ได้ลดความสำคัญของ engineering แต่ทำให้ design decision แพร่ลง code ได้เร็วขึ้นทั้งตอนถูกและตอนผิด
+
+**ได้อะไร:** Agentic Engineering เริ่มได้จากวงรอบเล็กที่ตรวจได้ ไม่จำเป็นต้องมี agent หลายตัวก่อน.
+
 ## Skills v1.1 lifecycle: Matt Pocock
 
 [[new-skills-v1-1-wayfinder-research-implement-to-spec-to-tickets|Skills v1.1]] ของ [[matt-pocock|Matt Pocock]] เติม lifecycle แบบเป็นขั้นให้ภาพ Agentic Engineering:
@@ -71,3 +85,6 @@ sources: [Andrej Karpathy From Vibe Coding to Agentic Engineering.md, l8-princip
 - [[no-mistakes]]
 - [[first-mate]]
 - [[new-skills-v1-1-wayfinder-research-implement-to-spec-to-tickets]]
+- [[teepagorn-ten-lessons-building-with-ai]]
+- [[context-engineering]]
+- [[skill-stacking]]

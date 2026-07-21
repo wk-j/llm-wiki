@@ -3,7 +3,7 @@ title: Just-in-Time Context
 type: concept
 tags: [ai, prompt-engineering, context-management, efficiency]
 created: 2026-04-28
-updated: 2026-05-23
+updated: 2026-07-21
 sources: [ryan-lopopolo-harness-engineering.md, Agent Harness Engineering.md, software-writing-software-gone-right.md]
 ---
 
@@ -40,6 +40,7 @@ sources: [ryan-lopopolo-harness-engineering.md, Agent Harness Engineering.md, so
 ทั้งสองแนวคิดคล้ายกันตรงที่ไม่ front-load ทุกอย่าง แต่สิ่งที่เลื่อนเวลาไว้ไม่เหมือนกัน: อันหนึ่งเลื่อน context, อีกอันเลื่อน implementation
 
 ## ดูเพิ่ม
+- [[context-engineering]]
 - [[harness-engineering]]
 - [[ryan-lopopolo]]
 - [[harness-ratchet]]

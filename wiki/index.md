@@ -1,6 +1,7 @@
 # Index
 
 ## Sources
+- [[teepagorn-ten-lessons-building-with-ai]] — โพสต์ Facebook จาก `@teepagorn` สรุป 10 บทเรียนหลังสร้าง bot/ของเล่น/เครื่องมือด้วย AI แทบทุกวัน: system design และการแตกงานสำคัญขึ้น, folder structure เป็น context, breadth ช่วยต่อทักษะแต่ depth ใช้จับ hallucination, taste เกลางานจาก 70→90, เริ่มเล็กและลองเร็ว; เก็บข้อขัดแย้งกับ generalist moat และข้อจำกัดของงาน high-context เป็นคำถามเปิด เพราะไม่มีชื่อผู้เขียน วันที่ หรือ permalink ระดับโพสต์
 - [[kimi-k3-explained-prompt-engineering]] — Prompt Engineering (YouTube, ingest 2026-07-17): วาง Kimi K3 เป็น open-weight frontier specialist ด้าน agentic coding ไม่ใช่ general winner; claim 3T MoE, 896 experts/16 ต่อ token, native vision, context 1M และ token efficiency ยังเป็น third-party summary โดย release status, benchmark protocol และตัวอย่างบริษัทที่ post-train Kimi ยังต้องตรวจต้นทาง
 - [[migel-tissera-x-android-behavioral-fingerprinting]] — Migel Tissera (X thread, ingest 2026-07-16): reverse-engineering field report ว่า X Android APK มี SDK สองตัวรองรับ app-wide behavioral fingerprinting จากจังหวะพิมพ์ clipboard/touch event รูปใหม่ sensor และ device ID; ยัง inactive ใน session ที่ตรวจ, clipboard ไม่เก็บ text content ตามผู้เขียน แต่ความหมายของ keyboard `character delta` ยังไม่ชัด และ X Money/X Pay anti-fraud ยังเป็น hypothesis
 - [[framework-frontier-ai-dawning-new-age]] — Demis Hassabis (X article, ingest 2026-07-15): คาด AGI อาจมาในอีกไม่กี่ปีและเสนอ Frontier AI Standards Body แบบ public-private/SRO; จัด model ตาม capability threshold, เริ่ม voluntary review ก่อน release 30 วันแล้วค่อยเป็น US market gate, หมุน held-out test รายไตรมาส, ใช้กับ open/closed ทุกประเทศแต่ยกเว้น non-frontier; timeline, post-scarcity และกลไกบังคับใช้ยังเป็น forecast/ข้อเสนอ
@@ -382,6 +383,8 @@
 - [[marc-brooker]] — senior engineer ที่ AWS (Lambda/Aurora); ฝั่งปกป้อง SDD ตัวจริง: มอง spec เป็น artifact ที่ explicit มี version และมีชีวิต ใช้วนซ้ำได้จริง
 
 ## Concepts
+- [[context-engineering]] — จัดสิ่งที่ model ต้องเห็นเพื่อทำงานถูก ทั้ง file/rule/example/tool/memory/test ไม่ใช่แค่แต่ง prompt; ต้องคัด context ที่ใช่และเลือกเวลาส่งให้เหมาะ เพราะงาน high-context มี transfer cost และ context มากเกินก็เกิด noise/context rot
+- [[skill-stacking]] — ต่อทักษะหลายด้านเพื่อเห็น combination และสั่ง AI ข้ามโดเมน; breadth ช่วยเลือก/เชื่อม ส่วน depth เป็น anchor สำหรับตรวจ hallucination — เก็บคำถามเปิดกับข้อเสนอว่า generalist moat กำลังหด ว่า “รู้พอถาม” ต้องลึกแค่ไหน
 - [[behavioral-biometrics]] — ใช้จังหวะพิมพ์ touch/motion/device signal เพื่อจำแนกคน bot หรือ account takeover โดยไม่จำเป็นต้องอ่านข้อความ; metadata หลายชั้นยัง fingerprint ได้ และ anti-fraud ที่ชอบธรรมก็ต้องจำกัด scope, retention, consent, false positive และสิทธิ์ appeal
 - [[mobile-app-reverse-engineering]] — แกะ APK และสังเกต runtime เพื่อดู code/SDK/config/data flow; ต้องแยก static capability ออกจาก activation และ collection จริง พร้อมเก็บ version/hash/trace ให้ตรวจซ้ำ โดย coding agent ช่วยค้นได้แต่ไม่แทน provenance
 - [[artificial-general-intelligence]] — AGI คือ AI ที่มีความสามารถทางความคิดกว้างระดับมนุษย์; Demis Hassabis นิยามว่า “ทุกความสามารถที่สมองมี” และคาดว่าอาจมาในไม่กี่ปี แต่ยอมรับ uncertainty สูง; แยกจาก Frontier-class ซึ่งเป็น threshold เชิงปฏิบัติที่กำกับได้ก่อนพิสูจน์ AGI
