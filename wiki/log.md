@@ -1241,3 +1241,11 @@ Ingested a Facebook post supplied by the user from `@teepagorn` describing ten f
 - Updated concepts: `[[agentic-engineering]]`, `[[engineering-role-shift]]`, `[[taste-paradox]]`, `[[throwaway-prototyping]]`, `[[just-in-time-context]]`, `[[software-ecology]]`
 - No author entity was created because the supplied source identifies only the `@teepagorn` handle and leaves the author field blank.
 - Updated `[[index]]`, `[[log]]`, and `hotcache.md`
+
+## [2026-07-23] ingest | Do Not Argue with Fools — Philosophy Facebook Post
+Ingested a user-supplied Thai Facebook post displayed as “ปรัชญา” and dated 2025-02-12. Its 20 points reduce to four claims: (1) argument stops working when the parties do not share a truth-seeking goal; (2) distortion, topic shifting, fallacies, personal attacks and volume can replace engagement with evidence; (3) the continuing cost falls on the participant's time, energy and stress; (4) withdrawal or silence can be the better response. The wiki preserved the useful attention/boundary lesson but did not adopt “fool” as a factual diagnosis. It reframed the advice around observable repeated behavior, conditions for changing one's mind, conversation stakes and explicit exit criteria. Caveats: disagreement is not bad faith; misunderstanding, anger, face-saving and weak evidence can look similar; silence is not always enough when safety, rights, workplace decisions or public misinformation are involved.
+- Created source: `[[do-not-argue-with-fools-philosophy-facebook]]`
+- Created concept: `[[argument-disengagement]]`
+- Updated concept: `[[care-allocation]]`
+- No entity was created for “ปรัชญา” because the supplied text has no permalink, page owner or URL, so the displayed label cannot yet be tied to a canonical Facebook page.
+- Updated `[[index]]`, `[[log]]`, and `hotcache.md`

@@ -3,8 +3,8 @@ title: Care Allocation
 type: concept
 tags: [psychology, decision-making, attention, productivity]
 created: 2026-05-02
-updated: 2026-05-02
-sources: [jrt-investment-idgaf-skill.md]
+updated: 2026-07-23
+sources: [jrt-investment-idgaf-skill.md, do-not-argue-with-fools-philosophy-facebook.md]
 ---
 
 # Care Allocation / การจัดสรรความใส่ใจ
@@ -56,6 +56,14 @@ Care allocation ไม่ใช่การปิดหูจาก feedback ท
 
 ปัญหาคือการให้ feedback ที่ไม่มี context หรือ judgment จากคนแปลกหน้ามี weight เท่ากับเรื่องที่สำคัญจริง ตรงนั้นทำให้ attention ถูกใช้ผิดที่
 
+## การถกเถียงก็ใช้งบ attention
+
+โพสต์ [[do-not-argue-with-fools-philosophy-facebook|“ถึงโมโหก็อย่าเถียงกับคนโง่”]] เอาหลักเดียวกันมาใช้กับการเถียง: ถ้าอีกฝ่ายไม่สนความจริง บิดคำ เปลี่ยนเรื่อง หรืออยากชนะอย่างเดียว การอธิบายเพิ่มก็อาจเผาเวลาและพลังโดยไม่เกิดผล
+
+แต่ care allocation ไม่ควรกลายเป็นข้ออ้างติดป้ายคนเห็นต่างว่าโง่ แนวทาง [[argument-disengagement|argument disengagement]] จึงดูที่รูปแบบการคุยและ stake แทน ถ้าเป็นการยั่วยุที่ไม่สำคัญก็ถอนตัวได้ ถ้าเป็นเรื่องความปลอดภัย สิทธิ งานที่ต้องตัดสินใจ หรือข้อมูลผิดที่กระทบคนอื่น เราอาจต้องตอบสั้น ๆ วางขอบเขต หรือเก็บหลักฐาน
+
+**ผลคือ:** เราเลือกไม่เถียงต่อได้โดยไม่ต้องปิดรับ feedback และเลือกตอบเรื่องสำคัญได้โดยไม่ปล่อยให้คู่เถียงลากวงไปไม่จบ
+
 ## ดูเพิ่ม
 
 - [[jrt-investment-idgaf-skill]]
@@ -66,3 +74,5 @@ Care allocation ไม่ใช่การปิดหูจาก feedback ท
 - [[judgement-vs-automation]]
 - [[orchestration-tax]]
 - [[cognitive-surrender]]
+- [[argument-disengagement]]
+- [[do-not-argue-with-fools-philosophy-facebook]]
