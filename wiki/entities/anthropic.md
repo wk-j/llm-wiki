@@ -3,8 +3,8 @@ title: Anthropic
 type: entity
 tags: [company, ai, ai-safety, claude]
 created: 2026-04-16
-updated: 2026-07-09
-sources: [Introducing Claude Opus 4.7.md, The advisor strategy Give Sonnet an intelligence boost with Opus.md, Using Claude Code Session Management & 1M Context.md, opencode-vs-claude-code-morph.md, Claude Mythos Preview.md, improved-15-llms-harness-changed.md, Piyalitt Ittichaiwong - Opus 4.8 Launch Recap.md, how-ai-became-more-expensive-than-workers-it-replaced.md, claude-in-microsoft-foundry.md, bun-in-rust.md]
+updated: 2026-07-29
+sources: [Introducing Claude Opus 4.7.md, The advisor strategy Give Sonnet an intelligence boost with Opus.md, Using Claude Code Session Management & 1M Context.md, opencode-vs-claude-code-morph.md, Claude Mythos Preview.md, improved-15-llms-harness-changed.md, Piyalitt Ittichaiwong - Opus 4.8 Launch Recap.md, how-ai-became-more-expensive-than-workers-it-replaced.md, claude-in-microsoft-foundry.md, bun-in-rust.md, bringing-mcp-2026-07-28-to-claude.md]
 ---
 
 # Anthropic
@@ -57,6 +57,16 @@ Anthropic ประกาศว่า [[claude|Claude]] เป็น **generally
 
 เคสนี้ทำให้ claim เรื่อง [[dynamic-workflows|dynamic workflows]] มีหลักฐานภาคสนาม: workflow ราว 50 ตัว, peak ประมาณ 64 Claudes, 11 วันจน test suite ผ่านทุก platform, พร้อม [[adversarial-review-loops|adversarial review loops]] และ CI/fuzzing เป็น guardrail.
 
+## MCP 2026-07-28 และ Claude rollout
+
+ใน [[bringing-mcp-2026-07-28-to-claude|ประกาศวันที่ 28 ก.ค. 2026]] Anthropic วาง [[model-context-protocol|MCP]] รุ่น `2026-07-28` เป็นฐานใหม่ของ connector ecosystem. รุ่นนี้ทำ core เป็น request/response ที่พึ่ง session state น้อยลง แล้วแยก interactive UI, งาน long-running และ enterprise auth ไปอยู่ใน [[mcp-extensions|extensions]].
+
+ฝั่งผลิตภัณฑ์ Claude มี MCP Apps, enterprise-managed auth, dashboard ดู connector adoption/error/latency และ MCP tunnels สำหรับต่อ private network. แต่ประกาศบอกว่า support ของ spec ใหม่กำลังทยอยมา จึงยังไม่ควรเหมารวมว่า Claude ทุก surface รองรับทุก extension แล้ว.
+
+ตัวเลขมากกว่า 950 MCP servers, ผู้ใช้หลายล้านคนต่อวัน และ 400 ล้าน SDK downloads ต่อเดือนเป็นตัวเลขจาก Anthropic/MCP announcement. หน้า source ไม่เปิดวิธีนับ จึงเก็บไว้เป็น claim ของผู้ประกาศ ไม่ใช้เป็นหลักฐานอิสระว่า active adoption มีขนาดเท่ากัน.
+
+**ได้อะไร:** Anthropic ไม่ได้ทำแค่ model หรือ MCP spec. บริษัทกำลังสร้างชั้น production รอบ connector ตั้งแต่ UI, identity, observability ไปจนถึง private-network access.
+
 ## มุม third-party harness (Can Bölük, ก.พ. 2026)
 
 [[can-boluk|Can Bölük]] มองการที่ Anthropic บล็อก [[opencode|OpenCode]] จาก Claude Code subscription ว่าเป็นสัญญาณ **anti–third-party harness** ทั้งที่จริงแล้วการที่ open harness ปรับ edit tool ช่วยดันให้ model ของ vendor เองได้อีกหลาย point โดยไม่ต้องเทรนใหม่ (ดู [[improved-15-llms-harness-changed]], [[edit-tool-formats]]) ของเขาคือพอเจอ third-party harness ก็ควร "เล่ามาให้ฟัง" ไม่ใช่ blanket ban — เหมือนทีม security ที่ยอมจ้าง cheater มาช่วยป้องกัน
@@ -83,6 +93,8 @@ Anthropic ได้บล็อก [[opencode|OpenCode]] ไม่ให้ใ�
 - [[claude-code]]
 - [[advisor-strategy]]
 - [[model-context-protocol]]
+- [[mcp-extensions]]
+- [[bringing-mcp-2026-07-28-to-claude]]
 - [[ai-token-economics]]
 - [[enterprise-ai-roi]]
 - [[microsoft-foundry]]

@@ -1249,3 +1249,11 @@ Ingested a user-supplied Thai Facebook post displayed as “ปรัชญา�
 - Updated concept: `[[care-allocation]]`
 - No entity was created for “ปรัชญา” because the supplied text has no permalink, page owner or URL, so the displayed label cannot yet be tied to a canonical Facebook page.
 - Updated `[[index]]`, `[[log]]`, and `hotcache.md`
+
+## [2026-07-29] ingest | Bringing MCP 2026-07-28 to Claude
+Ingested Anthropic's launch post for the fifth Model Context Protocol specification. Main takeaways: (1) the core moves from a bidirectional protocol that depends on session state to request/response, making serverless and edge deployment easier; (2) stateful capabilities move into negotiated, versioned extensions — MCP Apps for interactive UI, MCP Tasks for long-running work, and auth extensions for machine or enterprise flows; (3) authorization aligns more closely with production OAuth 2.0/OIDC and identity providers such as Entra or Okta; (4) Claude's surrounding production layer includes Apps, enterprise-managed auth, connector observability and private-network MCP tunnels; (5) support for `2026-07-28` is still rolling out, so support must be checked per Claude surface and extension; (6) 400M monthly SDK downloads, 950+ directory servers and millions of daily users remain first-party claims without counting methodology. Preserved a documentation tension found during ingest: the extensions overview groups Tasks with official extensions, while the Tasks repository still labels itself experimental and the support matrix omits it.
+- Created source: `[[bringing-mcp-2026-07-28-to-claude]]`
+- Created concept: `[[mcp-extensions]]`
+- Updated concept: `[[model-context-protocol]]`
+- Updated entity: `[[anthropic]]`
+- Updated `[[index]]`, `[[log]]`, and `hotcache.md`

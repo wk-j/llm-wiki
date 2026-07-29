@@ -1,6 +1,7 @@
 # Index
 
 ## Sources
+- [[bringing-mcp-2026-07-28-to-claude]] — Anthropic (blog, 2026-07-28): MCP รุ่นที่ห้าเปลี่ยน core จาก bidirectional session state ไปเป็น request/response เพื่อ deploy บน serverless/edge ง่ายขึ้น; แยก Apps, Tasks และ auth เป็น extensions, ผูก OAuth 2.0/OIDC กับ enterprise identity และเตรียมทยอยรองรับใน Claude; ตัวเลข 400M SDK downloads/เดือน, 950+ servers และผู้ใช้หลายล้านคนยังเป็น first-party claim ส่วนสถานะ Tasks ยังไม่ตรงกันระหว่าง docs, support matrix และ repo
 - [[do-not-argue-with-fools-philosophy-facebook]] — โพสต์ Facebook ชื่อที่แสดงว่า “ปรัชญา” (12 ก.พ. 2025) แจกแจง 20 เหตุผลว่าอย่าเถียงกับ “คนโง่”: เมื่ออีกฝ่ายอยากชนะมากกว่าหาความจริง บิดคำ เปลี่ยนเรื่อง หรือใช้เสียงข่ม การคุยต่อยิ่งเผาเวลาและพลัง; wiki เปลี่ยนคำติดป้ายคนให้เป็นเกณฑ์ดูพฤติกรรมและ stake พร้อมเตือนว่าความเงียบไม่เหมาะกับเรื่องสิทธิ ความปลอดภัย งานที่ต้องตัดสินใจ หรือข้อมูลผิดสาธารณะ
 - [[teepagorn-ten-lessons-building-with-ai]] — โพสต์ Facebook จาก `@teepagorn` สรุป 10 บทเรียนหลังสร้าง bot/ของเล่น/เครื่องมือด้วย AI แทบทุกวัน: system design และการแตกงานสำคัญขึ้น, folder structure เป็น context, breadth ช่วยต่อทักษะแต่ depth ใช้จับ hallucination, taste เกลางานจาก 70→90, เริ่มเล็กและลองเร็ว; เก็บข้อขัดแย้งกับ generalist moat และข้อจำกัดของงาน high-context เป็นคำถามเปิด เพราะไม่มีชื่อผู้เขียน วันที่ หรือ permalink ระดับโพสต์
 - [[kimi-k3-explained-prompt-engineering]] — Prompt Engineering (YouTube, ingest 2026-07-17): วาง Kimi K3 เป็น open-weight frontier specialist ด้าน agentic coding ไม่ใช่ general winner; claim 3T MoE, 896 experts/16 ต่อ token, native vision, context 1M และ token efficiency ยังเป็น third-party summary โดย release status, benchmark protocol และตัวอย่างบริษัทที่ post-train Kimi ยังต้องตรวจต้นทาง
@@ -550,7 +551,8 @@
 - [[llm-coding-pitfalls]] — ข้อสังเกต 4 ข้อของ Karpathy เรื่อง failure mode ตอน LLM แก้โค้ด: งงแบบซ่อนไว้, ทำเวอร์เกินโจทย์, scope ไหล, เกณฑ์ความสำเร็จหลวม
 - [[code-knowledge-graphs]] — knowledge graph ที่สร้างจากโครงสร้าง codebase ให้ AI agent ใช้รับรู้และนำทางในโค้ด
 - [[graph-rag]] — Retrieval-Augmented Generation ที่ใช้ knowledge graph แทน vector store เพื่อ context ที่ดีกว่า
-- [[model-context-protocol]] — MCP: มาตรฐานเปิดสำหรับต่อ AI agent เข้ากับเครื่องมือและข้อมูลภายนอก
+- [[model-context-protocol]] — MCP: มาตรฐานเปิดสำหรับต่อ AI agent เข้ากับเครื่องมือและข้อมูลภายนอก; รุ่น 2026-07-28 ทำ core เป็น request/response แล้วแยก stateful capability ไปอยู่ใน extensions
+- [[mcp-extensions]] — ส่วนขยายแบบ opt-in ของ MCP สำหรับ interactive UI (Apps), งาน async ที่ตามต่อได้ (Tasks) และ enterprise auth; client/server ต้องประกาศ capability ตรงกันและเตรียม fallback
 - [[diegetic-ui]] — UI ที่อยู่ในโลกของเรื่องจริงๆ ตัวละครมองเห็นและรับรู้มัน (HUD ของ Iron Man, Dead Space)
 - [[non-diegetic-ui]] — UI overlay แบบดั้งเดิมที่อยู่นอกโลกของเกม (หลอดเลือด เมนู ตัวนับคะแนน)
 - [[spatial-ui]] — UI ที่วางอยู่ในพื้นที่ 3D ของเกม แต่ตัวละครมองไม่เห็น (เส้นนำทาง, nameplate)
