@@ -1,6 +1,7 @@
 # Index
 
 ## Sources
+- [[jrt-desk-kospi-liquidation-discovery]] — JRT Desk (Facebook, 2026-07-29): อธิบาย KOSPI ร่วงแรงผ่าน market structure ที่มี margin loan, single-stock leveraged ETF, forced liquidation และ short-covering bid ที่บาง; แก่นคือวันวิกฤตราคาอาจถูกตั้งโดยคนที่ต้องขายวันนี้ ไม่ใช่คนที่ประเมินมูลค่าระยะยาว ตัวเลขตลาดทั้งหมดคงสถานะเป็น claim ตามโพสต์
 - [[bringing-mcp-2026-07-28-to-claude]] — Anthropic (blog, 2026-07-28): MCP รุ่นที่ห้าเปลี่ยน core จาก bidirectional session state ไปเป็น request/response เพื่อ deploy บน serverless/edge ง่ายขึ้น; แยก Apps, Tasks และ auth เป็น extensions, ผูก OAuth 2.0/OIDC กับ enterprise identity และเตรียมทยอยรองรับใน Claude; ตัวเลข 400M SDK downloads/เดือน, 950+ servers และผู้ใช้หลายล้านคนยังเป็น first-party claim ส่วนสถานะ Tasks ยังไม่ตรงกันระหว่าง docs, support matrix และ repo
 - [[do-not-argue-with-fools-philosophy-facebook]] — โพสต์ Facebook ชื่อที่แสดงว่า “ปรัชญา” (12 ก.พ. 2025) แจกแจง 20 เหตุผลว่าอย่าเถียงกับ “คนโง่”: เมื่ออีกฝ่ายอยากชนะมากกว่าหาความจริง บิดคำ เปลี่ยนเรื่อง หรือใช้เสียงข่ม การคุยต่อยิ่งเผาเวลาและพลัง; wiki เปลี่ยนคำติดป้ายคนให้เป็นเกณฑ์ดูพฤติกรรมและ stake พร้อมเตือนว่าความเงียบไม่เหมาะกับเรื่องสิทธิ ความปลอดภัย งานที่ต้องตัดสินใจ หรือข้อมูลผิดสาธารณะ
 - [[teepagorn-ten-lessons-building-with-ai]] — โพสต์ Facebook จาก `@teepagorn` สรุป 10 บทเรียนหลังสร้าง bot/ของเล่น/เครื่องมือด้วย AI แทบทุกวัน: system design และการแตกงานสำคัญขึ้น, folder structure เป็น context, breadth ช่วยต่อทักษะแต่ depth ใช้จับ hallucination, taste เกลางานจาก 70→90, เริ่มเล็กและลองเร็ว; เก็บข้อขัดแย้งกับ generalist moat และข้อจำกัดของงาน high-context เป็นคำถามเปิด เพราะไม่มีชื่อผู้เขียน วันที่ หรือ permalink ระดับโพสต์
@@ -378,13 +379,15 @@
 - [[liang-wenfeng]] — ผู้ก่อตั้งและ CEO ของ DeepSeek กับ High-Flyer; ชูเรื่อง technical efficiency
 - [[ctrl-alt-zaid]] — นักวิจัยและนักเขียนด้าน AI; ชูแนวคิด agent memory แบบ machine-efficient กับโปรเจกต์ Mercury
 - [[mercury]] — infrastructure ด้าน agent memory แบบ open-source; แนวคิดคือ "Identity as human-owned, Memory as machine-efficient"
-- [[jrt-investment]] — เพจ Facebook ไทยสายการลงทุนและ mindset การใช้ชีวิต; ตีความ "I don't give a fuck" ว่าเป็นการเลือกว่าจะใส่ใจอะไร
+- [[jrt-investment]] — เพจ Facebook ไทยที่ใช้ทั้งชื่อ JRT Investment และ JRT Desk; เขียนเรื่องการลงทุน, market structure และ mindset ตั้งแต่ care allocation ไปจนถึง liquidation discovery
 - [[jetbrains]] — บริษัทเครื่องมือ developer เบื้องหลัง IntelliJ/PyCharm; partner ของ ACP และผู้สร้าง Mellum2 สำหรับงาน AI ด้าน software engineering
 - [[jaroslaw-wasowski]] — นักเขียนสาย software architecture บน Medium; เคยเชียร์ SDD (เขียนไป 6 บทความ) แล้วกลับลำด้วย "Stop Writing Specs. Start Writing Facts."
 - [[spec-kit]] — framework SDD ของ GitHub ดาวราว 90k (Q2 2026); ออก /speckit.spec-drift; Step 1 ของมันยังรอดมาเป็น sketchpad ของ Wasowski
 - [[marc-brooker]] — senior engineer ที่ AWS (Lambda/Aurora); ฝั่งปกป้อง SDD ตัวจริง: มอง spec เป็น artifact ที่ explicit มี version และมีชีวิต ใช้วนซ้ำได้จริง
 
 ## Concepts
+- [[liquidation-discovery]] — ช่วงที่ราคาถูกกำหนดโดยคนที่ต้องขายตาม collateral, mandate หรือ deadline มากกว่าการต่อรอง fair value; ใช้ forced-flow map ตรวจ actor, trigger, เวลา, ขนาด และ counterflow
+- [[implicit-government-put]] — ความเชื่อว่ารัฐจะจำกัด downside ให้ตลาดแม้ไม่มีสัญญารับประกัน; การช่วยซ้ำสร้าง moral hazard และ leverage แต่ reaction function อาจเปลี่ยนเมื่อ shock รอบใหม่ไม่เหมือนเดิม
 - [[argument-disengagement]] — เกณฑ์รู้ว่าเมื่อไรควรหยุดเถียงโดยดูเป้าหมายร่วม กติกา pattern การบิดคำ/เปลี่ยนเรื่อง และ stake แทนการติดป้ายว่าใครโง่; เสนอขั้นตั้งเป้า หาเงื่อนไขเปลี่ยนใจ ตอบประเด็นหลัก ตั้งขอบเขต แล้วถอนตัวหรือบันทึกเรื่องตามผลกระทบ
 - [[context-engineering]] — จัดสิ่งที่ model ต้องเห็นเพื่อทำงานถูก ทั้ง file/rule/example/tool/memory/test ไม่ใช่แค่แต่ง prompt; ต้องคัด context ที่ใช่และเลือกเวลาส่งให้เหมาะ เพราะงาน high-context มี transfer cost และ context มากเกินก็เกิด noise/context rot
 - [[skill-stacking]] — ต่อทักษะหลายด้านเพื่อเห็น combination และสั่ง AI ข้ามโดเมน; breadth ช่วยเลือก/เชื่อม ส่วน depth เป็น anchor สำหรับตรวจ hallucination — เก็บคำถามเปิดกับข้อเสนอว่า generalist moat กำลังหด ว่า “รู้พอถาม” ต้องลึกแค่ไหน

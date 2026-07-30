@@ -1257,3 +1257,10 @@ Ingested Anthropic's launch post for the fifth Model Context Protocol specificat
 - Updated concept: `[[model-context-protocol]]`
 - Updated entity: `[[anthropic]]`
 - Updated `[[index]]`, `[[log]]`, and `hotcache.md`
+
+## [2026-07-30] ingest | JRT Desk — KOSPI and Liquidation Discovery
+Ingested JRT Desk's Facebook post dated 2026-07-29 about the KOSPI selloff. The durable frame is `liquidation discovery`: on a severe down day, price may be set by actors forced to trade now rather than investors debating long-term value. The post links five mechanisms: (1) repeated intervention creates an implicit government put and encourages leverage; (2) margin loans transfer the sell decision from the investor to collateral rules; (3) concentrated daily leveraged ETFs create mechanical hedge flow; (4) a thin short base removes forced buying from short covering; and (5) a regulator's change of tone can flip belief into forced flow. Preserved the key systems lesson that locally rational actions by brokers, funds and investors can become unstable in aggregate. Kept all current market figures, policy history, rebalancing estimates and causal claims attributed to the post because its references are named but not directly linked and no independent fact-check was performed.
+- Created source: `[[jrt-desk-kospi-liquidation-discovery]]`
+- Created concepts: `[[liquidation-discovery]]`, `[[implicit-government-put]]`
+- Updated entity: `[[jrt-investment]]` (records the displayed name “JRT Desk” under the existing `jrt.investment` identity)
+- Updated `[[index]]`, `[[log]]`, and `hotcache.md`
