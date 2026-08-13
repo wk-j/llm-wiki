@@ -1264,3 +1264,20 @@ Ingested JRT Desk's Facebook post dated 2026-07-29 about the KOSPI selloff. The 
 - Created concepts: `[[liquidation-discovery]]`, `[[implicit-government-put]]`
 - Updated entity: `[[jrt-investment]]` (records the displayed name “JRT Desk” under the existing `jrt.investment` identity)
 - Updated `[[index]]`, `[[log]]`, and `hotcache.md`
+
+## [2026-08-04] ingest | About Stacked Pull Requests — GitHub Docs
+Ingested GitHub's official overview of native stacked pull requests. Main takeaways: (1) a stack is a linear dependency chain where the bottom PR targets the trunk and every higher PR targets the branch below; (2) each layer stays independently reviewable and shows only its own diff, so work can continue before foundational PRs merge; (3) GitHub treats the chain as one connected unit through cascading rebase, a stack map, branch protection and CI enforcement on every layer, plus Webhooks, REST API and read-only GraphQL fields; (4) merges still respect bottom-up dependency order, but users can merge one layer, a lower portion or the entire stack; (5) GitHub explicitly positions stacks for high-volume and agent-generated work, while human review throughput and coherent task boundaries remain limiting factors; (6) the feature is still in public preview, requires all branches to live in one repository, is not supported in GitHub Desktop, and API-based merging must use the stack-aware endpoint. Kept those maturity and surface limits explicit because the workflow may change during preview.
+- Created source: `[[about-stacked-pull-requests-github-docs]]`
+- Created concept: `[[stacked-pull-requests]]`
+- Updated entity: `[[github]]`
+- Updated concept: `[[pr-dependency-dag]]` to distinguish a linear stack from a branching dependency graph
+- Updated `[[index]]`, `[[log]]`, and `hotcache.md`
+
+## [2026-08-13] ingest | I Was Replaced by AI — Typecraft
+Ingested the user-supplied YouTube transcript from Typecraft. The durable frame is `AI work intensification`: AI can lower effort per change while management raises feature/PR volume and expectations until total work grows. The source adds a second cost beyond oversight — Typecraft felt that prompting and accepting agent output removed creative ownership from programming. Preserved the full causal sequence instead of blaming one factor: he reports 60–80-hour weeks, a third child, burnout and depression before returning to an AI-heavy workplace; layoff and job-search difficulty came later, and the clip never says AI caused the layoff directly. The ending also remains intact: in a new content creator/developer educator role at PlanetScale, he accepts AI as a useful tool because the job supports Typecraft, community and personal brand. Treated all employment, health, hours, subscriber and company-practice details as first-person claims from one field report.
+- Created source: `[[i-was-replaced-by-ai-typecraft]]`
+- Created concept: `[[ai-work-intensification]]`
+- Created entities: `[[typecraft]]`, `[[planetscale]]`
+- Updated concepts: `[[ai-brain-fry]]`, `[[developer-balance]]`, `[[cognitive-surrender]]`, `[[code-is-free]]`
+- Preserved tensions: AI may reduce burnout on routine work or intensify total work depending on allocation; cheap implementation does not make comprehension or creative ownership free; AI changed the old job but is not established as the cause of depression or layoff.
+- Updated `[[index]]`, `[[log]]`, and `hotcache.md`

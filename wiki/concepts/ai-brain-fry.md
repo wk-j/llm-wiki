@@ -3,8 +3,8 @@ title: AI Brain Fry
 type: concept
 tags: [ai, productivity, workplace, attention, burnout]
 created: 2026-06-30
-updated: 2026-06-30
-sources: [techsauce-ai-brain-fry.md]
+updated: 2026-08-13
+sources: [techsauce-ai-brain-fry.md, i-was-replaced-by-ai-typecraft.md]
 ---
 
 # AI Brain Fry / ภาวะสมองล้าจากการใช้ AI
@@ -43,6 +43,16 @@ Techsauce ย้ำว่า AI ยังช่วยลด burnout ได้เ
 
 **ได้อะไร:** คำถามที่ดีไม่ใช่ "ใช้ AI มากแค่ไหน" แต่คือ "AI ลดงานคิด หรือเพิ่มงานคุม".
 
+## เรื่องเล่าจาก Typecraft
+
+[[typecraft|Typecraft]] ให้ภาพจากงาน software ที่เป็นรูปธรรมใน [[i-was-replaced-by-ai-typecraft|I Was Replaced by AI]]. หลังกลับจาก paternity leave เขาเจอทั้ง developer และ project manager ใช้ AI สร้าง PR และ feature มากขึ้น. สิ่งที่ตามมาในประสบการณ์ของเขาไม่ใช่เวลาว่าง แต่คืองานที่หนักและนานขึ้นเพื่อไล่ตาม output ใหม่.
+
+นี่เชื่อมอาการ AI Brain Fry เข้ากับ [[ai-work-intensification|AI Work Intensification]]. AI Brain Fry บอกว่าในหัวคนเกิดอะไรขึ้นเมื่อ oversight load สูง. Work intensification บอกว่าทำไม workload ระดับองค์กรจึงขยายตาม productivity gain.
+
+แต่เรื่องนี้ยังเป็น field report จากคนเดียว และ burnout ของเขาเริ่มก่อนกลับเข้าทำงาน. จึงใช้สนับสนุนกลไกและตั้งคำถามได้ แต่ยังสรุปไม่ได้ว่า AI เป็นสาเหตุเดียวของ depression หรือทุกบริษัทจะเจอผลเดียวกัน.
+
+**ผลคือ:** จะป้องกัน AI Brain Fry ต้องดูทั้งวิธีใช้ tool และวิธีตั้งเป้างานหลัง tool เร็วขึ้น.
+
 ## ความสัมพันธ์กับ Cognitive Surrender
 
 [[cognitive-surrender|Cognitive Surrender]] คือการยอมรับงาน AI โดยยังไม่ได้ตั้งความเห็นเอง เพราะ attention หมด. AI Brain Fry คือภาวะล้าก่อนถึงจุดนั้น.
@@ -80,3 +90,5 @@ Techsauce ย้ำว่า AI ยังช่วยลด burnout ได้เ
 - [[care-allocation]]
 - [[enterprise-ai-roi]]
 - [[tokenmaxxing]]
+- [[i-was-replaced-by-ai-typecraft]]
+- [[ai-work-intensification]]

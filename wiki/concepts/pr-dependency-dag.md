@@ -3,8 +3,8 @@ title: PR Dependency DAG
 type: concept
 tags: [ai, agents, workflow, git, dag, concurrency]
 created: 2026-04-25
-updated: 2026-04-25
-sources: [matt-pocock-agent-workflow.md]
+updated: 2026-08-04
+sources: [matt-pocock-agent-workflow.md, about-stacked-pull-requests-github-docs.md]
 ---
 
 # PR Dependency DAG / กราฟความสัมพันธ์ของ PR แบบ DAG
@@ -33,8 +33,20 @@ PR Dependency DAG คือส่วนขยายของ [[subagent-patterns
 - **Parallel Fan-out พื้นฐาน:** แตกงานที่อิสระต่อกัน (เช่น ค้นหา log 3 แหล่ง)
 - **PR Dependency DAG:** แตกงานที่มีความเกี่ยวพันกัน โดยมี coordinator คอยควบคุมจังหวะการปล่อยงาน (orchestration) ตามสภาพของกราฟ
 
+## ความสัมพันธ์กับ Stacked Pull Requests
+
+[[stacked-pull-requests|Stacked pull requests]] คือ DAG แบบง่ายที่เหลือเป็นสายเดียว ทุก PR พึ่ง branch ที่อยู่ข้างล่างโดยตรง เช่น schema → API → UI จึงเหมาะกับงานที่เดินต่อกันทีละชั้น
+
+DAG เต็มรูปแบบแตกแขนงได้ เช่น API และ mobile client อาจพึ่ง schema ตัวเดียวกัน แต่สองงานนั้นไม่พึ่งกันเอง ตรงนี้ stack เดียวแทนกราฟทั้งหมดไม่ได้ อาจต้องแยกหลาย stack แล้วให้ coordinator ดู dependency ระหว่างสาย
+
+GitHub รองรับ stack แบบเส้นตรงเป็น native feature ใน public preview ตาม [[about-stacked-pull-requests-github-docs|เอกสารทางการ]] แต่การวางแผน DAG ที่แตกแขนงยังเป็นหน้าที่ของ workflow หรือ orchestration layer
+
+**ผลคือ:** ใช้ stack เมื่องานเป็น chain ชัด ๆ และใช้ DAG เมื่อต้องเปิดงานอิสระหลายแขนงพร้อมกัน
+
 ## ดูเพิ่มเติม
 - [[matt-pocock-agent-workflow]]
 - [[subagent-patterns]]
 - [[ai-orchestrator]]
 - [[sandcastle]]
+- [[stacked-pull-requests]]
+- [[about-stacked-pull-requests-github-docs]]

@@ -3,8 +3,8 @@ title: Developer Balance
 type: concept
 tags: [ai, agents, developer-experience, attention, burnout, health, productivity]
 created: 2026-06-11
-updated: 2026-07-04
-sources: [How to Keep Shipping When You Walk Away from Your Desk — Zack Proser, WorkOS.md, techsauce-ai-brain-fry.md, code-isnt-free-mario-zechner-hard-truths-coding-ai.md]
+updated: 2026-08-13
+sources: [How to Keep Shipping When You Walk Away from Your Desk — Zack Proser, WorkOS.md, techsauce-ai-brain-fry.md, code-isnt-free-mario-zechner-hard-truths-coding-ai.md, i-was-replaced-by-ai-typecraft.md]
 ---
 
 # Developer Balance / สมดุลของนักพัฒนาในยุค Agent
@@ -85,6 +85,16 @@ Remote control ทำให้คนเริ่มงานที่โต๊�
 
 **ได้อะไร:** Developer Balance ใช้ได้กว้างกว่า coding agent. มันคือหลักออกแบบงาน AI ให้มนุษย์ยังเหลือ judgement.
 
+## Typecraft: productivity gain จะถูกเอาไปทำอะไร
+
+[[typecraft|Typecraft]] เล่าใน [[i-was-replaced-by-ai-typecraft|I Was Replaced by AI]] ว่าบริษัทเก่าไม่ได้ใช้ความเร็วจาก AI คืนเวลาให้คน. ความเร็วกลายเป็น feature และ PR เพิ่มขึ้น รวมถึง PR จาก project manager. เขาจึงต้องทำหนักขึ้นเพื่อไล่ตาม baseline ใหม่ ทั้งที่ burnout สะสมอยู่ก่อนแล้ว.
+
+กรณีนี้เพิ่มคำถามด้าน allocation ให้ Developer Balance: เมื่อ agent ประหยัดเวลาได้หนึ่งชั่วโมง ชั่วโมงนั้นจะกลายเป็น recovery, quality, learning หรือ quota ใหม่. ถ้าทุกกำไรถูกแปลงเป็น output เพิ่มทันที workflow อาจเกิด [[ai-work-intensification|AI Work Intensification]] แม้ automation ต่อ task จะสำเร็จ.
+
+ตอนจบ Typecraft พร้อมใช้ AI ต่อในบทบาทใหม่ที่ [[planetscale|PlanetScale]] เพราะงานยังให้พื้นที่กับ content, community และ personal brand. นี่ชี้ว่า balance ไม่ได้อยู่ที่จำนวน tool อย่างเดียว. job design และ agency ก็เปลี่ยนผลลัพธ์ที่คนรู้สึกได้.
+
+**ผลคือ:** productivity gain ที่ยั่งยืนต้องตกลงด้วยว่าจะไม่เอา capacity ใหม่ไปเติม WIP จนเต็มทุกครั้ง.
+
 ## Mario's warning: async ไม่ควรกินหัว
 
 [[mario-zechner|Mario Zechner]] เล่าใน [[code-isnt-free-mario-zechner-hard-truths-coding-ai|Code Isn't Free]] ว่า async agent มีประโยชน์มากสำหรับ review, research, และ issue preprocessing. แต่ถ้าเปิด agent เยอะเกินไป context switching จะกลายเป็นตัวฆ่า. เขาเคยทำวันเดียวไล่ได้ราว 30 issue ใน [[pi-agent|pi]] แต่ทำได้แค่เดือนละหนึ่งหรือสองครั้ง เพราะหลังจากนั้นสมองหมดแรง.
@@ -115,3 +125,7 @@ Remote control ทำให้คนเริ่มงานที่โต๊�
 - [[claude-code-remote-surfaces]]
 - [[skill-atrophy]]
 - [[code-isnt-free-mario-zechner-hard-truths-coding-ai]]
+- [[i-was-replaced-by-ai-typecraft]]
+- [[ai-work-intensification]]
+- [[typecraft]]
+- [[planetscale]]

@@ -3,8 +3,8 @@ title: Cognitive Surrender
 type: concept
 tags: [ai, psychology, developer-experience, attention, code-review]
 created: 2026-05-29
-updated: 2026-07-03
-sources: [The Orchestration Tax.md, Agentic Code Review.md, techsauce-ai-brain-fry.md, eternal-sloptember.md]
+updated: 2026-08-13
+sources: [The Orchestration Tax.md, Agentic Code Review.md, techsauce-ai-brain-fry.md, eternal-sloptember.md, i-was-replaced-by-ai-typecraft.md]
 ---
 
 # Cognitive Surrender / การยอมแพ้ทางความคิด
@@ -29,6 +29,14 @@ Cognitive surrender ไม่ได้เกิดจากความขี้
 - ทุกครั้งที่ยอมรับโดยไม่เข้าใจ เราสร้าง [[cognitive-debt]] — mental model ต่อโค้ดเบสค่อย ๆ เก่าและไม่ตรงจริง
 - มันคือกลไกที่ระบบใช้ "อ้อม" คอขวดมนุษย์ ด้วยการ **แอบลดมาตรฐานของเราลงเงียบ ๆ** แทนที่จะเคารพว่าเรา review ได้แค่ไหน
 - ไม่โผล่บน dashboard วันนี้ โผล่ตอน production พังแล้วพบว่าไม่รู้แล้วว่าระบบทำงานยังไง
+
+## ภาพจากประสบการณ์ Typecraft
+
+[[typecraft|Typecraft]] เล่าใน [[i-was-replaced-by-ai-typecraft|I Was Replaced by AI]] ว่า เมื่อ agent ส่ง solution มา เขามักจบที่ความรู้สึกประมาณ “ก็คงทำแบบนี้เหมือนกัน ส่งเลย”. โค้ดอาจใช้ได้ แต่เขาไม่ได้ผ่านช่วงสร้าง solution และตั้งความเห็นด้วยตัวเอง จึงรู้สึกเสียทั้ง ownership และความสร้างสรรค์.
+
+กรณีนี้ทำให้ cognitive surrender มีมิติมากกว่า bug risk. ต่อให้ output ถูกและผ่าน test คนก็อาจค่อย ๆ สูญเสีย agency, mental model และความหมายที่ได้จากงาน. ในเรื่องของ Typecraft ภาวะนี้เกิดร่วมกับ burnout เดิมและ [[ai-work-intensification|AI Work Intensification]] จึงแยกเหตุเดียวไม่ได้.
+
+**ผลคือ:** acceptance ที่ดีต้องถามทั้ง “ถูกไหม” และ “คนรับผิดชอบได้ก่อตัวความเห็นของตัวเองหรือยัง”.
 
 ## วิธีกัน
 
@@ -67,3 +75,6 @@ Cognitive surrender ไม่ได้เกิดจากความขี้
 - [[loop-engineering]]
 - [[addy-osmani]]
 - [[quality-proxy-collapse]]
+- [[i-was-replaced-by-ai-typecraft]]
+- [[ai-work-intensification]]
+- [[typecraft]]

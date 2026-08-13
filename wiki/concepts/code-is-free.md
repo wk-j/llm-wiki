@@ -3,8 +3,8 @@ title: Code is Free
 type: concept
 tags: [ai, software-engineering, economy, agents]
 created: 2026-04-28
-updated: 2026-07-04
-sources: [ryan-lopopolo-harness-engineering.md, software-after-software.md, how-ai-became-more-expensive-than-workers-it-replaced.md, code-isnt-free-mario-zechner-hard-truths-coding-ai.md]
+updated: 2026-08-13
+sources: [ryan-lopopolo-harness-engineering.md, software-after-software.md, how-ai-became-more-expensive-than-workers-it-replaced.md, code-isnt-free-mario-zechner-hard-truths-coding-ai.md, i-was-replaced-by-ai-typecraft.md]
 ---
 
 # Code is Free / โค้ดไม่มีต้นทุนการผลิต
@@ -30,6 +30,14 @@ sources: [ryan-lopopolo-harness-engineering.md, software-after-software.md, how-
 จุดที่เขายอมรับว่าคุ้มคือ **ใช้โค้ดราคาถูกเป็น probe**. ให้ agent ลองหลายทางเพื่อสำรวจ solution space แล้วใช้ผลลัพธ์เพื่อสร้างความเข้าใจ. แต่ code จาก exploration ไม่ควรถูกนับเป็น asset ที่พร้อม merge โดยอัตโนมัติ.
 
 **สรุป tension:** Lopopolo/Ball ชี้ว่า implementation ไม่ใช่คอขวดเดิมแล้ว. Mario เตือนว่า ownership, comprehension, และ maintenance ยังไม่ฟรี.
+
+## Typecraft's caveat: creative ownership ก็ไม่ฟรี
+
+[[typecraft|Typecraft]] เพิ่มต้นทุนอีกชนิดใน [[i-was-replaced-by-ai-typecraft|I Was Replaced by AI]]. เขามอง programming เป็นงานสร้างสรรค์ที่ solution มีลายมือของคนทำ. เมื่อ workflow เปลี่ยนเป็น prompt agent แล้วรับสิ่งที่ได้ เขารู้สึกว่า ownership และความสนุกถูกดึงออกไป แม้โค้ดจะพร้อม ship.
+
+นี่ไม่หักล้างว่า implementation ถูกลง. มันบอกว่าการผลิต code กับประสบการณ์ของคนที่ต้องเข้าใจและภูมิใจกับระบบเป็นคนละ metric. ถ้าบริษัทเอาความเร็วใหม่ไปเพิ่ม quota จนคนไม่มีเวลาสร้างความเห็นของตัวเอง จะเกิด [[ai-work-intensification|AI Work Intensification]] และ [[cognitive-surrender|Cognitive Surrender]] ได้.
+
+**สรุป tension:** code production อาจถูกมาก แต่ creative agency, comprehension และ willingness to own the result ยังขาดแคลน.
 
 ## ผลกระทบต่อการทำงาน
 1. **Parallel Implementation**: แทนที่จะเลือกวิธีที่ดีที่สุดเพียงวิธีเดียว เราสามารถสั่ง Agent 5 ตัวให้เขียนโค้ด 5 แบบพร้อมกัน แล้วเลือกแบบที่ผ่าน test และดีที่สุดมาใช้งาน
@@ -66,3 +74,6 @@ Ball ขยายต่อไปอีกขั้น: ถ้า code abundance 
 - [[ai-token-economics]]
 - [[enterprise-ai-roi]]
 - [[code-isnt-free-mario-zechner-hard-truths-coding-ai]]
+- [[i-was-replaced-by-ai-typecraft]]
+- [[ai-work-intensification]]
+- [[typecraft]]

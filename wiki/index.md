@@ -1,6 +1,8 @@
 # Index
 
 ## Sources
+- [[i-was-replaced-by-ai-typecraft]] — Typecraft (YouTube transcript, ingest 2026-08-13): เรื่องเล่าจาก creator/developer ที่ทำงาน 60–80 ชั่วโมงต่อสัปดาห์จน burnout ก่อนกลับไปเจอบริษัทเร่งใช้ AI, PR และ feature เพิ่ม, เสีย creative ownership แล้วถูกเลิกจ้าง; จบด้วยงาน developer educator ที่ PlanetScale และการยอมรับ AI ใน job design ใหม่ โดยไม่สรุปว่า AI เป็นเหตุเดียวของ depression หรือ layoff
+- [[about-stacked-pull-requests-github-docs]] — GitHub Docs (อ่าน 2026-08-04): อธิบาย stacked pull requests แบบ native ซึ่งต่อ PR เป็น dependency chain, review diff ทีละชั้น, rebase ไล่ทั้งสายอัตโนมัติ, บังคับ branch protection/CI ครบทุกชั้น และ merge ได้ทั้งก้อนหรือบางช่วง; ยังเป็น public preview, ใช้ข้าม fork ไม่ได้ และ GitHub Desktop ยังไม่รองรับ
 - [[jrt-desk-kospi-liquidation-discovery]] — JRT Desk (Facebook, 2026-07-29): อธิบาย KOSPI ร่วงแรงผ่าน market structure ที่มี margin loan, single-stock leveraged ETF, forced liquidation และ short-covering bid ที่บาง; แก่นคือวันวิกฤตราคาอาจถูกตั้งโดยคนที่ต้องขายวันนี้ ไม่ใช่คนที่ประเมินมูลค่าระยะยาว ตัวเลขตลาดทั้งหมดคงสถานะเป็น claim ตามโพสต์
 - [[bringing-mcp-2026-07-28-to-claude]] — Anthropic (blog, 2026-07-28): MCP รุ่นที่ห้าเปลี่ยน core จาก bidirectional session state ไปเป็น request/response เพื่อ deploy บน serverless/edge ง่ายขึ้น; แยก Apps, Tasks และ auth เป็น extensions, ผูก OAuth 2.0/OIDC กับ enterprise identity และเตรียมทยอยรองรับใน Claude; ตัวเลข 400M SDK downloads/เดือน, 950+ servers และผู้ใช้หลายล้านคนยังเป็น first-party claim ส่วนสถานะ Tasks ยังไม่ตรงกันระหว่าง docs, support matrix และ repo
 - [[do-not-argue-with-fools-philosophy-facebook]] — โพสต์ Facebook ชื่อที่แสดงว่า “ปรัชญา” (12 ก.พ. 2025) แจกแจง 20 เหตุผลว่าอย่าเถียงกับ “คนโง่”: เมื่ออีกฝ่ายอยากชนะมากกว่าหาความจริง บิดคำ เปลี่ยนเรื่อง หรือใช้เสียงข่ม การคุยต่อยิ่งเผาเวลาและพลัง; wiki เปลี่ยนคำติดป้ายคนให้เป็นเกณฑ์ดูพฤติกรรมและ stake พร้อมเตือนว่าความเงียบไม่เหมาะกับเรื่องสิทธิ ความปลอดภัย งานที่ต้องตัดสินใจ หรือข้อมูลผิดสาธารณะ
@@ -133,6 +135,8 @@
 - [[thclaws-marketplace-panutat]] — Panutat Tejasen (2026-04-30): thClaws v0.7.0 Marketplace; Enterprise Security; Private Marketplace; แนวคิด Host Bridge; Rabbit Holes ในการ coding
 
 ## Entities
+- [[typecraft]] — ช่องและ creator identity สาย programming ผู้ทำ Neovim/Rails/Docker content; เล่าการโตจาก side project สู่ burnout, workplace AI และบทบาท content creator/developer educator ที่ PlanetScale โดย source ไม่ให้ชื่อบุคคลจริง
+- [[planetscale]] — บริษัท database/developer tools และนายจ้างใหม่ของ Typecraft; กรณีนี้ใช้แยกผลของตัว AI ออกจาก job design, agency และการสนับสนุน personal brand โดยยังเป็นมุมของพนักงานคนเดียว
 - [[migel-tissera]] — ผู้เขียน field report วิเคราะห์ X Android และผู้เผยแพร่เครื่องมือ apksaw; รายงาน SDK behavioral fingerprinting ที่ยัง inactive ใน session ของเขา จึงต้องอ่านเป็นหลักฐานจากผู้วิเคราะห์คนเดียวและตรวจซ้ำจาก APK/runtime trace
 - [[x-twitter]] — social platform เดิมชื่อ Twitter; source นี้พูดเฉพาะ Android app และพบ dormant capability ไม่ใช่หลักฐานว่า X เปิดเก็บข้อมูลดังกล่าวกับผู้ใช้ทั้งหมด; X Money/X Pay anti-fraud ยังเป็นสมมติฐานของผู้เขียน
 - [[demis-hassabis]] — นักวิจัย AI และผู้ร่วมก่อตั้ง DeepMind; คาด AGI อาจมาในอีกไม่กี่ปี พร้อมเสนอ Standards Body ที่กำกับ frontier model ตาม capability/risk; forecast ไม่ใช่ฉันทามติและองค์กรที่เสนอยังไม่ได้ตั้ง
@@ -386,6 +390,7 @@
 - [[marc-brooker]] — senior engineer ที่ AWS (Lambda/Aurora); ฝั่งปกป้อง SDD ตัวจริง: มอง spec เป็น artifact ที่ explicit มี version และมีชีวิต ใช้วนซ้ำได้จริง
 
 ## Concepts
+- [[ai-work-intensification]] — AI ลด effort ต่อชิ้น แต่องค์กรเอาความเร็วไปเพิ่มเป้า WIP, PR และ feature จนงานรวมหนักขึ้น; ต่างจาก AI Brain Fry ที่เป็นอาการระดับคนและ Orchestration Tax ที่เป็นคอขวดของระบบ พร้อมเก็บด้านกลับว่า AI ลด burnout ได้ถ้า capacity ถูกคืนให้คน
 - [[liquidation-discovery]] — ช่วงที่ราคาถูกกำหนดโดยคนที่ต้องขายตาม collateral, mandate หรือ deadline มากกว่าการต่อรอง fair value; ใช้ forced-flow map ตรวจ actor, trigger, เวลา, ขนาด และ counterflow
 - [[implicit-government-put]] — ความเชื่อว่ารัฐจะจำกัด downside ให้ตลาดแม้ไม่มีสัญญารับประกัน; การช่วยซ้ำสร้าง moral hazard และ leverage แต่ reaction function อาจเปลี่ยนเมื่อ shock รอบใหม่ไม่เหมือนเดิม
 - [[argument-disengagement]] — เกณฑ์รู้ว่าเมื่อไรควรหยุดเถียงโดยดูเป้าหมายร่วม กติกา pattern การบิดคำ/เปลี่ยนเรื่อง และ stake แทนการติดป้ายว่าใครโง่; เสนอขั้นตั้งเป้า หาเงื่อนไขเปลี่ยนใจ ตอบประเด็นหลัก ตั้งขอบเขต แล้วถอนตัวหรือบันทึกเรื่องตามผลกระทบ
@@ -632,6 +637,7 @@
 - [[playback-pattern]] — ท่า alignment: ให้ agent ทวนก่อนลงมือ ว่าอะไรคือ "Stated, Inferred, Out-of-scope"
 - [[plugin-manager]] — เครื่องมือจัดการ life cycle, เวอร์ชัน และ dependency ของ extension ต่างๆ
 - [[pr-dependency-dag]] — ท่า orchestration: มองการแก้หลาย branch ขนานกันเป็น dependency graph
+- [[stacked-pull-requests]] — แตก change ใหญ่เป็น PR เล็กที่ต่อกันเป็น dependency chain; เดินหน้าต่อได้ก่อนฐาน merge แต่ยัง review, CI และ merge ทีละชั้น
 - [[private-banking]] — wealth management สำหรับคนทรัพย์สินสูง; เน้นปกป้องทรัพย์กับบริการที่ตัดเฉพาะราย
 - [[product-overhang]] — ศักยภาพของ product ที่มีอยู่แล้ว แต่ยังไม่ถูกใช้หรือ ship ออกมาเต็มที่
 - [[progressive-disclosure]] — โหลด context/tool แบบ lazy เพื่อให้ agent อยู่ใน instruction budget
