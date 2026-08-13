@@ -73,7 +73,7 @@ Typecraft มอง programming เป็นทั้งงานคิดแล
 
 **ผลคือ:** ปัญหาอาจไม่ได้อยู่ที่เครื่องมืออย่างเดียว. job design, incentive และความสอดคล้องระหว่างงานกับสิ่งที่คนให้คุณค่ามีผลต่อประสบการณ์ AI มาก.
 
-## ความตึงที่ต้องเก็บไว้
+## จุดที่ต้องแยกให้ออก
 
 - [[techsauce-ai-brain-fry|Techsauce - AI Brain Fry]] บอกว่า AI ลด burnout ได้เมื่อรับ routine tasks. Typecraft บอกว่า AI ทำให้งานหนักขึ้นในบริษัทเก่า. สองด้านนี้อยู่ร่วมกันได้: automation ลด effort ต่อชิ้น แต่ management อาจเติมงานใหม่จนโหลดรวมเพิ่ม.
 - [[code-is-free|Code is Free]] บอกว่า implementation ถูกลงและ scarcity ย้ายไป human judgement. Typecraft สนับสนุนเรื่อง constraint shift แต่เพิ่มว่า creativity และ ownership ก็เป็น scarcity ที่เสียได้.
