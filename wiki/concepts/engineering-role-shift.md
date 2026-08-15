@@ -3,8 +3,8 @@ title: Engineering Role Shift
 type: concept
 tags: [ai, software-engineering, career, roles]
 created: 2026-04-15
-updated: 2026-07-21
-sources: [software-engineer-role-ai-era.md, llm-era-computer-engineering-nattee.md, aaron-levie-agent-automation-jobs.md, llm-era-computer-engineering-ep3-nattee.md, software-after-software.md, teepagorn-ten-lessons-building-with-ai.md]
+updated: 2026-08-15
+sources: [software-engineer-role-ai-era.md, llm-era-computer-engineering-nattee.md, aaron-levie-agent-automation-jobs.md, llm-era-computer-engineering-ep3-nattee.md, software-after-software.md, teepagorn-ten-lessons-building-with-ai.md, andrew-ng-ai-engineering-skills-map.md]
 ---
 
 # Engineering Role Shift / การเปลี่ยนขั้วของบทบาทวิศวกร
@@ -107,6 +107,20 @@ Wiki ยังไม่รวมสอง claim ให้เหลือคำ�
 
 Ball กดดันเรื่อง "ability to keep up matters more than headcount" (ข้อ 9.3) ซึ่งสะท้อนว่าทักษะการ adapt กับ model ใหม่ทุก 8 สัปดาห์เป็นทักษะใหม่ที่ engineer ต้องมี ไม่ใช่แค่ system thinking
 
+## Andrew Ng ตั้งชื่อให้สองปลายทาง
+
+[[andrew-ng|Andrew Ng]] เสนอ [[ai-engineering-skills-map|AI Engineering Skills Map]] (2026-08) ซึ่งอ่านเป็นเวอร์ชันที่ตั้งชื่อให้โครงทวิขั้วในหน้านี้พอดี
+
+- ปลายต้นน้ำที่ขยายตัว เขาเรียกว่า **[[shaping-the-build|shaping the build]]** — ตัดสินว่าอะไรควรอยู่ใน spec แทนที่จะรอ design ที่เป๊ะทุก pixel มาให้ implement
+- ปลายน้ำฝั่งระบบ AI เขาเรียกว่า **[[evals-and-error-analysis|disciplined evals และ error analysis loop]]** — วิธีคุมของที่ output เดาไม่ได้ให้ยังกำกับได้
+- ส่วนกลางที่หดตัว ปรากฏในแผนที่เป็นทักษะ *using coding agents* คือคนไม่ได้เขียน implementation เอง แต่ต้องรู้ว่าเมื่อไหร่แทรก เมื่อไหร่ปล่อย
+
+ที่น่าสนใจคือ Ng ไม่ได้บอกว่าพื้นฐานหมดค่า เขาจัด **software engineering fundamentals** เป็นหนึ่งในสี่ทักษะหลัก ด้วยเหตุผลเดียวกับที่ [[nattee-niparnan|Nattee]] ให้ไว้ในหัวข้อทฤษฎีข้างบน คือพื้นฐานทำให้เรามองเห็นว่ามี tradeoff อะไรอยู่ และเรียกชื่อมันได้ตรงคำพอจะสั่ง agent
+
+Ng ยังย้ำเรื่องคำว่านี่คือ *ทักษะ* ไม่ใช่ *ตำแหน่ง* เขาเทียบกับ cloud ว่า developer ทุกคนต้องทำงานกับ cloud เป็น แต่คนที่มีตำแหน่ง "Cloud engineer" จริง ๆ มีน้อยกว่านั้นมาก
+
+**ผลคือ:** โครงทวิขั้วในหน้านี้ได้ชื่อเรียกที่ใช้คุยกับ recruiter และคนวางหลักสูตรได้ แต่แผนที่ของ Ng ยังเป็น first-party claim ที่ไม่มีรายงานวิธีวิจัยฉบับเต็ม และผู้เสนอเป็นผู้ก่อตั้งองค์กรที่ขายคอร์สสอนทักษะชุดนี้
+
 ## ดูเพิ่มเติม
 
 - [[software-engineer-role-ai-era]]
@@ -127,3 +141,7 @@ Ball กดดันเรื่อง "ability to keep up matters more than hea
 - [[frontier-camp]]
 - [[skill-stacking]]
 - [[teepagorn-ten-lessons-building-with-ai]]
+- [[ai-engineering-skills-map]]
+- [[shaping-the-build]]
+- [[evals-and-error-analysis]]
+- [[andrew-ng]]

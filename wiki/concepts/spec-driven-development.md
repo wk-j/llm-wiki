@@ -3,8 +3,8 @@ title: Spec-Driven Development (SDD)
 type: concept
 tags: [ai-coding, sdd, specs, workflow, methodology]
 created: 2026-06-11
-updated: 2026-07-04
-sources: ["Stop Writing Specs. Start Writing Facts. The Entire SDD Movement Is Already Obsolete..md", code-isnt-free-mario-zechner-hard-truths-coding-ai.md]
+updated: 2026-08-15
+sources: ["Stop Writing Specs. Start Writing Facts. The Entire SDD Movement Is Already Obsolete..md", code-isnt-free-mario-zechner-hard-truths-coding-ai.md, andrew-ng-ai-engineering-skills-map.md]
 ---
 
 # Spec-Driven Development (SDD) / พัฒนาซอฟต์แวร์โดยให้สเปกนำ
@@ -54,6 +54,26 @@ spec ที่เป็น prose ต้องผ่านการตีคว�
 
 เกณฑ์ตัดง่าย ๆ: **มีมนุษย์นอกทีมอ่าน artifact นี้ไหม?** ถ้ามี → เก็บเป็น spec ถ้าไม่มี → ควรเป็น fact
 
+## ยังไม่จบ: Ng ยืนคนละที่กับ Wasowski
+
+[[andrew-ng|Andrew Ng]] ใน [[ai-engineering-skills-map|AI Engineering Skills Map]] (2026-08) เขียนประโยคที่ชนกับหัวข้อ "spec เป็นคำทำนาย" ข้างบนโดยตรง:
+
+> "Given a clear spec, coding agents are rapidly improving at delivering to it. Thus, our work as engineers is shifting toward deciding what should be in the spec."
+
+Ng ไม่ได้เถียงกลไก non-determinism เขาแค่เชื่อว่าความสามารถของ agent ในการทำตาม spec กำลังดีขึ้นเร็วพอที่คอขวดจะย้ายไปอยู่ที่ **การตัดสินว่าอะไรควรอยู่ใน spec** แทน ([[shaping-the-build]])
+
+สองฝั่งนี้อาจไม่ได้พูดคนละเรื่องเสียทีเดียว:
+
+| | Wasowski / Zechner | Ng |
+| --- | --- | --- |
+| มองว่า spec คือ | คำทำนายพฤติกรรม model ที่ต้องตีความใหม่ทุกรอบ | โจทย์ที่มนุษย์ต้องตัดสินว่าจะใส่อะไร |
+| คอขวดอยู่ที่ | ความเชื่อถือได้ของการแปล spec → code | ความรู้ว่าควรสร้างอะไร |
+| ข้อเสนอ | ย้ายความจริงไปไว้ที่ [[facts-first\|executable fact]] | ฝึก product sense กับ business context |
+
+ที่น่าสังเกตคือ Ng เองก็ไม่ได้อยู่ฝั่ง SDD เต็มรูปแบบ ในทักษะ *using coding agents* เขาเขียนว่าต้องรู้ด้วยว่า **เมื่อไหร่ไม่ต้องเสียเวลาเขียน spec** ซึ่งอ่อนกว่าจุดยืน "spec เป็น source of truth" ของ movement นี้ชัดเจน
+
+**ยังเปิดอยู่:** ถ้า agent ทำตาม spec ได้ดีขึ้นจริงตามที่ Ng ว่า คำวิจารณ์เรื่อง interpreter เปลี่ยนจะอ่อนลงไหม หรือมันจะกลายเป็นแค่การเลื่อนปัญหาไปอยู่ที่ spec ที่ยาวขึ้นและตรวจยากขึ้น wiki ยังไม่มีหลักฐานเปรียบเทียบที่ตัดสินได้
+
 ## โยงกับหน้าอื่น
 
 - [[specs-to-code]] — กับดักเวอร์ชัน Matt Pocock: เขียน spec แล้วไม่ดูโค้ดเลย — SDD แบบสุดโต่งคือสิ่งเดียวกัน คำวิจารณ์สองสายนี้มาบรรจบกัน
@@ -72,3 +92,6 @@ spec ที่เป็น prose ต้องผ่านการตีคว�
 - [[marc-brooker]]
 - [[vibe-coding]]
 - [[code-isnt-free-mario-zechner-hard-truths-coding-ai]]
+- [[ai-engineering-skills-map]]
+- [[shaping-the-build]]
+- [[andrew-ng]]

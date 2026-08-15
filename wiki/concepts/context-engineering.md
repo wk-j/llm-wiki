@@ -3,8 +3,8 @@ title: Context Engineering
 type: concept
 tags: [ai, context, prompt-engineering, agent-harness, documentation]
 created: 2026-07-21
-updated: 2026-07-21
-sources: [teepagorn-ten-lessons-building-with-ai.md, mikelopster-loop-engineering.md, self-learning-for-agents-explained.md]
+updated: 2026-08-15
+sources: [teepagorn-ten-lessons-building-with-ai.md, mikelopster-loop-engineering.md, self-learning-for-agents-explained.md, andrew-ng-ai-engineering-skills-map.md]
 ---
 
 # Context Engineering / การจัดบริบทให้ AI ทำงานได้
@@ -56,6 +56,14 @@ Context engineering ไม่ได้แปลว่าต้อง front-load 
 
 อีกด้าน งานที่มี invariant สำคัญ เช่น security boundary หรือข้อห้ามทางกฎหมาย อาจต้องส่งก่อนลงมือ ไม่ควรรอให้ระบบพังแล้วค่อยเตือน การเลือก timing จึงขึ้นกับผลเสียของการเดาผิดและความแน่นอนของ trigger
 
+## กลายเป็นคำที่ตลาดงานรู้จักแล้ว
+
+[[andrew-ng|Andrew Ng]] ใส่ context engineering ไว้ในรายการ "ชิ้นส่วนพื้นฐานของ AI" ที่คนสร้างแอป AI ต้องรู้ ตาม [[ai-engineering-skills-map|AI Engineering Skills Map]] โดยวางเรียงกับ LLM, RAG, agentic workflow, machine learning และ deep learning
+
+เขายังพูดถึงมันซ้ำในทักษะอีกข้อคือ *using coding agents* ซึ่งระบุว่าต้อง "จัดการ context ของ coding agent" เป็น
+
+**ได้อะไร:** คำนี้ไม่ได้อยู่แค่ในวงคนเขียน harness แล้ว มันถูกจัดเป็นความรู้พื้นฐานที่ผู้จ้างคาดหวัง — แต่เนื้อหาว่าต้องรู้ลึกแค่ไหน แผนที่ยังไม่ได้ลงรายละเอียด
+
 ## คำถามที่ยังเปิดอยู่
 
 - Context ชนิดใดควรอยู่ใน prompt, file, tool, memory หรือ verifier
@@ -74,3 +82,5 @@ Context engineering ไม่ได้แปลว่าต้อง front-load 
 - [[map-vs-territory]]
 - [[unknowns-matrix]]
 - [[llm-knowledge-bases]]
+- [[ai-engineering-skills-map]]
+- [[evals-and-error-analysis]]

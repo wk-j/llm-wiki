@@ -3,8 +3,8 @@ title: Agentic Engineering
 type: concept
 tags: [ai, engineering, agents, automation]
 created: 2026-04-30
-updated: 2026-07-21
-sources: [Andrej Karpathy From Vibe Coding to Agentic Engineering.md, l8-principals-agentic-engineering-workflow-kun-chen.md, new-skills-v1-1-wayfinder-research-implement-to-spec-to-tickets.md, teepagorn-ten-lessons-building-with-ai.md]
+updated: 2026-08-15
+sources: [Andrej Karpathy From Vibe Coding to Agentic Engineering.md, l8-principals-agentic-engineering-workflow-kun-chen.md, new-skills-v1-1-wayfinder-research-implement-to-spec-to-tickets.md, teepagorn-ten-lessons-building-with-ai.md, andrew-ng-ai-engineering-skills-map.md]
 ---
 
 # Agentic Engineering / วิศวกรรมเชิงเอเจนท์
@@ -67,6 +67,28 @@ sources: [Andrej Karpathy From Vibe Coding to Agentic Engineering.md, l8-princip
 
 **ได้อะไร:** หลักกว้างเรื่อง spec, verification และ coordination กลายเป็นเส้นทางที่บอกว่าแต่ละ session รับ artifact อะไรและส่งอะไรต่อ.
 
+## "Using coding agents" ในฐานะทักษะที่ตลาดงานเรียกหา
+
+[[andrew-ng|Andrew Ng]] จัดเรื่องนี้เป็นหนึ่งในสี่ทักษะของ [[ai-engineering-skills-map|AI Engineering Skills Map]] และบอกตรง ๆ ว่าตอนนี้เป็นทักษะจำเป็นของ developer ทุกคน ไม่ใช่ของเฉพาะสาย AI
+
+สิ่งที่เขาบอกว่าคนมีทักษะนี้ทำได้ อ่านเหมือนเช็กลิสต์ของหน้านี้ในเวอร์ชันย่อ:
+
+- มี mental model ว่า agent ทำงานยังไง รู้ข้อจำกัดและวิธีเลี่ยง
+- จัดการ [[context-engineering|context]] ของ agent
+- ชั่งน้ำหนักระหว่าง planning กับ execution
+- ให้ verifier หรือ eval เพื่อให้ agent ปิด loop ได้เอง ([[evals-and-error-analysis]])
+- ทำงานกับ spec ที่ชัด **และรู้ว่าเมื่อไหร่ไม่ต้องเสียเวลาเขียน spec**
+- orchestrate agent หลายตัว
+- เลี่ยงหลุมพราง เช่นความเสี่ยงที่ agent จะไปทำ production database พัง
+
+จุดที่ Ng เติมเข้ามาแล้วน่าเก็บไว้มีสองอย่าง
+
+อย่างแรกคือเกณฑ์วัด เขาเขียนว่าทักษะนี้คือการรู้ว่า **ควรแทรกแค่ไหนและควรปล่อยแค่ไหน** เพื่อให้ได้ software ที่แข็งแรงโดยไม่เผาเวลาและ token ทิ้ง — ซึ่งเป็นเรื่องเดียวกับ [[orchestration-tax]] ที่หน้าอื่นบันทึกไว้
+
+อย่างที่สองคือเรื่องเวลา agentic coding เปลี่ยนเร็ว การเก่งเรื่องนี้จึงไม่ใช่แค่รู้ท่าล่าสุด แต่ต้องมี **routine** ที่ลองเครื่องมือใหม่และปรับ workflow ตามไปด้วย ตรงนี้ตรงกับที่ [[thorsten-ball|Ball]] เขียนไว้ว่า "ability to keep up matters more than headcount"
+
+**ได้อะไร:** Agentic Engineering ไม่ได้อยู่แค่ในวงคนเล่นของใหม่แล้ว มันกำลังกลายเป็นข้อกำหนดพื้นฐานที่ปรากฏใน job posting
+
 ## บทบาทที่เปลี่ยนไป: Tactical vs Strategic
 [[matt-pocock]] เสริมมุมมองว่าใน Agentic Engineering:
 - **AI คือ Tactical Sergeant**: รับหน้าที่ "จ่า" คอยคุมการรบหน้างาน จัดการรายละเอียดโค้ดและ implementation
@@ -88,3 +110,6 @@ sources: [Andrej Karpathy From Vibe Coding to Agentic Engineering.md, l8-princip
 - [[teepagorn-ten-lessons-building-with-ai]]
 - [[context-engineering]]
 - [[skill-stacking]]
+- [[ai-engineering-skills-map]]
+- [[andrew-ng]]
+- [[evals-and-error-analysis]]

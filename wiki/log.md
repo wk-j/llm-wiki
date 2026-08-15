@@ -1281,3 +1281,13 @@ Ingested the user-supplied YouTube transcript from Typecraft. The durable frame 
 - Updated concepts: `[[ai-brain-fry]]`, `[[developer-balance]]`, `[[cognitive-surrender]]`, `[[code-is-free]]`
 - Preserved tensions: AI may reduce burnout on routine work or intensify total work depending on allocation; cheap implementation does not make comprehension or creative ownership free; AI changed the old job but is not established as the cause of depression or layoff.
 - Updated `[[index]]`, `[[log]]`, and `hotcache.md`
+
+## [2026-08-15] ingest | The AI Engineering Skills Map — Andrew Ng
+Ingested Andrew Ng's X post announcing The AI Engineering Skills Map. The durable frame is a four-skill chain rather than a list: shaping the build decides what belongs in the spec, software engineering fundamentals name the tradeoffs, using coding agents turns those precise words into steering, and building/deploying AI applications keeps unpredictable output measurable in production. Recorded Ng's terminology point that these are *skills* rather than the *AI Engineer* role, using his cloud analogy — every developer works with cloud, far fewer hold "Cloud engineer" titles. Kept the method claims source-attributed: over 10,000 job postings, dozens of structured interviews, surveys and other online data, with "clustering" explicitly labelled as Ng's own informal analogy, no full methodology report published yet, and the author's DeepLearning.AI stake stated on the page.
+- Created source: `[[andrew-ng-ai-engineering-skills-map]]`
+- Created concepts: `[[ai-engineering-skills-map]]`, `[[evals-and-error-analysis]]`, `[[shaping-the-build]]`
+- Created entities: `[[andrew-ng]]`, `[[deeplearning-ai]]`
+- Updated concepts: `[[engineering-role-shift]]` (Ng names both expanding ends), `[[agentic-engineering]]` (agent use as a hiring-visible skill), `[[vibe-coding]]` (unknown tradeoffs, not vibe coding itself, is the failure mode), `[[spec-driven-development]]` (new tension table), `[[context-engineering]]` (now listed as an expected fundamental)
+- Updated entity: `[[x-twitter]]` (added its role as a publishing surface for wiki sources, with provenance caveats)
+- Preserved tensions: Ng's "given a clear spec, coding agents are rapidly improving at delivering to it" conflicts with `[[llm-nondeterminism]]`, `[[facts-first]]` and Mario Zechner's hyper-waterfall critique — both sides kept, no merge; Ng's own "know when not to bother with a spec" noted as weaker than full SDD. Also kept open the gap between the post's opportunity framing and `[[ai-work-intensification]]` / `[[ai-brain-fry]]`, which record organizations raising expectations alongside speed.
+- Updated `[[index]]`, `[[log]]`, and `hotcache.md`

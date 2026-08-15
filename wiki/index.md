@@ -1,6 +1,7 @@
 # Index
 
 ## Sources
+- [[andrew-ng-ai-engineering-skills-map]] — Andrew Ng (X, ingest 2026-08-15): ประกาศ AI Engineering Skills Map ที่สรุปทักษะสำคัญสี่ข้อ — สร้าง/deploy แอป AI ที่ output เดาไม่ได้โดยใช้ eval กับ error analysis, พื้นฐาน software engineering ไว้มองเห็น tradeoff, การใช้ coding agent ให้รู้ว่าเมื่อไหร่แทรกเมื่อไหร่ปล่อย และ shaping the build คือตัดสินว่าอะไรควรอยู่ใน spec; ย้ำว่านี่คือทักษะไม่ใช่ตำแหน่ง แต่ตัวเลข 10,000 job posting ยังเป็น first-party claim และผู้เขียนเป็นผู้ก่อตั้ง DeepLearning.AI ที่ขายคอร์สสอนเรื่องนี้
 - [[i-was-replaced-by-ai-typecraft]] — Typecraft (YouTube transcript, ingest 2026-08-13): เรื่องเล่าจาก creator/developer ที่ทำงาน 60–80 ชั่วโมงต่อสัปดาห์จน burnout ก่อนกลับไปเจอบริษัทเร่งใช้ AI, PR และ feature เพิ่ม, เสีย creative ownership แล้วถูกเลิกจ้าง; จบด้วยงาน developer educator ที่ PlanetScale และการยอมรับ AI ใน job design ใหม่ โดยไม่สรุปว่า AI เป็นเหตุเดียวของ depression หรือ layoff
 - [[about-stacked-pull-requests-github-docs]] — GitHub Docs (อ่าน 2026-08-04): อธิบาย stacked pull requests แบบ native ซึ่งต่อ PR เป็น dependency chain, review diff ทีละชั้น, rebase ไล่ทั้งสายอัตโนมัติ, บังคับ branch protection/CI ครบทุกชั้น และ merge ได้ทั้งก้อนหรือบางช่วง; ยังเป็น public preview, ใช้ข้าม fork ไม่ได้ และ GitHub Desktop ยังไม่รองรับ
 - [[jrt-desk-kospi-liquidation-discovery]] — JRT Desk (Facebook, 2026-07-29): อธิบาย KOSPI ร่วงแรงผ่าน market structure ที่มี margin loan, single-stock leveraged ETF, forced liquidation และ short-covering bid ที่บาง; แก่นคือวันวิกฤตราคาอาจถูกตั้งโดยคนที่ต้องขายวันนี้ ไม่ใช่คนที่ประเมินมูลค่าระยะยาว ตัวเลขตลาดทั้งหมดคงสถานะเป็น claim ตามโพสต์
@@ -135,6 +136,8 @@
 - [[thclaws-marketplace-panutat]] — Panutat Tejasen (2026-04-30): thClaws v0.7.0 Marketplace; Enterprise Security; Private Marketplace; แนวคิด Host Bridge; Rabbit Holes ในการ coding
 
 ## Entities
+- [[andrew-ng]] — นักการศึกษา/ผู้ประกอบการสาย AI ผู้ก่อตั้ง DeepLearning.AI; ใน wiki นี้คือผู้เสนอ AI Engineering Skills Map ที่ย้ำว่าเป็น “ทักษะ” ไม่ใช่ “ตำแหน่ง” โดยเทียบกับ cloud ที่ทุกคนต้องเป็นแต่มีคนตำแหน่ง Cloud engineer น้อย; ควรอ่านพร้อมข้อเท็จจริงว่าองค์กรของเขาขายคอร์สสอนทักษะชุดเดียวกัน
+- [[deeplearning-ai]] — องค์กรการศึกษา AI ของ Andrew Ng ที่ระบุเองว่าโฟกัสหลักคือช่วยให้ developer ได้ทักษะสี่ข้อตามแผนที่; ทำให้แผนที่เป็นทั้งงานวิเคราะห์ตลาดและการวางตำแหน่งสินค้าไปพร้อมกัน
 - [[typecraft]] — ช่องและ creator identity สาย programming ผู้ทำ Neovim/Rails/Docker content; เล่าการโตจาก side project สู่ burnout, workplace AI และบทบาท content creator/developer educator ที่ PlanetScale โดย source ไม่ให้ชื่อบุคคลจริง
 - [[planetscale]] — บริษัท database/developer tools และนายจ้างใหม่ของ Typecraft; กรณีนี้ใช้แยกผลของตัว AI ออกจาก job design, agency และการสนับสนุน personal brand โดยยังเป็นมุมของพนักงานคนเดียว
 - [[migel-tissera]] — ผู้เขียน field report วิเคราะห์ X Android และผู้เผยแพร่เครื่องมือ apksaw; รายงาน SDK behavioral fingerprinting ที่ยัง inactive ใน session ของเขา จึงต้องอ่านเป็นหลักฐานจากผู้วิเคราะห์คนเดียวและตรวจซ้ำจาก APK/runtime trace
@@ -390,6 +393,9 @@
 - [[marc-brooker]] — senior engineer ที่ AWS (Lambda/Aurora); ฝั่งปกป้อง SDD ตัวจริง: มอง spec เป็น artifact ที่ explicit มี version และมีชีวิต ใช้วนซ้ำได้จริง
 
 ## Concepts
+- [[ai-engineering-skills-map]] — กรอบสี่ทักษะของ Andrew Ng สำหรับเลือกว่าจะเรียนอะไรก่อนในยุค AI: สร้าง/deploy แอป AI, พื้นฐาน software engineering, ใช้ coding agent และ shaping the build โดยมี continuous learning รองรับ; อ่านเป็นสายโซ่ที่ขาดข้อไหนแล้วข้ออื่นเสียแรงเปล่า และเป็นทักษะของ developer ทุกสายไม่ใช่ตำแหน่งเฉพาะ
+- [[evals-and-error-analysis]] — วิธีคุมระบบที่ output เดาไม่ได้ ด้วยชุดวัดที่รันซ้ำได้กับการไล่อ่านเคสที่พังแล้วจัดกลุ่มหาสาเหตุ; คำว่า disciplined คือเส้นแบ่งจากการลองไปเรื่อย ๆ และ eval ยังเป็น verifier ที่ทำให้ agent ปิด loop เองได้ — ระวัง proxy ที่วัดง่ายแต่ไม่ตรงกับสิ่งที่ผู้ใช้แคร์ กับ reward hacking
+- [[shaping-the-build]] — เมื่อ agent ทำตาม spec ได้ดีขึ้น งานวิศวกรขยับไปที่การตัดสินว่าอะไรควรอยู่ใน spec; ต้องมี product sense, business context และ ownership รวมถึงรู้จังหวะว่าเมื่อไหร่รีบทำ MVP เมื่อไหร่ช้าลงให้รอบคอบ — ข้อสมมติ “spec ชัดแล้ว agent ทำได้” ยังชนกับสาย facts-first และ hyper-waterfall
 - [[ai-work-intensification]] — AI ลด effort ต่อชิ้น แต่องค์กรเอาความเร็วไปเพิ่มเป้า WIP, PR และ feature จนงานรวมหนักขึ้น; ต่างจาก AI Brain Fry ที่เป็นอาการระดับคนและ Orchestration Tax ที่เป็นคอขวดของระบบ พร้อมเก็บด้านกลับว่า AI ลด burnout ได้ถ้า capacity ถูกคืนให้คน
 - [[liquidation-discovery]] — ช่วงที่ราคาถูกกำหนดโดยคนที่ต้องขายตาม collateral, mandate หรือ deadline มากกว่าการต่อรอง fair value; ใช้ forced-flow map ตรวจ actor, trigger, เวลา, ขนาด และ counterflow
 - [[implicit-government-put]] — ความเชื่อว่ารัฐจะจำกัด downside ให้ตลาดแม้ไม่มีสัญญารับประกัน; การช่วยซ้ำสร้าง moral hazard และ leverage แต่ reaction function อาจเปลี่ยนเมื่อ shock รอบใหม่ไม่เหมือนเดิม
