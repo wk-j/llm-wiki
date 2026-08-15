@@ -1,6 +1,7 @@
 # Index
 
 ## Sources
+- [[software-is-made-between-commits]] — Nathan Sobo / Zed: เสนอ DeltaDB เป็น version control ที่เก็บทุก operation พร้อมบทสนทนาที่ทำให้เกิด edit; reference เกาะ delta จึงตาม code ได้เมื่อย้ายบรรทัด และหลายคน/agent แก้ replicated worktree ผ่าน CRDT ได้พร้อมกัน; Git/CI ยังเป็น integration layer ส่วน claim เรื่อง beta, performance, governance และการเรียก agent เก่ายังเป็น first-party vision กับคำถามเปิด
 - [[andrew-ng-ai-engineering-skills-map]] — Andrew Ng (X, ingest 2026-08-15): ประกาศ AI Engineering Skills Map ที่สรุปทักษะสำคัญสี่ข้อ — สร้าง/deploy แอป AI ที่ output เดาไม่ได้โดยใช้ eval กับ error analysis, พื้นฐาน software engineering ไว้มองเห็น tradeoff, การใช้ coding agent ให้รู้ว่าเมื่อไหร่แทรกเมื่อไหร่ปล่อย และ shaping the build คือตัดสินว่าอะไรควรอยู่ใน spec; ย้ำว่านี่คือทักษะไม่ใช่ตำแหน่ง แต่ตัวเลข 10,000 job posting ยังเป็น first-party claim และผู้เขียนเป็นผู้ก่อตั้ง DeepLearning.AI ที่ขายคอร์สสอนเรื่องนี้
 - [[i-was-replaced-by-ai-typecraft]] — Typecraft (YouTube transcript, ingest 2026-08-13): เรื่องเล่าจาก creator/developer ที่ทำงาน 60–80 ชั่วโมงต่อสัปดาห์จน burnout ก่อนกลับไปเจอบริษัทเร่งใช้ AI, PR และ feature เพิ่ม, เสีย creative ownership แล้วถูกเลิกจ้าง; จบด้วยงาน developer educator ที่ PlanetScale และการยอมรับ AI ใน job design ใหม่ โดยไม่สรุปว่า AI เป็นเหตุเดียวของ depression หรือ layoff
 - [[about-stacked-pull-requests-github-docs]] — GitHub Docs (อ่าน 2026-08-04): อธิบาย stacked pull requests แบบ native ซึ่งต่อ PR เป็น dependency chain, review diff ทีละชั้น, rebase ไล่ทั้งสายอัตโนมัติ, บังคับ branch protection/CI ครบทุกชั้น และ merge ได้ทั้งก้อนหรือบางช่วง; ยังเป็น public preview, ใช้ข้าม fork ไม่ได้ และ GitHub Desktop ยังไม่รองรับ
@@ -136,6 +137,7 @@
 - [[thclaws-marketplace-panutat]] — Panutat Tejasen (2026-04-30): thClaws v0.7.0 Marketplace; Enterprise Security; Private Marketplace; แนวคิด Host Bridge; Rabbit Holes ในการ coding
 
 ## Entities
+- [[nathan-sobo]] — ผู้ร่วมก่อตั้ง Zed Industries และผู้เขียน “Software Is Made Between Commits”; มองว่าบทสนทนาระหว่างเขียน code สำคัญกว่า comment บน snapshot หลัง commit และเสนอให้ conversation กับ worktree เป็น artifact ร่วมกันผ่าน DeltaDB
 - [[andrew-ng]] — นักการศึกษา/ผู้ประกอบการสาย AI ผู้ก่อตั้ง DeepLearning.AI; ใน wiki นี้คือผู้เสนอ AI Engineering Skills Map ที่ย้ำว่าเป็น “ทักษะ” ไม่ใช่ “ตำแหน่ง” โดยเทียบกับ cloud ที่ทุกคนต้องเป็นแต่มีคนตำแหน่ง Cloud engineer น้อย; ควรอ่านพร้อมข้อเท็จจริงว่าองค์กรของเขาขายคอร์สสอนทักษะชุดเดียวกัน
 - [[deeplearning-ai]] — องค์กรการศึกษา AI ของ Andrew Ng ที่ระบุเองว่าโฟกัสหลักคือช่วยให้ developer ได้ทักษะสี่ข้อตามแผนที่; ทำให้แผนที่เป็นทั้งงานวิเคราะห์ตลาดและการวางตำแหน่งสินค้าไปพร้อมกัน
 - [[typecraft]] — ช่องและ creator identity สาย programming ผู้ทำ Neovim/Rails/Docker content; เล่าการโตจาก side project สู่ burnout, workplace AI และบทบาท content creator/developer educator ที่ PlanetScale โดย source ไม่ให้ชื่อบุคคลจริง
@@ -381,7 +383,7 @@
 - [[singapore]] — ศูนย์กลางการเงินโลกและ private banking; ขึ้นชื่อเรื่องกฎเกณฑ์โปร่งใสกับ family offices
 - [[gee-money-more]] — แหล่งข้อมูลการเงิน เน้น private banking กับการลงทุนภาคปฏิบัติ
 - [[deepseek]] — lab AI จีน; ขึ้นชื่อเรื่อง model ประสิทธิภาพสูง (V3, R1) กับแนวทาง open-weight
-- [[deltadb]] — engine sync ของ Zed สร้างบน CRDT; track การแก้ไขละเอียดระดับตัวอักษร ให้คนกับ agent ทำงานร่วมกันได้
+- [[deltadb]] — ระบบของ Zed ที่ขยายจาก sync engine ไปเป็น version control สำหรับทุก operation ระหว่าง commit; เก็บ conversation กับ edit คู่กัน ใช้ CRDT ทำ replicated worktree และให้ reference เกาะ delta; สถานะ engine ใน Zed 1.0 เทียบกับ product beta ยังเป็นคำถามเปิด
 - [[high-flyer]] — quant hedge fund จีน; บริษัทแม่และผู้ให้ทุนหลักของ DeepSeek
 - [[liang-wenfeng]] — ผู้ก่อตั้งและ CEO ของ DeepSeek กับ High-Flyer; ชูเรื่อง technical efficiency
 - [[ctrl-alt-zaid]] — นักวิจัยและนักเขียนด้าน AI; ชูแนวคิด agent memory แบบ machine-efficient กับโปรเจกต์ Mercury
@@ -393,6 +395,8 @@
 - [[marc-brooker]] — senior engineer ที่ AWS (Lambda/Aurora); ฝั่งปกป้อง SDD ตัวจริง: มอง spec เป็น artifact ที่ explicit มี version และมีชีวิต ใช้วนซ้ำได้จริง
 
 ## Concepts
+- [[conversation-code-provenance]] — ความสัมพันธ์สองทางระหว่างบทสนทนากับ code: จากข้อความไปดู implementation ตอนนั้น/ตอนนี้ และจาก code ย้อนหาเหตุผลที่สร้างหรือแก้ต่อ; เกาะ delta แทน line number แต่ provenance ไม่ใช่ความจริงและยังต้องมี test, review, permission กับ retention
+- [[crdts]] — โครงสร้างข้อมูลสำหรับ replica หลายชุดที่รับ edit พร้อมกันแล้วรวมกลับสู่ state เดียวกันได้; แก้ data convergence แต่ไม่แก้ semantic conflict โดยอัตโนมัติ และเป็นฐานของ replicated worktree ใน DeltaDB
 - [[ai-engineering-skills-map]] — กรอบสี่ทักษะของ Andrew Ng สำหรับเลือกว่าจะเรียนอะไรก่อนในยุค AI: สร้าง/deploy แอป AI, พื้นฐาน software engineering, ใช้ coding agent และ shaping the build โดยมี continuous learning รองรับ; อ่านเป็นสายโซ่ที่ขาดข้อไหนแล้วข้ออื่นเสียแรงเปล่า และเป็นทักษะของ developer ทุกสายไม่ใช่ตำแหน่งเฉพาะ
 - [[evals-and-error-analysis]] — วิธีคุมระบบที่ output เดาไม่ได้ ด้วยชุดวัดที่รันซ้ำได้กับการไล่อ่านเคสที่พังแล้วจัดกลุ่มหาสาเหตุ; คำว่า disciplined คือเส้นแบ่งจากการลองไปเรื่อย ๆ และ eval ยังเป็น verifier ที่ทำให้ agent ปิด loop เองได้ — ระวัง proxy ที่วัดง่ายแต่ไม่ตรงกับสิ่งที่ผู้ใช้แคร์ กับ reward hacking
 - [[shaping-the-build]] — เมื่อ agent ทำตาม spec ได้ดีขึ้น งานวิศวกรขยับไปที่การตัดสินว่าอะไรควรอยู่ใน spec; ต้องมี product sense, business context และ ownership รวมถึงรู้จังหวะว่าเมื่อไหร่รีบทำ MVP เมื่อไหร่ช้าลงให้รอบคอบ — ข้อสมมติ “spec ชัดแล้ว agent ทำได้” ยังชนกับสาย facts-first และ hyper-waterfall
@@ -489,7 +493,7 @@
 - [[property-based-testing]] — เขียน property แบบ universally quantified แล้วให้เครื่อง generate input สุ่มเอง (QuickCheck/Hypothesis); เคส Quviq: PBT 450 บรรทัดคุม Erlang 60k บรรทัด เจอ 25 บั๊กรวม race condition (1:133); เช็ค behavior ไม่ใช่ implementation — เข้าทางโค้ดที่ AI เขียนพอดี
 - [[loop-engineering]] — ออกแบบระบบที่หางาน แจกงาน ตรวจ จดจำ และเลือกขั้นต่อไปเอง; manager/worker loop + memory; feedback gate/scorer ต้องชัด โดยเดโม GPT-5.6 เตือนว่ารันได้เป็นสัปดาห์ยังไม่แปลว่า artifact ถูกทุกมิติ
 - [[inner-loop-outer-loop]] — agent วิ่ง inner execution loop (สืบ แก้ test รีวิว); มนุษย์ตัดสินใน outer loop (เป้าหมาย อนุมัติ PR); ตัวอย่างจาก Peter Steinberger บนเวที Codex
-- [[git-worktrees]] — working directory แยกบน branch ของตัวเอง แต่แชร์ history repo เดียวกัน; ให้ agent หลายตัวทำงานขนานโดยไม่เหยียบไฟล์กัน; ตัดการชนเชิงกลไกออกได้ แต่เพดาน review ของคนยังอยู่; Treehouse ของ Kun Chen เพิ่มความสะดวกเรื่อง reuse/status/cleanup ของ worktree
+- [[git-worktrees]] — working directory แยกบน branch ของตัวเอง แต่แชร์ history repo เดียวกัน; ให้ agent หลายตัวทำงานขนานโดยไม่เหยียบไฟล์กัน; ตัดการชนเชิงกลไกออกได้ แต่เพดาน review ของคนยังอยู่; ต่างจาก DeltaDB shared worktree ที่ optimize live coordination และยังไม่มีหลักฐานว่า topology ใดเหมาะกับงานแบบไหน
 - [[cloud-agents]] — coding agent ที่รันบน cloud VM ขนานกันได้ ทิ้งไว้เป็นชั่วโมง/วันได้; Cursor เน้น operating layer; Codex keynote เพิ่มภาพ unified local/cloud โดยไม่มีเส้นแบ่งบังคับ
 - [[value-maxing]] — แนวคิด Codex: รีดคุณค่า (ฉลาด+ถูก+เร็วพร้อมกัน) ไม่ใช่ token maxing; Terra/Luna/Cerebras เป็นตัวอย่างบนเวที
 - [[attention-bottleneck]] — Peter Steinberger: พอแก้ token/compute แล้ว คอขวดหลักกลายเป็น attention ที่ซื้อเพิ่มไม่ได้; จ้อง agent ที่ไม่จำเป็น = เผา attention เปล่า
@@ -607,7 +611,7 @@
 - [[clanker-slop]] — PR/issue spam จาก AI ที่ปั๊มออกมาเป็นแมส สูบ attention ของ maintainer ฝั่ง OSS; เคส pi ใช้ issue สั้นเสียงมนุษย์ + whitelist + auto-close เป็น intake protocol
 - [[claude-md]] — CLAUDE.md: system prompt ระดับโปรเจกต์ในรูป Markdown ของ Claude Code; มีลำดับความสำคัญ 3 ชั้น
 - [[code-is-free]] — ธีสิสของ Lopopolo/Ball ว่า implementation ถูกลงจนไม่ใช่คอขวดเดิม; caveat จาก Economy Media/Mario คือ token, review, comprehension, ownership และ maintenance ยังไม่ฟรี
-- [[collaborative-ai-engineering]] — AI engineering แบบทีม เน้นเรื่อง alignment กับ environment สไตล์ ACE
+- [[collaborative-ai-engineering]] — AI engineering แบบทีม เน้น alignment และ shared context; ACE เสนอ team coordination ส่วน DeltaDB เพิ่ม continuous shared worktree กับ provenance ระหว่าง conversation และ code โดย semantic conflict กับ governance ยังต้องแก้ใน workflow
 - [[compaction]] — การเก็บกวาด session ของ Claude Code: สรุปประวัติเพื่อกัน context เน่า; ได้ผลสุดตอนกำกับเองและทำที่รอยต่อ phase ไม่ใช่กลางความงง
 - [[context-rot]] — ประสิทธิภาพตกลงเรื่อยๆ เมื่อ context window เต็มขึ้น; รวมถึง "dumb zone" ที่ความจุยังเหลือแต่คุณภาพ active context ตก
 - [[delegation-mindset]] — เปลี่ยนจาก micromanage เป็นมอบหมายงานตามเป้า; ยัด intent ให้ครบตั้งแต่ต้นทาง
@@ -643,7 +647,7 @@
 - [[playback-pattern]] — ท่า alignment: ให้ agent ทวนก่อนลงมือ ว่าอะไรคือ "Stated, Inferred, Out-of-scope"
 - [[plugin-manager]] — เครื่องมือจัดการ life cycle, เวอร์ชัน และ dependency ของ extension ต่างๆ
 - [[pr-dependency-dag]] — ท่า orchestration: มองการแก้หลาย branch ขนานกันเป็น dependency graph
-- [[stacked-pull-requests]] — แตก change ใหญ่เป็น PR เล็กที่ต่อกันเป็น dependency chain; เดินหน้าต่อได้ก่อนฐาน merge แต่ยัง review, CI และ merge ทีละชั้น
+- [[stacked-pull-requests]] — แตก change ใหญ่เป็น PR เล็กที่ต่อกันเป็น dependency chain; เดินหน้าต่อได้ก่อนฐาน merge แต่ยัง review, CI และ merge ทีละชั้น; เก็บ tension กับ DeltaDB ว่า collaboration ควรเกิดสดก่อน commit ส่วน PR อาจยังเป็น integration/audit gate หลัง change เริ่มนิ่ง
 - [[private-banking]] — wealth management สำหรับคนทรัพย์สินสูง; เน้นปกป้องทรัพย์กับบริการที่ตัดเฉพาะราย
 - [[product-overhang]] — ศักยภาพของ product ที่มีอยู่แล้ว แต่ยังไม่ถูกใช้หรือ ship ออกมาเต็มที่
 - [[progressive-disclosure]] — โหลด context/tool แบบ lazy เพื่อให้ agent อยู่ใน instruction budget

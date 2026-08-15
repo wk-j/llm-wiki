@@ -3,8 +3,8 @@ title: Zed
 type: entity
 tags: [editor, rust, ai, collaboration]
 created: 2026-04-29
-updated: 2026-04-29
-sources: [zed-is-1-0.md]
+updated: 2026-08-15
+sources: [zed-is-1-0.md, software-is-made-between-commits.md]
 ---
 
 # Zed / เซด
@@ -23,7 +23,9 @@ Zed ปฏิเสธแนวทางการใช้ [[electron]] หร�
 - **Edit Prediction**: การทำนายและแนะนำการแก้ไขโค้ดในระดับ keystroke
 
 ### การทำงานร่วมกันยุคใหม่
-Zed มองว่าการ collaboration ไม่ใช่แค่คนคุยกับคน แต่คือ "คน + AI Agent" ทำงานในพื้นที่เดียวกัน (Shared Space) โดยใช้เทคโนโลยี [[deltadb]] เพื่อจัดการสถานะของโค้ดที่เปลี่ยนแปลงตลอดเวลา
+Zed มองว่าการ collaboration ไม่ใช่แค่คนคุยกับคน แต่คือ "คน + AI Agent" ทำงานในพื้นที่เดียวกัน (Shared Space) โดยใช้เทคโนโลยี [[deltadb]] เพื่อจัดการสถานะของ code ที่เปลี่ยนตลอดเวลา
+
+ใน [[software-is-made-between-commits|Software Is Made Between Commits]] ทีมขยายภาพนี้จาก real-time sync ไปสู่ [[conversation-code-provenance|conversation-code provenance]]: ทุก operation มี identity คงที่ บทสนทนากับ edit ถูก version ด้วยกัน และ reference ยังตาม code ได้เมื่อบรรทัดย้าย เป้าหมายคือให้เพื่อนร่วมทีมเข้ามาคุยกับ agent ระหว่างที่งานยังเกิด โดยไม่ต้องรอ commit กับ push ก่อน
 
 ## ประวัติและสถานะ
 - **1.0 Release**: ประกาศเข้าสู่สถานะ 1.0 เมื่อวันที่ 29 เมษายน 2026
@@ -34,3 +36,5 @@ Zed มองว่าการ collaboration ไม่ใช่แค่คน�
 - [[zed-industries]] — บริษัทผู้พัฒนา
 - [[deltadb]] — ระบบ Sync ข้อมูลเบื้องหลัง
 - [[gpui]] — UI Framework ของ Zed
+- [[conversation-code-provenance]] — ผูกบทสนทนากับวิวัฒนาการของ code
+- [[nathan-sobo]] — ผู้ร่วมก่อตั้งและผู้เขียนบทความ DeltaDB

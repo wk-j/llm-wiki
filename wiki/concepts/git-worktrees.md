@@ -3,8 +3,8 @@ title: Git Worktrees for Parallel Agents
 type: concept
 tags: [ai, agents, git, isolation, parallel, orchestration, worktree]
 created: 2026-06-09
-updated: 2026-07-09
-sources: ["Loop Engineering..md", l8-principals-agentic-engineering-workflow-kun-chen.md, bun-in-rust.md]
+updated: 2026-08-15
+sources: ["Loop Engineering..md", l8-principals-agentic-engineering-workflow-kun-chen.md, bun-in-rust.md, software-is-made-between-commits.md]
 ---
 
 # Git Worktrees for Parallel Agents / worktree สำหรับ agent ขนาน
@@ -54,6 +54,19 @@ worktree เอา friction เชิงกลไกของการรัน 
 
 **ผลคือ:** worktree แก้ collision ของ working directory แต่ไม่ได้แก้ disk space, I/O, command policy หรือ review throughput. Parallel agent ต้องออกแบบ infrastructure รอบ worktree ด้วย.
 
+## Shared worktree ของ DeltaDB เป็นอีกทางหนึ่ง
+
+[[software-is-made-between-commits|Software Is Made Between Commits]] เสนอทิศตรงข้ามเชิงกลไก [[deltadb|DeltaDB]] ใช้ replicated worktree แบบ CRDT ให้คนและ agent หลายตัวแก้ไฟล์เดียวกันข้ามเครื่องได้พร้อมกัน พร้อมผูกบทสนทนากับทุก delta
+
+สองแบบ optimize คนละอย่าง:
+
+- **Git worktree** แยกพื้นที่เพื่อลดการรบกวน เหมาะกับ task ที่แบ่งขอบเขตและค่อย integrate ทีหลัง
+- **DeltaDB shared worktree** เปิด visibility และ conversation ระหว่างที่งานยังเกิด เหมาะกับ task ที่ต้องร่วมตัดสินใจสด
+
+CRDT ลด conflict ระดับ replica แต่ไม่กำจัด semantic conflict ส่วน isolation ลดการเหยียบไฟล์ แต่เพิ่มงานรวม branch และส่ง context ภายหลัง Source ยังไม่ให้ข้อมูลพอจะบอกว่าเมื่อไร shared worktree ชนะ isolation จึงควรเก็บเป็นคำถามออกแบบ workflow
+
+**ผลคือ:** “agent หลายตัว” ไม่ได้มี topology เดียว ทีมอาจเลือก isolate เพื่อ autonomy หรือ share เพื่อ coordination ตาม dependency ของงาน
+
 ## See also
 
 - [[loop-engineering]]
@@ -65,3 +78,5 @@ worktree เอา friction เชิงกลไกของการรัน 
 - [[l8-principals-agentic-engineering-workflow-kun-chen]]
 - [[treehouse]]
 - [[bun-in-rust]]
+- [[deltadb]]
+- [[conversation-code-provenance]]

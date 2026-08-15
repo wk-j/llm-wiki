@@ -3,8 +3,8 @@ title: Stacked Pull Requests
 type: concept
 tags: [git, pull-requests, code-review, workflow, ci, agents]
 created: 2026-08-04
-updated: 2026-08-04
-sources: [about-stacked-pull-requests-github-docs.md]
+updated: 2026-08-15
+sources: [about-stacked-pull-requests-github-docs.md, software-is-made-between-commits.md]
 ---
 
 # Stacked Pull Requests / Pull Request แบบต่อกันเป็นชั้น
@@ -60,6 +60,14 @@ Stack เหมาะกับ change ที่มีลำดับพึ่ง
 - **rollback:** การรวมหลายชั้นพร้อมกันทำให้ต้องรู้ว่า revert ทั้งชุดหรือเฉพาะ commit ไหนจึงจะไม่ตัด dependency กลางสาย
 - **human throughput:** agent สร้าง PR ได้เร็วขึ้น แต่คนยังต้องเข้าใจและยอมรับทีละชั้น จึงยังติด [[orchestration-tax|คอขวดการ review]] ได้
 
+## Tension: review หลัง snapshot หรือร่วมมือก่อน commit
+
+[[nathan-sobo|Nathan Sobo]] เสนออีกมุมใน [[software-is-made-between-commits|Software Is Made Between Commits]] เขามองว่า PR comment พยายามเอาบทสนทนากลับมาผูกกับ code หลัง commit/push ทั้งที่ decision สำคัญเกิดตอนกำลังเขียน จึงอยากให้ทีมคุยกับ agent และ annotate shared worktree ได้ก่อน commit ผ่าน [[deltadb|DeltaDB]]
+
+มุมนี้ไม่ได้ลบเหตุผลของ stacked PR ซึ่งยังแบ่ง integration change ให้ review และรัน quality gate ทีละชั้นได้ ความเป็นไปได้หนึ่งคือ DeltaDB ดูแล continuous collaboration ก่อน commit แล้ว stacked PR ดูแล approval กับ merge หลัง change เริ่มนิ่ง แต่ source ของทั้งสองฝ่ายยังไม่อธิบาย handoff ระหว่างกัน เช่น provenance ใดต้องติดไปกับ PR และ approval ใดต้องย้อนกลับเข้า conversation history
+
+**คำถามเปิด:** ทีมได้ review คุณภาพดีกว่าจากการเข้าร่วมตั้งแต่งานยังเคลื่อน หรือเสีย audit boundary ที่ PR ให้มา? คำตอบน่าจะขึ้นกับชนิดงาน กฎ compliance และความสามารถในการ export evidence ระหว่างสองระบบ
+
 ## เช็กลิสต์ก่อนใช้
 
 1. แต่ละ PR มี concern เดียวและ review แยกได้หรือไม่?
@@ -76,3 +84,5 @@ Stack เหมาะกับ change ที่มีลำดับพึ่ง
 - [[git-worktrees]]
 - [[agentic-engineering]]
 - [[orchestration-tax]]
+- [[conversation-code-provenance]]
+- [[software-is-made-between-commits]]

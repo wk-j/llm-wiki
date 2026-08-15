@@ -3,8 +3,8 @@ title: Collaborative AI Engineering
 type: concept
 tags: [ai, engineering, collaboration, team, agents]
 created: 2026-04-28
-updated: 2026-04-28
-sources: [maggie-appleton-collaborative-ai-engineering.md]
+updated: 2026-08-15
+sources: [maggie-appleton-collaborative-ai-engineering.md, software-is-made-between-commits.md]
 ---
 
 # Collaborative AI Engineering / วิศวกรรม AI แบบร่วมมือกัน
@@ -30,8 +30,20 @@ sources: [maggie-appleton-collaborative-ai-engineering.md]
 - **[[deltadb]]**: ระบบ Sync ที่ใช้ [[crdts]] เพื่อให้คนและ Agent เห็นสถานะโค้ดเดียวกันในระดับตัวอักษร
 - **[[ace]]**: ระบบที่เน้นการประสานงานระหว่างมนุษย์และ Agent
 
+## DeltaDB: ร่วมมือระหว่างที่ code ยังเปลี่ยน
+
+[[software-is-made-between-commits|Software Is Made Between Commits]] เพิ่มกลไกที่ชัดขึ้นให้แนวคิดนี้ [[deltadb|DeltaDB]] เก็บทุก operation พร้อมบทสนทนาที่ทำให้เกิด edit และให้คนกับ agent หลายตัวแก้ shared worktree ข้ามเครื่องได้ การอ้างอิงเกาะ delta ไม่ใช่ line number จึงตาม code ได้แม้ย้ายตำแหน่ง
+
+นี่ทำให้ shared context ไม่ได้หมายถึงแค่ทุกคนอ่านเอกสารชุดเดียวกัน แต่หมายถึงทุกคนย้อนจาก code ไปหาเหตุผล และจากเหตุผลไปหา code ณ เวลานั้นได้ผ่าน [[conversation-code-provenance|conversation-code provenance]]
+
+อย่างไรก็ดี source เป็น product vision จาก Zed ยังไม่มีหลักฐานเปรียบเทียบว่ารูปแบบนี้ลด duplicate work, semantic conflict หรือ review burden ได้จริงแค่ไหน CRDT รวม operation ได้ แต่ไม่ได้ทำให้ decision ของหลาย agent ตรงกันเอง
+
+**ได้อะไร:** DeltaDB เสนอ infrastructure สำหรับ shared context แบบต่อเนื่อง ส่วนโจทย์ alignment, validation และ governance ยังต้องแก้ในชั้น workflow
+
 ## ดูเพิ่ม
 
 - [[ace]] — เครื่องมือที่สร้างตามแนวคิดนี้
 - [[alignment-bottleneck]] — เหตุผลที่ต้องเน้นการร่วมมือกัน
 - [[vibecoded-slop]] — ผลลัพธ์ของการทำลายความร่วมมือเพื่อเน้นความเร็ว
+- [[conversation-code-provenance]] — ที่มาสองทางระหว่างบทสนทนากับ code
+- [[software-is-made-between-commits]] — product thesis ของ Zed เรื่อง collaboration ก่อน commit
