@@ -3,13 +3,13 @@ title: Google DeepMind
 type: entity
 tags: [org, ai, lab, research]
 created: 2026-06-26
-updated: 2026-07-15
-sources: [Self Learning for Agents Clearly Explained.md, framework-frontier-ai-dawning-new-age.md]
+updated: 2026-08-16
+sources: [Self Learning for Agents Clearly Explained.md, framework-frontier-ai-dawning-new-age.md, claude-text-watermarking-squintist.md]
 ---
 
 # Google DeepMind / กูเกิล ดีปมายด์
 
-Google DeepMind คือห้องวิจัย AI ของ Google ใน wiki นี้ ทีมโผล่อยู่ในสองเรื่องหลัก เรื่องแรกคือ **AlphaEvolve** ระบบที่ให้ AI ช่วยค้นวิธีแก้โจทย์วิทยาศาสตร์และคณิตศาสตร์ อีกเรื่องคือข้อเสนอของ [[demis-hassabis|Demis Hassabis]] ผู้ร่วมก่อตั้ง DeepMind ว่าควรตรวจ model ที่เสี่ยงสูงอย่างไรก่อนปล่อยให้คนใช้
+Google DeepMind คือห้องวิจัย AI ของ Google ใน wiki นี้ ทีมโผล่อยู่ในสามเรื่องหลัก เรื่องแรกคือ **AlphaEvolve** ระบบที่ให้ AI ช่วยค้นวิธีแก้โจทย์วิทยาศาสตร์และคณิตศาสตร์ เรื่องที่สองคือข้อเสนอของ [[demis-hassabis|Demis Hassabis]] ผู้ร่วมก่อตั้ง DeepMind ว่าควรตรวจ model ที่เสี่ยงสูงอย่างไรก่อนปล่อยให้คนใช้ เรื่องที่สามคือ **[[synthid|SynthID]]** เทคโนโลยี watermark เนื้อหาที่ AI สร้าง
 
 สองเรื่องนี้เชื่อมกันตรง ๆ พอ AI ช่วยเร่งงานวิจัยได้มากขึ้น เราก็ต้องมีวิธีตรวจว่าความสามารถใหม่จะถูกใช้ผิดทางหรือหลุดจากการควบคุมหรือไม่
 
@@ -55,6 +55,12 @@ AGI ในความหมายของเขาคือ AI ที่มี
 
 **ผลคือ:** DeepMind ปรากฏใน wiki ทั้งในฐานะทีมที่เร่งความสามารถของ AI และในฐานะต้นทางของข้อเสนอว่าควรสร้างกติกาให้ตามความสามารถนั้นทัน
 
+## SynthID: watermark เนื้อหา AI
+
+DeepMind สร้าง [[synthid|SynthID]] — วิธีฝัง signal ลับลงในเนื้อหาที่ AI generate ทั้งรูป วิดีโอ และข้อความ ฝั่งข้อความใช้ tournament sampling ตอน model เลือกคำ (ดู [[llm-text-watermarking]]) ทีมตีพิมพ์ผลใน Nature พร้อมการทดลอง live ใน Gemini ราว 20 ล้าน response ว่าผู้ใช้แยกไม่ออกและช้าลงไม่ถึง 1% แล้วเปิด reference implementation เป็น open source ให้คนทดสอบได้เอง
+
+การเปิด code มีสองหน้า: โปร่งใสและตรวจสอบได้ แต่ทีมวิจัยภายนอกก็ใช้เวอร์ชันสาธารณะพิสูจน์ว่า paraphrase ล้าง mark ได้ 58/59 เคส (บน home version ไม่ใช่ระบบ production) — งานนี้ทำให้ SynthID เป็นตัวอย่างสาธารณะที่ชัดที่สุดของ text watermarking ที่ [[anthropic|Anthropic]] น่าจะเดินตามใน [[claude-text-watermarking-squintist|ข่าว Claude watermark]] (ยังเป็นการอนุมานของแหล่ง)
+
 ## แยกให้ออกว่าอะไรคืออะไร
 
 - ผลของ AlphaEvolve เป็นตัวเลขที่แหล่งข่าวอ้าง ต้องกลับไปดูงานวิจัยต้นทางก่อนใช้เป็นหลักฐานแข็ง
@@ -73,3 +79,5 @@ AGI ในความหมายของเขาคือ AI ที่มี
 - [[artificial-general-intelligence]]
 - [[frontier-ai-standards-body]]
 - [[framework-frontier-ai-dawning-new-age]]
+- [[synthid]]
+- [[llm-text-watermarking]]

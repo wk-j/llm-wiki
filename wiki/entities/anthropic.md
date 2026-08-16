@@ -3,8 +3,8 @@ title: Anthropic
 type: entity
 tags: [company, ai, ai-safety, claude]
 created: 2026-04-16
-updated: 2026-07-29
-sources: [Introducing Claude Opus 4.7.md, The advisor strategy Give Sonnet an intelligence boost with Opus.md, Using Claude Code Session Management & 1M Context.md, opencode-vs-claude-code-morph.md, Claude Mythos Preview.md, improved-15-llms-harness-changed.md, Piyalitt Ittichaiwong - Opus 4.8 Launch Recap.md, how-ai-became-more-expensive-than-workers-it-replaced.md, claude-in-microsoft-foundry.md, bun-in-rust.md, bringing-mcp-2026-07-28-to-claude.md]
+updated: 2026-08-16
+sources: [Introducing Claude Opus 4.7.md, The advisor strategy Give Sonnet an intelligence boost with Opus.md, Using Claude Code Session Management & 1M Context.md, opencode-vs-claude-code-morph.md, Claude Mythos Preview.md, improved-15-llms-harness-changed.md, Piyalitt Ittichaiwong - Opus 4.8 Launch Recap.md, how-ai-became-more-expensive-than-workers-it-replaced.md, claude-in-microsoft-foundry.md, bun-in-rust.md, bringing-mcp-2026-07-28-to-claude.md, claude-text-watermarking-squintist.md]
 ---
 
 # Anthropic
@@ -67,6 +67,14 @@ Anthropic ประกาศว่า [[claude|Claude]] เป็น **generally
 
 **ได้อะไร:** Anthropic ไม่ได้ทำแค่ model หรือ MCP spec. บริษัทกำลังสร้างชั้น production รอบ connector ตั้งแต่ UI, identity, observability ไปจนถึง private-network access.
 
+## เริ่ม watermark ข้อความของ Claude (ส.ค. 2026)
+
+จาก [[claude-text-watermarking-squintist|วิดีโอของ Squintist]]: เดือนสิงหาคม 2026 Anthropic ออก support page บอกว่า **Claude model รุ่นใหม่ทุกตัวจะ [[llm-text-watermarking|watermark]] ข้อความที่เขียนแบบมองไม่เห็น** — mark อยู่ในการเลือกคำเอง ไม่ใช่ metadata เลยติดไปกับ copy-paste ด้วย ความหมายตามคำ Anthropic เอง: mark แปลว่า content "may have been processed by Claude" — proofread, แปล, สรุป, หรือเขียนใหม่หมด ได้ mark เดียวกัน **ไม่ได้บอกว่าใครแต่ง**
+
+Anthropic ยังไม่เปิดเผยกลไก — วิดีโออนุมานว่าเป็น sampling-time watermark ตระกูลเดียวกับ [[synthid|SynthID]] ของ Google (เพราะ watermark ชนิดนี้ stamp ทีหลังไม่ได้) เก็บเป็นการอนุมาน ไม่ใช่ spec ยืนยัน แรงขับหลักคือ [[eu-ai-act|EU AI Act]] Article 50 และ Code of Practice ด้าน transparency ที่ Anthropic ร่วมลงนามกับ Google, OpenAI, Meta, Microsoft, Mistral
+
+จุดตึงที่เก็บไว้: กฎ EU ยกเว้น standard editing (แก้สะกด/grammar/แปล) แต่ Anthropic mark งานพวกนั้นด้วย — รายงานที่ผู้ใช้เขียนเองแล้วให้ Claude ขัด grammar ก็อาจติด mark
+
 ## มุม third-party harness (Can Bölük, ก.พ. 2026)
 
 [[can-boluk|Can Bölük]] มองการที่ Anthropic บล็อก [[opencode|OpenCode]] จาก Claude Code subscription ว่าเป็นสัญญาณ **anti–third-party harness** ทั้งที่จริงแล้วการที่ open harness ปรับ edit tool ช่วยดันให้ model ของ vendor เองได้อีกหลาย point โดยไม่ต้องเทรนใหม่ (ดู [[improved-15-llms-harness-changed]], [[edit-tool-formats]]) ของเขาคือพอเจอ third-party harness ก็ควร "เล่ามาให้ฟัง" ไม่ใช่ blanket ban — เหมือนทีม security ที่ยอมจ้าง cheater มาช่วยป้องกัน
@@ -102,3 +110,6 @@ Anthropic ได้บล็อก [[opencode|OpenCode]] ไม่ให้ใ�
 - [[enterprise-model-deployment]]
 - [[bun-in-rust]]
 - [[bun]]
+- [[llm-text-watermarking]]
+- [[claude-text-watermarking-squintist]]
+- [[eu-ai-act]]

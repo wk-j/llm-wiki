@@ -3,8 +3,8 @@ title: OpenAI
 type: entity
 tags: [ai, labs, models, organizations]
 created: 2026-04-24
-updated: 2026-07-05
-sources: [piyalitt-gpt-5-5-launch.md, microsoft-openai-partnership-2026.md, ryan-lopopolo-harness-engineering.md, https://openai.com/index/introducing-genebench-pro/, how-perplexity-lost-ai-war.md, how-ai-became-more-expensive-than-workers-it-replaced.md, piyalitt-codex-keynote-attention-not-token.md]
+updated: 2026-08-16
+sources: [piyalitt-gpt-5-5-launch.md, microsoft-openai-partnership-2026.md, ryan-lopopolo-harness-engineering.md, https://openai.com/index/introducing-genebench-pro/, how-perplexity-lost-ai-war.md, how-ai-became-more-expensive-than-workers-it-replaced.md, piyalitt-codex-keynote-attention-not-token.md, claude-text-watermarking-squintist.md]
 ---
 
 # OpenAI / โอเพนเอไอ
@@ -63,6 +63,14 @@ AI lab ในสหรัฐฯ — สร้าง ChatGPT, ตระกูล 
 - **SWE-Bench Pro memorization signal** — Anthropic ฟ้องไว้ใน model card ของ GPT-5.5 ว่ามี sign ของการจำ; [[piyalitt-ittichaiwong|Piyalitt]] ตีความว่าเป็นความพลาด ไม่ใช่การ benchmaxx ตั้งใจ — เป็นอีกเคสที่ทำให้ SWE-Bench Pro โดยเดี่ยวๆ เป็น axis ที่ควรระวัง (ดู [[kimi-k2-6]] ด้วย — benchmark table ถูก curate)
 - **[[genebench-pro|GeneBench-Pro]]** — benchmark วิจัย computational biology ที่ OpenAI เปิดตัว 2026-06-30 เพื่อวัด [[research-taste|research taste]]: ambiguity handling, QC, causal/statistical choices, และ decision-readiness. ผลในบทความ: [[gpt-5-6-sol|GPT-5.6 Sol]] ได้ 28.7% ที่ highest reasoning และ 31.5% ใน Pro mode แต่ยังต่ำกว่าหนึ่งในสาม จึงเป็นหลักฐานว่า scientific judgement ยังไม่อิ่มตัว
 
+## มุม watermark / AI detection
+
+จาก [[claude-text-watermarking-squintist|วิดีโอของ Squintist]] OpenAI โผล่ในเรื่องนี้สามจุด:
+
+- **Detector ที่ถอนเอง (2023):** classifier ตรวจงานเขียน AI ของ OpenAI จับได้ ~26% แต่ flag งานคนผิด 9% ถูกปิดภายในไม่กี่เดือน — เป็นหมุดสำคัญในประวัติของ [[ai-text-detectors|AI detectors]]
+- **ภาพก่อนข้อความ:** OpenAI ใส่ C2PA + [[synthid|SynthID]] ในรูปภาพที่ generate แล้ว ส่วน provenance ฝั่งข้อความยังเป็นแผน (ณ เวลาแหล่ง)
+- **ลงนาม Code of Practice ของ EU:** ร่วมกับ Anthropic, Google, Meta, Microsoft, Mistral ภายใต้แรงของ [[eu-ai-act|EU AI Act]] Article 50
+
 ## จังหวะปล่อย model (keynote Codex, 2026-07)
 
 จาก [[piyalitt-codex-keynote-attention-not-token]]: OpenAI ปล่อย model ใหม่จากเคยทุก ~15 เดือน ตอนนี้เหลือ ~ทุก 6 สัปดาห์ — สัปดาห์ก่อน [[ai-engineer-worlds-fair|AI Engineer World's Fair]] เพิ่ง preview ตระกูล GPT-5.6. ตัวเลขยัง source-attributed ผ่านโพสต์ Piyalitt
@@ -83,3 +91,5 @@ AI lab ในสหรัฐฯ — สร้าง ChatGPT, ตระกูล 
 - [[claude-opus-4-7]]
 - [[ai-token-economics]]
 - [[enterprise-ai-roi]]
+- [[ai-text-detectors]]
+- [[eu-ai-act]]

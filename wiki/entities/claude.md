@@ -3,8 +3,8 @@ title: Claude
 type: entity
 tags: [ai, models, anthropic, llm]
 created: 2026-04-16
-updated: 2026-07-04
-sources: [Introducing Claude Opus 4.7.md, The advisor strategy Give Sonnet an intelligence boost with Opus.md, Claude Mythos Preview.md, Piyalitt Ittichaiwong - Opus 4.8 Launch Recap.md, zoran-horvat-claude-no-planning-engine.md, llm-loops-instead-of-chain-of-thought.md, a-field-guide-to-fable-finding-your-unknowns.md]
+updated: 2026-08-16
+sources: [Introducing Claude Opus 4.7.md, The advisor strategy Give Sonnet an intelligence boost with Opus.md, Claude Mythos Preview.md, Piyalitt Ittichaiwong - Opus 4.8 Launch Recap.md, zoran-horvat-claude-no-planning-engine.md, llm-loops-instead-of-chain-of-thought.md, a-field-guide-to-fable-finding-your-unknowns.md, claude-text-watermarking-squintist.md]
 ---
 
 # Claude
@@ -34,6 +34,10 @@ sources: [Introducing Claude Opus 4.7.md, The advisor strategy Give Sonnet an in
 - [[advisor-strategy]] — การใช้ Sonnet/Haiku ที่ถูกกว่าเป็น executor โดยมี Opus เป็น advisor
 - File-system-based memory (ปรับปรุงให้ดีขึ้นใน Opus 4.7)
 - [[dynamic-workflows|Dynamic workflows]] ใน [[claude-code|Claude Code]] (research preview, มากับ Opus 4.8) — วางแผนเอง + สั่ง subagent คู่ขนานเป็นร้อย
+
+## Watermark ข้อความ (ส.ค. 2026)
+
+จาก [[claude-text-watermarking-squintist|วิดีโอของ Squintist]]: support page ของ [[anthropic|Anthropic]] (สิงหาคม 2026) บอกว่า **Claude model รุ่นใหม่ทุกตัวจะ [[llm-text-watermarking|watermark]] ข้อความที่เขียนแบบมองไม่เห็น** โดย mark อยู่ในการเลือกคำ ติดไปกับ copy-paste และหมายถึงแค่ว่า content "may have been processed by Claude" — ไม่ได้บอกว่าใครแต่ง งานทุกแบบที่ผ่าน model (proofread/แปล/สรุป/เขียนใหม่) ได้ mark เดียวกัน ยิ่ง rephrase มาก signal ยิ่งแรง ส่วนงานแก้จิ๋ว ๆ หรือ code ที่คำตอบตายตัวแทบไม่มีที่ให้ฝัง signal กลไกภายในยังไม่เปิดเผย — ที่ว่าเป็นแบบ [[synthid|SynthID]] เป็นการอนุมานของแหล่ง
 
 ## ข้อควรระวังเรื่อง Plan mode
 
@@ -67,3 +71,5 @@ sources: [Introducing Claude Opus 4.7.md, The advisor strategy Give Sonnet an in
 - [[plan-mode-as-prompting]]
 - [[looped-transformers]]
 - [[latent-reasoning]]
+- [[llm-text-watermarking]]
+- [[claude-text-watermarking-squintist]]

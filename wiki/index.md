@@ -1,6 +1,7 @@
 # Index
 
 ## Sources
+- [[claude-text-watermarking-squintist]] — Squintist (YouTube, ingest 2026-08-16): ข่าว Anthropic เริ่ม watermark ข้อความของ Claude รุ่นใหม่ (mark อยู่ในการเลือกคำ หมายถึง "ผ่าน Claude" ไม่ใช่ "Claude แต่ง") พร้อมอธิบายกลไก SynthID แบบ tournament sampling, จุดอ่อน low-entropy กับ paraphrase washing (58/59 บน reimplementation), แรงขับจาก EU AI Act Article 50 และ track record ของ AI detector ที่พลาดกับ non-native writers และ desk-reject 178 papers ที่ NeurIPS; กลไกของ Anthropic เองยังไม่เปิดเผย
 - [[software-is-made-between-commits]] — Nathan Sobo / Zed: เสนอ DeltaDB เป็น version control ที่เก็บทุก operation พร้อมบทสนทนาที่ทำให้เกิด edit; reference เกาะ delta จึงตาม code ได้เมื่อย้ายบรรทัด และหลายคน/agent แก้ replicated worktree ผ่าน CRDT ได้พร้อมกัน; Git/CI ยังเป็น integration layer ส่วน claim เรื่อง beta, performance, governance และการเรียก agent เก่ายังเป็น first-party vision กับคำถามเปิด
 - [[andrew-ng-ai-engineering-skills-map]] — Andrew Ng (X, ingest 2026-08-15): ประกาศ AI Engineering Skills Map ที่สรุปทักษะสำคัญสี่ข้อ — สร้าง/deploy แอป AI ที่ output เดาไม่ได้โดยใช้ eval กับ error analysis, พื้นฐาน software engineering ไว้มองเห็น tradeoff, การใช้ coding agent ให้รู้ว่าเมื่อไหร่แทรกเมื่อไหร่ปล่อย และ shaping the build คือตัดสินว่าอะไรควรอยู่ใน spec; ย้ำว่านี่คือทักษะไม่ใช่ตำแหน่ง แต่ตัวเลข 10,000 job posting ยังเป็น first-party claim และผู้เขียนเป็นผู้ก่อตั้ง DeepLearning.AI ที่ขายคอร์สสอนเรื่องนี้
 - [[i-was-replaced-by-ai-typecraft]] — Typecraft (YouTube transcript, ingest 2026-08-13): เรื่องเล่าจาก creator/developer ที่ทำงาน 60–80 ชั่วโมงต่อสัปดาห์จน burnout ก่อนกลับไปเจอบริษัทเร่งใช้ AI, PR และ feature เพิ่ม, เสีย creative ownership แล้วถูกเลิกจ้าง; จบด้วยงาน developer educator ที่ PlanetScale และการยอมรับ AI ใน job design ใหม่ โดยไม่สรุปว่า AI เป็นเหตุเดียวของ depression หรือ layoff
@@ -137,6 +138,10 @@
 - [[thclaws-marketplace-panutat]] — Panutat Tejasen (2026-04-30): thClaws v0.7.0 Marketplace; Enterprise Security; Private Marketplace; แนวคิด Host Bridge; Rabbit Holes ในการ coding
 
 ## Entities
+- [[synthid]] — เทคโนโลยี watermark เนื้อหา AI ของ Google DeepMind; ฝั่งข้อความใช้ tournament sampling ตอน model เลือกคำ ตีพิมพ์ใน Nature พร้อมทดลอง live ใน Gemini ~20 ล้าน response และเปิด reference implementation; เป็นตัวอย่างสาธารณะที่ชัดที่สุดของ text watermarking
+- [[eu-ai-act]] — กฎหมายกำกับ AI ของ EU; ใน wiki เข้ามาผ่าน Article 50 ที่บังคับ mark output ของ generative AI แบบ machine-readable ตั้งแต่ 2 ส.ค. โดยยกเว้น standard editing และมี Code of Practice ที่ lab ใหญ่ทุกเจ้าลงนาม; ยังบังคับ open model ที่คนรันเองไม่ได้
+- [[pangram]] — บริษัท AI text detector สายเดาจากสไตล์; แหล่งเดียวกันมีทั้ง claim ว่า flag ชุด TOEFL เดิมเป็นศูนย์ เคสอาจารย์โดนตัดสิน 100% AI และการถูกใช้ desk-reject 178 papers ที่ NeurIPS 2026 — ตัวเลขทุกฝั่งยัง source-attributed
+- [[squintist]] — ช่อง YouTube อธิบายเทคโนโลยีที่ทำด้วย AI เกือบทั้งหมดและบอกเองตรง ๆ (script/เสียง generate); เจ้าของทดลองทำช่องโดยไม่โชว์หน้า ให้วิดีโอยืนด้วย research และ source ที่ตรวจได้
 - [[nathan-sobo]] — ผู้ร่วมก่อตั้ง Zed Industries และผู้เขียน “Software Is Made Between Commits”; มองว่าบทสนทนาระหว่างเขียน code สำคัญกว่า comment บน snapshot หลัง commit และเสนอให้ conversation กับ worktree เป็น artifact ร่วมกันผ่าน DeltaDB
 - [[andrew-ng]] — นักการศึกษา/ผู้ประกอบการสาย AI ผู้ก่อตั้ง DeepLearning.AI; ใน wiki นี้คือผู้เสนอ AI Engineering Skills Map ที่ย้ำว่าเป็น “ทักษะ” ไม่ใช่ “ตำแหน่ง” โดยเทียบกับ cloud ที่ทุกคนต้องเป็นแต่มีคนตำแหน่ง Cloud engineer น้อย; ควรอ่านพร้อมข้อเท็จจริงว่าองค์กรของเขาขายคอร์สสอนทักษะชุดเดียวกัน
 - [[deeplearning-ai]] — องค์กรการศึกษา AI ของ Andrew Ng ที่ระบุเองว่าโฟกัสหลักคือช่วยให้ developer ได้ทักษะสี่ข้อตามแผนที่; ทำให้แผนที่เป็นทั้งงานวิเคราะห์ตลาดและการวางตำแหน่งสินค้าไปพร้อมกัน
@@ -395,6 +400,8 @@
 - [[marc-brooker]] — senior engineer ที่ AWS (Lambda/Aurora); ฝั่งปกป้อง SDD ตัวจริง: มอง spec เป็น artifact ที่ explicit มี version และมีชีวิต ใช้วนซ้ำได้จริง
 
 ## Concepts
+- [[llm-text-watermarking]] — การฝัง signal ลับในข้อความ LLM ตอน sampling (rig ลูกเต๋าด้วย secret key ที่ reshuffle ทุก step) ให้ตรวจ provenance ทีหลังได้โดยสถิติคำไม่เปลี่ยน; จุดอ่อนคืองาน low-entropy ไม่มีที่ซ่อนและ paraphrase ล้างออกได้ และ mark หมายถึง "ผ่าน model" ไม่ใช่ "model เป็นคนแต่ง"
+- [[ai-text-detectors]] — เครื่องตรวจงานเขียน AI จากสไตล์ (GPTZero, Pangram, Turnitin) ที่ไม่มี key ไม่ใช่ watermark; ประวัติ false positive หนักกับ non-native writers และงาน craft จัด, สร้าง arms race กับ humanizer และ premise กำลังพังเพราะสไตล์คนกับ AI กลืนเข้าหากันเรื่อย ๆ
 - [[conversation-code-provenance]] — ความสัมพันธ์สองทางระหว่างบทสนทนากับ code: จากข้อความไปดู implementation ตอนนั้น/ตอนนี้ และจาก code ย้อนหาเหตุผลที่สร้างหรือแก้ต่อ; เกาะ delta แทน line number แต่ provenance ไม่ใช่ความจริงและยังต้องมี test, review, permission กับ retention
 - [[crdts]] — โครงสร้างข้อมูลสำหรับ replica หลายชุดที่รับ edit พร้อมกันแล้วรวมกลับสู่ state เดียวกันได้; แก้ data convergence แต่ไม่แก้ semantic conflict โดยอัตโนมัติ และเป็นฐานของ replicated worktree ใน DeltaDB
 - [[ai-engineering-skills-map]] — กรอบสี่ทักษะของ Andrew Ng สำหรับเลือกว่าจะเรียนอะไรก่อนในยุค AI: สร้าง/deploy แอป AI, พื้นฐาน software engineering, ใช้ coding agent และ shaping the build โดยมี continuous learning รองรับ; อ่านเป็นสายโซ่ที่ขาดข้อไหนแล้วข้ออื่นเสียแรงเปล่า และเป็นทักษะของ developer ทุกสายไม่ใช่ตำแหน่งเฉพาะ

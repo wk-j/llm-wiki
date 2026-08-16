@@ -3,8 +3,8 @@ title: Quality Proxy Collapse
 type: concept
 tags: [ai, software-quality, slop, verification]
 created: 2026-07-03
-updated: 2026-07-03
-sources: [eternal-sloptember.md]
+updated: 2026-08-16
+sources: [eternal-sloptember.md, claude-text-watermarking-squintist.md]
 ---
 
 # Quality Proxy Collapse / สัญญาณคุณภาพเดิมใช้ไม่ได้
@@ -26,6 +26,14 @@ LLM ทำให้ assumption นี้พัง. งานอาจดูด�
 
 ได้อะไร: ต้องเลิกใช้ความเรียบร้อยของ output เป็นหลักฐานว่า process ข้างหลังดี
 
+## ฝั่ง prose: สัญญาณพังทั้งสองทิศ
+
+[[claude-text-watermarking-squintist|วิดีโอของ Squintist]] เติมมุมงานเขียนทั่วไป (ไม่ใช่แค่ code): เมื่อก่อน prose ที่ลื่นเป็นสัญญาณว่ามีคนลงเวลาขัด ตอนนี้ model ผลิตประโยคสะอาดได้ในไม่กี่วินาที shortcut นั้นหายไป
+
+ที่แย่กว่านั้น proxy ฝั่งกลับก็พังด้วย: [[ai-text-detectors|AI detector]] ที่เดาจากสไตล์ อาศัยว่างานเขียน AI ยัง "หน้าตาไม่เหมือน" งานคน แต่ความต่างนั้นกำลังแคบลงจากทั้งสองฝั่ง — model ถูกเทรนให้เหมือนคน และคนก็ดูดสไตล์ model กลับ (คำอย่าง *delve* โผล่ในการพูดของคนเพิ่มถึง 50% หลัง ChatGPT ออก) เคสอาจารย์ที่ขัดเรื่องสั้นหกเดือนแล้วโดนตัดสิน 100% AI คือลูกหลงของ proxy ที่พัง
+
+ทางที่วงการลองแทนคือ [[llm-text-watermarking|watermark]]: เลิกเดาจากผิวงาน แล้วฝังหลักฐาน provenance ที่ตรวจด้วย key ได้จริง — แต่มันตอบแค่ "ผ่าน model ไหม" ไม่ตอบว่าเนื้อหาดีหรือจริง
+
 ## วิธีรับมือ
 
 ทางแก้ไม่ใช่ “อย่าใช้ AI” เสมอไป แต่ต้องเปลี่ยน proxy:
@@ -43,3 +51,5 @@ LLM ทำให้ assumption นี้พัง. งานอาจดูด�
 - [[cognitive-surrender]]
 - [[behavioral-verifier]]
 - [[programming-process-matters]]
+- [[llm-text-watermarking]]
+- [[ai-text-detectors]]
