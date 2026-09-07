@@ -114,6 +114,16 @@ CLAUDE.md เป็น **instance หนึ่งของการตั้ง�
 
 [[cal-rueb|Cal Rueb]] แนะนำว่าเมื่อมีการเปลี่ยนไปใช้โมเดลรุ่นใหม่ที่ฉลาดขึ้นและทำตามคำสั่งได้ดีขึ้น (เช่น การเปลี่ยนผ่านสู่รุ่น 4.0 หรือ [[claude-opus-4-7|Opus 4.7]]) เป็นช่วงเวลาที่ดีที่จะกลับมาทบทวนไฟล์ `CLAUDE.md` กฎหลายอย่างที่เคยต้องเขียนเพื่อป้องกันไม่ให้โมเดลเก่าทำผิด (เช่น การห้ามเขียนคอมเมนต์ซ้ำซ้อน) อาจไม่จำเป็นอีกต่อไป การลบกฎที่ไม่จำเป็นออกจะช่วยลดการใช้ [[instruction-budget]] ลงได้
 
+## เรื่องเล่าจากหน้างาน — เขียนกฎไว้แล้วยังต้องเตือนซ้ำ
+
+[[dhh|DHH]] เล่าใน [[dhh-strategies-programming-with-ai-agents-lex-clips|บทสัมภาษณ์กับ Lex Fridman]] ว่าเขามีข้อห้ามเรื่อง early exit อยู่ใน `AGENTS.md` ของ [[omarchy|Omarchy]] คือห้าม agent เขียน bash เป็น precondition แล้ว exit ต่อกันเป็นชั้น ๆ แต่ agent ยังทำอยู่ และเขาต้องเตือนให้กลับไปอ่านไฟล์ทุกครั้งที่จับได้
+
+> "I have to smack the agents over the back of the head every single time I catch it and remind it to look at the agents MD file."
+
+`AGENTS.md` เป็นไฟล์คนละชื่อกับ `CLAUDE.md` แต่ทำหน้าที่เดียวกัน คือกฎประจำ repo ที่ agent อ่านตอนเริ่มงาน ข้อสังเกตนี้จึงใช้ได้กับทั้งสองไฟล์
+
+สิ่งที่ควรเรียนจากเรื่องนี้ไม่ใช่ "ไฟล์คำสั่งไม่มีประโยชน์" แต่คือกฎที่เป็นรสนิยมด้าน style มักถูกละเลยง่ายกว่ากฎที่มีเครื่องตรวจ ถ้าเรื่องนั้นสำคัญจริงและตรวจอัตโนมัติได้ ควรย้ายไปเป็น linter หรือ test แทนที่จะฝากไว้กับข้อความในไฟล์อย่างเดียว ต่อกับ [[instruction-budget]] ตรงที่กฎยิ่งเยอะ โอกาสที่แต่ละข้อจะถูกทำตามยิ่งเจือจาง
+
 ## ดูเพิ่มเติม
 
 -   [[cal-rueb]]
@@ -125,4 +135,6 @@ CLAUDE.md เป็น **instance หนึ่งของการตั้ง�
 -   [[subagent-patterns]]
 -   [[cyril-xbt-claude-md-guide]]
 -   [[alex-ker-harnesses-optimize]]
+-   [[dhh-strategies-programming-with-ai-agents-lex-clips]]
+-   [[make-it-simpler]]
 

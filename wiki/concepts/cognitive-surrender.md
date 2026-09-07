@@ -3,8 +3,8 @@ title: Cognitive Surrender
 type: concept
 tags: [ai, psychology, developer-experience, attention, code-review]
 created: 2026-05-29
-updated: 2026-08-13
-sources: [The Orchestration Tax.md, Agentic Code Review.md, techsauce-ai-brain-fry.md, eternal-sloptember.md, i-was-replaced-by-ai-typecraft.md]
+updated: 2026-08-25
+sources: [The Orchestration Tax.md, Agentic Code Review.md, techsauce-ai-brain-fry.md, eternal-sloptember.md, i-was-replaced-by-ai-typecraft.md, state-of-technology-and-joy-of-making-phoomparin-mano.md]
 ---
 
 # Cognitive Surrender / การยอมแพ้ทางความคิด
@@ -37,6 +37,14 @@ Cognitive surrender ไม่ได้เกิดจากความขี้
 กรณีนี้ทำให้ cognitive surrender มีมิติมากกว่า bug risk. ต่อให้ output ถูกและผ่าน test คนก็อาจค่อย ๆ สูญเสีย agency, mental model และความหมายที่ได้จากงาน. ในเรื่องของ Typecraft ภาวะนี้เกิดร่วมกับ burnout เดิมและ [[ai-work-intensification|AI Work Intensification]] จึงแยกเหตุเดียวไม่ได้.
 
 **ผลคือ:** acceptance ที่ดีต้องถามทั้ง “ถูกไหม” และ “คนรับผิดชอบได้ก่อตัวความเห็นของตัวเองหรือยัง”.
+
+## ถ้าเข้าใจงาน แต่ยังไม่รู้สึกว่าเป็นงานของเรา
+
+[[phoomparin-mano|Phoomparin Mano]] เล่าอีกกรณีใน [[state-of-technology-and-joy-of-making-phoomparin-mano|State of Technology and the Joy of Making]]. เขาไม่ได้บอกว่า attention หมดหรือ workflow คุมไม่ได้. กลับบอกว่า agent workflow ของตัวเอง optimal มาก แต่ยิ่งใช้ก็ยิ่งรู้สึกห่างจากสิ่งที่สร้าง.
+
+กรณีนี้ควรเรียก [[creative-ownership|loss of creative ownership]] มากกว่า cognitive surrender ถ้าคนยังตรวจและตั้งความเห็นได้. เส้นแบ่งสำคัญคือ **ทำไม** คนไม่ได้รู้สึกเป็นผู้สร้าง: เพราะไม่มีแรงคิดแล้วรับไป หรือเพราะงานคิดกับ micro-decision ที่ให้ความหมายถูก delegate ออกไปตั้งแต่ต้น.
+
+**ผลคือ:** อย่าเอาความห่างจากงานทุกแบบไปรวมเป็น attention failure. วิธีแก้ cognitive surrender คือคืน capacity ให้ judgement; วิธีแก้ ownership อาจต้องย้าย boundary ของสิ่งที่ delegate.
 
 ## วิธีกัน
 
@@ -78,3 +86,5 @@ Cognitive surrender ไม่ได้เกิดจากความขี้
 - [[i-was-replaced-by-ai-typecraft]]
 - [[ai-work-intensification]]
 - [[typecraft]]
+- [[state-of-technology-and-joy-of-making-phoomparin-mano]]
+- [[creative-ownership]]

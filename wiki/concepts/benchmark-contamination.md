@@ -3,7 +3,7 @@ title: Benchmark Contamination
 type: concept
 tags: [ai, benchmarks, evaluation, coding]
 created: 2026-05-27
-updated: 2026-07-15
+updated: 2026-08-25
 sources: [Piyalitt Ittichaiwong - DeepSWE FrontierSWE Benchmark.md, "https://openai.com/index/introducing-genebench-pro/", framework-frontier-ai-dawning-new-age.md]
 ---
 
@@ -43,7 +43,7 @@ benchmark อย่าง SWE-Bench สร้างโจทย์โดยเ�
 
 [[frontier-ai-standards-body|Standards Body]] ที่เสนอจึงต้อง refresh test อาจทุกไตรมาส เลิกชุดที่อิ่มตัว และสร้าง held-out evaluation ที่เป็นอิสระจาก Lab. Third-party auditor ช่วยเพิ่มชุดทดสอบและตรวจ protocol อีกชั้น.
 
-ความตึงคือ test ต้องลับพอจะกัน contamination แต่โปร่งใสพอให้ Lab รู้ว่าถูกตัดสินอย่างยุติธรรม. การหมุน benchmark ลดการท่องข้อสอบ แต่ไม่ได้รับประกันว่า metric วัด risk จริงแทน proxy.
+โจทย์ยากคือ test ต้องลับพอจะกัน contamination แต่โปร่งใสพอให้ Lab รู้ว่าถูกตัดสินอย่างยุติธรรม. การหมุน benchmark ลดการท่องข้อสอบ แต่ไม่ได้รับประกันว่า metric วัด risk จริงแทน proxy.
 
 **ผลคือ:** ยิ่ง benchmark มีอำนาจตัดสินการเข้าตลาด benchmark governance ยิ่งสำคัญพอ ๆ กับตัวโจทย์.
 

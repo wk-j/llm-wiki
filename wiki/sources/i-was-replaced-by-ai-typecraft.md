@@ -3,7 +3,7 @@ title: I Was Replaced by AI - Typecraft
 type: source
 tags: [ai, software-engineering, workplace, burnout, creativity, career]
 created: 2026-08-13
-updated: 2026-08-13
+updated: 2026-08-25
 sources: []
 url: https://www.youtube.com/watch?v=0Lo6MSGrxEA
 author: typecraft
@@ -99,3 +99,4 @@ Typecraft มอง programming เป็นทั้งงานคิดแล
 - [[code-is-free]]
 - [[orchestration-tax]]
 - [[skill-atrophy]]
+- [[creative-ownership]]

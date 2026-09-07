@@ -3,8 +3,8 @@ title: Context Engineering
 type: concept
 tags: [ai, context, prompt-engineering, agent-harness, documentation]
 created: 2026-07-21
-updated: 2026-08-15
-sources: [teepagorn-ten-lessons-building-with-ai.md, mikelopster-loop-engineering.md, self-learning-for-agents-explained.md, andrew-ng-ai-engineering-skills-map.md]
+updated: 2026-08-16
+sources: [teepagorn-ten-lessons-building-with-ai.md, mikelopster-loop-engineering.md, self-learning-for-agents-explained.md, andrew-ng-ai-engineering-skills-map.md, the-new-software-lifecycle.md]
 ---
 
 # Context Engineering / การจัดบริบทให้ AI ทำงานได้
@@ -56,11 +56,22 @@ Context engineering ไม่ได้แปลว่าต้อง front-load 
 
 อีกด้าน งานที่มี invariant สำคัญ เช่น security boundary หรือข้อห้ามทางกฎหมาย อาจต้องส่งก่อนลงมือ ไม่ควรรอให้ระบบพังแล้วค่อยเตือน การเลือก timing จึงขึ้นกับผลเสียของการเดาผิดและความแน่นอนของ trigger
 
+[[the-new-software-lifecycle|The New Software Lifecycle]] ทำให้การเลือกนี้ชัดเป็น architecture สองฝั่ง:
+
+| Context | ตัวอย่าง | ต้นทุนหลัก |
+| --- | --- | --- |
+| Static | system instruction, rule file, global memory, core guardrail | เชื่อถือได้กว่า แต่กิน token ทุก interaction |
+| Dynamic | skill, tool result, เอกสารจาก RAG | จ่ายเมื่อใช้ แต่ต้องมี trigger และ retrieval ที่ไว้ใจได้ |
+
+Addy แบ่งเนื้อหา context เป็น instructions, knowledge, memory, examples, tools และ guardrails แล้วเสนอให้ review และ version เส้นแบ่ง static/dynamic เหมือน code. [[progressive-disclosure|Progressive disclosure]] คือกลไกที่ทำให้ dynamic context ใช้งานได้: เห็น metadata ก่อน โหลด instruction และ reference เต็มตอน task ตรงกัน
+
+**ได้อะไร:** ทีมไม่ได้ตัดสินแค่ว่า “agent ต้องรู้อะไร” แต่ตัดสินด้วยว่า “ต้องรู้ตอนไหน” และยอมจ่าย token/ความเสี่ยงแบบไหน
+
 ## กลายเป็นคำที่ตลาดงานรู้จักแล้ว
 
 [[andrew-ng|Andrew Ng]] ใส่ context engineering ไว้ในรายการ "ชิ้นส่วนพื้นฐานของ AI" ที่คนสร้างแอป AI ต้องรู้ ตาม [[ai-engineering-skills-map|AI Engineering Skills Map]] โดยวางเรียงกับ LLM, RAG, agentic workflow, machine learning และ deep learning
 
-เขายังพูดถึงมันซ้ำในทักษะอีกข้อคือ *using coding agents* ซึ่งระบุว่าต้อง "จัดการ context ของ coding agent" เป็น
+เขายังพูดถึงมันซ้ำในทักษะอีกข้อคือ *using coding agents* โดยระบุว่าการจัด context ให้ coding agent เป็นทักษะจำเป็น
 
 **ได้อะไร:** คำนี้ไม่ได้อยู่แค่ในวงคนเขียน harness แล้ว มันถูกจัดเป็นความรู้พื้นฐานที่ผู้จ้างคาดหวัง — แต่เนื้อหาว่าต้องรู้ลึกแค่ไหน แผนที่ยังไม่ได้ลงรายละเอียด
 
@@ -84,3 +95,5 @@ Context engineering ไม่ได้แปลว่าต้อง front-load 
 - [[llm-knowledge-bases]]
 - [[ai-engineering-skills-map]]
 - [[evals-and-error-analysis]]
+- [[the-new-software-lifecycle]]
+- [[ai-driven-sdlc]]

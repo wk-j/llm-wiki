@@ -186,6 +186,7 @@ Thai-primary body should read like a Thai developer wrote it, not like an Englis
   - "corrective principle" → `หลักแก้` (not `หลักการแก้ไข`)
   - "war story" → `เรื่องเล่าจากหน้างาน` (not literal translation)
   - "in narrow scope" → `ในงานตรงหน้า` / `ในเรื่องที่ทำอยู่` (not `ในขอบเขตแคบ`)
+  - "tension / open tension(s)" → เลือกตามความหมายจริง เช่น `เรื่องที่ยังตอบไม่ได้`, `จุดที่ยังไม่ลงรอย`, `ข้อขัดแย้ง`, `ข้อแลกเปลี่ยน`, หรือ `สองด้านที่ต้องถือพร้อมกัน` ห้ามใช้ `ความตึง...` เป็นหัวข้อหรือคำสรุปเชิงนามธรรม และห้ามเขียน `tension ที่ควรเก็บ`
 - **Don't use borrowed English words as Thai verbs.** Keep the loaned noun; use a Thai verb around it. Not `reward การตีความ` — say `ได้คะแนนมากกว่าถ้าเดาเลย`. Not `trigger event` — say `กระตุ้น/ทำให้เกิด event`. Not `handle error` in prose — say `จัดการ error`.
 - **Use classifiers with English nouns** where natural: `ตัว Agent`, `ตัว model`, `ตัว endpoint` when referring to the thing itself.
 - **Use Thai connectors that developers actually speak**: `พอ...ก็`, `กลับ...`, `เลย...`, `แต่...`, `ตรงนี้คือ`, `ตรงที่` — avoid formal relativization (`ซึ่ง`, `ที่ซึ่ง`) when a spoken connector fits.

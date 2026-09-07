@@ -3,8 +3,8 @@ title: Just-in-Time Software
 type: concept
 tags: [ai, software-engineering, developer-tools, automation]
 created: 2026-05-23
-updated: 2026-05-27
-sources: [software-writing-software-gone-right.md, software-after-software.md]
+updated: 2026-09-07
+sources: [software-writing-software-gone-right.md, software-after-software.md, dhh-strategies-programming-with-ai-agents-lex-clips.md]
 ---
 
 # Just-in-Time Software / ซอฟต์แวร์ที่เกิดตอนต้องใช้
@@ -60,6 +60,14 @@ sources: [software-writing-software-gone-right.md, software-after-software.md]
 
 มันไม่เหมาะกับ core business logic ที่ต้องมี design, test, review, และ ownership ชัดเจน ตรงนั้นยังต้องใช้ [[agentic-engineering|agentic engineering]] หรือ [[harness-engineering|harness engineering]] ที่หนักกว่า
 
+## ระดับเครื่อง: พูดแล้วให้ระบบงอกของขึ้นมา
+
+[[dhh|DHH]] ยกตัวอย่างที่อยู่ระหว่างเดโมของ TJ กับ claim ระดับอุตสาหกรรมของ Ball ใน [[dhh-strategies-programming-with-ai-agents-lex-clips|บทสัมภาษณ์กับ Lex Fridman]] เขาบอกว่าคนควรพูดกับเครื่องได้ว่าอยากได้ panel ดูราคาหุ้น ขอ Apple กับ Dell แล้ว agent ไปทำมาให้ในระบบปฏิบัติการนั้นเลย
+
+ขอบเขตนี้เข้าเกณฑ์ของหน้านี้พอดี คือเล็ก ตรวจผลได้ทันที พังแล้วไม่กระทบระบบใหญ่ และผูกกับ preference ส่วนตัว ต่างจากเดโมของ TJ ตรงที่ตัวจุดคือเสียง ([[voice-first-prompting]]) และผลลัพธ์เป็น UI บนเครื่อง ไม่ใช่ function ใน editor
+
+**ได้อะไร:** just-in-time software ไม่จำกัดอยู่ใน editor ถ้าเครื่องเปิดให้ agent แก้ config และเขียนของเพิ่มได้ ([[omarchy|Omarchy]], [[malleable-tools]]) ผู้ใช้ก็สั่งให้ระบบงอกเครื่องมือเล็ก ๆ ขึ้นมาได้เอง ยังเป็นภาพที่ผู้พูดเสนอ ไม่ใช่ของที่มีอยู่แล้ว
+
 ## ความต่างจาก Just-in-Time Context
 
 [[just-in-time-context|Just-in-Time Context]] คือการส่ง context ให้ agent ตอนจำเป็น เพื่อลด token และ attention load.
@@ -89,3 +97,6 @@ TJ DeVries ทำ demo ในระดับ Neovim function (small scope) — B
 - [[software-after-software]]
 - [[value-migration-from-code]]
 - [[agent-native-infrastructure]]
+- [[omarchy]]
+- [[voice-first-prompting]]
+- [[dhh-strategies-programming-with-ai-agents-lex-clips]]

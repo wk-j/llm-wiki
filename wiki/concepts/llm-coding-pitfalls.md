@@ -3,8 +3,8 @@ title: LLM Coding Pitfalls
 type: concept
 tags: [llm, coding, claude-code, workflow, meta]
 created: 2026-04-14
-updated: 2026-05-29
-sources: [forrestchangandrej-karpathy-skills A single CLAUDE.md file to improve Claude Code behavior, derived from Andrej Karpathy's observations on LLM coding pitfalls..md, llm-era-computer-engineering-nattee.md, improved-15-llms-harness-changed.md, Piyalitt Ittichaiwong - Opus 4.8 Launch Recap.md]
+updated: 2026-09-07
+sources: [dhh-strategies-programming-with-ai-agents-lex-clips.md, forrestchangandrej-karpathy-skills A single CLAUDE.md file to improve Claude Code behavior, derived from Andrej Karpathy's observations on LLM coding pitfalls..md, llm-era-computer-engineering-nattee.md, improved-15-llms-harness-changed.md, Piyalitt Ittichaiwong - Opus 4.8 Launch Recap.md]
 ---
 
 # LLM Coding Pitfalls / กับดักของ LLM ตอนเขียนโค้ด
@@ -38,6 +38,16 @@ LLM ถูกเทรนบนโค้ดที่เต็มไปด้ว�
 
 ข้อแลกเปลี่ยนคือแนวทางเหล่านี้จะผลักดันให้โมเดลทำงานอย่างระมัดระวังมากกว่ารวดเร็ว ซึ่งอาจไม่จำเป็นสำหรับ task เล็กๆ
 
+## เรื่องเล่าจากหน้างาน — Overcomplication ที่ agent reviewer ไม่จับ (DHH, 2026-09)
+
+[[dhh|DHH]] เล่าใน [[dhh-strategies-programming-with-ai-agents-lex-clips|บทสัมภาษณ์กับ Lex Fridman]] ว่ากับดัก **Overcomplication** ยังอยู่ครบในปี 2026 และมีรายละเอียดที่เพิ่มจากตารางข้างบน
+
+รูปแบบที่เขาเจอซ้ำ ๆ คือ agent ทำเสร็จบอกว่าเสร็จ ส่ง agent อีกตัวมา review ตัว reviewer ก็บอกว่าผ่าน จนเขาอ่านแล้วทักว่าดูซับซ้อนเกินไปหน่อย agent จึงยอมรับและตัดเหลือครึ่งเดียว จุดสำคัญคือ **reviewer ที่เป็น agent ปล่อยผ่าน** เพราะความซับซ้อนเกินจำเป็นไม่ใช่ความผิด มัน compile ผ่าน test ผ่าน และอ่านดูสมเหตุสมผล ดู [[make-it-simpler|Make It Simpler]]
+
+อีกเรื่องที่เขาเจอคือสไตล์ที่เขาเรียกว่า early exit ใน bash คือ agent ชอบเขียน precondition แล้ว exit ต่อกันเป็นชั้น ๆ แทนที่จะกระจายเงื่อนไขให้ครบ ที่น่าสังเกตคือเขาเขียนข้อห้ามนี้ไว้ใน `AGENTS.md` แล้ว แต่ยังต้องเตือนซ้ำทุกครั้งที่จับได้ ตรงนี้เป็นหลักฐานภาคสนามว่าไฟล์คำสั่งช่วยได้ไม่เท่ากับที่หวังในทุกกรณี ([[claude-md]], [[instruction-budget]])
+
+เขายังบอกว่ามุกเก่าที่ต้องสั่งว่า "อย่าทำผิด" ไม่จำเป็นแล้ว เพราะ harness รัน test เองและป้อน feedback กลับ ส่วนคำสั่งที่ยังต้องพูดคือ "ทำให้ง่ายกว่านี้" ข้อนี้เป็นประสบการณ์ของเขา ไม่ได้ลบเรื่อง [[model-honesty|overclaiming progress]] ที่หน้านี้เก็บไว้ ยังเป็นสองข้อสังเกตที่ต้องอ่านคู่กัน
+
 ## เรื่องเล่าจากหน้างาน — บั๊ก Authorization (Nattee, 2026-04-17)
 
 เคสจริงจาก Ep. 2 ของ [[nattee-niparnan|Nattee Niparnan]] ขณะทำ PoC Web App เป็นภาพที่ชัดเจนว่ากับดักหลายตัวเมื่อประกอบกันแล้วอันตรายเพียงใด
@@ -66,3 +76,5 @@ LLM ถูกเทรนบนโค้ดที่เต็มไปด้ว�
 - [[edit-tool-formats]]
 - [[hashline]]
 - [[improved-15-llms-harness-changed]]
+- [[make-it-simpler]]
+- [[dhh-strategies-programming-with-ai-agents-lex-clips]]

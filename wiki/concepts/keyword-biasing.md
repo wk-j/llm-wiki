@@ -40,9 +40,20 @@ ASR model อาจฟังประโยคทั่วไปได้ดี 
 
 ตรงนี้ทำให้ keyword biasing เป็นทั้ง model feature และ pipeline design problem ถ้า chunk ยาวหลายชั่วโมง ต้องมีวิธีส่งคำเฉพาะให้ถูกจังหวะ
 
+## ทำที่ pipeline แทนที่จะทำที่ model
+
+[[lex-fridman|Lex Fridman]] เล่า workflow ที่ทำเรื่องเดียวกันแต่คนละที่ใน [[dhh-strategies-programming-with-ai-agents-lex-clips|บทสัมภาษณ์กับ DHH]] เขาถอดเสียงด้วย [[elevenlabs|ElevenLabs]] ก่อน แล้วให้ LLM แก้คำเฉพาะทีหลัง โดยป้อน dictionary คำของเขาและรายการชื่อไฟล์กับชื่อ function ที่ agent กวาดมาจาก code base
+
+เทียบกัน biasing ที่ตัว model แม่นกว่าเพราะช่วยตอนเลือกคำ ส่วนการแก้ทีหลังยืดหยุ่นกว่าเพราะเปลี่ยนรายการคำได้ทันทีและไม่ผูกกับ ASR ตัวใด แต่ต้องยอมรอเพิ่มและอาจแก้ไม่ทันเมื่อคำที่ผิดฟังดูเข้าท่าอยู่แล้ว
+
+**ได้อะไร:** keyword biasing เป็นปัญหาระดับ pipeline design จริง ๆ ไม่ใช่ช่องติ๊กใน spec ของ model ดู [[voice-first-prompting]]
+
 ## See also
 
 - [[automatic-speech-recognition]]
 - [[granite-speech]]
 - [[non-autoregressive-asr]]
 - [[granite-4-1-fastest-asr]]
+- [[voice-first-prompting]]
+- [[elevenlabs]]
+- [[dhh-strategies-programming-with-ai-agents-lex-clips]]

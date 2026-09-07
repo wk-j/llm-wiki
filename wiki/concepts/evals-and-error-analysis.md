@@ -3,8 +3,8 @@ title: Evals and Error Analysis
 type: concept
 tags: [ai, evals, testing, reliability, llm]
 created: 2026-08-15
-updated: 2026-08-15
-sources: [andrew-ng-ai-engineering-skills-map.md]
+updated: 2026-08-16
+sources: [andrew-ng-ai-engineering-skills-map.md, the-new-software-lifecycle.md]
 ---
 
 # Evals and Error Analysis / วัดผลกับไล่หาสาเหตุที่ผิด
@@ -57,6 +57,19 @@ Ng ใช้คำว่า **loop** ไม่ใช่ step วงรอบท�
 
 **ผลคือ:** eval ไม่ได้มีไว้ให้คนอ่านรายงานอย่างเดียว มันเป็นสิ่งที่ทำให้ปล่อย agent ทำงานยาว ๆ ได้อย่างมีเหตุผล
 
+## ตรวจทั้งคำตอบและเส้นทางที่ใช้
+
+[[the-new-software-lifecycle|Addy Osmani]] แยก eval อีกแกนที่ช่วยจับงาน “หน้าตาถูกแต่ทำผิดวิธี”:
+
+- **Output evaluation** ถามว่าผลสุดท้ายตรง rubric หรือไม่
+- **Trajectory evaluation** ถามว่า agent เรียก tool, ขอ permission และรัน check ตามขั้นที่ควรหรือไม่
+
+ตัวอย่างเช่น agent แก้ bug แล้ว test ผ่านอาจผ่าน output eval แต่ถ้ามันลบ regression test ทิ้งเพื่อให้เขียว trajectory eval ต้องจับได้ ตรงนี้ต่อกับ [[behavioral-verifier]] และหลัก maker/checker split: อย่าให้ผลลัพธ์สุดท้ายที่ดูดีลบหลักฐานว่าระหว่างทาง agent ข้าม safety gate
+
+อย่างไรก็ดี trajectory eval ไม่ควรกลายเป็นการบังคับ agent ให้เดินเส้นเดียวทุกครั้ง เส้นทางอาจต่างกันแต่ยังปลอดภัยและถูกต้องได้ Rubric จึงควรตรวจ invariant สำคัญ ไม่ใช่ micromanage ทุก tool call
+
+**ได้อะไร:** “ถูก” หมายถึงทั้งได้ของที่ต้องการและมีหลักฐานว่าไม่ได้แลกความถูกต้องหรือความปลอดภัยทิ้งระหว่างทาง
+
 ## ข้อควรระวัง
 
 - eval ที่วัดง่ายไม่ได้แปลว่าวัดตรงกับสิ่งที่ผู้ใช้แคร์ ดู [[quality-proxy-collapse]] เรื่อง proxy คุณภาพที่พังโดยยังดูดีอยู่
@@ -76,3 +89,5 @@ Ng ใช้คำว่า **loop** ไม่ใช่ step วงรอบท�
 - [[quality-proxy-collapse]]
 - [[facts-first]]
 - [[property-based-testing]]
+- [[the-new-software-lifecycle]]
+- [[ai-driven-sdlc]]

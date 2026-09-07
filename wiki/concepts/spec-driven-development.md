@@ -3,8 +3,8 @@ title: Spec-Driven Development (SDD)
 type: concept
 tags: [ai-coding, sdd, specs, workflow, methodology]
 created: 2026-06-11
-updated: 2026-08-15
-sources: ["Stop Writing Specs. Start Writing Facts. The Entire SDD Movement Is Already Obsolete..md", code-isnt-free-mario-zechner-hard-truths-coding-ai.md, andrew-ng-ai-engineering-skills-map.md]
+updated: 2026-08-16
+sources: ["Stop Writing Specs. Start Writing Facts. The Entire SDD Movement Is Already Obsolete..md", code-isnt-free-mario-zechner-hard-truths-coding-ai.md, andrew-ng-ai-engineering-skills-map.md, the-new-software-lifecycle.md]
 ---
 
 # Spec-Driven Development (SDD) / พัฒนาซอฟต์แวร์โดยให้สเปกนำ
@@ -74,6 +74,14 @@ Ng ไม่ได้เถียงกลไก non-determinism เขาแค
 
 **ยังเปิดอยู่:** ถ้า agent ทำตาม spec ได้ดีขึ้นจริงตามที่ Ng ว่า คำวิจารณ์เรื่อง interpreter เปลี่ยนจะอ่อนลงไหม หรือมันจะกลายเป็นแค่การเลื่อนปัญหาไปอยู่ที่ spec ที่ยาวขึ้นและตรวจยากขึ้น wiki ยังไม่มีหลักฐานเปรียบเทียบที่ตัดสินได้
 
+## Addy: spec เป็นคอขวดใหม่ แต่ verification ต้องตามมาด้วย
+
+[[the-new-software-lifecycle|Addy Osmani]] อยู่ใกล้ฝั่ง Ng ตรงที่บอกว่า implementation ยุบจากสัปดาห์เหลือชั่วโมงแล้ว specification quality จึงกลายเป็นคอขวด แต่กรอบ [[ai-driven-sdlc|AI-driven SDLC]] ของเขาไม่ได้หยุดที่ prose spec. ถัดจาก implementation มีทั้ง output eval และ trajectory eval เพื่อเช็กผลกับเส้นทางทำงาน
+
+มุมนี้ทำให้ความขัดแย้งแคบลงเล็กน้อย: spec อาจเป็น guide ที่สำคัญขึ้นโดยไม่ต้องเป็น source of truth เพียงชิ้นเดียว Team ยังต้องแปลง constraint สำคัญเป็น test, schema, policy หรือ verifier ที่เครื่องบังคับได้
+
+**ผลคือ:** “spec สำคัญขึ้น” ไม่เท่ากับ “spec พอแล้ว” ความเร็วของ agent ยิ่งทำให้ต้องผูก intent เข้ากับหลักฐานที่รันซ้ำได้
+
 ## โยงกับหน้าอื่น
 
 - [[specs-to-code]] — กับดักเวอร์ชัน Matt Pocock: เขียน spec แล้วไม่ดูโค้ดเลย — SDD แบบสุดโต่งคือสิ่งเดียวกัน คำวิจารณ์สองสายนี้มาบรรจบกัน
@@ -93,5 +101,7 @@ Ng ไม่ได้เถียงกลไก non-determinism เขาแค
 - [[vibe-coding]]
 - [[code-isnt-free-mario-zechner-hard-truths-coding-ai]]
 - [[ai-engineering-skills-map]]
+- [[the-new-software-lifecycle]]
+- [[ai-driven-sdlc]]
 - [[shaping-the-build]]
 - [[andrew-ng]]

@@ -3,8 +3,8 @@ title: Malleable Tools
 type: concept
 tags: [ux, development, flexibility, philosophy]
 created: 2026-04-28
-updated: 2026-05-23
-sources: [mario-zechner-pi-agent.md, building-pi-world-of-slop.md, software-writing-software-gone-right.md]
+updated: 2026-09-07
+sources: [dhh-strategies-programming-with-ai-agents-lex-clips.md, mario-zechner-pi-agent.md, building-pi-world-of-slop.md, software-writing-software-gone-right.md]
 ---
 
 # Malleable Tools / เครื่องมือที่ดัดแปลงได้
@@ -32,9 +32,20 @@ sources: [mario-zechner-pi-agent.md, building-pi-world-of-slop.md, software-writ
 
 **ได้อะไร:** malleability ไม่จำเป็นต้องเริ่มจากระบบใหญ่เสมอไป แค่ function เล็ก ๆ ที่ generate/cache/improve ได้ ก็ลด friction รายวันได้แล้ว
 
+## ระดับระบบปฏิบัติการ: ภาพที่ DHH อยากเห็น
+
+[[dhh|DHH]] ขยายแนวคิดนี้ขึ้นไปอีกชั้นใน [[dhh-strategies-programming-with-ai-agents-lex-clips|บทสัมภาษณ์กับ Lex Fridman]] เขาบอกว่า [[omarchy|Omarchy]] รุ่นที่สี่ดีในฐานะ **malleable operating system** เพราะเพิ่มความสามารถได้ด้วยการคุยกับ agent ไม่ใช่รอ upstream ปล่อย feature
+
+ขั้นต่อไปที่เขาอยากเห็นคือรวมเสียงเข้ามาทั้ง input และ output คือพูดว่าอยากได้ panel ดูราคาหุ้น ขอ Apple กับ Dell แล้ว agent ไปทำมาให้ หน้าตาของเครื่องเปลี่ยนตามที่สั่ง เขาเทียบกับภาพ Jarvis ใน Iron Man และกับ AI สาย live gaming model ที่สร้างเฟรมถัดไปขึ้นมาสด ๆ แล้วเล่นได้จริง ([[world-models]])
+
+**ได้อะไร:** malleability ไต่จาก function เดียว ([[luaai-nvim|luai.nvim]]) ขึ้นไปถึง harness แล้วไปถึงทั้งเครื่อง ข้อควรระวังคือคลิปไม่ได้พูดถึง permission, ความปลอดภัย, การย้อนกลับเมื่อ agent แก้เครื่องพลาด หรือความคงเส้นคงวาของ UI ที่เปลี่ยนได้ทุกวัน ซึ่งเป็นคำถามที่ยิ่งใหญ่ขึ้นตามขอบเขตที่ยอมให้ agent แก้
+
 ## ดูเพิ่ม
 
 - [[pi-agent]]
 - [[harness-engineering]]
 - [[luaai-nvim]]
 - [[just-in-time-software]]
+- [[omarchy]]
+- [[omakase-software]]
+- [[dhh-strategies-programming-with-ai-agents-lex-clips]]

@@ -3,7 +3,7 @@ title: Open-weight Models
 type: concept
 tags: [ai, open-source, deepseek, philosophy, deployment]
 created: 2026-04-27
-updated: 2026-08-16
+updated: 2026-08-25
 sources: [deepseek-wikipedia.md, Mellum2 Goes Open Source A Fast Model for AI Workflows  The JetBrains AI Blog.md, chinas-models-no-longer-need-western-hardware.md, code-isnt-free-mario-zechner-hard-truths-coding-ai.md, framework-frontier-ai-dawning-new-age.md, kimi-k3-explained-prompt-engineering.md, claude-text-watermarking-squintist.md]
 ---
 
@@ -48,7 +48,7 @@ sources: [deepseek-wikipedia.md, Mellum2 Goes Open Source A Fast Model for AI Wo
 
 หลักนี้ดูเท่าเทียม แต่บังคับใช้ไม่เหมือนกัน. Closed API มีเจ้าของคุม release และ patch หลังพบ vulnerability. Open-weight model ถูกดาวน์โหลด, fork, fine-tune และ deploy นอกเขตอำนาจได้. คำถามจึงไม่ใช่แค่ว่าต้อง test หรือไม่ แต่ test ที่จุดไหน—ก่อนปล่อย weights, ก่อน deploy ระบบใหญ่ หรือทั้งสองจุด.
 
-อีกความตึงคือ threshold cliff. ถ้าข้ามเส้นแล้ว compliance cost กระโดด ผู้พัฒนาอาจไม่เปิด weights, ลดการเผยข้อมูล หรือปรับ model ให้อยู่ใต้เกณฑ์. กติกาที่ตั้งใจปกป้อง open ecosystem อาจทำให้ open model frontier น้อยลงได้.
+โจทย์อีกข้อคือ threshold cliff. ถ้าข้ามเส้นแล้ว compliance cost กระโดด ผู้พัฒนาอาจไม่เปิด weights, ลดการเผยข้อมูล หรือปรับ model ให้อยู่ใต้เกณฑ์. กติกาที่ตั้งใจปกป้อง open ecosystem อาจทำให้ open model frontier น้อยลงได้.
 
 **ผลคือ:** risk-tiering ตาม capability เป็นจุดเริ่มที่ดี แต่ governance ต้องยอมรับว่า weights ที่แพร่แล้วเรียกคืนไม่ได้เหมือนปิด API.
 

@@ -3,8 +3,8 @@ title: Code is Free
 type: concept
 tags: [ai, software-engineering, economy, agents]
 created: 2026-04-28
-updated: 2026-08-13
-sources: [ryan-lopopolo-harness-engineering.md, software-after-software.md, how-ai-became-more-expensive-than-workers-it-replaced.md, code-isnt-free-mario-zechner-hard-truths-coding-ai.md, i-was-replaced-by-ai-typecraft.md]
+updated: 2026-08-25
+sources: [ryan-lopopolo-harness-engineering.md, software-after-software.md, how-ai-became-more-expensive-than-workers-it-replaced.md, code-isnt-free-mario-zechner-hard-truths-coding-ai.md, i-was-replaced-by-ai-typecraft.md, state-of-technology-and-joy-of-making-phoomparin-mano.md]
 ---
 
 # Code is Free / โค้ดไม่มีต้นทุนการผลิต
@@ -29,7 +29,7 @@ sources: [ryan-lopopolo-harness-engineering.md, software-after-software.md, how-
 
 จุดที่เขายอมรับว่าคุ้มคือ **ใช้โค้ดราคาถูกเป็น probe**. ให้ agent ลองหลายทางเพื่อสำรวจ solution space แล้วใช้ผลลัพธ์เพื่อสร้างความเข้าใจ. แต่ code จาก exploration ไม่ควรถูกนับเป็น asset ที่พร้อม merge โดยอัตโนมัติ.
 
-**สรุป tension:** Lopopolo/Ball ชี้ว่า implementation ไม่ใช่คอขวดเดิมแล้ว. Mario เตือนว่า ownership, comprehension, และ maintenance ยังไม่ฟรี.
+**สรุปจุดที่ยังไม่ลงรอย:** Lopopolo/Ball ชี้ว่า implementation ไม่ใช่คอขวดเดิมแล้ว. Mario เตือนว่า ownership, comprehension, และ maintenance ยังไม่ฟรี.
 
 ## Typecraft's caveat: creative ownership ก็ไม่ฟรี
 
@@ -37,7 +37,11 @@ sources: [ryan-lopopolo-harness-engineering.md, software-after-software.md, how-
 
 นี่ไม่หักล้างว่า implementation ถูกลง. มันบอกว่าการผลิต code กับประสบการณ์ของคนที่ต้องเข้าใจและภูมิใจกับระบบเป็นคนละ metric. ถ้าบริษัทเอาความเร็วใหม่ไปเพิ่ม quota จนคนไม่มีเวลาสร้างความเห็นของตัวเอง จะเกิด [[ai-work-intensification|AI Work Intensification]] และ [[cognitive-surrender|Cognitive Surrender]] ได้.
 
-**สรุป tension:** code production อาจถูกมาก แต่ creative agency, comprehension และ willingness to own the result ยังขาดแคลน.
+**สรุปจุดที่ยังไม่ลงรอย:** code production อาจถูกมาก แต่ creative agency, comprehension และ willingness to own the result ยังขาดแคลน.
+
+[[phoomparin-mano|Phoomparin Mano]] ย้ำ caveat เดียวกันจากผู้ใช้ agent workflow ที่บอกว่าตัวเอง optimize กระบวนการได้ดีแล้ว. ใน [[state-of-technology-and-joy-of-making-phoomparin-mano|State of Technology and the Joy of Making]] ปัญหาไม่ใช่ agent ทำงานไม่สำเร็จ แต่ความสำเร็จนั้นทำให้เขารู้สึกห่างจากสิ่งที่สร้าง. เขาเสนอ creative coding เป็นพื้นที่ที่ process และ micro-decision ยังมีค่าในตัวเอง.
+
+**สรุปเพิ่ม:** ความขาดแคลนไม่ได้มีแค่คน review code. [[creative-ownership|Creative Ownership]] และพื้นที่ฝึก mastery ก็เป็น resource ที่ workflow ราคาถูกใช้จนหมดได้.
 
 ## ผลกระทบต่อการทำงาน
 1. **Parallel Implementation**: แทนที่จะเลือกวิธีที่ดีที่สุดเพียงวิธีเดียว เราสามารถสั่ง Agent 5 ตัวให้เขียนโค้ด 5 แบบพร้อมกัน แล้วเลือกแบบที่ผ่าน test และดีที่สุดมาใช้งาน
@@ -77,3 +81,5 @@ Ball ขยายต่อไปอีกขั้น: ถ้า code abundance 
 - [[i-was-replaced-by-ai-typecraft]]
 - [[ai-work-intensification]]
 - [[typecraft]]
+- [[state-of-technology-and-joy-of-making-phoomparin-mano]]
+- [[creative-ownership]]

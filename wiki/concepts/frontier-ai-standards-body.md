@@ -3,7 +3,7 @@ title: Frontier AI Standards Body
 type: concept
 tags: [ai, governance, standards, safety, evaluation, policy]
 created: 2026-07-15
-updated: 2026-07-15
+updated: 2026-08-25
 sources: [framework-frontier-ai-dawning-new-age.md]
 ---
 
@@ -59,7 +59,7 @@ benchmark อาจ refresh ทุกไตรมาส ชุดที่อิ
 
 การยกเว้น non-frontier model ช่วย startup และ academia แต่ threshold อาจสร้าง cliff: พอ model ข้ามเส้น compliance cost กระโดดขึ้นทันที. วิธีวัด capability จึงมีผลต่อการแข่งขันและการเปิดเผย model โดยตรง
 
-## ความตึงที่ต้องเก็บไว้
+## จุดขัดแย้งที่ยังแก้ไม่ตก
 
 - **Expertise vs capture:** รับเงินอุตสาหกรรมช่วยให้มีคน/compute พอ แต่ผู้ถูกกำกับอาจมีอิทธิพลเหนือผู้กำกับ
 - **Dynamic tests vs predictability:** หมุน test กัน overfit แต่ Lab ต้องรู้กติกาพอจะวางแผน release และอุทธรณ์ได้

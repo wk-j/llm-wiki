@@ -3,8 +3,8 @@ title: Developer Balance
 type: concept
 tags: [ai, agents, developer-experience, attention, burnout, health, productivity]
 created: 2026-06-11
-updated: 2026-08-13
-sources: [How to Keep Shipping When You Walk Away from Your Desk — Zack Proser, WorkOS.md, techsauce-ai-brain-fry.md, code-isnt-free-mario-zechner-hard-truths-coding-ai.md, i-was-replaced-by-ai-typecraft.md]
+updated: 2026-08-25
+sources: [How to Keep Shipping When You Walk Away from Your Desk — Zack Proser, WorkOS.md, techsauce-ai-brain-fry.md, code-isnt-free-mario-zechner-hard-truths-coding-ai.md, i-was-replaced-by-ai-typecraft.md, state-of-technology-and-joy-of-making-phoomparin-mano.md]
 ---
 
 # Developer Balance / สมดุลของนักพัฒนาในยุค Agent
@@ -95,6 +95,14 @@ Remote control ทำให้คนเริ่มงานที่โต๊�
 
 **ผลคือ:** productivity gain ที่ยั่งยืนต้องตกลงด้วยว่าจะไม่เอา capacity ใหม่ไปเติม WIP จนเต็มทุกครั้ง.
 
+## Balance ต้องเหลือพื้นที่ให้ความหมายด้วย
+
+[[phoomparin-mano|Phoomparin Mano]] เล่าใน [[state-of-technology-and-joy-of-making-phoomparin-mano|State of Technology and the Joy of Making]] ว่าต่อให้ agent workflow ทำงานดีและไม่ได้ยาก เขายังรู้สึกห่างจากงานมากขึ้น. นี่เพิ่มมิติให้ balance: คนอาจไม่ burnout, review ทัน และ ship ได้ แต่ยังเสีย [[creative-ownership|creative ownership]] ถ้าส่วนที่ให้ความสนุกกับความภูมิใจถูก optimize ออกหมด.
+
+การพักหรือจำกัด WIP แก้ attention ได้ แต่ไม่พอถ้า boundary การ delegate ยังย้ายทุก micro-decision ไปให้ agent. งานบางชิ้นจึงควรเก็บ productive friction ที่สร้าง taste, mastery หรือความสัมพันธ์กับสิ่งที่ทำไว้ แม้จะช้ากว่า.
+
+**ผลคือ:** sustainable workflow ต้องรักษาทั้งพลังตัดสินใจและเหตุผลที่คนยังอยากทำงานนั้นต่อ.
+
 ## Mario's warning: async ไม่ควรกินหัว
 
 [[mario-zechner|Mario Zechner]] เล่าใน [[code-isnt-free-mario-zechner-hard-truths-coding-ai|Code Isn't Free]] ว่า async agent มีประโยชน์มากสำหรับ review, research, และ issue preprocessing. แต่ถ้าเปิด agent เยอะเกินไป context switching จะกลายเป็นตัวฆ่า. เขาเคยทำวันเดียวไล่ได้ราว 30 issue ใน [[pi-agent|pi]] แต่ทำได้แค่เดือนละหนึ่งหรือสองครั้ง เพราะหลังจากนั้นสมองหมดแรง.
@@ -129,3 +137,5 @@ Remote control ทำให้คนเริ่มงานที่โต๊�
 - [[ai-work-intensification]]
 - [[typecraft]]
 - [[planetscale]]
+- [[state-of-technology-and-joy-of-making-phoomparin-mano]]
+- [[creative-ownership]]

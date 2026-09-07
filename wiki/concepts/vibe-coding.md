@@ -3,8 +3,8 @@ title: Vibe Coding
 type: concept
 tags: [ai, coding, automation, karpathy]
 created: 2026-04-30
-updated: 2026-08-15
-sources: [Andrej Karpathy From Vibe Coding to Agentic Engineering.md, andrew-ng-ai-engineering-skills-map.md]
+updated: 2026-08-16
+sources: [Andrej Karpathy From Vibe Coding to Agentic Engineering.md, andrew-ng-ai-engineering-skills-map.md, the-new-software-lifecycle.md]
 ---
 
 # Vibe Coding / การเขียนโปรแกรมตามอารมณ์
@@ -41,6 +41,14 @@ Ng เลยจัด software engineering fundamentals เป็นทักษ
 
 **ผลคือ:** vibe coding ไม่ได้แย่ในตัวมันเอง สิ่งที่ทำให้ผลลัพธ์ต่างกันคือคนสั่งรู้หรือไม่รู้ว่ามี tradeoff อะไรวางอยู่บนโต๊ะ
 
+## เส้นแบ่งอยู่ที่หลักฐานและอายุของ code
+
+[[the-new-software-lifecycle|Addy Osmani]] วาง vibe coding กับ [[agentic-engineering]] ไว้บน spectrum เดียวกัน เครื่องมืออาจเป็นตัวเดียวกัน แต่ quality bar ต่างตาม stake. Prototype ที่ทิ้งได้อาจใช้ “ลองแล้วดู” ส่วน production system ต้องมี spec, automated test, output/trajectory eval และ CI/CD gate
+
+บทความยังเสนอภาพต้นทุนว่า vibe coding เริ่มถูก แต่ถ้า code ต้องอยู่ยาว token burn, maintenance และ security cleanup อาจทำให้แพงกว่าในภายหลัง ตัวเลข 3–10 เท่าต่อ feature เป็นภาพประกอบ ไม่ใช่ benchmark; ประเด็นที่ใช้จริงคือให้นับ total cost of ownership และ rework ไม่ใช่ดูแค่เวลาไปถึง demo แรก
+
+**ได้อะไร:** เลือกวิธีตามอายุของ code ความเสียหายเมื่อพัง และหลักฐานที่ตรวจซ้ำได้ ไม่ต้องตั้งกฎว่า vibe coding ดีหรือแย่กับทุกงาน
+
 ## ดูเพิ่ม
 - [[agentic-engineering]]
 - [[software-3-0]]
@@ -49,3 +57,5 @@ Ng เลยจัด software engineering fundamentals เป็นทักษ
 - [[andrew-ng]]
 - [[vibecoded-slop]] — เมื่อ vibe coding ขาดการตรวจสอบคุณภาพ
 - [[matt-pocock-software-fundamentals]] — มุมมองที่เน้นย้ำถึงความสำคัญของพื้นฐานซอฟต์แวร์ในยุค AI
+- [[the-new-software-lifecycle]]
+- [[ai-driven-sdlc]]

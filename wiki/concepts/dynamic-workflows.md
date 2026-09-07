@@ -3,7 +3,7 @@ title: Dynamic Workflows
 type: concept
 tags: [ai, claude-code, agents, subagents, orchestration, large-scale-changes]
 created: 2026-05-29
-updated: 2026-07-09
+updated: 2026-08-25
 sources: [Piyalitt Ittichaiwong - Opus 4.8 Launch Recap.md, aom-fable-elysia-2-audit.md, zoran-horvat-claude-no-planning-engine.md, planning-mode-dangerous-illusion.md, bun-in-rust.md]
 ---
 
@@ -54,7 +54,7 @@ Claude Code + Opus 4.8 **migrate codebase ที่มี code หลายแ�
 - **[[adversarial-review-loops]]** — เคส Bun แยก implementer/reviewer/fixer อย่างเป็นระบบ. นี่คือ review architecture ที่ทำให้ dynamic workflow ไม่ใช่แค่หลาย agent เขียนโค้ดพร้อมกัน
 - **[[deep-agent-audit]]** — Fable ใน [[aom-fable-elysia-2-audit]] เป็นญาติของ dynamic workflows ฝั่ง review: ไม่ได้ self-plan เพื่อแก้ codebase แต่แตก agent จำนวนมากเพื่อ audit codebase แล้วส่ง report กลับมา. คำถามเดียวกันยังอยู่: subagent scale มีค่าก็ต่อเมื่อ output ถูก verify และจัดลำดับให้คนใช้ judgement ได้จริง
 
-## Open tension: self-plan หรือ prompt scaffold?
+## คำถามที่ยังตอบไม่ได้: self-plan หรือ prompt scaffold?
 
 [[zoran-horvat|Zoran Horvat]] เสนอ counterpoint ใน [[zoran-horvat-claude-no-planning-engine]] และ [[planning-mode-dangerous-illusion]] ว่า Plan mode ของ Claude ไม่มี planning engine จริง แต่เป็น prompt/harness strategy ที่ให้ LLM เขียนแผนก่อน implement. ถ้ามองแบบนี้ คำว่า "self-plan" ใน dynamic workflows อาจหมายถึง harness-guided planning draft ไม่ใช่ symbolic planner.
 

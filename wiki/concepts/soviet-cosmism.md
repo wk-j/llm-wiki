@@ -3,7 +3,7 @@ title: Soviet Cosmism
 type: concept
 tags: [ui, design, retro-futurism, constructivism, soviet, space, philosophy]
 created: 2026-04-13
-updated: 2026-04-23
+updated: 2026-08-25
 sources: [Soviet Cosmism UI style.md, Soviet Cosmism philosophy.md]
 ---
 
@@ -104,7 +104,7 @@ Soviet Cosmism (Русский Космизм) เกิดขึ้นในช
 
 ส่วนประกอบหลักห้าอย่าง: Telemetry Panel (การแสดงค่าเครื่องมือวัดพร้อมแถบเติม), Orbital Clock (SVG พร้อมวงแหวนหมุน), Star Field Canvas (parallax สามชั้น), Constructivist Header (เอียงแนวทแยงพร้อมสัญลักษณ์), Data Ticker (เลื่อนคำพูดของ Tsiolkovsky และ telemetry)
 
-## ความตึงเครียดหลัก
+## ข้อขัดแย้งหลัก
 
 พลังของสไตล์นี้มาจากการถือสองความขัดแย้งไว้พร้อมกัน:
 - **ความอบอุ่นแบบยูโทเปีย** — มนุษยชาติรวมเป็นหนึ่ง, เอื้อมมือสู่ดวงดาว, มีเป้าหมายร่วมกัน

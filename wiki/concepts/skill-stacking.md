@@ -3,7 +3,7 @@ title: Skill Stacking
 type: concept
 tags: [ai, skills, generalist, domain-expertise, taste]
 created: 2026-07-21
-updated: 2026-07-21
+updated: 2026-08-25
 sources: [teepagorn-ten-lessons-building-with-ai.md, llm-era-computer-engineering-ep3-nattee.md]
 ---
 
@@ -21,7 +21,7 @@ sources: [teepagorn-ten-lessons-building-with-ai.md, llm-era-computer-engineerin
 
 **ได้อะไร:** skill stack ให้ leverage ตอน “เลือกและเชื่อม” ส่วนความลึกให้ safety ตอน “ตัดสินและตรวจ”
 
-## ความตึงกับ Generalist Moat ที่กำลังหด
+## จุดที่ไม่ลงรอยกับ Generalist Moat ที่กำลังหด
 
 หน้า [[engineering-role-shift|Engineering Role Shift]] เก็บข้อสังเกตของ [[nattee-niparnan|Nattee Niparnan]] ว่าความรู้กว้างระดับพอทำได้อาจเสีย moat เพราะ AI ทำงานผิวกว้างได้เหมือนกัน คนจึงต้องลึกบางด้านเพื่อสร้าง [[eh-gland|ต่อมเอ๊ะ]]
 

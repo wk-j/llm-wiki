@@ -3,7 +3,7 @@ title: Aom Khunpanitchot - Fable Elysia 2 Audit
 type: source
 tags: [ai-coding, code-review, agents, audit, fable, elysia]
 created: 2026-07-02
-updated: 2026-07-02
+updated: 2026-08-25
 sources: []
 url: https://www.facebook.com/AomKhunpanitchot/posts/pfbid02VdEw7C6eAHA4VZDWKc4jUw7Y5xXZ1Vsuhn5M63kp7Q3ThyzVW2ZHRAuJZeYehDn7l
 date_ingested: 2026-07-02
@@ -49,7 +49,7 @@ Aom ยังไม่ได้บอกว่าคนหมดความห�
 
 โพสต์นี้ไม่ได้ลบ claim เดิมที่ว่า benchmark อย่าง [[deepswe|DeepSWE]] และ [[frontierswe|FrontierSWE]] แสดงช่องว่างของ frontier model. มันเพิ่มอีกมุมหนึ่ง: ในงานจริงบางงาน harness + long-running fan-out อาจสร้างผลลัพธ์ที่ benchmark model เดี่ยวไม่สะท้อน.
 
-มี tension ที่ควรเก็บไว้เป็นคำถามเปิด:
+ยังมีคำถามที่ตอบไม่ได้:
 
 - ถ้า Opus 4.8, Fugu Ultra, และ GLM 5.2 ต่างบอกว่า Elysia 2 พร้อม RC แต่ Fable บอกว่ายังไม่พร้อม ใครถูก.
 - ปัญหา 104 ข้อเป็น bug จริงกี่ข้อ, severity สูงกี่ข้อ, และข้อไหนเป็น taste/architecture preference.

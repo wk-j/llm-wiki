@@ -3,7 +3,7 @@ title: Specs-to-Code
 type: concept
 tags: [ai-coding, automation, workflow, hype]
 created: 2026-05-09
-updated: 2026-07-12
+updated: 2026-08-25
 sources: [matt-pocock-software-fundamentals.md, "Stop Writing Specs. Start Writing Facts. The Entire SDD Movement Is Already Obsolete..md", new-skills-v1-1-wayfinder-research-implement-to-spec-to-tickets.md]
 ---
 
@@ -34,7 +34,7 @@ sources: [matt-pocock-software-fundamentals.md, "Stop Writing Specs. Start Writi
 
 ชื่อ `/to-spec` ใน [[new-skills-v1-1-wayfinder-research-implement-to-spec-to-tickets|Skills v1.1]] อาจดูเหมือนพากลับมาหา pattern นี้ แต่ flow ที่ Pocock เสนอมี boundary เพิ่มทั้งสองฝั่ง. ก่อน spec มี grilling/Wayfinder, prototype และ human decisions. หลัง spec มี ticket ต่อ session, TDD, type checking, tests, [[dual-axis-code-review|review สองแกน]] และ commit.
 
-ดังนั้น tension ที่ควรเก็บคือ: Pocock ยังใช้ spec เป็น artifact กลาง แม้เขาวิจารณ์การ generate code แบบไม่ดูไส้ใน. สำหรับเขา ปัญหาไม่ใช่ “มี spec” แต่คือการเชื่อว่า spec ตัด judgement, verification และ ownership ออกจากวงจรได้.
+จุดที่ยังต้องแยกให้ออกคือ Pocock ยังใช้ spec เป็น artifact กลาง แม้เขาวิจารณ์การ generate code แบบไม่ดูไส้ใน. สำหรับเขา ปัญหาไม่ใช่ “มี spec” แต่คือการเชื่อว่า spec ตัด judgement, verification และ ownership ออกจากวงจรได้.
 
 **ผลคือ:** `/to-spec` เป็น handoff ใน engineering lifecycle ไม่ใช่เครื่อง compile prose เป็น code ที่ไว้ใจได้ทันที.
 

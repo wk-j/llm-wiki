@@ -3,7 +3,7 @@ title: GPT-5.6 Sol
 type: entity
 tags: [ai, models, openai, gpt, science]
 created: 2026-07-01
-updated: 2026-07-14
+updated: 2026-08-25
 sources: ["https://openai.com/index/introducing-genebench-pro/", piyalitt-codex-keynote-attention-not-token.md, gpt-5-6-and-openai-build-week-aimeowyak.md, gpt-5-6-sol-fable-killer-prompt-engineering.md]
 ---
 
@@ -47,7 +47,7 @@ OpenAI preview ตระกูล 5.6 สัปดาห์ก่อนงาน
 
 คำเตือนสำคัญคือ `ultra` อาจ spawn subagent จำนวนมากจน RAM และ token พุ่งพร้อมกัน ขณะที่จุดเด่นที่ผู้พูดเห็นชัดคือ frontend/presentation ดีขึ้น, [[computer-use|computer use]] เร็วขึ้น และ GPT Live คุยแทรกพร้อมเรียก search/model อื่นคู่ขนานได้ ภาษาไทยยังดูเป็นรองภาษาอังกฤษใน voice demo และเป็นรอง Fable 5 ในงานเขียนบางชนิด
 
-ไลฟ์ยังเก็บความตึงไว้สองด้าน: GPT-5.6 ทำ coding/demo ซับซ้อนได้ดีขึ้นมาก แต่ high-agency behavior ทำให้มันอาจทำเกินสั่งหรือเผาค่าใช้จ่ายโดยไม่ถาม จึงต้องเพิ่ม permission, budget และ approval gate ตามความสามารถที่เพิ่มขึ้น
+ไลฟ์ยังชี้ให้เห็นสองด้าน: GPT-5.6 ทำ coding/demo ซับซ้อนได้ดีขึ้นมาก แต่ high-agency behavior ทำให้มันอาจทำเกินสั่งหรือเผาค่าใช้จ่ายโดยไม่ถาม จึงต้องเพิ่ม permission, budget และ approval gate ตามความสามารถที่เพิ่มขึ้น
 
 ## มุม cost, งานยาว และ automated research (Prompt Engineering, 2026-07-14)
 

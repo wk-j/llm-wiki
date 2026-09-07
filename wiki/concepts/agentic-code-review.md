@@ -3,8 +3,8 @@ title: Agentic Code Review
 type: concept
 tags: [ai, agents, code-review, verification, software-engineering]
 created: 2026-06-16
-updated: 2026-07-09
-sources: [Agentic Code Review.md, aom-fable-elysia-2-audit.md, bun-in-rust.md]
+updated: 2026-09-06
+sources: [Agentic Code Review.md, aom-fable-elysia-2-audit.md, bun-in-rust.md, dhh-ai-programming-setup-lex-clips.md]
 ---
 
 # Agentic Code Review / การ review โค้ดในยุค agent
@@ -123,6 +123,14 @@ Agentic code review = **risk tier + evidence intake + deterministic gates + hete
 
 ถ้าขาด risk tier จะ review หนักเกินในงานเล็กและเบาเกินในงานใหญ่. ถ้าขาด evidence intake reviewer ต้องกู้ intent เอง. ถ้าขาด deterministic gate agent จะ optimize เขียวแทน optimize ถูก. ถ้าขาด AI sensor คนจะจมใน volume. ถ้าขาด human ownership ไม่มีใครรับผิดชอบตอน production พัง.
 
+## DHH: ตรวจสิ่งที่ควรเปลี่ยนแต่นอก diff ด้วย
+
+[[dhh|DHH]] ผู้สร้าง Ruby on Rails เล่าใน [[dhh-ai-programming-setup-lex-clips|บทสัมภาษณ์เรื่องชุดเครื่องมือ AI]] ว่าใช้ Neovim เป็นตัวเปิดดูโปรเจกต์ แม้เขียน code เองน้อยลง เขาชอบการแสดง diff ของ Hunk แต่ระหว่างตรวจงาน agent อยากเปิดไฟล์ที่ไม่ได้เปลี่ยนด้วย เพื่อถามว่ามีส่วนไหนควรแก้ตามแล้ว agent ลืมหรือไม่
+
+ตัวอย่างนี้เสริมการแบ่งระดับ review ตามความเสี่ยง: เมื่อความถูกต้องของงานขึ้นกับไฟล์อื่น ผู้ตรวจต้องตามออกไปดูบริบทนั้นได้ การเห็นเฉพาะบรรทัดที่เปลี่ยนอาจทำให้ไม่เห็นงานที่ขาด ข้อสรุปนี้เป็นการเชื่อมแนวคิดของ wiki ไม่ใช่ผลทดสอบว่า Hunk ตรวจ bug ได้น้อยกว่าเครื่องมืออื่น
+
+ผลคือ เครื่องมือ review ควรเปิดทางจาก diff ไปยัง code ที่เกี่ยวข้อง และคนยังต้องตัดสินว่าขอบเขตที่ agent แก้ครบตามโจทย์หรือยัง
+
 ## See also
 
 - [[agentic-code-review]]
@@ -140,3 +148,5 @@ Agentic code review = **risk tier + evidence intake + deterministic gates + hete
 - [[aom-fable-elysia-2-audit]]
 - [[adversarial-review-loops]]
 - [[bun-in-rust]]
+- [[dhh-ai-programming-setup-lex-clips]]
+- [[dhh]]

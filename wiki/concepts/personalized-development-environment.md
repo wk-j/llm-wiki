@@ -40,7 +40,7 @@ LLM ลด cost ตรงนี้ โดยเฉพาะงานที่ข
 
 TJ เสนอไอเดีย `dot prompts` แบบกึ่งเล่นกึ่งจริง: แทนที่จะเก็บทุกอย่างเป็น dotfiles อาจเก็บรายการ preference หรือสิ่งที่ไม่ชอบเป็น prompt แล้วให้ agent apply กับเครื่องใหม่
 
-ตัวอย่างไม่ใช่ "นี่คือ config ทั้งหมดของฉัน" แต่เป็น "ฉันไม่ชอบค่า default เหล่านี้ของ Omarchy ช่วยเปลี่ยนให้เป็นแบบนี้". วิธีนี้ทำให้ config เป็น intent มากขึ้น แต่ก็เสี่ยงถ้าไม่มี verification เพราะ prompt อาจ apply ต่างกันในแต่ละรอบ
+ตัวอย่างไม่ใช่ "นี่คือ config ทั้งหมดของฉัน" แต่เป็น "ฉันไม่ชอบค่า default เหล่านี้ของ [[omarchy|Omarchy]] ช่วยเปลี่ยนให้เป็นแบบนี้". วิธีนี้ทำให้ config เป็น intent มากขึ้น แต่ก็เสี่ยงถ้าไม่มี verification เพราะ prompt อาจ apply ต่างกันในแต่ละรอบ
 
 **ได้อะไร:** dot prompts ชี้ว่าการตั้งค่าอาจย้ายจาก file snapshot ไปเป็น reusable intent แต่ต้องมี harness ที่ตรวจผลลัพธ์ได้
 
@@ -58,4 +58,6 @@ TJ เสนอไอเดีย `dot prompts` แบบกึ่งเล่�
 - [[neovim]]
 - [[malleable-tools]]
 - [[just-in-time-software]]
+- [[omarchy]]
+- [[omakase-software]]
 - [[coding-harness]]

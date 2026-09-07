@@ -3,8 +3,8 @@ title: Addy Osmani
 type: entity
 tags: [ai, software-engineering, web, google, agents]
 created: 2026-05-10
-updated: 2026-06-16
-sources: [Agent Harness Engineering.md, 5 Agent Design patterns for Long-running AI Agents.md, The Orchestration Tax.md, "Loop Engineering..md", Agentic Code Review.md]
+updated: 2026-08-16
+sources: [Agent Harness Engineering.md, 5 Agent Design patterns for Long-running AI Agents.md, The Orchestration Tax.md, "Loop Engineering..md", Agentic Code Review.md, the-new-software-lifecycle.md]
 ---
 
 # Addy Osmani
@@ -18,6 +18,7 @@ sources: [Agent Harness Engineering.md, 5 Agent Design patterns for Long-running
 - เขียน [[the-orchestration-tax]] — แกะแนวคิด [[orchestration-tax|orchestration tax]] (ชื่อที่ Richard Seroter ตั้งบน panel Google I/O): มนุษย์คือ serial resource ตัวเดียวที่ขนานไม่ได้ในวง agent ต้องออกแบบ attention เหมือนออกแบบระบบ concurrent
 - เขียน [[loop-engineering-osmani]] — เสนอ [[loop-engineering|loop engineering]]: เลิกเป็นคนพิมพ์ prompt เอง ไปออกแบบ "ลูป" ที่พิมพ์ prompt ให้ agent แทน; ลูป = harness ที่รันบน timer + แตก helper + ป้อนงานตัวเอง; 5 ชิ้น + memory; อยู่ชั้นบนของ [[agent-harness-engineering]] หนึ่งชั้น
 - เขียน [[agentic-code-review]] — วางกรอบ [[agentic-code-review|agentic code review]]: เมื่อ agent ผลิตโค้ดเร็วกว่า human review capacity งานสำคัญย้ายไปที่ risk-tiered review, evidence intake, heterogeneous AI reviewers, deterministic gates, และมนุษย์ที่ยัง own merge
+- เขียน [[the-new-software-lifecycle]] จาก whitepaper ที่ร่วมเขียนกับ Google — เสนอ [[ai-driven-sdlc|AI-driven SDLC]] ว่า implementation เร็วขึ้นไม่เท่ากับ lifecycle ทั้งเส้นเร็วตาม; specification, architecture และ verification กลายเป็นคอขวดใหม่
 
 ## แนวคิดที่เชื่อมกับ Addy
 
@@ -28,6 +29,7 @@ sources: [Agent Harness Engineering.md, 5 Agent Design patterns for Long-running
 - [[long-running-agents]] — checkpoint/resume, delegated approval, memory-layered context, ambient processing, fleet orchestration
 - [[coding-harness]] — prompt, tools, filesystem, sandbox, memory, hooks, subagent, และ observability รอบ model
 - [[harness-ratchet]] — ทุก mistake ของ agent ควรกลายเป็น rule/hook/test ที่กัน failure class เดิม
+- [[ai-driven-sdlc]] — วงจรพัฒนาที่เอา harness, context, output/trajectory eval และ model routing มาวางเป็นระบบเดียว
 
 ## See also
 
@@ -42,3 +44,5 @@ sources: [Agent Harness Engineering.md, 5 Agent Design patterns for Long-running
 - [[orchestration-tax]]
 - [[coding-harness]]
 - [[harness-ratchet]]
+- [[the-new-software-lifecycle]]
+- [[ai-driven-sdlc]]

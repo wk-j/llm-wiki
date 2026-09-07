@@ -3,8 +3,8 @@ title: Google
 type: entity
 tags: [technology, search, ai, advertising, organizations]
 created: 2026-07-03
-updated: 2026-07-03
-sources: [how-perplexity-lost-ai-war.md]
+updated: 2026-08-16
+sources: [how-perplexity-lost-ai-war.md, the-new-software-lifecycle.md]
 ---
 
 # Google
@@ -29,6 +29,14 @@ Google คือบริษัทเทคโนโลยีที่ครอ�
 
 นี่ไม่ได้แปลว่า Google “ชนะเพราะ product ดีกว่า”. Mondo Startups ตีความว่าชนะเพราะ search เป็น infrastructure และ ecosystem ไม่ใช่แค่หน้าเว็บตอบคำถาม
 
+## Whitepaper เรื่องวงจรพัฒนาซอฟต์แวร์
+
+Google เผยแพร่ whitepaper *The New SDLC With Vibe Coding*. [[addy-osmani|Addy Osmani]] นำมาเล่าแบบย่อใน [[the-new-software-lifecycle|The New Software Lifecycle]]. กรอบหลักคือ AI เร่ง implementation มากกว่า phase ที่ใช้ judgement จึงทำให้ specification, architecture และ verification กลายเป็นคอขวดของ [[ai-driven-sdlc|AI-driven SDLC]]
+
+Whitepaper กับบทความเป็นงานจากผู้สร้าง ecosystem เอง จึงเหมาะกับการอ่านทิศทาง แต่ตัวเลข benchmark, productivity, adoption และต้นทุนควรเก็บสถานะเป็น first-party claim หรือภาพประกอบตามที่บทความระบุ
+
+**ได้อะไร:** Google ไม่ได้วาง AI coding เป็น autocomplete อย่างเดียว แต่กำลังเสนอกรอบกระบวนการที่ครอบตั้งแต่ requirement, harness/context ไปถึง eval และ deploy
+
 ## See also
 
 - [[perplexity]]
@@ -37,3 +45,5 @@ Google คือบริษัทเทคโนโลยีที่ครอ�
 - [[google-for-developers]]
 - [[ai-search-economics]]
 - [[distribution-moat]]
+- [[the-new-software-lifecycle]]
+- [[ai-driven-sdlc]]

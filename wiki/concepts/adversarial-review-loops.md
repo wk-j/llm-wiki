@@ -3,8 +3,8 @@ title: Adversarial Review Loops
 type: concept
 tags: [ai, agents, code-review, verification, software-engineering]
 created: 2026-07-09
-updated: 2026-07-09
-sources: [bun-in-rust.md]
+updated: 2026-09-07
+sources: [bun-in-rust.md, dhh-strategies-programming-with-ai-agents-lex-clips.md]
 ---
 
 # Adversarial Review Loops / ลูปรีวิวแบบจับผิด
@@ -57,6 +57,14 @@ Adversarial review loop ไม่ได้แทน [[behavioral-verifier|behavi
 
 อีกข้อคือ reviewer อาจสร้าง noise. ถ้าไม่มี fixer หรือ human ที่คัด signal, loop จะกลายเป็น report ยาว ๆ ที่เพิ่ม [[orchestration-tax|orchestration tax]].
 
+## สิ่งที่ loop นี้ไม่จับ: ความซับซ้อนเกินจำเป็น
+
+[[dhh|DHH]] เล่าใน [[dhh-strategies-programming-with-ai-agents-lex-clips|บทสัมภาษณ์กับ Lex Fridman]] ว่า agent ทำงานเสร็จ agent อีกตัว review บอกว่าผ่าน แต่พอคนอ่านแล้วทักว่าซับซ้อนเกินไป มันตัดเหลือครึ่งเดียว
+
+เรื่องนี้ไม่ได้ขัดกับเคส Bun ข้างบน มันบอกขอบเขตของ objective ที่ตั้งไว้ reviewer ที่ถูกสั่งว่า "หาว่า code นี้ผิดตรงไหน" จะเก่งเรื่อง bug ที่ compile ผ่านและดู plausible แต่ code ที่ซับซ้อนเกินจำเป็นไม่ผิด มัน run ผ่าน test ผ่าน reviewer จึงไม่มีอะไรจะรายงาน ยิ่งกว่านั้น code ที่ป้องกันไว้แน่นและมี abstraction เผื่อมัก "ดูดี" ตามมาตรฐานที่ model เห็นมา
+
+**ได้อะไร:** ถ้าอยากให้ระบบจับความซับซ้อน ต้องมี reviewer อีกบทที่ถูกสั่งตรง ๆ ว่างานคือหาว่าตัดอะไรออกได้ ไม่ใช่หาว่าอะไรพัง คลิปไม่ได้ทดลองแบบนั้น จึงเป็นข้อเสนอที่ต้องลอง ดู [[make-it-simpler|Make It Simpler]]
+
 ## วิธีจำสั้น ๆ
 
 Adversarial review loop = **writer แยกจาก skeptic, skeptic เห็น diff ไม่เห็นข้อแก้ตัว, fixer แก้จาก evidence, verifier ตัดสิน behavior**.
@@ -69,3 +77,5 @@ Adversarial review loop = **writer แยกจาก skeptic, skeptic เห็
 - [[behavioral-verifier]]
 - [[orchestration-tax]]
 - [[harness-guides-sensors]]
+- [[make-it-simpler]]
+- [[dhh-strategies-programming-with-ai-agents-lex-clips]]

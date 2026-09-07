@@ -3,8 +3,8 @@ title: Coding Harness
 type: concept
 tags: [ai, tools, agents, software-engineering, harness]
 created: 2026-04-18
-updated: 2026-07-04
-sources: [alex-ker-harnesses-optimize.md, building-pi-world-of-slop.md, Agent Harness Engineering.md, software-writing-software-gone-right.md, improved-15-llms-harness-changed.md, "Introducing Omnigent A Meta-Harness to Combine, Control and Share Your Agents.md", "Matt Pocock’s Agentic Engineering Workflow (just copy him).md", "i don't want to use your agent — @RhysSullivan.md", l8-principals-agentic-engineering-workflow-kun-chen.md, aom-fable-elysia-2-audit.md, zoran-horvat-claude-no-planning-engine.md, planning-mode-dangerous-illusion.md, stop-building-ai-agents-old-way.md]
+updated: 2026-08-16
+sources: [alex-ker-harnesses-optimize.md, building-pi-world-of-slop.md, Agent Harness Engineering.md, software-writing-software-gone-right.md, improved-15-llms-harness-changed.md, "Introducing Omnigent A Meta-Harness to Combine, Control and Share Your Agents.md", "Matt Pocock’s Agentic Engineering Workflow (just copy him).md", "i don't want to use your agent — @RhysSullivan.md", l8-principals-agentic-engineering-workflow-kun-chen.md, aom-fable-elysia-2-audit.md, zoran-horvat-claude-no-planning-engine.md, planning-mode-dangerous-illusion.md, stop-building-ai-agents-old-way.md, the-new-software-lifecycle.md]
 ---
 
 # Coding Harness / ตัวครอบของ Coding Agent
@@ -202,6 +202,14 @@ Heuristic ง่ายๆ คือ — **ถ้าต้องการแค�
 
 **ได้อะไร:** เวลา agent หนึ่งดู "เก่งกว่า" อีกตัวในงานจริง ให้เช็ค harness ก่อนสรุปว่าเป็นความต่างของ model ล้วน ๆ.
 
+## 10/90 เป็นคำเตือน ไม่ใช่สูตรคำนวณ
+
+ใน [[the-new-software-lifecycle|The New Software Lifecycle]] Addy ใช้ rough split ว่า agent เป็น model ราว 10% และ harness ราว 90% เพื่อย้ำว่าทีมควร debug สิ่งที่ควบคุมได้ก่อน เขายก benchmark สองกรณีที่คะแนนดีขึ้นมากทั้งที่ model เดิม แต่ไม่ได้เสนอวิธีวัดว่าส่วนไหนมีน้ำหนักกี่เปอร์เซ็นต์จริง
+
+ตัวเลขนี้จึงอยู่ร่วมกับมุม 50/50 ของ [[matt-pocock|Matt Pocock]] ได้ ทั้งคู่กำลังแก้ความเข้าใจผิดเดียวกันว่า agent quality มาจาก model ล้วน ๆ มากกว่ากำลังเสนอสมการเชิงวิทยาศาสตร์
+
+**ได้อะไร:** ใช้สัดส่วนนี้เป็น prompt สำหรับ diagnosis — เช็ก instruction, tool, context, sandbox, hook และ verifier — ไม่ใช่เอาไปคำนวณงบแบบตายตัว
+
 ## ดูเพิ่มเติม
 
 - [[alex-ker]]
@@ -215,6 +223,8 @@ Heuristic ง่ายๆ คือ — **ถ้าต้องการแค�
 - [[subagent-patterns]]
 - [[harness-engineering]]
 - [[agent-harness-engineering]]
+- [[the-new-software-lifecycle]]
+- [[ai-driven-sdlc]]
 - [[harness-ratchet]]
 - [[claude-code-session-management]]
 - [[ai-orchestrator]]

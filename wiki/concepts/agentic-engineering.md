@@ -3,8 +3,8 @@ title: Agentic Engineering
 type: concept
 tags: [ai, engineering, agents, automation]
 created: 2026-04-30
-updated: 2026-08-15
-sources: [Andrej Karpathy From Vibe Coding to Agentic Engineering.md, l8-principals-agentic-engineering-workflow-kun-chen.md, new-skills-v1-1-wayfinder-research-implement-to-spec-to-tickets.md, teepagorn-ten-lessons-building-with-ai.md, andrew-ng-ai-engineering-skills-map.md]
+updated: 2026-08-16
+sources: [Andrej Karpathy From Vibe Coding to Agentic Engineering.md, l8-principals-agentic-engineering-workflow-kun-chen.md, new-skills-v1-1-wayfinder-research-implement-to-spec-to-tickets.md, teepagorn-ten-lessons-building-with-ai.md, andrew-ng-ai-engineering-skills-map.md, the-new-software-lifecycle.md]
 ---
 
 # Agentic Engineering / วิศวกรรมเชิงเอเจนท์
@@ -94,6 +94,14 @@ sources: [Andrej Karpathy From Vibe Coding to Agentic Engineering.md, l8-princip
 - **AI คือ Tactical Sergeant**: รับหน้าที่ "จ่า" คอยคุมการรบหน้างาน จัดการรายละเอียดโค้ดและ implementation
 - **มนุษย์คือ Strategist**: รับหน้าที่ "นักยุทธศาสตร์" ออกแบบโครงสร้าง (Interface), ควบคุมทิศทาง และจัดการความซับซ้อนภาพรวม
 
+## Agentic Engineering ในระดับ lifecycle
+
+[[the-new-software-lifecycle|The New Software Lifecycle]] ขยายแนวคิดนี้จาก workflow ของ developer คนเดียวไปทั้ง [[ai-driven-sdlc|SDLC]]. Implementation เร็วขึ้นมาก แต่ requirement, architecture และ verification ยังช้าเพราะต้องใช้ judgement. งานจึงไม่ได้หายไป แต่ย้ายจากการพิมพ์ code ไปเป็นการกำหนด spec, ออกแบบ harness/context และตรวจทั้ง output กับ trajectory
+
+จุดสำคัญคือ verification ต้องอยู่ใน loop ไม่ใช่เป็นพิธีท้าย sprint: test วัดส่วน deterministic, eval วัด output ที่ไม่ตายตัว, CI/CD gate กัน regression และ production monitoring ส่ง failure ใหม่กลับเข้า suite
+
+**ได้อะไร:** Agentic Engineering ไม่ใช่แค่ “ใช้ agent เขียน code แบบมีวินัย” แต่คือออกแบบวงจรทั้งเส้นให้ความเร็วของ implementation ไม่ท่วมคอขวดด้าน judgement และ review
+
 ## ดูเพิ่ม
 - [[vibe-coding]]
 - [[software-3-0]]
@@ -113,3 +121,5 @@ sources: [Andrej Karpathy From Vibe Coding to Agentic Engineering.md, l8-princip
 - [[ai-engineering-skills-map]]
 - [[andrew-ng]]
 - [[evals-and-error-analysis]]
+- [[the-new-software-lifecycle]]
+- [[ai-driven-sdlc]]

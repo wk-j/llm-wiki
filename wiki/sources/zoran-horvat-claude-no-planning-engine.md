@@ -4,7 +4,7 @@ type: source
 tags: [claude, planning, llm, coding-agents, harness, judgment]
 url: https://x.com/zoranh75/status/2063146369934651469
 created: 2026-07-02
-updated: 2026-07-02
+updated: 2026-08-25
 sources: ["Zoran Horvat on X — Claude has no planning engine.md"]
 ---
 
@@ -50,7 +50,7 @@ Horvat บอกว่าเขาทดสอบ prompt เดียวกั�
 
 แปลเป็นภาษาของ wiki: ถ้า plan เป็น draft จาก pattern recognition เราควรเสริมด้วย external prior art, code evidence, และ deterministic checks. Search ไม่ได้ทำให้ model มี symbolic planner แต่ช่วยลดการเดาในเรื่องที่มี best practice ภายนอกให้เทียบ.
 
-## ความตึงกับ dynamic workflows
+## จุดที่ไม่ลงรอยกับ dynamic workflows
 
 wiki มีหน้า [[dynamic-workflows]] ที่บันทึก claim ฝั่ง Anthropic/Piyalitt ว่า Claude Code + Opus 4.8 สามารถ self-plan, dispatch subagents, self-verify, และทำ large-scale change ได้. โพสต์ของ Horvat ไม่ได้ลบ claim นั้น แต่เพิ่มคำถามสำคัญ:
 

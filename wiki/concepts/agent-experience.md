@@ -3,8 +3,8 @@ title: Agent Experience (AX)
 type: concept
 tags: [ai, agents, codebase, dx, harness, software-engineering]
 created: 2026-06-21
-updated: 2026-07-01
-sources: ["Matt Pocock’s Agentic Engineering Workflow (just copy him).md", "i don't want to use your agent — @RhysSullivan.md", l8-principals-agentic-engineering-workflow-kun-chen.md]
+updated: 2026-09-06
+sources: ["Matt Pocock’s Agentic Engineering Workflow (just copy him).md", "i don't want to use your agent — @RhysSullivan.md", l8-principals-agentic-engineering-workflow-kun-chen.md, dhh-ai-programming-setup-lex-clips.md]
 ---
 
 # Agent Experience (AX) / ประสบการณ์ของ agent ในโค้ดเบส
@@ -58,6 +58,14 @@ AX ไม่ได้จบที่ตอน agent เขียนโค้ด 
 
 **ได้อะไร:** AX ที่ดีไม่ใช่แค่ทำให้ agent สบาย แต่ทำให้มนุษย์ส่ง judgement กลับเข้า agent ได้ชัดขึ้น.
 
+## AX ของเครื่องที่ agent ต้องตั้งค่า
+
+[[dhh|DHH]] ผู้สร้าง Ruby on Rails เพิ่มตัวอย่างใน [[dhh-ai-programming-setup-lex-clips|บทสัมภาษณ์เรื่องชุดเครื่องมือ AI]] ว่าเขาชอบ Linux เพราะ agent เรียก CLI และแก้ config file ได้ตรง ๆ เขาอยากให้การตั้งค่าเครื่องเก็บไว้และนำไปใช้กับเครื่องอื่นซ้ำได้ โดยไม่ต้องกลับไปคลิก GUI หลายรอบ
+
+DHH เล่าว่าพบข้อจำกัดกับ Raycast และ key binding บน Mac ส่วน Lex Fridman แย้งว่ามีวิธีอ้อม จึงเก็บทั้งสองความเห็นไว้ ยังไม่ใช้คลิปนี้ตัดสินว่า Linux เหนือกว่าทุกงานหรือ macOS ทำ automation เหล่านี้ไม่ได้ ข้อสังเคราะห์ที่นำมาใช้กับ AX คือควรดูว่า agent เข้าถึงและปรับการตั้งค่าที่งานต้องใช้ได้แค่ไหน
+
+ผลคือ นอกจาก codebase กับ tool output แล้ว config และวิธีตั้งค่าเครื่องก็มีผลต่อความสะดวกของ agent และความสามารถในการทำ workflow เดิมซ้ำ
+
 ## ดูเพิ่ม
 
 - [[matt-pocock]]
@@ -72,3 +80,5 @@ AX ไม่ได้จบที่ตอน agent เขียนโค้ด 
 - [[axi]]
 - [[lavish]]
 - [[no-mistakes]]
+- [[dhh-ai-programming-setup-lex-clips]]
+- [[dhh]]

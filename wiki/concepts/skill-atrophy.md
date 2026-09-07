@@ -3,8 +3,8 @@ title: Skill Atrophy
 type: concept
 tags: [psychology, ai, learning]
 created: 2026-05-05
-updated: 2026-07-04
-sources: [agentic-coding-trap.md, How to Keep Shipping When You Walk Away from Your Desk — Zack Proser, WorkOS.md, code-isnt-free-mario-zechner-hard-truths-coding-ai.md]
+updated: 2026-09-07
+sources: [dhh-strategies-programming-with-ai-agents-lex-clips.md, agentic-coding-trap.md, How to Keep Shipping When You Walk Away from Your Desk — Zack Proser, WorkOS.md, code-isnt-free-mario-zechner-hard-truths-coding-ai.md]
 ---
 
 # Skill Atrophy / ภาวะทักษะถดถอย
@@ -31,6 +31,24 @@ sources: [agentic-coding-trap.md, How to Keep Shipping When You Walk Away from Y
 
 **ผลคือ:** ป้องกัน skill atrophy ด้วยการเลือก friction ไม่ใช่ด้วยการห้าม AI แบบกว้าง ๆ.
 
+## เรื่องเล่าจากหน้างาน — DHH กลับคำเรื่อง bash (2026-09)
+
+กรณีนี้น่าสนใจเพราะคนคนเดียวเปลี่ยนจุดยืนเองภายในไม่กี่เดือน และเปลี่ยนไปคนละทางกับคำแนะนำข้างบน
+
+ใน [[dhh-ai-programming-setup-lex-clips|บทสัมภาษณ์ตอนก่อน]] [[dhh|DHH]] เล่าว่าเขาเคยขอ bash จาก agent แล้วพิมพ์เองใหม่ทุกครั้ง เหตุผลตรงกับหน้านี้เลย คือไม่อยากให้ความสามารถไหลออกจากนิ้วตัวเอง เขาถึงขั้นไปตั้งใจเรียน bash ให้เขียนเองได้จริง
+
+ใน [[dhh-strategies-programming-with-ai-agents-lex-clips|คลิปถัดมา]] เขาบอกว่า
+
+> "I have not written any bash myself for probably a couple of months because the agents have just gotten so good."
+
+สองประโยคนี้ไม่ขัดกันในความหมาย แต่ขัดกันในการปฏิบัติ หน้านี้เก็บไว้ทั้งคู่ ไม่ตัดข้อใด และแยกสิ่งที่รู้จากสิ่งที่ยังไม่รู้
+
+**สิ่งที่ต่างจากเคสอื่นใน wiki นี้:** DHH ฝึกมือก่อนแล้วจึงเลิกเขียน ซึ่งตรงกับหลัก "อย่าใช้ AI ทำสิ่งที่เรายังทำเองไม่เป็น" ของ [[zack-proser|Zack Proser]] อยู่แล้ว เขายังทักได้ว่า code ที่ agent เขียนซับซ้อนเกินไป ([[make-it-simpler|Make It Simpler]]) และไม่ชอบสไตล์ early exit ที่ agent ชอบใช้ ซึ่งเป็นการทักที่ต้องรู้ bash ก่อน
+
+**สิ่งที่ยังตอบไม่ได้:** ทักษะที่ฝึกไว้แล้วอยู่ได้นานแค่ไหนเมื่อเลิกใช้ สองเดือนยังสั้นเกินจะสรุป และคนที่ไม่เคยเขียน bash เองมาก่อนจะทักแบบเดียวกับเขาได้ไหม คลิปไม่มีข้อมูลตรงนี้
+
+**ผลคือ:** เคสนี้ไม่ได้แปลว่า skill atrophy ไม่จริง มันเตือนว่าต้องแยกสองคำถามออกจากกัน คือ "ยังเขียนเองอยู่ไหม" กับ "ยังตรวจงานเองได้ไหม" คำถามที่สองสำคัญกว่า และเป็นคำถามที่ [[taste-paradox|taste paradox]] กับ [[eh-gland|ต่อมเอ๊ะ]] พูดถึงจริง ๆ
+
 ## See also
 
 - [[cognitive-debt]]
@@ -39,3 +57,6 @@ sources: [agentic-coding-trap.md, How to Keep Shipping When You Walk Away from Y
 - [[developer-balance]]
 - [[how-to-keep-shipping-away-from-desk]]
 - [[code-isnt-free-mario-zechner-hard-truths-coding-ai]]
+- [[dhh]]
+- [[dhh-strategies-programming-with-ai-agents-lex-clips]]
+- [[make-it-simpler]]

@@ -3,8 +3,8 @@ title: Orchestration Tax
 type: concept
 tags: [ai, agents, productivity, attention, orchestration, concurrency, bottleneck]
 created: 2026-05-29
-updated: 2026-07-09
-sources: [The Orchestration Tax.md, How to Keep Shipping When You Walk Away from Your Desk — Zack Proser, WorkOS.md, Agentic Code Review.md, "รู้จักกับ Loop Engineering — mikelopster transcript", techsauce-ai-brain-fry.md, l8-principals-agentic-engineering-workflow-kun-chen.md, aom-fable-elysia-2-audit.md, how-ai-became-more-expensive-than-workers-it-replaced.md, stop-building-ai-agents-old-way.md, code-isnt-free-mario-zechner-hard-truths-coding-ai.md, piyalitt-codex-keynote-attention-not-token.md, bun-in-rust.md]
+updated: 2026-09-06
+sources: [The Orchestration Tax.md, How to Keep Shipping When You Walk Away from Your Desk — Zack Proser, WorkOS.md, Agentic Code Review.md, "รู้จักกับ Loop Engineering — mikelopster transcript", techsauce-ai-brain-fry.md, l8-principals-agentic-engineering-workflow-kun-chen.md, aom-fable-elysia-2-audit.md, how-ai-became-more-expensive-than-workers-it-replaced.md, stop-building-ai-agents-old-way.md, code-isnt-free-mario-zechner-hard-truths-coding-ai.md, piyalitt-codex-keynote-attention-not-token.md, bun-in-rust.md, the-new-software-lifecycle.md, dhh-ai-programming-setup-lex-clips.md]
 ---
 
 # Orchestration Tax / ภาษีค่าควบคุมวง
@@ -115,6 +115,15 @@ failure mode ที่อันตรายที่สุดคือมัน�
 - [[ai-brain-fry]] — อาการในหัวของคนเมื่อ oversight load จาก AI tools มากเกินไป; เป็น workplace cousin ของ orchestration tax
 - [[agentic-code-review]] — คำตอบระดับ review architecture: ไม่ใช่พยายามอ่านทุกบรรทัดให้เร็วขึ้น แต่ tier review ตาม blast radius, require evidence ก่อนรับ review, ใช้ AI reviewer เป็น sensor หลาย character, และเก็บ human judgement ไว้กับ path ที่พังแล้วเจ็บ. นี่คือวิธีใช้ "Only spend the lock on judgement" แบบเป็นระบบ
 - [[mikelopster-loop-engineering]] — หลัก feedback gate: loop ที่ไม่มี scorer ชัดจะเพิ่มงานค้างให้คนตรวจ ไม่ได้เพิ่ม throughput จริง
+- [[the-new-software-lifecycle]] เพิ่มมุมต้นทุนรวม: model routing กับ context policy ลดค่า inference ได้ แต่ถ้า implementation เร็วขึ้นโดย verification ไม่โตตาม งานจะไปกองหน้าคน review อยู่ดี. ค่า token จึงเป็นเพียงส่วนหนึ่งของภาษี; rework, security cleanup และเวลาทำความเข้าใจ code ที่ agent สร้างก็ต้องนับด้วย
+
+## DHH: หลายงานช่วยให้เกิด flow แต่มีเพดานส่วนตัว
+
+[[dhh|DHH]] ผู้สร้าง Ruby on Rails เล่าใน [[dhh-ai-programming-setup-lex-clips|บทสัมภาษณ์กับ Lex Fridman]] ว่าการรอ agent ตัวเดียวทำให้รู้สึกไม่มีประโยชน์ พอเปิดหลายตัว เขามีเรื่องให้เลือกทิศและส่งโจทย์ถัดไปต่อเนื่อง จึงกลับมาสนุกกับงาน เขาประมาณว่าตามได้ราว 16 งานบน 4–5 เครื่อง ก่อนชนขีดจำกัดของตัวเอง และยิ่ง agent เร็วก็ยิ่งตามงานพร้อมกันได้น้อยลง
+
+เก็บประสบการณ์นี้คู่กับคำเตือนว่า busy ไม่เท่ากับ productive และคำแนะนำเดิมว่าจำนวนที่ review ไหวมักอยู่หลักเดียว DHH เล่าความรู้สึก flow และใช้จำนวนงานแบบกะคร่าว ๆ ส่วนกรอบเดิมถามถึงงานที่ตรวจและรวมได้จริง ยังไม่มีข้อมูลชนิดงาน ความถี่ที่เรียกคน หรือคุณภาพหลัง merge พอจะตัดสินว่ากรณีนี้ขัดกับคำแนะนำเดิมหรืออยู่คนละเงื่อนไข
+
+DHH เองก็ย้ำว่าจำนวนบรรทัดบอกได้เพียงปริมาณ output ไม่ได้บอกคุณค่า ผลคือ ควรดูทั้งความรู้สึกของคนและงานที่ปิดได้จริง โดยไม่ใช้จำนวน agent แทนสองเรื่องนี้
 
 ## See also
 
@@ -148,6 +157,8 @@ failure mode ที่อันตรายที่สุดคือมัน�
 - [[treehouse]]
 - [[deep-agent-audit]]
 - [[aom-fable-elysia-2-audit]]
+- [[the-new-software-lifecycle]]
+- [[ai-driven-sdlc]]
 - [[bun-in-rust]]
 - [[adversarial-review-loops]]
 
@@ -157,3 +168,5 @@ failure mode ที่อันตรายที่สุดคือมัน�
 - [[attention-bottleneck]]
 - [[peter-steinberger]]
 - [[piyalitt-codex-keynote-attention-not-token]]
+- [[dhh-ai-programming-setup-lex-clips]]
+- [[dhh]]

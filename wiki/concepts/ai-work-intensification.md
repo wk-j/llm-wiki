@@ -3,7 +3,7 @@ title: AI Work Intensification
 type: concept
 tags: [ai, workplace, productivity, labor, burnout, management]
 created: 2026-08-13
-updated: 2026-08-13
+updated: 2026-08-25
 sources: [i-was-replaced-by-ai-typecraft.md]
 ---
 
@@ -90,3 +90,4 @@ Typecraft เพิ่มมิติที่ตัวเลข throughput ม�
 - [[acceptance-bottleneck]]
 - [[enterprise-ai-roi]]
 - [[skill-atrophy]]
+- [[creative-ownership]]

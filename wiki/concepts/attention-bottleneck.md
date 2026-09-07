@@ -3,8 +3,8 @@ title: Attention Bottleneck
 type: concept
 tags: [ai, agents, productivity, attention, bottleneck]
 created: 2026-07-05
-updated: 2026-07-05
-sources: [piyalitt-codex-keynote-attention-not-token.md, How to Keep Shipping When You Walk Away from Your Desk — Zack Proser, WorkOS.md, The Orchestration Tax.md]
+updated: 2026-09-06
+sources: [piyalitt-codex-keynote-attention-not-token.md, How to Keep Shipping When You Walk Away from Your Desk — Zack Proser, WorkOS.md, The Orchestration Tax.md, dhh-ai-programming-setup-lex-clips.md]
 ---
 
 # Attention Bottleneck / คอขวด attention
@@ -48,6 +48,14 @@ Attention bottleneck ตั้งชื่อคอขวดนี้จาก�
 
 [[piyalitt-codex-keynote-attention-not-token]] เปิดโพสต์ด้วย [[thariq-shihipar|Thariq]]: ยิ่ง model เก่ง คอขวดยิ่งย้ายมาที่เราทำ unknowns ให้ชัดได้ดีแค่ไหน. Attention ที่หมดไปกับการจ้อง agent หรืออ่าน transcript ยาว ๆ คือ attention ที่ไม่ได้ใช้เคลียร์ unknowns ก่อนลงมือ และมักแพงกว่ามากเมื่อมาแก้ทีหลัง (ดู [[unknowns-matrix]])
 
+## DHH: เพิ่มเครื่องจนเริ่มตามงานไม่ไหว
+
+[[dhh|DHH]] ผู้สร้าง Ruby on Rails เล่าใน [[dhh-ai-programming-setup-lex-clips|บทสัมภาษณ์กับ Lex Fridman]] ว่าใช้ Tailscale เชื่อมเครื่องเป็นเครือข่ายส่วนตัว จึงเพิ่มเครื่องมารัน agent ได้สะดวกขึ้น ส่วน Herdr ช่วยจัด session และแจ้งเตือนเมื่องานต้องการคน แต่พอมีราว 4–5 เครื่อง เขาประมาณว่าตามได้เต็มที่ราว 16 งานพร้อมกัน ยิ่ง agent เร็ว จำนวนงานที่ตามไหวก็ยิ่งลดลง
+
+กรณีนี้เพิ่มรายละเอียดให้ข้อสังเกตของ Peter: จำนวน agent ที่เหมาะกับคนหนึ่งคนขึ้นกับความถี่ที่แต่ละงานต้องเรียกเขากลับมาตัดสินใจด้วย ตัวเลข 16 จึงไม่ใช่เป้าหมายสากล และคลิปไม่มีข้อมูลคุณภาพหลัง merge มายืนยันว่าจำนวนนี้ให้ผลดีที่สุด
+
+ผลคือ การซื้อเครื่องและทำ notification ช่วยเรื่องการเข้าถึงกับการตามสถานะ แต่ยังต้องจัดจำนวนงานให้พอกับเวลาที่คนใช้คิดและตรวจงาน
+
 ## See also
 
 - [[piyalitt-codex-keynote-attention-not-token]]
@@ -57,3 +65,5 @@ Attention bottleneck ตั้งชื่อคอขวดนี้จาก�
 - [[developer-balance]]
 - [[unknowns-matrix]]
 - [[how-to-keep-shipping-away-from-desk]]
+- [[dhh-ai-programming-setup-lex-clips]]
+- [[dhh]]

@@ -3,7 +3,7 @@ title: Plan Mode as Prompting
 type: concept
 tags: [ai, planning, coding-agents, harness, judgment]
 created: 2026-07-02
-updated: 2026-07-02
+updated: 2026-08-25
 sources: [zoran-horvat-claude-no-planning-engine.md, planning-mode-dangerous-illusion.md]
 ---
 
@@ -61,7 +61,7 @@ Horvat ชี้ว่าแม้ Opus ทำงานผ่าน มันย
 
 **ผลคือ:** แผนที่ดีต้องมีช่องให้คนตรวจ assumption ไม่ใช่แค่ checklist ว่าจะ implement อะไร.
 
-## Open tension
+## ประเด็นที่ยังไม่ลงตัว
 
 หน้า [[dynamic-workflows]] บันทึก claim ว่า Claude Code สามารถ self-plan และ dispatch subagents ได้. หน้าใหม่นี้ไม่ได้บอกว่าความสามารถนั้นไม่มี utility. มันบอกว่าคำว่า "self-plan" อาจหมายถึง harness-guided prompting ไม่ใช่ planner แบบ symbolic.
 

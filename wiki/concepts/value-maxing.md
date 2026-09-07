@@ -3,7 +3,7 @@ title: Value Maxing
 type: concept
 tags: [ai, economics, models, agents, codex]
 created: 2026-07-05
-updated: 2026-07-05
+updated: 2026-08-25
 sources: [piyalitt-codex-keynote-attention-not-token.md]
 ---
 
@@ -33,7 +33,7 @@ GPT-5.3 Codex Spark เคยพิสูจน์แล้วว่าควา
 
 ความรู้สึกจึงเปลี่ยนจาก “นั่งรอ AI ตอบ” เป็น “เพื่อนร่วมงานโชว์ผลลัพธ์ไปพร้อมกับที่มันทำ”
 
-## ความตึงกับ wiki อื่น
+## มุมที่ไม่ตรงกับหน้าอื่น
 
 - [[ai-token-economics]] / [[enterprise-ai-roi]] — value maxing เป็นมุมฝั่ง vendor ที่พยายามตอบ CFO ว่า "แพงขึ้นแต่คุ้ม" ไม่ใช่แค่ "ใช้เยอะขึ้น"
 - [[code-is-free]] — implementation ถูกลงได้ แต่ token bill ยังต้องนับ; value maxing ไม่ได้แปลว่า usage ฟรี

@@ -1314,3 +1314,44 @@ Ingested Squintist's YouTube video on Anthropic's August 2026 support page annou
 ## [2026-08-16] fix | Translationese sweep in the watermarking cluster
 User flagged the heading "AI detectors เป็นคนละสัตว์กัน" — a word-for-word rendering of the video's "a different animal," which violates the wiki's own anti-translationese rules. Swept the newly ingested cluster and fixed the same class of literal translations: "คนละสัตว์กัน" → "คนละเรื่องกันเลย", "สองตลาดโตบนกันและกัน/โตด้วยกันเอง" → "ต่างฝ่ายต่างเลี้ยงกันให้โต", "ช่องว่างปิดจากสองทาง" → "ความต่างกำลังแคบลงจากทั้งสองฝั่ง", "ความต่างกำลังละลาย" → "กำลังจางหายไป", "คือ collateral ของ proxy ที่พัง" → "คือลูกหลงของ proxy ที่พัง", "สไตล์กำลังละลายเข้าหากัน" → "กลืนเข้าหากันเรื่อย ๆ"; also added the missing Thai gloss under the verbatim "snapshot of a difference" quote in `[[ai-text-detectors]]`. Claims unchanged.
 - Updated: `[[claude-text-watermarking-squintist]]`, `[[ai-text-detectors]]`, `[[quality-proxy-collapse]]`, `[[index]]`
+
+## [2026-08-16] ingest | The New Software Lifecycle — Addy Osmani
+Ingested Addy Osmani's 2026-06-16 blog extracting the ideas he considers most useful from Google's *The New SDLC With Vibe Coding* whitepaper. The durable frame is uneven lifecycle compression: implementation may collapse from weeks to hours, while requirements, architecture and verification remain judgement work, so specification quality and evidence become the new bottlenecks. Preserved the linked system view: Agent = Model + Harness; six context types split across static versus dynamic loading; progressive disclosure for skills; output eval versus trajectory eval; testing/evals moved into the middle of the loop; conductor versus orchestrator modes; and context/model routing as both architecture and cost policy. Kept the caveats explicit: 10% model/90% harness is a rough split, vibe coding at 3–10x cost per feature is illustrative, +25–39% productivity and METR -19% refer to different settings, and the 85%/51%/41% adoption figures have no methodology in this blog summary. Also preserved the tension between “generation is mostly solved” and the article's own 80% problem, review burden and architecture/verification bottlenecks.
+- Created source: `[[the-new-software-lifecycle]]`
+- Created concept: `[[ai-driven-sdlc]]`
+- Updated entities: `[[addy-osmani]]`, `[[google]]`, `[[google-cloud]]`
+- Updated concepts: `[[coding-harness]]`, `[[context-engineering]]`, `[[evals-and-error-analysis]]`, `[[vibe-coding]]`, `[[agentic-engineering]]`, `[[spec-driven-development]]`, `[[orchestration-tax]]`
+- Updated `[[index]]`, `[[log]]`, and `hotcache.md`
+
+## [2026-08-25] ingest | State of Technology and the Joy of Making — Phoomparin Mano
+Ingested Phoomparin Mano's Facebook post through the user's authenticated browser session. The durable frame is `creative ownership`: AI can let more people solve their own problems and share useful tools, while the same agent workflow can make an experienced builder feel detached from the thinking, trial-and-error and micro-decisions that made programming meaningful. Kept the polarity intact rather than turning the post into “AI good” or “AI bad”: democratized creation sits beside concerns about utilitarian software factories, surveillance capitalism, lost mastery and a culture that treats process as pointless. Distinguished this from cognitive surrender — an optimal, reviewed workflow may still reduce ownership even when attention has not collapsed — and extended programming-process-matters from correctness/world models to learning and intrinsic meaning. The post says Friends only, so the wiki stores a summary and a few short phrases, not a full-text copy; broad social claims and the second-hand “coding is solved” line remain source-attributed and unverified.
+- Created source: `[[state-of-technology-and-joy-of-making-phoomparin-mano]]`
+- Created concept: `[[creative-ownership]]`
+- Created entity: `[[phoomparin-mano]]`
+- Updated concepts: `[[programming-process-matters]]`, `[[cognitive-surrender]]`, `[[code-is-free]]`, `[[developer-balance]]`, `[[ai-work-intensification]]`
+- Updated source cross-link: `[[i-was-replaced-by-ai-typecraft]]`
+- Updated `[[index]]`, `[[log]]`, and `hotcache.md`
+
+## [2026-08-25] fix | Remove “open tension” translationese
+User flagged `ความตึงที่ยังเปิดอยู่` as repeated word-for-word English-shaped Thai. Replaced the phrase family across the wiki with wording that matches the actual meaning: `เรื่องที่ยังตอบไม่ได้`, `จุดที่ยังไม่ลงรอย`, `จุดขัดแย้งที่ยังแก้ไม่ตก`, `สองทางเลือก`, or `โจทย์ยาก`. Added an explicit anti-translationese rule to `AGENTS.md` and `CLAUDE.md` so future pages do not translate “open tension(s)” mechanically.
+- Updated source pages: `[[state-of-technology-and-joy-of-making-phoomparin-mano]]`, `[[aom-fable-elysia-2-audit]]`, `[[zoran-horvat-claude-no-planning-engine]]`, `[[teepagorn-ten-lessons-building-with-ai]]`, `[[framework-frontier-ai-dawning-new-age]]`
+- Updated concept pages: `[[specs-to-code]]`, `[[frontier-ai-standards-body]]`, `[[bitter-lesson]]`, `[[plan-mode-as-prompting]]`, `[[dynamic-workflows]]`, `[[value-maxing]]`, `[[programming-process-matters]]`, `[[open-weight-models]]`, `[[benchmark-contamination]]`, `[[code-is-free]]`, `[[soviet-cosmism]]`, `[[skill-stacking]]`
+- Updated entity pages: `[[phoomparin-mano]]`, `[[jan-niklas-wortmann]]`, `[[gpt-5-6-sol]]`
+- Updated writing policy: `AGENTS.md`, `CLAUDE.md`
+
+## [2026-09-06] ingest | DHH's New Setup for Programming with AI
+สรุป transcript คลิป Lex Clips ที่ผู้ใช้ส่งมาเป็น [[dhh-ai-programming-setup-lex-clips]] สร้าง entity [[dhh]], [[herdr]], [[tailscale]] และเพิ่มกรณีศึกษาใน [[attention-bottleneck]], [[orchestration-tax]], [[creative-ownership]], [[agentic-code-review]], [[agent-experience]] พร้อมอัปเดต index และ hotcache ตรวจชื่อเครื่องมือกับ transcript ตอนเต็มของ Lex และเอกสาร Herdr/Tailscale โดยบันทึกจุดที่ transcript ต่างกัน รวมถึง Omarchy แทน Emacs เก็บตัวเลขราว 16 งานเป็นขีดจำกัดส่วนตัว ไม่ใช่ benchmark และรักษาทั้งประสบการณ์สนุกจากการคุม agent กับประสบการณ์สูญเสีย ownership ของแหล่งเดิมไว้เป็นคำถามเปิด ข้อวิจารณ์ macOS/WSL ยังคงเป็นความเห็นของผู้พูด ไม่ใช่ผลทดสอบระบบปฏิบัติการ ไม่แก้ raw และรักษาการแก้ไขค้างเดิมไว้
+
+## [2026-09-07] ingest | Strategies for Programming with AI Agents — DHH and Lex Fridman
+สรุป transcript คลิป Lex Clips อีกตอนของบทสัมภาษณ์ DHH เป็น [[dhh-strategies-programming-with-ai-agents-lex-clips]] คลิปนี้พูดเรื่องวิธีสั่งงานและตรวจงาน agent ต่างจากคลิปก่อนที่พูดเรื่องชุดเครื่องมือ แก่นที่เก็บไว้คือคำสั่งที่คนยังต้องพูดเองคือ "make it simpler" เพราะ agent ทำเสร็จแล้วบอกว่าเสร็จ agent อีกตัว review ก็บอกว่าผ่าน จนคนทักว่าซับซ้อนเกินไปแล้วมันตัดเหลือครึ่ง พร้อมเรื่องที่ agent เสนอให้ installer preload ระหว่างรอคนตอบคำถาม การรีดขนาด ISO จาก 7.5 GB เหลือ 5.85 GB แบบวิศวกร McLaren จุดยืน omakase ที่ลงโปรแกรมมาให้ครบ สไตล์ early exit ที่เขียนห้ามไว้ใน AGENTS.md แล้วยังต้องเตือนซ้ำ workflow เสียงของ Lex ที่พูดยาว 10–20 นาทีแล้วล้าง transcript ด้วย dictionary กับคำจาก code base และภาพ OS ที่คุยแล้วเปลี่ยนรูปได้
+- Created source: `[[dhh-strategies-programming-with-ai-agents-lex-clips]]`
+- Created concepts: `[[make-it-simpler]]`, `[[omakase-software]]`, `[[voice-first-prompting]]`
+- Created entities: `[[omarchy]]`, `[[lex-fridman]]`, `[[voxtype]]`, `[[elevenlabs]]`
+- Updated concepts: `[[skill-atrophy]]`, `[[llm-coding-pitfalls]]`, `[[adversarial-review-loops]]`, `[[malleable-tools]]`, `[[just-in-time-software]]`, `[[world-models]]`, `[[automatic-speech-recognition]]`, `[[keyword-biasing]]`, `[[claude-md]]`, `[[personalized-development-environment]]`
+- Updated entities: `[[dhh]]`, `[[herdr]]`
+- Updated source cross-link: `[[dhh-ai-programming-setup-lex-clips]]`
+- Updated `[[index]]`, `[[log]]`, และ `hotcache.md`
+
+**ข้อขัดแย้งที่เก็บไว้ทั้งสองด้าน ไม่ทับของเดิม:** (1) คลิปก่อน DHH ตั้งใจเรียน bash เพื่อไม่ให้ทักษะหาย คลิปนี้เขาไม่ได้เขียนเองมาสองเดือนกว่า เก็บทั้งคู่ไว้ใน `[[skill-atrophy]]` โดยแยกคำถาม "ยังเขียนเองไหม" ออกจาก "ยังตรวจงานเองได้ไหม" (2) `[[adversarial-review-loops]]` เก็บเคส Bun ที่ agent reviewer จับ bug ยากได้ไว้เดิม แล้วเพิ่มขอบเขตว่า objective แบบ "หาว่าผิดตรงไหน" ไม่จับความซับซ้อนเกินจำเป็น (3) คำพูดว่าไม่ต้องสั่ง "อย่าทำผิด" แล้วเพราะ harness รัน test เอง ไม่ได้ลบหลักฐานเรื่อง overclaiming progress ใน `[[llm-coding-pitfalls]]` กับ `[[model-honesty]]` (4) `[[world-models]]` แยกความหมายสองแบบให้ชัด คือความเข้าใจผลกระทบ กับ model ที่ generate โลกออกมา ไม่ปนกัน
+
+**ที่ยังตรวจไม่ได้:** ชื่อเฉพาะใน transcript เพี้ยนหลายคำ แก้จากบริบทเป็น Omarchy, Omacut, Ghostty, Herdr, VoxType, ElevenLabs, Wispr Flow ส่วน `Parrot model` ที่ VoxType ใช้ ผู้พูดเองก็บอกว่าจำไม่แน่ จึงไม่บันทึกชื่อ model และ `Omarchy Quattro` บันทึกตามที่ผู้พูดออกเสียงโดยยังไม่ได้ตรวจกับ release ของโครงการ ลองดึง transcript ตอนเต็มจาก lexfridman.com แล้วหน้าที่ได้กลับมาไม่มีช่วงนี้ ตัวเลขขนาดไฟล์และเวลาทั้งหมดเป็นการเล่า ไม่มี release note มาอ้าง ไม่แก้ raw และรักษาการแก้ไขค้างเดิมไว้
