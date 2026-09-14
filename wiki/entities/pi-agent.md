@@ -3,8 +3,8 @@ title: pi
 type: entity
 tags: [product, tool, agents, terminal, typescript]
 created: 2026-04-28
-updated: 2026-07-04
-sources: [mario-zechner-pi-agent.md, building-pi-world-of-slop.md, improved-15-llms-harness-changed.md, code-isnt-free-mario-zechner-hard-truths-coding-ai.md]
+updated: 2026-09-12
+sources: [mario-zechner-pi-agent.md, building-pi-world-of-slop.md, improved-15-llms-harness-changed.md, code-isnt-free-mario-zechner-hard-truths-coding-ai.md, dillon-mulroy-ships-production-code-he-didnt-write.md]
 ---
 
 # pi (pi.dev) / ไพ
@@ -36,6 +36,16 @@ Mario ไม่ได้ใช้ pi เป็นกองทัพ agent ที
 
 **ผลคือ:** pi ในมือ Mario ไม่ใช่เครื่องมือแทน judgement. มันเป็นเครื่องมือเร่ง analysis, exploration, และ implementation หลังคนวาง guardrail แล้ว.
 
+## วิธีใช้ของ Dillon Mulroy
+
+[[dillon-mulroy|Dillon Mulroy]] ใช้ pi ด้วยเหตุผลคล้าย Mario เขาต้องการ harness ที่ core เล็ก system prompt สั้น tool น้อย และไม่เปลี่ยน behavior ถี่ เขาใช้ `/tree` แยกการสำรวจ framework, storage และ test setup เป็นกิ่ง แล้วคัดเฉพาะ summary ที่ตัวเองเห็นว่าจำเป็นกลับเข้าสายหลัก
+
+Dillon เรียกวิธีนี้ว่าใกล้กับการเป็น subagent ของตัวเอง มนุษย์เป็นคนเลือก context แทนปล่อยให้ core agent ตัดสินว่า summary ใดควรกลับมา ข้อดีคือ control สูง ข้อเสียคือใช้แรงและต้องมี intuition เรื่อง model context มาก
+
+จากนั้นเขาค่อยสร้าง spec ที่ประกอบด้วย TypeScript types, interfaces, call stack และ test ก่อนให้ pi implement และใช้ [[plannotator|Plannotator]] ส่ง comment จาก plan หรือ local diff กลับเข้า session
+
+**ได้อะไร:** pi รองรับ workflow สองแบบที่ไม่เหมือนกัน Mario ใช้ agent เป็นคู่คิดและยังลง code เองมาก ส่วน Dillon ให้ agent ลง implementation เกือบหมด แต่ทั้งคู่ยังเก็บ architecture, review และ accountability ไว้กับคน
+
 ## Fork และการทดลอง harness
 
 [[oh-my-pi|oh-my-pi]] ของ [[can-boluk|Can Bölük]] เป็น fork ที่หยิบ pi มาเป็นฐานสำหรับทดลอง harness แบบ model-agnostic — รวม [[hashline|Hashline]] edit tool และ react-edit-benchmark; ดู [[improved-15-llms-harness-changed]]
@@ -44,6 +54,9 @@ Mario ไม่ได้ใช้ pi เป็นกองทัพ agent ที
 
 - [[mario-zechner]]
 - [[code-isnt-free-mario-zechner-hard-truths-coding-ai]]
+- [[dillon-mulroy-ships-production-code-he-didnt-write]]
+- [[dillon-mulroy]]
+- [[plannotator]]
 - [[oh-my-pi]]
 - [[can-boluk]]
 - [[tree-structured-sessions]]

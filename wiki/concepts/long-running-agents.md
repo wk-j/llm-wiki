@@ -3,8 +3,8 @@ title: Long-running Agents / Agent ที่อยู่ข้ามวัน
 type: concept
 tags: [ai, agents, long-running, architecture, memory, orchestration]
 created: 2026-04-23
-updated: 2026-07-04
-sources: [google-cloud-long-running-agent-patterns.md, l8-principals-agentic-engineering-workflow-kun-chen.md, aom-fable-elysia-2-audit.md, stop-building-ai-agents-old-way.md]
+updated: 2026-09-10
+sources: [google-cloud-long-running-agent-patterns.md, l8-principals-agentic-engineering-workflow-kun-chen.md, aom-fable-elysia-2-audit.md, stop-building-ai-agents-old-way.md, boris-cherny-cut-80-percent-claude-code-prompt.md]
 ---
 
 # Long-running Agents / Agent ที่อยู่ข้ามวัน
@@ -163,6 +163,14 @@ Addy ให้คำถามตัดสินใจง่าย ๆ:
 
 **ได้อะไร:** long-running agent มีได้สองระดับ: platform pattern สำหรับ state/durability และ control pattern สำหรับไม่ให้ executor หลุดเป้าระหว่างทำงาน.
 
+## Opus 5: รันนานขึ้น แต่ duration ยังไม่ใช่ completion
+
+ใน [[boris-cherny-cut-80-percent-claude-code-prompt|บทสัมภาษณ์กับ Y Combinator]] [[boris-cherny|Boris Cherny]] อ้างว่า [[claude-opus-5|Opus 5]] ทำงานกับ auto mode ต่อเนื่องได้เป็นวัน สัปดาห์ หรือเดือน และเล่า task rewrite Electron เป็น Swift ที่ยังรันอยู่หลัง 14-15 วัน ตัว agent มี macOS runner, เปิด app สองรุ่น, จับ screenshot เทียบ pixel และโพสต์ progress ลง Slack
+
+เคสนี้เพิ่มหลักฐานเรื่อง endurance แต่ยังไม่เพิ่มหลักฐานเรื่อง completion เพราะงานไม่เสร็จตอนสัมภาษณ์. Long-running ที่ดีจึงยังต้องแยก metric อย่างน้อยสามตัว: อยู่รอดนานแค่ไหน, เข้าใกล้ exit criteria แค่ไหน และหลักฐานสุดท้ายผ่านหรือไม่
+
+**ผลคือ:** “ไม่หยุด” เป็น capability หนึ่ง แต่ระบบที่ดีต้องรู้ด้วยว่าเมื่อไรควรหยุดและส่งอะไรมาให้คนตัดสิน
+
 ## See also
 
 - [[google-cloud-long-running-agent-patterns]]
@@ -178,6 +186,9 @@ Addy ให้คำถามตัดสินใจง่าย ๆ:
 - [[auto-mode]]
 - [[agent-swarm]]
 - [[advisor-strategy]]
+- [[boris-cherny-cut-80-percent-claude-code-prompt]]
+- [[claude-opus-5]]
+- [[model-elicitation]]
 - [[claude-code-session-management]]
 - [[loop-engineering]]
 - [[stop-building-ai-agents-old-way]]

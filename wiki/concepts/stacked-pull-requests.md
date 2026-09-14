@@ -3,8 +3,8 @@ title: Stacked Pull Requests
 type: concept
 tags: [git, pull-requests, code-review, workflow, ci, agents]
 created: 2026-08-04
-updated: 2026-08-15
-sources: [about-stacked-pull-requests-github-docs.md, software-is-made-between-commits.md]
+updated: 2026-09-12
+sources: [about-stacked-pull-requests-github-docs.md, software-is-made-between-commits.md, dillon-mulroy-ships-production-code-he-didnt-write.md]
 ---
 
 # Stacked Pull Requests / Pull Request แบบต่อกันเป็นชั้น
@@ -76,6 +76,14 @@ Stack เหมาะกับ change ที่มีลำดับพึ่ง
 4. ทีมรู้ว่าจะ merge, rebase และ rollback จากล่างขึ้นบนอย่างไรหรือไม่?
 5. stack สั้นพอให้คนเห็นภาพรวมจากแผนที่เดียวหรือไม่?
 
+## Dillon ใช้ stack เพื่อรักษาขนาดที่อ่านไหว
+
+[[dillon-mulroy|Dillon Mulroy]] บอกว่าเขาพยายามจำกัด atomic change หรือ PR หนึ่งตัวไว้ราว 300 ถึง 800 บรรทัด ถ้าฐานยังไม่ merge ก็แตก branch ถัดไปต่อบน branch นั้นแล้วเปิด PR เข้าหากันเป็น stack
+
+ตัวเลขนี้เป็น heuristic ส่วนตัว ไม่ใช่มาตรฐานว่า PR 800 บรรทัดปลอดภัยเสมอ จุดที่ใช้ร่วมกับหลักในหน้านี้ได้คือแต่ละชั้นต้อง scoped, atomic และเล็กพอให้เจ้าของงานอ่านทุกบรรทัดโดยไม่ล้า เมื่อ agent เขียน code เร็วขึ้น stack จึงทำหน้าที่เป็น backpressure ฝั่ง comprehension ไม่ใช่แค่ช่วยให้ developer เดินงานต่อ
+
+**ได้อะไร:** PR เล็กยังเป็นหน่วยคุม accountability แม้ implementation จะมาจาก agent
+
 ## See also
 
 - [[about-stacked-pull-requests-github-docs]]
@@ -86,3 +94,5 @@ Stack เหมาะกับ change ที่มีลำดับพึ่ง
 - [[orchestration-tax]]
 - [[conversation-code-provenance]]
 - [[software-is-made-between-commits]]
+- [[dillon-mulroy-ships-production-code-he-didnt-write]]
+- [[dillon-mulroy]]

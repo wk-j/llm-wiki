@@ -3,8 +3,8 @@ title: Dynamic Workflows
 type: concept
 tags: [ai, claude-code, agents, subagents, orchestration, large-scale-changes]
 created: 2026-05-29
-updated: 2026-08-25
-sources: [Piyalitt Ittichaiwong - Opus 4.8 Launch Recap.md, aom-fable-elysia-2-audit.md, zoran-horvat-claude-no-planning-engine.md, planning-mode-dangerous-illusion.md, bun-in-rust.md]
+updated: 2026-09-10
+sources: [Piyalitt Ittichaiwong - Opus 4.8 Launch Recap.md, aom-fable-elysia-2-audit.md, zoran-horvat-claude-no-planning-engine.md, planning-mode-dangerous-illusion.md, bun-in-rust.md, boris-cherny-cut-80-percent-claude-code-prompt.md]
 ---
 
 # Dynamic Workflows / เวิร์กโฟลว์แบบไดนามิก
@@ -35,6 +35,16 @@ Claude Code + Opus 4.8 **migrate codebase ที่มี code หลายแ�
 สิ่งที่ทำให้น่าเชื่อไม่ใช่จำนวน agent แต่คือ harness รอบมัน: `PORTING.md`, `LIFETIMES.tsv`, trial run 3 ไฟล์, [[adversarial-review-loops|adversarial review loops]], compiler errors เป็น queue, worktree sharding, CI หลาย platform, fuzzing และ test suite เดิมที่เขียนด้วย TypeScript.
 
 **ได้อะไร:** dynamic workflow ใช้ได้กับงานใหญ่เมื่อ "done" ถูกผูกกับ proof ที่ตรวจได้. ถ้ามีแค่ agent เยอะ แต่ไม่มี compiler/test/CI/reviewer แยกบทบาท มันจะกลายเป็น output storm ที่คนต้องมานั่งกู้เอง.
+
+## Boris อธิบาย orchestration เป็น algebra (2026-09)
+
+ใน [[boris-cherny-cut-80-percent-claude-code-prompt|บทสัมภาษณ์กับ Y Combinator]] [[boris-cherny|Boris Cherny]] อธิบาย dynamic workflows ว่าเป็น algebra สำหรับประกอบ agent แบบ sequence และ parallel งานหนึ่งอาจ fan-out ให้ agent ชุดแรกสำรวจ แล้วให้ชุดสอง verify หรือสรุป ก่อน fan-out อีกรอบ ทั้งหมดรันใน sandbox และใช้ test-time compute ตามโครงงานที่ model วาง
+
+เขาเดาว่างาน rewrite Claude Desktop จาก Electron เป็น Swift ที่รันเกินสองสัปดาห์อาจใช้ agent หลักพันหรือหลักหมื่น แต่ยอมรับว่าไม่รู้ตัวเลขจริง จึงไม่ควรใช้เลขนี้เป็น telemetry สิ่งที่ยืนยันได้จากคำเล่าคือ top-level prompt ให้ app ใหม่เทียบ screenshot กับ app เดิม pixel ต่อ pixel และงานยังไม่เสร็จตอนสัมภาษณ์
+
+Boris ยังแยก dynamic workflow ออกจาก loop/routine: workflow แตกงานเดียวเป็นหลาย stage ที่แชร์เป้าหมาย ส่วน routine รันงานซ้ำตามเวลาและอาจแชร์ memory แต่ไม่จำเป็นต้องแชร์ context ทุกครั้ง
+
+**ผลคือ:** จำนวน agent เป็นรายละเอียดภายใน สิ่งที่ควรวัดคือ stage ส่ง evidence อะไรให้ stage ถัดไป และ exit condition ปิดงานได้จริงหรือไม่
 
 ## ทำไมต้องมาคู่กับ Opus 4.8
 
@@ -75,3 +85,6 @@ Claude Code + Opus 4.8 **migrate codebase ที่มี code หลายแ�
 - [[plan-mode-as-prompting]]
 - [[bun-in-rust]]
 - [[adversarial-review-loops]]
+- [[boris-cherny-cut-80-percent-claude-code-prompt]]
+- [[claude-opus-5]]
+- [[model-elicitation]]

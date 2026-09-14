@@ -3,8 +3,8 @@ title: Specs-to-Code
 type: concept
 tags: [ai-coding, automation, workflow, hype]
 created: 2026-05-09
-updated: 2026-08-25
-sources: [matt-pocock-software-fundamentals.md, "Stop Writing Specs. Start Writing Facts. The Entire SDD Movement Is Already Obsolete..md", new-skills-v1-1-wayfinder-research-implement-to-spec-to-tickets.md]
+updated: 2026-09-12
+sources: [matt-pocock-software-fundamentals.md, "Stop Writing Specs. Start Writing Facts. The Entire SDD Movement Is Already Obsolete..md", new-skills-v1-1-wayfinder-research-implement-to-spec-to-tickets.md, dillon-mulroy-ships-production-code-he-didnt-write.md]
 ---
 
 # Specs-to-Code / จากสเปกสู่โค้ด (โดยไม่ดูไส้ใน)
@@ -38,6 +38,16 @@ sources: [matt-pocock-software-fundamentals.md, "Stop Writing Specs. Start Writi
 
 **ผลคือ:** `/to-spec` เป็น handoff ใน engineering lifecycle ไม่ใช่เครื่อง compile prose เป็น code ที่ไว้ใจได้ทันที.
 
+## Spec ที่เหมือน code ของ Dillon ไม่ใช่การไม่ดูไส้ใน
+
+[[dillon-mulroy|Dillon Mulroy]] ใช้คำว่า tech spec แต่ artifact ของเขาไม่ใช่ PRD ยาว เขาค่อย ๆ ตกลงกับ agent ผ่าน TypeScript types, interfaces, system boundary, call stack, input/output/error และ test แล้วอ่าน implementation ทุกบรรทัดหลัง model ลงมือ
+
+วิธีนี้หลบกับดักหลักของ Specs-to-Code สองชั้น คนยังเป็นเจ้าของ composition ของ abstraction และยังตรวจ code จริง ส่วน test ที่เขียนและรันได้ทำหน้าที่เป็น [[facts-first|executable fact]] ไม่ใช่ prose ที่ model ตีความใหม่อย่างเดียว
+
+แต่ type กับ call stack ก็ยังไม่พิสูจน์ product behavior หรือ edge case ทั้งหมด วิธีนี้จึงเพิ่ม counterexample ที่มีวินัย ไม่ได้ลบคำเตือนเดิมเรื่อง spec drift, entropy และ false confidence
+
+**ผลคือ:** ปัญหาไม่ใช่คำว่า spec แต่อยู่ที่ spec มี boundary ที่ตรวจได้ไหม และคนยังอ่านสิ่งที่ ship หรือเปล่า
+
 ## ดูเพิ่ม
 - [[matt-pocock]]
 - [[vibe-coding]]
@@ -47,3 +57,5 @@ sources: [matt-pocock-software-fundamentals.md, "Stop Writing Specs. Start Writi
 - [[spec-driven-development]] — movement เต็มรูปของแนวคิดนี้ พร้อมขอบเขตที่มันยังชนะ
 - [[facts-first]] — ข้อเสนอทดแทน: เขียน fact ที่รันได้แทน spec ที่ต้องตีความ
 - [[new-skills-v1-1-wayfinder-research-implement-to-spec-to-tickets]]
+- [[dillon-mulroy-ships-production-code-he-didnt-write]]
+- [[dillon-mulroy]]

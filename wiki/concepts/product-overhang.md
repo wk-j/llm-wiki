@@ -3,8 +3,8 @@ title: Product Overhang
 type: concept
 tags: [ai, economics, product-design, capabilities]
 created: 2026-04-27
-updated: 2026-04-27
-sources: [thclaws-announcement-panutat.md]
+updated: 2026-09-10
+sources: [thclaws-announcement-panutat.md, boris-cherny-cut-80-percent-claude-code-prompt.md]
 ---
 
 # Product Overhang / ความสามารถส่วนเกินของโมเดล
@@ -23,8 +23,22 @@ sources: [thclaws-announcement-panutat.md]
 - **ไม่ใช่แค่ Wrapper:** การแค่ต่อ API แล้วส่ง prompt ไปเฉยๆ (LLM Wrapper) ไม่เพียงพอที่จะปลดล็อก Product Overhang ได้
 - **Logic รอบข้างคือหัวใจ:** งานสร้าง AI Agent ยุคใหม่ หัวใจอยู่ที่การสร้าง infrastructure (เช่น loop การคิด, sandbox, หรือการบีบอัด context) เพื่อเป็นสะพานเชื่อมให้ model ปล่อยของออกมาได้เต็มที่
 
+## Boris Cherny: overhang กับ hobbling เป็นสองด้านของเรื่องเดียวกัน
+
+ใน [[boris-cherny-cut-80-percent-claude-code-prompt|บทสัมภาษณ์กับ Y Combinator]] [[boris-cherny|Boris Cherny]] ให้นิยามจากฝั่งผู้สร้าง Claude Code: **product overhang** คือ model วันนี้ทำได้แล้วแต่ product ยังไม่มีทางให้มันแสดงออก ส่วน **hobbling** คือ product หรือ harness ใส่ขั้นตอนมากจนขวางความสามารถนั้น
+
+ตัวอย่างแรกของ Claude Code คือเลิกจำกัด Claude 3.5 Sonnet ไว้ที่ autocomplete หรือ read-only chat แล้วให้ terminal กับ write access ตัวอย่างรุ่นใหม่คือใช้ [[prompt-ablation|prompt ablation]] ลบคำสั่งที่เคยชดเชย model เก่า และใช้ [[model-elicitation|model elicitation]] โยนโจทย์ยากขึ้นพร้อม verifier เพื่อค้นว่ารุ่นใหม่ไปได้ไกลแค่ไหน
+
+มุมนี้เติม caveat ให้ข้อความเดิมที่ว่า “logic รอบข้างคือหัวใจ”: harness มีค่าเมื่อเปิด tool, context, feedback และ safety boundary แต่ logic ที่คิดแทน model มากเกินอาจกลายเป็น hobbling จึงไม่ใช่ยิ่งมี harness code มากยิ่งดี
+
+**ได้อะไร:** งาน product คือหา boundary ที่พอดี เปิดความสามารถให้ model แต่ยังล็อกความเสียหายที่ยอมรับไม่ได้
+
 ## ดูเพิ่ม
 - [[harness-engineering]]
 - [[claude-code]]
 - [[thclaws]]
 - [[panutat-tejasen]]
+- [[boris-cherny]]
+- [[boris-cherny-cut-80-percent-claude-code-prompt]]
+- [[prompt-ablation]]
+- [[model-elicitation]]

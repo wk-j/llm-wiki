@@ -3,8 +3,8 @@ title: David Heinemeier Hansson (DHH)
 type: entity
 tags: [people, programming, ai, linux]
 created: 2026-09-06
-updated: 2026-09-07
-sources: [dhh-ai-programming-setup-lex-clips.md, dhh-strategies-programming-with-ai-agents-lex-clips.md, i-was-replaced-by-ai-typecraft.md]
+updated: 2026-09-10
+sources: [dhh-ai-programming-setup-lex-clips.md, dhh-strategies-programming-with-ai-agents-lex-clips.md, i-was-replaced-by-ai-typecraft.md, cafkafk-nixos-omarchy-critique.md]
 ---
 
 # David Heinemeier Hansson (DHH) / ผู้สร้าง Ruby on Rails
@@ -45,6 +45,12 @@ DHH ย้ายจาก TextMate ที่ใช้เกือบ 20 ปี�
 
 สองเรื่องนี้ช่วยให้ [[creative-ownership|Creative Ownership]] เก็บได้ทั้งความหมายจากการเขียนเองและจากการกำหนดทิศให้ agent ยังตอบไม่ได้ว่าความต่างมาจากตัวงาน อิสระของคนทำ หรือจังหวะของ workflow มากกว่ากัน
 
+## คำวิจารณ์จาก cafkafk เรื่อง NixOS
+
+[[cafkafk-nixos-omarchy-critique|โพสต์ของ cafkafk]] บอกว่า DHH เคยใช้คำดูถูกคนใน Nix และ Linux ecosystem พร้อมเรียก Nix ว่า “amazing technology” ก่อนมีข่าวว่าเขาวางแผนให้ [[omarchy|Omarchy]] ใช้ [[nixos|NixOS]] เป็นฐาน cafkafk มองว่าท่าทีนี้เอางานของชุมชนมาใช้พร้อมเหยียดคนทำ และชี้ว่า governance, package, security, infrastructure, release engineering, review กับ maintenance ล้วนเป็นงานหลักของ distribution
+
+หน้านี้ยังไม่ยืนยันคำพูดหรือแผนย้ายเป็นข้อเท็จจริงจาก DHH เพราะข้อความที่ได้รับไม่มีโพสต์ต้นทางหรือประกาศของ Omarchy จึงเก็บเป็นคำวิจารณ์ที่ระบุผู้พูดชัดเจน
+
 ## See also
 
 - [[dhh-ai-programming-setup-lex-clips]]
@@ -58,3 +64,6 @@ DHH ย้ายจาก TextMate ที่ใช้เกือบ 20 ปี�
 - [[tailscale]]
 - [[creative-ownership]]
 - [[attention-bottleneck]]
+- [[cafkafk-nixos-omarchy-critique]]
+- [[nixos]]
+- [[open-source-governance]]

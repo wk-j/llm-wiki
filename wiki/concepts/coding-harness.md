@@ -3,8 +3,8 @@ title: Coding Harness
 type: concept
 tags: [ai, tools, agents, software-engineering, harness]
 created: 2026-04-18
-updated: 2026-08-16
-sources: [alex-ker-harnesses-optimize.md, building-pi-world-of-slop.md, Agent Harness Engineering.md, software-writing-software-gone-right.md, improved-15-llms-harness-changed.md, "Introducing Omnigent A Meta-Harness to Combine, Control and Share Your Agents.md", "Matt Pocock’s Agentic Engineering Workflow (just copy him).md", "i don't want to use your agent — @RhysSullivan.md", l8-principals-agentic-engineering-workflow-kun-chen.md, aom-fable-elysia-2-audit.md, zoran-horvat-claude-no-planning-engine.md, planning-mode-dangerous-illusion.md, stop-building-ai-agents-old-way.md, the-new-software-lifecycle.md]
+updated: 2026-09-10
+sources: [alex-ker-harnesses-optimize.md, building-pi-world-of-slop.md, Agent Harness Engineering.md, software-writing-software-gone-right.md, improved-15-llms-harness-changed.md, "Introducing Omnigent A Meta-Harness to Combine, Control and Share Your Agents.md", "Matt Pocock’s Agentic Engineering Workflow (just copy him).md", "i don't want to use your agent — @RhysSullivan.md", l8-principals-agentic-engineering-workflow-kun-chen.md, aom-fable-elysia-2-audit.md, zoran-horvat-claude-no-planning-engine.md, planning-mode-dangerous-illusion.md, stop-building-ai-agents-old-way.md, the-new-software-lifecycle.md, boris-cherny-cut-80-percent-claude-code-prompt.md]
 ---
 
 # Coding Harness / ตัวครอบของ Coding Agent
@@ -95,6 +95,14 @@ Addy เพิ่มวินัยสำคัญให้คำว่า harne
 harness ไม่หาย แต่เนื้อในเปลี่ยน. ตัวอย่างที่ยังต้องอยู่ใน harness คือ **computer use** — Cursor มี subagent type เฉพาะ มี model routing/prompt/screen recording ของตัวเอง (เพราะ model ยังทำเองล้วน ๆ ไม่ได้) แต่ agent ยังเลือกเองว่าจะเรียกตอนไหน. อีกจุด: cloud agent ต้อง prompt ให้ **autonomous กว่า local** เพราะ cost ของการบล็อกสูง — agent อาจนั่งรอ permission เป็นชั่วโมงโดยไม่มีคนเห็น (ต่อกับ [[orchestration-tax]]). ก้าวถัดไปคือ [[self-healing-environments]].
 
 **ได้อะไร:** harness boundary ไม่ใช่ของตายตัว — ทบทวนเป็นระยะว่า logic ไหนเลื่อนไปให้ agent คุมเองได้แล้ว ทุกครั้งที่ model อัปเกรด
+
+## Prompt ablation: harness ต้องหดได้ด้วย
+
+[[boris-cherny|Boris Cherny]] ให้ตัวอย่างที่ตรงกว่าจากฝั่งผู้สร้าง [[claude-code|Claude Code]] ใน [[boris-cherny-cut-80-percent-claude-code-prompt|บทสัมภาษณ์กับ Y Combinator]] ตอน [[claude-opus-5|Opus 5]] ออก ทีมลบ system prompt ทั้งก้อนแล้วเพิ่มกลับทีละบรรทัดตามผล eval สุดท้ายตัดออกไปราว 80% Tool กับ code ใน harness ก็ถูกทบทวนแบบเดียวกัน
+
+นี่ทำให้ [[harness-ratchet|harness ratchet]] ต้องเดินได้สองทิศ: เพิ่ม control เมื่อ failure เกิดซ้ำ และถอด control เมื่อ model รุ่นใหม่ไม่ต้องใช้หรือเมื่อ control นั้นขวาง [[model-elicitation|ความสามารถของ model]] สิ่งที่ยังต้องคงไว้คือ contract ของ product กับ safety boundary ที่บังคับจากภายนอก เช่น permission, sandbox, static analysis และ audit
+
+**ได้อะไร:** harness ที่เรียนรู้ไม่ใช่ harness ที่โตไม่หยุด แต่เป็น harness ที่แต่ละชิ้นยังพิสูจน์หน้าที่ของตัวเองได้
 
 ## สองความหมายของคำว่า "harness"
 

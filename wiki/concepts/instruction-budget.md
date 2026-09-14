@@ -3,8 +3,8 @@ title: Instruction Budget
 type: concept
 tags: [ai, llm, prompt-engineering, attention, harness]
 created: 2026-04-18
-updated: 2026-04-23
-sources: [alex-ker-harnesses-optimize.md]
+updated: 2026-09-10
+sources: [alex-ker-harnesses-optimize.md, boris-cherny-cut-80-percent-claude-code-prompt.md]
 ---
 
 # Instruction Budget / งบคำสั่งของ LLM
@@ -41,6 +41,14 @@ sources: [alex-ker-harnesses-optimize.md]
 -   **อย่าใส่ rule ที่เป็น behavioral detail** ลงในไฟล์หลัก — ให้ย้ายไปไว้ในไฟล์ skill แยก แล้วใช้ [[progressive-disclosure]] เพื่อดึงมาใช้เมื่อจำเป็น
 -   **ใช้คำอธิบาย skill/MCP tool ที่ชัดเจนและมี keyword-rich** — เพื่อให้ model สามารถค้นหาเครื่องมือเจอได้เร็วโดยไม่ต้อง load body ทั้งหมด
 
+## งบไม่ได้แค่เต็ม แต่กฎเก่าอาจติดหนี้ไว้
+
+[[boris-cherny|Boris Cherny]] ให้กรณีตรงจาก Claude Code ใน [[boris-cherny-cut-80-percent-claude-code-prompt|บทสัมภาษณ์กับ Y Combinator]]: เมื่อ [[claude-opus-5|Opus 5]] ทำสิ่งที่ model รุ่นก่อนต้องคอยเตือนได้เอง ทีมตัด system prompt ออกราว 80% ใน simple-mode experiment model บางครั้งดูฉลาดขึ้นเมื่อเอาคำสั่งเดิมออก
+
+นี่เพิ่มมิติใหม่จาก “อย่าเขียนกฎมากจนเกิน budget” เป็น “กฎที่เคยคุ้มอาจหมดอายุ” วิธีจัดการคือ [[prompt-ablation|prompt ablation]] แล้วเพิ่มกลับเฉพาะกฎที่แก้ failure ซ้ำ ๆ ได้ ไม่ใช่ลบจากความรู้สึกหรือเก็บไว้จากความเคยชิน
+
+**ผลคือ:** instruction budget เป็นงบที่ต้อง audit ตาม model generation ไม่ใช่พื้นที่ที่เติมแล้วไม่เคยเคลียร์
+
 ## ความเชื่อมโยงกับประเด็นอื่น
 
 -   [[claude-md]] — CLAUDE.md คือที่ที่ instruction budget ถูกใช้เปลืองที่สุด; [[cyril-xbt|Cyril]] สนับสนุน template 7 ส่วนเต็ม, ในขณะที่ Alex Ker สนับสนุน minimal — อ่านตารางเปรียบเทียบใน `[[claude-md]]`
@@ -61,3 +69,5 @@ sources: [alex-ker-harnesses-optimize.md]
 - [[context-rot]]
 - [[compaction]]
 - [[llm-coding-pitfalls]]
+- [[prompt-ablation]]
+- [[boris-cherny-cut-80-percent-claude-code-prompt]]

@@ -3,8 +3,8 @@ title: Fable
 type: entity
 tags: [ai, agents, models, anthropic, code-review]
 created: 2026-07-02
-updated: 2026-07-17
-sources: [aom-fable-elysia-2-audit.md, a-field-guide-to-fable-finding-your-unknowns.md, fables-judgement-simon-willison.md, bun-in-rust.md, gpt-5-6-sol-fable-killer-prompt-engineering.md, kimi-k3-explained-prompt-engineering.md]
+updated: 2026-09-12
+sources: [aom-fable-elysia-2-audit.md, a-field-guide-to-fable-finding-your-unknowns.md, fables-judgement-simon-willison.md, bun-in-rust.md, gpt-5-6-sol-fable-killer-prompt-engineering.md, kimi-k3-explained-prompt-engineering.md, boris-cherny-cut-80-percent-claude-code-prompt.md, dillon-mulroy-ships-production-code-he-didnt-write.md]
 ---
 
 # Fable / เฟเบิล
@@ -61,6 +61,18 @@ Thariq อ้างว่า Fable เป็น model ตัวแรกที�
 
 ยังไม่มี report 104 ข้อใน wiki และยังไม่ได้ verify ว่าปัญหาแต่ละข้อจริงหรือสำคัญแค่ไหน. ดังนั้นหน้านี้ไม่ควรสรุปว่า Fable "ถูกกว่า" agent อื่นทั้งหมด. สิ่งที่ยืนยันได้จาก source คือ Aom รับรู้ว่า report ของ Fable ลึกและ actionable กว่าการ review ที่เขาเคยได้จาก model อื่นในงานนี้.
 
+## ยังไม่รวม Fable เข้ากับ Opus 5
+
+ใน [[boris-cherny-cut-80-percent-claude-code-prompt|บทสัมภาษณ์ Boris Cherny]] เขาเล่าเคส Bun ว่า “starting with Fable” model เริ่ม rewrite ได้ แล้วพูดต่อว่า [[claude-opus-5|Opus 5]] ก็น่าจะทำได้เช่นกัน ประโยคนี้แยกชื่อทั้งสองออกจากกันมากกว่ายืนยันว่า Fable เป็น codename ของ Opus 5 จึงคง entity แยกไว้จนกว่าจะมีแหล่งทางการบอกความสัมพันธ์ชัดเจน
+
+## ข้อคัดค้านจาก production use ของ Dillon
+
+[[dillon-mulroy|Dillon Mulroy]] เรียก Fable ว่า non-starter สำหรับบริษัทอย่าง Cloudflare ใน [[dillon-mulroy-ships-production-code-he-didnt-write|บทสัมภาษณ์กับ Jan-Niklas Wortmann]] เขาให้เหตุผลสองข้อ หนึ่งคือไม่มี zero data retention ตามที่เขาเข้าใจ สองคือ auto-mode อาจ downgrade ไป Opus 4.8 ระหว่าง session ทำให้เสีย control และต้องจ่าย prompt context ใหม่แทนได้ cache discount เดิม
+
+คำกล่าวนี้ผูกกับ product state ตอนสัมภาษณ์ 25 June 2026 และยังไม่ได้ตรวจจาก data-retention terms, routing docs หรือ billing docs ของ Anthropic จึงไม่ใช้ลบ field report ฝั่งที่ Fable ทำงานได้ดี และไม่สรุปว่านโยบายยังเหมือนเดิมในปัจจุบัน
+
+**ผลคือ:** capability ของ model กับความพร้อมใช้ในองค์กรเป็นคนละ gate ต่อให้ output ดี data policy, routing control และ cache economics ก็ทำให้ทีม production ปฏิเสธได้
+
 ## See also
 
 - [[field-guide-to-fable-finding-unknowns]]
@@ -83,3 +95,7 @@ Thariq อ้างว่า Fable เป็น model ตัวแรกที�
 - [[gpt-5-6-sol]]
 - [[kimi-k3-explained-prompt-engineering]]
 - [[kimi-k3]]
+- [[claude-opus-5]]
+- [[boris-cherny-cut-80-percent-claude-code-prompt]]
+- [[dillon-mulroy-ships-production-code-he-didnt-write]]
+- [[dillon-mulroy]]

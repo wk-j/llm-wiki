@@ -3,8 +3,8 @@ title: Orchestration Tax
 type: concept
 tags: [ai, agents, productivity, attention, orchestration, concurrency, bottleneck]
 created: 2026-05-29
-updated: 2026-09-06
-sources: [The Orchestration Tax.md, How to Keep Shipping When You Walk Away from Your Desk — Zack Proser, WorkOS.md, Agentic Code Review.md, "รู้จักกับ Loop Engineering — mikelopster transcript", techsauce-ai-brain-fry.md, l8-principals-agentic-engineering-workflow-kun-chen.md, aom-fable-elysia-2-audit.md, how-ai-became-more-expensive-than-workers-it-replaced.md, stop-building-ai-agents-old-way.md, code-isnt-free-mario-zechner-hard-truths-coding-ai.md, piyalitt-codex-keynote-attention-not-token.md, bun-in-rust.md, the-new-software-lifecycle.md, dhh-ai-programming-setup-lex-clips.md]
+updated: 2026-09-10
+sources: [The Orchestration Tax.md, How to Keep Shipping When You Walk Away from Your Desk — Zack Proser, WorkOS.md, Agentic Code Review.md, "รู้จักกับ Loop Engineering — mikelopster transcript", techsauce-ai-brain-fry.md, l8-principals-agentic-engineering-workflow-kun-chen.md, aom-fable-elysia-2-audit.md, how-ai-became-more-expensive-than-workers-it-replaced.md, stop-building-ai-agents-old-way.md, code-isnt-free-mario-zechner-hard-truths-coding-ai.md, piyalitt-codex-keynote-attention-not-token.md, bun-in-rust.md, the-new-software-lifecycle.md, dhh-ai-programming-setup-lex-clips.md, boris-cherny-cut-80-percent-claude-code-prompt.md]
 ---
 
 # Orchestration Tax / ภาษีค่าควบคุมวง
@@ -71,6 +71,12 @@ Addy ใช้สอง mental model จากวงการ performance engine
 
 **ผลคือ:** agent fleet ใหญ่ไม่ขัดกับ orchestration tax ถ้าระบบลดงานที่ไม่ต้องใช้ judgement ออกจริง. ถ้าไม่มี proof pipeline แบบนี้ ตัวเลข agent/commit/lines จะกลายเป็นคิวรอคนอ่าน.
 
+[[boris-cherny|Boris Cherny]] ขยาย scale อีกขั้นใน [[boris-cherny-cut-80-percent-claude-code-prompt|บทสัมภาษณ์กับ Y Combinator]] เขาเดาว่างาน Swift ที่รันเกินสองสัปดาห์อาจเปิด agent หลักพันหรือหลักหมื่น และบอกว่าทีม Claude Code มี routine 20-30 ตัวที่ใช้ agent หลักร้อยถึงหลักพันต่อวันเพื่อหา dead code, ลบ experiment, ดู test และรวม abstraction ซ้ำ
+
+ตัวเลขนี้ยังไม่หักล้าง orchestration tax เพราะ transcript ไม่ให้ acceptance rate, PR merge rate, defect rate, token cost หรือเวลาคน review สิ่งที่อาจลดภาษีจริงคือ dynamic workflow มี stage สรุป/verify และงาน Swift เทียบ screenshot เองระหว่างทาง แต่ judgement ว่า rewrite ใช้งานได้และควร ship ยังเป็น serial gate
+
+**ได้อะไร:** telemetry ที่ควรขอจาก agent fleet ไม่ใช่แค่จำนวน worker แต่คือของที่ผ่าน verifier, ถูกยอมรับ และ merge ได้ต่อหน่วย attention ของคน
+
 ## Attention bottleneck — คอขวดที่ซื้อเพิ่มไม่ได้
 
 [[peter-steinberger|Peter Steinberger]] บนเวที Codex keynote (สรุป [[piyalitt-codex-keynote-attention-not-token]]) ตั้งชื่อใหม่ให้ภาพเดียวกันในมุมทรัพยากร: พอแก้ token และ compute แล้ว ข้อจำกัดหลักกลายเป็น **attention** — ต่างจากสองอย่างแรกตรงที่เพิ่มไม่ได้. ดูหน้า [[attention-bottleneck]] เต็ม ๆ
@@ -116,6 +122,7 @@ failure mode ที่อันตรายที่สุดคือมัน�
 - [[agentic-code-review]] — คำตอบระดับ review architecture: ไม่ใช่พยายามอ่านทุกบรรทัดให้เร็วขึ้น แต่ tier review ตาม blast radius, require evidence ก่อนรับ review, ใช้ AI reviewer เป็น sensor หลาย character, และเก็บ human judgement ไว้กับ path ที่พังแล้วเจ็บ. นี่คือวิธีใช้ "Only spend the lock on judgement" แบบเป็นระบบ
 - [[mikelopster-loop-engineering]] — หลัก feedback gate: loop ที่ไม่มี scorer ชัดจะเพิ่มงานค้างให้คนตรวจ ไม่ได้เพิ่ม throughput จริง
 - [[the-new-software-lifecycle]] เพิ่มมุมต้นทุนรวม: model routing กับ context policy ลดค่า inference ได้ แต่ถ้า implementation เร็วขึ้นโดย verification ไม่โตตาม งานจะไปกองหน้าคน review อยู่ดี. ค่า token จึงเป็นเพียงส่วนหนึ่งของภาษี; rework, security cleanup และเวลาทำความเข้าใจ code ที่ agent สร้างก็ต้องนับด้วย
+- [[boris-cherny-cut-80-percent-claude-code-prompt]] เพิ่ม claim scale หลักพัน แต่ยังไม่มีข้อมูล acceptance/review/cost จึงเป็นโจทย์วัดผล ไม่ใช่หลักฐานว่าภาษีหายไป
 
 ## DHH: หลายงานช่วยให้เกิด flow แต่มีเพดานส่วนตัว
 

@@ -1355,3 +1355,73 @@ User flagged `ความตึงที่ยังเปิดอยู่` a
 **ข้อขัดแย้งที่เก็บไว้ทั้งสองด้าน ไม่ทับของเดิม:** (1) คลิปก่อน DHH ตั้งใจเรียน bash เพื่อไม่ให้ทักษะหาย คลิปนี้เขาไม่ได้เขียนเองมาสองเดือนกว่า เก็บทั้งคู่ไว้ใน `[[skill-atrophy]]` โดยแยกคำถาม "ยังเขียนเองไหม" ออกจาก "ยังตรวจงานเองได้ไหม" (2) `[[adversarial-review-loops]]` เก็บเคส Bun ที่ agent reviewer จับ bug ยากได้ไว้เดิม แล้วเพิ่มขอบเขตว่า objective แบบ "หาว่าผิดตรงไหน" ไม่จับความซับซ้อนเกินจำเป็น (3) คำพูดว่าไม่ต้องสั่ง "อย่าทำผิด" แล้วเพราะ harness รัน test เอง ไม่ได้ลบหลักฐานเรื่อง overclaiming progress ใน `[[llm-coding-pitfalls]]` กับ `[[model-honesty]]` (4) `[[world-models]]` แยกความหมายสองแบบให้ชัด คือความเข้าใจผลกระทบ กับ model ที่ generate โลกออกมา ไม่ปนกัน
 
 **ที่ยังตรวจไม่ได้:** ชื่อเฉพาะใน transcript เพี้ยนหลายคำ แก้จากบริบทเป็น Omarchy, Omacut, Ghostty, Herdr, VoxType, ElevenLabs, Wispr Flow ส่วน `Parrot model` ที่ VoxType ใช้ ผู้พูดเองก็บอกว่าจำไม่แน่ จึงไม่บันทึกชื่อ model และ `Omarchy Quattro` บันทึกตามที่ผู้พูดออกเสียงโดยยังไม่ได้ตรวจกับ release ของโครงการ ลองดึง transcript ตอนเต็มจาก lexfridman.com แล้วหน้าที่ได้กลับมาไม่มีช่วงนี้ ตัวเลขขนาดไฟล์และเวลาทั้งหมดเป็นการเล่า ไม่มี release note มาอ้าง ไม่แก้ raw และรักษาการแก้ไขค้างเดิมไว้
+
+## [2026-09-09] ingest | Claude Codes New INTENT.MD, What is It? — Rob Shocks
+สรุป transcript คลิป Rob Shocks เรื่อง AI-Native SDLC Playbook ของ Anthropic เป็น `[[claude-codes-new-intent-md-rob-shocks]]` แก่นคือ coding agent ย่นช่วง Build ลงจน requirement, review, test และ deploy กลายเป็นคอขวดรอบใหม่ Originator คุยกับ agent แล้วตรวจ `intent.md` เองก่อน product owner รับไปสร้าง `spec.md`; วิศวกรใช้ `intent.md` กับ `spec.md` ซัก `plan.md` ต่อให้มีไฟล์ ลำดับ risk และ proof; จากนั้น diff/test, PR/review และ incident record ต่อกันเป็น artifact chain ที่ version และตามรอยได้ Skills ใส่ policy ระหว่างสร้าง artifact, hooks บังคับ permission กับ deployment gate, worktree/subagent ช่วยทำงานขนาน และ regression eval ใช้ตรวจตอนเปลี่ยน model, skill หรือ workflow
+- Created source: `[[claude-codes-new-intent-md-rob-shocks]]`
+- Created concepts: `[[intent-md]]`, `[[artifact-chain]]`
+- Created entity: `[[rob-shocks]]`
+- Updated concepts: `[[ai-driven-sdlc]]`, `[[spec-driven-development]]`, `[[intent-gap]]`, `[[plan-mode-as-prompting]]`, `[[agentic-code-review]]`, `[[evals-and-error-analysis]]`
+- Updated entities: `[[anthropic]]`, `[[claude-code]]`, `[[boris-cherny]]`
+- Updated `[[index]]` and `hotcache.md`
+
+**เรื่องที่เก็บไว้ทั้งสองด้าน:** (1) `intent.md` ลดข้อมูลหายระหว่าง handoff แต่ยังเป็น prose จึงไม่ปิด intent gap หรือแทน executable facts (2) Playbook ใช้ Plan mode เป็น artifact ที่วิศวกรซักและอนุมัติ ไม่ได้ลบคำวิจารณ์ว่า plan ที่อ่านดีอาจพลาด product semantics (3) artifact chain สร้าง audit trail ได้ แต่เพิ่ม drift และ ceremony ถ้าไฟล์ไม่ sync กับ code (4) maintenance อัตโนมัติในคลิปต้องอ่านคู่กับต้นทางที่วาง deterministic trigger, scoped permission, PR gate และ human triage ไว้ (5) Rob ผสมคำแนะนำจาก playbook กับ discovery skill, Molten OS และคอร์สของตัวเอง พร้อม sponsor Neon ที่เปิดเผย
+
+**Provenance:** transcript มาจากผู้ใช้ วันที่เผยแพร่คลิปยังตรวจไม่ได้ ตรวจหน้า playbook อย่างเป็นทางการแล้วพบวันที่ 21 สิงหาคม 2026 และผู้เขียน Louis Claxton Rob เปิดคลิปโดยโยงเอกสารกับทีมที่รวม Boris Cherny แต่หน้าอย่างเป็นทางการไม่ได้ลงเครดิต Boris จึงเก็บเป็นคำบอกเล่าของ Rob ไม่แก้ raw
+
+## [2026-09-10] ingest | cafkafk on NixOS, Omarchy, and Respect for Maintainers
+สรุปโพสต์ X ของ cafkafk เป็น `[[cafkafk-nixos-omarchy-critique]]` แก่นคือ distribution ไม่ได้มีแค่ configuration กับ installer ที่คนเห็น แต่พึ่ง package, security, infrastructure, release engineering, review, maintenance และ governance ของ upstream ผู้เขียนจึงวิจารณ์ DHH ว่าชม Nix เป็น “amazing technology” พร้อมดูถูกคนใน ecosystem ก่อนมีข่าวว่า Omarchy จะใช้ NixOS เป็นฐาน และแย้งว่า Claude ที่ช่วยเขียน glue code ไม่ได้แทนคนดูแลงานข้างล่าง
+- Created source: `[[cafkafk-nixos-omarchy-critique]]`
+- Created entities: `[[cafkafk]]`, `[[nixos]]`, `[[nixpkgs]]`
+- Updated entities: `[[dhh]]`, `[[omarchy]]`, `[[x-twitter]]`
+- Updated concepts: `[[open-source-governance]]`, `[[software-ecology]]`
+- Updated `[[index]]` and `hotcache.md`
+
+**เรื่องที่เก็บไว้ทั้งสองด้าน:** หน้า Omarchy เดิมบันทึกว่าอยู่บน Arch จากบทสัมภาษณ์ DHH ส่วนโพสต์นี้รายงานแผนใช้ NixOS ในภายหลัง จึงไม่เขียนทับว่า migration เสร็จแล้ว คำดูถูกที่อ้างถึงยังเป็นคำเล่าของ cafkafk เพราะข้อความที่ได้รับไม่มีบทสนทนาต้นทางของ DHH และข้อสรุปว่า land acknowledgement ไม่ใช่เรื่องหลักของชุมชน NixOS ยังคงเป็นความเห็นของผู้เขียน ไม่ใช่ผลสำรวจ
+
+**Provenance:** ผู้ใช้ส่งข้อความโพสต์มาให้ครบ แต่ไม่มีเนื้อหาวิดีโอหรือ link ต้นทางของเหตุการณ์ก่อนหน้า วันที่เผยแพร่ 2026-09-09 ถอดจาก X post ID ไม่แก้ไฟล์ใน `raw/` และรักษาการแก้ไขค้างเดิมไว้
+
+## [2026-09-10] ingest | Boris Cherny: We Cut 80% of Claude Code's Prompt
+สรุป transcript บทสัมภาษณ์ Boris Cherny บนเวที Y Combinator Startup School 2026 เป็น `[[boris-cherny-cut-80-percent-claude-code-prompt]]` แก่นคือทุก model generation ต้องทดสอบ harness ใหม่ ทีม Claude Code ลบ system prompt ของ Opus 5 ออกราว 80% ด้วย prompt ablation แล้วเพิ่มกลับเฉพาะกฎที่แก้ failure ซ้ำ ๆ; eval อยู่ได้นานกว่า prompt แต่เมื่อคะแนนอิ่มตัวในหนึ่งถึงสามรุ่นก็ต้องสร้างชุดยากขึ้น; product overhang คือ model ทำได้แล้วแต่ product ยังเปิดทางไม่ถึง ส่วน hobbling คือ scaffolding ที่ขวาง model; งานยากควรให้ guardrail, exit criteria, tool และ verifier มากกว่า overspecify วิธีทำ
+- Created source: `[[boris-cherny-cut-80-percent-claude-code-prompt]]`
+- Created concepts: `[[prompt-ablation]]`, `[[model-elicitation]]`
+- Created entities: `[[claude-opus-5]]`, `[[y-combinator]]`
+- Updated entities: `[[boris-cherny]]`, `[[anthropic]]`, `[[claude]]`, `[[claude-code]]`, `[[fable]]`
+- Updated concepts: `[[product-overhang]]`, `[[dynamic-workflows]]`, `[[coding-harness]]`, `[[evals-and-error-analysis]]`, `[[long-running-agents]]`, `[[agent-runtime-untrusted]]`, `[[orchestration-tax]]`, `[[instruction-budget]]`, `[[claude-md]]`
+- Updated `[[index]]` and `hotcache.md`
+
+**เรื่องที่เก็บไว้ทั้งสองด้าน:** (1) claim ว่า Opus 5 + prompt-injection classifier + auto-mode classifier ทำให้ทีมยังสาธิต prompt injection ไม่ได้ ถูกเก็บเป็น defense เพิ่ม ไม่ได้ลบหลัก untrusted runtime หรือ sandbox/permission/audit (2) simple mode อาจทำให้ model ดูฉลาดขึ้น แต่ product ยังต้องมีคำสั่งกำหนด UX และ contract (3) Boris เรียก Bun rewrite ว่า one prompt ขณะที่ต้นทาง Bun มี prep และ workflow ราว 50 ตัว จึงแยก top-level objective ออกจาก execution detail (4) Fable กับ Opus 5 ยังเป็น entity แยก เพราะ Boris พูดถึงทั้งสองชื่อแยกกัน (5) agent หลักพันไม่ได้ลบ orchestration tax เพราะยังไม่มี acceptance, defect, cost และ review telemetry
+
+**Provenance:** ผู้ใช้ส่ง description และ transcript มาให้ครบ วันที่เผยแพร่วิดีโอและ syntax ของ simple mode ยังไม่ได้ยืนยันจากหน้า YouTube หรือเอกสารทางการ งาน Swift ยังรันไม่เสร็จตอนสัมภาษณ์และจำนวน agent เป็นการเดาของ Boris ไม่แก้ `raw/` และรักษาการแก้ไขค้างเดิมไว้
+
+## [2026-09-12] ingest | How a Cloudflare Engineer Ships Production Code He Didn't Write — Dillon Mulroy
+สรุป transcript บทสัมภาษณ์ Dillon Mulroy โดย Jan-Niklas Wortmann เป็น `[[dillon-mulroy-ships-production-code-he-didnt-write]]` แก่นคือ Dillon ให้ agent เขียน implementation เกือบหมดและ ship ได้มากกว่าเดิม แต่สนุกน้อยลง เหนื่อยขึ้น และแทบไม่เข้า flow เพราะ micro-problem ระหว่างลงมือหายไป วันทำงานจึงเหลือ macro design problem ต่อกัน เขายังอ่าน code ทุกบรรทัดและถือ accountability ไว้กับคน ผ่าน spec ที่เขียนเป็น TypeScript types, interfaces, call stack, error และ test, local review ด้วย Plannotator, PR ราว 300–800 บรรทัด และ pi `/tree` ที่เขาคัด context กลับเข้าสายหลักเองแทน subagent
+- Created source: `[[dillon-mulroy-ships-production-code-he-didnt-write]]`
+- Created entities: `[[dillon-mulroy]]`, `[[plannotator]]`
+- Updated entities: `[[jan-niklas-wortmann]]`, `[[cloudflare]]`, `[[pi-agent]]`, `[[herdr]]`, `[[fable]]`
+- Updated concepts: `[[creative-ownership]]`, `[[ai-work-intensification]]`, `[[developer-balance]]`, `[[queues-over-loops]]`, `[[subagent-patterns]]`, `[[tree-structured-sessions]]`, `[[stacked-pull-requests]]`, `[[specs-to-code]]`, `[[engineering-role-shift]]`, `[[agentic-code-review]]`
+- Updated `[[index]]` and `hotcache.md`
+
+**เรื่องที่เก็บไว้ทั้งสองด้าน:** (1) Dillon ยังเป็นเจ้าของ design และอ่านทุกบรรทัด แต่เสีย joy จาก implementation จึงเพิ่มชั้นให้ creative ownership แทนสรุปว่า ownership มีหรือไม่มีอย่างเดียว (2) DHH รายงานว่า parallel agents ทำให้ flow กลับมา ขณะที่ Dillon บอกว่างาน macro ต่อเนื่องทำให้ flow หาย เก็บเป็นประสบการณ์คนละแบบ ไม่เลือกฝั่ง (3) AI Work Intensification เดิมอธิบายการยกเป้า/WIP ขององค์กร ส่วน Dillon เพิ่มกรณี task mix หนักขึ้นแม้ยังไม่มีหลักฐานว่า quota เพิ่ม (4) code-shaped spec ช่วยคุม design แต่ยังไม่แทน executable fact และการ review (5) `/tree` รักษา human control แต่เสีย parallelism จึงไม่ลบประโยชน์ของ subagent ในงานที่แบ่งอิสระได้ (6) role overlap ระหว่าง engineering, QA และ product ไม่ได้แปลว่า specialization หมดค่า
+
+**Provenance:** ผู้ใช้ส่ง title, URL, description และ transcript มาให้ครบ Transcript บอกว่าวันสนทนาคือ 25 June 2026 แต่วันเผยแพร่วิดีโอยังไม่ยืนยัน Productivity, ความเหนื่อย คุณภาพ, Cloudflare layoff ราว 1,100 คน, ตำแหน่งงานที่เปิดใหม่ และข้ออ้างเรื่อง Fable เป็นคำบอกเล่าในบทสัมภาษณ์ ไม่มี telemetry, company statement หรือ product docs มาเทียบในการ ingest ครั้งนี้ ไม่แก้ `raw/` และรักษาการแก้ไขค้างเดิมไว้
+
+## [2026-09-14] ingest | The AI-Native SDLC Playbook — Anthropic (Louis Claxton)
+ดึงเอกสารต้นทางจาก claude.com มาสรุปเป็น `[[ai-native-sdlc-playbook]]` เป็น primary source ของเรื่องที่ก่อนหน้านี้วิกิรู้ผ่านคลิปของ Rob Shocks เท่านั้น แกนเดิมยังเหมือนกัน คือ code ไม่ใช่คอขวดแล้ว คอขวดย้ายไปอยู่ซ้ายและขวาของช่วง Build สิ่งที่เพิ่มจากคลิปคือรายละเอียดฝั่งองค์กร — ชั้นควบคุมสามระดับ (skills แนะนำ / hooks บังคับเชิงกล / managed settings ที่ปลายทางแก้ไม่ได้), control band ที่แยกชั้นตรวจจับแบบ deterministic ออกจากชั้นตอบสนองที่ไล่สิทธิ์ตามความเบี่ยง 1σ/2σ/3σ, `REVIEW.md` ที่จำกัด nit ไว้ 5 ข้อและตัดสิ่งที่ CI ตรวจแล้วออก, continuous eval ที่ทดสอบ configuration ของ agent ไม่ใช่ code, separation of duties ที่บังคับผ่าน branch protection และชุด leading/lagging indicator รายช่วงที่ดึงจาก git กับ PR metadata ได้เลย
+- Created source: `[[ai-native-sdlc-playbook]]`
+- Created entity: `[[louis-claxton]]`
+- Created concepts: `[[control-bands]]`, `[[policy-as-code-for-agents]]`
+- Updated entities: `[[anthropic]]`, `[[claude-code]]`, `[[rob-shocks]]`
+- Updated concepts: `[[ai-driven-sdlc]]`, `[[intent-md]]`, `[[artifact-chain]]`, `[[claude-md]]`, `[[agentic-code-review]]`, `[[evals-and-error-analysis]]`, `[[plan-mode-as-prompting]]`, `[[graduated-autonomy]]`, `[[agent-runtime-untrusted]]`
+- Updated `[[index]]` and `hotcache.md`
+
+**เรื่องที่เก็บไว้ทั้งสองด้าน:** (1) เอกสารนี้เป็น vendor playbook ที่ประกอบจากผลิตภัณฑ์ของ Anthropic แทบทุกชิ้น จึงอ่านเป็นข้อเสนอเชิงสถาปัตยกรรมได้ แต่ไม่ใช่มาตรฐานกลาง (2) ไม่มีตัวเลขผลลัพธ์ ไม่มีลูกค้าที่อ้างชื่อ ไม่มี before/after — เอกสารบอกว่าควรวัดอะไร ไม่ได้แสดงว่าวัดแล้วได้เท่าไหร่ (3) ตัวเลข 20-50 เคสสำหรับ eval และ 2-3 รอบสำหรับ visual loop เป็นตัวอย่างในเอกสาร ไม่ใช่ผลจากการวัด (4) Western Electric rules มาจาก process ในโรงงานที่ค่อนข้างนิ่ง ส่วน delivery metric มี seasonality กับ regime change จึงเก็บข้อสงสัยเรื่อง false alarm ไว้ (5) เพดานที่คนตรวจไหวถูกยอมรับในเอกสารแล้ว แต่ไม่มีวิธีขยาย คอขวดจึงอาจแค่ย้ายที่ ผูกกับ `[[acceptance-bottleneck]]` (6) ประโยคว่า agent ผ่านประตู production เองไม่ได้ ขึ้นกับว่า hook กับ managed settings ทำงานถูกจริง ซึ่งก็เป็น code ที่พังได้
+
+**Provenance:** ดึงผ่าน WebFetch จาก https://claude.com/blog/the-ai-native-sdlc-playbook สามรอบด้วยคำถามคนละชุด (โครงรวม / กลไกและชื่อผลิตภัณฑ์ / ไล่ทีละ stage พร้อม governance และตัววัด) หน้าอย่างเป็นทางการลงชื่อ Louis Claxton เป็นผู้เขียน วันเผยแพร่ 21 สิงหาคม 2026 ไม่ได้เก็บสำเนาเอกสารลง `raw/` ตัวอย่าง config (`bands.yaml`, managed settings) เก็บเป็นสาระทางเทคนิคพร้อมอ้างที่มา ส่วนโครง `REVIEW.md` สรุปเป็นร้อยแก้วแทนการคัดลอก ไม่แก้ `raw/` และรักษาการแก้ไขค้างเดิมไว้
+
+## [2026-09-14] humanize | AI-Native SDLC cluster
+ปรับภาษาไทยของชุด AI-Native SDLC หลัง ingest ให้เป็นจังหวะที่คนไทยใช้จริง แก้ประโยคที่ยึดโครงอังกฤษ ประธานนามธรรม คำเชื่อมเกินจำเป็น และหัวข้อที่อ่านแข็ง โดยไม่เปลี่ยน claim วันที่ ตัวเลข quote ข้อสงวน frontmatter code block หรือ wikilink target
+- ปรับ source: `[[ai-native-sdlc-playbook]]`
+- ปรับ concept/entity ใหม่: `[[louis-claxton]]`, `[[control-bands]]`, `[[policy-as-code-for-agents]]`
+- ปรับหน้าที่เชื่อมกับ ingest นี้: `[[anthropic]]`, `[[claude-code]]`, `[[rob-shocks]]`, `[[ai-driven-sdlc]]`, `[[intent-md]]`, `[[artifact-chain]]`, `[[claude-md]]`, `[[agentic-code-review]]`, `[[evals-and-error-analysis]]`, `[[plan-mode-as-prompting]]`, `[[graduated-autonomy]]`, `[[agent-runtime-untrusted]]`
+- ปรับคำอธิบายใน `[[index]]` และอัปเดต `hotcache.md`; ไม่แก้ไฟล์ใน `raw/`

@@ -3,8 +3,8 @@ title: Claude Code
 type: entity
 tags: [ai, claude, tools, agents, cli, coding]
 created: 2026-04-16
-updated: 2026-07-09
-sources: [Introducing Claude Opus 4.7.md, Using Claude Code Session Management & 1M Context.md, forrestchang andrej-karpathy-skills.md, alex-ker-harnesses-optimize.md, Create custom subagents - Claude Code Docs.md, opencode-vs-claude-code-morph.md, Remote Control - Claude Code Docs.md, cyril-xbt-claude-md-guide.md, This Anthropic Engineer Uses Claude Code Differently Than Everyone Else.md, why-im-against-claude-codes-grep-only-retrieval.md, Agent Harness Engineering.md, thariq-html-effectiveness.md, improved-15-llms-harness-changed.md, How to Keep Shipping When You Walk Away from Your Desk — Zack Proser, WorkOS.md, "รู้จักกับ Loop Engineering — mikelopster transcript", zoran-horvat-claude-no-planning-engine.md, planning-mode-dangerous-illusion.md, how-ai-became-more-expensive-than-workers-it-replaced.md, code-isnt-free-mario-zechner-hard-truths-coding-ai.md, bun-in-rust.md]
+updated: 2026-09-14
+sources: [Introducing Claude Opus 4.7.md, Using Claude Code Session Management & 1M Context.md, forrestchang andrej-karpathy-skills.md, alex-ker-harnesses-optimize.md, Create custom subagents - Claude Code Docs.md, opencode-vs-claude-code-morph.md, Remote Control - Claude Code Docs.md, cyril-xbt-claude-md-guide.md, This Anthropic Engineer Uses Claude Code Differently Than Everyone Else.md, why-im-against-claude-codes-grep-only-retrieval.md, Agent Harness Engineering.md, thariq-html-effectiveness.md, improved-15-llms-harness-changed.md, How to Keep Shipping When You Walk Away from Your Desk — Zack Proser, WorkOS.md, "รู้จักกับ Loop Engineering — mikelopster transcript", zoran-horvat-claude-no-planning-engine.md, planning-mode-dangerous-illusion.md, how-ai-became-more-expensive-than-workers-it-replaced.md, code-isnt-free-mario-zechner-hard-truths-coding-ai.md, bun-in-rust.md, claude-codes-new-intent-md-rob-shocks.md, boris-cherny-cut-80-percent-claude-code-prompt.md, ai-native-sdlc-playbook.md]
 ---
 
 # Claude Code
@@ -56,6 +56,16 @@ Claude Code ขึ้นชื่อเรื่องการใช้ [[agent
 - **Fast mode** — `/fast` เพื่อสลับไปใช้ variant ที่ให้ผลลัพธ์เร็วกว่า (มีใน Opus 4.6)
 - **Remote Control** — ควบคุม session CC *บนเครื่อง local* จาก `claude.ai/code` หรือแอป Claude บนมือถือ Session จะอยู่บนเครื่องของคุณ (filesystem, MCP, `@` autocomplete ยังใช้ได้จากระยะไกล); Anthropic จะ relay ข้อความผ่าน outbound HTTPS เท่านั้น — ไม่ต้องเปิด inbound port มี 3 โหมดใน CLI: `claude remote-control` (server mode, รองรับ `--spawn worktree|same-dir|session`, default capacity 32), `claude --remote-control` (`--rc`, interactive), `/remote-control` (`/rc`, จาก session ที่มีอยู่) ใน VS Code: `/remote-control` (v2.1.79+) เปิดตลอด: `/config` → **Enable Remote Control for all sessions** Push notification บนมือถือผ่าน `/config` → **Push when Claude decides** (v2.1.110+) ต้องใช้ v2.1.51+ และ claude.ai OAuth (ใช้กับ API keys / Bedrock / Vertex / Foundry ไม่ได้) Ultraplan จะตัดการเชื่อมต่อ RC ดูที่ [[claude-code-remote-surfaces]] และ [[claude-code-remote-control-docs]]
 
+## บทบาทใน AI-Native SDLC
+
+ใน [[claude-codes-new-intent-md-rob-shocks|คลิปที่ Rob Shocks อธิบาย playbook ของ Anthropic]] Claude Code รับงานช่วง Build, Test, Deploy และ Maintain ต่อจาก product workflow วิศวกรส่ง [[intent-md|`intent.md`]] กับ `spec.md` เข้า plan mode แล้วตรวจ `plan.md` ก่อนอนุญาตให้แก้ code
+
+Auto mode จะทำงานเร็วได้โดยไม่หลุดกรอบเมื่อมีกฎรอบตัว `CLAUDE.md` กับ skills เก็บความรู้ของทีม Hooks กัน action ที่ไม่อนุญาต Worktree แยกงานขนาน Test กับ eval ป้อน feedback กลับ ส่วน PR, branch protection และ deployment hook เป็น gate ก่อน production
+
+ในช่วง Maintain ระบบใช้ alert, ticket, channel message หรือ schedule เรียก Claude Code แบบ non-interactive แล้วให้เขียนผลวินิจฉัยเป็น `intent.md` แต่ต้นทางยังกำหนด deterministic trigger, scoped permission, PR route และ human triage จึงไม่ใช่สิทธิ์ production แบบเปิดกว้าง
+
+**ผลคือ:** Claude Code ในกรอบนี้เป็น worker ของ process ที่ version และตรวจได้ ไม่ใช่เจ้าของ lifecycle ทั้งหมด
+
 ## Loop / Goal / Scheduled work
 
 [[mikelopster]] เล่าใน [[mikelopster-loop-engineering|คลิป Loop Engineering]] ว่า Claude Code เป็น surface ที่เขาลองสร้าง loop ได้ตรงที่สุด. `/loop` ใช้เมื่อ cadence ชัด เช่น เช็ค deploy / CI / PR เป็นระยะ. `/goal` ใช้เมื่อยังไม่แน่ใจว่าเป้าหมายควรถูกแตกเป็น loop หรือ subtask แบบไหน ให้ agent วิเคราะห์ก่อนแล้วสร้างขั้นตอนและตัว verify ตามมา.
@@ -79,6 +89,16 @@ CC มีหลายวิธีในการสั่งงาน agent เ�
 | **Scheduled tasks** | CLI / Desktop / cloud | Cron |
 | **Claude Code on the web** | Anthropic cloud | มนุษย์ผ่าน claude.ai/code |
 | **Ultraplan** | Anthropic cloud | มนุษย์จาก terminal |
+
+## Harness เปลี่ยนตาม model: ลบ prompt 80% ใน Opus 5
+
+[[boris-cherny|Boris Cherny]] อธิบายใน [[boris-cherny-cut-80-percent-claude-code-prompt|บทสัมภาษณ์กับ Y Combinator]] ว่า Claude Code เปลี่ยน system prompt, tool set, tool prompt และ code รอบ model อยู่ตลอด เมื่อ [[claude-opus-5|Opus 5]] ทำพฤติกรรมที่รุ่นก่อนต้องคอยเตือนได้เอง ทีมจึงลบ system prompt ออกราว 80%
+
+วิธีที่ทีมใช้คือ [[prompt-ablation|prompt ablation]]: ลบ prompt ทั้งก้อน แล้วนำกลับทีละบรรทัดพร้อมวัดผล ทีมยังมี simple mode สำหรับเอา prompt ของระบบและ tool ออกเพื่อทดสอบ แต่ syntax ใน transcript ถอดเสียงไม่ชัด จึงไม่บันทึกเป็นคำสั่งใช้งานที่ยืนยันแล้ว
+
+Boris แนะนำให้ผู้ใช้ลองทบทวน `CLAUDE.md`, skills และ hooks ทุกหกเดือน แล้วเพิ่มกลับเมื่อเห็น failure เดิมซ้ำ ๆ คำแนะนำนี้ใช้กับ behavioral scaffolding ไม่ควรถูกตีความว่าต้องลบ permission, sandbox, test หรือ audit controls พร้อมกัน
+
+**ผลคือ:** Claude Code ไม่ใช่ harness คงที่ที่เปลี่ยนแค่ model ข้างใน ทั้งสองชั้นต้องถูก eval เป็นคู่ทุกครั้งที่ capability ขยับ
 
 ดู [[claude-code-remote-surfaces]] สำหรับการจัดกรอบสองแกน (local vs cloud × human vs event)
 
@@ -146,3 +166,14 @@ CC มีหลายวิธีในการสั่งงาน agent เ�
 - [[enterprise-ai-roi]]
 - [[bun-in-rust]]
 - [[adversarial-review-loops]]
+- [[claude-codes-new-intent-md-rob-shocks]]
+- [[ai-driven-sdlc]]
+- [[intent-md]]
+- [[artifact-chain]]
+- [[boris-cherny-cut-80-percent-claude-code-prompt]]
+- [[claude-opus-5]]
+- [[prompt-ablation]]
+- [[model-elicitation]]
+- [[ai-native-sdlc-playbook]]
+- [[policy-as-code-for-agents]]
+- [[control-bands]]

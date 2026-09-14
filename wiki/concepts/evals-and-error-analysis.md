@@ -3,8 +3,8 @@ title: Evals and Error Analysis
 type: concept
 tags: [ai, evals, testing, reliability, llm]
 created: 2026-08-15
-updated: 2026-08-16
-sources: [andrew-ng-ai-engineering-skills-map.md, the-new-software-lifecycle.md]
+updated: 2026-09-14
+sources: [andrew-ng-ai-engineering-skills-map.md, the-new-software-lifecycle.md, claude-codes-new-intent-md-rob-shocks.md, boris-cherny-cut-80-percent-claude-code-prompt.md, ai-native-sdlc-playbook.md]
 ---
 
 # Evals and Error Analysis / วัดผลกับไล่หาสาเหตุที่ผิด
@@ -70,12 +70,44 @@ Ng ใช้คำว่า **loop** ไม่ใช่ step วงรอบท�
 
 **ได้อะไร:** “ถูก” หมายถึงทั้งได้ของที่ต้องการและมีหลักฐานว่าไม่ได้แลกความถูกต้องหรือความปลอดภัยทิ้งระหว่างทาง
 
+## Regression eval ตอนเปลี่ยน model หรือ skill
+
+[[claude-codes-new-intent-md-rob-shocks|คลิปของ Rob Shocks]] เสนออีก use case: เก็บ issue หรือ task เก่าพร้อม expected outcome แล้วรันใหม่ทุกครั้งที่เปลี่ยน model, skill หรือ workflow หลัก Rob ยกชุดราว 20 เคสเป็นตัวอย่าง ไม่ใช่จำนวนมาตรฐาน
+
+Eval ชุดนี้ไม่ได้วัด product output อย่างเดียว แต่วัดว่า harness ทั้งเส้น regress หรือไม่ เพราะการเปลี่ยน skill อาจทำให้ agent ข้าม policy การเปลี่ยน model อาจทำให้ plan หรือ tool use เปลี่ยน และการเปลี่ยน hook อาจทำให้งานผ่านหรือถูกบล็อกคนละแบบ
+
+**ผลคือ:** model กับ skill upgrade กลายเป็น change ที่ต้องผ่าน regression gate เหมือน code ไม่ใช่อัปเดตแล้วหวังว่าทุกอย่างดีขึ้นเอง
+
+## Eval เองก็หมดอายุได้
+
+[[boris-cherny|Boris Cherny]] เติมอีกด้านใน [[boris-cherny-cut-80-percent-claude-code-prompt|บทสัมภาษณ์กับ Y Combinator]]: eval มักอยู่ได้นานกว่า prompt หรือ harness แต่บางชุดก็อยู่เพียงหนึ่งถึงสาม model generations ก่อนคะแนนอิ่มตัว เมื่อ model ผ่านทุกข้อแล้ว eval นั้นเลิกบอกว่าจุดอ่อนใหม่อยู่ตรงไหน
+
+วิธีไปต่อไม่ใช่เก็บโจทย์เดิมไว้เพราะต้องการกราฟยาวอย่างเดียว แต่ต้องใช้ product จริง ทำ error analysis กับความพลาดของ model รุ่นปัจจุบัน แล้วสร้าง eval ที่ยากและตรงกับ failure ใหม่ ในขณะเดียวกัน eval เดิมอาจยังเก็บไว้เป็น regression set ถ้ามันคุม behavior สำคัญ แม้จะแยกจาก frontier set ที่ใช้หาเพดานใหม่
+
+[[prompt-ablation|Prompt ablation]] ใช้ eval ในทิศกลับด้วย: ไม่ใช่แค่ถามว่าควรเพิ่มกฎอะไร แต่ถามว่าลบกฎไหนแล้ว quality เท่าเดิมหรือดีขึ้น
+
+**ผลคือ:** eval suite ควรมีทั้งส่วนที่เฝ้าของเก่าและส่วนที่ขยับตาม frontier ไม่ใช่ก้อนเดียวที่ใช้ตลอดไป
+
 ## ข้อควรระวัง
 
 - eval ที่วัดง่ายไม่ได้แปลว่าวัดตรงกับสิ่งที่ผู้ใช้แคร์ ดู [[quality-proxy-collapse]] เรื่อง proxy คุณภาพที่พังโดยยังดูดีอยู่
 - ถ้า agent รู้เกณฑ์ มันอาจเล่นงานกับเกณฑ์แทนที่จะแก้ปัญหาจริง ดู [[reward-hacking]]
 - ใช้ model เป็นผู้ตัดสิน (LLM-as-judge) เป็น sensor แบบ inferential ซึ่งเชื่อได้ไม่เต็มร้อยและไม่ควรเป็นด่านเดียว
 - ชุด eval ที่ไม่เคยอัปเดตจะค่อย ๆ เลิกสะท้อนงานจริง โดยเฉพาะเมื่อเปลี่ยนรุ่น model
+
+## Continuous evals: เอา eval ไปวางใน CI เพื่อทดสอบตัวที่กำกับ agent
+
+[[ai-native-sdlc-playbook|Playbook ของ Anthropic]] แยก test สองชนิดออกจากกัน test ธรรมดาทดสอบ code ส่วนชุดนี้ทดสอบ **configuration ที่กำกับ agent** ได้แก่ [[claude-md|`CLAUDE.md`]], skills และ hooks
+
+วิธีที่เสนอคือเก็บงานจริงล่าสุดสัก 20-50 เคสพร้อมผลที่ควรได้ แล้วรันชุดนี้ทุกครั้งที่มีคนแก้ config พวกนั้น ถ้า pass rate ตกก็ต้องมีคนดูก่อน merge
+
+Skill เพียงหนึ่งบรรทัดอาจเปลี่ยนพฤติกรรมของทุก session พร้อมกัน ถ้าไม่มีชุดวัด การ "ปรับ prompt นิดหน่อย" ก็เท่ากับเปลี่ยน production behavior โดยไม่รู้ผล จึงต้องมี gate ตรงนี้ ดู [[prompt-ablation]]
+
+อีกกฎหนึ่งคือ **ทุก incident ที่หลุดไป production กลายเป็น eval ถาวรหนึ่งเคส** ชุดวัดจึงโตตามความผิดพลาดที่เคยเจอจริง ไม่ใช่โตตามสิ่งที่คนเขียน eval นึกออก ตัววัดที่ตามมาคือ "incident ซ้ำ class เดิม" ซึ่งควรลดลงเมื่อ eval สะสมขึ้น
+
+ข้อควรระวัง: 20-50 เคสเป็นตัวอย่างในเอกสาร ไม่ใช่ผลจากการวัด ถ้าชุดนั้นไม่แทนงานจริง pass rate ที่สวยก็ไม่ได้แปลว่าอะไร
+
+**ได้อะไร:** policy กับ context ขององค์กรได้ CI เหมือน code ไม่ใช่ของที่แก้แล้วรอดูดวง
 
 ## ดูเพิ่ม
 
@@ -91,3 +123,9 @@ Ng ใช้คำว่า **loop** ไม่ใช่ step วงรอบท�
 - [[property-based-testing]]
 - [[the-new-software-lifecycle]]
 - [[ai-driven-sdlc]]
+- [[claude-codes-new-intent-md-rob-shocks]]
+- [[artifact-chain]]
+- [[boris-cherny-cut-80-percent-claude-code-prompt]]
+- [[prompt-ablation]]
+- [[ai-native-sdlc-playbook]]
+- [[control-bands]]

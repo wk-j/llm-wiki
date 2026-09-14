@@ -3,8 +3,8 @@ title: Subagent Patterns
 type: concept
 tags: [ai, agents, subagents, harness, orchestration, architecture]
 created: 2026-04-18
-updated: 2026-06-05
-sources: [alex-ker-harnesses-optimize.md, Using Claude Code Session Management & 1M Context.md, Create custom subagents - Claude Code Docs.md, Kimi K2.6 Tech Blog Advancing Open-Source Coding.md, "New Skills! handoff, prototype, review and writing-*  Skills Changelog.md", Mellum2 Goes Open Source A Fast Model for AI Workflows  The JetBrains AI Blog.md]
+updated: 2026-09-12
+sources: [alex-ker-harnesses-optimize.md, Using Claude Code Session Management & 1M Context.md, Create custom subagents - Claude Code Docs.md, Kimi K2.6 Tech Blog Advancing Open-Source Coding.md, "New Skills! handoff, prototype, review and writing-*  Skills Changelog.md", Mellum2 Goes Open Source A Fast Model for AI Workflows  The JetBrains AI Blog.md, dillon-mulroy-ships-production-code-he-didnt-write.md]
 ---
 
 # Subagent Patterns / รูปแบบการใช้ subagent
@@ -136,6 +136,16 @@ Pipeline ตรงนี้คือแบบเดียวกันกับ [
 - `memory: project` ช่วยให้ subagent แต่ละตัวสะสม pattern ของ repo (โค้ดเบส) ไว้ข้าม session ในไฟล์ `MEMORY.md` ของตัวเอง — ใช้ไปนาน ๆ ตัว reviewer จะเริ่มจำ convention ของโค้ดเบสได้เอง
 - subagent ซ้อน subagent ไม่ได้ — ถ้าต้อง nested (ซ้อนหลายชั้น) จริง ให้ใช้ [[skills|Skills]] (แพ็กเกจ prompt/instruction ที่ reuse ได้) หรือ chain จาก main thread แทน
 
+## ทางเลือก: คนคุมกิ่งเองด้วย pi `/tree`
+
+[[dillon-mulroy|Dillon Mulroy]] ไม่ใช้ subagent เป็นค่าเริ่มต้น เขาแตก conversation ของ [[pi-agent|pi]] เป็นกิ่งเพื่อสำรวจเรื่องเดียว แล้วเลือกเองว่าจะคัด summary หรือไฟล์ใดกลับเข้าสายหลัก ดู [[tree-structured-sessions|Tree-structured Sessions]]
+
+เหตุผลของเขาคือ summary จาก subagent ผ่าน judgement ของ core agent ก่อน คนอาจได้บริบทที่ไม่ตรงกับสิ่งที่สนใจ การคุมกิ่งเองรักษา human judgement ที่รอยต่อ context แต่เสีย parallelism และเพิ่มงานมือ
+
+มุมนี้ไม่หักล้าง fan-out หรือ pipeline ด้านบน งานกว้างที่แบ่งอิสระและตรวจผลได้ยังเหมาะกับ subagent ส่วนงาน design ที่คุณภาพขึ้นกับรายละเอียดว่า context ใดถูกเก็บ อาจเหมาะกับ tree ที่คนคุมมากกว่า
+
+**ผลคือ:** เลือก subagent เมื่อต้องการแยกงาน เลือก human-curated tree เมื่อต้องการแยก context แต่ยังไม่อยากยกสิทธิ์การสรุปให้ agent
+
 ## See also
 
 - [[alex-ker]]
@@ -151,6 +161,9 @@ Pipeline ตรงนี้คือแบบเดียวกันกับ [
 - [[focal-models]]
 - [[mellum2]]
 - [[context-rot]]
+- [[tree-structured-sessions]]
+- [[dillon-mulroy-ships-production-code-he-didnt-write]]
+- [[dillon-mulroy]]
 - [[orchestration-tax]]
 - [[compaction]]
 - [[panutat-tejasen]]

@@ -3,8 +3,8 @@ title: Omarchy
 type: entity
 tags: [linux, developer-tools, ai, agents, terminal]
 created: 2026-09-07
-updated: 2026-09-07
-sources: [dhh-strategies-programming-with-ai-agents-lex-clips.md, dhh-ai-programming-setup-lex-clips.md, "https://omarchy.org"]
+updated: 2026-09-10
+sources: [dhh-strategies-programming-with-ai-agents-lex-clips.md, dhh-ai-programming-setup-lex-clips.md, cafkafk-nixos-omarchy-critique.md, "https://omarchy.org"]
 ---
 
 # Omarchy / Linux distribution ของ DHH
@@ -39,6 +39,14 @@ DHH มองว่า Linux เอื้อต่อ agent เพราะส�
 
 ระบบมี [[voxtype|VoxType]] เป็นตัวเลือกสำหรับถอดเสียงเป็นข้อความ แต่ไม่ได้ลงมาให้ตั้งแต่แรกเพราะ package มี model ราว 150 MB
 
+## รายงานแผนย้ายไป NixOS
+
+[[cafkafk-nixos-omarchy-critique|cafkafk รายงานเมื่อ 9 กันยายน 2026]] ว่า DHH วางแผนสร้าง distribution บน [[nixos|NixOS]] และ quote-post ถามว่า Omarchy กำลังจะย้ายไป NixOS หรือไม่ แหล่งนี้ไม่ได้แนบประกาศจากโครงการหรือ code ที่ยืนยันว่า migration เริ่มหรือเสร็จแล้ว
+
+จึงเก็บข้อมูลสองช่วงไว้คู่กัน: บทสัมภาษณ์ก่อนหน้าระบุว่า Omarchy วางบน Arch ส่วนโพสต์ใหม่รายงานแผน NixOS สถานะล่าสุดยังเป็นคำถามเปิดจนกว่าจะมีหลักฐานจาก Omarchy เอง
+
+โพสต์ยังชี้ว่า Omarchy เป็น layer ด้าน configuration และ installer บนงานของ upstream จำนวนมาก การใช้ agent เขียน layer นี้ไม่แทนงาน package, security, infrastructure, release engineering, review และ maintenance ของชุมชนข้างล่าง
+
 ## See also
 
 - [[dhh]]
@@ -49,3 +57,7 @@ DHH มองว่า Linux เอื้อต่อ agent เพราะส�
 - [[voxtype]]
 - [[malleable-tools]]
 - [[agent-experience]]
+- [[cafkafk-nixos-omarchy-critique]]
+- [[nixos]]
+- [[nixpkgs]]
+- [[open-source-governance]]

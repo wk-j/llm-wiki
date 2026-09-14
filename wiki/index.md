@@ -1,6 +1,11 @@
 # Index
 
 ## Sources
+- [[dillon-mulroy-ships-production-code-he-didnt-write]] — Jan-Niklas Wortmann คุยกับ Dillon Mulroy เรื่อง agent เขียน implementation เกือบหมดแต่คนยังอ่านทุกบรรทัด; output สูงขึ้นพร้อม flow และความสุขลดลงเพราะวันเหลือแต่ macro judgement; workflow ใช้ pi `/tree`, Plannotator, spec แบบ types/call stack/tests และ stacked PR ราว 300–800 บรรทัด พร้อมเก็บ Cloudflare layoff, Fable policy และ productivity เป็น claim ที่ยังไม่ได้ยืนยันนอกบทสัมภาษณ์
+- [[boris-cherny-cut-80-percent-claude-code-prompt]] — Boris Cherny กับ Y Combinator (Startup School 2026): ทีม Claude Code ลบ system prompt ของ Opus 5 ออกราว 80% ด้วย prompt ablation, สร้างกฎกลับจาก failure ที่เกิดซ้ำ, มอง eval ว่าหมดอายุได้, ใช้ model elicitation หา product overhang และอธิบาย dynamic workflows/routines ที่รัน agent จำนวนมาก; claim เรื่อง prompt injection, duration และ scale ยังเป็นคำบอกเล่าจากผู้สร้างผลิตภัณฑ์
+- [[cafkafk-nixos-omarchy-critique]] — cafkafk (X, 2026-09-09) โต้ DHH ว่าชม Nix เป็น “amazing technology” พร้อมดูถูกคนใน ecosystem แล้วกลับวางแผนใช้ NixOS เป็นฐานของ Omarchy; แก่นคือ distribution พึ่ง package, security, infrastructure, release, review, maintenance และ governance ของ upstream ส่วนคำพูด DHH กับแผนย้ายยังเป็นรายงานจาก cafkafk เพราะไม่มีต้นทางอีกฝั่งแนบมา
+- [[ai-native-sdlc-playbook]] — เอกสารต้นทางจาก Anthropic (Louis Claxton, 21 ส.ค. 2026) อธิบาย SDLC หกช่วง พร้อม artifact คนอนุมัติ และชั้นควบคุมของแต่ละช่วง; Maintain ตรวจความผิดปกติแบบ deterministic แล้วค่อยให้สิทธิ์ agent ตามระดับ; มีตัววัด leading/lagging แต่ยังไม่มีตัวเลขผลลัพธ์จริง
+- [[claude-codes-new-intent-md-rob-shocks]] — Rob Shocks อธิบาย AI-Native SDLC Playbook ของ Anthropic: ให้ originator ตรวจ `intent.md` ก่อนส่งต่อเป็น `spec.md`, `plan.md`, diff/test, PR/review และ incident record; agent ช่วยทุกช่วงแต่ deterministic gate กับ human approval ยังอยู่ตามความเสี่ยง และ maintenance อัตโนมัติเป็น gated autonomy ไม่ใช่สิทธิ์ production แบบเปิดกว้าง
 - [[dhh-strategies-programming-with-ai-agents-lex-clips]] — DHH กับ Lex Fridman (Lex Clips, ingest 2026-09-07): วิธีสั่งงานและตรวจงาน agent — agent เสนอให้ installer preload ระหว่างรอคนตอบ, ไล่รีดขนาด ISO ของ Omarchy จาก 7.5 GB เหลือ 5.85 GB แบบวิศวกร McLaren, จุดยืน omakase ที่ลงโปรแกรมมาให้ครบ, agent เขียน bash ได้แล้วแต่ยังชอบ early exit จนต้องเตือนกลับไปอ่าน AGENTS.md, คำสั่งที่คนยังต้องพูดเองคือ "make it simpler" เพราะ agent reviewer ก็ปล่อยผ่าน, workflow เสียงของ Lex ที่พูดยาว 10–20 นาทีแล้วล้าง transcript ด้วย dictionary + code base, และภาพ OS ที่คุยแล้วเปลี่ยนรูปได้; ตัวเลขทั้งหมดเป็นการเล่า ไม่ใช่ benchmark และจุดยืนเรื่องเขียน bash เองสวนกับคลิปก่อนของเขาเอง
 - [[dhh-ai-programming-setup-lex-clips]] — DHH on terminal-based parallel agent work: Herdr notifications, Comet remote control, Tailscale networking, a personal limit of roughly 16 tasks, review beyond diffs, and config-driven Linux workflows; preserves conflicting experiences of creative ownership and limits of productivity claims
 - [[state-of-technology-and-joy-of-making-phoomparin-mano]] — Phoomparin Mano (Facebook, 2026-08-25): ผู้ใช้ agent workflow ที่ทำได้คล่องแต่รู้สึกห่างจากงาน ตั้งคำถามว่า software ที่เร่งเอาผลลัพธ์กำลังทำให้ mastery, creative coding และความภูมิใจจาก process หายไปหรือไม่; ถือด้านการเปิดโอกาสให้คนสร้างของกับต้นทุนทางสังคมไว้พร้อมกัน และสรุปแบบไม่คัดลอก full text เพราะโพสต์ระบุ Friends only
@@ -142,12 +147,21 @@
 - [[thclaws-marketplace-panutat]] — Panutat Tejasen (2026-04-30): thClaws v0.7.0 Marketplace; Enterprise Security; Private Marketplace; แนวคิด Host Bridge; Rabbit Holes ในการ coding
 
 ## Entities
-- [[omarchy]] — Linux distribution ของ DHH ชื่อมาจากคำว่า omakase; ลงโปรแกรมมาให้ครบตั้งแต่แรก (OBS, Kdenlive, Omacut, Neovim, Herdr, tmux), config เป็น bash พร้อม AGENTS.md, ไล่รีด ISO เหลือราว 5.85 GB และรุ่นที่เขาเรียกว่า Omarchy Quattro เพิ่มความสามารถได้ด้วยการคุยกับ agent
+- [[dillon-mulroy]] — Principal Engineer ที่ Cloudflare ตามบทสัมภาษณ์ Jan-Niklas Wortmann; ให้ agent เขียน implementation เกือบหมดแต่คุม context, design, local review และ accountability เอง พร้อมรายงานว่า productivity สูงขึ้นแต่เหนื่อยและสนุกน้อยลง
+- [[plannotator]] — local review/annotation tool ที่ Dillon ใช้อ่าน diff หรือ comment plan แล้วส่ง feedback กลับเข้า coding-agent session ก่อน push PR; capability ยังบันทึกตามบทสัมภาษณ์ ไม่ใช่ product docs
+- [[claude-opus-5]] — model รุ่นใหม่ของ Anthropic ตามบทสัมภาษณ์ Boris Cherny; เขาอ้างว่ารันได้นาน ต้าน prompt injection ดีขึ้น และทำให้ Claude Code ลด system prompt 80% แต่ wiki ยังไม่มี release note/system card จึงไม่เติมวัน ราคา หรือ benchmark เอง และยังแยกจาก Fable 5
+- [[y-combinator]] — startup accelerator และผู้จัด Startup School; ใน wiki นี้เป็นผู้เผยแพร่บทสัมภาษณ์ Boris Cherny เรื่อง Opus 5, Claude Code และการสร้าง agentic product
+- [[cafkafk]] — บัญชี X ที่วิจารณ์ DHH เรื่อง NixOS, Omarchy และการให้เกียรติ maintainer; ชื่อจริงกับบทบาททางการในชุมชน Nix ไม่ปรากฏใน source
+- [[nixos]] — Linux distribution ที่ใช้ Nix; ใน wiki นี้เข้ามาจากรายงานว่า Omarchy อาจย้ายจากฐาน Arch มาใช้ NixOS แต่ยังไม่มีประกาศจาก Omarchy ยืนยัน
+- [[nixpkgs]] — ชุด package ของ Nix/NixOS; ตัวอย่าง upstream ที่ต้องพึ่ง contributor ดูแล package, review, security, infrastructure และ maintenance ต่อเนื่อง
+- [[louis-claxton]] — ผู้เขียน The AI-Native SDLC Playbook ของ Anthropic ซึ่งเขียนเผื่อองค์กรที่มี compliance โดยเฉพาะ ทั้ง managed settings, separation of duties, audit trail ผ่าน OpenTelemetry และตัววัดรายช่วง
+- [[rob-shocks]] — ผู้ทำเนื้อหาและสอน AI-assisted product development ผ่าน Switch Dimension; ใน wiki นี้ย่อย playbook AI-Native SDLC ของ Anthropic พร้อมเทียบกับ discovery skill และ Molten OS ของตัวเอง โดยคลิปมี sponsor และการโปรโมตคอร์สที่เปิดเผย
+- [[omarchy]] — Linux distribution ของ DHH ชื่อมาจากคำว่า omakase; แหล่งเดิมบอกว่าอยู่บน Arch ส่วน cafkafk รายงานแผนย้ายไป NixOS เมื่อ 2026-09-09 โดยยังไม่มีประกาศจากโครงการยืนยันว่าเริ่มหรือเสร็จแล้ว
 - [[lex-fridman]] — เจ้าของพอดแคสต์ที่สัมภาษณ์ DHH สองตอน; ไม่ได้เป็นแค่คนถาม แต่เล่า workflow เสียงของตัวเอง (Plaud + ElevenLabs + dictionary + code base) และแย้ง DHH เรื่อง automation บน macOS
 - [[voxtype]] — เครื่องมือถอดเสียงเป็นข้อความแบบ open source ที่ Omarchy เตรียมไว้ให้ กดค้าง F9 แล้วพูด; ไม่ได้ลงมาให้ตั้งแต่แรกเพราะ model ราว 150 MB ชื่อ model ที่ใช้ผู้พูดเองก็จำไม่แน่
 - [[elevenlabs]] — บริษัท AI ด้านเสียง; เข้ามาใน wiki ผ่าน Lex Fridman ที่ใช้ถอดเสียงในงานของเขาและบอกว่าดีที่สุดที่เคยลอง แต่ยอมรับเองว่ายังมีคำผิดจึงต้องมีชั้นทำความสะอาด transcript ต่อ
-- [[dhh]] — David Heinemeier Hansson, creator of Ruby on Rails and Omarchy; personal account of flow through parallel agents and the limits of human attention
-- [[herdr]] — Terminal agent runtime used by DHH for sessions, status and notifications across his machines; cross-machine code integration is not described in the clip
+- [[dhh]] — ผู้สร้าง Ruby on Rails และ Omarchy; เล่า workflow คุม agent หลายตัว ส่วน cafkafk วิจารณ์ว่าเขาชมเทคโนโลยี Nix พร้อมดูถูกชุมชนที่โปรเจกต์อาจกำลังจะพึ่ง ข้อกล่าวหานี้ยังไม่มีโพสต์ต้นทางของ DHH ให้เทียบบริบท
+- [[herdr]] — terminal agent runtime ที่ DHH ใช้ตาม session หลายเครื่อง ส่วน Dillon ใช้จัด project/workspace คู่กับ pi; ความสามารถข้ามเครื่องและคำอธิบายว่า built on libghostty ยังเก็บตามแต่ละ source ไม่รวมเป็น claim เดียว
 - [[tailscale]] — Private tailnet networking used in DHH's remote multi-machine setup, alongside Comet KVMs and Herdr sessions
 - [[phoomparin-mano]] — นักสร้าง software และผู้ใช้ agent workflow ซึ่งเขียนโพสต์เป็นภาษาไทย; บันทึกมุมที่เห็นทั้งการปลดล็อกให้คนทั่วไปสร้างของ และการสูญเสีย creative ownership เมื่อ workflow ย้าย process กับ micro-decision ไปให้ agent
 - [[synthid]] — เทคโนโลยี watermark เนื้อหา AI ของ Google DeepMind; ฝั่งข้อความใช้ tournament sampling ตอน model เลือกคำ ตีพิมพ์ใน Nature พร้อมทดลอง live ใน Gemini ~20 ล้าน response และเปิด reference implementation; เป็นตัวอย่างสาธารณะที่ชัดที่สุดของ text watermarking
@@ -160,7 +174,7 @@
 - [[typecraft]] — ช่องและ creator identity สาย programming ผู้ทำ Neovim/Rails/Docker content; เล่าการโตจาก side project สู่ burnout, workplace AI และบทบาท content creator/developer educator ที่ PlanetScale โดย source ไม่ให้ชื่อบุคคลจริง
 - [[planetscale]] — บริษัท database/developer tools และนายจ้างใหม่ของ Typecraft; กรณีนี้ใช้แยกผลของตัว AI ออกจาก job design, agency และการสนับสนุน personal brand โดยยังเป็นมุมของพนักงานคนเดียว
 - [[migel-tissera]] — ผู้เขียน field report วิเคราะห์ X Android และผู้เผยแพร่เครื่องมือ apksaw; รายงาน SDK behavioral fingerprinting ที่ยัง inactive ใน session ของเขา จึงต้องอ่านเป็นหลักฐานจากผู้วิเคราะห์คนเดียวและตรวจซ้ำจาก APK/runtime trace
-- [[x-twitter]] — social platform เดิมชื่อ Twitter; source นี้พูดเฉพาะ Android app และพบ dormant capability ไม่ใช่หลักฐานว่า X เปิดเก็บข้อมูลดังกล่าวกับผู้ใช้ทั้งหมด; X Money/X Pay anti-fraud ยังเป็นสมมติฐานของผู้เขียน
+- [[x-twitter]] — social platform เดิมชื่อ Twitter; เป็นทั้งหัวข้อของ field report เรื่อง Android privacy และช่องเผยแพร่ source เช่น AI skills map กับคำวิจารณ์ DHH เรื่อง NixOS ซึ่งต้องแยกข้อความผู้เขียนออกจากข้อเท็จจริงที่ตรวจอีกฝั่งแล้ว
 - [[demis-hassabis]] — นักวิจัย AI และผู้ร่วมก่อตั้ง DeepMind; คาด AGI อาจมาในอีกไม่กี่ปี พร้อมเสนอ Standards Body ที่กำกับ frontier model ตาม capability/risk; forecast ไม่ใช่ฉันทามติและองค์กรที่เสนอยังไม่ได้ตั้ง
 - [[bun]] — JavaScript runtime/toolchain ของ Jarred Sumner; เคส rewrite จาก Zig เป็น Rust ทำให้เป็นหลักฐานใหญ่ของ dynamic workflows, LSC, test-suite-as-oracle และ adversarial review ในงาน production
 - [[jarred-sumner]] — ผู้สร้าง Bun และผู้เขียน "Bun in Rust"; ตัวอย่างบทบาท agentic engineer ที่ออกแบบ workflow/guardrail/review process มากกว่าเขียนทุกบรรทัดเอง
@@ -172,10 +186,10 @@
 - [[azure]] — cloud ของ Microsoft; สภาพแวดล้อมองค์กรที่ model ไปวางไว้ให้ใช้ (Microsoft Foundry รันบน Azure) พร้อม identity/billing/governance เดิม
 - [[cat-wu]] — สมาชิกทีม Claude Code ที่ Anthropic; แขก Fireside Chat ที่ Simon Willison เป็นพิธีกรที่ AI Engineer World's Fair — ต้นทางเคล็ดให้ Fable ใช้ดุลพินิจเอง
 - [[jesse-vincent]] — developer สาย AI coding; เจ้าของเคล็ดใน "Fable's judgement" ให้บอก Fable ไปเลือก model ที่ถูกลงเองสำหรับงานเล็กเพื่อยืดโควตา
-- [[jan-niklas-wortmann]] — interviewer / creator ด้าน AI coding; สัมภาษณ์ Mario Zechner ใน source "Code Isn't Free" แล้วดึง tension เรื่อง agent productivity, SDD, local AI, token budget และ clanker load
+- [[jan-niklas-wortmann]] — interviewer / creator ด้าน AI coding; คุยกับ Mario Zechner เรื่อง ownership และ code cost แล้วคุยกับ Dillon Mulroy ต่อเรื่องงานที่ productivity สูงขึ้นแต่ joy ลดลง, production review, pi `/tree`, role compression และ agent-loop economics
 - [[earendil]] — บริษัท/ทีมที่ Mario Zechner เข้าร่วมเพื่อทำ pi ต่อ; source นี้วางเป็นบริบทของเป้าหมาย pi ระยะยาว ทั้ง application layer, local inference, durability, observability และ SDK หลาย environment
 - [[armin-ronacher]] — developer open source ที่ทำงานกับ Mario ที่ Earendil และเริ่มช่วยถือ pi; รายละเอียดบทบาทยังอิงจากบทสัมภาษณ์นี้
-- [[boris-cherny]] — engineer ที่ Anthropic ผู้สร้าง Claude Code; ถูกอ้างใน loop-engineering ("my job is to write loops") และ Thariq ยกเป็นตัวอย่าง agentic coder ที่เหลือ unknowns น้อย
+- [[boris-cherny]] — engineer ที่ Anthropic ผู้สร้าง Claude Code; บทสัมภาษณ์ตรงกับ Y Combinator เพิ่มวิธี prompt ablation, empirical harness, model elicitation, verification และ dynamic workflows ส่วนความเชื่อมโยงกับ AI-Native SDLC Playbook ยังเป็นคำบอกเล่าของ Rob เพราะหน้าอย่างเป็นทางการลงชื่อ Louis Claxton
 - [[economy-media]] — ช่อง YouTube สายเศรษฐศาสตร์/ธุรกิจ; เป็น source ของ ingest เรื่องต้นทุน token AI สลับข้างกับค่าแรงคน; ใช้เป็นแหล่งอธิบายชั้นสอง ไม่ใช่รายงานปฐมภูมิ
 - [[khunpho-naklongthun]] — ช่อง YouTube ลงทุนไทย เจ้าของคลิปเทียบหุ้น photonics LITE/COHR/NOK/AAOI; ใช้เป็นตัวอธิบายการลงทุนชั้นสอง ไม่ใช่ข้อมูลตรงจากบริษัท
 - [[coherent]] — บริษัท photonics/materials/optical communications; ใน source ถูกวางเป็นเจ้าตลาดปัจจุบันเรื่องความพร้อม 6-inch Indium Phosphide wafer และการส่งมอบ optical transceiver ให้ AI data center
@@ -223,7 +237,7 @@
 - [[zoran-horvat]] — นักสอน .NET/software / Zoran on C#; เชียร์ rich domain model มากกว่าการกด model ให้แบนตาม persistence และวิจารณ์ Claude Plan mode ว่าเป็นแค่ prompt scaffolding ไม่ใช่วิจารณญาณทาง engineering จริง
 - [[entity-framework-core]] — ORM ฝั่ง .NET ของ Microsoft; ในโพสต์ของ Horvat เป็นตัวอย่างเครื่องมือ map nested value object, converter, private constructor และ query แบบ domain-rich ลง relational persistence
 - [[aom-khunpanitchot]] — คนทำ software/AI ชาวไทย จาก field report บน Facebook เรื่อง Fable/Elysia 2; เขียนในมุมเจ้าของ codebase Elysia 2 ที่ประเมินผล audit จาก AI ว่าพร้อม release หรือยัง
-- [[fable]] — Claude Fable 5 model ของ Anthropic; มี field report จาก Elysia audit, field guide, judgement prompting และ Bun rewrite; รีวิว Prompt Engineering ใช้เป็นเส้นเทียบทั้ง GPT-5.6 Sol และ Kimi K3 แต่ยังไม่มี matched comparison ที่คุม prompt/harness/effort/budget เท่ากัน
+- [[fable]] — Claude Fable 5 model ของ Anthropic; มี field report ด้าน judgement/audit/Bun rewrite แต่ Dillon คัดค้าน production use จาก zero-data-retention และ auto-downgrade/cache economics ตามที่เขาเข้าใจ ข้อค้านยังไม่ตรวจ product docs และ Boris พูดแยก Fable จาก Opus 5 จึงยังไม่รวม entity
 - [[elysia-2]] — codebase/โปรเจกต์ในโพสต์ audit ของ Aom; เป็นเคส release readiness จริงที่ smoke/plugin check กับ AI reviewer หลายตัวบอกว่าพร้อม RC/stable แต่ Fable กลับรายงาน blocker ที่ลึกกว่านั้น
 - [[genebench-pro]] — benchmark ระดับงานวิจัยของ OpenAI สำหรับ agent สาย computational biology; โจทย์สังเคราะห์ 129 ข้อใน 10 โดเมน วัด research taste, การรับมือความกำกวม, QC, การเลือกวิธี causal/statistical และความพร้อมใช้ตัดสินใจ ไม่ใช่ความรู้ตามตำรา
 - [[gpt-5-6-sol]] — ตระกูล GPT-5.6 ของ OpenAI; มี GeneBench-Pro, keynote/field report เรื่อง variant×effort, cost-efficiency, loop หลายวัน และ claim ว่า Sol ช่วย post-train Luna; ตัวเลข benchmark/ราคา/cheating ยัง source-attributed
@@ -233,7 +247,7 @@
 - [[harvard-business-review]] — สื่อด้าน management ที่ Techsauce อ้างเป็นบริบทต้นทางของ AI Brain Fry; รายละเอียดบทความ HBR ต้นฉบับยังค้างอยู่ จนกว่าจะ ingest ตรง
 - [[rhys-sullivan]] — คนเขียนบน X เจ้าของ "i don't want to use your agent"; มองว่าความเชี่ยวชาญของ product ควรออกมาเป็น skills/MCP/API/CLI ที่เสียบเข้า agent ตัวหลักที่ผู้ใช้ใช้อยู่ทุกวัน
 - [[linear]] — เครื่องมือจัดการ issue/project; ในเฟรม BYO-agent ของมีค่าคือ API ของ ticket/project, skill สำหรับวางแผน และ deeplink ไม่ใช่แค่ agent ในแอปอย่างเดียว
-- [[cloudflare]] — แพลตฟอร์ม cloud/edge/security/developer infrastructure; ตัวอย่าง BYO-agent ที่ docs, คำสั่ง CLI, เครื่องมือ config และ API ที่คุม permission ได้ สำคัญกว่าแชตใน dashboard อย่างเดียว
+- [[cloudflare]] — แพลตฟอร์ม cloud/edge/security/developer infrastructure; มีทั้งกรณี BYO-agent product surface และคำเล่าของ Dillon เรื่อง AI enablement, role overlap กับ layoff ราว 1,100 คน ซึ่งยังไม่มีประกาศบริษัทหรือ workforce data ใน source set นี้
 - [[posthog]] — product analytics/product OS; ตัวอย่าง BYO-agent ที่เครื่องมือ query event, schema resource, deeplink เข้า UI และ skill วิเคราะห์ growth ควรเปิดให้ agent เข้าถึงได้
 - [[mikelopster]] — creator สาย software/AI ชาวไทย; source ของมุมมอง Loop Engineering แบบ pragmatic: feedback gate กับคอขวดที่คนต้อง review สำคัญกว่าการมี trigger
 - [[ataiiam]] — ผู้เขียน thread "Self Learning for Agents" (2026-06-24); อยู่ทีม CopilotKit; ทำให้การแบ่ง model/harness/context ของ Harrison Chase เป็นที่รู้จัก
@@ -313,10 +327,10 @@
 - [[github]] — platform จัดการ source code ที่ใหญ่ที่สุดในโลก; กำลังขยับไปเป็น developer platform แบบ AI-first
 - [[github-copilot]] — ผู้ช่วยเขียนโค้ด AI ที่กำลังกลายร่างเป็น "Agentic Platform" คิดเงินตามการใช้งาน
 - [[andrej-karpathy]] — นักวิจัย AI; ต้นตำรับ pattern LLM knowledge bases กับข้อสังเกตเรื่องจุดพลาดของ LLM ตอนเขียนโค้ด
-- [[anthropic]] — lab ด้าน AI safety; ผู้สร้างตระกูล model Claude, Claude Code, MCP และแนวทาง advisor strategy
-- [[claude]] — ตระกูล model ของ Anthropic: Opus, Sonnet, Haiku และ Mythos preview
+- [[anthropic]] — lab ด้าน AI safety; ผู้สร้าง Claude, Claude Code และ MCP; บทสัมภาษณ์ล่าสุดเพิ่ม Opus 5, การตัด prompt 80% และ prompt-injection defense สามชั้น แต่ยังคงเป็น first-party claim ขณะที่ AI-Native SDLC ใช้ hooks, eval และ human gate คุม autonomy
+- [[claude]] — ตระกูล model ของ Anthropic: Opus, Sonnet, Haiku, Fable และ Mythos preview; Opus 5 ถูกเพิ่มตามบทสัมภาษณ์ Boris แต่ยังไม่มี release note/system card ใน wiki และยังไม่รวมเข้ากับ Fable 5
 - [[claude-opus-4-7]] — model เรือธงของ Anthropic (2026-04-16); อัปเกรดจาก Opus 4.6 เน้นงาน SWE
-- [[claude-code]] — coding agent บน terminal ของ Anthropic (มีทั้ง CLI, desktop, web, IDE extensions)
+- [[claude-code]] — coding agent ของ Anthropic บน CLI, desktop, web และ IDE; harness เปลี่ยนตาม model และทีมอ้างว่าลบ system prompt ของ Opus 5 ได้ราว 80% ด้วย ablation ส่วน skills/hooks/test/worktree/permission ยังแยกบทบาทระหว่าง behavior กับ deterministic gate
 - [[forrestchang]] — developer บน GitHub; เอาข้อสังเกตของ Karpathy มาแพ็คเป็น skill `andrej-karpathy-skills` สำหรับ Claude Code
 - [[gitnexus]] — engine วิเคราะห์โค้ดแบบ open-source; index codebase เป็น knowledge graph ให้ AI agents ใช้
 - [[akon-labs]] — บริษัทเบื้องหลัง GitNexus enterprise (มีทั้ง SaaS และ self-hosted)
@@ -381,7 +395,7 @@
 - [[gpt-5-5]] — model เรือธงของ OpenAI (2026-04-23): SOTA ด้าน agentic coding (Terminal-Bench 2.0 82.7%, CyberGym 81.8%); ctx 400K/1M; $5/$30 ต่อ 1M tokens; ความสามารถเฉียด Mythos Preview แต่เปิดให้ใช้วงกว้าง; แพงกว่า GPT-5.4 เท่าตัว และแพงกว่า Opus 4.7 นิดหน่อย (pricing inversion)
 - [[aaron-levie]] — co-founder/CEO ของ Box; คอมเมนต์เรื่อง enterprise AI บน X; มองจากมุมบริษัทที่เอา AI ไปใช้งาน ไม่ใช่ฝั่งคนสร้าง model
 - [[mario-zechner]] — ผู้สร้าง libGDX กับ pi coding agent; ชูเครื่องมือ minimalist ที่ดัดแปลงเองได้ กับวินัยชะลอความเร็วตอนใช้ agent
-- [[pi-agent]] — (pi.dev) coding agent บน terminal แบบ minimalist ต่อขยายได้; session เป็นโครงสร้าง tree และเขียน extension เป็น TypeScript ที่แก้ตัวเองได้
+- [[pi-agent]] — coding agent บน terminal แบบ minimalist ต่อขยายได้; Mario ใช้เป็นคู่คิดและคุม interface เอง ส่วน Dillon ใช้ `/tree` คัด context ทีละกิ่ง ทำ spec ใกล้ code แล้วส่ง Plannotator feedback กลับเข้า session
 - [[terminus-agent]] — agent แบบ minimalist ใช้แค่ tmux กับการกดคีย์; เป็นแรงบันดาลใจให้ design ของ pi
 - [[vouch-oss]] — เครื่องมือของ Mitchell Hashimoto ไว้ยืนยันว่าเป็นมนุษย์จริงในโปรเจกต์ Open Source
 - [[zed]] — code editor สาย AI-native เขียนด้วย Rust; ใช้สถาปัตยกรรมแบบ video game engine เลยเร็วมาก; ทายาทสาย Atom / VS Code
@@ -412,20 +426,25 @@
 - [[marc-brooker]] — senior engineer ที่ AWS (Lambda/Aurora); ฝั่งปกป้อง SDD ตัวจริง: มอง spec เป็น artifact ที่ explicit มี version และมีชีวิต ใช้วนซ้ำได้จริง
 
 ## Concepts
+- [[prompt-ablation]] — ลบ system prompt หรือ instruction แล้ววัดผล จากนั้นเพิ่มกลับทีละส่วนเฉพาะที่แก้ failure ซ้ำ ๆ; ใช้กัน harness โตทางเดียว แต่ต้องแยก behavioral prompt ออกจาก permission/sandbox/test ที่บังคับจากภายนอก
+- [[model-elicitation]] — จัดโจทย์ tool context และ verifier ให้ model แสดง capability ที่มีอยู่แล้ว; โยนงานยากกว่าที่คิดเล็กน้อยพร้อม guardrail/exit criteria แล้วเรียนจาก failure จริง แทน overspecify วิธีทำ
+- [[intent-md]] — proto-spec ที่ originator กับ agent เขียนร่วมกันก่อน `spec.md` เพื่อเก็บ problem, desired outcome, affected users/systems, constraints และ open questions; ช่วยลดข้อมูลหายระหว่าง handoff แต่ยังเป็น prose จึงใช้แทน executable facts ไม่ได้
+- [[control-bands]] — ผูกสิทธิ์ agent เข้ากับความเบี่ยงของ metric โดยไม่ใช้ model ในชั้นตรวจจับ; 1σ แค่ log, 2σ วินิจฉัยแบบอ่านอย่างเดียว, 3σ ถึงเปิด PR หรือเรียก runbook ที่อนุมัติแล้วได้
+- [[artifact-chain]] — สาย `intent.md → spec.md → plan.md → diff/tests → PR/review → incident record` ที่ใช้ส่ง context ข้ามคนกับ agent และเก็บ audit trail; ต้องมี owner ลิงก์ถึงกัน และตามงานจริงทัน ไม่อย่างนั้นจะเพิ่ม drift กับ ceremony
 - [[make-it-simpler]] — คำสั่งที่คนยังต้องพูดเอง เพราะ agent เขียนถูกได้แต่ไม่ลดความซับซ้อนของงานตัวเอง และ agent reviewer ก็ไม่จับเพราะ code ซับซ้อนเกินไม่ได้ผิด; ความถูกมี test ตัดสินแทนคนได้แล้ว ส่วนความสมส่วนกับปัญหายังไม่มีเครื่องวัด
 - [[omakase-software]] — การแจกซอฟต์แวร์ที่ผู้สร้างเลือกของให้ครบแทนที่จะให้ผู้ใช้ประกอบเอง ตามชื่อ Omarchy ที่มาจาก omakase; เก็บข้อโต้แย้งเรื่อง bloat ไว้ทั้งสองด้าน และชี้ว่าเลือกให้ไม่ได้ขัดกับการรีดขนาด เพราะคำถามเปลี่ยนจาก "กินพื้นที่เท่าไร" เป็น "แลกมาด้วยอะไร"
 - [[voice-first-prompting]] — พา agent เข้าใจโจทย์ด้วยการพูดต่อเนื่องเป็นสิบ ๆ นาทีแบบคิดออกมาดัง ๆ แล้วล้าง transcript ด้วย dictionary กับคำที่กวาดจาก code base; ต่างจาก dictation สั่งงานสั้น ๆ และได้เปรียบตรงที่ไม่ตีกรอบ over-specification แต่ยังไม่มีข้อมูลว่ากิน context เท่าไรและ agent จับใจความจากช่วงที่เปลี่ยนใจกลางทางได้แม่นแค่ไหน
-- [[creative-ownership]] — ความรู้สึกว่าเราได้สร้าง judgement และลายมือของตัวเองลงในงาน ไม่ใช่แค่รับผิดชอบ artifact ตอนจบ; agent อาจเพิ่ม agency ให้คนที่เมื่อก่อนสร้างไม่ได้ หรือดึง ownership จากคนที่ส่วนสำคัญอยู่ใน process จึงต้องแยกจาก cognitive surrender, skill atrophy และ comprehension debt
-- [[ai-driven-sdlc]] — วงจรพัฒนาซอฟต์แวร์ที่ AI เร่ง implementation มากกว่า phase ที่ใช้ judgement ทำให้ spec/architecture/verification เป็นคอขวดใหม่; test กับ output/trajectory eval ย้ายเข้าไปอยู่กลาง loop และ harness/context policy กลายเป็น infrastructure ด้านคุณภาพ ความปลอดภัย และต้นทุน
-- [[coding-harness]] — ระบบรอบ model ที่จัด prompt, context, tool, filesystem, sandbox, hook, memory, subagent และ observability; rough split 10/90 ของ Addy กับมุม 50/50 ของ Pocock ต่างเตือนเรื่องเดียวกันว่าอย่าอธิบาย agent quality ด้วย model อย่างเดียว
+- [[creative-ownership]] — ความรู้สึกว่าเราได้สร้าง judgement และลายมือของตัวเองลงในงาน; เก็บทั้งคนที่ agent เพิ่ม agency, คนที่รู้สึกห่างจาก craft, DHH ที่ flow กลับมา และ Dillon ที่ยังคุม design แต่เสีย micro-reward จาก implementation
+- [[ai-driven-sdlc]] — วงจรที่ AI เร่ง implementation ได้มากกว่าช่วงที่ต้องใช้ judgement; Addy ชี้ว่า spec กับ verification กลายเป็นคอขวด ส่วน playbook ของ Anthropic เพิ่ม artifact chain, hooks, eval และ human gate โดย maintenance อัตโนมัติยังเป็น gated autonomy
+- [[coding-harness]] — ระบบรอบ model ที่จัด prompt, context, tool, filesystem, sandbox, hook, memory, subagent และ observability; ต้องเพิ่ม control จาก failure และถอดของเก่าด้วย prompt ablation เมื่อ model ใหม่ไม่ต้องใช้ ไม่ใช่สะสมจนโตทางเดียว
 - [[llm-text-watermarking]] — การฝัง signal ลับในข้อความ LLM ตอน sampling (rig ลูกเต๋าด้วย secret key ที่ reshuffle ทุก step) ให้ตรวจ provenance ทีหลังได้โดยสถิติคำไม่เปลี่ยน; จุดอ่อนคืองาน low-entropy ไม่มีที่ซ่อนและ paraphrase ล้างออกได้ และ mark หมายถึง "ผ่าน model" ไม่ใช่ "model เป็นคนแต่ง"
 - [[ai-text-detectors]] — เครื่องตรวจงานเขียน AI จากสไตล์ (GPTZero, Pangram, Turnitin) ที่ไม่มี key ไม่ใช่ watermark; ประวัติ false positive หนักกับ non-native writers และงาน craft จัด, สร้าง arms race กับ humanizer และ premise กำลังพังเพราะสไตล์คนกับ AI กลืนเข้าหากันเรื่อย ๆ
 - [[conversation-code-provenance]] — ความสัมพันธ์สองทางระหว่างบทสนทนากับ code: จากข้อความไปดู implementation ตอนนั้น/ตอนนี้ และจาก code ย้อนหาเหตุผลที่สร้างหรือแก้ต่อ; เกาะ delta แทน line number แต่ provenance ไม่ใช่ความจริงและยังต้องมี test, review, permission กับ retention
 - [[crdts]] — โครงสร้างข้อมูลสำหรับ replica หลายชุดที่รับ edit พร้อมกันแล้วรวมกลับสู่ state เดียวกันได้; แก้ data convergence แต่ไม่แก้ semantic conflict โดยอัตโนมัติ และเป็นฐานของ replicated worktree ใน DeltaDB
 - [[ai-engineering-skills-map]] — กรอบสี่ทักษะของ Andrew Ng สำหรับเลือกว่าจะเรียนอะไรก่อนในยุค AI: สร้าง/deploy แอป AI, พื้นฐาน software engineering, ใช้ coding agent และ shaping the build โดยมี continuous learning รองรับ; อ่านเป็นสายโซ่ที่ขาดข้อไหนแล้วข้ออื่นเสียแรงเปล่า และเป็นทักษะของ developer ทุกสายไม่ใช่ตำแหน่งเฉพาะ
-- [[evals-and-error-analysis]] — วิธีคุมระบบที่ output เดาไม่ได้ด้วยชุดวัดที่รันซ้ำได้และการจัดกลุ่มสาเหตุจากเคสพัง; แยก output eval ว่าผลถูกไหมกับ trajectory eval ว่า agent ใช้ tool/permission/check ถูกทางไหม พร้อมระวัง proxy, reward hacking และ process theater
+- [[evals-and-error-analysis]] — ชุดวัดที่รันซ้ำได้กับการจัดกลุ่มเคสพัง; แยก output/trajectory eval และ regression/frontier set เพราะ eval อาจอิ่มตัวในหนึ่งถึงสาม model generations และต้องสร้างโจทย์ใหม่จาก failure ปัจจุบัน
 - [[shaping-the-build]] — เมื่อ agent ทำตาม spec ได้ดีขึ้น งานวิศวกรขยับไปที่การตัดสินว่าอะไรควรอยู่ใน spec; ต้องมี product sense, business context และ ownership รวมถึงรู้จังหวะว่าเมื่อไหร่รีบทำ MVP เมื่อไหร่ช้าลงให้รอบคอบ — ข้อสมมติ “spec ชัดแล้ว agent ทำได้” ยังชนกับสาย facts-first และ hyper-waterfall
-- [[ai-work-intensification]] — AI ลด effort ต่อชิ้น แต่องค์กรเอาความเร็วไปเพิ่มเป้า WIP, PR และ feature จนงานรวมหนักขึ้น; ต่างจาก AI Brain Fry ที่เป็นอาการระดับคนและ Orchestration Tax ที่เป็นคอขวดของระบบ พร้อมเก็บด้านกลับว่า AI ลด burnout ได้ถ้า capacity ถูกคืนให้คน
+- [[ai-work-intensification]] — AI ทำให้งานเข้มขึ้นได้สองทาง: องค์กรเอาความเร็วไปเพิ่ม WIP/เป้า หรือ automation ตัดงานเบาออกจนวันเหลือแต่ macro judgement; ต่างจาก AI Brain Fry ที่เป็นอาการและ Orchestration Tax ที่เป็นคอขวด
 - [[liquidation-discovery]] — ช่วงที่ราคาถูกกำหนดโดยคนที่ต้องขายตาม collateral, mandate หรือ deadline มากกว่าการต่อรอง fair value; ใช้ forced-flow map ตรวจ actor, trigger, เวลา, ขนาด และ counterflow
 - [[implicit-government-put]] — ความเชื่อว่ารัฐจะจำกัด downside ให้ตลาดแม้ไม่มีสัญญารับประกัน; การช่วยซ้ำสร้าง moral hazard และ leverage แต่ reaction function อาจเปลี่ยนเมื่อ shock รอบใหม่ไม่เหมือนเดิม
 - [[argument-disengagement]] — เกณฑ์รู้ว่าเมื่อไรควรหยุดเถียงโดยดูเป้าหมายร่วม กติกา pattern การบิดคำ/เปลี่ยนเรื่อง และ stake แทนการติดป้ายว่าใครโง่; เสนอขั้นตั้งเป้า หาเงื่อนไขเปลี่ยนใจ ตอบประเด็นหลัก ตั้งขอบเขต แล้วถอนตัวหรือบันทึกเรื่องตามผลกระทบ
@@ -485,7 +504,8 @@
 - [[occams-razor]] — เลือกคำอธิบายที่ง่ายสุดที่เข้ากับหลักฐาน; อย่าเพิ่มสมมติฐาน (เช่นเทคโนโลยีเอเลียน) ถ้าไม่จำเป็น; เป็น heuristic ไว้จัดอันดับ ไม่ใช่บทพิสูจน์; ʻOumuamua คือตัวอย่างประกอบ
 - [[n-gram-embeddings]] — embedding table ที่มี entry ให้กลุ่ม token สั้นๆ ไม่ใช่แค่ token เดี่ยว; source บอกว่า LongCat 2.0 ใช้ท่านี้ยัดความรู้จาก corpus แบบถูกกว่าการเพิ่ม MoE expert เฉยๆ
 - [[sparse-attention]] — attention สำหรับ context ยาวที่มองเฉพาะส่วนที่เกี่ยว; เวอร์ชันของ LongCat ทำตัวช่วยเลือกให้ถูกลงด้วย memory chunk ที่เดาได้, cache ข้าม layer และการเลือกแบบหยาบไปหาละเอียด
-- [[plan-mode-as-prompting]] — มุมมองว่า Plan mode ของ coding agent คือ scaffolding ฝั่ง prompt/harness ที่ให้ draft plan ที่มีประโยชน์ ไม่ใช่หลักฐานว่ามี planning engine เชิงสัญลักษณ์หรือ judgement ระดับ senior; demo อัปโหลด directory ของ Horvat โชว์ว่า Opus 4.7 ลด blind spot ได้ แต่ยังพลาดคำถามเรื่อง data/design
+- [[policy-as-code-for-agents]] — แบ่งนโยบายองค์กรเป็นสามชั้น: skills ใช้แนะนำ hooks ใช้บังคับเชิงกล และ managed settings ป้องกันไม่ให้ปลายทางแก้เอง; กฎที่พลาดไม่ได้ควรตัดความสามารถออกที่ระดับ OS กับ network แทนการสั่งไม่ให้ทำ
+- [[plan-mode-as-prompting]] — Plan mode คือ prompt/harness scaffold ที่ให้ draft plan ไม่ใช่ proof ว่ามี judgement ระดับ senior; playbook Anthropic ใช้ให้วิศวกรซัก risk และ proof ก่อน commit `plan.md` จึงเสริม ไม่ได้ลบคำเตือนของ Horvat
 - [[domain-model-persistence-separation]] — หลัก DDD: domain model กับ persistence เป็นคนละงาน; เก็บ business concept กับ invariant ไว้ใน type แล้ว map ลง database ผ่านชั้น adapter
 - [[domain-modeling]] — แนวทางออกแบบซอฟต์แวร์ให้โค้ดยึดตาม business concept, กฎ, invariant และภาษาที่ใช้ร่วมกัน ไม่ใช่แค่สะท้อน table หรือ payload
 - [[value-objects]] — object แบบ DDD ที่นิยามด้วยค่า ไม่ใช่ identity; ห่อ concept ที่มีความหมายอย่างเงิน สกุลเงิน identifier และ UTC timestamp ให้กฎอยู่ใกล้ข้อมูล
@@ -499,7 +519,7 @@
 - [[three-learning-layers]] — Harrison Chase แบ่งจุดที่ agent เรียนรู้ได้เป็นสามชั้น: model (weights, ทำได้เฉพาะ lab) / harness (scaffold, พร้อมทำเป็น product) / context (memory+skills, เรียนจากผู้ใช้); แต่ละชั้นพัฒนาแยกกันได้ และทุกชั้นต้องมี scorer (คะแนนแบบ computational ที่ฟรี vs ให้คนตัดสิน); model เป็นของ lab ส่วน harness+context เป็นของเรา
 - [[agent-memory-types]] — memory ของ agent มี 3 แบบ: semantic (ข้อเท็จจริง) / episodic (ประสบการณ์ที่ผ่านมา) / procedural (วิธีรับมือแต่ละเคส); agent ที่พัฒนาตัวเองได้ต้องมีสองแบบหลัง แต่ setup ส่วนใหญ่มีแค่ semantic; ข้อความชุดเดียวใช้ได้ทั้งกับ agent, ผู้ใช้ หรือทั้งทีม
 - [[learning-from-users]] — สัญญาณที่แทบไม่มีใครเก็บ: การตัดสินใจจริงของคนที่ใช้ product; เก็บที่รอยต่อ agent↔user แล้วป้อนกลับเป็น procedural memory; ต้องแยกจาก behavioral biometrics ที่ใช้ click/keystroke คล้ายกันเพื่อจำแนก identity/risk ไม่ใช่เรียนเหตุผลที่คนแก้ agent
-- [[queues-over-loops]] — Matt Pocock ตีกรอบ loop hype ใหม่: ไม่ต้องมี loop เดียววนตลอดกาล แค่มี queue ของงานที่ scope ชัดให้หลาย node (agent/dev) มาหยิบไปทำ; ดัน checkpoint แบบ human-in-the-loop ไปไว้ท้ายๆ; เสริม loop-engineering ไม่ได้ขัดกัน
+- [[queues-over-loops]] — มองงานเป็น queue ที่มี stage และ checkpoint แทน loop เดียววิ่งไม่จบ; Matt เน้น AFK node ส่วน Dillon เห็น queue แบบ human-steered และเตือนว่า lab-style loop ยังแพงและไม่สม่ำเสมอสำหรับ median developer
 - [[afk-agents]] — งานแบบ away-from-keyboard: ส่งงานที่ scope ชัดให้ agent แล้วเลิกเฝ้า; ได้ "ตัวเราหลายตัว" ทำงานขนานกัน; งานที่ยังไม่ scope หรืองานวางแผนยังต้องมีคนอยู่ใน loop; จังหวะที่ AFK เข้าที่ = output ระเบิด; เพดานใหม่คือ bandwidth ของการ review
 - [[agent-experience]] — AX: ประสบการณ์ที่ agent เจอตอนเข้ามาทำงานใน codebase, product หรือ tool; DX ดี ≈ AX ดี; ครอบคลุมความชัดของ codebase, พื้นที่ review, primitive ของ product สำหรับ BYO agent, tool output ประหยัด token แบบ AXI และ planning artifact แบบ Lavish
 - [[strategic-vs-tactical-programming]] — การแบ่งของ Ousterhout; AI กินงาน tactical (เขียนโค้ด) ไปแล้ว คนเลยต้องเล่นฝั่ง strategic (ออกแบบ, interface, ตี scope); สกิลของเราคือเพดานของสิ่งที่ AI ทำได้; senior ได้ 10x ส่วน junior ได้นิดเดียว
@@ -507,13 +527,13 @@
 - [[knowledge-skills-wisdom]] — กรอบสอนงานของ Pocock: knowledge (รู้อะไร) + skills (muscle memory) ห่อเป็น skill ใช้ซ้ำได้; ส่วน wisdom (เมื่อไหร่/ที่ไหน) ห่อไม่ได้ ต้องลงมือทำในบริบทจริงเท่านั้น
 - [[bitter-lesson]] — บทเรียน ML ของ Sutton (ระยะยาว compute ดิบชนะการจูนมือ); เป็น tension ในเรื่อง harness-vs-model: อย่าผูกตัวเองกับทริคของ model ตัวเดียว แต่ก็อย่านั่งรอ compute เฉยๆ — เดิมพันกับพื้นฐานและ harness ที่ไม่ยึดติดกับ agent ไหน
 - [[ralph]] — loop ต้นตำรับของ Jeffrey Huntley: while-loop รัน Claude Code ด้วย prompt เดิมซ้ำจนงานเสร็จ; จุดกำเนิดกระแส agentic loop; Pocock แย้งว่าจริงๆ มันคือ AFK agent และมองเป็น queue จะตรงกว่า
-- [[agentic-code-review]] — สถาปัตยกรรม review สำหรับโค้ดที่ agent เขียน: แบ่ง tier ตาม blast radius, ขอ intent/หลักฐานก่อน review, คุมด่าน CI/test แบบ deterministic ให้เข้ม, ใช้ AI reviewer หลายเจ้าต่างกันเป็น sensor และให้คนถือความเป็นเจ้าของ merge ที่เสี่ยง
+- [[agentic-code-review]] — review code จาก agent ด้วย risk tier, intent/evidence, deterministic CI, AI sensor และ human ownership; Dillon เพิ่ม local Plannotator review ก่อน push พร้อม PR ราว 300–800 บรรทัด แต่การอ่านทุกบรรทัดยังไม่แทน verification
 - [[comprehension-debt]] — ช่องว่างระหว่างระบบทำงานจริงยังไง กับที่ทีมคิดว่ามันทำงานยังไง; โตขึ้นเรื่อยๆ เมื่อโค้ดจาก agent ไหลเร็วกว่าที่คนจะ review เก็บ intent และอัปเดต mental model ทัน
 - [[meta-harness]] — ชั้นควบคุมเหนือหลาย agent harness; ทำให้การประกอบงาน, policy แบบ stateful, การคุมต้นทุน/sandbox และ session ที่แชร์กัน เป็นมาตรฐานเดียว โดยยังสลับ model กับ harness ได้
-- [[developer-balance]] — ออกแบบ workflow ของ agent ให้ attention สุขภาพ judgement และการเรียนรู้ของคนยั่งยืน: กรองสัญญาณ, ให้ agent ตรวจงานตัวเอง, คุมทิศทางโดยไม่ต้องนั่งเฝ้าหน้าจอ และเปลี่ยน friction ใน session ให้เป็นการปรับปรุง harness
-- [[spec-driven-development]] — เขียน spec แล้วให้ agent generate code โดย spec เป็น source of truth; ฝั่ง Ng/Addy มองว่า spec quality กลายเป็นคอขวดเมื่อ implementation ถูกลง แต่ Wasowski/Zechner เตือนว่า prose ยังเป็นคำทำนายที่ model ตีความ จึงต้องผูก intent เข้ากับ executable facts และ eval ไม่ใช่หยุดที่ spec
+- [[developer-balance]] — ออกแบบ agent workflow ให้ attention สุขภาพ judgement และการเรียนรู้ยั่งยืน; นอกจากคุม WIP กับ context switch ต้องดู task mix ด้วย เพราะ implementation ที่หายอาจทำให้วันเหลือแต่ macro problem ต่อกัน
+- [[spec-driven-development]] — เขียน spec แล้วให้ agent generate code; `intent.md` แยก problem ออกจาก design และทำให้ตามรอยต้นทางง่ายขึ้น แต่ไม่ลบคำเตือนว่า prose ยังต้องให้ model ตีความ จึงต้องผูกกับ executable facts และ eval
 - [[facts-first]] — เก็บความจริงของระบบเป็น assertion ที่รันได้ (test / property / contract) เช็คด้วย exit code ไม่ใช่ให้ model ตีความ; facts อยู่รอดข้าม model upgrade; lifecycle @draft→@spec→@implemented ใน git; เป็นบทสังเคราะห์ยุค AI ของสาย Hoare→Design by Contract→QuickCheck→Agent Behavioral Contracts; migration 90 วันแบบ audit→pivot→gate
-- [[intent-gap]] — Lahiri (Microsoft Research): โค้ดจาก AI "plausible by construction but not correct by construction"; ระยะห่างระหว่าง intent ของผู้ใช้กับสิ่งที่โปรแกรมทำจริง; spec ภาษาคนปิดช่องนี้ไม่ได้เพราะเช็คอัตโนมัติไม่ได้
+- [[intent-gap]] — ระยะห่างระหว่าง intent ของผู้ใช้กับสิ่งที่โปรแกรมทำจริง; `intent.md` ลดการสูญเสียคำของ originator ระหว่าง handoff แต่ prose ยังเช็ค behavior ไม่ได้ จึงต้องใช้ formal/executable fact ปิด gap อีกช่วง
 - [[llm-nondeterminism]] — LLM ไม่ deterministic แม้ temperature 0 (floating-point ไม่ associative, batch scheduling, fused-attention kernel); model 100B+ ให้ output ซ้ำเดิมแค่ 12.5% ของรอบ เทียบกับ 7–8B ที่นิ่งสนิท (งาน RAG ของ IBM); คำสั่งแบบ prose คือการ sample และย้าย model = เปลี่ยน interpreter
 - [[property-based-testing]] — เขียน property แบบ universally quantified แล้วให้เครื่อง generate input สุ่มเอง (QuickCheck/Hypothesis); เคส Quviq: PBT 450 บรรทัดคุม Erlang 60k บรรทัด เจอ 25 บั๊กรวม race condition (1:133); เช็ค behavior ไม่ใช่ implementation — เข้าทางโค้ดที่ AI เขียนพอดี
 - [[loop-engineering]] — ออกแบบระบบที่หางาน แจกงาน ตรวจ จดจำ และเลือกขั้นต่อไปเอง; manager/worker loop + memory; feedback gate/scorer ต้องชัด โดยเดโม GPT-5.6 เตือนว่ารันได้เป็นสัปดาห์ยังไม่แปลว่า artifact ถูกทุกมิติ
@@ -525,13 +545,13 @@
 - [[durable-execution]] — รัน workflow ยาวๆ ให้รอด crash/outage โดยไม่เสีย state และไม่ต้องเขียน retry/scheduling เอง; เหตุผลที่ Cursor ย้าย agent loop ไป Temporal (work-stealing 1-nine → 2-nines); มอง agent loop เป็น server process ที่รันยาว
 - [[agent-development-environment]] — "environment คือตัว product": dev environment ที่ครบคือปัจจัยใหญ่สุดต่อคุณภาพงานของ cloud agent; ของที่ขาดจะโผล่เป็นคุณภาพตกเงียบๆ (แล้วคนไปโทษ model) ไม่ใช่ crash; สุดท้ายต้องมี "enterprise IT สำหรับ agent" (redact secret, network policy, จัดการ credential)
 - [[self-healing-environments]] — ก้าวถัดจากการต้องเลือกว่าจะประคองมือหรือปล่อยเลย: ให้เครื่องมือ agent ไว้เข้าใจระบบตัวเอง รายงาน secret ที่หาย / network ที่โดนบล็อก แล้วซ่อมเองได้ ("autoinstall" ของ Cursor)
-- [[orchestration-tax]] — ช่องว่างระหว่างของที่ agent ผลิตได้กับที่คน review/merge ไหว; นับทั้ง attention, rework, security cleanup และ comprehension ไม่ใช่แค่ค่า token วิธีแก้คือ scale fleet ตาม review rate, ใช้ verifier ปิดงาน routine และเก็บ human lock ไว้กับ judgement
+- [[orchestration-tax]] — ช่องว่างระหว่างของที่ agent ผลิตได้กับที่คน review/merge ไหว; claim agent หลักพันยังไม่ลบภาษีถ้าไม่รู้ acceptance, defect, cost และเวลาคน วิธีแก้คือ scale fleet ตาม review rate ใช้ verifier ปิดงาน routine และเก็บ human lock ไว้กับ judgement
 - [[cognitive-surrender]] — รับโค้ดจาก agent ทั้งที่ยังไม่ได้มีความเห็นของตัวเอง เพราะ attention หมดแล้ว; เป็นอาการนำของ orchestration tax ก่อนจะโผล่บน dashboard; สะสมเป็น cognitive debt
 - [[model-honesty]] — model ควรอ้างแค่เท่าที่หลักฐานรองรับ: ยอมรับความไม่แน่ใจ ไม่โม้ progress; จุดขายของ Opus 4.8 (ปล่อยบั๊กของตัวเองหลุดน้อยลง ~4 เท่า); เป็นยาแก้ weak-success-criteria / missed-requirement / reward-hacking
-- [[dynamic-workflows]] — research preview ของ Claude Code (มากับ Opus 4.8): Claude วางแผนงานใหญ่เอง ยิง subagent ขนานเป็นร้อยตัวใน session เดียว ตรวจงานตัวเอง แล้วรายงาน; ตัวอย่าง = migrate ทั้ง codebase จน merge ได้โดยใช้ test suite เดิม
+- [[dynamic-workflows]] — research preview ของ Claude Code: algebra สำหรับประกอบ agent แบบ sequence/parallel หลาย stage; เคส Bun มี workflow/test/CI จริง ส่วนงาน Swift หลักพัน agent ยังเป็นการเดาและยังไม่เสร็จตอนสัมภาษณ์
 - [[system-in-messages]] — Claude Messages API (Opus 4.8): ใส่ `system` เข้าไปใน messages array เพื่ออัปเดตคำสั่ง / permission / token budget / environment กลางคันได้ โดยไม่พัง prompt cache และไม่ต้องปลอมเป็น user turn
 - [[focal-models]] — กรอบของ JetBrains/Mellum2: model เล็กเร็วเฉพาะทางสำหรับ step ที่ยิงถี่ใน AI workflow เช่น routing, summarization, validation, RAG, subagents; มาเสริม frontier model ไม่ใช่มาแทน
-- [[software-ecology]] — ศึกษาแบบองค์รวมว่า ecosystem เชิง socio-technical ผลิตซอฟต์แวร์ยังไง; มอง developer เครื่องมือ และองค์กร เป็นระบบนิเวศที่วิวัฒน์ไปด้วยกัน
+- [[software-ecology]] — มองว่า software เกิดจาก ecosystem ของคน เครื่องมือ องค์กร และงานดูแล; กรณี Omarchy/NixOS ชี้ว่าชั้น config กับ installer ยังพึ่ง package, security, release, review และ maintenance ของ upstream
 - [[socio-technical-system]] — ระบบที่ส่วนคน (social) กับส่วนเทคนิค (technical) พันกันแน่น; internal developer environment ก็เป็นระบบแบบนี้
 - [[shared-fate]] — ระดับที่ชิ้นส่วนใน ecosystem ผูกชะตากัน; monorepo คือ shared fate สูง เลยต้องมี automated testing แบบรวมศูนย์
 - [[large-scale-changes]] — ความสามารถที่ให้ developer คนเดียวแก้โค้ดแบบประสานกัน ข้ามหลายล้านบรรทัด หลายพันไฟล์ ได้อย่างปลอดภัยด้วย automation
@@ -611,7 +631,7 @@
 - [[raygun-gothic]] — subgenre ของ retro-futurism ยุค 1930s–50s: โครเมียมทรง streamline เรขาคณิต art deco มาเจอยุคอวกาศ
 - [[soviet-cosmism]] — subgenre ของ retro-futurism ยุค 1960s–80s: เรขาคณิตแบบ constructivist สุนทรียะโครงการอวกาศโซเวียต utopia แบบรวมหมู่ มีชุดสีหลักสามชุด
 - [[noosphere]] — แนวคิดของ Vernadsky: ชั้น "ความคิดรวมหมู่" ของโลก; สะพานเชื่อม Cosmism กับ collective intelligence ยุคใหม่
-- [[open-source-governance]] — นิยามปี 2026 ของ Panutat: จุดต่างของ open source อยู่ที่ governance (ใครเป็นคนตัดสินว่าจะ ship อะไร) ไม่ใช่แค่ตัวโค้ด
+- [[open-source-governance]] — ระบบที่กำหนดว่าใครตัดสินใจและชุมชนดูแลของร่วมกันอย่างไร; มุม Panutat เน้นว่าใครเลือกสิ่งที่จะ ship ส่วน cafkafk เติม code of conduct, review, security, release, packaging และ maintenance
 - [[papercut-features]] — friction เล็กๆ ทาง UX ที่ product ใหญ่มองข้าม; กลายเป็นจุดขายของโปรเจกต์ niche ที่ขยับตัวเร็ว
 - [[tree-sitter]] — framework สำหรับ generate parser ที่เร็วและทน error; editor, diff tool และ GitHub ใช้กันทั่ว
 - [[tree-house]] — crate integration ตัวใหม่ของ Helix สำหรับ tree-sitter; สถาปัตยกรรม injection tree ที่รองรับหลายภาษาซ้อนกันแบบซับซ้อน
@@ -627,14 +647,14 @@
 - [[adaptive-thinking]] — โหมดการคิดแบบปรับเปลี่ยนได้ใน Opus 4.7; บังคับใช้ใน Claude Code xhigh effort; ซ่อน thinking content โดยปกติ
 - [[agent-client-protocol]] — ACP: มาตรฐานเปิดจาก Zed สำหรับให้ AI agent คุยกับ IDE
 - [[agent-enablement-role]] — role ใหม่ในองค์กรที่พาไปจาก chatbot สู่ automation ด้วย agent: ออกแบบ workflow + จัด context + ทำ eval + วาง HITL
-- [[agent-runtime-untrusted]] — จุดยืนเชิงสถาปัตยกรรม: runtime ของ model ถือว่าไม่ปลอดภัย; บังคับ security ด้วยโครงสร้าง/container ไม่ใช่ด้วยความหวัง
+- [[agent-runtime-untrusted]] — จุดยืนเชิงสถาปัตยกรรม: runtime ของ model ถือว่าไม่ปลอดภัยและใช้ sandbox/allowlist/audit บังคับจากภายนอก; claim ใหม่ว่า Opus 5 ต้าน prompt injection ได้ดีขึ้นเป็น defense เพิ่ม ไม่ใช่ proof ให้ถอด control
 - [[agent-swarm]] — แพตเทิร์นสเกลแบบ multi-agent (Kimi K2.6); ปล่อย subagent เป็นร้อยตัวลุยงาน long-horizon
 - [[agent-observability]] — การมองเห็น run ของ agent ผ่าน trace, cost, latency, error, artifact, key decision และ dashboard ที่เป็นหน้าควบคุม; สำคัญกับ long-running agent เพราะช่วยให้คน step in ตรงจุดแทนอ่าน transcript ดิบทั้งหมด
 - [[alignment-bottleneck]] — แรงวิศวกรรมย้ายจาก productivity รายคน มาอยู่ที่การทำให้ทีมกับ agent align ตรงกัน
 - [[auto-mode]] — permission mode ของ Claude Code: ใช้ classifier คัดอนุมัติ tool call ที่ปลอดภัยให้อัตโนมัติ
 - [[cheaper-to-correct]] — เป้าหมาย: ลด "พิธีรีตอง" กับ friction เวลาต้องแก้ทางให้ agent; ใช้คู่กับ Playback Pattern
 - [[clanker-slop]] — PR/issue spam จาก AI ที่ปั๊มออกมาเป็นแมส สูบ attention ของ maintainer ฝั่ง OSS; เคส pi ใช้ issue สั้นเสียงมนุษย์ + whitelist + auto-close เป็น intake protocol
-- [[claude-md]] — CLAUDE.md: system prompt ระดับโปรเจกต์ในรูป Markdown ของ Claude Code; มีลำดับความสำคัญ 3 ชั้น
+- [[claude-md]] — CLAUDE.md: system prompt ระดับโปรเจกต์ของ Claude Code; ควรทบทวนเมื่อ model เปลี่ยน ลองลบกฎแล้วเพิ่มกลับจาก failure แต่ไม่เหมารวม hook ที่เป็น security gate กับ behavioral instruction
 - [[code-is-free]] — ธีสิสของ Lopopolo/Ball ว่า implementation ถูกลงจนไม่ใช่คอขวดเดิม; caveat จาก Economy Media/Mario คือ token, review, comprehension, ownership และ maintenance ยังไม่ฟรี
 - [[collaborative-ai-engineering]] — AI engineering แบบทีม เน้น alignment และ shared context; ACE เสนอ team coordination ส่วน DeltaDB เพิ่ม continuous shared worktree กับ provenance ระหว่าง conversation และ code โดย semantic conflict กับ governance ยังต้องแก้ใน workflow
 - [[compaction]] — การเก็บกวาด session ของ Claude Code: สรุปประวัติเพื่อกัน context เน่า; ได้ผลสุดตอนกำกับเองและทำที่รอยต่อ phase ไม่ใช่กลางความงง
@@ -642,7 +662,7 @@
 - [[delegation-mindset]] — เปลี่ยนจาก micromanage เป็นมอบหมายงานตามเป้า; ยัด intent ให้ครบตั้งแต่ต้นทาง
 - [[domain-to-ai-translator]] — role วิศวกรที่เน้นแปล business logic ให้เป็น prompt/harness ที่ AI อ่านรู้เรื่อง
 - [[effort-levels]] — ตัวคุมความเข้มการคิดฝั่ง API: medium/high/xhigh/max; แลกกันระหว่างค่าใช้จ่ายกับความสามารถ
-- [[engineering-role-shift]] — เปลี่ยนบทบาทจากคนลงมือ implement เป็นผู้กำกับ/ผู้ review; งานขยายออกทั้ง upstream และ downstream
+- [[engineering-role-shift]] — บทบาทขยับจาก implement ไปทาง shaping/review และเดินข้าม boundary QA/product ง่ายขึ้น แต่ specialization ยังอยู่; โจทย์ที่ยังไม่มีคำตอบคือจะสร้าง system-design intuition ให้ developer รุ่นใหม่อย่างไร
 - [[financial-poetry]] — คอนเทนต์การเงินสายเล่าเรื่อง; ย่อยเรื่อง private banking ยากๆ ให้คนวงกว้างเข้าใจ
 - [[find-vs-filter]] — แพตเทิร์นการ review: แยกขั้นกวาดหาให้ครบ (find) ออกจากขั้นตัดสิน severity/ความเกี่ยวข้อง (filter)
 - [[graduated-autonomy]] — framework L1–L4 ว่า agent อิสระได้แค่ไหน และแต่ละระดับต้องมีการควบคุมอะไรบ้าง
@@ -653,12 +673,12 @@
 - [[harness-ratchet]] — วินัยแปลง failure ของ agent ที่เห็นตรงหน้า ให้กลายเป็นข้อบังคับถาวรใน harness: rule, hook, test, lint, gate หรือ reviewer agent
 - [[host-bridge]] — concept ของ thClaws: เชื่อม dashboard ของ agent เข้ากับ environment บนเครื่อง host จริง
 - [[hybrid-memory]] — สถาปัตยกรรมของ Mercury: Markdown ไว้ให้คนอ่าน substrate แบบ structured ไว้ให้ agent ใช้
-- [[instruction-budget]] — ลิมิต "dumb zone" ราวๆ 250 คำสั่ง ที่ attention ของ model ใน prompt รับไหว
+- [[instruction-budget]] — เพดานคำสั่งที่ model ทำตามพร้อมกันได้; นอกจากอย่าเติมจนเข้า dumb zone ยังต้อง audit กฎเก่าตาม model generation เพราะคำสั่งที่เคยช่วยอาจหมดอายุหรือขวาง capability ใหม่
 - [[judgement-vs-automation]] — กรอบทักษะ: อะไรที่คาดเดาได้ก็ automate ไป ส่วนที่เหลือเก็บ judgement ของคนไว้
 - [[just-in-time-context]] — ดึง context โค้ดที่เกี่ยวมาตอนต้องใช้พอดี เพื่อประหยัด token
 - [[lead-time]] — metric วิศวกรรมตัวหลัก: จากไอเดียถึง production; AI เขียนโค้ดเร็วขึ้น ≠ lead time สั้นลง
 - [[limit-wip]] — หลัก Kanban: จำกัดงานค้างระหว่างทำ (WIP) เพื่อให้คอขวดโผล่ออกมาให้เห็น
-- [[long-running-agents]] — agent ที่ถืองาน/state ข้ามหลายวัน; รวม 5 แพตเทิร์นของ Google Cloud เรื่อง persistence/HITL, loop ส่วนตัวย่อของ Kun Chen ผ่าน Good Night Have Fun, และสูตร 7 component ของ Prompt Engineering (goal/evaluator/verifier/outer loop/orchestration/observability/memory)
+- [[long-running-agents]] — agent ที่ถืองาน/state ข้ามหลายวัน; Opus 5 เพิ่ม claim ว่ารันได้เป็นสัปดาห์หรือเดือน แต่เคส Swift ที่ยังไม่เสร็จชี้ว่าต้องวัด duration, ความคืบหน้าต่อ exit criteria และ proof ตอนจบแยกกัน
 - [[malleable-tools]] — เครื่องมือ minimal ที่แก้ตัวเองได้ (pi-agent) เทียบกับ agent สาย "ยานแม่" ตัวหนักๆ
 - [[memory-decay]] — concept ของ Mercury: ให้ memory ของเครื่องค่อยๆ จางไปตามเวลา เพื่อกัน context เน่า
 - [[memory-drift]] — failure mode: พฤติกรรมของ agent เพี้ยนไป เพราะสะสมประสบการณ์ผิดปกติเข้าไปเรื่อยๆ
@@ -672,9 +692,9 @@
 - [[playback-pattern]] — ท่า alignment: ให้ agent ทวนก่อนลงมือ ว่าอะไรคือ "Stated, Inferred, Out-of-scope"
 - [[plugin-manager]] — เครื่องมือจัดการ life cycle, เวอร์ชัน และ dependency ของ extension ต่างๆ
 - [[pr-dependency-dag]] — ท่า orchestration: มองการแก้หลาย branch ขนานกันเป็น dependency graph
-- [[stacked-pull-requests]] — แตก change ใหญ่เป็น PR เล็กที่ต่อกันเป็น dependency chain; เดินหน้าต่อได้ก่อนฐาน merge แต่ยัง review, CI และ merge ทีละชั้น; เก็บ tension กับ DeltaDB ว่า collaboration ควรเกิดสดก่อน commit ส่วน PR อาจยังเป็น integration/audit gate หลัง change เริ่มนิ่ง
+- [[stacked-pull-requests]] — แตก change ใหญ่เป็น PR เล็กที่ต่อกันเป็น dependency chain; Dillon ใช้ heuristic 300–800 บรรทัดต่อ atomic PR เพื่อยังอ่าน code จาก agent ได้ครบ ขณะที่ CI, merge order และคอขวด review ยังต้องคุมทีละชั้น
 - [[private-banking]] — wealth management สำหรับคนทรัพย์สินสูง; เน้นปกป้องทรัพย์กับบริการที่ตัดเฉพาะราย
-- [[product-overhang]] — ศักยภาพของ product ที่มีอยู่แล้ว แต่ยังไม่ถูกใช้หรือ ship ออกมาเต็มที่
+- [[product-overhang]] — capability ที่ model วันนี้มีแล้วแต่ product ยังเปิดทางไม่ถึง; ด้านกลับคือ hobbling เมื่อ harness คิดแทนหรือบังคับมากไป จึงต้องใช้ model elicitation กับ prompt ablation หาจุดพอดี
 - [[progressive-disclosure]] — โหลด context/tool แบบ lazy เพื่อให้ agent อยู่ใน instruction budget
 - [[rabbit-hole]] — เส้นทางสืบสวนที่ลึกและวนซ้ำเป็นชั้นๆ ในงาน agentic coding ที่ซับซ้อน
 - [[selective-injection]] — concept ของ Mercury: เลือกเฉพาะเศษ memory คะแนนสูง ฉีดเข้า context window
@@ -683,7 +703,7 @@
 - [[shift-left-testing]] — เลื่อนการ test มาไว้ต้นๆ ของ pipeline; ยิ่งจำเป็นเมื่อ AI ทำให้เขียนโค้ดได้เร็วขึ้น
 - [[sputnik-moment-ai]] — เสียงปลุกเชิงภูมิรัฐศาสตร์/เทคนิคเรื่อง efficiency ของ AI (เคส DeepSeek)
 - [[stop-slop-concept]] — วินัยการขูด "กลิ่น AI" กับ fluff แบบ generic ออกจาก output ของ model
-- [[subagent-patterns]] — ท่า orchestration: ทีม agent แบบ fan-out (ขนาน) กับแบบ pipeline (เรียงต่อกัน)
+- [[subagent-patterns]] — ท่า orchestration แบบ fan-out กับ pipeline พร้อมทางเลือก pi `/tree`: ยอมเสีย parallelism เพื่อให้คนคัด summary/context กลับเข้าสายหลักเอง
 - [[task-budgets]] — ลิมิต token แบบ advisory ที่ model รับรู้เอง คนละเรื่องกับ max_tokens ที่ตัดจริง
 - [[taste-paradox]] — catch-22: ต้องมี judgement ถึงจะใช้ AI ได้ดี แต่ AI นั่นแหละคือตัวช่วยสร้าง judgement
 - [[team-pulse]] — เรื่อง alignment: ลูป feedback จาก agent กลับมาหาคน ว่าความคืบหน้าและสุขภาพของทีมเป็นยังไง
@@ -691,12 +711,12 @@
 - [[theory-of-constraints]] — หาคอขวดตัวเดียวที่รั้งระบบมากที่สุด แล้วยกมันขึ้นก่อน
 - [[token-billionaire]] — persona ของ Lopopolo: ไม่สนค่า token เอา verification กับความถูกต้องมาก่อน
 - [[token-optimization]] — บีบอัด context/output ที่ระดับ proxy (RTK) หรือระดับ model
-- [[tree-structured-sessions]] — ประวัติ session แบบแตกกิ่งของ pi-agent สำหรับสำรวจงานแบบไม่เป็นเส้นตรง
+- [[tree-structured-sessions]] — ประวัติ session แบบแตกกิ่งของ pi; Dillon ใช้ถามเรื่องที่รู้คำตอบ สำรวจทีละกิ่ง แล้วคัด summary/Markdown กลับเข้าสายหลักเองโดยไม่ rollback Git state
 - [[vibecoded-slop]] — โค้ด generic ที่แทบไม่ได้ verify; ผลของ vibe coding แบบไร้ judgement
 - [[vim-pack]] — plugin manager ในตัวของ Neovim 0.12; Lua API แบบเบาๆ
 - [[wtf-primitives]] — Worker-Trigger-Function: บล็อกพื้นฐานของ backend ใน harness ตัว iii
 - [[deep-modules]] — โมดูลที่มี Interface เรียบง่ายแต่ซ่อนความซับซ้อนไว้ข้างใน (Information Hiding); หัวใจสำคัญของการปล่อยให้ AI จัดการ implementation
 - [[grill-me]] — ทักษะการสั่งให้ AI สัมภาษณ์เราอย่างไม่ลดละจนกว่าจะถึงจุดที่เรียกว่า Shared Design Concept เพื่อลดความผิดพลาดในการทำงาน
 - [[software-entropy]] — สภาวะที่ซอฟต์แวร์ค่อยๆ เสื่อมสภาพและวุ่นวายขึ้นเมื่อมีการแก้ไขโดยขาดการออกแบบที่ดี; AI สามารถเร่งสปีด entropy ได้ถ้าไม่มีการคุม
-- [[specs-to-code]] — ความเชื่อว่าเราสามารถเขียนแค่สเปกแล้วให้ AI ปั่นโค้ดออกมาได้โดยไม่ต้องดูโค้ด; Pocock เตือนว่าเป็นกับดักที่จะนำไปสู่ขยะ
+- [[specs-to-code]] — กับดักเขียน spec แล้วให้ AI ปั่น code โดยไม่ดูไส้ใน; Dillon เป็น counterexample ที่ใช้ spec แบบ types/interfaces/call stack/tests แต่ยังอ่าน code ทุกบรรทัดและถือ accountability เอง
 - [[ubiquitous-language]] — ภาษาที่ใช้ร่วมกันระหว่างคนและ AI (อิงจาก DDD) เพื่อลดความเยิ่นเย้อและเพิ่มความแม่นยำในการ implementation

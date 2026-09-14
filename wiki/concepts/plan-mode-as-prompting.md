@@ -3,8 +3,8 @@ title: Plan Mode as Prompting
 type: concept
 tags: [ai, planning, coding-agents, harness, judgment]
 created: 2026-07-02
-updated: 2026-08-25
-sources: [zoran-horvat-claude-no-planning-engine.md, planning-mode-dangerous-illusion.md]
+updated: 2026-09-14
+sources: [zoran-horvat-claude-no-planning-engine.md, planning-mode-dangerous-illusion.md, claude-codes-new-intent-md-rob-shocks.md, ai-native-sdlc-playbook.md]
 ---
 
 # Plan Mode as Prompting / Plan mode คือ prompt scaffold
@@ -63,9 +63,27 @@ Horvat ชี้ว่าแม้ Opus ทำงานผ่าน มันย
 
 ## ประเด็นที่ยังไม่ลงตัว
 
+Playbook ของ Anthropic ใน [[claude-codes-new-intent-md-rob-shocks|คลิป Rob Shocks]] วาง plan mode เป็นช่วง Build ของ [[artifact-chain|artifact chain]] วิศวกรส่ง `intent.md` กับ `spec.md` ให้ agent แล้วซักต่อว่าอะไรอาจพัง ทางเลือกไหนถูกตัด และ test อะไรพิสูจน์ผลได้ จนคนที่ไม่เห็นบทสนทนาเดิม implement จาก `plan.md` ได้
+
+นี่ไม่ได้ลบคำวิจารณ์ของ Horvat กลับทำให้เส้นแบ่งชัดขึ้น Playbook ใช้ plan เป็น artifact ที่วิศวกรต้องตรวจและอนุมัติ ไม่ได้อ้างว่า numbered steps เป็น proof ว่า model เข้าใจ product semantics แล้ว ถ้าคนไม่ถาม assumption สำคัญ แผนที่อ่านครบก็ยังพลาดได้
+
+**ผลคือ:** plan mode มีค่าตอนใช้เป็นพื้นที่ให้คนทัก risk ก่อนแก้ code ไม่ใช่เครื่องประทับว่า design ถูก
+
 หน้า [[dynamic-workflows]] บันทึก claim ว่า Claude Code สามารถ self-plan และ dispatch subagents ได้. หน้าใหม่นี้ไม่ได้บอกว่าความสามารถนั้นไม่มี utility. มันบอกว่าคำว่า "self-plan" อาจหมายถึง harness-guided prompting ไม่ใช่ planner แบบ symbolic.
 
 คำถามที่ควรเปิดไว้คือ งานชนิดไหนพอใช้ plan draft + verification gate ได้ และงานชนิดไหนต้องให้มนุษย์ออกแบบแผนเองก่อน.
+
+## `plan.md` เป็น artifact ที่ commit ไม่ใช่แค่ขั้นตอนในหัว
+
+[[ai-native-sdlc-playbook|Playbook ของ Anthropic]] ให้ plan mode เป็นจุดเริ่มปกติของช่วง Build แต่ไม่ได้หยุดแค่สั่งให้ agent วางแผนก่อน ยังมีเกณฑ์รับแผนและกฎกัน drift ตามมาด้วย
+
+**เกณฑ์รับแผน** คือคนที่ไม่เคยเห็นบทสนทนานี้ต้องอ่านแล้วทำตามได้ ก่อนอนุมัติ engineer ต้องซักแผนว่าเสี่ยงตรงไหน มีทางอื่นไหม และจะพิสูจน์อย่างไร แผนที่ผ่านจะ commit เป็น `plan.md` พร้อมไฟล์ที่ต้องเปลี่ยน ลำดับงาน risk และหลักฐานที่ใช้ตัดสิน
+
+**กฎกัน drift** ระบุว่าถ้างานจริงเบนจากแผน ต้องแก้ `plan.md` ใน commit เดียวกับ code ไม่ใช่ปล่อยให้แผนค้างอยู่ที่ version แรก ตัววัดที่เสนอคือความถี่ที่ diff หลัง merge ยังตรงกับ `plan.md` ค่านี้ช่วยบอกว่า [[artifact-chain|artifact chain]] ยังตามงานจริงอยู่หรือกลายเป็นเพียงพิธีกรรม
+
+ข้อจำกัดเดิมยังอยู่: แผนที่อ่านแล้วครบไม่ได้แปลว่าครบจริง `plan.md` ที่ commit แล้วก็ยังเป็น prose ที่ตกสมมติฐานสำคัญได้
+
+**ผลคือ:** reviewer เห็นทั้งทางที่เลือกและ diff ไม่ใช่เห็นแต่ผลลัพธ์สุดท้าย
 
 ## See also
 
@@ -76,3 +94,7 @@ Horvat ชี้ว่าแม้ Opus ทำงานผ่าน มันย
 - [[judgement-vs-automation]]
 - [[grounding]]
 - [[agentic-code-review]]
+- [[claude-codes-new-intent-md-rob-shocks]]
+- [[intent-md]]
+- [[artifact-chain]]
+- [[ai-native-sdlc-playbook]]

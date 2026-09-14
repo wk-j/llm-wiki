@@ -3,8 +3,8 @@ title: AI Work Intensification
 type: concept
 tags: [ai, workplace, productivity, labor, burnout, management]
 created: 2026-08-13
-updated: 2026-08-25
-sources: [i-was-replaced-by-ai-typecraft.md]
+updated: 2026-09-12
+sources: [i-was-replaced-by-ai-typecraft.md, dillon-mulroy-ships-production-code-he-didnt-write.md]
 ---
 
 # AI Work Intensification / AI ทำให้งานเข้มขึ้น
@@ -60,6 +60,21 @@ Typecraft เพิ่มมิติที่ตัวเลข throughput ม�
 
 **ได้อะไร:** employee experience และ retention ต้องนับ agency/ownership ด้วย ไม่ใช่ดูแค่ output กับ defect.
 
+## งานเข้มขึ้นได้แม้องค์กรยังไม่ยกเป้า
+
+[[dillon-mulroy|Dillon Mulroy]] เพิ่มกลไกอีกแบบใน [[dillon-mulroy-ships-production-code-he-didnt-write|บทสัมภาษณ์กับ Jan-Niklas Wortmann]] เดิม developer สลับ macro design problem กับ implementation ย่อย ๆ ช่วง implementation มีโจทย์เล็กและความรู้สึกสำเร็จเป็นระยะ จึงช่วยพักจากการตัดสินใจระดับระบบ
+
+พอ agent รับ implementation ไป งานที่เหลือกับคนคือ architecture, abstraction, data flow และ accountability Dillon บอกว่าตัวเอง ship มากขึ้น แต่ต้องย้ายจากปัญหาใหญ่หนึ่งไปอีกปัญหาใหญ่หนึ่งจนเหนื่อยกว่าเดิม และแทบไม่เข้า flow state
+
+กลไกนี้ต่างจากเคส Typecraft ตรงที่ source ไม่ได้บอกว่า management เพิ่ม quota แล้วทำให้ Dillon ล้า ความเข้มเกิดจากส่วนผสมของงานเปลี่ยนเอง งานใช้ judgement เข้มข้นกินสัดส่วนของวันมากขึ้นแม้จำนวนชั่วโมงเท่าเดิม
+
+สองกลไกเกิดพร้อมกันได้:
+
+1. องค์กรเอาความเร็วไปเพิ่ม WIP และเป้าผลงาน
+2. automation ตัดงานเบาหรือ rewarding ออก เหลือแต่งาน judgement หนัก
+
+**ได้อะไร:** นอกจากวัดจำนวน task และชั่วโมงทำงาน ต้องดูว่าวันหนึ่งมีช่วงพักทางความคิดและ task mix แบบไหนด้วย
+
 ## วิธีสังเกต
 
 - AI usage เพิ่มแล้วชั่วโมงทำงานไม่ลด
@@ -78,6 +93,7 @@ Typecraft เพิ่มมิติที่ตัวเลข throughput ม�
 - creative ownership วัดอย่างไรโดยไม่ทำให้กลายเป็น survey ตัวเลขผิว ๆ.
 - ทีมแบบใดใช้ AI ลด routine work ได้จริงโดยไม่ยกเป้าตามทันที.
 - เรื่องเล่าของ Typecraft สอดคล้องกับข้อมูลข้ามองค์กรแค่ไหน. Source นี้เป็น field report จากคนเดียว.
+- ถ้า workload ไม่เพิ่ม แต่วันทำงานเหลือแต่ macro judgement ต่อเนื่อง จะออกแบบจังหวะพักหรือเก็บ implementation บางส่วนไว้ได้อย่างไร
 
 ## See also
 
@@ -91,3 +107,5 @@ Typecraft เพิ่มมิติที่ตัวเลข throughput ม�
 - [[enterprise-ai-roi]]
 - [[skill-atrophy]]
 - [[creative-ownership]]
+- [[dillon-mulroy-ships-production-code-he-didnt-write]]
+- [[dillon-mulroy]]

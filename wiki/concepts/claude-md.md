@@ -3,8 +3,8 @@ title: CLAUDE.md File
 type: concept
 tags: [claude-code, claude-md, prompt-engineering, workflow, harness]
 created: 2026-04-22
-updated: 2026-04-23
-sources: [cyril-xbt-claude-md-guide.md, alex-ker-harnesses-optimize.md, claude-code-subagents-docs.md, This Anthropic Engineer Uses Claude Code Differently Than Everyone Else.md]
+updated: 2026-09-14
+sources: [cyril-xbt-claude-md-guide.md, alex-ker-harnesses-optimize.md, claude-code-subagents-docs.md, This Anthropic Engineer Uses Claude Code Differently Than Everyone Else.md, boris-cherny-cut-80-percent-claude-code-prompt.md, ai-native-sdlc-playbook.md]
 ---
 
 # CLAUDE.md File / ไฟล์ CLAUDE.md
@@ -114,6 +114,10 @@ CLAUDE.md เป็น **instance หนึ่งของการตั้ง�
 
 [[cal-rueb|Cal Rueb]] แนะนำว่าเมื่อมีการเปลี่ยนไปใช้โมเดลรุ่นใหม่ที่ฉลาดขึ้นและทำตามคำสั่งได้ดีขึ้น (เช่น การเปลี่ยนผ่านสู่รุ่น 4.0 หรือ [[claude-opus-4-7|Opus 4.7]]) เป็นช่วงเวลาที่ดีที่จะกลับมาทบทวนไฟล์ `CLAUDE.md` กฎหลายอย่างที่เคยต้องเขียนเพื่อป้องกันไม่ให้โมเดลเก่าทำผิด (เช่น การห้ามเขียนคอมเมนต์ซ้ำซ้อน) อาจไม่จำเป็นอีกต่อไป การลบกฎที่ไม่จำเป็นออกจะช่วยลดการใช้ [[instruction-budget]] ลงได้
 
+[[boris-cherny|Boris Cherny]] ไปไกลกว่านั้นใน [[boris-cherny-cut-80-percent-claude-code-prompt|บทสัมภาษณ์กับ Y Combinator]]: เขาแนะนำให้ลองลบ `CLAUDE.md`, skills และ hooks ทุกหกเดือน ดูว่า model รุ่นใหม่ทำอะไรได้เอง แล้วเพิ่มกลับเมื่อเห็นมันพลาดเรื่องเดิมซ้ำ ๆ วิธีนี้สอดคล้องกับ [[prompt-ablation|prompt ablation]] ที่ทีม Claude Code ใช้ตัด system prompt ของ Opus 5 ออกราว 80%
+
+คำแนะนำนี้ไม่หักล้างเคส DHH ด้านล่างที่เขียนกฎแล้ว agent ยังพลาด เพราะสองกรณีตอบคนละ failure ถ้า model ทำได้เอง กฎนั้นอาจลบได้ ถ้ายังพลาดซ้ำ ให้เก็บกฎหรือย้ายไปเป็น linter/test ที่บังคับได้จริง ส่วน hook ที่ทำหน้าที่เป็น security gate ไม่ควรถูกลบพร้อม behavioral instruction โดยไม่ทดสอบความเสี่ยงแยก
+
 ## เรื่องเล่าจากหน้างาน — เขียนกฎไว้แล้วยังต้องเตือนซ้ำ
 
 [[dhh|DHH]] เล่าใน [[dhh-strategies-programming-with-ai-agents-lex-clips|บทสัมภาษณ์กับ Lex Fridman]] ว่าเขามีข้อห้ามเรื่อง early exit อยู่ใน `AGENTS.md` ของ [[omarchy|Omarchy]] คือห้าม agent เขียน bash เป็น precondition แล้ว exit ต่อกันเป็นชั้น ๆ แต่ agent ยังทำอยู่ และเขาต้องเตือนให้กลับไปอ่านไฟล์ทุกครั้งที่จับได้
@@ -123,6 +127,19 @@ CLAUDE.md เป็น **instance หนึ่งของการตั้ง�
 `AGENTS.md` เป็นไฟล์คนละชื่อกับ `CLAUDE.md` แต่ทำหน้าที่เดียวกัน คือกฎประจำ repo ที่ agent อ่านตอนเริ่มงาน ข้อสังเกตนี้จึงใช้ได้กับทั้งสองไฟล์
 
 สิ่งที่ควรเรียนจากเรื่องนี้ไม่ใช่ "ไฟล์คำสั่งไม่มีประโยชน์" แต่คือกฎที่เป็นรสนิยมด้าน style มักถูกละเลยง่ายกว่ากฎที่มีเครื่องตรวจ ถ้าเรื่องนั้นสำคัญจริงและตรวจอัตโนมัติได้ ควรย้ายไปเป็น linter หรือ test แทนที่จะฝากไว้กับข้อความในไฟล์อย่างเดียว ต่อกับ [[instruction-budget]] ตรงที่กฎยิ่งเยอะ โอกาสที่แต่ละข้อจะถูกทำตามยิ่งเจือจาง
+
+## `CLAUDE.md` ใน AI-Native SDLC ของ Anthropic
+
+[[ai-native-sdlc-playbook|Playbook ของ Anthropic]] วาง `CLAUDE.md` ไว้เป็น "ความรู้ของทีมที่ version ได้" ในช่วง Build เก็บ convention ของ repo คำสั่ง build โครงสถาปัตยกรรม และความผิดพลาดที่เจอบ่อย
+
+เอกสารให้กฎดูแลไฟล์ไว้สองข้อ
+
+- **พลาดเรื่องเดิมสองครั้ง ให้เขียนลงไฟล์** ไม่ใช่เขียนทุกอย่างที่นึกออกไว้ก่อน finding จาก code review รอบสองก็เข้าเกณฑ์เดียวกัน
+- **ยาวไม่เกินหนึ่งหน้า** เพราะทุก session ที่เปิดใหม่ต้องอ่านไฟล์นี้ทั้งไฟล์ ความยาวจึงเป็นต้นทุนคงที่ เรื่องเดียวกับ [[instruction-budget]]
+
+Playbook เพิ่มสิ่งที่คำแนะนำทั่วไปมักไม่พูดถึงอีกสองเรื่อง ทุกครั้งที่แก้ `CLAUDE.md` ต้องรัน eval เพราะไฟล์นี้เป็น config ที่เปลี่ยนพฤติกรรมทุก session พร้อมกัน และต้อง gate การ merge ไว้ที่ pass rate ส่วนตัววัดที่เสนอคือเวลาที่คนใหม่ในทีมใช้กว่าจะ merge PR แรกได้ ถ้าไฟล์ช่วยให้เข้าใจ repo เร็วขึ้น เวลานี้ก็ควรลดลง
+
+**ได้อะไร:** ไฟล์นี้เลิกเป็นที่กอง prompt ส่วนตัว แล้วกลายเป็น artifact ที่มีเกณฑ์เพิ่ม มีเพดานความยาว และมี regression test
 
 ## ดูเพิ่มเติม
 
@@ -137,4 +154,7 @@ CLAUDE.md เป็น **instance หนึ่งของการตั้ง�
 -   [[alex-ker-harnesses-optimize]]
 -   [[dhh-strategies-programming-with-ai-agents-lex-clips]]
 -   [[make-it-simpler]]
-
+-   [[prompt-ablation]]
+-   [[boris-cherny-cut-80-percent-claude-code-prompt]]
+- [[ai-native-sdlc-playbook]]
+- [[policy-as-code-for-agents]]

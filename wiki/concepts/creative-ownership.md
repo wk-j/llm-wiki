@@ -3,8 +3,8 @@ title: Creative Ownership
 type: concept
 tags: [ai, creativity, agency, software-engineering, craft]
 created: 2026-08-25
-updated: 2026-09-06
-sources: [i-was-replaced-by-ai-typecraft.md, state-of-technology-and-joy-of-making-phoomparin-mano.md, dhh-ai-programming-setup-lex-clips.md]
+updated: 2026-09-12
+sources: [i-was-replaced-by-ai-typecraft.md, state-of-technology-and-joy-of-making-phoomparin-mano.md, dhh-ai-programming-setup-lex-clips.md, dillon-mulroy-ships-production-code-he-didnt-write.md]
 ---
 
 # Creative Ownership / ความรู้สึกเป็นเจ้าของงานสร้างสรรค์
@@ -79,6 +79,16 @@ Phoomparin เสนอ `creative coding` เป็นพื้นที่ท�
 
 ผลคือ การถามว่าใช้ agent แล้วสนุกหรือไม่ต้องเผื่อคำตอบได้ทั้งสองด้าน และแยก flow ออกจากความรู้สึกเป็นเจ้าของงาน
 
+## Dillon: ยังเป็นเจ้าของ design แต่เสีย micro-reward
+
+[[dillon-mulroy|Dillon Mulroy]] เพิ่มกรณีที่ไม่ตรงกับสองขั้วเดิมใน [[dillon-mulroy-ships-production-code-he-didnt-write|บทสัมภาษณ์เรื่อง production code]] เขายังอ่านทุกบรรทัด กำหนด type, interface, call stack, test และรับผิดชอบสิ่งที่ ship จึงไม่ใช่กรณีปล่อย judgement ให้ agent หมด
+
+สิ่งที่หายไปคือจังหวะ implementation เขาเคยแก้ปัญหาเล็กทีละข้อ ได้ความรู้สึกสำเร็จต่อเนื่อง และเข้า flow พอ agent รับงานช่วงนี้ไป วันทำงานเหลือ macro design problem ต่อกัน Output สูงขึ้น แต่ความสนุกและพลังงานลดลง
+
+มุมนี้ช่วยแยก creative ownership ออกเป็นอย่างน้อยสองชั้น คนอาจยังเป็นเจ้าของทิศและผลลัพธ์ แต่ไม่ได้สัมผัส process ส่วนที่เคยให้ craft reward คำถามจึงไม่ใช่แค่ว่า "ใครตัดสินใจ" แต่รวมถึง "คนยังได้ทำส่วนไหนของงานที่มีความหมายกับเขา"
+
+**ผลคือ:** accountability ที่ยังอยู่กับคนไม่รับประกันว่า joy หรือ flow จะอยู่ด้วย
+
 ## See also
 
 - [[state-of-technology-and-joy-of-making-phoomparin-mano]]
@@ -92,3 +102,5 @@ Phoomparin เสนอ `creative coding` เป็นพื้นที่ท�
 - [[ai-work-intensification]]
 - [[dhh-ai-programming-setup-lex-clips]]
 - [[dhh]]
+- [[dillon-mulroy-ships-production-code-he-didnt-write]]
+- [[dillon-mulroy]]

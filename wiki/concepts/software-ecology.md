@@ -3,8 +3,8 @@ title: Software Ecology
 type: concept
 tags: [ai, systems-thinking, software-ecology, socio-technical]
 created: 2026-05-28
-updated: 2026-07-21
-sources: [software-engineering-at-the-tipping-point.md, teepagorn-ten-lessons-building-with-ai.md]
+updated: 2026-09-10
+sources: [software-engineering-at-the-tipping-point.md, teepagorn-ten-lessons-building-with-ai.md, cafkafk-nixos-omarchy-critique.md]
 ---
 
 # Software Ecology / นิเวศวิทยาซอฟต์แวร์
@@ -21,7 +21,7 @@ sources: [software-engineering-at-the-tipping-point.md, teepagorn-ten-lessons-bu
 
 1.  **ทุกอย่างเชื่อมโยงกัน (Everything is connected):** การเปลี่ยนแปลงค่าพารามิเตอร์ หรือเครื่องมือในโหนดหนึ่ง (เช่น การใส่ AI คอยสร้างโค้ด) จะส่งแรงกระเพื่อมล้นทะลัก (spillover) ไปยังโหนดอื่นอย่างเลี่ยงไม่ได้ เช่น การรีวิวโค้ด หรือการคอมไพล์งาน
 2.  **พฤติกรรมอุบัติใหม่ (Emergent Properties):** พฤติกรรมของระบบบางอย่างจะปรากฏขึ้นมาเมื่อทุกชิ้นส่วนทำงานร่วมกันเท่านั้น ไม่สามารถวิเคราะห์เจอจากการจ้องมองชิ้นส่วนเดี่ยวๆ เช่น โฟลว์การทำงานแบบ [[large-scale-changes|Large-Scale Changes (LSC)]]
-3.  **สิ่งแวดล้อมและวัฒนธรรมส่งผลต่อเทคโนโลยี:** สถาปัตยกรรมทางวิศวกรรมจะสะท้อนค่านิยมของทีม วัฒนธรรมการทำงานจะเป็นตัวสร้างสิ่งแวดล้อมรอบระบบนิเวศนั้นๆ 
+3.  **สิ่งแวดล้อมและวัฒนธรรมส่งผลต่อเทคโนโลยี:** สถาปัตยกรรมทางวิศวกรรมจะสะท้อนค่านิยมของทีม วัฒนธรรมการทำงานจะเป็นตัวสร้างสิ่งแวดล้อมรอบระบบนิเวศนั้นๆ
 
 ---
 
@@ -42,6 +42,14 @@ sources: [software-engineering-at-the-tipping-point.md, teepagorn-ten-lessons-bu
 
 **ผลคือ:** เวลาพูดว่า AI เป็น amplifier ต้องบอกด้วยว่ากำลังขยายอะไร — ความสามารถคน, workflow ของทีม หรือโครงสร้างองค์กร.
 
+## Distribution ชั้นบนกับแรงงานของ upstream
+
+[[cafkafk-nixos-omarchy-critique|cafkafk]] ใช้กรณี [[omarchy|Omarchy]] กับ [[nixos|NixOS]] ชี้ให้เห็น software ecology อีกแบบ ตัว distribution ชั้นบนอาจทำ configuration และ installer ของตัวเอง แต่ยังพึ่ง [[nixpkgs|Nixpkgs]], package, security, infrastructure, release engineering, review และ maintenance ที่คนอื่นทำไว้
+
+การใช้ Claude สร้าง glue code เร็วขึ้นไม่ได้ตัดสายพึ่งพานี้ ข้ออ้างของโพสต์ยังเป็นคำวิจารณ์เชิงบรรทัดฐานจาก cafkafk ไม่ใช่การวัดสัดส่วน code หรือแรงงานของแต่ละโครงการ แต่ทำให้เห็นว่าการประเมิน software จากชั้นที่ผู้ใช้เห็นอย่างเดียวจะมองข้าม ecosystem ข้างล่าง
+
+**ได้อะไร:** เวลาบอกว่าโปรเจกต์ใหม่ “สร้าง distribution” ต้องมองทั้ง layer ที่เพิ่มเองและ upstream ที่ทำให้ layer นั้นใช้งานได้
+
 ---
 
 ## See also
@@ -53,3 +61,7 @@ sources: [software-engineering-at-the-tipping-point.md, teepagorn-ten-lessons-bu
 - [[conways-law]]
 - [[local-optimization-trap]]
 - [[teepagorn-ten-lessons-building-with-ai]]
+- [[cafkafk-nixos-omarchy-critique]]
+- [[nixos]]
+- [[nixpkgs]]
+- [[open-source-governance]]

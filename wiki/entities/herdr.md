@@ -3,8 +3,8 @@ title: Herdr
 type: entity
 tags: [ai, agents, terminal, developer-tools]
 created: 2026-09-06
-updated: 2026-09-07
-sources: [dhh-ai-programming-setup-lex-clips.md, dhh-strategies-programming-with-ai-agents-lex-clips.md, "https://github.com/herdrdev/herdr"]
+updated: 2026-09-12
+sources: [dhh-ai-programming-setup-lex-clips.md, dhh-strategies-programming-with-ai-agents-lex-clips.md, dillon-mulroy-ships-production-code-he-didnt-write.md, "https://github.com/herdrdev/herdr"]
 ---
 
 # Herdr / เครื่องมือคุม agent ใน terminal
@@ -25,6 +25,12 @@ Herdr เป็นเครื่องมือสำหรับจัดก�
 
 นี่เป็นตัวอย่างของ [[omakase-software|omakase]] ที่จับต้องได้ คนที่ลง Omarchy ได้เครื่องมือคุม agent มาพร้อมเครื่อง ไม่ต้องไปหาลงเอง
 
+## บทบาทใน setup ของ Dillon Mulroy
+
+[[dillon-mulroy|Dillon Mulroy]] ใช้ Herdr เป็น terminal multiplexer สำหรับจัด project และ workspace ร่วมกับ Ghostty และ [[pi-agent|pi]] เขาชอบ CLI ที่คนและ agent ใช้ควบคุม dev server หรือดูสถานะงานได้ง่ายขึ้น
+
+บทสัมภาษณ์อธิบาย Herdr ว่าเป็น modern tmux บน libghostty พร้อม agent tracking และ indicator แต่รายละเอียดนี้ยังไม่ได้ตรวจเทียบกับ repository ในรอบ ingest นี้ จึงเก็บเป็นคำอธิบายของ Dillon ไม่เขียนทับคำอธิบายจาก repository หรือ setup ของ DHH
+
 ## See also
 
 - [[dhh-ai-programming-setup-lex-clips]]
@@ -34,3 +40,6 @@ Herdr เป็นเครื่องมือสำหรับจัดก�
 - [[orchestration-tax]]
 - [[omarchy]]
 - [[dhh-strategies-programming-with-ai-agents-lex-clips]]
+- [[dillon-mulroy-ships-production-code-he-didnt-write]]
+- [[dillon-mulroy]]
+- [[pi-agent]]

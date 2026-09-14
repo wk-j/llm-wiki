@@ -3,8 +3,8 @@ title: Graduated Autonomy (L1–L4) / ระดับอิสระของ AI
 type: concept
 tags: [ai, agents, security, governance, autonomy, apts]
 created: 2026-04-20
-updated: 2026-04-23
-sources: [owasp-apts.md]
+updated: 2026-09-14
+sources: [owasp-apts.md, ai-native-sdlc-playbook.md]
 ---
 
 # Graduated Autonomy (L1–L4) / ระดับอิสระของ AI agent 4 ชั้น
@@ -94,6 +94,18 @@ L2 สามารถทำงานได้ใน phase เดียว แต
 
 ซึ่งทำให้ vendor, operator, และ CISO สามารถสื่อสารกันด้วยภาษาเดียวกันได้ โดยไม่ต้องถกเถียงเรื่องนิยามของคำว่า autonomous
 
+## สองแกนที่ playbook ของ Anthropic ใช้ไล่ระดับ
+
+[[ai-native-sdlc-playbook|AI-Native SDLC Playbook]] กำหนด autonomy จากสองแกน
+
+**แกนแรกคือ environment** dev ให้สิทธิ์ได้กว้าง staging จำกัดลงมา ส่วน production ต้องผ่าน gate Agent เดินไปถึงหน้าประตู production ได้ แต่ผ่านเองไม่ได้ ฝั่ง runtime กำหนดว่า **ปกติ agent ไม่มี production credential** ส่วนคำสั่ง deploy ดูสถานะ และ rollback เปิดเป็น tool ผ่าน [[model-context-protocol|MCP]] โดยแยก scope ตาม environment
+
+**แกนที่สองคือระดับความผิดปกติของระบบ** ช่วง Maintain ใช้ [[control-bands|control band]] กำกับ ค่าเบี่ยงน้อยให้บันทึก ปานกลางให้วินิจฉัยแบบอ่านอย่างเดียว และระดับสูงจึงลงมือได้เฉพาะ route ที่เปิดไว้ล่วงหน้า
+
+Playbook ไม่ได้เพิ่ม autonomy ด้วย prompt แต่ใช้ hooks กับ managed settings ที่ปลายทางแก้ไม่ได้ ดู [[policy-as-code-for-agents]] เอกสารยังย้ำให้ซ้อม rollback ใน staging เป็นประจำ เพราะมองว่า **rollback คือเส้นทางที่ต้องซ้อมบ่อยที่สุด**
+
+**ได้อะไร:** ระดับสิทธิ์ผูกกับสิ่งที่ตรวจสอบได้ ไม่ใช่ผูกกับความมั่นใจที่คนมีต่อ model ในวันนั้น
+
 ## ดูเพิ่มเติม
 
 - [[owasp-apts]]
@@ -104,3 +116,5 @@ L2 สามารถทำงานได้ใน phase เดียว แต
 - [[advisor-strategy]]
 - [[harness-engineering]]
 - [[delegation-mindset]]
+- [[ai-native-sdlc-playbook]]
+- [[control-bands]]

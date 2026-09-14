@@ -3,18 +3,19 @@ title: Claude
 type: entity
 tags: [ai, models, anthropic, llm]
 created: 2026-04-16
-updated: 2026-08-16
-sources: [Introducing Claude Opus 4.7.md, The advisor strategy Give Sonnet an intelligence boost with Opus.md, Claude Mythos Preview.md, Piyalitt Ittichaiwong - Opus 4.8 Launch Recap.md, zoran-horvat-claude-no-planning-engine.md, llm-loops-instead-of-chain-of-thought.md, a-field-guide-to-fable-finding-your-unknowns.md, claude-text-watermarking-squintist.md]
+updated: 2026-09-10
+sources: [Introducing Claude Opus 4.7.md, The advisor strategy Give Sonnet an intelligence boost with Opus.md, Claude Mythos Preview.md, Piyalitt Ittichaiwong - Opus 4.8 Launch Recap.md, zoran-horvat-claude-no-planning-engine.md, llm-loops-instead-of-chain-of-thought.md, a-field-guide-to-fable-finding-your-unknowns.md, claude-text-watermarking-squintist.md, boris-cherny-cut-80-percent-claude-code-prompt.md]
 ---
 
 # Claude
 
 ตระกูลโมเดล AI จาก [[anthropic|Anthropic]] โดยมี 3 ระดับ (tier) มาตรฐาน คือ **Opus** (เก่งที่สุด), **Sonnet** (สมดุล), และ **Haiku** (เร็วที่สุด/ถูกที่สุด) — นอกจากนี้ยังมี **Mythos** ซึ่งเป็นรุ่นพรีวิวสำหรับเทคโนโลยีล่าสุด (frontier)
 
-## รุ่นปัจจุบัน (พฤษภาคม 2026)
+## รุ่นที่บันทึกใน wiki (ถึงกันยายน 2026)
 
 | โมเดล | ระดับ (Tier) | หมายเหตุ |
 |---|---|---|
+| **[[claude-opus-5]]** | Opus | Boris Cherny บอกในบทสัมภาษณ์ Startup School 2026 ว่าเปิดตัวก่อนวันสัมภาษณ์หนึ่งวัน แต่ wiki ยังไม่มี release note หรือ system card จึงเก็บ capability เป็น first-party claim และยังไม่ระบุวัน ราคา หรือ model ID |
 | **[[fable\|Claude Fable 5]]** | ใหม่ (tier ยังไม่ชัดใน wiki) | ยืนยันจาก [[field-guide-to-fable-finding-unknowns\|field guide ของ @trq212]] ว่าเป็น model ในตระกูล Claude และมี launch video (ตัดต่อด้วย Claude Code); claim จากผู้เขียน: model ตัวแรกที่คุณภาพงานติดที่ผู้ใช้เคลียร์ [[unknowns-matrix\|unknowns]] ไม่ทัน; spec/pricing ยังไม่มีข้อมูล |
 | **[[claude-opus-4-8]]** | Flagship | เปิดตัว 28 พ.ค. 2026; รุ่นต่อจาก Opus 4.7; จุดขายคือ [[model-honesty\|ความซื่อสัตย์]] (ไม่เนียนว่าทำเสร็จ) + alignment ใกล้ Mythos |
 | [[claude-opus-4-7]] | Flagship (รุ่นก่อน) | เปิดตัว 16 เม.ย. 2026; เป็นรุ่นต่อจาก Opus 4.6 |
@@ -62,6 +63,7 @@ sources: [Introducing Claude Opus 4.7.md, The advisor strategy Give Sonnet an in
 
 - [[anthropic]]
 - [[fable]]
+- [[claude-opus-5]]
 - [[claude-opus-4-8]]
 - [[claude-opus-4-7]]
 - [[claude-mythos-preview]]

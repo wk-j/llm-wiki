@@ -3,8 +3,8 @@ title: Open Source Governance
 type: concept
 tags: [open-source, governance, software-engineering, product-strategy]
 created: 2026-04-27
-updated: 2026-04-27
-sources: [panutat-tejasen-thclaws-positioning.md]
+updated: 2026-09-10
+sources: [panutat-tejasen-thclaws-positioning.md, cafkafk-nixos-omarchy-critique.md]
 ---
 
 # Open Source Governance / ระบบการตัดสินใจในโลก Open Source
@@ -32,7 +32,18 @@ sources: [panutat-tejasen-thclaws-positioning.md]
 2. **ดึงดูด Contributor:** คนทำงานอยากเห็น code ของตัวเองถูกนำไปใช้จริง (Impact) การที่ไม่มี gatekeeper มาคอยขัดขวางทำให้เกิดแรงจูงใจในการส่ง PR
 3. **Survivor Bias for Niche Users:** ช่วยให้ผู้ใช้ที่มี hardware หรือ workflow เฉพาะทาง (เช่น คนรัน local LLM บน Windows) มีเครื่องมือที่ตอบโจทย์ตัวเองจริงๆ
 
+## Governance ไม่ได้จบที่การเลือก feature
+
+[[cafkafk-nixos-omarchy-critique|cafkafk]] เติมอีกด้านจากกรณี [[nixos|NixOS]] กับ [[omarchy|Omarchy]] ว่า community governance รวมงานที่ทำให้คนจำนวนมากดูแลของร่วมกันได้ ทั้งกติกาการอยู่ร่วมกัน code of conduct, review, security, release engineering, packaging และ maintenance งานเหล่านี้ไม่ใช่เรื่องนอกทางเทคนิค เพราะ distribution ใช้งานต่อไม่ได้ถ้าไม่มีคนตัดสินใจและรับผิดชอบมัน
+
+มุมนี้กว้างกว่านิยามเดิมของ [[panutat-tejasen|Panutat Tejasen]] ที่เน้นว่าใครตัดสินใจว่าจะ ship อะไร สองมุมอยู่ร่วมกันได้: ความเร็วในการเลือก feature เป็นส่วนหนึ่งของ governance แต่ยังต้องถามต่อว่าใครดูแล upstream ใครรับภาระงานน่าเบื่อ และชุมชนตั้งกติกาให้ร่วมงานกันอย่างไร
+
+**ผลคือ:** จะประเมิน governance ของ open source ต้องดูทั้งอำนาจตัดสินใจและระบบที่ทำให้งานดูแลเดินต่อ ไม่ใช่ดูว่า repository เปิดหรือ ship เร็วอย่างเดียว
+
 ## ดูเพิ่ม
 - [[thclaws]]
 - [[panutat-tejasen]]
 - [[harness-engineering]]
+- [[cafkafk-nixos-omarchy-critique]]
+- [[nixos]]
+- [[software-ecology]]

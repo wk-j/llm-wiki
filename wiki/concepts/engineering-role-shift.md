@@ -3,8 +3,8 @@ title: Engineering Role Shift
 type: concept
 tags: [ai, software-engineering, career, roles]
 created: 2026-04-15
-updated: 2026-08-15
-sources: [software-engineer-role-ai-era.md, llm-era-computer-engineering-nattee.md, aaron-levie-agent-automation-jobs.md, llm-era-computer-engineering-ep3-nattee.md, software-after-software.md, teepagorn-ten-lessons-building-with-ai.md, andrew-ng-ai-engineering-skills-map.md]
+updated: 2026-09-12
+sources: [software-engineer-role-ai-era.md, llm-era-computer-engineering-nattee.md, aaron-levie-agent-automation-jobs.md, llm-era-computer-engineering-ep3-nattee.md, software-after-software.md, teepagorn-ten-lessons-building-with-ai.md, andrew-ng-ai-engineering-skills-map.md, dillon-mulroy-ships-production-code-he-didnt-write.md]
 ---
 
 # Engineering Role Shift / การเปลี่ยนขั้วของบทบาทวิศวกร
@@ -121,6 +121,16 @@ Ng ยังย้ำเรื่องคำว่านี่คือ *ทั
 
 **ผลคือ:** โครงทวิขั้วในหน้านี้ได้ชื่อเรียกที่ใช้คุยกับ recruiter และคนวางหลักสูตรได้ แต่แผนที่ของ Ng ยังเป็น first-party claim ที่ไม่มีรายงานวิธีวิจัยฉบับเต็ม และผู้เสนอเป็นผู้ก่อตั้งองค์กรที่ขายคอร์สสอนทักษะชุดนี้
 
+## Dillon: role overlap เพิ่ม แต่ specialization ยังอยู่
+
+[[dillon-mulroy|Dillon Mulroy]] เพิ่มภาพจากงานจริงใน [[dillon-mulroy-ships-production-code-he-didnt-write|บทสัมภาษณ์กับ Jan-Niklas Wortmann]] เขามองว่า engineer ทำ QA, prototype และสำรวจ codebase ของทีมอื่นได้เร็วขึ้น ขณะเดียวกัน product manager ก็ใช้ agent ทำ MVP เพื่อส่ง idea ให้ engineer ในรูปที่จับต้องได้กว่า PRD อย่างเดียว
+
+เขาไม่ได้สรุปว่าบริษัทควรรวม QA, PM และ engineer เป็นตำแหน่งเดียว ทั้งสองคนในบทสนทนายังเห็นว่าความเชี่ยวชาญเฉพาะมีค่า โดยเฉพาะงานที่ลึกมาก สิ่งที่เปลี่ยนคือแต่ละ role เดินข้าม boundary เดิมได้ง่ายขึ้นและ handoff มี artifact ที่รันหรือเปิดดูได้
+
+ประเด็นที่ source ยังตอบไม่ได้คือการฝึก developer รุ่นใหม่ ถ้า implementation และ failure เล็ก ๆ ที่เคยสร้าง intuition ถูก agent รับไป คนจะเรียน system design จากไหน Dillon เสนอ apprenticeship เป็นความเป็นไปได้หนึ่ง แต่ย้ำว่าเขายังไม่มีคำตอบ
+
+**ผลคือ:** role compression เพิ่ม demand ต่อ judgement แต่ยังไม่มี learning path ที่พิสูจน์แล้วว่าจะสร้าง judgement รุ่นถัดไปทัน
+
 ## ดูเพิ่มเติม
 
 - [[software-engineer-role-ai-era]]
@@ -145,3 +155,6 @@ Ng ยังย้ำเรื่องคำว่านี่คือ *ทั
 - [[shaping-the-build]]
 - [[evals-and-error-analysis]]
 - [[andrew-ng]]
+- [[dillon-mulroy-ships-production-code-he-didnt-write]]
+- [[dillon-mulroy]]
+- [[creative-ownership]]

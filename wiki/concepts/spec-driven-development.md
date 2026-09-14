@@ -3,8 +3,8 @@ title: Spec-Driven Development (SDD)
 type: concept
 tags: [ai-coding, sdd, specs, workflow, methodology]
 created: 2026-06-11
-updated: 2026-08-16
-sources: ["Stop Writing Specs. Start Writing Facts. The Entire SDD Movement Is Already Obsolete..md", code-isnt-free-mario-zechner-hard-truths-coding-ai.md, andrew-ng-ai-engineering-skills-map.md, the-new-software-lifecycle.md]
+updated: 2026-09-09
+sources: ["Stop Writing Specs. Start Writing Facts. The Entire SDD Movement Is Already Obsolete..md", code-isnt-free-mario-zechner-hard-truths-coding-ai.md, andrew-ng-ai-engineering-skills-map.md, the-new-software-lifecycle.md, claude-codes-new-intent-md-rob-shocks.md]
 ---
 
 # Spec-Driven Development (SDD) / พัฒนาซอฟต์แวร์โดยให้สเปกนำ
@@ -82,6 +82,16 @@ Ng ไม่ได้เถียงกลไก non-determinism เขาแค
 
 **ผลคือ:** “spec สำคัญขึ้น” ไม่เท่ากับ “spec พอแล้ว” ความเร็วของ agent ยิ่งทำให้ต้องผูก intent เข้ากับหลักฐานที่รันซ้ำได้
 
+## intent.md แยกปัญหาออกจาก design แต่ไม่แก้ข้อวิจารณ์ของ SDD
+
+Playbook ของ Anthropic ที่ [[claude-codes-new-intent-md-rob-shocks|Rob Shocks อธิบาย]] เพิ่ม [[intent-md|`intent.md`]] ไว้ก่อน `spec.md` Originator เขียนปัญหา ผลลัพธ์ที่อยากได้ ผู้ใช้ ระบบที่กระทบ constraint และคำถามเปิด แล้วตรวจสิ่งที่ agent สรุปด้วยตัวเอง Product owner ค่อยรับ intent ไปสร้าง requirements กับ design
+
+การแยกนี้ช่วยรักษาความต่างระหว่าง "ทำไมต้องเปลี่ยน" กับ "จะออกแบบอย่างไร" และทำให้เห็นง่ายขึ้นเมื่อ spec แอบใส่ solution ที่คนต้นเรื่องไม่ได้ขอ แต่ยังไม่ตอบคำวิจารณ์หลักของ Wasowski กับ Zechner เพราะทั้ง `intent.md` และ `spec.md` ยังเป็น prose ที่ model ต้องตีความ
+
+ทางที่เข้ากับ claim เดิมของหน้านี้คือใช้ [[artifact-chain|artifact chain]] เก็บ why กับ decision แล้วผูก constraint สำคัญเข้ากับ test, schema, policy และ verifier เมื่อถึง Build กับ Test
+
+**ผลคือ:** `intent.md` ทำให้ SDD มีต้นทางที่ตามรอยได้ดีขึ้น แต่ไม่ทำให้ code correct by construction
+
 ## โยงกับหน้าอื่น
 
 - [[specs-to-code]] — กับดักเวอร์ชัน Matt Pocock: เขียน spec แล้วไม่ดูโค้ดเลย — SDD แบบสุดโต่งคือสิ่งเดียวกัน คำวิจารณ์สองสายนี้มาบรรจบกัน
@@ -105,3 +115,6 @@ Ng ไม่ได้เถียงกลไก non-determinism เขาแค
 - [[ai-driven-sdlc]]
 - [[shaping-the-build]]
 - [[andrew-ng]]
+- [[claude-codes-new-intent-md-rob-shocks]]
+- [[intent-md]]
+- [[artifact-chain]]

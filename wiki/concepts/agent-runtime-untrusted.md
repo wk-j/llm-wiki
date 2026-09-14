@@ -3,8 +3,8 @@ title: Agent Runtime as Untrusted Component / ตัวรัน agent คือ
 type: concept
 tags: [ai, agents, security, threat-model, apts, architecture]
 created: 2026-04-20
-updated: 2026-06-15
-sources: [owasp-apts.md, Claude Mythos Preview.md, "Introducing Omnigent A Meta-Harness to Combine, Control and Share Your Agents.md"]
+updated: 2026-09-14
+sources: [owasp-apts.md, Claude Mythos Preview.md, "Introducing Omnigent A Meta-Harness to Combine, Control and Share Your Agents.md", boris-cherny-cut-80-percent-claude-code-prompt.md, ai-native-sdlc-playbook.md]
 ---
 
 # Agent Runtime as Untrusted Component / ตัวรัน agent คือส่วนที่เชื่อไม่ได้
@@ -83,6 +83,16 @@ APTS เลยเขียนไว้แบบนี้:
 
 พูดง่าย ๆ คำถามเปลี่ยนจาก "จะเทรน agent ยังไงให้เชื่อได้" เป็น "จะกั้น agent ยังไงโดยไม่ต้องเชื่อ"
 
+## Opus 5 อ้างว่าต้าน prompt injection ได้ดีขึ้น
+
+[[boris-cherny|Boris Cherny]] บอกใน [[boris-cherny-cut-80-percent-claude-code-prompt|บทสัมภาษณ์กับ Y Combinator]] ว่าเมื่อรวม [[claude-opus-5|Opus 5]] ที่ align ดีขึ้น, prompt-injection classifier จาก activation ภายใน model และ auto-mode classifier แล้ว ทีมยังสาธิต prompt injection ให้สำเร็จไม่ได้ เขาบอกด้วยว่าพัฒนาการนี้เริ่มเห็นตั้งแต่ Opus 4.7/4.8 และ Sonnet 5 ก่อน Opus 5 ขยับไปอีกระดับ
+
+Claim นี้ชนกับประโยคเดิมของ APTS ที่ว่า platform operator ยังพิสูจน์คุณสมบัติแบบ “ไม่หลุด mandate” ไม่ได้ แต่ยังไม่จำเป็นต้องเลือกทิ้งด้านใดด้านหนึ่ง สิ่งที่ Boris รายงานคือผลเชิงประจักษ์จาก attack attempts ของระบบหนึ่ง ส่วน APTS เป็นหลักออกแบบเมื่อผลเสียจาก false confidence สูง
+
+คำถามที่ยังตอบไม่ได้คือ classifier ทดสอบกับ attack distribution แบบไหน มี false negative เท่าไร และยังทำงานได้ดีแค่ไหนเมื่อ agent ต่อ tool ใหม่หรืออ่านข้อมูลจากหลาย trust boundary จนกว่าจะมีรายงานละเอียด หลัก untrusted runtime ยังเป็นฐานที่ปลอดภัยกว่า
+
+**ได้อะไร:** ใช้ alignment กับ classifier ลดเหตุการณ์ แต่ใช้ architecture จำกัดความเสียหายหากเหตุการณ์ยังหลุดมาได้
+
 ## ผลที่ได้
 
 ทีมที่ออกแบบตามวิธีนี้:
@@ -101,6 +111,21 @@ APTS เลยเขียนไว้แบบนี้:
 
 ดูเพิ่มที่ [[model-cyber-capability-emergence]]
 
+## Managed settings: ตัดความสามารถออก แทนที่จะสั่งไม่ให้ทำ
+
+[[ai-native-sdlc-playbook|Playbook ของ Anthropic]] ยกตัวอย่าง managed settings สำหรับองค์กรที่มี regulator โดย push ผ่าน MDM แล้วปลายทางแก้ไม่ได้ ทุกข้อใช้หลักเดียวกัน คือไม่ให้ agent เข้าถึงสิ่งที่ไม่ควรใช้ตั้งแต่แรก
+
+- ปิดทางอ่าน `.env*` และ `secrets/**` ปิด `curl`/`wget`/`WebFetch` แล้วเปิดเฉพาะ inner loop ที่ปลอดภัยไว้ล่วงหน้า
+- บังคับ sandbox ระดับ OS และตั้งให้ **ไม่ยอมรันเลยถ้า sandbox ใช้ไม่ได้** แทนที่จะ fallback ไปโหมดหลวม
+- ออกเน็ตได้เฉพาะ domain ที่ระบุ
+- ให้ OS ปฏิเสธการอ่าน `~/.ssh` กับ `~/.aws/credentials` และถอด token ออกจาก environment variable
+- บังคับว่า skill, hook และ MCP server ต้องมาจาก marketplace ขององค์กร ปิด flag ที่ sideload ของนอกเข้ามาได้
+- ไม่ให้สตาร์ทบน version ที่ยังไม่ได้ประเมิน
+
+**ชุดนี้ไม่ฝากความปลอดภัยไว้กับการเชื่อฟังของ model** เพราะ prompt injection, tool ที่หลอก และความผิดพลาดของ model แก้ด้วยคำสั่งอย่างเดียวไม่ได้ แต่ถ้าระบบห้ามอ่านไฟล์นั้นตั้งแต่แรก agent ก็ไม่มีทางเข้าถึง ดู [[policy-as-code-for-agents]]
+
+**ผลคือ:** OS กับ network เป็นตัวกำหนดขอบเขตความเสียหาย ไม่ใช่ instruction
+
 ## See also
 
 - [[owasp-apts]]
@@ -114,3 +139,6 @@ APTS เลยเขียนไว้แบบนี้:
 - [[claude-mythos-preview]]
 - [[meta-harness]]
 - [[omnigent]]
+- [[boris-cherny-cut-80-percent-claude-code-prompt]]
+- [[claude-opus-5]]
+- [[ai-native-sdlc-playbook]]

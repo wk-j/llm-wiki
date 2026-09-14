@@ -3,8 +3,8 @@ title: Agentic Code Review
 type: concept
 tags: [ai, agents, code-review, verification, software-engineering]
 created: 2026-06-16
-updated: 2026-09-06
-sources: [Agentic Code Review.md, aom-fable-elysia-2-audit.md, bun-in-rust.md, dhh-ai-programming-setup-lex-clips.md]
+updated: 2026-09-14
+sources: [Agentic Code Review.md, aom-fable-elysia-2-audit.md, bun-in-rust.md, dhh-ai-programming-setup-lex-clips.md, claude-codes-new-intent-md-rob-shocks.md, dillon-mulroy-ships-production-code-he-didnt-write.md, ai-native-sdlc-playbook.md]
 ---
 
 # Agentic Code Review / การ review โค้ดในยุค agent
@@ -123,6 +123,14 @@ Agentic code review = **risk tier + evidence intake + deterministic gates + hete
 
 ถ้าขาด risk tier จะ review หนักเกินในงานเล็กและเบาเกินในงานใหญ่. ถ้าขาด evidence intake reviewer ต้องกู้ intent เอง. ถ้าขาด deterministic gate agent จะ optimize เขียวแทน optimize ถูก. ถ้าขาด AI sensor คนจะจมใน volume. ถ้าขาด human ownership ไม่มีใครรับผิดชอบตอน production พัง.
 
+## Review chain ใน playbook ของ Anthropic
+
+ก่อนถึงกรณีของ DHH, playbook ที่ [[claude-codes-new-intent-md-rob-shocks|Rob Shocks สรุป]] เพิ่มโครงรอบ PR ไว้อีกชั้น Agent ฝั่ง implement เปิด PR พร้อม diff, test และ [[artifact-chain|artifact ก่อนหน้า]] จากนั้น reviewer อีก instance ตรวจเทียบ policy กับ security rule แล้วส่ง comment กลับไปให้ agent แก้
+
+จุดที่ยังไม่ควรย่อรวมคือ AI review, deterministic CI และ human approval ทำหน้าที่คนละอย่าง Reviewer ช่วยหา concern, CI บังคับสิ่งที่เขียนเป็นกฎได้ ส่วนคนรับผิดชอบ gate ที่กระทบ production Hooks ควรปิดเส้นทาง deploy จนกว่าจะมี permission ที่กำหนดไว้
+
+**ผลคือ:** ความเร็วไม่ได้มาจากตัด review ออก แต่มาจากให้ agent เตรียม evidence และแก้ feedback ก่อนถึง human gate
+
 ## DHH: ตรวจสิ่งที่ควรเปลี่ยนแต่นอก diff ด้วย
 
 [[dhh|DHH]] ผู้สร้าง Ruby on Rails เล่าใน [[dhh-ai-programming-setup-lex-clips|บทสัมภาษณ์เรื่องชุดเครื่องมือ AI]] ว่าใช้ Neovim เป็นตัวเปิดดูโปรเจกต์ แม้เขียน code เองน้อยลง เขาชอบการแสดง diff ของ Hunk แต่ระหว่างตรวจงาน agent อยากเปิดไฟล์ที่ไม่ได้เปลี่ยนด้วย เพื่อถามว่ามีส่วนไหนควรแก้ตามแล้ว agent ลืมหรือไม่
@@ -130,6 +138,31 @@ Agentic code review = **risk tier + evidence intake + deterministic gates + hete
 ตัวอย่างนี้เสริมการแบ่งระดับ review ตามความเสี่ยง: เมื่อความถูกต้องของงานขึ้นกับไฟล์อื่น ผู้ตรวจต้องตามออกไปดูบริบทนั้นได้ การเห็นเฉพาะบรรทัดที่เปลี่ยนอาจทำให้ไม่เห็นงานที่ขาด ข้อสรุปนี้เป็นการเชื่อมแนวคิดของ wiki ไม่ใช่ผลทดสอบว่า Hunk ตรวจ bug ได้น้อยกว่าเครื่องมืออื่น
 
 ผลคือ เครื่องมือ review ควรเปิดทางจาก diff ไปยัง code ที่เกี่ยวข้อง และคนยังต้องตัดสินว่าขอบเขตที่ agent แก้ครบตามโจทย์หรือยัง
+
+## Dillon: local review ก่อนให้ PR ถึงทีม
+
+[[dillon-mulroy|Dillon Mulroy]] ใช้ [[plannotator|Plannotator]] เปิด AI-generated diff ใน local web app แล้ว comment ทีละไฟล์ก่อน push Agent รับ comment กลับเข้า session และแก้ต่อได้ใน loop เดิม เขายังพยายามจำกัด PR ไว้ราว 300 ถึง 800 บรรทัดเพื่อให้อ่านครบและเข้าใจเป็น atomic unit
+
+วิธีนี้เพิ่ม gate ก่อน team review ไม่ได้แทน CI หรือ reviewer คนอื่น จุดแข็งคือ feedback เกิดตอน context ของ implementer ยังอุ่น และงานที่เจ้าของยังไม่อ่านไม่ถูกโยนไปเป็นภาระของทีม ข้อจำกัดคือคำว่า "อ่านทุกบรรทัด" ไม่ได้พิสูจน์ว่าจับ architecture mismatch หรือ missing requirement ครบ
+
+**ผลคือ:** local review ลด review debt ที่ผลักไปให้คนอื่น แต่ยังต้องใช้ risk tier, deterministic evidence และ human ownership ตามเดิม
+
+## `REVIEW.md` เขียนนโยบาย review เป็นไฟล์
+
+[[ai-native-sdlc-playbook|Playbook ของ Anthropic]] ไม่ได้ให้ agent review ตาม prompt ที่เขียนใหม่แต่ละครั้ง แต่วางนโยบายไว้ใน `REVIEW.md` ที่เก็บ version เหมือน code ไฟล์นี้มีสี่ส่วน
+
+- **Passes:** แบ่งรอบตรวจเป็น bugs, security, compliance (ตรงกับ `spec.md` และ `plan.md` ไหม)
+- **Important vs. nit:** นิยามชัดว่าอะไรคือของจริง (พฤติกรรมพัง ข้อมูลรั่ว ผิด policy) อะไรคือเรื่องรูปแบบ
+- **Caps:** รายงาน nit ได้ไม่เกิน 5 ข้อต่อรอบ ที่เหลือสรุปเป็นจำนวน
+- **Exclusions:** ตัด generated file และทุกอย่างที่ CI ตรวจอยู่แล้วออก
+
+สามข้อหลังช่วยกันไม่ให้ comment เล็ก ๆ ท่วม review จนคนเลื่อนผ่าน finding ที่กระทบพฤติกรรมหรือความปลอดภัย
+
+เมื่อต้องการให้แก้ตาม comment engineer จะ tag `@claude` ที่ comment นั้น แล้ว agent แก้และ push ให้ ถ้า finding เดิมโผล่เป็นรอบที่สอง ให้เขียนกฎกลับลง [[claude-md|`CLAUDE.md`]] เพื่อป้องกันก่อนถึงรอบ review ครั้งถัดไป
+
+ยังต้องแยกหน้าที่เหมือนเดิม agent ที่เขียน code อนุมัติ code ตัวเองไม่ได้ กฎนี้บังคับที่ branch protection ไม่ใช่ instruction ดู [[policy-as-code-for-agents]]
+
+**ผลคือ:** คนได้ใช้ความสนใจไปกับเรื่องที่ตัดสินใจยาก ส่วนเรื่องที่ตรวจซ้ำได้ก็ผลักไปให้เครื่องทำแทน
 
 ## See also
 
@@ -150,3 +183,10 @@ Agentic code review = **risk tier + evidence intake + deterministic gates + hete
 - [[bun-in-rust]]
 - [[dhh-ai-programming-setup-lex-clips]]
 - [[dhh]]
+- [[claude-codes-new-intent-md-rob-shocks]]
+- [[artifact-chain]]
+- [[plannotator]]
+- [[dillon-mulroy-ships-production-code-he-didnt-write]]
+- [[dillon-mulroy]]
+- [[stacked-pull-requests]]
+- [[ai-native-sdlc-playbook]]

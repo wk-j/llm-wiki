@@ -3,8 +3,8 @@ title: Developer Balance
 type: concept
 tags: [ai, agents, developer-experience, attention, burnout, health, productivity]
 created: 2026-06-11
-updated: 2026-08-25
-sources: [How to Keep Shipping When You Walk Away from Your Desk — Zack Proser, WorkOS.md, techsauce-ai-brain-fry.md, code-isnt-free-mario-zechner-hard-truths-coding-ai.md, i-was-replaced-by-ai-typecraft.md, state-of-technology-and-joy-of-making-phoomparin-mano.md]
+updated: 2026-09-12
+sources: [How to Keep Shipping When You Walk Away from Your Desk — Zack Proser, WorkOS.md, techsauce-ai-brain-fry.md, code-isnt-free-mario-zechner-hard-truths-coding-ai.md, i-was-replaced-by-ai-typecraft.md, state-of-technology-and-joy-of-making-phoomparin-mano.md, dillon-mulroy-ships-production-code-he-didnt-write.md]
 ---
 
 # Developer Balance / สมดุลของนักพัฒนาในยุค Agent
@@ -111,6 +111,16 @@ Remote control ทำให้คนเริ่มงานที่โต๊�
 
 **ผลคือ:** balance ไม่ใช่ลดการใช้ agent. มันคือใช้ agent ให้เพิ่ม thinking bandwidth ไม่ใช่เพิ่ม WIP จนสมองรับไม่ไหว.
 
+## Dillon เตือนว่างานยากอาจแน่นขึ้นแม้ WIP ไม่เพิ่ม
+
+[[dillon-mulroy|Dillon Mulroy]] เล่าใน [[dillon-mulroy-ships-production-code-he-didnt-write|บทสัมภาษณ์เรื่อง production code]] ว่า agent ตัด implementation ช่วงที่เคยมี micro-problem และความรู้สึกสำเร็จเล็ก ๆ ออกไป เขายังอ่านทุกบรรทัดและคุม design เอง แต่วันทำงานกลายเป็น macro problem ต่อกันจนแทบไม่มีช่วงผ่อน
+
+กรณีนี้เพิ่ม constraint ที่ไม่เหมือน Mario หรือ Typecraft จำนวน agent อาจไม่เยอะ WIP อาจยังคุมได้ แต่ task mix ของคนหนักขึ้น เพราะเวลาส่วนใหญ่ใช้กับ architecture, abstraction และ accountability
+
+เวลาเช็ก balance จึงต้องถามเพิ่มว่า วันทำงานมีจังหวะสลับระดับความยากไหม มีงานที่พาเข้า flow หรือเปล่า และ productivity gain แลกกับ recovery cost หลังเลิกงานเท่าไร Source ยังไม่มีคำตอบว่าเก็บ implementation บางส่วนไว้หรือเพิ่ม pause แบบไหนแล้วช่วยจริง
+
+**ได้อะไร:** sustainable throughput ต้องคุมทั้งจำนวนงานและความหนาแน่นของ judgement ในแต่ละวัน
+
 ## กับดัก
 
 - **Remote work กลายเป็น always-on work** — ถ้าถือว่ามือถือทำให้ต้องตอบ agent ตลอดเวลา การลุกจากโต๊ะจะไม่ใช่การฟื้นตัว.
@@ -139,3 +149,5 @@ Remote control ทำให้คนเริ่มงานที่โต๊�
 - [[planetscale]]
 - [[state-of-technology-and-joy-of-making-phoomparin-mano]]
 - [[creative-ownership]]
+- [[dillon-mulroy-ships-production-code-he-didnt-write]]
+- [[dillon-mulroy]]

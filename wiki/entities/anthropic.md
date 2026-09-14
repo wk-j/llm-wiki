@@ -3,8 +3,8 @@ title: Anthropic
 type: entity
 tags: [company, ai, ai-safety, claude]
 created: 2026-04-16
-updated: 2026-08-16
-sources: [Introducing Claude Opus 4.7.md, The advisor strategy Give Sonnet an intelligence boost with Opus.md, Using Claude Code Session Management & 1M Context.md, opencode-vs-claude-code-morph.md, Claude Mythos Preview.md, improved-15-llms-harness-changed.md, Piyalitt Ittichaiwong - Opus 4.8 Launch Recap.md, how-ai-became-more-expensive-than-workers-it-replaced.md, claude-in-microsoft-foundry.md, bun-in-rust.md, bringing-mcp-2026-07-28-to-claude.md, claude-text-watermarking-squintist.md]
+updated: 2026-09-14
+sources: [Introducing Claude Opus 4.7.md, The advisor strategy Give Sonnet an intelligence boost with Opus.md, Using Claude Code Session Management & 1M Context.md, opencode-vs-claude-code-morph.md, Claude Mythos Preview.md, improved-15-llms-harness-changed.md, Piyalitt Ittichaiwong - Opus 4.8 Launch Recap.md, how-ai-became-more-expensive-than-workers-it-replaced.md, claude-in-microsoft-foundry.md, bun-in-rust.md, bringing-mcp-2026-07-28-to-claude.md, claude-text-watermarking-squintist.md, claude-codes-new-intent-md-rob-shocks.md, boris-cherny-cut-80-percent-claude-code-prompt.md, ai-native-sdlc-playbook.md]
 ---
 
 # Anthropic
@@ -14,7 +14,8 @@ sources: [Introducing Claude Opus 4.7.md, The advisor strategy Give Sonnet an in
 ## ผลิตภัณฑ์ที่อ้างอิงใน Wiki นี้
 
 - **[[claude|Claude]]** — ตระกูลโมเดล AI (Opus, Sonnet, Haiku)
-- **[[claude-opus-4-8]]** — โมเดล flagship ปัจจุบัน (เปิดตัว 28 พ.ค. 2026); จุดขายคือ [[model-honesty|ความซื่อสัตย์]] + alignment ใกล้ Mythos; มากับ [[dynamic-workflows|dynamic workflows]] และ [[effort-levels|effort control]] บน UI
+- **[[claude-opus-5]]** — Boris Cherny บอกบนเวที Startup School 2026 ว่าเพิ่งเปิดตัวก่อนวันสัมภาษณ์หนึ่งวัน; wiki ยังไม่ได้ ingest release note หรือ system card จึงเก็บ capability และสถานะเป็น first-party interview claim
+- **[[claude-opus-4-8]]** — flagship ณ ตอนเปิดตัว 28 พ.ค. 2026; จุดขายคือ [[model-honesty|ความซื่อสัตย์]] + alignment ใกล้ Mythos; มากับ [[dynamic-workflows|dynamic workflows]] และ [[effort-levels|effort control]] บน UI และอาจถูก Opus 5 แทนในภายหลังตามบทสัมภาษณ์ใหม่
 - **[[claude-opus-4-7]]** — flagship รุ่นก่อน (เปิดตัว 16 เม.ย. 2026)
 - **[[claude-mythos-preview|Claude Mythos Preview]]** — โมเดลที่เก่งที่สุดของ Anthropic; สามารถค้นหาและโจมตีช่องโหว่ zero-days ใน OS และเบราว์เซอร์หลักๆ ได้เอง; ยังจำกัดการเข้าถึงอย่างจงใจระหว่างที่รอให้ระบบป้องกันด้าน cyber พัฒนาขึ้น
 - **[[claude-code|Claude Code]]** — coding agent ที่ทำงานผ่าน terminal (มีเวอร์ชัน desktop, web, และ IDE extensions ด้วย)
@@ -57,6 +58,14 @@ Anthropic ประกาศว่า [[claude|Claude]] เป็น **generally
 
 เคสนี้ทำให้ claim เรื่อง [[dynamic-workflows|dynamic workflows]] มีหลักฐานภาคสนาม: workflow ราว 50 ตัว, peak ประมาณ 64 Claudes, 11 วันจน test suite ผ่านทุก platform, พร้อม [[adversarial-review-loops|adversarial review loops]] และ CI/fuzzing เป็น guardrail.
 
+## Opus 5 และการลด prompt ใน Claude Code (2026-09)
+
+ใน [[boris-cherny-cut-80-percent-claude-code-prompt|บทสัมภาษณ์กับ Y Combinator]] [[boris-cherny|Boris Cherny]] บอกว่าทีมลบ system prompt ของ [[claude-opus-5|Opus 5]] ออกราว 80% เพราะคำสั่งจำนวนมากมีไว้ชดเชยพฤติกรรมของ model รุ่นก่อน ทีมใช้ [[prompt-ablation|prompt ablation]] ลบทั้งก้อนแล้วนำกลับทีละบรรทัด และทบทวน tool กับ code ใน harness ด้วยวิธีเดียวกัน
+
+เขายังอ้างว่าการรวม model alignment, prompt-injection classifier และ auto-mode classifier ทำให้ทีมยังสาธิต prompt injection ไม่สำเร็จ แต่ transcript ไม่ใช่ security report จึงยังคงหลัก [[agent-runtime-untrusted|ถือ agent runtime เป็นส่วนที่เชื่อไม่ได้]] และไม่ลด permission, sandbox หรือ audit boundary ตาม claim นี้
+
+**ได้อะไร:** รุ่นใหม่เปลี่ยนทั้ง capability และ threat model จึงต้องวัด harness ใหม่ ไม่ใช่แค่สลับ model ID แล้วคง prompt เดิมทั้งหมด
+
 ## MCP 2026-07-28 และ Claude rollout
 
 ใน [[bringing-mcp-2026-07-28-to-claude|ประกาศวันที่ 28 ก.ค. 2026]] Anthropic วาง [[model-context-protocol|MCP]] รุ่น `2026-07-28` เป็นฐานใหม่ของ connector ecosystem. รุ่นนี้ทำ core เป็น request/response ที่พึ่ง session state น้อยลง แล้วแยก interactive UI, งาน long-running และ enterprise auth ไปอยู่ใน [[mcp-extensions|extensions]].
@@ -74,6 +83,30 @@ Anthropic ประกาศว่า [[claude|Claude]] เป็น **generally
 Anthropic ยังไม่เปิดเผยกลไก — วิดีโออนุมานว่าเป็น sampling-time watermark ตระกูลเดียวกับ [[synthid|SynthID]] ของ Google (เพราะ watermark ชนิดนี้ stamp ทีหลังไม่ได้) เก็บเป็นการอนุมาน ไม่ใช่ spec ยืนยัน แรงขับหลักคือ [[eu-ai-act|EU AI Act]] Article 50 และ Code of Practice ด้าน transparency ที่ Anthropic ร่วมลงนามกับ Google, OpenAI, Meta, Microsoft, Mistral
 
 จุดตึงที่เก็บไว้: กฎ EU ยกเว้น standard editing (แก้สะกด/grammar/แปล) แต่ Anthropic mark งานพวกนั้นด้วย — รายงานที่ผู้ใช้เขียนเองแล้วให้ Claude ขัด grammar ก็อาจติด mark
+
+## AI-Native SDLC Playbook (2026-08-21)
+
+Anthropic เผยแพร่ *The AI-Native SDLC Playbook* โดย Louis Claxton เมื่อ 21 สิงหาคม 2026 [[claude-codes-new-intent-md-rob-shocks|Rob Shocks]] นำมาอธิบายต่อว่า code ไม่ใช่คอขวดหลักแล้ว งานรอบ code ที่ยังวิ่งด้วยความเร็วคนต่างหากที่ต้องออกแบบใหม่
+
+Playbook ร้อย [[intent-md|`intent.md`]], `spec.md`, `plan.md`, diff กับ test, PR กับ review findings และ incident record เป็น [[artifact-chain|artifact chain]] แต่ละชิ้นส่ง context ไปยัง stage ถัดไปและเก็บ audit trail ไปพร้อมกัน Skills ใส่ policy ตอนสร้าง artifact hooks บังคับ permission กับ approval gate และ eval ตรวจ regression ตอนเปลี่ยน model หรือ skill ส่วน production trigger ต้อง deterministic ก่อนเรียก agent
+
+Agent ช่วยได้ตั้งแต่ Plan ถึง Maintain แต่คนยังอนุมัติ decision ที่ต้องใช้ judgement และ production route ก็จำกัดไว้ล่วงหน้า กรอบนี้จึงเป็น [[ai-driven-sdlc|AI-driven SDLC]] แบบ gated autonomy ไม่ใช่การยก production ให้ agent เต็มตัว
+
+Rob เปิดคลิปโดยบอกว่าเอกสารมาจากทีมที่รวม [[boris-cherny|Boris Cherny]] อยู่ด้วย หน้าอย่างเป็นทางการลงชื่อ Louis Claxton เป็นผู้เขียนและขอบคุณ contributor คนอื่นโดยไม่ลงชื่อ Boris จึงยังยืนยันบทบาทของ Boris ในเอกสารนี้ไม่ได้
+
+**ได้อะไร:** Anthropic กำลังเสนอ process architecture รอบ Claude Code ไม่ใช่แค่ feature ของ coding agent
+
+### รายละเอียดจากตัวเอกสาร (อ่านต้นทางเมื่อ 2026-09-14)
+
+[[ai-native-sdlc-playbook|ตัว playbook]] เขียนเผื่อองค์กรที่มี compliance เป็นหลัก และลงรายละเอียดหลายเรื่องที่คลิปไม่ได้พูดถึง
+
+- **ชั้นควบคุมสามระดับ:** skills แนะนำ hooks บังคับเชิงกล ส่วน managed settings push ผ่าน MDM แล้ว engineer แก้เองไม่ได้ ชั้นแข็งสุดตัดความสามารถที่ระดับ OS กับ network เช่นบังคับ sandbox ปิดการอ่าน `~/.ssh` กับ `~/.aws/credentials` และจำกัด domain ที่ออกเน็ตได้ ดู [[policy-as-code-for-agents]]
+- **Maintain ใช้ control band:** ชั้นตรวจจับเป็น script ล้วน ไม่มี model จากนั้นค่อยเพิ่มสิทธิ์ตามระดับความเบี่ยง 1σ บันทึก 2σ ให้วินิจฉัยแบบอ่านอย่างเดียว 3σ ถึงเปิด PR หรือเรียก runbook ได้ ดู [[control-bands]]
+- **ผลิตภัณฑ์ในสาย Maintain:** Claude Security สแกน repo ตามรอบด้วย model Mythos แล้ว validate finding ก่อนรายงาน ส่วน Claude Tag (public beta) ให้ Claude อยู่ใน Slack/Teams channel ในชื่อของตัวเองเพื่อรับ incident เป็น first responder
+- **ตัววัดผล:** playbook ให้ leading/lagging indicator ครบทั้งหกช่วง หลายตัวดึงจาก git กับ PR metadata ได้เลย เช่นเวลาจาก intent ถึง spec, first-pass CI success rate และสัดส่วน diff ที่ตรงกับ `plan.md`
+- **ยังไม่มีตัวเลขผลลัพธ์:** เอกสารบอกว่าควรวัดอะไร แต่ไม่มีลูกค้าที่อ้างชื่อ ไม่มี before/after และไม่มีสถิติการนำไปใช้
+
+**ผลคือ:** เอกสารนี้เสนอทั้ง process และชุดผลิตภัณฑ์ Anthropic ที่ใช้ประกอบ process นั้น
 
 ## มุม third-party harness (Can Bölük, ก.พ. 2026)
 
@@ -95,6 +128,7 @@ Anthropic ได้บล็อก [[opencode|OpenCode]] ไม่ให้ใ�
 
 - [[claude]]
 - [[claude-opus-4-8]]
+- [[claude-opus-5]]
 - [[claude-opus-4-7]]
 - [[claude-mythos-preview]]
 - [[project-glasswing]]
@@ -113,3 +147,9 @@ Anthropic ได้บล็อก [[opencode|OpenCode]] ไม่ให้ใ�
 - [[llm-text-watermarking]]
 - [[claude-text-watermarking-squintist]]
 - [[eu-ai-act]]
+- [[claude-codes-new-intent-md-rob-shocks]]
+- [[ai-driven-sdlc]]
+- [[intent-md]]
+- [[artifact-chain]]
+- [[ai-native-sdlc-playbook]]
+- [[louis-claxton]]

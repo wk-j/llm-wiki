@@ -3,8 +3,8 @@ title: Queues over Loops
 type: concept
 tags: [ai, agents, loops, afk, workflow, orchestration]
 created: 2026-06-21
-updated: 2026-07-12
-sources: ["Matt Pocock’s Agentic Engineering Workflow (just copy him).md", "รู้จักกับ Loop Engineering — mikelopster transcript", wayfinder-skill.md]
+updated: 2026-09-12
+sources: ["Matt Pocock’s Agentic Engineering Workflow (just copy him).md", "รู้จักกับ Loop Engineering — mikelopster transcript", wayfinder-skill.md, dillon-mulroy-ships-production-code-he-didnt-write.md]
 ---
 
 # Queues over Loops / มองงานเป็นคิว ไม่ใช่ลูป
@@ -53,6 +53,16 @@ Matt ไม่ได้ปฏิเสธ [[loop-engineering|loop engineering]] 
 
 > ได้อะไร: อย่าใช้คำว่า loop กลบความจริงว่างานนั้นอาจเป็นแค่ checklist ที่ต้องทำให้จบหนึ่งรอบ.
 
+## Dillon: lab loop ยังแพงเกิน แต่เห็นคิวแบบมีคนคุม
+
+[[dillon-mulroy|Dillon Mulroy]] วิจารณ์ lab-style agent loop จากข้อจำกัดของ median developer ใน [[dillon-mulroy-ships-production-code-he-didnt-write|บทสัมภาษณ์กับ Jan-Niklas Wortmann]] เขามองว่า model และ workflow ยังไม่สม่ำเสมอ ส่วน token cost สูงเกินจะใช้เป็นงานประจำในทีมทั่วไป คำบอกเล่าจากคนใน AI lab ที่มีทรัพยากรมากจึงยังไม่ใช่ receipt ว่าวิธีเดียวกันคุ้มในองค์กรอื่น
+
+ปลายทางที่ Dillon อยากได้กลับมีรูปเป็น queue งานค่อยไหลผ่าน research, spec, implementation และ review ระบบอาจเตรียมงานช่วงถัดไปตาม taste ที่เรียนรู้จากเขา แต่คนยังร่วมคุยและตรวจแต่ละช่วง ภาพนี้เสริม Matt ตรงที่ queue มองเห็น WIP และจุดรอคนได้ชัดกว่า loop ที่ดูเหมือนเดินเองตลอด
+
+ข้อที่ยังไม่ตรงกันคือ Matt อยากดัน human checkpoint ไปทางขวามากขึ้น ส่วน workflow ปัจจุบันของ Dillon handhold agent ใกล้ชิดและอ่านทุกบรรทัด จึงยังไม่รู้ว่าคิวที่ Dillon จินตนาการจะลดแรงคนจริงหรือเพียงจัดคิวแรงงานเดิมให้เห็นง่ายขึ้น
+
+**ได้อะไร:** queue เป็นโครงของงานได้ทั้งแบบ AFK และแบบ human-steered ต้องดู checkpoint จริงก่อนสรุปว่า autonomous แค่ไหน
+
 ## ดูเพิ่ม
 
 - [[afk-agents]]
@@ -65,3 +75,5 @@ Matt ไม่ได้ปฏิเสธ [[loop-engineering|loop engineering]] 
 - [[agentic-code-review]]
 - [[mikelopster-loop-engineering]]
 - [[wayfinding]]
+- [[dillon-mulroy-ships-production-code-he-didnt-write]]
+- [[dillon-mulroy]]
