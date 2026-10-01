@@ -3,8 +3,8 @@ title: OpenCode
 type: entity
 tags: [ai, tools, cli, coding, harness, open-source]
 created: 2026-04-18
-updated: 2026-05-27
-sources: [alex-ker-harnesses-optimize.md, opencode-tauri-to-electron.md, opencode-desktop-electron-brendonovich.md, opencode-vs-claude-code-morph.md, improved-15-llms-harness-changed.md]
+updated: 2026-09-22
+sources: [alex-ker-harnesses-optimize.md, opencode-tauri-to-electron.md, opencode-desktop-electron-brendonovich.md, opencode-vs-claude-code-morph.md, improved-15-llms-harness-changed.md, opencode-reloaded.md]
 ---
 
 # OpenCode
@@ -37,6 +37,16 @@ OpenCode จะโหลด definition ของ MCP tool ที่ตั้ง�
 - **Persistent sessions** — session ยังคงอยู่แม้จะปิด terminal ไปแล้ว
 
 **ข้อแลกเปลี่ยน:** ไม่มีระบบ checkpoint/rewind เหมือน Esc×2 ของ [[claude-code|Claude Code]]; การกู้คืนต้องทำผ่าน git ด้วยตนเอง ไม่มีคำสั่งที่เทียบเท่า `/compact`; กลยุทธ์ด้าน context คือ "เริ่ม session ใหม่"
+
+## OpenCode 2: environment เปลี่ยนได้ระหว่าง session
+
+[[kit-langton|Kit Langton]] อธิบายใน [[opencode-reloaded|OpenCode Reloaded]] ว่า OpenCode 2 hot reload ได้ทั้ง config, MCP server และ plugin ทุก session จึงเห็น environment ก้อนใหม่ทันที Agent สามารถเขียน tool แล้วเรียกใช้ต่อใน turn เดียวกันได้ ไม่ต้อง restart หรือเริ่ม session ใหม่
+
+กลไกข้างใต้คือ `State` abstraction สำหรับ model catalog, skill, command, agent, tool, MCP server และ formatter Plugin ไม่แก้ registry กลางโดยตรง แต่ลงทะเบียน [[replayable-state-transformations|transformation ที่ OpenCode replay]] บน state ว่างตามลำดับ พอข้อมูลต้นทางหรือไฟล์ plugin เปลี่ยน ระบบ rebuild แล้ว publish state ก้อนใหม่
+
+วิธีนี้ทำให้ refresh ไม่เขียนทับ policy ของ plugin อื่น ลบ contribution ของ plugin ที่หายไปได้ และกัน operation ที่ไม่ idempotent ไม่ให้สะสมผลจากการรันซ้ำ แต่ลำดับ transformation ยังสำคัญ บทความยังไม่ระบุ rollback, failure atomicity, performance เมื่อ plugin เยอะ หรือ security boundary สำหรับ plugin code
+
+**ได้อะไร:** OpenCode มอง environment เป็น state ที่ประกอบใหม่ได้ ไม่ใช่ object อายุยาวที่ plugin หลายตัวผลัดกันแก้
 
 ## มุม harness-as-bridge (Can Bölük, ก.พ. 2026)
 
@@ -78,3 +88,6 @@ Desktop app ของ OpenCode ได้ย้ายจาก [[tauri|Tauri]] �
 - [[progressive-disclosure]]
 - [[model-context-protocol]]
 - [[opencode-vs-claude-code-morph]]
+- [[opencode-reloaded]]
+- [[kit-langton]]
+- [[replayable-state-transformations]]

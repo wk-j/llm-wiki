@@ -3,8 +3,8 @@ title: Instruction Budget
 type: concept
 tags: [ai, llm, prompt-engineering, attention, harness]
 created: 2026-04-18
-updated: 2026-09-10
-sources: [alex-ker-harnesses-optimize.md, boris-cherny-cut-80-percent-claude-code-prompt.md]
+updated: 2026-09-30
+sources: [alex-ker-harnesses-optimize.md, boris-cherny-cut-80-percent-claude-code-prompt.md, engineering-the-harness-thoughtworks.md]
 ---
 
 # Instruction Budget / งบคำสั่งของ LLM
@@ -49,6 +49,17 @@ sources: [alex-ker-harnesses-optimize.md, boris-cherny-cut-80-percent-claude-cod
 
 **ผลคือ:** instruction budget เป็นงบที่ต้อง audit ตาม model generation ไม่ใช่พื้นที่ที่เติมแล้วไม่เคยเคลียร์
 
+## Attention dilution กับกฎที่ต้องมีที่มา (Thoughtworks, 2026-09)
+
+[[engineering-the-harness-thoughtworks|บทความของ Thoughtworks]] อธิบายอาการเดียวกันด้วยคำว่า "attention dilution" (attention เจือจาง) ไฟล์คำสั่งก้อนใหญ่ที่โหลดเข้าทุก session ทำให้ context เต็มเร็ว และ model ใส่ใจ convention ที่เกี่ยวกับงานตรงหน้าได้น้อยลง
+
+ทางแก้ที่บทความเสนอมีสองชั้น:
+
+- **ผูกคำสั่งกับ path หรือ domain** เช่น โหลดกฎ database เฉพาะตอนแตะไฟล์ schema ([[progressive-disclosure]])
+- **Earn every rule** กฎที่ไม่มีที่มาเพิ่มเสียงรบกวนและทำให้คุณภาพ output ตก ต้องโยงกลับไปหาเหตุจริงได้ แล้วกลับมาตัดเมื่อ model เก่งขึ้น (ดู [[harness-ratchet]])
+
+**ผลคือ:** บทความนี้เป็นแหล่งที่สามที่ให้คำตอบเดียวกัน คือเลือกโหลดกฎตามงาน และ audit กฎเป็นระยะ
+
 ## ความเชื่อมโยงกับประเด็นอื่น
 
 -   [[claude-md]] — CLAUDE.md คือที่ที่ instruction budget ถูกใช้เปลืองที่สุด; [[cyril-xbt|Cyril]] สนับสนุน template 7 ส่วนเต็ม, ในขณะที่ Alex Ker สนับสนุน minimal — อ่านตารางเปรียบเทียบใน `[[claude-md]]`
@@ -71,3 +82,4 @@ sources: [alex-ker-harnesses-optimize.md, boris-cherny-cut-80-percent-claude-cod
 - [[llm-coding-pitfalls]]
 - [[prompt-ablation]]
 - [[boris-cherny-cut-80-percent-claude-code-prompt]]
+- [[engineering-the-harness-thoughtworks]]

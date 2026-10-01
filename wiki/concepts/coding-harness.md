@@ -3,8 +3,8 @@ title: Coding Harness
 type: concept
 tags: [ai, tools, agents, software-engineering, harness]
 created: 2026-04-18
-updated: 2026-09-10
-sources: [alex-ker-harnesses-optimize.md, building-pi-world-of-slop.md, Agent Harness Engineering.md, software-writing-software-gone-right.md, improved-15-llms-harness-changed.md, "Introducing Omnigent A Meta-Harness to Combine, Control and Share Your Agents.md", "Matt Pocock’s Agentic Engineering Workflow (just copy him).md", "i don't want to use your agent — @RhysSullivan.md", l8-principals-agentic-engineering-workflow-kun-chen.md, aom-fable-elysia-2-audit.md, zoran-horvat-claude-no-planning-engine.md, planning-mode-dangerous-illusion.md, stop-building-ai-agents-old-way.md, the-new-software-lifecycle.md, boris-cherny-cut-80-percent-claude-code-prompt.md]
+updated: 2026-09-30
+sources: [alex-ker-harnesses-optimize.md, building-pi-world-of-slop.md, Agent Harness Engineering.md, software-writing-software-gone-right.md, improved-15-llms-harness-changed.md, "Introducing Omnigent A Meta-Harness to Combine, Control and Share Your Agents.md", "Matt Pocock’s Agentic Engineering Workflow (just copy him).md", "i don't want to use your agent — @RhysSullivan.md", l8-principals-agentic-engineering-workflow-kun-chen.md, aom-fable-elysia-2-audit.md, zoran-horvat-claude-no-planning-engine.md, planning-mode-dangerous-illusion.md, stop-building-ai-agents-old-way.md, the-new-software-lifecycle.md, boris-cherny-cut-80-percent-claude-code-prompt.md, opencode-reloaded.md, engineering-the-harness-thoughtworks.md]
 ---
 
 # Coding Harness / ตัวครอบของ Coding Agent
@@ -36,6 +36,14 @@ sources: [alex-ker-harnesses-optimize.md, building-pi-world-of-slop.md, Agent Ha
 2.  **เชื่อมต่อ tool และ I/O** — tool call, การ parse output, guardrail, permission prompt
 
 ถ้า model คือแหล่งของ intelligence, harness คือสิ่งที่ทำให้ intelligence นั้นใช้งานได้จริง — ลูปที่ราบรื่นจะช่วยเพิ่มความเร็วและคุณภาพของโค้ดที่ได้
+
+## Harness ที่เปลี่ยน environment ระหว่างงานได้
+
+[[opencode-reloaded|OpenCode Reloaded]] เพิ่มอีกหน้าที่หนึ่งให้ harness: ประกอบ environment ใหม่โดยไม่ตัด session เดิม [[opencode|OpenCode 2]] ให้ config, MCP server, plugin, skill, command, agent, tool และ formatter เปลี่ยนระหว่างที่ agent ทำงานอยู่ได้ Agent จึงสร้าง tool ให้ตัวเองแล้วใช้ต่อใน turn เดียวกัน
+
+กลไกนี้ไม่ได้อาศัย plugin ไล่แก้ shared registry ตรง ๆ แต่ให้แต่ละตัวลงทะเบียน [[replayable-state-transformations|transformation ที่ replay ได้]] Host เริ่มจาก state ว่าง รัน contribution ที่ยัง active ตามลำดับ แล้ว publish ผลให้ทุก session พร้อมกัน พอลบหรือแก้ plugin ก็ถอด contribution รุ่นเก่าแล้ว rebuild
+
+**ได้อะไร:** harness ไม่ได้แค่ส่ง tool schema เข้า context ตอนเริ่ม session แต่เป็นเจ้าของ lifecycle ของ environment ตลอด session ด้วย จุดที่ยังต้องออกแบบต่อคือ rollback เมื่อ transformation fail, ต้นทุน rebuild และ trust boundary ของ plugin code
 
 [[mario-zechner|Mario Zechner]] เพิ่มมุมที่แข็งกว่านี้ใน [[building-pi-world-of-slop|Building pi in a World of Slop]]: harness ไม่ใช่แค่ UX wrapper แต่เป็นเจ้าของ context โดยพฤตินัย ถ้า harness เปลี่ยน system prompt, tool definitions, reminders, หรือ inject feedback เองโดยผู้ใช้มองไม่เห็น workflow ของผู้ใช้ก็อาจพังได้ แม้ model ตัวเดิมจะยังเก่งเท่าเดิม
 
@@ -103,6 +111,20 @@ harness ไม่หาย แต่เนื้อในเปลี่ยน. 
 นี่ทำให้ [[harness-ratchet|harness ratchet]] ต้องเดินได้สองทิศ: เพิ่ม control เมื่อ failure เกิดซ้ำ และถอด control เมื่อ model รุ่นใหม่ไม่ต้องใช้หรือเมื่อ control นั้นขวาง [[model-elicitation|ความสามารถของ model]] สิ่งที่ยังต้องคงไว้คือ contract ของ product กับ safety boundary ที่บังคับจากภายนอก เช่น permission, sandbox, static analysis และ audit
 
 **ได้อะไร:** harness ที่เรียนรู้ไม่ใช่ harness ที่โตไม่หยุด แต่เป็น harness ที่แต่ละชิ้นยังพิสูจน์หน้าที่ของตัวเองได้
+
+## Harness เป็นซอฟต์แวร์ที่ต้อง review (Thoughtworks, 2026-09)
+
+[[engineering-the-harness-thoughtworks|บทความของ Thoughtworks]] เปิดด้วยสูตร **Agent = Model + Harness** เหมือนกัน แล้วชี้ว่า agent ที่เขียนโค้ดถูกเฉพาะจุดแต่พังทั้งระบบ มักขาดสามอย่างที่ harness ต้องให้ คือ มองเห็นระดับระบบ guardrail เชิงสถาปัตยกรรม และ feedback อัตโนมัติ ผู้เขียนมองว่าช่องว่างนี้ "not primarily a model-quality issue"
+
+บทความสรุปวินัยดูแล harness ไว้สามข้อ:
+
+- เก็บ agent definition, skill, rule และ workflow ใน version control แล้วแก้ผ่าน pull request ที่มีคน review
+- **Earn every rule** กฎทุกข้อต้องโยงกลับไปหาเหตุจริงได้ ([[harness-ratchet]])
+- refactor ต่อเนื่อง ตัดกฎที่หมดยุคเมื่อ model เก่งขึ้น ตรงกับ prompt ablation ในหัวข้อก่อน
+
+จุดที่ไม่ลงรอยกับ Cursor: Thoughtworks ใส่ blocking gate ใน harness เมื่อผลกระทบข้ามหลาย repo แต่ Cursor ในหัวข้อด้านบนย้าย logic multi-repo ออกจาก harness ไปให้ agent ตัดสินเอง wiki เก็บไว้ทั้งสองด้านที่ [[blast-radius-gates]]
+
+**ได้อะไร:** harness ที่ดีไม่ได้หดหรือโตอย่างเดียว แต่ทุกการเปลี่ยนมีคน review และมีที่มาให้ย้อนดู
 
 ## สองความหมายของคำว่า "harness"
 
@@ -263,6 +285,10 @@ Heuristic ง่ายๆ คือ — **ถ้าต้องการแค�
 - [[agent-experience]]
 - [[bitter-lesson]]
 - [[bring-your-own-agent]]
+- [[opencode-reloaded]]
+- [[replayable-state-transformations]]
+- [[engineering-the-harness-thoughtworks]]
+- [[blast-radius-gates]]
 - [[l8-principals-agentic-engineering-workflow-kun-chen]]
 - [[kun-chen]]
 - [[axi]]

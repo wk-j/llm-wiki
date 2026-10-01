@@ -3,8 +3,8 @@ title: AI Work Intensification
 type: concept
 tags: [ai, workplace, productivity, labor, burnout, management]
 created: 2026-08-13
-updated: 2026-09-12
-sources: [i-was-replaced-by-ai-typecraft.md, dillon-mulroy-ships-production-code-he-didnt-write.md]
+updated: 2026-09-24
+sources: [i-was-replaced-by-ai-typecraft.md, dillon-mulroy-ships-production-code-he-didnt-write.md, teepagorn-claude-code-adoption-nobody-reading.md]
 ---
 
 # AI Work Intensification / AI ทำให้งานเข้มขึ้น
@@ -75,6 +75,16 @@ Typecraft เพิ่มมิติที่ตัวเลข throughput ม�
 
 **ได้อะไร:** นอกจากวัดจำนวน task และชั่วโมงทำงาน ต้องดูว่าวันหนึ่งมีช่วงพักทางความคิดและ task mix แบบไหนด้วย
 
+## เคส voxium: 12-13 ชั่วโมงเพื่อกด Enter
+
+โพสต์ [[teepagorn-claude-code-adoption-nobody-reading|ของ @teepagorn]] เล่าต่อจาก [[simon-willison|Simon Willison]] ถึง developer ชื่อ voxium ที่เพิ่งเข้าบริษัทใหญ่ได้ครึ่งเดือน ทีมทำทุกอย่างผ่าน [[claude-code|Claude Code]] ตั้งแต่ spec, code, test ถึง report ทุกระดับ L1 ถึง L7 ทำเหมือนกัน แต่คนถูกกดให้ ship ให้มากที่สุด ทำงานวันละ 12-13 ชั่วโมง "just to press enter" ผู้บริหารยังถามว่าทำไมช้า
+
+เคสนี้ตรงกับกลไกของ Typecraft แทบทุกขั้น เร็วขึ้นก็รับเพิ่ม เร็วขึ้นอีกก็ยกเป้าอีก จุดที่เพิ่มมาคือผลข้างเคียงด้านความเข้าใจ voxium สรุปว่า "Nobody is reading anything." เวลาที่ได้คืนไม่ได้กลับไปที่การอ่านหรือการคิด ดู [[comprehension-debt]]
+
+ผู้เขียนโพสต์เองใช้ Claude Code เยอะและชอบมาก งานส่วนตัวเร็วขึ้นจริง จึงเป็นอีกตัวอย่างว่าเครื่องมือเดียวกันให้ผลต่างกันตามว่าใครกำหนดเป้า
+
+**ได้อะไร:** intensification ไม่ได้กินแค่ชั่วโมงทำงาน มันกินเวลาที่ทีมเคยใช้อ่านและทำความเข้าใจงานด้วย
+
 ## วิธีสังเกต
 
 - AI usage เพิ่มแล้วชั่วโมงทำงานไม่ลด
@@ -109,3 +119,4 @@ Typecraft เพิ่มมิติที่ตัวเลข throughput ม�
 - [[creative-ownership]]
 - [[dillon-mulroy-ships-production-code-he-didnt-write]]
 - [[dillon-mulroy]]
+- [[teepagorn-claude-code-adoption-nobody-reading]]

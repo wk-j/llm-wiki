@@ -1,10 +1,10 @@
 ---
 title: Plugin Manager
 type: concept
-tags: [tooling, editors, package-management]
+tags: [tooling, editors, package-management, plugins, state-management]
 created: 2026-04-17
-updated: 2026-04-23
-sources: [vim-pack-guide.md]
+updated: 2026-09-22
+sources: [vim-pack-guide.md, opencode-reloaded.md]
 ---
 
 # Plugin Manager / ตัวจัดการ Plugin
@@ -53,8 +53,21 @@ Lockfile บันทึก commit ที่แน่นอนของแต่
 
 [[vim-pack]] เขียน `nvim-pack-lock.json`; lazy.nvim เขียน `lazy-lock.json`.
 
+## Plugin lifecycle ใน agent harness
+
+[[opencode-reloaded|OpenCode Reloaded]] ขยายคำว่า plugin manager ออกจากเรื่อง install และ version ไปถึง live state ของ [[coding-harness|coding harness]] เมื่อมีไฟล์ plugin ใหม่ [[opencode|OpenCode 2]] จะรันไฟล์นั้น เก็บ transformation ที่มันลงทะเบียน และผูก contribution กับเจ้าของไฟล์ ถ้าแก้ไฟล์ ระบบถอด contribution รุ่นเก่าแล้วรันรุ่นใหม่ ถ้าลบไฟล์ก็ถอด contribution นั้นออก
+
+ทุกกรณีจบด้วยการ rebuild registry ที่เกี่ยวข้องจาก contribution ที่ยัง active ตาม pattern [[replayable-state-transformations|Replayable State Transformations]] จึงไม่ต้องให้ plugin เขียน undo logic ของตัวเอง หรือปล่อย state เก่าค้างหลังถอด plugin
+
+**ได้อะไร:** lifecycle ของ plugin กับ lifecycle ของ state เดินด้วยกัน การเพิ่ม แก้ หรือลบ plugin จึงเปลี่ยน tool, skill, MCP server และ registry อื่นให้ทุก session เห็นพร้อมกัน
+
+บทความยังไม่บอกเรื่อง dependency resolution, version pinning, signature, sandbox หรือ rollback เมื่อ plugin load ไม่ผ่าน ความสามารถนี้จึงเสริมหน้าที่ของ plugin manager แต่ยังไม่แทนความรับผิดชอบด้าน package supply chain และ security
+
 ## ดูเพิ่ม
 
 - [[vim-pack]]
 - [[neovim]]
 - [[helix]] — ทางเลือก: a batteries-included editor that ships features as built-ins rather than plugins
+- [[opencode-reloaded]]
+- [[replayable-state-transformations]]
+- [[coding-harness]]

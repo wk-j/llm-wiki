@@ -3,8 +3,8 @@ title: Harness Guides & Sensors
 type: concept
 tags: [ai, agents, harness, software-engineering, feedback-loop, cybernetics]
 created: 2026-06-08
-updated: 2026-07-04
-sources: [harness-engineering-bockeler.md, How to Keep Shipping When You Walk Away from Your Desk — Zack Proser, WorkOS.md, Agentic Code Review.md, stop-building-ai-agents-old-way.md]
+updated: 2026-09-30
+sources: [harness-engineering-bockeler.md, How to Keep Shipping When You Walk Away from Your Desk — Zack Proser, WorkOS.md, Agentic Code Review.md, stop-building-ai-agents-old-way.md, jev-the-ultimate-classification-model.md, engineering-the-harness-thoughtworks.md]
 ---
 
 # Harness Guides & Sensors / บังเหียนที่ทำจาก "ตัวนำทาง" กับ "ตัวเซ็นเซอร์"
@@ -43,6 +43,10 @@ sources: [harness-engineering-bockeler.md, How to Keep Shipping When You Walk Aw
 
 หลักใช้งาน: computational ถูกและเร็วพอจะรันได้**ทุกการเปลี่ยนแปลง** ส่วน inferential แพงและไม่แน่นอน เลยใช้ตรงที่ต้องการ **วิจารณญาณเชิงความหมาย** จริง ๆ และไม่ต้องรันทุก commit ถึง inferential จะไม่ deterministic แต่ถ้าจับคู่กับ model ที่เหมาะกับงาน ก็เพิ่มความเชื่อมั่นได้จริง
 
+[[jev-the-ultimate-classification-model|Jev]] ยังอยู่ฝั่ง inferential เพราะตีความความหมายและให้ผลเปลี่ยนได้ แต่ [[system-one-models|System One Model]] คืน typed value โดยไม่ generate ข้อความยาว ถ้า latency กับราคาต่ำตามที่แหล่งรายงาน ทีมอาจรัน semantic routing, policy triage หรือ anomaly label ได้ถี่ขึ้น
+
+ข้อแลกเปลี่ยนยังเหมือนเดิม ความเร็วกับ schema ที่ไม่พังไม่ได้ทำให้ผล deterministic และ probability ที่ model คืนมาก็ต้องทดสอบ calibration ก่อนใช้ threshold ในงานเสี่ยงสูง
+
 ตัวอย่างการจัดหมวด (จากบทความ):
 
 | สิ่งที่ทำ | ทิศ | ชนิด | ตัวอย่าง |
@@ -62,6 +66,23 @@ sources: [harness-engineering-bockeler.md, How to Keep Shipping When You Walk Aw
 **ได้อะไร:** harness ไม่ใช่ของตั้งครั้งเดียวจบ แต่เป็นงานวิศวกรรมที่ทำต่อเนื่อง
 
 [[prompt-engineering|Prompt Engineering]] ใน [[stop-building-ai-agents-old-way]] ให้ตัวอย่าง steering loop อีกแบบผ่าน [[session-mining|session mining]]: ย้อนดู run เก่า, หา failed check หรือ wrong path ที่ซ้ำ, แล้วเขียนกลับเป็น rule ใน `AGENTS.md`, `prompt.md`, หรือ config. นี่คือการเปลี่ยน episodic failure ให้เป็น guide/sensor ของรอบต่อไป.
+
+## ชั้นที่สาม: ด่านคนเฉพาะจุด (Thoughtworks, 2026-09)
+
+[[engineering-the-harness-thoughtworks|บทความของ Thoughtworks]] (Jaya Simha Reddy Nandyala กับ Prabina Pani) ใช้คำ guides กับ sensors ชุดเดียวกันนี้ แล้วเพิ่มชั้นที่สาม คือ **selective human gates** ด่านที่ให้คนตัดสินเฉพาะเรื่องที่ย้อนไม่ได้หรือกระทบวงกว้าง เช่น scope ข้ามหลาย repo, schema migration, public API ดู [[blast-radius-gates]]
+
+มุมนี้ไม่ได้ขัดกับกรอบของ Böckeler แต่คนเข้ามาคนละจังหวะ ใน steering loop คนปรับ harness ข้ามหลายรอบงาน ส่วน gate ให้คนตัดสินกลาง run ครั้งเดียว บทความยังนิยาม guides ว่าเป็นของ "ก่อนลงมือ" อย่างเดียว ขณะที่ Böckeler นับรวมของที่ป้อน "ระหว่าง" ทำงานด้วย
+
+บทความให้ guide pattern สี่แบบ:
+
+- **คำสั่งตามขอบเขต** ผูกกฎกับ path หรือ domain แล้วโหลดตอนต้องใช้ ([[progressive-disclosure]])
+- **tool แบบ least-privilege** agent ที่ตรวจโค้ดได้แค่ tool อ่าน ไม่มีทางเขียนไฟล์ได้เลย
+- **explicit default** ถามก่อนตัดสินตอนเจอ input ที่ไม่บังคับ แล้วบันทึกไว้ถ้า developer เลือกข้าม
+- **ยืนยันเฉพาะเรื่องที่ลามไกล** ตัวเดียวกับ gate ด้านบน
+
+ฝั่ง sensors บทความเพิ่มสองหลัก คือ [[silent-success-verbose-failure|ผ่านเงียบ พังละเอียด]] และเลื่อนกฎที่ต้องเตือนซ้ำใน prompt ไปเป็น lint rule, type check หรือ architecture test ([[harness-ratchet]])
+
+**ได้อะไร:** กรอบเดิมตอบว่า control แต่ละตัวอยู่ทิศไหน กรอบนี้ตอบเพิ่มว่าคนควรโผล่เข้ามาตรงไหนตอน agent กำลังทำงาน
 
 ## keep quality left (วางด่านให้ซ้ายสุดเท่าที่ทำได้)
 
@@ -111,6 +132,7 @@ Böckeler มองว่า harness ทำตัวเหมือน **cyberne
 - [[agentic-code-review]] — ตัวอย่างการจัด sensor สำหรับ review: CI/type/lint/test เป็น computational sensor ที่ต้องแข็ง, AI reviewers อย่าง [[coderabbit|CodeRabbit]] หรือ [[greptile|Greptile]] เป็น inferential sensor ที่ช่วยจัด risk, ส่วนมนุษย์เป็น owner ของ judgement และ merge
 - [[agent-observability]] — observability เป็น sensor และ feedback surface สำหรับ run ที่ยาว: trace, cost, latency, error, artifact, และ key decision ต้องย้อนกลับเข้า loop ได้
 - [[session-mining]] — steering loop ที่ใช้ประวัติ session เพื่อเพิ่ม rule/eval/hook อย่างมีที่มา
+- [[system-one-models]] — inferential sensor แบบ typed output ที่ตั้งใจลด latency และต้นทุน โดยยังต้องวัด error กับ calibration
 
 ## ปัญหาที่ยังเปิดอยู่ (จากบทความ)
 
@@ -118,6 +140,7 @@ Böckeler มองว่า harness ทำตัวเหมือน **cyberne
 - เชื่อ agent ให้ trade-off เองได้แค่ไหน เมื่อ instruction กับ feedback ชี้คนละทาง?
 - ถ้า sensor ไม่เคยลั่นเลย = คุณภาพดี หรือ = กลไกตรวจจับไม่พอ? เราต้องการอะไรสักอย่างแบบ code coverage / mutation testing แต่สำหรับวัด "ความครอบคลุมของ harness"
 - guide/sensor ตอนนี้กระจายอยู่ทั่ว delivery มีช่องว่างให้ tooling ที่ช่วย config + sync + reason ทั้งระบบ
+- (เพิ่มจาก [[engineering-the-harness-thoughtworks|Thoughtworks]]) pipeline ของ Thoughtworks ให้ REVIEW agent ส่งงานกลับ RED/GREEN เองจนกว่า test จะครอบ acceptance criteria ตรงนี้ยังพึ่ง test ที่ AI เขียนเป็น sensor ของ behaviour ซึ่ง Böckeler เตือนว่ายังไม่ดีพอ การแยก test agent กับ implementer agent ช่วยได้แค่ไหน แหล่งยังไม่มีหลักฐาน
 
 ## See also
 
@@ -137,3 +160,6 @@ Böckeler มองว่า harness ทำตัวเหมือน **cyberne
 - [[agentic-code-review]]
 - [[agent-observability]]
 - [[session-mining]]
+- [[engineering-the-harness-thoughtworks]]
+- [[blast-radius-gates]]
+- [[silent-success-verbose-failure]]

@@ -3,8 +3,8 @@ title: Policy as Code for Agents
 type: concept
 tags: [ai, agents, governance, security, enterprise, compliance, sdlc]
 created: 2026-09-14
-updated: 2026-09-14
-sources: [ai-native-sdlc-playbook.md]
+updated: 2026-09-30
+sources: [ai-native-sdlc-playbook.md, engineering-the-harness-thoughtworks.md]
 ---
 
 # Policy as Code for Agents / วางนโยบายองค์กรเป็นชั้นควบคุม agent
@@ -39,6 +39,12 @@ Managed settings ในตัวอย่างมีหลายข้อ แ�
 เหตุผลตรงไปตรงมา: prompt injection, tool ที่หลอก และความผิดพลาดของ model ล้วนอยู่ในชั้นที่ "การสั่งไม่ให้ทำ" เอาไม่อยู่ แต่ถ้ากระบวนการอ่านไฟล์นั้นไม่ได้ตั้งแต่แรก ก็ไม่มีอะไรให้ฝ่า นี่คือหลักเดียวกับ [[agent-runtime-untrusted|การถือว่า runtime ของ agent เป็นของที่ไว้ใจไม่ได้]]
 
 **ผลคือ:** ความปลอดภัยไม่ได้ขึ้นกับว่า model วันนี้เชื่อฟังแค่ไหน
+
+### ตัวอย่างเล็กกว่า: tool แบบ least-privilege
+
+[[engineering-the-harness-thoughtworks|บทความของ Thoughtworks]] ใช้หลักเดียวกันในระดับ agent แต่ละตัว การเขียนใน prompt ว่า "อย่า push code" หรือ "อย่าแก้ config" เปราะเกินไป ให้เปลี่ยนเป็นข้อบังคับเชิงโครงสร้างแทน ตัวอย่างคือ agent ที่ตอบคำถามหรือตรวจโค้ด ได้แค่ tool อ่านอย่างเดียว ไม่มีความสามารถเขียนไฟล์ตั้งแต่ต้น
+
+**ได้อะไร:** ไม่ต้องใช้ managed settings ทั้งองค์กรก็เริ่มได้ แค่เลือก tool ให้ agent ตามบทบาท
 
 ## ยังต้องแยกหน้าที่เหมือนเดิม
 
@@ -77,3 +83,4 @@ Managed settings ในตัวอย่างมีหลายข้อ แ�
 - [[ai-driven-sdlc]]
 - [[agent-observability]]
 - [[model-context-protocol]]
+- [[engineering-the-harness-thoughtworks]]

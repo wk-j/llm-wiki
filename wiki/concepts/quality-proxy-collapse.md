@@ -3,8 +3,8 @@ title: Quality Proxy Collapse
 type: concept
 tags: [ai, software-quality, slop, verification]
 created: 2026-07-03
-updated: 2026-08-16
-sources: [eternal-sloptember.md, claude-text-watermarking-squintist.md]
+updated: 2026-09-24
+sources: [eternal-sloptember.md, claude-text-watermarking-squintist.md, teepagorn-claude-code-adoption-nobody-reading.md]
 ---
 
 # Quality Proxy Collapse / สัญญาณคุณภาพเดิมใช้ไม่ได้
@@ -44,6 +44,12 @@ LLM ทำให้ assumption นี้พัง. งานอาจดูด�
 - บังคับให้ agent แสดง evidence ไม่ใช่แค่สรุปว่าเสร็จ
 - ดู process trace และ decision rationale ไม่ใช่แค่ final artifact
 
+## เคส: test, docs และสรุปครบ แต่ incident ตามมา
+
+[[teepagorn-claude-code-adoption-nobody-reading|โพสต์ของ @teepagorn]] ยกตัวอย่างตรงตัว งานจาก AI มีเหตุผล มี test มี documentation มีสรุปให้ ผู้เขียนเห็นว่าครบเลย approve แล้วเจอ incident สามวันต่อมา สัญญาณ "ครบ" ที่เคยบอกว่าคนตั้งใจทำ กลายเป็นของที่ AI สร้างได้ฟรีไปพร้อมกับ code
+
+**ได้อะไร:** checklist แบบ "มี test มี docs" ไม่พอ ต้องถามว่า test มาจากแหล่งที่แยกจาก code หรือเปล่า
+
 ## See also
 
 - [[ai-slop]]
@@ -53,3 +59,4 @@ LLM ทำให้ assumption นี้พัง. งานอาจดูด�
 - [[programming-process-matters]]
 - [[llm-text-watermarking]]
 - [[ai-text-detectors]]
+- [[teepagorn-claude-code-adoption-nobody-reading]]

@@ -3,8 +3,8 @@ title: Engineering Role Shift
 type: concept
 tags: [ai, software-engineering, career, roles]
 created: 2026-04-15
-updated: 2026-09-12
-sources: [software-engineer-role-ai-era.md, llm-era-computer-engineering-nattee.md, aaron-levie-agent-automation-jobs.md, llm-era-computer-engineering-ep3-nattee.md, software-after-software.md, teepagorn-ten-lessons-building-with-ai.md, andrew-ng-ai-engineering-skills-map.md, dillon-mulroy-ships-production-code-he-didnt-write.md]
+updated: 2026-09-24
+sources: [software-engineer-role-ai-era.md, llm-era-computer-engineering-nattee.md, aaron-levie-agent-automation-jobs.md, llm-era-computer-engineering-ep3-nattee.md, software-after-software.md, teepagorn-ten-lessons-building-with-ai.md, andrew-ng-ai-engineering-skills-map.md, dillon-mulroy-ships-production-code-he-didnt-write.md, teepagorn-claude-code-adoption-nobody-reading.md]
 ---
 
 # Engineering Role Shift / การเปลี่ยนขั้วของบทบาทวิศวกร
@@ -85,6 +85,8 @@ Wiki ยังไม่รวมสอง claim ให้เหลือคำ�
 
 ข้อสังเกตที่สองจาก Nattee: การตัดสินใจเช่น *"เลือก framework ไหน ใช้ library อะไร ทำไมต้อง abstract แบบนี้"* เคยเป็นงานของ Senior Engineer แต่เมื่อ Agent เข้ามาจัดการ implementation layer **บัณฑิตใหม่จึงถูกผลักดันให้ต้องตัดสินใจเรื่อง architecture ที่ในอดีตต้องใช้เวลาหลายปีกว่าจะได้ทำ** ส่วนที่ขยายของต้นน้ำจึงตกเป็นภาระของวิศวกรที่มีประสบการณ์น้อยที่สุด ซึ่งทำให้ปัญหา [[taste-paradox]] รุนแรงขึ้น — เด็กใหม่ต้องใช้วิจารณญาณที่ยังสะสมไม่เพียงพอ ดู [[ai-orchestrator]] สำหรับกรอบความคิดเกี่ยวกับแรงกดดันนี้ในระดับระบบ
 
+มุมกลับจาก [[teepagorn-claude-code-adoption-nobody-reading|โพสต์ของ @teepagorn]] ในเคสที่เขาเล่า L1 ถึง L7 ทำงานแบบเดียวกันคือ prompt แล้ว ship ความ senior เสี่ยงเหลือแค่ "ใครเปิด agent ได้เยอะกว่า ใครกด Enter ได้ดึกกว่า" ปัญหาเลยไม่ได้มีแค่ junior ต้องตัดสินใจเกินประสบการณ์ แต่ senior ก็ไม่มีเวลาสอน junior จึงไม่เห็นวิธีคิดที่ควรจะเรียน ดู [[skill-atrophy]]
+
 ## บทบาทใหม่ที่เกิดขึ้น
 
 การเปลี่ยนแปลงนี้ก่อให้เกิดบทบาทใหม่หกแบบ (ตามแหล่งข้อมูล):
@@ -158,3 +160,4 @@ Ng ยังย้ำเรื่องคำว่านี่คือ *ทั
 - [[dillon-mulroy-ships-production-code-he-didnt-write]]
 - [[dillon-mulroy]]
 - [[creative-ownership]]
+- [[teepagorn-claude-code-adoption-nobody-reading]]

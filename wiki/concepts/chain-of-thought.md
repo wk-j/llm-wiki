@@ -3,8 +3,8 @@ title: Chain-of-Thought
 type: concept
 tags: [ai, llm, reasoning, prompting, inference]
 created: 2026-07-03
-updated: 2026-07-03
-sources: [llm-loops-instead-of-chain-of-thought.md]
+updated: 2026-09-19
+sources: [llm-loops-instead-of-chain-of-thought.md, jev-the-ultimate-classification-model.md]
 ---
 
 # Chain-of-Thought / การคิดเป็นลำดับข้อความ
@@ -32,6 +32,14 @@ Chain-of-thought คือการให้ LLM เขียน intermediate re
 
 **ได้อะไร:** chain-of-thought เป็นวิธีที่ practical และ supervise ได้ แต่ไม่ใช่วิธีเดียวในการเพิ่ม compute ตอน inference
 
+## บางงานไม่ต้องการ reasoning trace ตั้งแต่แรก
+
+[[jev-the-ultimate-classification-model|วิดีโอของ Sam Witteveen เรื่อง Jev]] เสนอคู่เทียบอีกแบบ คือ [[system-one-models|System One Models]] ตัว model ไม่ได้พยายามคิดลึกขึ้นใน hidden state แต่ตัดงานสร้างข้อความออกเมื่อโจทย์ต้องการเพียง class, score หรือ yes-probability
+
+ตัวอย่างอย่าง route support ticket หรือเช็กว่า message เร่งด่วนไหม มี output แคบอยู่แล้ว การใช้ reasoning model อาจเพิ่ม latency กับ token cost โดยไม่เพิ่มคุณค่าพอ แต่ข้อสรุปนี้ใช้ไม่ได้กับโจทย์ที่ class ขึ้นกับเหตุผลหลายทอดหรือ evidence ที่ต้องอธิบายให้คนตรวจ
+
+**ผลคือ:** ก่อนเลือกวิธี reasoning ต้องถามก่อนว่างานต้อง reasoning จริง หรือเพียงต้องตีความภาษาแล้วคืนค่าจำกัดรูปแบบ
+
 ## จุดแข็งที่ latent reasoning ยังไม่มี
 
 Chain-of-thought มี trace ชัด. เราสามารถสอน model ด้วยตัวอย่าง reasoning, distill จาก model ใหญ่, filter trace ที่ผิด, หรือ reinforce trace ที่นำไปสู่คำตอบดี
@@ -44,3 +52,5 @@ Chain-of-thought มี trace ชัด. เราสามารถสอน mo
 - [[latent-reasoning]]
 - [[multi-hop-reasoning]]
 - [[reasoning-regression]]
+- [[system-one-models]]
+- [[jev]]

@@ -3,8 +3,8 @@ title: Agent Runtime as Untrusted Component / ตัวรัน agent คือ
 type: concept
 tags: [ai, agents, security, threat-model, apts, architecture]
 created: 2026-04-20
-updated: 2026-09-14
-sources: [owasp-apts.md, Claude Mythos Preview.md, "Introducing Omnigent A Meta-Harness to Combine, Control and Share Your Agents.md", boris-cherny-cut-80-percent-claude-code-prompt.md, ai-native-sdlc-playbook.md]
+updated: 2026-09-19
+sources: [owasp-apts.md, Claude Mythos Preview.md, "Introducing Omnigent A Meta-Harness to Combine, Control and Share Your Agents.md", boris-cherny-cut-80-percent-claude-code-prompt.md, ai-native-sdlc-playbook.md, jev-the-ultimate-classification-model.md]
 ---
 
 # Agent Runtime as Untrusted Component / ตัวรัน agent คือส่วนที่เชื่อไม่ได้
@@ -93,6 +93,14 @@ Claim นี้ชนกับประโยคเดิมของ APTS ท�
 
 **ได้อะไร:** ใช้ alignment กับ classifier ลดเหตุการณ์ แต่ใช้ architecture จำกัดความเสียหายหากเหตุการณ์ยังหลุดมาได้
 
+## Jev ทำ classifier gate ให้เร็วขึ้น แต่ไม่ได้เปลี่ยน trust boundary
+
+ใน [[jev-the-ultimate-classification-model|วิดีโอทดลอง Jev]] [[sam-witteveen|Sam Witteveen]] ใช้ [[jev|Jev]] ตรวจ prompt injection และรายงานว่าตัวอย่างที่ลองทำได้ดี [[system-one-models|System One Model]] แบบนี้น่าสนใจสำหรับ triage เพราะคืน class หรือ probability เร็วโดยไม่ generate ข้อความยาว
+
+แหล่งนี้ยังไม่มี attack suite, false-negative rate หรือผลบน input นอก distribution และ Jev เองก็เป็น stochastic classifier ที่เลือกคำตอบผิดได้ จึงใช้ช่วยจัดความเสี่ยงหรือ route งานได้ แต่ยังไม่ใช่เหตุผลให้ถอด sandbox, allowlist หรือ audit store ที่ model แก้ไม่ได้
+
+**ผลคือ:** classifier ที่เร็วช่วยลดต้นทุนการเฝ้าดู ส่วนขอบเขตความเสียหายยังต้องบังคับจากภายนอกเหมือนเดิม
+
 ## ผลที่ได้
 
 ทีมที่ออกแบบตามวิธีนี้:
@@ -142,3 +150,5 @@ Claim นี้ชนกับประโยคเดิมของ APTS ท�
 - [[boris-cherny-cut-80-percent-claude-code-prompt]]
 - [[claude-opus-5]]
 - [[ai-native-sdlc-playbook]]
+- [[jev]]
+- [[system-one-models]]

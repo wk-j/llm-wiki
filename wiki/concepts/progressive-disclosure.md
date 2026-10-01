@@ -3,8 +3,8 @@ title: Progressive Disclosure
 type: concept
 tags: [ai, prompt-engineering, context-management, harness, mcp, skills]
 created: 2026-04-18
-updated: 2026-05-10
-sources: [alex-ker-harnesses-optimize.md, Agent Harness Engineering.md]
+updated: 2026-09-30
+sources: [alex-ker-harnesses-optimize.md, Agent Harness Engineering.md, engineering-the-harness-thoughtworks.md]
 ---
 
 # Progressive Disclosure / เปิดเผยทีละนิด
@@ -25,7 +25,7 @@ sources: [alex-ker-harnesses-optimize.md, Agent Harness Engineering.md]
 
 ข้อดีคือ context window ยังเหลือที่ไว้ให้ reasoning ไม่ถูก reference document กินจนหมด
 
-## เอาไปใช้ได้สามที่
+## เอาไปใช้ได้สี่ที่
 
 ### 1. CLI
 
@@ -69,6 +69,12 @@ sources: [alex-ker-harnesses-optimize.md, Agent Harness Engineering.md]
 - เขียน tool description ให้**เฉพาะเจาะจงและมี keyword เยอะ** — เวลา search-based discovery ทำงานจะได้เจอ
 - ปลด MCP server ที่ไม่ใช้ออกจาก session — ประหยัดทั้ง context และ inference token
 
+### 4. คำสั่งที่ผูกกับ path
+
+[[engineering-the-harness-thoughtworks|บทความของ Thoughtworks]] เอาหลักเดียวกันมาใช้กับ instruction ของทีม แทนที่จะโหลดไฟล์กฎก้อนเดียวเข้าทุก session ให้ผูกกฎกับ path หรือ domain tree เช่น กฎ database โหลดเฉพาะตอน agent แตะไฟล์ schema แล้วให้ agent เดินลง documentation tree เท่าที่งานต้องใช้
+
+**ได้อะไร:** convention ของทีมยังอยู่ครบ แต่ agent เห็นเฉพาะส่วนที่เกี่ยวกับไฟล์ที่กำลังแก้
+
 ## เหตุผลเบื้องหลัง
 
 ตัว agent ไม่ได้ฉลาดขึ้นเพราะมี context เยอะขึ้น — กลับกัน [[context-rot]] กับ [[instruction-budget]] ทำให้ performance แย่ลงพอข้อมูลท่วมเกิน Progressive disclosure ยอมแลก latency นิดหน่อย (ตัว agent ต้องเดิน 2–3 step ไปค้นเอง) แลกกับ attention ที่จดจ่อตรงที่ควรจด — คุ้ม
@@ -87,3 +93,4 @@ sources: [alex-ker-harnesses-optimize.md, Agent Harness Engineering.md]
 - [[opencode]]
 - [[model-context-protocol]]
 - [[claude-code-session-management]]
+- [[engineering-the-harness-thoughtworks]]

@@ -3,8 +3,8 @@ title: Harness Ratchet
 type: concept
 tags: [ai, agents, harness, feedback-loop, software-engineering]
 created: 2026-05-10
-updated: 2026-07-04
-sources: [Agent Harness Engineering.md, ryan-lopopolo-harness-engineering.md, How to Keep Shipping When You Walk Away from Your Desk — Zack Proser, WorkOS.md, stop-building-ai-agents-old-way.md]
+updated: 2026-09-30
+sources: [Agent Harness Engineering.md, ryan-lopopolo-harness-engineering.md, How to Keep Shipping When You Walk Away from Your Desk — Zack Proser, WorkOS.md, stop-building-ai-agents-old-way.md, engineering-the-harness-thoughtworks.md]
 ---
 
 # Harness Ratchet / กลไกล็อกความผิดพลาดไม่ให้เกิดซ้ำ
@@ -82,6 +82,16 @@ Addy Osmani เพิ่มมุมว่า harness ทั้งชุดค�
 
 **ผลคือ:** session mining คือแหล่งวัตถุดิบของ ratchet ส่วน ratchet คือการทำให้บทเรียนกลายเป็น constraint ที่บังคับใช้ได้จริง.
 
+## Earn every rule: ขึ้นจาก prose ไปเป็นกลไก (Thoughtworks, 2026-09)
+
+[[engineering-the-harness-thoughtworks|บทความของ Thoughtworks]] ให้ทิศของ ratchet ที่ชัดขึ้น ถ้าทีมต้องเติมกฎเป็นข้อความใน prompt file ซ้ำ ๆ เพราะ agent ไม่ทำตาม convention กฎนั้นควรถูกเลื่อนไปเป็น custom lint rule, type check หรือ architecture test
+
+> "Prose is the starting point; where a rule can be reliably encoded, mechanical enforcement is the stronger option."
+
+บทความยังตั้งชื่อให้หลัก "กฎต้องมีที่มา" ที่หน้านี้พูดไว้ว่า **Earn every rule** กฎแต่ละข้อต้องโยงกลับไปหา production failure, จุดที่ developer เจ็บ, requirement ด้าน security หรือข้อจำกัดทางวิศวกรรมที่ตั้งไว้แล้ว และต้องกลับมาตัดทิ้งเมื่อ model เก่งขึ้น เพราะทุก rule กับ sensor เป็นของที่ทีมต้องดูแลต่อ บทความให้เก็บทั้งหมดใน version control และแก้ผ่าน pull request ที่มีคน review
+
+**ได้อะไร:** ratchet มีสองขั้น ขั้นแรกจด failure เป็น prose ขั้นสองเลื่อนไปเป็นตัวบังคับที่รันได้ ถ้าเข้ารหัสได้เชื่อถือได้
+
 ## ข้อควรระวัง
 
 Ratchet ที่ดีควรขยับจาก failure จริง ไม่ใช่ความกลัวล่วงหน้า ถ้าเพิ่ม hook/gate มากเกินไป agent จะช้าลงและเสีย autonomy โดยไม่จำเป็น
@@ -102,3 +112,4 @@ Ratchet ที่ดีควรขยับจาก failure จริง ไ�
 - [[developer-balance]]
 - [[session-mining]]
 - [[agent-observability]]
+- [[engineering-the-harness-thoughtworks]]

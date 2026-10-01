@@ -1425,3 +1425,52 @@ User flagged `ความตึงที่ยังเปิดอยู่` a
 - ปรับ concept/entity ใหม่: `[[louis-claxton]]`, `[[control-bands]]`, `[[policy-as-code-for-agents]]`
 - ปรับหน้าที่เชื่อมกับ ingest นี้: `[[anthropic]]`, `[[claude-code]]`, `[[rob-shocks]]`, `[[ai-driven-sdlc]]`, `[[intent-md]]`, `[[artifact-chain]]`, `[[claude-md]]`, `[[agentic-code-review]]`, `[[evals-and-error-analysis]]`, `[[plan-mode-as-prompting]]`, `[[graduated-autonomy]]`, `[[agent-runtime-untrusted]]`
 - ปรับคำอธิบายใน `[[index]]` และอัปเดต `hotcache.md`; ไม่แก้ไฟล์ใน `raw/`
+
+## [2026-09-19] ingest | Jev - The Ultimate Classification Model?
+สรุป transcript วิดีโอของ Sam Witteveen เป็น `[[jev-the-ultimate-classification-model]]` แก่นคือ software decision ที่ output แคบอาจไม่ต้องผ่าน chatbot หรือ reasoning trace ยาว Jev รับ `state` พร้อมคำถามชนิด `choice`, `score` หรือ `noul` แล้วคืน typed value กับ probability เพื่อให้ code นำไป route หรือตั้ง threshold ต่อได้
+- Created source: `[[jev-the-ultimate-classification-model]]`
+- Created entities: `[[jev]]`, `[[typesafe-ai]]`
+- Created concept: `[[system-one-models]]`
+- Updated entity: `[[sam-witteveen]]`
+- Updated concepts: `[[chain-of-thought]]`, `[[harness-guides-sensors]]`, `[[agent-runtime-untrusted]]`
+- Updated `[[index]]` and `hotcache.md`
+
+**เรื่องที่เก็บไว้ทั้งสองด้าน:** typed output ทำให้ schema ไม่พัง แต่ Jev ยังเลือก class ผิดหรือมั่นใจผิดได้ probability ที่คืนมายังต้องทดสอบ calibration กับข้อมูลจริง Demo ตรวจ prompt injection ดูทำได้ดี แต่ไม่มี attack suite หรือ false-negative rate จึงไม่แทน sandbox, allowlist หรือ audit boundary ตาม `[[agent-runtime-untrusted]]` ความเร็วกับต้นทุนอาจทำให้ inferential sensor รันถี่ขึ้น แต่ยังไม่กลายเป็น deterministic sensor
+
+**Provenance:** ผู้ใช้ส่ง title, URL, description และ transcript มาให้ครบ วันเผยแพร่วิดีโอยังไม่ได้ยืนยัน ราคา OpenRouter, latency 70 ถึง 500 มิลลิวินาที, ค่าใช้จ่ายต่อ call และตัวเลขรัน 10 query ต่อวินาทีเก็บเป็น claim ตามเวลาที่อัดวิดีโอ แหล่งนี้ไม่มี paper, architecture diagram, benchmark หรือรายละเอียด RLCD สมมติฐานเรื่อง transformer prefill กับ classification head เป็นการเดาของ Sam และคำว่า `noul` ยังเก็บตาม transcript จนกว่าจะตรวจ API ต้นทาง ไม่แก้ไฟล์ใน `raw/`
+
+## [2026-09-22] ingest | OpenCode Reloaded
+ดึงบทความของ Kit Langton จาก opencode notes มาสรุปเป็น `[[opencode-reloaded]]` แก่นคือ OpenCode 2 ให้ config, MCP server และ plugin เปลี่ยนระหว่างที่ agent ทำงานอยู่ แล้วทุก session เห็นผลโดยไม่ต้อง restart กลไกข้างใต้เลิกให้ plugin แก้ shared registry โดยตรง แต่ให้ลงทะเบียน transformation ที่ host นำมา replay ตามลำดับบน state ว่างทุกครั้งที่ข้อมูลหรือ plugin เปลี่ยน
+- Created source: `[[opencode-reloaded]]`
+- Created entity: `[[kit-langton]]`
+- Created concept: `[[replayable-state-transformations]]`
+- Updated entity: `[[opencode]]`
+- Updated concepts: `[[coding-harness]]`, `[[plugin-manager]]`
+- Updated `[[index]]` and `hotcache.md`
+
+**เรื่องที่เก็บไว้ทั้งสองด้าน:** rebuild จากฐานสะอาดตัด bug ที่ผูกกับประวัติ เช่น refresh เขียนทับ policy, record ที่ต้นทางลบแล้วยังค้าง และ operation ที่ไม่ idempotent สะสมผล แต่ลำดับ transformation ยังสำคัญ คำว่า deterministic ใช้ได้เมื่อ starting state, data และลำดับเหมือนเดิมเท่านั้น External input กับ side effect ยังเปลี่ยนผลได้ และ hot reload ไม่ใช่ security boundary สำหรับ executable plugin code
+
+**Provenance:** ดึง public HTML จาก https://anoma.ly/notes/opencode-reloaded/ เมื่อ 2026-09-22 หน้า article ระบุวันเผยแพร่ 2026-09-21 ส่วนหน้า index ของ opencode notes ระบุว่าเป็นบทความโดย Kit Langton แหล่งนี้มี code example และคำอธิบาย architecture แต่ไม่มี benchmark, rollback contract, failure atomicity หรือ plugin security model ไม่ได้เก็บสำเนาลง `raw/` และรักษาการแก้ไขค้างเดิมไว้
+
+## [2026-09-24] ingest | Companies Use AI Productively but People Can't Keep Up
+สรุปโพสต์ Facebook จาก `@teepagorn` เป็น `[[teepagorn-claude-code-adoption-nobody-reading]]` ผู้เขียนเล่าต่อเคส voxium ที่ Simon Willison หยิบมาแปะ บริษัทใหญ่ที่ทุก level ทำ spec, code, test, ticket และ report ผ่าน Claude Code tool ทำได้ตามสัญญา แต่องค์กรเอาความเร็วไปเพิ่มเป้า คนทำงาน 12-13 ชั่วโมง "just to press enter" และ "Nobody is reading anything." แก่นที่ต่อยอดได้คือ ถ้าทุกชั้นมาจาก AI ตัวเดียว คนอยู่ทุกขั้นได้โดยไม่เข้าใจสักขั้น test กับ code อาจผิดด้วย assumption เดียวกัน และความรู้ของทีมไปกระจายอยู่ใน session แทน
+- Created source: `[[teepagorn-claude-code-adoption-nobody-reading]]`
+- Updated concepts: `[[ai-work-intensification]]`, `[[comprehension-debt]]`, `[[cognitive-surrender]]`, `[[quality-proxy-collapse]]`, `[[skill-atrophy]]`, `[[tokenmaxxing]]`, `[[engineering-role-shift]]`
+- Updated entity: `[[simon-willison]]`
+- Updated `[[index]]` and `hotcache.md`
+
+**เรื่องที่เก็บไว้ทั้งสองด้าน:** ผู้เขียนชอบ Claude Code มากและได้ความเร็วจริงในงานส่วนตัว ปัญหาที่เล่าจึงอยู่ที่การจัดสรร productivity gain ขององค์กร ไม่ใช่ตัว tool คำว่ายุค tokenmaxxing "ผ่านพ้นมาแล้ว" ขัดกับหน้า `[[tokenmaxxing]]` ที่ยังถือเป็นความเสี่ยงปัจจุบัน เก็บเป็นคำถามเปิด ไม่เขียนทับ ข้อที่ว่า judgement ของ senior ยังอยู่แต่ไม่ถ่ายทอดเป็นการคาดการณ์ของผู้เขียน
+
+**Provenance:** ผู้ใช้ส่ง text ของโพสต์มาพร้อม URL หน้า profile `https://www.facebook.com/teepagorn` ไม่มีชื่อผู้เขียน วันที่ permalink หรือลิงก์โพสต์ของ Simon และ voxium เนื้อหาเป็นเรื่องเล่าซ้อนสามชั้น ตัวเลข 12-13 ชั่วโมงและระดับ L1-L7 เก็บเป็น claim ของ voxium ไม่ได้สร้าง entity ให้ voxium หรือผู้เขียนเพราะมีข้อมูลไม่พอ ไม่แก้ไฟล์ใน `raw/`
+
+## [2026-09-30] ingest | Engineering the harness: A practical pattern for reliable coding agents
+สรุปบล็อกของ Thoughtworks โดย Jaya Simha Reddy Nandyala กับ Prabina Pani (เผยแพร่ 2026-09-29) เป็น `[[engineering-the-harness-thoughtworks]]` บทความเปิดด้วยอาการ "locally correct, but systemically destructive" แล้วเสนอ harness สองชั้น คือ guides ก่อนลงมือ (คำสั่งตาม path, tool แบบ least-privilege, explicit default แทนการเดา, ยืนยันเฉพาะเรื่องที่ลามไกล) กับ sensors หลังลงมือ (ตรวจอัตโนมัติ, silent success / verbose failure, เลื่อนกฎจาก prose ไปเป็น lint/type check/architecture test) คั่นด้วยด่านคนเฉพาะจุด ตัวอย่างคือ rename `discount_rate` ข้ามสาม microservice และ pipeline ANALYZE → BLUEPRINT → RED → GREEN → REFACTOR → REVIEW ปิดด้วยการดูแล harness เป็นซอฟต์แวร์: version control, peer review, "earn every rule" และ refactor ต่อเนื่อง
+- Created source: `[[engineering-the-harness-thoughtworks]]`
+- Created concepts: `[[blast-radius-gates]]`, `[[silent-success-verbose-failure]]`
+- Updated concepts: `[[harness-guides-sensors]]`, `[[harness-ratchet]]`, `[[instruction-budget]]`, `[[progressive-disclosure]]`, `[[coding-harness]]`, `[[code-knowledge-graphs]]`, `[[agentic-code-review]]`, `[[policy-as-code-for-agents]]`
+- Updated entity: `[[thoughtworks]]`
+- Updated `[[index]]` and `hotcache.md`
+
+**เรื่องที่เก็บไว้ทั้งสองด้าน:** Thoughtworks ใส่ blocking gate ใน harness เมื่อผลกระทบข้ามหลาย repo แต่ Cursor (`[[what-weve-learned-building-cloud-agents]]`) ย้าย logic multi-repo ออกจาก harness ไปให้ agent ตัดสินเอง และเตือนว่า cloud agent ที่รอ permission อาจค้างเป็นชั่วโมง ไม่มีแหล่งไหนวัดเทียบกัน เก็บเป็นคำถามเปิดใน `[[blast-radius-gates]]` อีกข้อคือ REVIEW loop ของ Thoughtworks ยังพึ่ง test ที่ AI เขียน ซึ่ง Böckeler เตือนว่ายังไม่ดีพอสำหรับ behaviour harness และเคส voxium ชี้ว่า test กับ code อาจเชื่อ assumption ผิดเดียวกัน บทความแยก test agent กับ implementer agent แต่ไม่ได้แสดงว่าแยกแล้วกันได้ นอกจากนี้บทความนับ "ยืนยันเฉพาะเรื่องที่ลามไกล" ทั้งเป็น guide pattern และเป็นชั้นที่สาม wiki อ่านว่าเป็นกลไกเดียวกันมองสองมุม
+
+**Provenance:** ผู้ใช้ส่งเนื้อบทความ ชื่อ URL และผู้เขียนมาให้ วันเผยแพร่ 2026-09-29 ดึงจากหน้าเว็บตอน ingest หน้าเว็บไม่ระบุตำแหน่งงานของผู้เขียน เลยไม่ได้สร้าง entity ให้ผู้เขียนทั้งสอง (มีข้อมูลแค่ชื่อ และเพิ่งเจอในแหล่งเดียว) ตัวอย่างในบทความเป็นภาพสมมติ ไม่มีตัวเลขจาก production ระหว่างทางแก้คำภาษาเวียดนามที่หลุดมาใน `[[code-knowledge-graphs]]` ("chuỗi phụ thuộc" → "สาย dependency") ไม่แก้ไฟล์ใน `raw/`

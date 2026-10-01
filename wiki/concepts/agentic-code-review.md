@@ -3,8 +3,8 @@ title: Agentic Code Review
 type: concept
 tags: [ai, agents, code-review, verification, software-engineering]
 created: 2026-06-16
-updated: 2026-09-14
-sources: [Agentic Code Review.md, aom-fable-elysia-2-audit.md, bun-in-rust.md, dhh-ai-programming-setup-lex-clips.md, claude-codes-new-intent-md-rob-shocks.md, dillon-mulroy-ships-production-code-he-didnt-write.md, ai-native-sdlc-playbook.md]
+updated: 2026-09-30
+sources: [Agentic Code Review.md, aom-fable-elysia-2-audit.md, bun-in-rust.md, dhh-ai-programming-setup-lex-clips.md, claude-codes-new-intent-md-rob-shocks.md, dillon-mulroy-ships-production-code-he-didnt-write.md, ai-native-sdlc-playbook.md, engineering-the-harness-thoughtworks.md]
 ---
 
 # Agentic Code Review / การ review โค้ดในยุค agent
@@ -131,6 +131,16 @@ Agentic code review = **risk tier + evidence intake + deterministic gates + hete
 
 **ผลคือ:** ความเร็วไม่ได้มาจากตัด review ออก แต่มาจากให้ agent เตรียม evidence และแก้ feedback ก่อนถึง human gate
 
+## Thoughtworks: REVIEW agent วนเอง คนอยู่ที่ด่าน scope
+
+[[engineering-the-harness-thoughtworks|บทความของ Thoughtworks]] วาง automated review agent เป็นช่วงสุดท้ายของ pipeline หกช่วง (ANALYZE, BLUEPRINT, RED, GREEN, REFACTOR, REVIEW) หน้าที่ของมันคือเช็คว่า test ครอบ acceptance criteria ครบไหม ถ้าเจอข้อที่ยังไม่มี test มันไม่ดึงคนเข้ามา แต่ส่งงานกลับไป RED/GREEN ให้เขียน test กับโค้ดที่ขาด แล้วรัน REVIEW ใหม่เองก่อนเปิด pull request
+
+คนถูกเรียกเร็วกว่านั้น คือตอน BLUEPRINT ที่ architecture agent เจอผลกระทบข้ามหลาย service ([[blast-radius-gates]]) บทความแยกไว้ชัดว่า human feedback loop มีไว้กับเรื่องที่ย้อนไม่ได้ ส่วน automated loop มีไว้กับ failure ที่แก้ด้วยกลไกได้
+
+สิ่งที่บทความไม่ได้บอก: หลังเปิด PR แล้วมีคน review อีกชั้นไหม และ REVIEW agent เชื่อได้แค่ไหนเมื่อ test ที่มันตรวจก็มาจาก AI เหมือนกัน ประเด็นหลังนี้ต่อกับคำเตือนของ Böckeler ใน [[harness-guides-sensors]] เรื่อง behaviour harness
+
+**ได้อะไร:** อีกทางหนึ่งในการ tier ตามความเสี่ยง คือย้ายด่านคนไปไว้ก่อนลงมือในเรื่องใหญ่ แล้วให้ review ตอนท้ายเป็นงานของเครื่อง
+
 ## DHH: ตรวจสิ่งที่ควรเปลี่ยนแต่นอก diff ด้วย
 
 [[dhh|DHH]] ผู้สร้าง Ruby on Rails เล่าใน [[dhh-ai-programming-setup-lex-clips|บทสัมภาษณ์เรื่องชุดเครื่องมือ AI]] ว่าใช้ Neovim เป็นตัวเปิดดูโปรเจกต์ แม้เขียน code เองน้อยลง เขาชอบการแสดง diff ของ Hunk แต่ระหว่างตรวจงาน agent อยากเปิดไฟล์ที่ไม่ได้เปลี่ยนด้วย เพื่อถามว่ามีส่วนไหนควรแก้ตามแล้ว agent ลืมหรือไม่
@@ -190,3 +200,5 @@ Agentic code review = **risk tier + evidence intake + deterministic gates + hete
 - [[dillon-mulroy]]
 - [[stacked-pull-requests]]
 - [[ai-native-sdlc-playbook]]
+- [[engineering-the-harness-thoughtworks]]
+- [[blast-radius-gates]]

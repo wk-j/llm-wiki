@@ -3,8 +3,8 @@ title: Skill Atrophy
 type: concept
 tags: [psychology, ai, learning]
 created: 2026-05-05
-updated: 2026-09-07
-sources: [dhh-strategies-programming-with-ai-agents-lex-clips.md, agentic-coding-trap.md, How to Keep Shipping When You Walk Away from Your Desk — Zack Proser, WorkOS.md, code-isnt-free-mario-zechner-hard-truths-coding-ai.md]
+updated: 2026-09-24
+sources: [dhh-strategies-programming-with-ai-agents-lex-clips.md, agentic-coding-trap.md, How to Keep Shipping When You Walk Away from Your Desk — Zack Proser, WorkOS.md, code-isnt-free-mario-zechner-hard-truths-coding-ai.md, teepagorn-claude-code-adoption-nobody-reading.md]
 ---
 
 # Skill Atrophy / ภาวะทักษะถดถอย
@@ -49,6 +49,14 @@ sources: [dhh-strategies-programming-with-ai-agents-lex-clips.md, agentic-coding
 
 **ผลคือ:** เคสนี้ไม่ได้แปลว่า skill atrophy ไม่จริง มันเตือนว่าต้องแยกสองคำถามออกจากกัน คือ "ยังเขียนเองอยู่ไหม" กับ "ยังตรวจงานเองได้ไหม" คำถามที่สองสำคัญกว่า และเป็นคำถามที่ [[taste-paradox|taste paradox]] กับ [[eh-gland|ต่อมเอ๊ะ]] พูดถึงจริง ๆ
 
+## ถ้าทุก level ทำงานแบบเดียวกัน junior จะเรียนจากใคร
+
+[[teepagorn-claude-code-adoption-nobody-reading|โพสต์ของ @teepagorn]] ขยายเรื่องนี้จากระดับคนไปถึงระดับทีม ในเคสที่เล่า engineer L1 ถึง L7 ทำงานเหมือนกันหมด คือ "Talk to Claude" แล้ว ship
+
+ผู้เขียนมองว่า senior มีค่าเพราะถือบริบท เห็น trade-off ทัก assumption และรู้ว่าเรื่องไหนยังไม่ควรรีบทำ เขาเชื่อว่า judgement กับความ "ดมกลิ่นได้" น่าจะยังอยู่ แต่จะเริ่มไม่ถูกถ่ายทอด junior ไม่เห็นวิธีคิดของ senior แล้ว ส่วน senior ก็ไม่มีเวลาสอนเพราะวิ่งตาม output อยู่ ([[ai-work-intensification]])
+
+**ผลคือ:** skill atrophy ไม่ได้เกิดแค่ในหัวคนเดียว มันเกิดได้ที่ทางส่งต่อทักษะระหว่างรุ่นด้วย ข้อนี้ยังเป็นการคาดการณ์ ยังไม่มีข้อมูลว่า junior ในทีมแบบนี้โตช้าลงจริง
+
 ## See also
 
 - [[cognitive-debt]]
@@ -60,3 +68,4 @@ sources: [dhh-strategies-programming-with-ai-agents-lex-clips.md, agentic-coding
 - [[dhh]]
 - [[dhh-strategies-programming-with-ai-agents-lex-clips]]
 - [[make-it-simpler]]
+- [[teepagorn-claude-code-adoption-nobody-reading]]

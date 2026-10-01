@@ -3,8 +3,8 @@ title: Comprehension Debt
 type: concept
 tags: [ai, software-engineering, code-review, cognition, agents]
 created: 2026-06-16
-updated: 2026-06-16
-sources: ["Loop Engineering..md", Agentic Code Review.md]
+updated: 2026-09-24
+sources: ["Loop Engineering..md", Agentic Code Review.md, teepagorn-claude-code-adoption-nobody-reading.md]
 ---
 
 # Comprehension Debt / หนี้ความเข้าใจ
@@ -42,6 +42,19 @@ Review เคยทำหน้าที่สองอย่างพร้อ�
 
 **ได้อะไร:** ทีมไม่จำเป็นต้องอ่านทุกบรรทัด แต่ต้องมีวิธีรักษา mental model ของระบบให้ตามความจริงทัน.
 
+## เมื่อ spec, code, test และ report มาจาก AI ตัวเดียวกัน
+
+โพสต์ [[teepagorn-claude-code-adoption-nobody-reading|ของ @teepagorn]] ชี้หนี้อีกแบบ ถ้า AI เขียน spec แล้วเอาไปเขียน code เขียน test ตรวจ code แล้วเขียน report สรุปให้คน คนจะอยู่ในทุกขั้นตอนโดยไม่เข้าใจขั้นไหนเลยก็ได้
+
+ผลที่ตามมามีสองชั้น
+
+- **error ไปด้วยกัน:** test อาจผ่านเพราะ test กับ code เชื่อ assumption ผิดอันเดียวกัน ไม่ใช่เพราะระบบถูก ต่างจากตัวอย่าง "agent rewrite test" ข้างบนตรงที่ไม่มีใครแก้ test ผิดเลย มันผิดตั้งแต่ spec
+- **ความรู้กระจายไปอยู่ใน session:** ถ้าคำตอบทุกครั้งคือ "เดี๋ยวถาม Claude" ความรู้ก็อยู่ใน session เป็นร้อยอัน ไม่ได้อยู่ในทีม คนเลยไม่มี mental model ร่วมพอจะ challenge คำตอบของ AI
+
+ผู้เขียนเสนอให้วัดว่า "คนในทีมยังอธิบายสิ่งที่ตัวเองส่งขึ้น production ได้ไหม" แทนการวัดอัตรา adoption
+
+**ผลคือ:** ต้องมีอย่างน้อยหนึ่งชั้นที่ไม่ได้มาจากแหล่งเดียวกับ code เช่น คนเขียน acceptance criteria เอง หรือใช้ [[behavioral-verifier|behavioral verifier]] ที่ไม่ได้อ่าน spec ของ AI
+
 ## See also
 
 - [[agentic-code-review]]
@@ -51,3 +64,5 @@ Review เคยทำหน้าที่สองอย่างพร้อ�
 - [[cognitive-surrender]]
 - [[harness-ratchet]]
 - [[harness-guides-sensors]]
+- [[teepagorn-claude-code-adoption-nobody-reading]]
+- [[ai-work-intensification]]

@@ -3,8 +3,8 @@ title: Tokenmaxxing
 type: concept
 tags: [ai, tokens, economics, workplace, metrics]
 created: 2026-07-03
-updated: 2026-07-03
-sources: [how-ai-became-more-expensive-than-workers-it-replaced.md]
+updated: 2026-09-24
+sources: [how-ai-became-more-expensive-than-workers-it-replaced.md, teepagorn-claude-code-adoption-nobody-reading.md]
 ---
 
 # Tokenmaxxing / การปั่น token ให้ดู productive
@@ -38,6 +38,12 @@ Tokenmaxxing ทำให้ [[ai-token-economics|AI token economics]] เพี
 - ทำ [[token-optimization|token optimization]] ที่ไม่ทำให้คุณภาพตก
 - ผูก AI usage กับ artifact ที่ตรวจได้ เช่น diff, test, report, ticket closed, หรือ customer outcome
 
+## คำถามเปิด: ยุค tokenmaxxing ผ่านไปแล้วหรือยัง
+
+[[teepagorn-claude-code-adoption-nobody-reading|โพสต์ของ @teepagorn]] (ingest 2026-09-24) พูดติดตลกว่า "มันจะมียุคนึงที่ tokenmaxxing แต่ยุคนั้นได้ผ่านพ้นมาแล้ว ยุคนั้นสั้นเหลือเกินประมาณ 3 เดือนปะ" ขณะที่หน้านี้ยังเขียนว่าเป็นความเสี่ยงที่มีอยู่ ตามวิดีโอที่ ingest เมื่อ 2026-07
+
+ทั้งสองแหล่งไม่มีข้อมูลรองรับ wiki จึงไม่ตัดสิน ที่น่าสังเกตคือโพสต์เดียวกันบอกว่าองค์กรยังวัด adoption ด้วยเปอร์เซ็นต์คนใช้และปริมาณที่ ship เป็นหลัก ถ้าเป็นแบบนั้น token อาจเลิกเป็น KPI แล้ว แต่ปัญหาวัด input แทน outcome ยังอยู่ในรูปอื่น
+
 ## See also
 
 - [[how-ai-became-more-expensive-than-workers-it-replaced]]
@@ -46,3 +52,4 @@ Tokenmaxxing ทำให้ [[ai-token-economics|AI token economics]] เพี
 - [[agentic-usage]]
 - [[usage-based-billing]]
 - [[token-optimization]]
+- [[teepagorn-claude-code-adoption-nobody-reading]]

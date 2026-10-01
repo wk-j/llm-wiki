@@ -1,6 +1,10 @@
 # Index
 
 ## Sources
+- [[engineering-the-harness-thoughtworks]] — บล็อก Thoughtworks (Jaya Simha Reddy Nandyala กับ Prabina Pani, 2026-09-29): agent เขียนโค้ดถูกเฉพาะจุดแต่พังทั้งระบบ เพราะ harness ไม่ให้มันเห็นระบบ; เสนอ guides ก่อนลงมือ (คำสั่งตาม path, tool แบบ least-privilege, explicit default, ยืนยันเฉพาะเรื่องที่ลามไกล), sensors หลังลงมือ (ผ่านเงียบ พังละเอียด, เลื่อนกฎจาก prose ไปเป็น lint/test) และด่านคนคั่นกลาง; ตัวอย่าง rename field ข้ามสาม microservice กับ pipeline ANALYZE→BLUEPRINT→RED→GREEN→REFACTOR→REVIEW; ไม่มีตัวเลขจาก production และยังไม่ลงรอยกับ Cursor เรื่องใส่ด่าน multi-repo ใน harness
+- [[teepagorn-claude-code-adoption-nobody-reading]] — โพสต์ Facebook จาก `@teepagorn` เล่าต่อเคส voxium ที่ Simon Willison แปะ: บริษัทใหญ่ที่ L1 ถึง L7 "Talk to Claude" ทุกเรื่อง output พุ่ง แต่คนทำ 12-13 ชั่วโมงเพื่อกด Enter และ "Nobody is reading anything"; ชี้ว่า spec/code/test/report จาก AI ตัวเดียวทำให้คนอยู่ทุกขั้นโดยไม่เข้าใจสักขั้น test กับ code อาจเชื่อ assumption ผิดเดียวกัน องค์กรวัด adoption ผิดจุด และ junior ขาดทางเรียนวิธีคิดของ senior; เป็นเรื่องเล่าซ้อนสามชั้นที่ไม่มีวันที่หรือลิงก์ต้นทาง
+- [[opencode-reloaded]] — Kit Langton อธิบาย hot reload ของ OpenCode 2: plugin ลงทะเบียน transformation แทนการแก้ shared registry แล้ว host rebuild model, tool, skill, MCP และ state อื่นจาก contribution ที่ยัง active; ลด bug จากลำดับและการรันซ้ำ แต่บทความยังไม่ระบุ rollback, failure atomicity, performance หรือ plugin security model
+- [[jev-the-ultimate-classification-model]] — Sam Witteveen ทดลอง Jev ของ Typesafe AI: รับ `state` กับคำถามแบบ choice/score/noul แล้วคืน typed value พร้อม probability โดยไม่ generate ข้อความ; ใช้กับ routing, sentiment, PII, spam และ tool selection ได้เร็วตาม claim แต่ calibration, RLCD, architecture และ benchmark เทียบ classifier เดิมยังไม่มีรายละเอียด
 - [[dillon-mulroy-ships-production-code-he-didnt-write]] — Jan-Niklas Wortmann คุยกับ Dillon Mulroy เรื่อง agent เขียน implementation เกือบหมดแต่คนยังอ่านทุกบรรทัด; output สูงขึ้นพร้อม flow และความสุขลดลงเพราะวันเหลือแต่ macro judgement; workflow ใช้ pi `/tree`, Plannotator, spec แบบ types/call stack/tests และ stacked PR ราว 300–800 บรรทัด พร้อมเก็บ Cloudflare layoff, Fable policy และ productivity เป็น claim ที่ยังไม่ได้ยืนยันนอกบทสัมภาษณ์
 - [[boris-cherny-cut-80-percent-claude-code-prompt]] — Boris Cherny กับ Y Combinator (Startup School 2026): ทีม Claude Code ลบ system prompt ของ Opus 5 ออกราว 80% ด้วย prompt ablation, สร้างกฎกลับจาก failure ที่เกิดซ้ำ, มอง eval ว่าหมดอายุได้, ใช้ model elicitation หา product overhang และอธิบาย dynamic workflows/routines ที่รัน agent จำนวนมาก; claim เรื่อง prompt injection, duration และ scale ยังเป็นคำบอกเล่าจากผู้สร้างผลิตภัณฑ์
 - [[cafkafk-nixos-omarchy-critique]] — cafkafk (X, 2026-09-09) โต้ DHH ว่าชม Nix เป็น “amazing technology” พร้อมดูถูกคนใน ecosystem แล้วกลับวางแผนใช้ NixOS เป็นฐานของ Omarchy; แก่นคือ distribution พึ่ง package, security, infrastructure, release, review, maintenance และ governance ของ upstream ส่วนคำพูด DHH กับแผนย้ายยังเป็นรายงานจาก cafkafk เพราะไม่มีต้นทางอีกฝั่งแนบมา
@@ -147,6 +151,7 @@
 - [[thclaws-marketplace-panutat]] — Panutat Tejasen (2026-04-30): thClaws v0.7.0 Marketplace; Enterprise Security; Private Marketplace; แนวคิด Host Bridge; Rabbit Holes ในการ coding
 
 ## Entities
+- [[kit-langton]] — ผู้เขียน opencode notes; อธิบายสถาปัตยกรรม hot reload และ Replayable State Transformations ของ OpenCode 2 โดยหน้า source ไม่ได้ลงตำแหน่งงานหรือประวัติส่วนตัวเพิ่ม
 - [[dillon-mulroy]] — Principal Engineer ที่ Cloudflare ตามบทสัมภาษณ์ Jan-Niklas Wortmann; ให้ agent เขียน implementation เกือบหมดแต่คุม context, design, local review และ accountability เอง พร้อมรายงานว่า productivity สูงขึ้นแต่เหนื่อยและสนุกน้อยลง
 - [[plannotator]] — local review/annotation tool ที่ Dillon ใช้อ่าน diff หรือ comment plan แล้วส่ง feedback กลับเข้า coding-agent session ก่อน push PR; capability ยังบันทึกตามบทสัมภาษณ์ ไม่ใช่ product docs
 - [[claude-opus-5]] — model รุ่นใหม่ของ Anthropic ตามบทสัมภาษณ์ Boris Cherny; เขาอ้างว่ารันได้นาน ต้าน prompt injection ดีขึ้น และทำให้ Claude Code ลด system prompt 80% แต่ wiki ยังไม่มี release note/system card จึงไม่เติมวัน ราคา หรือ benchmark เอง และยังแยกจาก Fable 5
@@ -304,7 +309,9 @@
 - [[john-ousterhout]] — ศาสตราจารย์ Stanford และผู้แต่ง A Philosophy of Software Design; ต้นคิดเรื่อง Deep Modules
 - [[ibm]] — บริษัทเทคฝั่ง enterprise เจ้าของ Granite; Granite Speech 4.1 วางตำแหน่ง speech model ตัวเล็ก/รัน local สำหรับงาน ASR ใช้จริง
 - [[granite-speech]] — ตระกูล speech model ของ IBM; Granite Speech 4.1 มีตัว base 2B, Plus และ NAR ให้เลือกตาม trade-off ของ ASR
-- [[sam-witteveen]] — creator/practitioner สาย AI ที่คุมเรื่อง local AI, models และ agent workflow; source ของบทวิเคราะห์ Granite Speech 4.1
+- [[jev]] — model ตัดสินใจของ Typesafe AI; รับ state กับ typed questions แล้วคืน choice, score หรือ yes-probability โดยไม่เขียนข้อความอิสระ
+- [[typesafe-ai]] — บริษัทผู้สร้าง Jev และใช้คำว่า System One Models; claim เรื่อง architecture, parallel sampler และ RLCD ยังไม่มี paper ในแหล่งที่ ingest
+- [[sam-witteveen]] — creator/practitioner สาย AI ที่ทดลอง model ผ่าน workflow จริง; source ของบทวิเคราะห์ Granite Speech 4.1 และ Jev
 - [[claude-managed-agents]] — platform managed agents ของ Anthropic; มี Memory (public beta) กับ Dreaming (research preview); มาพร้อม permission scopes, optimistic concurrency, audit log
 - [[harvey-ai]] — AI ด้านกฎหมาย; ลูกค้ารุ่นแรกๆ ของ Dreaming; รายงานว่าทำงานเสร็จเพิ่ม 6 เท่าบน legal benchmark
 - [[arrowhead-game-studios]] — สตูดิโอเกมสวีเดน ผู้สร้าง Helldivers 2; โดนวิจารณ์เรื่อง balance แบบ "Monkey Paw" กับเนื้อหา late-game ที่ย่ำอยู่กับที่ในปี 2026
@@ -360,7 +367,7 @@
 - [[alex-ker]] — engineer (@thealexker, GitHub AlexKer); เขียน "Harnesses are everything"; contributor ของ Roo Code / DeepAgent CLI / HumanLayer; เคยทำ gpt-oss-swarm ที่ Baseten
 - [[humanlayer]] — บริษัท harness แบบ open-source; ที่มาของ framing "dumb zone" เรื่อง instruction budget กับ prompt framework แบบ R.P.I.
 - [[openai-codex]] — coding harness ของ OpenAI; Codex app/Goal Mode/Remote/Codex Cloud; stack เปิดทุกชั้น (harness, AGENTS.md, App Server, plugins); เรื่อง skills progressive disclosure เดินทางเดียวกับ Claude Code แต่จัดการ MCP คนละแบบ
-- [[opencode]] — coding harness แบบ open-source; โหลด tool definitions ของ MCP ทั้งหมดตั้งแต่เปิดโปรแกรม; docs เตือนเองว่าอย่าใช้ server เยอะ
+- [[opencode]] — coding harness แบบ open-source; OpenCode 2 hot reload config, MCP และ plugin ผ่าน `State` ที่ rebuild จาก transformation ทำให้ทุก session เห็น environment ใหม่โดยไม่ restart ส่วน MCP loading, checkpoint และ Desktop runtime ยังมีข้อแลกเปลี่ยนตามรุ่น
 - [[tauri]] — framework ทำ desktop app ด้วย Rust ใช้ webview ของ OS; bundle เล็ก security แน่น; แต่ลำบากถ้า logic หนักๆ ของ app อยู่ใน runtime ที่ไม่ใช่ Rust
 - [[ubs]] — investment bank และบริษัท wealth management รายใหญ่ของสวิส
 - [[electron]] — framework ทำ desktop app แบบ Chromium + Node.js; ได้เปรียบเมื่อ logic ของ app เป็น JS/Node/Bun อยู่แล้ว (รัน in-process ไม่ต้องมี sidecar)
@@ -379,7 +386,7 @@
 - [[google-cloud]] — ฝั่ง enterprise cloud ของ Google; ทำ Gemini Enterprise Agent Platform/Agent Runtime และวาง Agents CLI ให้ coding agent ทำวงจร build–eval–deploy ไป Agent Engine ได้ใน workflow เดียว โดยยังต้องเติม permission, governance และ observability ก่อนเชื่อว่า prototype พร้อม production
 - [[addy-osmani]] — ผู้เขียนด้าน software engineering และ agent architecture; เจ้าของงาน long-running agent patterns, Agent Harness Engineering, Orchestration Tax, Loop Engineering และ The New Software Lifecycle
 - [[birgitta-bockeler]] — engineer ที่ Thoughtworks; เขียนซีรีส์ "Exploring Gen AI" บน martinfowler.com; มอง user harness ของ coding agent เป็น control system ที่ประกอบจาก guides + sensors
-- [[thoughtworks]] — บริษัท consultancy ระดับโลก เบื้องหลัง CI/CD, evolutionary architecture, fitness functions และ Technology Radar; บ้านของงานเขียนเรื่อง harness ของ Böckeler
+- [[thoughtworks]] — บริษัท consultancy ระดับโลก เบื้องหลัง CI/CD, evolutionary architecture, fitness functions และ Technology Radar; บ้านของงานเขียนเรื่อง harness ของ Böckeler และบล็อก Engineering the harness ที่เพิ่มด่านคนเฉพาะจุด
 - [[vtrivedy]] — นักเขียนบน X; Addy Osmani ยกเครดิตว่าเป็นคนบัญญัติคำ "harness engineering" จากสมการ Agent = Model + Harness
 - [[fred-schott]] — developer ผู้สร้าง Flue; ถูกยกเป็นตัวอย่างคนทำ framework ด้าน agent harness
 - [[flue]] — framework ด้าน agent harness โดย Fred Schott; ตัวอย่างทิศทาง Harness-as-a-Service / harness framework
@@ -426,6 +433,9 @@
 - [[marc-brooker]] — senior engineer ที่ AWS (Lambda/Aurora); ฝั่งปกป้อง SDD ตัวจริง: มอง spec เป็น artifact ที่ explicit มี version และมีชีวิต ใช้วนซ้ำได้จริง
 
 ## Concepts
+- [[blast-radius-gates]] — ให้ harness หยุดขอคนยืนยันเฉพาะเรื่องที่ย้อนไม่ได้หรือกระทบวงกว้าง เช่น scope ข้าม repo, schema migration, public API แล้วปล่อยเรื่องเล็กเดินต่อด้วย default ที่บันทึกไว้; ด่านดีได้เท่ากับ impact analysis ที่ป้อนมัน และยังไม่ลงรอยกับทิศของ Cursor ที่ลดการบล็อกใน cloud agent
+- [[silent-success-verbose-failure]] — sensor ที่ผ่านควรเงียบเพื่อประหยัด context ส่วนที่พังควรส่ง stack trace, ตำแหน่ง lint error หรือ diff ของ test กลับเข้า loop ให้ agent แก้เอง; Addy Osmani กับ Thoughtworks พูดตรงกัน แต่ความเงียบก็อาจซ่อน sensor ที่ไม่ได้รันจริง
+- [[replayable-state-transformations]] — ให้ component ลงทะเบียน transformation แล้ว rebuild state จากฐานสะอาดกับ contribution ที่ยัง active แทน shared mutation; ช่วยถอด plugin และ refresh input ได้โดยไม่สะสมประวัติ แต่ยังต้องกำหนด order, failure atomicity, side-effect policy และ trust boundary
 - [[prompt-ablation]] — ลบ system prompt หรือ instruction แล้ววัดผล จากนั้นเพิ่มกลับทีละส่วนเฉพาะที่แก้ failure ซ้ำ ๆ; ใช้กัน harness โตทางเดียว แต่ต้องแยก behavioral prompt ออกจาก permission/sandbox/test ที่บังคับจากภายนอก
 - [[model-elicitation]] — จัดโจทย์ tool context และ verifier ให้ model แสดง capability ที่มีอยู่แล้ว; โยนงานยากกว่าที่คิดเล็กน้อยพร้อม guardrail/exit criteria แล้วเรียนจาก failure จริง แทน overspecify วิธีทำ
 - [[intent-md]] — proto-spec ที่ originator กับ agent เขียนร่วมกันก่อน `spec.md` เพื่อเก็บ problem, desired outcome, affected users/systems, constraints และ open questions; ช่วยลดข้อมูลหายระหว่าง handoff แต่ยังเป็น prose จึงใช้แทน executable facts ไม่ได้
@@ -436,7 +446,7 @@
 - [[voice-first-prompting]] — พา agent เข้าใจโจทย์ด้วยการพูดต่อเนื่องเป็นสิบ ๆ นาทีแบบคิดออกมาดัง ๆ แล้วล้าง transcript ด้วย dictionary กับคำที่กวาดจาก code base; ต่างจาก dictation สั่งงานสั้น ๆ และได้เปรียบตรงที่ไม่ตีกรอบ over-specification แต่ยังไม่มีข้อมูลว่ากิน context เท่าไรและ agent จับใจความจากช่วงที่เปลี่ยนใจกลางทางได้แม่นแค่ไหน
 - [[creative-ownership]] — ความรู้สึกว่าเราได้สร้าง judgement และลายมือของตัวเองลงในงาน; เก็บทั้งคนที่ agent เพิ่ม agency, คนที่รู้สึกห่างจาก craft, DHH ที่ flow กลับมา และ Dillon ที่ยังคุม design แต่เสีย micro-reward จาก implementation
 - [[ai-driven-sdlc]] — วงจรที่ AI เร่ง implementation ได้มากกว่าช่วงที่ต้องใช้ judgement; Addy ชี้ว่า spec กับ verification กลายเป็นคอขวด ส่วน playbook ของ Anthropic เพิ่ม artifact chain, hooks, eval และ human gate โดย maintenance อัตโนมัติยังเป็น gated autonomy
-- [[coding-harness]] — ระบบรอบ model ที่จัด prompt, context, tool, filesystem, sandbox, hook, memory, subagent และ observability; ต้องเพิ่ม control จาก failure และถอดของเก่าด้วย prompt ablation เมื่อ model ใหม่ไม่ต้องใช้ ไม่ใช่สะสมจนโตทางเดียว
+- [[coding-harness]] — ระบบรอบ model ที่จัด prompt, context, tool, filesystem, sandbox, hook, memory, subagent และ observability; OpenCode เพิ่มมุมที่ harness เป็นเจ้าของ lifecycle ของ environment ระหว่าง session ผ่าน state rebuild และ hot reload
 - [[llm-text-watermarking]] — การฝัง signal ลับในข้อความ LLM ตอน sampling (rig ลูกเต๋าด้วย secret key ที่ reshuffle ทุก step) ให้ตรวจ provenance ทีหลังได้โดยสถิติคำไม่เปลี่ยน; จุดอ่อนคืองาน low-entropy ไม่มีที่ซ่อนและ paraphrase ล้างออกได้ และ mark หมายถึง "ผ่าน model" ไม่ใช่ "model เป็นคนแต่ง"
 - [[ai-text-detectors]] — เครื่องตรวจงานเขียน AI จากสไตล์ (GPTZero, Pangram, Turnitin) ที่ไม่มี key ไม่ใช่ watermark; ประวัติ false positive หนักกับ non-native writers และงาน craft จัด, สร้าง arms race กับ humanizer และ premise กำลังพังเพราะสไตล์คนกับ AI กลืนเข้าหากันเรื่อย ๆ
 - [[conversation-code-provenance]] — ความสัมพันธ์สองทางระหว่างบทสนทนากับ code: จากข้อความไปดู implementation ตอนนั้น/ตอนนี้ และจาก code ย้อนหาเหตุผลที่สร้างหรือแก้ต่อ; เกาะ delta แทน line number แต่ provenance ไม่ใช่ความจริงและยังต้องมี test, review, permission กับ retention
@@ -498,6 +508,7 @@
 - [[mixture-of-recursions]] — routing ความลึกแบบปรับได้: token ง่ายออกก่อน token ยากวนต่ออีกหลายรอบ; expert-choice routing ปรับตัวระหว่าง loop ได้ แต่ทำให้ training กับ KV caching ยุ่งขึ้น
 - [[kv-cache]] — cache ของ key/value tensor ตอน transformer decode; ทำให้ attention ย้อนดู token เก่าเร็วขึ้น แต่กลายเป็นคอขวด memory bandwidth พอ context ยาวหรือใช้ model แบบ recursive-depth
 - [[chain-of-thought]] — trace การคิดกลางทางแบบเป็นข้อความ; ใช้จริงง่าย supervise ง่าย แต่กิน token/context/latency มากกว่า latent recurrence
+- [[system-one-models]] — model ที่คืน class, score หรือ probability โดยตรงสำหรับ decision ที่ต้องตอบเร็ว; ยังเป็น inferential และต้องวัด calibration ไม่ใช่ deterministic rule
 - [[residual-stream]] — ช่องทาง hidden state หลักของ transformer; ใน looped transformer มันกลายเป็น state ที่วิวัฒน์ไปเรื่อยๆ ของ recurrent dynamical system
 - [[interstellar-objects]] — วัตถุจากนอกระบบสุริยะที่วิ่งบนวิถี hyperbolic; รหัส "I" ตั้งขึ้นเพื่อ ʻOumuamua ปี 2017; ถึงปี 2026 เจอแล้วสามดวง (1I/2I/3I); ปัญหาคือมักเจอตอนขาออกแล้ว เลยเกิด Project Lyra กับ Comet Interceptor ของ ESA ที่ไปดักรอที่ L2
 - [[dark-comets]] — วัตถุที่หน้าตาเหมือนดาวเคราะห์น้อยแห้งๆ (ไม่มี coma ไม่มีหาง) แต่เร่งตัวเองแบบดาวหางตอนใกล้ดวงอาทิตย์; มาจากเจ็ทไฮโดรเจนที่มองไม่เห็นจากน้ำแข็งที่ผ่าน radiolysis; ถึงปี 2026 เจอ 14 ดวงในระบบสุริยะ; Hayabusa2 จะไปเยือน 1998 KY26 ปี 2031
@@ -669,7 +680,7 @@
 - [[grounding]] — วินัยการ prompt: บังคับให้ agent อ้างหลักฐานจากโค้ดก่อนลงมือแก้
 - [[grpo]] — Group Relative Policy Optimization: วิธี RL แบบประหยัดของ DeepSeek ที่ไม่ต้องมี value model
 - [[harness-engineering]] — วิศวกรรม pipeline ของเหล่า agent สาย review/test/audit ที่ล้อมงานหลักเอาไว้
-- [[harness-guides-sensors]] — mental model ของ Böckeler: harness ฝั่งผู้ใช้คือระบบควบคุมที่มี guides (feedforward) + sensors (feedback), แบบ computational vs inferential, มี steering loop, หมวด regulation (maintainability/architecture/behaviour), แนวคิด harnessability และ harness template
+- [[harness-guides-sensors]] — mental model ของ Böckeler: harness ฝั่งผู้ใช้คือระบบควบคุมที่มี guides (feedforward) + sensors (feedback), แบบ computational vs inferential, มี steering loop, หมวด regulation (maintainability/architecture/behaviour), แนวคิด harnessability และ harness template; Thoughtworks เพิ่มด่านคนเฉพาะจุดเป็นชั้นที่สาม
 - [[harness-ratchet]] — วินัยแปลง failure ของ agent ที่เห็นตรงหน้า ให้กลายเป็นข้อบังคับถาวรใน harness: rule, hook, test, lint, gate หรือ reviewer agent
 - [[host-bridge]] — concept ของ thClaws: เชื่อม dashboard ของ agent เข้ากับ environment บนเครื่อง host จริง
 - [[hybrid-memory]] — สถาปัตยกรรมของ Mercury: Markdown ไว้ให้คนอ่าน substrate แบบ structured ไว้ให้ agent ใช้
@@ -690,7 +701,7 @@
 - [[model-cyber-capability-emergence]] — ความสามารถ offensive/defensive cyber โผล่เป็นผลพลอยได้ของ intelligence ทั่วไป; กรอบ Demis Hassabis เพิ่มข้อเสนอให้ pre-release test capability ที่ไม่ได้ถูกโฆษณา รวม guardrail bypass/deception
 - [[open-weight-models]] — model ที่แจก weights แต่ไม่จำเป็นต้อง open source เต็มตัว; Kimi K3 เพิ่มโจทย์ว่า model อาจ open และ frontier แต่ยังใหญ่เกิน local consumer ทำให้ privacy/post-training benefit กระจุกกับองค์กรที่มี compute
 - [[playback-pattern]] — ท่า alignment: ให้ agent ทวนก่อนลงมือ ว่าอะไรคือ "Stated, Inferred, Out-of-scope"
-- [[plugin-manager]] — เครื่องมือจัดการ life cycle, เวอร์ชัน และ dependency ของ extension ต่างๆ
+- [[plugin-manager]] — เครื่องมือจัดการ lifecycle, version และ dependency ของ extension; ใน agent harness ยังต้องผูก contribution เข้ากับ plugin เพื่อ rebuild live state เมื่อเพิ่ม แก้ หรือลบไฟล์
 - [[pr-dependency-dag]] — ท่า orchestration: มองการแก้หลาย branch ขนานกันเป็น dependency graph
 - [[stacked-pull-requests]] — แตก change ใหญ่เป็น PR เล็กที่ต่อกันเป็น dependency chain; Dillon ใช้ heuristic 300–800 บรรทัดต่อ atomic PR เพื่อยังอ่าน code จาก agent ได้ครบ ขณะที่ CI, merge order และคอขวด review ยังต้องคุมทีละชั้น
 - [[private-banking]] — wealth management สำหรับคนทรัพย์สินสูง; เน้นปกป้องทรัพย์กับบริการที่ตัดเฉพาะราย

@@ -3,8 +3,8 @@ title: Cognitive Surrender
 type: concept
 tags: [ai, psychology, developer-experience, attention, code-review]
 created: 2026-05-29
-updated: 2026-08-25
-sources: [The Orchestration Tax.md, Agentic Code Review.md, techsauce-ai-brain-fry.md, eternal-sloptember.md, i-was-replaced-by-ai-typecraft.md, state-of-technology-and-joy-of-making-phoomparin-mano.md]
+updated: 2026-09-24
+sources: [The Orchestration Tax.md, Agentic Code Review.md, techsauce-ai-brain-fry.md, eternal-sloptember.md, i-was-replaced-by-ai-typecraft.md, state-of-technology-and-joy-of-making-phoomparin-mano.md, teepagorn-claude-code-adoption-nobody-reading.md]
 ---
 
 # Cognitive Surrender / การยอมแพ้ทางความคิด
@@ -69,6 +69,14 @@ Cognitive surrender ไม่ได้เกิดจากความขี้
 
 [[eternal-sloptember|The Eternal Sloptember]] อธิบายอีกทางว่า artifact ที่ AI สร้างอาจดูเหมือนผ่าน process ของมนุษย์ ทั้งที่จริงไม่ใช่. ถ้าเราเชื่อ proxy ผิว ๆ เช่น syntax ดี หรือคำอธิบายดูมั่นใจ เราจะ surrender ง่ายขึ้นโดยไม่รู้ตัว
 
+## Approve เพราะงานดูครบ
+
+ผู้เขียน [[teepagorn-claude-code-adoption-nobody-reading|โพสต์ของ @teepagorn]] เล่าจากตัวเอง งานที่ [[claude-code|Claude Code]] ส่งมามีเหตุผล มี test มี documentation มีสรุปครบ อ่านแล้วเห็นว่าครบถ้วนเลยกด approve อย่างมั่นใจ สามวันต่อมาเกิด incident
+
+เคสนี้ต่างจาก attention หมดแบบ orchestration tax นิดหนึ่ง คนยังอ่านอยู่ แต่อ่านแล้วเชื่อหน้าตางาน ยิ่ง AI ทำงานเก่ง ยิ่งเผลออนุมัติง่าย ดู [[quality-proxy-collapse]] ในองค์กรที่เขาเล่าต่อ ปัญหาขยายเป็น "AI ตัวหนึ่งสรุปงานของ AI อีกตัวให้มนุษย์กด approve"
+
+**ผลคือ:** ความครบของ artifact อาจเร่ง surrender มากกว่าช่วยกัน ถ้าเราใช้ความครบแทนการตั้งความเห็นเอง
+
 ## See also
 
 - [[orchestration-tax]]
@@ -88,3 +96,4 @@ Cognitive surrender ไม่ได้เกิดจากความขี้
 - [[typecraft]]
 - [[state-of-technology-and-joy-of-making-phoomparin-mano]]
 - [[creative-ownership]]
+- [[teepagorn-claude-code-adoption-nobody-reading]]
