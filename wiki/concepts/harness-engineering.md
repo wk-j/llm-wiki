@@ -3,7 +3,7 @@ title: Harness Engineering
 type: concept
 tags: [ai, software-engineering, orchestration, education, curriculum]
 created: 2026-04-18
-updated: 2026-07-04
+updated: 2026-10-01
 sources: [harness-engineering-panutat.md, llm-era-computer-engineering-nattee.md, alex-ker-harnesses-optimize.md, thclaws-announcement-panutat.md, Agent Harness Engineering.md, "Introducing Omnigent A Meta-Harness to Combine, Control and Share Your Agents.md", Self Learning for Agents Clearly Explained.md, stop-building-ai-agents-old-way.md]
 ---
 
@@ -15,7 +15,7 @@ sources: [harness-engineering-panutat.md, llm-era-computer-engineering-nattee.md
 
 ในแหล่งหลัง ๆ คำว่า **harness engineering** ถูกใช้กว้างขึ้นด้วย [[vtrivedy|Vtrivedy]] และ [[addy-osmani|Addy Osmani]]: ไม่ใช่แค่ pipeline ของ review agent แต่คือ discipline ทั้งหมดของการออกแบบสิ่งรอบ model — prompt, tools, filesystem, sandbox, hooks, memory, context policy, subagent, observability, และ recovery path. สูตรคือ **Agent = Model + Harness**
 
-## หัวใจสำคัญ: ม้าป่ากับบังเหียน
+## ภาพเปรียบของ Panutat: ม้าป่ากับบังเหียน
 
 Panutat เปรียบเทียบ LLM เป็น **"ม้าป่า"** ที่มีพลังมหาศาลแต่ควบคุมยาก และ Harness คือ **"บังเหียน"** (Reins) ที่ทำให้เราสามารถสั่งการให้มันทำงานตามที่เราต้องการได้
 
@@ -50,7 +50,7 @@ Addy ขยายภาพนี้เป็น component taxonomy ที่อ�
 
 [[stop-building-ai-agents-old-way|Stop Building AI Agents the Old Way]] ของ [[prompt-engineering|Prompt Engineering]] ให้ taxonomy ที่เน้น long-running reliability: goal, evaluator, verifier, outer loop, orchestration, observability, และ memory. ถ้าอ่านผ่านภาษาของหน้านี้ ชุดนั้นคือ harness ที่ออกแบบมาเพื่อกัน executor drift, early stopping, weak plan, และ stale context.
 
-## ทิศทางใหม่: บังเหียนคือระบบหลังบ้าน (The Harness is the Backend)
+## ทิศทางใหม่: ให้ backend เป็น harness ไปในตัว (The Harness is the Backend)
 
 ในปี 2026 เกิดแนวคิดใหม่จาก [[mf-piccolo]] ผู้สร้าง [[iii-triple-i]] ที่มองว่า Harness ไม่ควรเป็นเพียงโครงสร้างชั่วคราว (Scaffolding) ที่ครอบ AI ไว้ แต่ควรเป็นส่วนหนึ่งของสถาปัตยกรรม Backend โดยตรง
 

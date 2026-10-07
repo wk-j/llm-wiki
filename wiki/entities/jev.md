@@ -3,8 +3,8 @@ title: Jev
 type: entity
 tags: [ai, classification, inference, system-one-models, typesafe-ai]
 created: 2026-09-19
-updated: 2026-09-19
-sources: [jev-the-ultimate-classification-model.md]
+updated: 2026-10-07
+sources: [jev-the-ultimate-classification-model.md, what-is-codemode-armin-ronacher.md]
 ---
 
 # Jev
@@ -27,6 +27,16 @@ Typesafe AI เรียก Jev ว่า [[system-one-models|System One Model]]
 
 Typesafe AI ระบุชื่อ new architecture, parallel sampler และ RLCD แต่แหล่งนี้ไม่มี paper หรือ diagram Sam จึงแยกการเดาเรื่อง transformer กับ classification head ออกจากข้อมูลที่บริษัทเปิดเผย
 
+## ใช้ใน agent ผ่าน Codemode
+
+[[armin-ronacher|Armin Ronacher]] โชว์ใน [[what-is-codemode-armin-ronacher|What is Codemode]] ว่า agent ใน [[pi-agent|Pi]] เรียก Jev ได้จาก [[codemode|Codemode]] ด้วย `models.getModelOfType("classifier", "typesafe", "jev-latest")` แล้วใช้ `models.classify` ไม่ต้องมี tool เฉพาะ
+
+ตัวอย่างแรกจำแนก GitHub issue 100 ตัวพร้อมกัน ถามสามข้อคือ `sentiment` แบบ `choice`, `frustration` แบบ `score` สี่ระดับ และ `kind` แบบ `choice` แล้วคืนแค่ 12 issue ที่หงุดหงิดสุด ตัวอย่างที่สองให้ Jev เลือก action ในเกมรถถังทีละรอบ 30 รอบ แล้วให้ code ธรรมดาแปลง action เป็นคำสั่งเกม
+
+code ในบทความยืนยันชื่อชนิดคำถาม `choice` กับ `score` และรูปทรงคำตอบ เช่น `r.answers.action.choice` กับ `frustration.score` ที่เป็นตัวเลข ส่วน `noul` ไม่ปรากฏในบทความนี้
+
+**ได้อะไร:** Jev เข้ากับงานที่ agent ต้องตัดสินแคบ ๆ ซ้ำหลายครั้ง โดยให้ code ถือ logic ที่เหลือ
+
 ## See also
 
 - [[typesafe-ai]]
@@ -34,4 +44,6 @@ Typesafe AI ระบุชื่อ new architecture, parallel sampler แล�
 - [[jev-the-ultimate-classification-model]]
 - [[sam-witteveen]]
 - [[harness-guides-sensors]]
+- [[codemode]]
+- [[what-is-codemode-armin-ronacher]]
 

@@ -3,8 +3,8 @@ title: System One Models
 type: concept
 tags: [ai, classification, inference, latency, decision-systems]
 created: 2026-09-19
-updated: 2026-09-19
-sources: [jev-the-ultimate-classification-model.md]
+updated: 2026-10-07
+sources: [jev-the-ultimate-classification-model.md, what-is-codemode-armin-ronacher.md]
 ---
 
 # System One Models / Model สำหรับคำตัดสินเร็ว
@@ -55,6 +55,12 @@ Jev คืน probability ของแต่ละตัวเลือก ต�
 
 แต่ความเร็วไม่ได้เปลี่ยนให้กลายเป็น computational sensor ถ้าตัดสินผิดแล้วมีผลเสียสูง ต้องมี deterministic validation, human review หรือ boundary ภายนอกตามระดับความเสี่ยง โดยเฉพาะงานอนุมัติ tool call และ prompt-injection detection ที่ควรอ่านคู่กับ [[agent-runtime-untrusted|Agent Runtime as Untrusted Component]]
 
+## ตัวอย่างใน agent: model เล็กตัดสิน code ลงมือ
+
+[[armin-ronacher|Armin Ronacher]] โชว์ใน [[what-is-codemode-armin-ronacher|What is Codemode]] ว่า agent ใน [[pi-agent|Pi]] เขียน [[codemode|Codemode]] ที่ใช้ [[jev|Jev]] ขับเกมรถถัง 30 รอบ แต่ละรอบ Jev เลือกหนึ่งในสี่ action (`attack`, `approach`, `dodge`, `powerup`) แล้วฟังก์ชันธรรมดาแปลงเป็นคำสั่งเกม เช่น หลบตั้งฉากกับกระสุนที่ใกล้สุด ตัวอย่างนี้ตรงกับข้อเสนอ "smart if statement" ของ Sam: model ตอบคำถามแคบ ส่วน code ถือ logic
+
+ที่ต่างคือคนเขียน workflow ไม่ใช่ engineer แต่เป็น agent ตัวใหญ่ที่เขียนขึ้นตอนทำงาน agent ตัวใหญ่จึงเป็นคนออกแบบคำถาม ส่วน System One Model รับงานตัดสินที่ยิงถี่
+
 ## เรื่องที่ยังตอบไม่ได้
 
 - RLCD ทำงานอย่างไร และดีกว่าวิธี train classifier เดิมตรงไหน
@@ -71,3 +77,5 @@ Jev คืน probability ของแต่ละตัวเลือก ต�
 - [[chain-of-thought]]
 - [[harness-guides-sensors]]
 - [[agent-runtime-untrusted]]
+- [[codemode]]
+- [[what-is-codemode-armin-ronacher]]

@@ -3,7 +3,7 @@ title: iii (Triple I)
 type: entity
 tags: [software, framework, open-source, agent-infrastructure]
 created: 2026-04-29
-updated: 2026-04-29
+updated: 2026-10-01
 sources: [the-harness-is-the-backend.md]
 ---
 
@@ -21,7 +21,7 @@ iii เป็น Framework ระบบหลังบ้าน (Backend Engine)
 
 ## ปรัชญาการออกแบบ
 
-iii เชื่อว่า **"The Harness is the Backend"** (บังเหียนคือระบบหลังบ้าน) หมายความว่าเราไม่ควรสร้างระบบจัดการ Agent (Harness) แยกต่างหาก แต่ควรสร้าง Backend ที่มีความยืดหยุ่นพอที่จะเป็น Harness ให้กับ Agent ได้ในตัว
+iii เชื่อว่า **"The Harness is the Backend"** (ให้ backend ทำหน้าที่ harness ไปในตัว) หมายความว่าเราไม่ควรสร้างระบบจัดการ Agent (Harness) แยกต่างหาก แต่ควรสร้าง Backend ที่มีความยืดหยุ่นพอที่จะเป็น Harness ให้กับ Agent ได้ในตัว
 
 ## See also
 

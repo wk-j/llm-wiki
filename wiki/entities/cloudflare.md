@@ -3,8 +3,8 @@ title: Cloudflare
 type: entity
 tags: [cloud, developer-tools, infrastructure, agents]
 created: 2026-06-29
-updated: 2026-09-12
-sources: ["i don't want to use your agent — @RhysSullivan.md", dillon-mulroy-ships-production-code-he-didnt-write.md]
+updated: 2026-10-07
+sources: ["i don't want to use your agent — @RhysSullivan.md", dillon-mulroy-ships-production-code-he-didnt-write.md, what-is-codemode-armin-ronacher.md]
 ---
 
 # Cloudflare / Cloudflare
@@ -21,6 +21,14 @@ sources: ["i don't want to use your agent — @RhysSullivan.md", dillon-mulroy-s
 - deeplink ไป dashboard เมื่อต้องตรวจของจริง
 
 ตรงนี้ช่วย power user ใช้ agent ประจำวันของตัวเองจัดการ infra โดยไม่ต้องย้าย context เข้า dashboard chat.
+
+## Code Mode และ MCP server ของ Cloudflare
+
+[[armin-ronacher|Armin Ronacher]] ให้เครดิต Cloudflare ว่าเป็นคนตั้งชื่อ [[codemode|Codemode]] (ใน [[what-is-codemode-armin-ronacher|What is Codemode]] ลิงก์ไปบล็อก "Code Mode" ของ Cloudflare) คือให้ LLM เขียน code เรียก tool แทนการยิง tool call ทีละครั้ง
+
+MCP server ของ Cloudflare ทำ Codemode ไว้ใน server เอง: client ส่ง JavaScript เป็น string เข้า tool `execute` แล้ว code นั้นเรียก `cloudflare.request` ต่อ Armin มองว่าเป็นทางแก้ขัดที่เข้าใจได้ เพราะ harness ส่วนมากยังไม่มี Codemode แต่พอใช้ใน [[pi-agent|Pi]] ที่มี Codemode อยู่แล้ว ก็กลายเป็น Codemode ซ้อน Codemode: JSON escape สองชั้น model เล็กสับสน และ code ชั้นในเรียก tool ชั้นนอกไม่ได้
+
+**ผลคือ:** แนวทางเดียวกันที่ช่วย harness ที่ไม่มี Codemode กลับเป็นภาระให้ harness ที่มี
 
 ## มุมจากพนักงานเรื่อง AI และการเปลี่ยนบทบาท
 
@@ -39,3 +47,5 @@ sources: ["i don't want to use your agent — @RhysSullivan.md", dillon-mulroy-s
 - [[dillon-mulroy-ships-production-code-he-didnt-write]]
 - [[dillon-mulroy]]
 - [[engineering-role-shift]]
+- [[codemode]]
+- [[what-is-codemode-armin-ronacher]]

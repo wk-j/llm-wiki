@@ -3,11 +3,11 @@ title: Harness Guides & Sensors
 type: concept
 tags: [ai, agents, harness, software-engineering, feedback-loop, cybernetics]
 created: 2026-06-08
-updated: 2026-09-30
+updated: 2026-10-01
 sources: [harness-engineering-bockeler.md, How to Keep Shipping When You Walk Away from Your Desk — Zack Proser, WorkOS.md, Agentic Code Review.md, stop-building-ai-agents-old-way.md, jev-the-ultimate-classification-model.md, engineering-the-harness-thoughtworks.md]
 ---
 
-# Harness Guides & Sensors / บังเหียนที่ทำจาก "ตัวนำทาง" กับ "ตัวเซ็นเซอร์"
+# Harness Guides & Sensors / harness ที่ประกอบจาก "ตัวนำทาง" กับ "ตัวเซ็นเซอร์"
 
 หน้านี้เป็นกรอบคิด (mental model) จาก [[birgitta-bockeler|Birgitta Böckeler]] (engineer ที่ [[thoughtworks|Thoughtworks]] เขียนบน martinfowler.com) สำหรับคนที่ **ใช้** coding agent — ไม่ใช่คนสร้างตัว agent. ไอเดียหลักคือ: harness ที่ดีไม่ใช่กองของ skill กับ MCP ที่ตั้งมั่ว ๆ แต่เป็น **ระบบควบคุม** ที่ทำจากสองอย่าง — ตัวนำทางก่อนทำงาน (guides) กับตัวเซ็นเซอร์ที่คอยจับงานหลังทำ (sensors) — แล้วคนคอยปรับระบบนี้ไปเรื่อย ๆ ดูภาพรวมของคำว่า harness ที่ [[coding-harness]]
 
@@ -57,7 +57,7 @@ sources: [harness-engineering-bockeler.md, How to Keep Shipping When You Walk Aw
 | structural test | feedback | computational | hook รัน ArchUnit เช็คขอบเขต module |
 | วิธี review | feedback | inferential | Skills |
 
-## the steering loop (คนคือคนปรับบังเหียน)
+## the steering loop (คนคอยปรับ harness)
 
 งานของมนุษย์ในกรอบนี้คือ **steer** — คอยปรับ harness ทีละรอบ หลักง่าย ๆ: **พอปัญหาเดิมเกิดซ้ำหลายครั้ง ให้ปรับ guide/feedback ให้ปัญหานั้นเกิดยากขึ้นหรือไม่เกิดอีก** ตรงนี้ตรงกับ [[harness-ratchet]] (แปลง failure เป็น constraint ถาวร) เป๊ะ ๆ
 
@@ -94,7 +94,7 @@ sources: [harness-engineering-bockeler.md, How to Keep Shipping When You Walk Aw
 
 **ได้อะไร:** ของที่ถูกและเร็วรันก่อน, ของที่แพงค่อยรันทีหลัง — ไม่เปลือง
 
-## regulation categories: บังเหียนกำกับ "อะไร"
+## regulation categories: harness คุม "อะไร" บ้าง
 
 Böckeler มองว่า harness ทำตัวเหมือน **cybernetic governor** (ตัวกำกับสายไซเบอร์เนติกส์ — เอา feedforward + feedback มาคุมระบบให้เข้าสู่สภาพที่ต้องการ) แล้วชี้ว่าควรแยกว่าเรากำลังกำกับ *มิติไหน* เพราะแต่ละมิติ "harness ได้ง่าย-ยาก" ต่างกัน มีสามหมวด:
 

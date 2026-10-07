@@ -3,7 +3,7 @@ title: Panutat Tejasen
 type: entity
 tags: [person, thai, education, ai, software-engineering]
 created: 2026-04-18
-updated: 2026-04-30
+updated: 2026-10-01
 sources: [harness-engineering-panutat.md, thclaws-announcement-panutat.md, panutat-tejasen-thclaws-positioning.md, thclaws-marketplace-panutat.md]
 ---
 
@@ -13,9 +13,9 @@ sources: [harness-engineering-panutat.md, thclaws-announcement-panutat.md, panut
 
 ## ผลงานและแนวคิดที่น่าสนใจ
 
-### Harness Engineering (บังเหียนคุม AI)
+### Harness Engineering (ใช้ harness คุม AI)
 Panutat เสนอว่าในยุคที่ AI เก่งขึ้นเรื่อยๆ จนคนตามไม่ทัน การที่คนจะไปนั่ง "รีวิว" หรือ "แนะนำ" AI แบบบรรทัดต่อบรรทัดนั้นเป็นเรื่องเสียเวลาและเป็นคอขวด
-- **ทางแก้:** ให้คนเปลี่ยนหน้าที่มาเป็นผู้ออกแบบ **Harness** (บังเหียน) — คือการสร้างระบบ AI Agent ตัวอื่นๆ มาช่วยกันตรวจสอบ (Audit), ทดสอบ (Test), และควบคุม Agent หลักโดยอัตโนมัติแทนคน
+- **ทางแก้:** ให้คนเปลี่ยนหน้าที่มาเป็นผู้ออกแบบ **Harness** (Panutat เปรียบเป็น "บังเหียน") — คือการสร้างระบบ AI Agent ตัวอื่นๆ มาช่วยกันตรวจสอบ (Audit), ทดสอบ (Test), และควบคุม Agent หลักโดยอัตโนมัติแทนคน
 
 ### thClaws และ Open Source Governance
 Panutat ให้ความสำคัญกับเรื่อง **[[open-source-governance|Governance]]** (ระบบการตัดสินใจ) มากกว่าแค่ความเปิดกว้างของ source code

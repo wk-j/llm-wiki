@@ -3,7 +3,7 @@ title: Token Billionaire
 type: concept
 tags: [ai, economy, productivity, agents]
 created: 2026-04-28
-updated: 2026-04-28
+updated: 2026-10-01
 sources: [ryan-lopopolo-harness-engineering.md]
 ---
 
@@ -18,7 +18,7 @@ sources: [ryan-lopopolo-harness-engineering.md]
 
 ## ทำไมต้องเป็น Token Billionaire?
 1. **Saturation of Intelligence**: การใช้โทเคนจำนวนมากหมายถึงการ "ขุด" (mining) ความคิดจากโมเดลในทุกแง่มุม ทั้งการเขียนโค้ด, ตรวจสอบ, วางแผน และทำ QA
-2. **Agent-Only Team**: เป็นการบีบให้ทีมต้องสร้าง [[harness-engineering|Harness]] ที่แข็งแกร่ง เพราะถ้าไม่วางระบบ บังเหียนจะคุม "มหาเศรษฐี" เหล่านี้ไม่อยู่
+2. **Agent-Only Team**: เป็นการบีบให้ทีมต้องสร้าง [[harness-engineering|Harness]] ที่แข็งแกร่ง เพราะถ้าไม่วางระบบ harness จะคุม "มหาเศรษฐี" เหล่านี้ไม่อยู่
 3. **Infinite Parallelism**: มนุษย์หนึ่งคนสามารถคุม Agent พร้อมกัน 50 ตัวที่รันตลอด 24 ชั่วโมง
 
 ## การนำไปใช้

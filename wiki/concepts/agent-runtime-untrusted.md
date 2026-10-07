@@ -3,8 +3,8 @@ title: Agent Runtime as Untrusted Component / ตัวรัน agent คือ
 type: concept
 tags: [ai, agents, security, threat-model, apts, architecture]
 created: 2026-04-20
-updated: 2026-09-19
-sources: [owasp-apts.md, Claude Mythos Preview.md, "Introducing Omnigent A Meta-Harness to Combine, Control and Share Your Agents.md", boris-cherny-cut-80-percent-claude-code-prompt.md, ai-native-sdlc-playbook.md, jev-the-ultimate-classification-model.md]
+updated: 2026-10-07
+sources: [owasp-apts.md, Claude Mythos Preview.md, "Introducing Omnigent A Meta-Harness to Combine, Control and Share Your Agents.md", boris-cherny-cut-80-percent-claude-code-prompt.md, ai-native-sdlc-playbook.md, jev-the-ultimate-classification-model.md, what-is-codemode-armin-ronacher.md]
 ---
 
 # Agent Runtime as Untrusted Component / ตัวรัน agent คือส่วนที่เชื่อไม่ได้
@@ -134,6 +134,14 @@ Claim นี้ชนกับประโยคเดิมของ APTS ท�
 
 **ผลคือ:** OS กับ network เป็นตัวกำหนดขอบเขตความเสียหาย ไม่ใช่ instruction
 
+## Sandbox คลุมฝั่งไหน
+
+[[armin-ronacher|Armin Ronacher]] เตือนใน [[what-is-codemode-armin-ronacher|What is Codemode]] ว่า agent มีสองฝั่ง คือ harness (brain) กับ execution environment (hands) ถ้าใช้ sandbox อย่าง Gondolin คำสั่ง bash ถูกกั้น แต่ตัว harness ไม่ได้อยู่ในนั้น tool ที่รันฝั่ง harness จึงได้สิทธิ์ของ harness ดู [[harness-vs-execution-environment]]
+
+[[pi-agent|Pi]] เลยรัน [[codemode|Codemode]] ใน sandbox ของตัวเองฝั่ง harness (QuickJS ใน WASM ไม่มี network ไม่มี file system) แต่ sandbox นี้กั้นแค่ตัว code ถ้า code เรียก `tools.bash` หรือ MCP tool สิทธิ์ก็เป็นไปตาม tool นั้น
+
+**ผลคือ:** ตอบว่า "มี sandbox แล้ว" ยังไม่พอ ต้องไล่ว่าแต่ละ tool รันฝั่งไหน และอะไรกั้นอยู่ฝั่งนั้น
+
 ## See also
 
 - [[owasp-apts]]
@@ -152,3 +160,5 @@ Claim นี้ชนกับประโยคเดิมของ APTS ท�
 - [[ai-native-sdlc-playbook]]
 - [[jev]]
 - [[system-one-models]]
+- [[harness-vs-execution-environment]]
+- [[codemode]]

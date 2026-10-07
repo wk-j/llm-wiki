@@ -7,11 +7,11 @@ author: Jaya Simha Reddy Nandyala, Prabina Pani
 published: 2026-09-29
 date_ingested: 2026-09-30
 created: 2026-09-30
-updated: 2026-09-30
+updated: 2026-10-01
 sources: ["https://www.thoughtworks.com/insights/blog/architecture/engineering-the-harness-a-practical-pattern-for-reliable-coding-agents"]
 ---
 
-# Engineering the Harness / วางบังเหียนให้ coding agent ทำงานแล้ววางใจได้
+# Engineering the Harness / ออกแบบ harness ให้ไว้ใจ coding agent ได้
 
 บล็อกจาก [[thoughtworks|Thoughtworks]] (บริษัทที่ปรึกษาซอฟต์แวร์ที่ผลักเรื่อง CI/CD และ evolutionary architecture) เขียนโดย Jaya Simha Reddy Nandyala กับ Prabina Pani เผยแพร่ 2026-09-29 บทความใช้คำ guides กับ sensors ชุดเดียวกับกรอบ [[harness-guides-sensors|Harness Guides & Sensors]] ของ [[birgitta-bockeler|Birgitta Böckeler]] (engineer ของ Thoughtworks เหมือนกัน) แต่ไม่ได้อ้างชื่อเธอตรง ๆ สิ่งที่บทความเพิ่มคือ **ด่านให้คนตัดสินเฉพาะจุด (selective human gates)** กับตัวอย่าง pipeline หกช่วงที่เอาทั้งหมดมาต่อกัน
 

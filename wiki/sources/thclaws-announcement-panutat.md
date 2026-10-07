@@ -15,7 +15,7 @@ Original: Facebook Post
 ## ประเด็นสำคัญ
 
 ### 1. การเปลี่ยนผ่านสู่ Harness Engineering
-*   **LLM Wrapper vs. Harness:** ในยุคแรก คนมักมองว่า App AI เป็นแค่ "LLM Wrapper" (โปรแกรมครอบ API) แต่ตอนนี้หัวใจย้ายมาอยู่ที่ **Harness Engineering** — คือการสร้าง "บังเหียน" (harness) เพื่อควบคุม "ม้าป่า" (LLM)
+*   **LLM Wrapper vs. Harness:** ในยุคแรก คนมักมองว่า App AI เป็นแค่ "LLM Wrapper" (โปรแกรมครอบ API) แต่ตอนนี้หัวใจย้ายมาอยู่ที่ **Harness Engineering** — คือการสร้าง harness ไว้คุม LLM (Panutat เปรียบ harness เป็น "บังเหียน" และ LLM เป็น "ม้าป่า")
 *   **Agentic Application:** เป็น Wrapper รุ่นใหม่ที่คุม logic ซับซ้อนรอบตัว LLM ซึ่ง logic เหล่านี้ (เช่น agentic loops, sandboxing, context compaction) คิดเป็น 99% ของ code ทั้งหมด
 
 ### 2. โปรเจกต์ thClaws

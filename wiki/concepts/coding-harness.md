@@ -3,8 +3,8 @@ title: Coding Harness
 type: concept
 tags: [ai, tools, agents, software-engineering, harness]
 created: 2026-04-18
-updated: 2026-09-30
-sources: [alex-ker-harnesses-optimize.md, building-pi-world-of-slop.md, Agent Harness Engineering.md, software-writing-software-gone-right.md, improved-15-llms-harness-changed.md, "Introducing Omnigent A Meta-Harness to Combine, Control and Share Your Agents.md", "Matt Pocock’s Agentic Engineering Workflow (just copy him).md", "i don't want to use your agent — @RhysSullivan.md", l8-principals-agentic-engineering-workflow-kun-chen.md, aom-fable-elysia-2-audit.md, zoran-horvat-claude-no-planning-engine.md, planning-mode-dangerous-illusion.md, stop-building-ai-agents-old-way.md, the-new-software-lifecycle.md, boris-cherny-cut-80-percent-claude-code-prompt.md, opencode-reloaded.md, engineering-the-harness-thoughtworks.md]
+updated: 2026-10-07
+sources: [alex-ker-harnesses-optimize.md, building-pi-world-of-slop.md, Agent Harness Engineering.md, software-writing-software-gone-right.md, improved-15-llms-harness-changed.md, "Introducing Omnigent A Meta-Harness to Combine, Control and Share Your Agents.md", "Matt Pocock’s Agentic Engineering Workflow (just copy him).md", "i don't want to use your agent — @RhysSullivan.md", l8-principals-agentic-engineering-workflow-kun-chen.md, aom-fable-elysia-2-audit.md, zoran-horvat-claude-no-planning-engine.md, planning-mode-dangerous-illusion.md, stop-building-ai-agents-old-way.md, the-new-software-lifecycle.md, boris-cherny-cut-80-percent-claude-code-prompt.md, opencode-reloaded.md, engineering-the-harness-thoughtworks.md, what-is-codemode-armin-ronacher.md]
 ---
 
 # Coding Harness / ตัวครอบของ Coding Agent
@@ -46,6 +46,14 @@ sources: [alex-ker-harnesses-optimize.md, building-pi-world-of-slop.md, Agent Ha
 **ได้อะไร:** harness ไม่ได้แค่ส่ง tool schema เข้า context ตอนเริ่ม session แต่เป็นเจ้าของ lifecycle ของ environment ตลอด session ด้วย จุดที่ยังต้องออกแบบต่อคือ rollback เมื่อ transformation fail, ต้นทุน rebuild และ trust boundary ของ plugin code
 
 [[mario-zechner|Mario Zechner]] เพิ่มมุมที่แข็งกว่านี้ใน [[building-pi-world-of-slop|Building pi in a World of Slop]]: harness ไม่ใช่แค่ UX wrapper แต่เป็นเจ้าของ context โดยพฤตินัย ถ้า harness เปลี่ยน system prompt, tool definitions, reminders, หรือ inject feedback เองโดยผู้ใช้มองไม่เห็น workflow ของผู้ใช้ก็อาจพังได้ แม้ model ตัวเดิมจะยังเก่งเท่าเดิม
+
+## Harness ให้ model เขียน code สั่งตัวเอง (Codemode, 2026-10)
+
+[[armin-ronacher|Armin Ronacher]] เพิ่มอีกมุมใน [[what-is-codemode-armin-ronacher|What is Codemode]]: harness มีสองฝั่ง คือตัว harness ที่เชื่อถือได้ กับ execution environment ที่ tool รันจริง ([[harness-vs-execution-environment]]) bash ต่อโปรแกรมฝั่ง execution environment ได้ดี แต่แตะความสามารถของ harness ไม่ได้ เช่น ฉีดรูปเข้า protocol, สั่ง subagent หรือเรียก model อื่น
+
+[[pi-agent|Pi]] 1.0 เลยเพิ่ม [[codemode|Codemode]] คือ JavaScript ที่รันฝั่ง harness ใน sandbox ของตัวเอง ให้ model เรียก bash, MCP และ API ภายในต่อกันเป็น workflow แล้วคืนแค่ผลที่ย่อแล้วเข้า context
+
+**ได้อะไร:** harness ไม่ได้แค่เลือก tool ให้ model แต่เปิดภาษาเล็ก ๆ ให้ model ประกอบ tool เอง เรื่องที่ยังค้างคือ durability, binary data และ model เล็กที่ยังเขียน code นี้ไม่เก่ง
 
 ## Plan mode เป็น harness behavior
 
@@ -296,3 +304,6 @@ Heuristic ง่ายๆ คือ — **ถ้าต้องการแค�
 - [[no-mistakes]]
 - [[treehouse]]
 - [[first-mate]]
+- [[codemode]]
+- [[harness-vs-execution-environment]]
+- [[what-is-codemode-armin-ronacher]]

@@ -3,8 +3,8 @@ title: Typesafe AI
 type: entity
 tags: [ai, company, classification, inference, reinforcement-learning]
 created: 2026-09-19
-updated: 2026-09-19
-sources: [jev-the-ultimate-classification-model.md]
+updated: 2026-10-07
+sources: [jev-the-ultimate-classification-model.md, what-is-codemode-armin-ronacher.md]
 ---
 
 # Typesafe AI
@@ -25,9 +25,14 @@ Typesafe AI ใช้คำว่า [[system-one-models|System One Models]] ก
 
 แหล่งนี้ไม่มี paper, architecture diagram หรือรายละเอียด RLCD จึงยังบอกไม่ได้ว่าต่างจาก transformer classifier เดิมตรงไหน และยังไม่มีหลักฐานพอจะยืนยันว่า probability calibrated ดีเพียงใด
 
+## ใช้จาก harness ของคนอื่น
+
+ใน [[what-is-codemode-armin-ronacher|What is Codemode]] AI SDK ของ [[pi-agent|Pi]] อ้างถึง Jev ด้วย provider `"typesafe"` และ model `"jev-latest"` agent ใน Pi จึงเรียก Jev ผ่าน [[codemode|Codemode]] ได้โดยไม่มี tool เฉพาะ ดูตัวอย่างใน [[jev]]
+
 ## See also
 
 - [[jev]]
 - [[system-one-models]]
 - [[jev-the-ultimate-classification-model]]
 - [[sam-witteveen]]
+- [[what-is-codemode-armin-ronacher]]

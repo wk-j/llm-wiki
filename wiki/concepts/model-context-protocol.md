@@ -3,8 +3,8 @@ title: Model Context Protocol (MCP)
 type: concept
 tags: [mcp, ai-agents, developer-tools, protocols]
 created: 2026-04-13
-updated: 2026-07-29
-sources: [abhigyanpatwariGitNexus GitNexus The Zero-Server Code Intelligence Engine.md, "i don't want to use your agent — @RhysSullivan.md", bringing-mcp-2026-07-28-to-claude.md]
+updated: 2026-10-07
+sources: [abhigyanpatwariGitNexus GitNexus The Zero-Server Code Intelligence Engine.md, "i don't want to use your agent — @RhysSullivan.md", bringing-mcp-2026-07-28-to-claude.md, what-is-codemode-armin-ronacher.md]
 ---
 
 # Model Context Protocol (MCP) / โปรโตคอลเชื่อม AI กับเครื่องมือ
@@ -59,6 +59,21 @@ Extension เป็น opt-in. client กับ server ต้องประก�
 
 **ได้อะไร:** MCP ไม่ใช่แค่ integration protocol. มันเป็นวิธีแปลง product expertise ให้พกพาได้ระหว่าง agent.
 
+## เมื่อ client เป็น code ไม่ใช่ LLM
+
+[[armin-ronacher|Armin Ronacher]] เล่าใน [[what-is-codemode-armin-ronacher|What is Codemode]] ว่า [[pi-agent|Pi]] 1.0 ใช้ MCP ผ่าน [[codemode|Codemode]] Pi ไม่ส่ง MCP tool ให้ LLM เห็นเลย agent ค้น tool ผ่าน tool search ใน code แล้วเรียก `tools.mcp__<server>__<tool>(...)` ต่อกันเป็น workflow เช่น หา org ทั้งหมดใน Sentry แล้วยิงหา project ของทุก org พร้อมกัน
+
+พอ client เป็น code ปัญหาที่เคยมองไม่เห็นก็โผล่ Armin ขอสี่อย่างจากคนทำ server:
+
+- **structured content** คืน JSON ที่มีรูปทรงชัด ใช้ `outputSchema` ไม่ใช่ text ที่ code ต้อง parse เอง
+- **ผลคงที่** server บางตัวเปลี่ยนรูป output ตามจำนวนรายการเพื่อลด token เลยทำให้ script ที่ลองกับ 5 รายการผ่าน แต่พังตอนเจอ batch เต็ม
+- **binary ใหญ่** ตอนนี้ต้องอ้อมด้วย pre-signed URL ให้ upload นอก MCP
+- **tool search ที่ประกอบข้าม server ได้** ตอนนี้ harness กระจายการค้นไปหลาย server ไม่ได้ เป็นพฤติกรรมที่เกิดเองและ scale ไม่ได้
+
+อีกปัญหาคือ server ที่ทำ Codemode ไว้ข้างในเอง เช่นของ [[cloudflare|Cloudflare]] พอใช้กับ harness ที่มี Codemode ก็ซ้อนกันสองชั้น JSON escape สองรอบ และ code ชั้นในเรียก tool ชั้นนอกไม่ได้
+
+**ได้อะไร:** ถ้าคาดว่า client จะเรียกผ่าน code คนทำ server ต้องออกแบบ output เหมือนออกแบบ API ไม่ใช่เขียนข้อความให้ LLM อ่าน
+
 ## ตัวอย่าง: การรวม GitNexus MCP
 
 [[gitnexus|GitNexus]] เปิดเครื่องมือ 16 อย่างผ่าน MCP รวมถึง `query`, `context`, `impact`, `detect_changes`, `rename` และ `cypher`. มันยังให้ resource URI สำหรับ metadata ของ repo และ prompt สำหรับ workflow. Claude Code ต่อได้ลึกขึ้นด้วย hooks ที่เติม graph context ก่อนเรียก tool และ re-index หลัง commit.
@@ -73,3 +88,5 @@ Extension เป็น opt-in. client กับ server ต้องประก�
 - [[code-knowledge-graphs]]
 - [[bring-your-own-agent]]
 - [[i-dont-want-to-use-your-agent]]
+- [[codemode]]
+- [[what-is-codemode-armin-ronacher]]

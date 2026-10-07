@@ -1,6 +1,7 @@
 # Index
 
 ## Sources
+- [[what-is-codemode-armin-ronacher]] — บล็อก Armin Ronacher (2026-10-06): Pi 1.0 เพิ่ม MCP ผ่าน Codemode; bash ต่อได้แค่โปรแกรมที่รันได้ งานที่ต้องแตะ harness (รูป, subagent, model อื่น) เลยต้องมี JavaScript ใน sandbox ฝั่ง harness (QuickJS/WASM ไม่มี network/FS); แยก brain (harness) กับ hands (execution environment); ตัวอย่าง image generation, Jev จำแนก issue และขับเกม, Sentry MCP; ปัญหา Codemode ซ้อน Codemode ของ Cloudflare MCP; ขอ structured content, ผลคงที่, binary ใหญ่ และ tool search ข้าม server; durability กับ model เล็กยังค้าง
 - [[engineering-the-harness-thoughtworks]] — บล็อก Thoughtworks (Jaya Simha Reddy Nandyala กับ Prabina Pani, 2026-09-29): agent เขียนโค้ดถูกเฉพาะจุดแต่พังทั้งระบบ เพราะ harness ไม่ให้มันเห็นระบบ; เสนอ guides ก่อนลงมือ (คำสั่งตาม path, tool แบบ least-privilege, explicit default, ยืนยันเฉพาะเรื่องที่ลามไกล), sensors หลังลงมือ (ผ่านเงียบ พังละเอียด, เลื่อนกฎจาก prose ไปเป็น lint/test) และด่านคนคั่นกลาง; ตัวอย่าง rename field ข้ามสาม microservice กับ pipeline ANALYZE→BLUEPRINT→RED→GREEN→REFACTOR→REVIEW; ไม่มีตัวเลขจาก production และยังไม่ลงรอยกับ Cursor เรื่องใส่ด่าน multi-repo ใน harness
 - [[teepagorn-claude-code-adoption-nobody-reading]] — โพสต์ Facebook จาก `@teepagorn` เล่าต่อเคส voxium ที่ Simon Willison แปะ: บริษัทใหญ่ที่ L1 ถึง L7 "Talk to Claude" ทุกเรื่อง output พุ่ง แต่คนทำ 12-13 ชั่วโมงเพื่อกด Enter และ "Nobody is reading anything"; ชี้ว่า spec/code/test/report จาก AI ตัวเดียวทำให้คนอยู่ทุกขั้นโดยไม่เข้าใจสักขั้น test กับ code อาจเชื่อ assumption ผิดเดียวกัน องค์กรวัด adoption ผิดจุด และ junior ขาดทางเรียนวิธีคิดของ senior; เป็นเรื่องเล่าซ้อนสามชั้นที่ไม่มีวันที่หรือลิงก์ต้นทาง
 - [[opencode-reloaded]] — Kit Langton อธิบาย hot reload ของ OpenCode 2: plugin ลงทะเบียน transformation แทนการแก้ shared registry แล้ว host rebuild model, tool, skill, MCP และ state อื่นจาก contribution ที่ยัง active; ลด bug จากลำดับและการรันซ้ำ แต่บทความยังไม่ระบุ rollback, failure atomicity, performance หรือ plugin security model
@@ -193,7 +194,7 @@
 - [[jesse-vincent]] — developer สาย AI coding; เจ้าของเคล็ดใน "Fable's judgement" ให้บอก Fable ไปเลือก model ที่ถูกลงเองสำหรับงานเล็กเพื่อยืดโควตา
 - [[jan-niklas-wortmann]] — interviewer / creator ด้าน AI coding; คุยกับ Mario Zechner เรื่อง ownership และ code cost แล้วคุยกับ Dillon Mulroy ต่อเรื่องงานที่ productivity สูงขึ้นแต่ joy ลดลง, production review, pi `/tree`, role compression และ agent-loop economics
 - [[earendil]] — บริษัท/ทีมที่ Mario Zechner เข้าร่วมเพื่อทำ pi ต่อ; source นี้วางเป็นบริบทของเป้าหมาย pi ระยะยาว ทั้ง application layer, local inference, durability, observability และ SDK หลาย environment
-- [[armin-ronacher]] — developer open source ที่ทำงานกับ Mario ที่ Earendil และเริ่มช่วยถือ pi; รายละเอียดบทบาทยังอิงจากบทสัมภาษณ์นี้
+- [[armin-ronacher]] — developer open source ที่ทำ pi กับ Mario ที่ Earendil; เขียน "What is Codemode" อธิบายว่า Pi 1.0 ใช้ MCP ผ่าน Codemode โดยไม่ได้กลับลำจากแนว CLI/code ของเขาเมื่อปีก่อน
 - [[boris-cherny]] — engineer ที่ Anthropic ผู้สร้าง Claude Code; บทสัมภาษณ์ตรงกับ Y Combinator เพิ่มวิธี prompt ablation, empirical harness, model elicitation, verification และ dynamic workflows ส่วนความเชื่อมโยงกับ AI-Native SDLC Playbook ยังเป็นคำบอกเล่าของ Rob เพราะหน้าอย่างเป็นทางการลงชื่อ Louis Claxton
 - [[economy-media]] — ช่อง YouTube สายเศรษฐศาสตร์/ธุรกิจ; เป็น source ของ ingest เรื่องต้นทุน token AI สลับข้างกับค่าแรงคน; ใช้เป็นแหล่งอธิบายชั้นสอง ไม่ใช่รายงานปฐมภูมิ
 - [[khunpho-naklongthun]] — ช่อง YouTube ลงทุนไทย เจ้าของคลิปเทียบหุ้น photonics LITE/COHR/NOK/AAOI; ใช้เป็นตัวอธิบายการลงทุนชั้นสอง ไม่ใช่ข้อมูลตรงจากบริษัท
@@ -402,7 +403,7 @@
 - [[gpt-5-5]] — model เรือธงของ OpenAI (2026-04-23): SOTA ด้าน agentic coding (Terminal-Bench 2.0 82.7%, CyberGym 81.8%); ctx 400K/1M; $5/$30 ต่อ 1M tokens; ความสามารถเฉียด Mythos Preview แต่เปิดให้ใช้วงกว้าง; แพงกว่า GPT-5.4 เท่าตัว และแพงกว่า Opus 4.7 นิดหน่อย (pricing inversion)
 - [[aaron-levie]] — co-founder/CEO ของ Box; คอมเมนต์เรื่อง enterprise AI บน X; มองจากมุมบริษัทที่เอา AI ไปใช้งาน ไม่ใช่ฝั่งคนสร้าง model
 - [[mario-zechner]] — ผู้สร้าง libGDX กับ pi coding agent; ชูเครื่องมือ minimalist ที่ดัดแปลงเองได้ กับวินัยชะลอความเร็วตอนใช้ agent
-- [[pi-agent]] — coding agent บน terminal แบบ minimalist ต่อขยายได้; Mario ใช้เป็นคู่คิดและคุม interface เอง ส่วน Dillon ใช้ `/tree` คัด context ทีละกิ่ง ทำ spec ใกล้ code แล้วส่ง Plannotator feedback กลับเข้า session
+- [[pi-agent]] — coding agent บน terminal แบบ minimalist ต่อขยายได้; Mario ใช้เป็นคู่คิดและคุม interface เอง ส่วน Dillon ใช้ `/tree` คัด context ทีละกิ่ง; Pi 1.0 เพิ่ม MCP ผ่าน Codemode โดยไม่ฉีด MCP tool เข้า context
 - [[terminus-agent]] — agent แบบ minimalist ใช้แค่ tmux กับการกดคีย์; เป็นแรงบันดาลใจให้ design ของ pi
 - [[vouch-oss]] — เครื่องมือของ Mitchell Hashimoto ไว้ยืนยันว่าเป็นมนุษย์จริงในโปรเจกต์ Open Source
 - [[zed]] — code editor สาย AI-native เขียนด้วย Rust; ใช้สถาปัตยกรรมแบบ video game engine เลยเร็วมาก; ทายาทสาย Atom / VS Code
@@ -433,6 +434,8 @@
 - [[marc-brooker]] — senior engineer ที่ AWS (Lambda/Aurora); ฝั่งปกป้อง SDD ตัวจริง: มอง spec เป็น artifact ที่ explicit มี version และมีชีวิต ใช้วนซ้ำได้จริง
 
 ## Concepts
+- [[codemode]] — ให้ LLM เขียน code เรียก tool ต่อกันแทน tool call ทีละครั้ง แล้วคืนแค่ผลที่ย่อแล้วเข้า context; ใน Pi รันฝั่ง harness บน QuickJS/WASM, เรียก bash, MCP และ API ภายในได้, `store()` เก็บ state ข้ามรอบ; ยังติด durability, binary และ model เล็ก
+- [[harness-vs-execution-environment]] — ภาพ brains vs hands ของ Armin Ronacher: harness ที่เชื่อถือได้กับ execution environment ที่ tool รันจริง มีระบบไฟล์และระดับความเชื่อถือต่างกัน; sandbox ฝั่ง bash ไม่ได้กั้น harness จึงต้องไล่ว่าแต่ละ tool รันฝั่งไหน
 - [[blast-radius-gates]] — ให้ harness หยุดขอคนยืนยันเฉพาะเรื่องที่ย้อนไม่ได้หรือกระทบวงกว้าง เช่น scope ข้าม repo, schema migration, public API แล้วปล่อยเรื่องเล็กเดินต่อด้วย default ที่บันทึกไว้; ด่านดีได้เท่ากับ impact analysis ที่ป้อนมัน และยังไม่ลงรอยกับทิศของ Cursor ที่ลดการบล็อกใน cloud agent
 - [[silent-success-verbose-failure]] — sensor ที่ผ่านควรเงียบเพื่อประหยัด context ส่วนที่พังควรส่ง stack trace, ตำแหน่ง lint error หรือ diff ของ test กลับเข้า loop ให้ agent แก้เอง; Addy Osmani กับ Thoughtworks พูดตรงกัน แต่ความเงียบก็อาจซ่อน sensor ที่ไม่ได้รันจริง
 - [[replayable-state-transformations]] — ให้ component ลงทะเบียน transformation แล้ว rebuild state จากฐานสะอาดกับ contribution ที่ยัง active แทน shared mutation; ช่วยถอด plugin และ refresh input ได้โดยไม่สะสมประวัติ แต่ยังต้องกำหนด order, failure atomicity, side-effect policy และ trust boundary

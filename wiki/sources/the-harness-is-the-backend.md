@@ -3,11 +3,11 @@ title: "The Harness Is the Backend"
 type: source
 tags: [agent-infrastructure, backend-architecture, iii, worker-trigger-function]
 created: 2026-04-29
-updated: 2026-04-29
+updated: 2026-10-01
 sources: [The Harness Is the Backend.md]
 ---
 
-# The Harness Is the Backend / บังเหียนคือระบบหลังบ้าน
+# The Harness Is the Backend / ให้ backend ทำหน้าที่ harness ไปในตัว
 
 บทความโดย [[mf-piccolo]] (2026-04-28) ผู้นำเสนอแนวคิดว่าโครงสร้างพื้นฐานของ AI Agent (Harness) ไม่ควรถูกแยกออกจากระบบหลังบ้าน (Backend) แบบเดิม แต่ควรรวมเข้าเป็นเนื้อเดียวกันผ่านชุด Primitives ที่เรียบง่าย
 

@@ -3,8 +3,8 @@ title: Durable Execution
 type: concept
 tags: [infrastructure, distributed-systems, agents, reliability, durable-execution, cloud-agents]
 created: 2026-06-05
-updated: 2026-06-05
-sources: [What we’ve learned building cloud agents.md]
+updated: 2026-10-07
+sources: [What we’ve learned building cloud agents.md, what-is-codemode-armin-ronacher.md]
 ---
 
 # Durable Execution / การรันงานแบบทนทาน
@@ -41,6 +41,14 @@ agent loop ที่อยู่ยาว ๆ คือ distributed-system workl
 
 มุมนี้ต่อกับ [[long-running-agents]] โดยตรง: มอง agent เป็น **long-running server process** ไม่ใช่ request handler — checkpoint ความคืบหน้า, จัดการ partial failure, ทำให้ idempotent. เป็น engineering pattern เดียวกับที่ data pipeline ใช้มานาน เปลี่ยนแค่ subject จาก `data row` เป็น `agent decision`.
 
+## โจทย์ใหม่: script ที่ agent เขียนเอง
+
+[[armin-ronacher|Armin Ronacher]] ยกเรื่องนี้ใน [[what-is-codemode-armin-ronacher|What is Codemode]] ว่า durability ของ [[codemode|Codemode]] ยังยาก script ที่ agent เขียนอาจ loop 30 รอบหรือยิง tool เป็นร้อยครั้ง ถ้าพังกลางทางยังไม่มีวิธี resume ที่ชัด เขาคิดถึงสองทาง คือยืมไอเดียจาก durable workflow engine มา snapshot การเรียกแต่ละครั้ง หรือเปลี่ยนภาษาไปใช้ Starlark ที่ deterministic กว่า JavaScript
+
+ตรงนี้ต่างจากเคส Cursor ตรงที่ workflow ไม่ได้มาจาก engineer แต่ model เขียนขึ้นตอน runtime การ replay ให้ได้ผลเดิมจึงต้องคุมทั้งภาษาและผลของ tool ที่เรียก
+
+**ผลคือ:** durable execution กำลังขยับจาก agent loop ระดับ platform ลงมาถึง code ที่ agent เขียนเองใน session
+
 ## See also
 
 - [[temporal]]
@@ -48,3 +56,5 @@ agent loop ที่อยู่ยาว ๆ คือ distributed-system workl
 - [[what-weve-learned-building-cloud-agents]]
 - [[cursor]]
 - [[long-running-agents]]
+- [[codemode]]
+- [[what-is-codemode-armin-ronacher]]

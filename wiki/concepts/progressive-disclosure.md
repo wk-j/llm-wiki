@@ -3,8 +3,8 @@ title: Progressive Disclosure
 type: concept
 tags: [ai, prompt-engineering, context-management, harness, mcp, skills]
 created: 2026-04-18
-updated: 2026-09-30
-sources: [alex-ker-harnesses-optimize.md, Agent Harness Engineering.md, engineering-the-harness-thoughtworks.md]
+updated: 2026-10-07
+sources: [alex-ker-harnesses-optimize.md, Agent Harness Engineering.md, engineering-the-harness-thoughtworks.md, what-is-codemode-armin-ronacher.md]
 ---
 
 # Progressive Disclosure / เปิดเผยทีละนิด
@@ -69,6 +69,8 @@ sources: [alex-ker-harnesses-optimize.md, Agent Harness Engineering.md, engineer
 - เขียน tool description ให้**เฉพาะเจาะจงและมี keyword เยอะ** — เวลา search-based discovery ทำงานจะได้เจอ
 - ปลด MCP server ที่ไม่ใช้ออกจาก session — ประหยัดทั้ง context และ inference token
 
+[[pi-agent|Pi]] 1.0 ไปไกลกว่า tool search ของ Claude Code อีกขั้น ตาม [[what-is-codemode-armin-ronacher|บล็อกของ Armin Ronacher]] Pi ไม่ส่ง MCP tool ให้ LLM เลย agent ค้นผ่าน tool search ใน [[codemode|Codemode]] แล้วเรียกผ่าน code แทน tool call ส่วน schema กับผลดิบอยู่ใน script ไม่ต้องผ่าน context Armin ยังชี้ว่าตอนนี้ไม่มีกลไกให้ harness กระจาย tool search ไปหลาย MCP server พร้อมกัน พอต่อหลาย server วิธีนี้ก็ scale ได้ไม่ดี
+
 ### 4. คำสั่งที่ผูกกับ path
 
 [[engineering-the-harness-thoughtworks|บทความของ Thoughtworks]] เอาหลักเดียวกันมาใช้กับ instruction ของทีม แทนที่จะโหลดไฟล์กฎก้อนเดียวเข้าทุก session ให้ผูกกฎกับ path หรือ domain tree เช่น กฎ database โหลดเฉพาะตอน agent แตะไฟล์ schema แล้วให้ agent เดินลง documentation tree เท่าที่งานต้องใช้
@@ -80,6 +82,8 @@ sources: [alex-ker-harnesses-optimize.md, Agent Harness Engineering.md, engineer
 ตัว agent ไม่ได้ฉลาดขึ้นเพราะมี context เยอะขึ้น — กลับกัน [[context-rot]] กับ [[instruction-budget]] ทำให้ performance แย่ลงพอข้อมูลท่วมเกิน Progressive disclosure ยอมแลก latency นิดหน่อย (ตัว agent ต้องเดิน 2–3 step ไปค้นเอง) แลกกับ attention ที่จดจ่อตรงที่ควรจด — คุ้ม
 
 [[addy-osmani|Addy Osmani]] เพิ่มอีกมุมใน [[agent-harness-engineering]]: progressive disclosure ไม่ได้ใช้กับ docs อย่างเดียว แต่ใช้กับ **tool output** ด้วย Log 2,000 บรรทัดควรอยู่ใน filesystem แล้วส่งเฉพาะ header/footer หรือ error ที่สำคัญกลับเข้า context. นี่คือ tool-call offloading — เปิดเผยเฉพาะส่วนที่ทำให้ agent ตัดสินใจต่อได้
+
+Codemode ใช้หลักเดียวกันกับ tool output ของ bash ใน Pi: tool call ปกติส่งแค่ 2,000 บรรทัดท้ายเข้า context ที่เหลือไว้ใน overflow file แต่ถ้าเรียกผ่าน Codemode ตัว code ได้ output เต็มแบบมีโครงสร้าง แล้วคืนเฉพาะส่วนที่ย่อแล้วกลับเข้า context
 
 ## See also
 
@@ -94,3 +98,5 @@ sources: [alex-ker-harnesses-optimize.md, Agent Harness Engineering.md, engineer
 - [[model-context-protocol]]
 - [[claude-code-session-management]]
 - [[engineering-the-harness-thoughtworks]]
+- [[codemode]]
+- [[what-is-codemode-armin-ronacher]]

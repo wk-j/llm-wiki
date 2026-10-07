@@ -3,8 +3,8 @@ title: pi
 type: entity
 tags: [product, tool, agents, terminal, typescript]
 created: 2026-04-28
-updated: 2026-09-12
-sources: [mario-zechner-pi-agent.md, building-pi-world-of-slop.md, improved-15-llms-harness-changed.md, code-isnt-free-mario-zechner-hard-truths-coding-ai.md, dillon-mulroy-ships-production-code-he-didnt-write.md]
+updated: 2026-10-07
+sources: [mario-zechner-pi-agent.md, building-pi-world-of-slop.md, improved-15-llms-harness-changed.md, code-isnt-free-mario-zechner-hard-truths-coding-ai.md, dillon-mulroy-ships-production-code-he-didnt-write.md, what-is-codemode-armin-ronacher.md]
 ---
 
 # pi (pi.dev) / ไพ
@@ -16,7 +16,7 @@ sources: [mario-zechner-pi-agent.md, building-pi-world-of-slop.md, improved-15-l
 - **Minimal Core**: เริ่มต้นด้วยเครื่องมือเพียง 4 อย่าง (read, write, edit, bash) และ system prompt ที่สั้นมาก
 - **[[tree-structured-sessions]]**: เก็บประวัติงานแบบเป็นกิ่ง (Branching) ช่วยให้สลับบริบทหรือลองผิดลองถูกได้โดยไม่เสีย context หลัก
 - **Hot-reloading Extensions**: ผู้ใช้สามารถเขียน tool หรือ UI เสริมด้วย TypeScript และโหลดเข้าสู่ระบบได้ทันทีโดยไม่ต้องปิดโปรแกรม
-- **No Hidden Context**: ไม่มีการฉีดข้อมูลหรือเบื้องหลังใดๆ ที่ผู้ใช้มองไม่เห็น (เช่น MCP หรือ sub-agents ที่รันลอยๆ) ทุกอย่างต้องโปร่งใสและตรวจสอบได้
+- **No Hidden Context**: ไม่มีการฉีดข้อมูลหรือเบื้องหลังใดๆ ที่ผู้ใช้มองไม่เห็น (เช่น MCP หรือ sub-agents ที่รันลอยๆ) ทุกอย่างต้องโปร่งใสและตรวจสอบได้ — *อัปเดต 2026-10:* Pi 1.0 เพิ่ม MCP แล้ว แต่ผ่าน [[codemode|Codemode]] โดยไม่ฉีด MCP tool definition เข้า context ตรง ๆ ดูหัวข้อด้านล่าง
 - **Full Cost Tracking**: มีการคำนวณต้นทุน (Token cost) อย่างละเอียดในทุกขั้นตอน
 - **Self-modifying Extensions**: pi ship documentation และ example code ให้ agent อ่าน เพื่อให้ agent เขียน extension ของตัวเองได้ เช่น subagent support, plan mode, MCP, custom compaction, custom provider, tool ใหม่, หรือ UI ใหม่
 
@@ -46,6 +46,21 @@ Dillon เรียกวิธีนี้ว่าใกล้กับกา�
 
 **ได้อะไร:** pi รองรับ workflow สองแบบที่ไม่เหมือนกัน Mario ใช้ agent เป็นคู่คิดและยังลง code เองมาก ส่วน Dillon ให้ agent ลง implementation เกือบหมด แต่ทั้งคู่ยังเก็บ architecture, review และ accountability ไว้กับคน
 
+## Pi 1.0: MCP ผ่าน Codemode
+
+[[armin-ronacher|Armin Ronacher]] เล่าใน [[what-is-codemode-armin-ronacher|What is Codemode]] (2026-10-06) ว่า Pi 1.0 เพิ่ม MCP support ผ่าน [[codemode|Codemode]] ข้อนี้ดูขัดกับภาพเดิมที่ Mario บอกว่า Pi ไม่มี MCP แต่เหตุผลยังเหมือนเดิม คือไม่อยากให้ tool definition ท่วม context Pi ไม่ได้ส่ง MCP tool ให้ LLM เห็น agent ต้องเรียก tool search ใน Codemode แล้วเรียก tool ผ่าน code บทความไม่ได้บอกว่า MCP อยู่ใน core หรือเป็น extension
+
+รายละเอียดที่บทความให้:
+
+- Codemode รันฝั่ง harness บน QuickJS ใน WASM ไม่มี network ไม่มี file system ไม่มี timer RAM จำกัด แยกจาก execution environment ที่ bash รัน (ดู [[harness-vs-execution-environment]])
+- bash ที่เรียกเป็น tool call ปกติ ใส่แค่ 2,000 บรรทัดท้ายเข้า context ที่เหลืออยู่ใน overflow file ถ้าเรียกผ่าน Codemode code จะได้ output ใหญ่กว่านั้นแบบมีโครงสร้าง
+- Pi จำกัด tool ที่รันพร้อมกันไว้ 4 ตัว ที่เหลือเข้าคิว
+- API ภายในอย่าง image generation และ classifier model ([[jev|Jev]]) เปิดผ่าน Codemode อย่างเดียว ไม่ทำเป็น tool ปกติ
+- `store()` เก็บข้อมูลลง session transcript ให้ Codemode รอบหน้าโหลดกลับ
+- Codemode เปิดเป็นปกติเฉพาะตอนเปิด MCP ถ้าจะเปิดเองตั้ง `"defaultTools": ["+codemode"]`
+
+**ได้อะไร:** Pi ยังรักษา core เล็กกับ context สะอาด แต่ต่อ MCP กับ API ภายในได้โดย model เขียน code เรียกเอง
+
 ## Fork และการทดลอง harness
 
 [[oh-my-pi|oh-my-pi]] ของ [[can-boluk|Can Bölük]] เป็น fork ที่หยิบ pi มาเป็นฐานสำหรับทดลอง harness แบบ model-agnostic — รวม [[hashline|Hashline]] edit tool และ react-edit-benchmark; ดู [[improved-15-llms-harness-changed]]
@@ -62,3 +77,7 @@ Dillon เรียกวิธีนี้ว่าใกล้กับกา�
 - [[tree-structured-sessions]]
 - [[malleable-tools]]
 - [[terminalbench]]
+- [[codemode]]
+- [[what-is-codemode-armin-ronacher]]
+- [[harness-vs-execution-environment]]
+- [[armin-ronacher]]
