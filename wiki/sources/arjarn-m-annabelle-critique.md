@@ -5,6 +5,8 @@ tags: [facebook, finance, critique, thailand]
 author: "ติดเล่ากับอาจารย์เอ็ม เฟซจริง"
 date: 2026-04-27
 source_url: "https://www.facebook.com/ArjarnM/posts/arjarn-m-annabelle-critique"
+created: 2026-04-27
+updated: 2026-04-27
 ---
 
 # แกะปมแอนนาเบล (โดย เอ็มนาเบล)

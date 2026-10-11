@@ -1,6 +1,6 @@
 # Second Brain — LLM Wiki Schema
 
-**Start every session by reading `hotcache.md`.** It contains a summary of the current wiki state, recent activity, and key context — so you can act immediately without browsing files. Update `hotcache.md` at the end of every session or after significant changes (ingest, major query, lint).
+**Start every session by reading `hotcache.md`.** It contains a summary of the current wiki state, recent activity, and key context — so you can act immediately without browsing files. Update `hotcache.md` at the end of every session or after significant changes (ingest, major query, lint). Keep it short (under ~120 lines): replace the oldest Recent activity entry instead of piling up — full history belongs in `wiki/log.md`.
 
 This is a personal knowledge base maintained by an LLM. The human curates sources and asks questions. The LLM writes and maintains all wiki content.
 
@@ -54,6 +54,16 @@ Content here. Use [[wikilinks]] for cross-references to other wiki pages.
 
 Use Obsidian-style `[[wikilinks]]` for all internal links. When creating or updating a page, add links to related pages. When updating a page, check if other existing pages should link back to it.
 
+## Helper script (`scripts/wiki.py`)
+
+`wiki/index.md` and `wiki/log.md` are each ~240 KB. **Don't read either whole** — use the helper (Python stdlib only):
+
+- `scripts/wiki.py related <terms…>` — rank existing pages by slug/title/tags/index/body matches. Use it to find pages to read or update.
+- `scripts/wiki.py index-set` — add or replace index entries. Pipe lines in index format (`- [[slug]] — คำอธิบาย`) on stdin; the section comes from the page's folder. New entries go to the top of their section; `--end` appends instead (backfills).
+- `scripts/wiki.py log-append < entry.md` — append one log entry.
+- `scripts/wiki.py check --changed` — problems introduced by uncommitted edits: index drift, broken wikilinks, unescaped table pipes, frontmatter (strict YAML for the Quartz build), leaked foreign-script words, new orphans. Without `--changed` it reports the whole wiki.
+- `scripts/wiki.py stats --hotcache` — refresh the page counts in `hotcache.md`.
+
 ## Operations
 
 ### Ingest
@@ -63,10 +73,12 @@ When the user adds a source to `raw/` and asks to ingest it:
 1. Read the source document fully.
 2. Discuss key takeaways with the user.
 3. Create a source summary page in `wiki/sources/`.
-4. Create or update entity pages for notable people, orgs, products mentioned.
+4. Create or update entity pages for notable people, orgs, products mentioned. Find existing pages with `scripts/wiki.py related <terms>`.
 5. Create or update concept pages for key ideas and themes.
-6. Update `wiki/index.md` with new/changed pages.
-7. Append an entry to `wiki/log.md`.
+6. Update `wiki/index.md` with new/changed pages via `scripts/wiki.py index-set`.
+7. Append an entry to `wiki/log.md` via `scripts/wiki.py log-append`.
+8. Run `scripts/wiki.py check --changed` and fix what it reports.
+9. Update `hotcache.md`: add a 2–3 line Recent activity entry, drop the oldest, then run `scripts/wiki.py stats --hotcache`.
 
 A single ingest may touch many wiki pages. That's expected.
 
@@ -74,7 +86,7 @@ A single ingest may touch many wiki pages. That's expected.
 
 When the user asks a question:
 
-1. Read `wiki/index.md` to find relevant pages.
+1. Find relevant pages with `scripts/wiki.py related <terms>` (don't read `wiki/index.md` whole).
 2. Read those pages.
 3. Synthesize an answer with `[[wikilinks]]` to relevant pages.
 4. If the answer is substantial and reusable, offer to save it as an analysis page.
@@ -83,9 +95,9 @@ When the user asks a question:
 
 When the user asks to lint or health-check the wiki:
 
+Start with `scripts/wiki.py check` — it covers the mechanical checks (orphans, mentioned-but-missing pages, index drift, slug collisions, table pipes, frontmatter, leaked foreign words). Then do the judgment work:
+
 - Flag contradictions between pages.
-- Find orphan pages (no inbound links).
-- Find mentioned-but-missing pages (wikilinks that point to nonexistent files).
 - Suggest new questions or sources to investigate.
 - Check for stale information.
 
@@ -117,6 +129,8 @@ Append-only. Each entry:
 ## [YYYY-MM-DD] operation | Title
 Brief description of what was done and what pages were created/updated.
 ```
+
+Keep entries brief: 2–4 sentences, the created/updated page lists, and at most one line of caveats. The source page holds the detail — don't repeat its summary here.
 
 ## Conventions
 

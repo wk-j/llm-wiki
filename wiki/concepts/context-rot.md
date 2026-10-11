@@ -32,7 +32,7 @@ Context rot คือต้นทุนที่ซ่อนอยู่ขอ�
 | **/rewind** | ทิ้งความพยายามที่ล้มเหลวออกจาก context ทันที แทนที่จะสะสมไว้ |
 | **/compact** (เชิงรุก) | ลดน้ำหนักก่อนที่การเน่าจะถึงจุดสูงสุด; ชี้นำบทสรุป |
 | **/clear + new session** | รีเซ็ตทั้งหมด; มนุษย์เขียน brief ที่โฟกัส |
-| **[[agent-handoff-documents|Handoff document]]** | เปิด session ใหม่พร้อม brief ที่เก็บ context, intent, artifact paths, และ skill ถัดไป |
+| **[[agent-handoff-documents\|Handoff document]]** | เปิด session ใหม่พร้อม brief ที่เก็บ context, intent, artifact paths, และ skill ถัดไป |
 | **Subagents** | งานระหว่างทางจะอยู่ใน context ใหม่; มีเพียงผลลัพธ์ที่กลับมายัง parent |
 | **New session per task** | ป้องกันไม่ให้การเน่าสะสมข้ามงานที่ไม่เกี่ยวข้องกัน |
 

@@ -150,6 +150,12 @@
 - [[compound-engineering-v3-3-0]] — Compound Engineering (Trevin, 2026): Playback Pattern (Stated/Inferred/Out-of-scope); Grounding ด้วยหลักฐาน; ลดพิธีรีตองของ agent; แก้ทีหลังถูกลง
 - [[the-harness-is-the-backend]] — mf-piccolo (2026): ปรัชญา "The Harness is the Backend"; WTF Primitives (Worker-Trigger-Function); framework iii; stochastic debugging; live discovery
 - [[thclaws-marketplace-panutat]] — Panutat Tejasen (2026-04-30): thClaws v0.7.0 Marketplace; Enterprise Security; Private Marketplace; แนวคิด Host Bridge; Rabbit Holes ในการ coding
+- [[why-im-against-claude-codes-grep-only-retrieval]] — บล็อก Milvus วิจารณ์ว่า Claude Code ค้นโค้ดด้วย grep อย่างเดียวเปลือง token และช้า เสนอ semantic retrieval ผ่าน Claude Context กับ Milvus/Zilliz; ตัวเลขลด token 40%+ มาจากฝั่งผู้ขาย vector database เอง
+- [[twenty-two-diary-rashford-barcelona]] — วิดีโอ TwentyTwo Diary วิเคราะห์ว่าทำไม Marcus Rashford ฟอร์มตกที่แมนยูก่อนย้ายไป Barcelona (ไทม์ไลน์ 2025/2026): แรงกดดันจากดังเร็ว, จุดโทษยูโร 2020 กับการถูกเหยียด, ค่าเหนื่อยสูง และการเริ่มใหม่
+- [[thariq-html-effectiveness]] — บทความ Thariq Shihipar (ทีม Claude Code): พอ plan, spec และ report ยาวจนคนไม่อ่าน Markdown แล้ว HTML ใส่ table, SVG, diagram และ interaction ได้แน่นกว่า เลยช่วยให้คนยังอยู่ใน loop
+- [[piyalitt-gpt-5-5-launch]] — โพสต์ Facebook ของ Piyalitt Ittichaiwong (2026-04-23) เรื่อง GPT-5.5: ความเห็นจากคนที่ได้ลองก่อนเปิดตัว (เก่งใกล้ Claude Mythos Preview ยกเว้น SWE-Bench Pro, ราคาแพงกว่า Opus เล็กน้อย) คู่กับสรุปประกาศของ OpenAI
+- [[matt-pocock-agent-workflow]] — Matt Pocock (X, เม.ย. 2026) เล่า workflow agent แบบขนาน: สั่ง `/triage` กับ `/implement` ใน Slack, Planning Agent สร้าง DAG ของ branch จาก PR แล้ว Implementer Agents ทำทุก branch พร้อมกัน ส่วนคนรีวิวและ merge ไปพร้อมกัน; ใช้ Sandcastle กับ Chat SDK ของ Vercel
+- [[agent-client-protocol-docs]] — เอกสารทางการของ Agent Client Protocol (ACP): มาตรฐานเปิดให้ editor คุยกับ AI agent ผ่าน JSON-RPC 2.0 บน stdio (remote ผ่าน HTTP/WebSocket ยังทำอยู่) และใช้ JSON ของ MCP ซ้ำได้; ครอบ initialization, session และ prompt turn
 
 ## Entities
 - [[kit-langton]] — ผู้เขียน opencode notes; อธิบายสถาปัตยกรรม hot reload และ Replayable State Transformations ของ OpenCode 2 โดยหน้า source ไม่ได้ลงตำแหน่งงานหรือประวัติส่วนตัวเพิ่ม
@@ -413,7 +419,7 @@
 - [[ace]] — (Agent Collaboration Environment) prototype ของ GitHub Next ให้ทั้งทีมทำงานร่วมกับ agent แบบ multiplayer
 - [[sandcastle]] — infrastructure ด้าน sandbox ให้ agent รันโค้ดแบบ isolated ได้อย่างปลอดภัย; ส่วนหนึ่งของ swappable agent stack
 - [[senestia]] — บริษัท health tech; เน้นให้คนเข้าถึงบริการสุขภาพได้ง่ายขึ้น กับทำ engineering pipeline ให้ลื่น
-- [[vercel]] — cloud platform; ผู้สร้าง Vercel AI SDK กับ Chat SDK ที่ใช้ทำ agent orchestration
+- [[vercel]] — cloud platform สำหรับ deploy เว็บ; ใน wiki โผล่เป็นโครงสร้างรอบ agent: Chat SDK ใน workflow ของ Matt Pocock, Vercel AI SDK ใน OpenCode และ sandbox ของ Sandcastle
 - [[annabelle]] — influencer สายการเงิน ฉายา "Wealth Architect"; ตัวละครหลักในดราม่า "Financial Poetry"; อีกชื่อคือ "M-nabelle" (นามแฝงของ Arjarn M)
 - [[compound-engineering]] — ชุด skill สำหรับ AI agent โดย Every Inc.; เน้น alignment กับลด friction
 - [[every-inc]] — บริษัททำเครื่องมือ productivity / AI engineering อย่าง Compound Engineering
@@ -432,6 +438,9 @@
 - [[jaroslaw-wasowski]] — นักเขียนสาย software architecture บน Medium; เคยเชียร์ SDD (เขียนไป 6 บทความ) แล้วกลับลำด้วย "Stop Writing Specs. Start Writing Facts."
 - [[spec-kit]] — framework SDD ของ GitHub ดาวราว 90k (Q2 2026); ออก /speckit.spec-drift; Step 1 ของมันยังรอดมาเป็น sketchpad ของ Wasowski
 - [[marc-brooker]] — senior engineer ที่ AWS (Lambda/Aurora); ฝั่งปกป้อง SDD ตัวจริง: มอง spec เป็น artifact ที่ explicit มี version และมีชีวิต ใช้วนซ้ำได้จริง
+- [[twenty-two-diary]] — ช่อง YouTube กีฬาที่เล่าเรื่องนักฟุตบอลผ่านมุมจิตวิทยาและประวัติศาสตร์
+- [[marcus-rashford]] — นักฟุตบอลอังกฤษจาก academy แมนยู ยิง 8 ประตูใน 6 นัดแรก ฟอร์มกับความมั่นใจตกหลังยูโร 2020 แล้วถูกยืมตัวไป Barcelona ในฤดูกาล 2025/2026 ตามบทวิเคราะห์ของ TwentyTwo Diary
+- [[claude-context]] — เครื่องมือ open-source ที่บล็อก Milvus เสนอ เพิ่ม semantic search ให้ Claude Code ผ่าน MCP ด้วย AST-based chunking กับ Merkle tree sync; claim ว่าลด token ได้ 40%+
 
 ## Concepts
 - [[codemode]] — ให้ LLM เขียน code เรียก tool ต่อกันแทน tool call ทีละครั้ง แล้วคืนแค่ผลที่ย่อแล้วเข้า context; ใน Pi รันฝั่ง harness บน QuickJS/WASM, เรียก bash, MCP และ API ภายในได้, `store()` เก็บ state ข้ามรอบ; ยังติด durability, binary และ model เล็ก
@@ -734,3 +743,6 @@
 - [[software-entropy]] — สภาวะที่ซอฟต์แวร์ค่อยๆ เสื่อมสภาพและวุ่นวายขึ้นเมื่อมีการแก้ไขโดยขาดการออกแบบที่ดี; AI สามารถเร่งสปีด entropy ได้ถ้าไม่มีการคุม
 - [[specs-to-code]] — กับดักเขียน spec แล้วให้ AI ปั่น code โดยไม่ดูไส้ใน; Dillon เป็น counterexample ที่ใช้ spec แบบ types/interfaces/call stack/tests แต่ยังอ่าน code ทุกบรรทัดและถือ accountability เอง
 - [[ubiquitous-language]] — ภาษาที่ใช้ร่วมกันระหว่างคนและ AI (อิงจาก DDD) เพื่อลดความเยิ่นเย้อและเพิ่มความแม่นยำในการ implementation
+- [[claude-code-remote-surfaces]] — ช่องทางสั่ง Claude Code จากที่อื่น (มือถือ, เว็บ, Slack, cron, CI) แบ่งด้วยสองแกน: Claude รันที่ไหน (เครื่องเรา/cloud) กับใครหรืออะไรเป็นตัวสั่ง (คน/event); มีตารางเทียบ Dispatch, Remote Control และช่องทางอื่น
+- [[ai-orchestrator]] — บทบาท senior แบบใหม่ที่ออกแบบ pipeline ของ agent หลายตัวแทนการเขียนโค้ดเอง: กำหนดว่า agent ไหนได้ context อะไร ส่งงานต่อกันยังไง และวาง quality gate ตรงไหน; ใกล้งาน distributed systems มากกว่า prompt engineering
+- [[ai-3d-workflow]] — ใช้ AI คิดไอเดียกับ render แล้วใช้โปรแกรม 3D อย่าง Blender คุมรูปทรงและตำแหน่ง: block-in ใน Blender → depth map → Flux.1 Depth ใน ComfyUI; แนวคิดของ Andrew Price และเป็นหน้าตัวอย่างสไตล์ไทยที่ CLAUDE.md อ้างถึง

@@ -53,7 +53,7 @@ sources: [Introducing Claude Opus 4.7.md, Whats new in Claude Opus 4.7 - Anthrop
 - **ยกเลิก Sampling parameters** — การส่ง `temperature` / `top_p` / `top_k` ที่ไม่ใช่ค่าเริ่มต้น → 400 error. ให้ใช้ prompt เพื่อชี้นำพฤติกรรมแทน
 - **ไม่ส่งเนื้อหา thinking มาเป็นค่าเริ่มต้น** — การเปลี่ยนแปลงนี้เกิดขึ้นเงียบๆ; field `thinking` จะว่างเปล่า ยกเว้นจะตั้งค่า `display: "summarized"` หาก product ของคุณ stream reasoning ให้ผู้ใช้ จะเห็นว่ามีช่วงที่หยุดนิ่งนาน
 - **Tokenizer ใหม่** — ข้อความเดียวกันจะใช้ token มากขึ้น ~1.0–1.35 เท่า; ควรเพิ่ม headroom ของ `max_tokens` และทบทวน trigger สำหรับการทำ [[compaction|compaction]] ใหม่ รองรับ 1M context ในราคาปกติ (ไม่มีค่า premium สำหรับ long-context)
-- **Prefilled assistant responses ถูก deprecated** (เริ่มตั้งแต่ Claude 4.6) และจะ trả về **400 error บน Mythos Preview** ต้องออกแบบ prompt ที่เคยใช้ assistant prefill เพื่อบังคับ output shape ใหม่ (ที่มา: [[claude-opus-4-7-migration-pachaar|คู่มือย้ายระบบของ Pachaar]])
+- **Prefilled assistant responses ถูก deprecated** (เริ่มตั้งแต่ Claude 4.6) และจะคืน **400 error บน Mythos Preview** ต้องออกแบบ prompt ที่เคยใช้ assistant prefill เพื่อบังคับ output shape ใหม่ (ที่มา: [[claude-opus-4-7-migration-pachaar|คู่มือย้ายระบบของ Pachaar]])
 
 ## พฤติกรรมที่เปลี่ยนไป (ระดับ Prompt)
 

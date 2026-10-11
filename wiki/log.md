@@ -1489,3 +1489,13 @@ User flagged `ความตึงที่ยังเปิดอยู่` a
 **เรื่องที่เก็บไว้ทั้งสองด้าน:** หน้า `[[pi-agent]]` เดิมบอกว่า Pi ไม่มี MCP ตามคำของ Mario บทความนี้บอกว่า Pi 1.0 เพิ่ม MCP แล้ว แต่ไม่ฉีด MCP tool เข้า context จึงยังตรงกับเหตุผลเดิม บันทึกเป็นการเปลี่ยนแปลงตามเวลา ไม่ลบข้อความเดิม บทความไม่ได้บอกว่า MCP อยู่ใน core หรือเป็น extension อีกข้อคือ sandbox ของ Codemode กั้นแค่ตัว code ส่วน tool ที่ code เรียกยังใช้สิทธิ์ของ tool นั้น ตัวอย่างทั้งหมดคัดมาจาก session ของผู้เขียน ไม่มีตัวเลขเรื่อง token หรือ success rate
 
 **Provenance:** ดึง public HTML จาก https://lucumr.pocoo.org/2026/10/6/codemode/ เมื่อ 2026-10-07 metadata ระบุผู้เขียน Armin Ronacher และวันเผยแพร่ 2026-10-06 code ในบทความยืนยันชื่อชนิดคำถาม `choice`/`score` ของ Jev แต่ไม่มี `noul` การที่ Gondolin เป็นของ Earendil อนุมานจากโดเมน `earendil-works.github.io` เท่านั้น ไม่ได้สร้าง entity ให้ Gondolin หรือ Sentry เพราะถูกกล่าวถึงครั้งเดียว โพสต์เก่าของ Armin ที่อ้างถึงยังไม่ได้ ingest ไม่ได้เก็บสำเนาลง `raw/`
+
+## [2026-10-11] maintenance | เร่ง ingest ด้วย scripts/wiki.py และย่อ hotcache
+ย่อ `hotcache.md` จาก ~101 KB (ราว 41k tokens) เหลือ ~5 KB เก็บแค่สถานะ, วิธีทำงาน, ข้อตกลงที่ยังใช้ และงาน 5 ครั้งล่าสุด ประวัติเก่ามีใน log อยู่แล้ว เพิ่ม `scripts/wiki.py` (`related`, `index-set`, `log-append`, `check`, `stats`) จะได้ไม่ต้องอ่าน index กับ log ทั้งไฟล์ แล้วแก้ขั้นตอน Ingest/Query/Lint และรูปแบบ log ใน `CLAUDE.md`, `AGENTS.md`, `GEMINI.md` ให้ตรงกัน
+- Created entity: `[[vercel]]` (index ชี้ไปแต่ยังไม่มีหน้า)
+- Index: เพิ่ม 12 หน้าที่ตกหล่น (`[[agent-client-protocol-docs]]`, `[[matt-pocock-agent-workflow]]`, `[[piyalitt-gpt-5-5-launch]]`, `[[thariq-html-effectiveness]]`, `[[twenty-two-diary-rashford-barcelona]]`, `[[why-im-against-claude-codes-grep-only-retrieval]]`, `[[claude-context]]`, `[[marcus-rashford]]`, `[[twenty-two-diary]]`, `[[ai-3d-workflow]]`, `[[ai-orchestrator]]`, `[[claude-code-remote-surfaces]]`)
+- Fixed: escape `|` ในตาราง 4 หน้า, คำต่างภาษาที่หลุดใน `[[ai-3d-workflow]]` (перевірка, 補, gro gro) และ `[[claude-opus-4-7]]` (trả về), เติม created/updated ให้ source เก่า 2 หน้า
+
+**ย้ายมาจาก hotcache:** 2026-06-28 เคยรีวิว thread Codex quality-of-life ของ OpenAI Developers บน X โดยไม่ได้สร้างหน้า ความเสี่ยงที่เห็นคือ navigation rail กับ hover-reveal อาจกดโดนโดยไม่ตั้งใจ, หายาก หรือมีปัญหา accessibility, การแก้ zoom ต้องมี regression test, copy/paste Markdown และ paste ขนาดใหญ่มี edge case ด้าน security/performance, และคำบ่นเรื่อง support ใน reply ทำให้คนเชื่อใจน้อยลง
+
+**ยังค้าง (ต้องให้ผู้ใช้ตัดสิน):** slug ชนกัน 3 คู่ (`advisor-strategy`, `gitnexus`, `holographic-ui` มีทั้งใน sources และ concepts/entities), wikilink ที่ชี้ไปหน้าที่ยังไม่มี 70 จุด, orphan 26 หน้า

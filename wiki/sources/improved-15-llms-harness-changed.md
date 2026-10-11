@@ -29,7 +29,7 @@ Can สรุป landscape ของ "จะแก้ไฟล์ยังไง
 
 | แนวทาง | ใครใช้ | จุดแข็ง | จุดอ่อน |
 |---|---|---|---|
-| **`apply_patch`** (OpenAI-flavored diff string) | [[openai-codex|Codex]] | อาจถูก bias ที่ gateway สำหรับ Codex variants | model อื่นล้มเยอะ — Grok 4 patch failure ~50.7%, GLM-4.7 ~46.2% |
+| **`apply_patch`** (OpenAI-flavored diff string) | [[openai-codex\|Codex]] | อาจถูก bias ที่ gateway สำหรับ Codex variants | model อื่นล้มเยอะ — Grok 4 patch failure ~50.7%, GLM-4.7 ~46.2% |
 | **`str_replace`** (หา old text ตรงตัวอักษร แล้วแทน) | [[claude-code]], ส่วนใหญ่ | คิดง่าย | ต้อง reproduce whitespace เป๊ะ; หลาย match = reject; error "String to replace not found" เป็นประจำ |
 | **Fine-tuned merge model (70B)** | Cursor | แยก model มา merge draft edit | ยังบอกใน blog ว่า rewrite ทั้งไฟล์ชนะ diff สำหรับไฟล์ <400 บรรทัด |
 | **Unified diff (Aider)** | Aider | format เดียวกันช่วย GPT-4 Turbo 26%→59% | GPT-3.5 แค่ 19% — format ไม่พอถ้า model สร้าง diff ไม่ได้ |

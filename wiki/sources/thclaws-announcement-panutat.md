@@ -4,6 +4,8 @@ author: Panutat Tejasen
 date: 2026-04-26
 type: source
 tags: [thclaws, rust, harness-engineering, agentic-ai, claude-code]
+created: 2026-04-27
+updated: 2026-10-07
 ---
 
 # thClaws Announcement: From LLM Wrapper to AI Harness

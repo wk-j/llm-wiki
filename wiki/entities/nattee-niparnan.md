@@ -17,7 +17,7 @@ sources: [llm-era-computer-engineering-nattee.md, llm-era-computer-engineering-e
 |---|---|---|---|
 | **Ep. 1** | 10 เม.ย. 2026 | LLM ในห้องเรียนและห้องสอบ | Prompt-as-exam, -10 pts hint cost |
 | **Ep. 2** | ~17 เม.ย. 2026 | Coding Agent ในงานจริง | [[taste-paradox]], $140 PoC |
-| **Ep. 3** | 28 เม.ย. 2026 | การรู้จักตัวเองและการเลือกทางลึก | [[eh-gland|ต่อมเอ๊ะ]], [[horror-vacui]], เป็ดไม่รอด |
+| **Ep. 3** | 28 เม.ย. 2026 | การรู้จักตัวเองและการเลือกทางลึก | [[eh-gland\|ต่อมเอ๊ะ]], [[horror-vacui]], เป็ดไม่รอด |
 
 ## ส่วนร่วมและแนวคิดหลัก
 
