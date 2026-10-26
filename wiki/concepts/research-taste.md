@@ -3,8 +3,8 @@ title: Research Taste
 type: concept
 tags: [ai, science, research, benchmarks, judgment]
 created: 2026-07-01
-updated: 2026-07-01
-sources: [https://openai.com/index/introducing-genebench-pro/]
+updated: 2026-10-23
+sources: [https://openai.com/index/introducing-genebench-pro/, never-been-better-time-to-go-into-math-3blue1brown.md]
 ---
 
 # Research Taste / รสนิยมการวิจัย
@@ -56,6 +56,16 @@ research taste จึงต้องการ verifier ที่ดูทั้�
 
 ถ้า agent มี research taste สูง มันจะไม่ใช่แค่ช่วยรัน analysis เร็วขึ้น แต่มันจะช่วย researcher ตัดสินใจว่า analysis ไหนควรทำตั้งแต่แรก และผลไหนควรหยุดเพื่อเช็คใหม่ก่อนนำไปใช้
 
+## ในคณิตศาสตร์: taste อยู่ที่การเลือกคำถาม
+
+คำว่า taste ในงานวิจัยคณิตศาสตร์ใช้ในความหมายใกล้กัน แต่อยู่คนละจุดของงาน [[3blue1brown|3Blue1Brown]] (ช่อง YouTube สอนคณิตศาสตร์) แยกงานของนักคณิตศาสตร์ใน [[never-been-better-time-to-go-into-math-3blue1brown|วิดีโอเรื่องอนาคตของคณิตศาสตร์]] เป็นพิสูจน์ ตั้งคำถาม และสร้างทฤษฎี เขาบอกว่าการเลือกว่าอะไรควรถามคือที่ที่ taste ทำงานหนักที่สุด คือรู้สึกได้ว่าไอเดียไหนน่าสนใจพอจะพาไปสู่คณิตศาสตร์ที่ดี
+
+เขายกคำพูดที่เรียงลำดับไว้ว่า "good mathematicians prove theorems, great mathematicians make conjectures, and the greatest mathematicians write definitions"
+
+ต่างจาก GeneBench-Pro ตรงที่ OpenAI วัด taste ระหว่างวิเคราะห์ คือเลือก method ให้ถูกกับ data ที่มีอยู่ ส่วนในคณิตศาสตร์ taste เกิดก่อนเริ่มงาน คือเลือกว่าจะทำโจทย์ไหนเลย 3B1B บอกว่าตอนนี้ส่วนนี้ยังเป็นพื้นที่ที่นักคณิตศาสตร์มี leverage สูง แล้วสมมติต่อว่าถ้าเครื่องเลือกคำถามได้ดีกว่าด้วย คนยังเหลืองานสร้างทฤษฎี
+
+**ผลคือ:** research taste มีอย่างน้อยสองจุด คือเลือกโจทย์ กับเลือกทางวิเคราะห์ benchmark ที่วัดจุดหนึ่งได้ ไม่ได้บอกว่าอีกจุดอิ่มตัวแล้ว
+
 ## See also
 
 - [[genebench-pro]]
@@ -64,3 +74,5 @@ research taste จึงต้องการ verifier ที่ดูทั้�
 - [[benchmark-contamination]]
 - [[reward-hacking]]
 - [[verifiability]]
+- [[never-been-better-time-to-go-into-math-3blue1brown]]
+- [[proof-as-raw-data]]

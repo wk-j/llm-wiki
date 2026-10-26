@@ -1499,3 +1499,27 @@ User flagged `ความตึงที่ยังเปิดอยู่` a
 **ย้ายมาจาก hotcache:** 2026-06-28 เคยรีวิว thread Codex quality-of-life ของ OpenAI Developers บน X โดยไม่ได้สร้างหน้า ความเสี่ยงที่เห็นคือ navigation rail กับ hover-reveal อาจกดโดนโดยไม่ตั้งใจ, หายาก หรือมีปัญหา accessibility, การแก้ zoom ต้องมี regression test, copy/paste Markdown และ paste ขนาดใหญ่มี edge case ด้าน security/performance, และคำบ่นเรื่อง support ใน reply ทำให้คนเชื่อใจน้อยลง
 
 **ยังค้าง (ต้องให้ผู้ใช้ตัดสิน):** slug ชนกัน 3 คู่ (`advisor-strategy`, `gitnexus`, `holographic-ui` มีทั้งใน sources และ concepts/entities), wikilink ที่ชี้ไปหน้าที่ยังไม่มี 70 จุด, orphan 26 หน้า
+
+## [2026-10-23] ingest | There's never been a better time to go into math
+สรุปวิดีโอ 3Blue1Brown (เผยแพร่ 2026-10-16) เป็น `[[never-been-better-time-to-go-into-math-3blue1brown]]` เขาแยกคณิตศาสตร์เป็นงาน คุณค่า และเงินทุน แล้วสมมติทีละขั้นว่าเครื่องเก่งกว่าคนในการพิสูจน์ ตั้งคำถาม สร้างทฤษฎี จนถึงทุกเรื่อง ข้อสรุปคือคุณค่าและเงินทุนแทบไม่สะเทือน สิ่งที่เปลี่ยนคือระบบเครดิต เพราะ proof กลายเป็นข้อมูลดิบ ไม่ใช่ตัวแทนของความเข้าใจ เขาแนะนำนักศึกษาให้ฝึกพูดต่อหน้าคน และชวนเพื่อนไปเดินคุยกันว่ารักอะไรในคณิตศาสตร์
+- Created source: `[[never-been-better-time-to-go-into-math-3blue1brown]]`
+- Created entity: `[[3blue1brown]]`
+- Created concepts: `[[proof-as-raw-data]]`, `[[career-value-stack]]`
+- Updated concepts: `[[jagged-intelligence]]`, `[[skill-atrophy]]`, `[[creative-ownership]]`, `[[research-taste]]`, `[[taste-paradox]]`, `[[ai-slop]]`, `[[quality-proxy-collapse]]`
+- Updated entities: `[[openai]]`, `[[google-deepmind]]`
+- Updated `[[index]]` and `hotcache.md`
+
+**เรื่องที่เก็บไว้ทั้งสองด้าน:** 3B1B คาดว่าคำอธิบายจาก model จะสะอาดขึ้นแบบที่เขาเห็นว่า code สะอาดขึ้น แต่ `[[make-it-simpler]]` กับ `[[eternal-sloptember]]` เล่าอีกด้าน บันทึกเป็นคำถามเปิดใน `[[ai-slop]]` ไม่ได้ตัดฝั่งใด
+
+**Provenance:** ผู้ใช้ส่ง description และ transcript (auto-caption) มาให้ วันเผยแพร่ดึงจาก metadata หน้า YouTube ผลงาน AI ที่อ้างถึง (DeepMind IMO geometry, Navier-Stokes ของ OpenAI, Erdős problems) เป็นคำเล่าของผู้พูด ยังไม่ได้ตรวจ ชื่อ "Konstantin Kogler" มาจาก transcript ผู้สร้างช่อง Grant Sanderson เติมจากความรู้ทั่วไป ไม่ได้สร้าง entity ให้คนที่ถูกพูดถึงครั้งเดียว
+
+## [2026-10-26] ingest | คณิตศาสตร์สร้างโลกได้ยังไง | Math of Procedural Generation
+สรุปคลิป DekWit (เผยแพร่ 2026-09-12) เป็น `[[math-of-procedural-generation-dekwit]]` คลิปอธิบายว่าโลกในเกมเป็นฟังก์ชัน ไม่ใช่ข้อมูล: seed เข้า LCG, No Man's Sky ใช้ seed ซ้อนชั้น, Perlin noise กับ fractal noise ปั้นภูเขา, density function ทำถ้ำ (Minecraft 1.18 และดาวทรงกลม), domain warping ทำให้ภูเขาดูจริง แล้วเทียบกับ Terraria ที่สร้างโลกทีละขั้นแลกกับโลกที่มีขอบ
+- Created source: `[[math-of-procedural-generation-dekwit]]`
+- Created entities: `[[dekwit]]`, `[[minecraft]]`, `[[no-mans-sky]]`, `[[terraria]]`
+- Created concepts: `[[procedural-generation]]`, `[[pseudorandom-number-generator]]`, `[[perlin-noise]]`, `[[fractal-noise]]`, `[[density-function-terrain]]`, `[[domain-warping]]`
+- Updated `[[index]]` and `hotcache.md`
+
+**เรื่องที่เก็บไว้ทั้งสองด้าน:** คลิปบอกว่า Minecraft ก่อน 1.18 ใช้ heightmap แต่ blog ของ Notch ปี 2011 เล่าว่าเปลี่ยนไปใช้ 3D noise แบบ density ตั้งแต่ช่วงแรก บันทึกเป็นคำถามเปิดใน `[[density-function-terrain]]`
+
+**Provenance:** ผู้ใช้ส่ง description และ transcript (auto-caption เพี้ยนมาก แก้ชื่อเฉพาะแล้ว) วันเผยแพร่ดึงจาก metadata หน้า YouTube สิ่งที่ตรวจแล้วคือ 2^64 (คลิปพูดผิดเป็น "18 ล้านล้าน"), `java.util.Random` ที่ใช้ seed 48 bit, noise caves ใน snapshot 21w06a และขนาดโลก Terraria ส่วนที่ยังไม่ได้ตรวจคือขนาดไฟล์ No Man's Sky กับวิธีปั้นดาวจริง ไม่ได้สร้าง entity ให้ Ken Perlin กับ Notch

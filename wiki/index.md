@@ -1,6 +1,8 @@
 # Index
 
 ## Sources
+- [[math-of-procedural-generation-dekwit]] — DekWit (YouTube ไทย, 2026-09-12): โลกในเกมเป็นฟังก์ชันไม่ใช่ข้อมูล; seed + LCG, seed ซ้อนชั้นของ No Man's Sky, Perlin noise, fractal noise, density function (Minecraft 1.18, ดาวทรงกลม), domain warping; Terraria สร้างโลกทีละขั้นแลกกับโลกมีขอบ; เก็บคำถามเปิดเรื่อง Minecraft ก่อน 1.18 ใช้ heightmap จริงไหม
+- [[never-been-better-time-to-go-into-math-3blue1brown]] — 3Blue1Brown (YouTube, 2026-10-16): AI ทำคณิตศาสตร์เก่งขึ้นแต่คุณค่าและเงินทุนของคณิตศาสตร์แทบไม่สะเทือน; แยกงาน/คุณค่า/เงินทุน, proof เป็นข้อมูลดิบ, ระบบเครดิตต้องเปลี่ยน, คำแนะนำให้ PhD (ฝึกพูด, เดินคุยกับเพื่อน)
 - [[what-is-codemode-armin-ronacher]] — บล็อก Armin Ronacher (2026-10-06): Pi 1.0 เพิ่ม MCP ผ่าน Codemode; bash ต่อได้แค่โปรแกรมที่รันได้ งานที่ต้องแตะ harness (รูป, subagent, model อื่น) เลยต้องมี JavaScript ใน sandbox ฝั่ง harness (QuickJS/WASM ไม่มี network/FS); แยก brain (harness) กับ hands (execution environment); ตัวอย่าง image generation, Jev จำแนก issue และขับเกม, Sentry MCP; ปัญหา Codemode ซ้อน Codemode ของ Cloudflare MCP; ขอ structured content, ผลคงที่, binary ใหญ่ และ tool search ข้าม server; durability กับ model เล็กยังค้าง
 - [[engineering-the-harness-thoughtworks]] — บล็อก Thoughtworks (Jaya Simha Reddy Nandyala กับ Prabina Pani, 2026-09-29): agent เขียนโค้ดถูกเฉพาะจุดแต่พังทั้งระบบ เพราะ harness ไม่ให้มันเห็นระบบ; เสนอ guides ก่อนลงมือ (คำสั่งตาม path, tool แบบ least-privilege, explicit default, ยืนยันเฉพาะเรื่องที่ลามไกล), sensors หลังลงมือ (ผ่านเงียบ พังละเอียด, เลื่อนกฎจาก prose ไปเป็น lint/test) และด่านคนคั่นกลาง; ตัวอย่าง rename field ข้ามสาม microservice กับ pipeline ANALYZE→BLUEPRINT→RED→GREEN→REFACTOR→REVIEW; ไม่มีตัวเลขจาก production และยังไม่ลงรอยกับ Cursor เรื่องใส่ด่าน multi-repo ใน harness
 - [[teepagorn-claude-code-adoption-nobody-reading]] — โพสต์ Facebook จาก `@teepagorn` เล่าต่อเคส voxium ที่ Simon Willison แปะ: บริษัทใหญ่ที่ L1 ถึง L7 "Talk to Claude" ทุกเรื่อง output พุ่ง แต่คนทำ 12-13 ชั่วโมงเพื่อกด Enter และ "Nobody is reading anything"; ชี้ว่า spec/code/test/report จาก AI ตัวเดียวทำให้คนอยู่ทุกขั้นโดยไม่เข้าใจสักขั้น test กับ code อาจเชื่อ assumption ผิดเดียวกัน องค์กรวัด adoption ผิดจุด และ junior ขาดทางเรียนวิธีคิดของ senior; เป็นเรื่องเล่าซ้อนสามชั้นที่ไม่มีวันที่หรือลิงก์ต้นทาง
@@ -158,6 +160,11 @@
 - [[agent-client-protocol-docs]] — เอกสารทางการของ Agent Client Protocol (ACP): มาตรฐานเปิดให้ editor คุยกับ AI agent ผ่าน JSON-RPC 2.0 บน stdio (remote ผ่าน HTTP/WebSocket ยังทำอยู่) และใช้ JSON ของ MCP ซ้ำได้; ครอบ initialization, session และ prompt turn
 
 ## Entities
+- [[dekwit]] — ช่อง YouTube ไทยสายวิทยาศาสตร์และเทคโนโลยี; อธิบายคณิตศาสตร์ด้วยภาพเปรียบใกล้ตัว; ที่มาของ ingest เรื่อง procedural generation
+- [[minecraft]] — เกม sandbox แบบบล็อก; ตัวอย่างหลักของโลกเป็นฟังก์ชัน: seed + LCG (m = 2^48), slime chunk, ถ้ำจาก noise ใน 1.18, โลกไม่มีขอบเลยต้องถามพิกัดได้ทันที
+- [[no-mans-sky]] — เกมสำรวจอวกาศที่มีดาว 2^64 ดวงจาก seed 64 bit; seed ซ้อนชั้นจักรวาล→galaxy→ระบบสุริยะ→ดาว; ปั้นดาวทรงกลมด้วย noise แบบรัศมีแล้วต่อด้วย density
+- [[terraria]] — เกม sandbox 2 มิติ โลกมีขอบ (Large 8400×2400 tile); สร้างโลกทีละขั้น (ถมดิน→หนอนขุด→ฝังสมบัติ) ต้องรอแถบโหลด และถามพิกัดล่วงหน้าไม่ได้
+- [[3blue1brown]] — ช่อง YouTube สอนคณิตศาสตร์ด้วย animation (manim); ใน wiki คือผู้เสนอ proof-as-raw-data และกรอบแยกงาน คุณค่า เงินทุน เพื่อคิดว่า AI กระทบอาชีพยังไง
 - [[kit-langton]] — ผู้เขียน opencode notes; อธิบายสถาปัตยกรรม hot reload และ Replayable State Transformations ของ OpenCode 2 โดยหน้า source ไม่ได้ลงตำแหน่งงานหรือประวัติส่วนตัวเพิ่ม
 - [[dillon-mulroy]] — Principal Engineer ที่ Cloudflare ตามบทสัมภาษณ์ Jan-Niklas Wortmann; ให้ agent เขียน implementation เกือบหมดแต่คุม context, design, local review และ accountability เอง พร้อมรายงานว่า productivity สูงขึ้นแต่เหนื่อยและสนุกน้อยลง
 - [[plannotator]] — local review/annotation tool ที่ Dillon ใช้อ่าน diff หรือ comment plan แล้วส่ง feedback กลับเข้า coding-agent session ก่อน push PR; capability ยังบันทึกตามบทสัมภาษณ์ ไม่ใช่ product docs
@@ -443,6 +450,14 @@
 - [[claude-context]] — เครื่องมือ open-source ที่บล็อก Milvus เสนอ เพิ่ม semantic search ให้ Claude Code ผ่าน MCP ด้วย AST-based chunking กับ Merkle tree sync; claim ว่าลด token ได้ 40%+
 
 ## Concepts
+- [[procedural-generation]] — สร้างเนื้อหาจากกฎกับ seed แทนเก็บในไฟล์: โลกเป็นฟังก์ชัน; ชิ้นส่วน PRNG/noise/fractal/density/domain warping; เทียบทางฟังก์ชัน (Minecraft, No Man's Sky) กับลำดับเหตุการณ์ (Terraria) ว่าแต่ละทางยอมเสียอะไร
+- [[pseudorandom-number-generator]] — สูตรที่ให้เลขดูสุ่มแต่ตายตัวตาม seed; LCG `X(n+1) = (aX(n)+c) mod m`, คาบถูกจำกัดด้วย m; java.util.Random ใช้ seed 48 bit ตรงกับที่คลิปบอกเรื่อง Minecraft
+- [[perlin-noise]] — noise ต่อเนื่องของ Ken Perlin: สุ่มลูกศรความชันที่จุดตารางแทนความสูง แล้วเกลี่ย dot product จาก 4 มุม; แก้รอยพับของการสุ่มความสูงตรง ๆ (value noise)
+- [[fractal-noise]] — ซ้อน noise หลาย octave ที่ถี่ขึ้น 2 เท่าและเบาลงตาม persistence (fBm) ได้รายละเอียดทุกขนาดแบบ self-similarity; ยังดูเหมือนดินน้ำมันจนกว่าจะใช้ domain warping
+- [[density-function-terrain]] — ถามทุกจุด 3 มิติว่าหินหรืออากาศแทน heightmap จึงมีถ้ำและหน้าผายื่น; ใช้กับดาวทรงกลมด้วย `R + f(p) − |p|`; เก็บสองเรื่องเล่าเรื่องประวัติ Minecraft (คลิป vs blog Notch 2011)
+- [[domain-warping]] — เลื่อนพิกัดด้วย noise อีกตัวก่อนถาม noise หลัก `f(p + λW(p))` เหมือนผิวน้ำบิดลายกระเบื้องก้นสระ; ทำให้ภูเขามีสันยาวและลายชั้นหิน
+- [[career-value-stack]] — กรอบคิดว่า AI กระทบอาชีพยังไง: แยกงาน คุณค่า และเงินทุน แล้วสมมติทีละข้อว่าเครื่องเก่งกว่า; เคสคณิตศาสตร์พบว่าคุณค่าที่ต้องลงมือเองไม่สะเทือน
+- [[proof-as-raw-data]] — ข้อเสนอของ 3Blue1Brown ให้มอง proof จากเครื่องเหมือนผลคำนวณตัวเลข: เป็นวัตถุดิบของ theory building ไม่ใช่เส้นชัย; proof เสียค่าในฐานะ proxy ของความเข้าใจ
 - [[codemode]] — ให้ LLM เขียน code เรียก tool ต่อกันแทน tool call ทีละครั้ง แล้วคืนแค่ผลที่ย่อแล้วเข้า context; ใน Pi รันฝั่ง harness บน QuickJS/WASM, เรียก bash, MCP และ API ภายในได้, `store()` เก็บ state ข้ามรอบ; ยังติด durability, binary และ model เล็ก
 - [[harness-vs-execution-environment]] — ภาพ brains vs hands ของ Armin Ronacher: harness ที่เชื่อถือได้กับ execution environment ที่ tool รันจริง มีระบบไฟล์และระดับความเชื่อถือต่างกัน; sandbox ฝั่ง bash ไม่ได้กั้น harness จึงต้องไล่ว่าแต่ละ tool รันฝั่งไหน
 - [[blast-radius-gates]] — ให้ harness หยุดขอคนยืนยันเฉพาะเรื่องที่ย้อนไม่ได้หรือกระทบวงกว้าง เช่น scope ข้าม repo, schema migration, public API แล้วปล่อยเรื่องเล็กเดินต่อด้วย default ที่บันทึกไว้; ด่านดีได้เท่ากับ impact analysis ที่ป้อนมัน และยังไม่ลงรอยกับทิศของ Cursor ที่ลดการบล็อกใน cloud agent

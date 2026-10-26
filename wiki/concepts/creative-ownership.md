@@ -3,8 +3,8 @@ title: Creative Ownership
 type: concept
 tags: [ai, creativity, agency, software-engineering, craft]
 created: 2026-08-25
-updated: 2026-09-12
-sources: [i-was-replaced-by-ai-typecraft.md, state-of-technology-and-joy-of-making-phoomparin-mano.md, dhh-ai-programming-setup-lex-clips.md, dillon-mulroy-ships-production-code-he-didnt-write.md]
+updated: 2026-10-23
+sources: [i-was-replaced-by-ai-typecraft.md, state-of-technology-and-joy-of-making-phoomparin-mano.md, dhh-ai-programming-setup-lex-clips.md, dillon-mulroy-ships-production-code-he-didnt-write.md, never-been-better-time-to-go-into-math-3blue1brown.md]
 ---
 
 # Creative Ownership / ความรู้สึกเป็นเจ้าของงานสร้างสรรค์
@@ -89,6 +89,19 @@ Phoomparin เสนอ `creative coding` เป็นพื้นที่ท�
 
 **ผลคือ:** accountability ที่ยังอยู่กับคนไม่รับประกันว่า joy หรือ flow จะอยู่ด้วย
 
+## นอกงาน software: นักคณิตศาสตร์ก็แตกเป็นสองฝั่ง
+
+เรื่องนี้ไม่ได้เกิดแค่กับ programmer [[3blue1brown|3Blue1Brown]] (ช่อง YouTube สอนคณิตศาสตร์) เล่าใน [[never-been-better-time-to-go-into-math-3blue1brown|วิดีโอเรื่องอนาคตของคณิตศาสตร์]] ว่านักคณิตศาสตร์ก็แตกเป็นสองฝั่งแบบเดียวกัน
+
+- **ฝั่งหมดแรง** นักคณิตศาสตร์ที่ไล่ผลลัพธ์หนึ่งอยู่ แล้ว [[openai|OpenAI]] ปล่อยผลนั้นออกมาในล็อตร้อยข้อ บอกว่าลมใต้ปีกหายหมด อีกกลุ่มบอกว่าความสุขทั้งหมดอยู่ที่การหาคำตอบเอง ไม่อยากนั่งแกะคำตอบที่เครื่องให้มา
+- **ฝั่งตื่นเต้น** นักคณิตศาสตร์ที่ Institute for Advanced Study ถามโจทย์ใหญ่ในสาขาตัวเองกับ model มาทั้งปี จนวันหนึ่งได้คำตอบที่มี "a simple powerful idea" แล้วตื่นเต้นจนนอนน้อยลง
+
+3B1B สังเกตว่าออนไลน์มักเห็นฝั่งแรก ส่วนตอนเจอตัวมักเห็นฝั่งหลัง แต่เขาไม่ได้บอกว่าฝั่งไหนถูก
+
+สิ่งที่เคสนี้เพิ่มคือการแยกความสุขเป็นสองแบบ แบบแรกคือความสุขจากการทำเอง เช่นเห็นทางแก้แล้วคลิก หรือเข้าใจเรื่องใหม่จนวิธีคิดเปลี่ยน แบบนี้แทบไม่สะเทือนแม้เครื่องจะเก่งกว่า แบบที่สองคือความสุขของคนที่เป็นคนแรก เขายอมรับตรง ๆ ว่าแบบนี้เสียไปจริง "something is lost here"
+
+**ผลคือ:** คำถาม "AI ทำให้งานไม่สนุกไหม" ต้องแยกให้ออกว่าคนนั้นสุขกับการลงมือ กับการเป็นคนแรก หรือกับการเห็นคำตอบ แต่ละแบบได้รับผลไม่เท่ากัน ใกล้กับที่ Dillon แยก ownership ของ design ออกจาก micro-reward ข้างบน
+
 ## See also
 
 - [[state-of-technology-and-joy-of-making-phoomparin-mano]]
@@ -104,3 +117,5 @@ Phoomparin เสนอ `creative coding` เป็นพื้นที่ท�
 - [[dhh]]
 - [[dillon-mulroy-ships-production-code-he-didnt-write]]
 - [[dillon-mulroy]]
+- [[never-been-better-time-to-go-into-math-3blue1brown]]
+- [[3blue1brown]]

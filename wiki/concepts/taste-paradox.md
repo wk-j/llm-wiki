@@ -3,8 +3,8 @@ title: Taste Paradox
 type: concept
 tags: [ai, education, skills, judgment, coding-agent, curriculum]
 created: 2026-04-18
-updated: 2026-07-21
-sources: [llm-era-computer-engineering-nattee.md, llm-era-computer-engineering-ep3-nattee.md, teepagorn-ten-lessons-building-with-ai.md]
+updated: 2026-10-23
+sources: [llm-era-computer-engineering-nattee.md, llm-era-computer-engineering-ep3-nattee.md, teepagorn-ten-lessons-building-with-ai.md, never-been-better-time-to-go-into-math-3blue1brown.md]
 ---
 
 # Taste Paradox / ปัญหา taste ในยุค Agent
@@ -103,6 +103,14 @@ Panutat และ Nattee เห็นปัญหาเดียวกัน (�
 
 [[somkiat-khitwongwattana|Somkiat Khitwongwattana]] ([[model-choice-by-expertise]]) เสนอฝั่งตรงข้ามของคำถาม: สมมุติว่ามี taste แล้ว (Domain Expert ลงโค้ดเอง) — ใช้แค่ Claude Sonnet 4.5 ก็พอสำหรับงานส่วนใหญ่ model ใหม่จำเป็นก็ต่อเมื่อคน vibe-code โดยไม่มี knowledge และต้องการให้ model ชดเชย taste ที่ขาด taste paradox ตอบว่า *taste มาจากไหน*; Somkiat ตอบว่า *เมื่อมีแล้วใช้อย่างไรให้คุ้ม*
 
+## ภาควิชาคณิตศาสตร์เจอคำถามเดียวกัน
+
+[[3blue1brown|3Blue1Brown]] (ช่อง YouTube สอนคณิตศาสตร์) พูดถึงปัญหาเดียวกันจากฝั่งคณิตศาสตร์ใน [[never-been-better-time-to-go-into-math-3blue1brown|วิดีโอเรื่องอนาคตของคณิตศาสตร์]] เขาบอกว่าการฝึกทักษะแก้ปัญหายังจำเป็นเหมือนเข้า gym แต่ "assigning and grading problem sets on its own doesn't really make sense right now" เพราะวิธีฝึกแบบเดิมใช้ไม่ได้แล้ว
+
+ทางที่เขาเสนอคือย้ายไปวัดความเข้าใจจากการนำเสนอด้วยปาก "give talks, give lots of talks" ส่วนวิธีในภาคของ Nattee ยังอยู่ในระบบตรวจงานเดิม แต่ปรับให้ LLM ถามกลับแบบ Socratic ให้ส่ง chat log และเพิ่มโจทย์หาจุดผิดใน code ([[llm-era-computer-engineering-nattee|Ep. 1]]) สองทางนี้ไม่ได้ขัดกัน แต่ยังไม่มีแหล่งไหนเทียบว่าทางไหนสร้าง taste ได้ดีกว่า
+
+**ผลคือ:** ปมนี้ไม่ได้เป็นปัญหาเฉพาะวิศวกรรมคอมพิวเตอร์ ทุกสาขาที่การบ้านเคยเป็นทั้งเครื่องฝึกและเครื่องวัดกำลังเจอเหมือนกัน
+
 ## See also
 
 - [[nattee-niparnan]]
@@ -116,3 +124,4 @@ Panutat และ Nattee เห็นปัญหาเดียวกัน (�
 - [[model-choice-by-expertise]]
 - [[skill-stacking]]
 - [[teepagorn-ten-lessons-building-with-ai]]
+- [[never-been-better-time-to-go-into-math-3blue1brown]]

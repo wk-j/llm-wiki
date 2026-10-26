@@ -4,12 +4,12 @@ title: Hotcache
 
 # Hotcache
 
-Last updated: 2026-10-11 (compacted this file; added `scripts/wiki.py`)
+Last updated: 2026-10-26 (ingest DekWit on procedural generation)
 
 Read this first each session. **Keep it under ~120 lines**: Recent activity holds the last 5 entries at 2–3 lines each, and the oldest drops off when a new one goes in. Full history lives in `wiki/log.md` and git.
 
 <!-- stats:start -->
-- **Pages:** 155 sources · 303 concepts · 283 entities · 0 analysis
+- **Pages:** 157 sources · 311 concepts · 288 entities · 0 analysis
 <!-- stats:end -->
 
 ## Working fast
@@ -31,7 +31,7 @@ Mostly AI-assisted software engineering, plus a few side clusters.
 - **Tools & people:** Claude Code (Boris Cherny), pi (Mario Zechner, Armin Ronacher, Earendil), OpenCode (Kit Langton), Cursor, Zed/DeltaDB, Herdr/Omarchy (DHH), Codex, Jev/Typesafe AI, Matt Pocock skills
 - **Process & role:** AI-native SDLC, intent.md / artifact chain, spec-driven development vs facts-first, agentic code review, comprehension debt, wayfinding, engineering role shift, creative ownership, AI work intensification, brain fry, adoption without comprehension
 - **Models & economics:** Fable 5, Opus 4.8 / Opus 5, GPT-5.5 / 5.6 Sol, Kimi K3, benchmarks and contamination, token economics, tokenmaxxing, open-weight models, text watermarking
-- **Side clusters:** photonics / AI data-center stocks, KOSPI liquidation, private banking, defense mechanisms, infinity / Gödel, ʻOumuamua, football (Rashford), UI styles (retro-futurism, Soviet Cosmism, glassmorphism), AI + 3D
+- **Side clusters:** photonics / AI data-center stocks, KOSPI liquidation, private banking, defense mechanisms, infinity / Gödel, AI and math research (proof as raw data, career value stack), procedural generation (seed/PRNG, Perlin/fractal noise, density terrain, domain warping; Minecraft, No Man's Sky, Terraria), ʻOumuamua, football (Rashford), UI styles (retro-futurism, Soviet Cosmism, glassmorphism), AI + 3D
 
 ## Standing decisions (not obvious from CLAUDE.md)
 
@@ -50,8 +50,8 @@ Mostly AI-assisted software engineering, plus a few side clusters.
 
 ## Recent activity (last 5)
 
+- **2026-10-26 ingest** `[[math-of-procedural-generation-dekwit]]` — DekWit (Thai YouTube): a game world is a function, not data. New `[[procedural-generation]]` plus 5 technique concepts and entities `[[minecraft]]`, `[[no-mans-sky]]`, `[[terraria]]`, `[[dekwit]]`. Open question in `[[density-function-terrain]]`: video says pre-1.18 Minecraft used a heightmap; Notch's 2011 blog says 3D density noise came early.
+- **2026-10-23 ingest** `[[never-been-better-time-to-go-into-math-3blue1brown]]` — 3Blue1Brown: if machines beat mathematicians step by step, value and funding barely move; credit assignment changes. New `[[proof-as-raw-data]]`, `[[career-value-stack]]`, `[[3blue1brown]]`. Open question kept in `[[ai-slop]]`: will model output get cleaner (3B1B) or not (`[[make-it-simpler]]`, `[[eternal-sloptember]]`).
 - **2026-10-11 maintenance** — cut this file from ~101 KB to under 8 KB; added `scripts/wiki.py`; backfilled 12 pages missing from the index; created `[[vercel]]` (the index pointed to it, but the page didn't exist); escaped 4 table pipes; fixed leaked words in `[[ai-3d-workflow]]` and `[[claude-opus-4-7]]`; added dates to 2 old sources.
 - **2026-10-07 ingest** `[[what-is-codemode-armin-ronacher]]` — Pi 1.0 adds MCP via Codemode (JS on QuickJS/WASM on the harness side). New `[[codemode]]`, `[[harness-vs-execution-environment]]`. Caveat: the sandbox covers the code, not the tools it calls.
 - **2026-10-01 lint** — stopped rendering "harness" as บังเหียน across 9 pages.
-- **2026-10-01 ingest** `[[engineering-the-harness-thoughtworks]]` (guides before action, sensors after, selective human gates; new `[[blast-radius-gates]]`, `[[silent-success-verbose-failure]]`) and `[[teepagorn-claude-code-adoption-nobody-reading]]` (voxium: "Nobody is reading anything").
-- **2026-09-22 ingest** `[[opencode-reloaded]]` — OpenCode 2 hot reload through replayable transformations; new `[[replayable-state-transformations]]`, `[[kit-langton]]`.

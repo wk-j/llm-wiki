@@ -3,13 +3,13 @@ title: Google DeepMind
 type: entity
 tags: [org, ai, lab, research]
 created: 2026-06-26
-updated: 2026-08-16
-sources: [Self Learning for Agents Clearly Explained.md, framework-frontier-ai-dawning-new-age.md, claude-text-watermarking-squintist.md]
+updated: 2026-10-23
+sources: [Self Learning for Agents Clearly Explained.md, framework-frontier-ai-dawning-new-age.md, claude-text-watermarking-squintist.md, never-been-better-time-to-go-into-math-3blue1brown.md]
 ---
 
 # Google DeepMind / กูเกิล ดีปมายด์
 
-Google DeepMind คือห้องวิจัย AI ของ Google ใน wiki นี้ ทีมโผล่อยู่ในสามเรื่องหลัก เรื่องแรกคือ **AlphaEvolve** ระบบที่ให้ AI ช่วยค้นวิธีแก้โจทย์วิทยาศาสตร์และคณิตศาสตร์ เรื่องที่สองคือข้อเสนอของ [[demis-hassabis|Demis Hassabis]] ผู้ร่วมก่อตั้ง DeepMind ว่าควรตรวจ model ที่เสี่ยงสูงอย่างไรก่อนปล่อยให้คนใช้ เรื่องที่สามคือ **[[synthid|SynthID]]** เทคโนโลยี watermark เนื้อหาที่ AI สร้าง
+Google DeepMind คือห้องวิจัย AI ของ Google ใน wiki นี้ ทีมโผล่อยู่ในสามเรื่องหลัก เรื่องแรกคือ **AlphaEvolve** ระบบที่ให้ AI ช่วยค้นวิธีแก้โจทย์วิทยาศาสตร์และคณิตศาสตร์ เรื่องที่สองคือข้อเสนอของ [[demis-hassabis|Demis Hassabis]] ผู้ร่วมก่อตั้ง DeepMind ว่าควรตรวจ model ที่เสี่ยงสูงอย่างไรก่อนปล่อยให้คนใช้ เรื่องที่สามคือ **[[synthid|SynthID]]** เทคโนโลยี watermark เนื้อหาที่ AI สร้าง นอกจากนี้ยังโผล่ในคำเล่าของ [[3blue1brown|3Blue1Brown]] เรื่อง model ที่ตอบโจทย์ geometry ระดับ IMO
 
 สองเรื่องนี้เชื่อมกันตรง ๆ พอ AI ช่วยเร่งงานวิจัยได้มากขึ้น เราก็ต้องมีวิธีตรวจว่าความสามารถใหม่จะถูกใช้ผิดทางหรือหลุดจากการควบคุมหรือไม่
 
@@ -61,12 +61,21 @@ DeepMind สร้าง [[synthid|SynthID]] — วิธีฝัง signal �
 
 การเปิด code มีสองหน้า: โปร่งใสและตรวจสอบได้ แต่ทีมวิจัยภายนอกก็ใช้เวอร์ชันสาธารณะพิสูจน์ว่า paraphrase ล้าง mark ได้ 58/59 เคส (บน home version ไม่ใช่ระบบ production) — งานนี้ทำให้ SynthID เป็นตัวอย่างสาธารณะที่ชัดที่สุดของ text watermarking ที่ [[anthropic|Anthropic]] น่าจะเดินตามใน [[claude-text-watermarking-squintist|ข่าว Claude watermark]] (ยังเป็นการอนุมานของแหล่ง)
 
+## Model ที่ตอบโจทย์ geometry ระดับ IMO
+
+[[3blue1brown|3Blue1Brown]] (ช่อง YouTube สอนคณิตศาสตร์) เล่าใน [[never-been-better-time-to-go-into-math-3blue1brown|วิดีโอเรื่องอนาคตของคณิตศาสตร์]] ว่าราวปี 2023 DeepMind ปล่อย model ที่ตอบโจทย์ geometry ระดับ IMO (การแข่งขันคณิตศาสตร์โอลิมปิกระหว่างประเทศ) ได้ ตอนนั้นเขาเห็นว่าดูทำเฉพาะทางและใช้แรงค้น ไม่ตรงกับเจตนาของโจทย์ที่ต้องใช้ความคิดสร้างสรรค์ แต่ไม่กี่ปีต่อมา language model ทั่วไปก็แก้โจทย์ IMO ได้แล้ว
+
+วิดีโอไม่ได้บอกชื่อ model wiki เดาว่าเป็น AlphaGeometry แต่ยังไม่ได้ตรวจ เขาเองก็ไม่แน่ใจเรื่องปี ("I want to say") เขาใช้เรื่องนี้เป็นตัวอย่างของหลัก "the position is overrated but the velocity is not" (ดู [[jagged-intelligence]])
+
+**ได้อะไร:** ผลงานเฉพาะทางที่ดูไม่น่าตื่นเต้นในวันแรก อาจเป็นแค่จุดเริ่มของความสามารถที่ model ทั่วไปทำได้ในไม่กี่ปี
+
 ## แยกให้ออกว่าอะไรคืออะไร
 
 - ผลของ AlphaEvolve เป็นตัวเลขที่แหล่งข่าวอ้าง ต้องกลับไปดูงานวิจัยต้นทางก่อนใช้เป็นหลักฐานแข็ง
 - AGI “อาจมาในอีกไม่กี่ปี” เป็นการคาดการณ์ของ Hassabis
 - โลกที่ทรัพยากรเหลือเฟือเป็นภาพอนาคตที่เขาหวัง ไม่ใช่ผลลัพธ์ที่รับประกันแล้ว
 - Frontier AI Standards Body เป็นแบบร่างของระบบกำกับ ไม่ใช่หน่วยงานที่มีอำนาจอยู่ตอนนี้
+- model geometry ระดับ IMO มาจากความจำของ 3Blue1Brown ในวิดีโอ ไม่ได้ระบุชื่อหรือปีแน่นอน
 
 **ได้อะไร:** อ่านงานของ DeepMind โดยแยก “ผลงานที่ทดลองแล้ว”, “คำคาดการณ์” และ “ข้อเสนอเชิงนโยบาย” ออกจากกัน
 
@@ -81,3 +90,4 @@ DeepMind สร้าง [[synthid|SynthID]] — วิธีฝัง signal �
 - [[framework-frontier-ai-dawning-new-age]]
 - [[synthid]]
 - [[llm-text-watermarking]]
+- [[never-been-better-time-to-go-into-math-3blue1brown]]

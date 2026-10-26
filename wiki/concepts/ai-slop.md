@@ -3,8 +3,8 @@ title: AI Slop
 type: concept
 tags: [ai, quality, design, critique]
 created: 2026-04-28
-updated: 2026-07-03
-sources: [chase-ai-claude-code-impeccable.md, mario-zechner-pi-agent.md, maggies-appleton-collaborative-ai-engineering.md, ai-language-crisis-phenomenon.md, eternal-sloptember.md]
+updated: 2026-10-23
+sources: [chase-ai-claude-code-impeccable.md, mario-zechner-pi-agent.md, maggies-appleton-collaborative-ai-engineering.md, ai-language-crisis-phenomenon.md, eternal-sloptember.md, never-been-better-time-to-go-into-math-3blue1brown.md]
 ---
 
 # AI Slop / ขยะ AI
@@ -28,6 +28,15 @@ sources: [chase-ai-claude-code-impeccable.md, mario-zechner-pi-agent.md, maggies
 ## payoff
 การตระหนักถึง AI Slop ช่วยให้นักพัฒนาและนักออกแบบไม่หยุดเพียงแค่ผลลัพธ์แรกที่ AI มอบให้ แต่พยายามขัดเกลาและใช้เครื่องมือเสริมเพื่อสร้างงานที่โดดเด่นและมีคุณภาพจริง
 
+## คำถามเปิด: slop เป็นแค่ช่วงชั่วคราวไหม
+
+แหล่งใน wiki ยังเห็นไม่ตรงกันว่า slop จะหายไปเองเมื่อ model เก่งขึ้นหรือไม่ wiki เก็บไว้ทั้งสองฝั่ง
+
+- **ฝั่งที่คิดว่าชั่วคราว** [[3blue1brown|3Blue1Brown]] (ช่อง YouTube สอนคณิตศาสตร์) บอกใน [[never-been-better-time-to-go-into-math-3blue1brown|วิดีโอเรื่องอนาคตของคณิตศาสตร์]] ว่า proof จาก model ตอนนี้อ่านยาก แต่น่าจะดีขึ้น เพราะบริษัททำ model มีแรงจูงใจให้ model อธิบายเก่ง เขาเทียบกับ code จาก model ที่เขาเห็นว่าช่วงแรกทำงานได้แต่ยังรก แล้วเดินไปทางสะอาดขึ้น เขายอมรับเองว่ามีคนเถียง และ model ยัง comment เยอะเกิน
+- **ฝั่งที่เห็นว่ายังไม่หาย** [[dhh|DHH]] ใน [[make-it-simpler|Make It Simpler]] เล่าว่า agent ยังเขียน code ซับซ้อนเกินจำเป็นบ่อย และ agent ที่ review ก็ปล่อยผ่าน ส่วน [[eternal-sloptember|The Eternal Sloptember]] เถียงว่าปัญหาอาจอยู่ที่ชนิดของ model ไม่ใช่ความเรียบร้อย ถ้าเป็นแบบนั้น output ที่ดูสะอาดขึ้นอาจกลายเป็น polished slop แทน
+
+สองฝั่งพูดถึงคนละอย่างอยู่บางส่วน 3B1B พูดถึงความอ่านง่ายของคำอธิบาย อีกฝั่งพูดถึงความซับซ้อนและความเข้าใจข้างหลังงาน ยังไม่มีแหล่งไหนวัดว่า output จาก model สะอาดขึ้นจริงตามเวลาหรือไม่
+
 ## See also
 
 - [[clanker-slop]]
@@ -35,3 +44,6 @@ sources: [chase-ai-claude-code-impeccable.md, mario-zechner-pi-agent.md, maggies
 - [[quality-proxy-collapse]]
 - [[impeccable]]
 - [[chase-ai]]
+- [[make-it-simpler]]
+- [[eternal-sloptember]]
+- [[never-been-better-time-to-go-into-math-3blue1brown]]

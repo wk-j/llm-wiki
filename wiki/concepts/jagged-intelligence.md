@@ -3,8 +3,8 @@ title: Jagged Intelligence
 type: concept
 tags: [ai, psychology, cognition, llm-limitations]
 created: 2026-04-30
-updated: 2026-04-30
-sources: [Andrej Karpathy From Vibe Coding to Agentic Engineering.md]
+updated: 2026-10-23
+sources: [Andrej Karpathy From Vibe Coding to Agentic Engineering.md, never-been-better-time-to-go-into-math-3blue1brown.md]
 ---
 
 # Jagged Intelligence / ความฉลาดแบบฟันปลา
@@ -27,6 +27,16 @@ sources: [Andrej Karpathy From Vibe Coding to Agentic Engineering.md]
 - **อย่าไว้ใจทั้งหมด**: แม้ AI จะแก้โจทย์ยากๆ ได้ แต่มันอาจจะพลาดในจุดที่โง่ที่สุดได้เสมอ
 - **Verification is Key**: ต้องมีระบบตรวจสอบผลลัพธ์ในทุกขั้นตอน
 - **Human in the Loop**: มนุษย์ต้องคอยทำหน้าที่เป็น "ผู้ตรวจทาน" (Reviewer) ในจุดที่เป็นหุบเหวความรู้ของ AI
+
+## ในคณิตศาสตร์: ฟันปลาซ้อนอยู่ในฟันปลา
+
+[[3blue1brown|3Blue1Brown]] (ช่อง YouTube สอนคณิตศาสตร์) เห็นภาพเดียวกันจากการสัมภาษณ์นักคณิตศาสตร์ใน [[never-been-better-time-to-go-into-math-3blue1brown|วิดีโอเรื่องอนาคตของคณิตศาสตร์]] แต่ละเอียดกว่าระดับประเภทงาน แม้อยู่ในคณิตศาสตร์ด้วยกัน ผลก็ต่างกันมากตามสาขาและตามคน
+
+> "The frontier is spiky at a fractal level and it is not at all uniform."
+
+เขาให้หลักอ่านความสามารถ AI ไว้ข้อหนึ่ง: "the position is overrated but the velocity is not" คือความสามารถ ณ ตอนนั้นมักถูกพูดเกินจริง แต่ความเร็วที่มันพัฒนาไม่ได้เกินจริง ตัวอย่างที่เขาเล่าคือ model ที่ตอบโจทย์ geometry ระดับ IMO ได้แบบเฉพาะทางเมื่อราวปี 2023 ไปถึงระดับที่นักคณิตศาสตร์บางคนได้ insight จากคำถามวิจัยจริงในปี 2026
+
+**ผลคือ:** จุดที่ AI พลาดวันนี้ไม่ควรใช้เป็นข้ออ้างว่ามันจะพลาดตลอด การวางแผนระยะยาวต้องดูความเร็วด้วย ไม่ใช่ดูแค่ตำแหน่ง
 
 ## ดูเพิ่ม
 - [[verifiability]]

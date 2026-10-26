@@ -3,8 +3,8 @@ title: OpenAI
 type: entity
 tags: [ai, labs, models, organizations]
 created: 2026-04-24
-updated: 2026-08-16
-sources: [piyalitt-gpt-5-5-launch.md, microsoft-openai-partnership-2026.md, ryan-lopopolo-harness-engineering.md, https://openai.com/index/introducing-genebench-pro/, how-perplexity-lost-ai-war.md, how-ai-became-more-expensive-than-workers-it-replaced.md, piyalitt-codex-keynote-attention-not-token.md, claude-text-watermarking-squintist.md]
+updated: 2026-10-23
+sources: [piyalitt-gpt-5-5-launch.md, microsoft-openai-partnership-2026.md, ryan-lopopolo-harness-engineering.md, https://openai.com/index/introducing-genebench-pro/, how-perplexity-lost-ai-war.md, how-ai-became-more-expensive-than-workers-it-replaced.md, piyalitt-codex-keynote-attention-not-token.md, claude-text-watermarking-squintist.md, never-been-better-time-to-go-into-math-3blue1brown.md]
 ---
 
 # OpenAI / โอเพนเอไอ
@@ -63,6 +63,12 @@ AI lab ในสหรัฐฯ — สร้าง ChatGPT, ตระกูล 
 - **SWE-Bench Pro memorization signal** — Anthropic ฟ้องไว้ใน model card ของ GPT-5.5 ว่ามี sign ของการจำ; [[piyalitt-ittichaiwong|Piyalitt]] ตีความว่าเป็นความพลาด ไม่ใช่การ benchmaxx ตั้งใจ — เป็นอีกเคสที่ทำให้ SWE-Bench Pro โดยเดี่ยวๆ เป็น axis ที่ควรระวัง (ดู [[kimi-k2-6]] ด้วย — benchmark table ถูก curate)
 - **[[genebench-pro|GeneBench-Pro]]** — benchmark วิจัย computational biology ที่ OpenAI เปิดตัว 2026-06-30 เพื่อวัด [[research-taste|research taste]]: ambiguity handling, QC, causal/statistical choices, และ decision-readiness. ผลในบทความ: [[gpt-5-6-sol|GPT-5.6 Sol]] ได้ 28.7% ที่ highest reasoning และ 31.5% ใน Pro mode แต่ยังต่ำกว่าหนึ่งในสาม จึงเป็นหลักฐานว่า scientific judgement ยังไม่อิ่มตัว
 
+## งานคณิตศาสตร์ (ตามคำเล่าของ 3Blue1Brown, 2026-10)
+
+ใน [[never-been-better-time-to-go-into-math-3blue1brown|วิดีโอเรื่องอนาคตของคณิตศาสตร์]] [[3blue1brown|3Blue1Brown]] (ช่อง YouTube สอนคณิตศาสตร์) พูดถึงผลงานล่าสุดของ OpenAI ว่าเป็นข่าวพาดหัว คืองานเรื่อง Navier-Stokes และการปล่อยคำตอบของโจทย์หลักร้อยข้อพร้อมกัน วิดีโอไม่ได้ให้รายละเอียดหรือลิงก์หลักฐาน wiki ยังไม่ได้ตรวจกับแหล่งต้นทาง
+
+สิ่งที่วิดีโอเล่าเพิ่มคือผลข้างเคียงต่อคนในวงการ นักคณิตศาสตร์บางคนที่ไล่ผลลัพธ์หนึ่งอยู่ แล้วผลนั้นอยู่ในล็อตที่ OpenAI ปล่อย บอกว่าลมใต้ปีกหายหมด และ proof จากเครื่องบางชิ้นใช้ idea จากงานตีพิมพ์ของคนโดยไม่ได้ให้เครดิตอัตโนมัติ (ดู [[proof-as-raw-data]])
+
 ## มุม watermark / AI detection
 
 จาก [[claude-text-watermarking-squintist|วิดีโอของ Squintist]] OpenAI โผล่ในเรื่องนี้สามจุด:
@@ -93,3 +99,4 @@ AI lab ในสหรัฐฯ — สร้าง ChatGPT, ตระกูล 
 - [[enterprise-ai-roi]]
 - [[ai-text-detectors]]
 - [[eu-ai-act]]
+- [[never-been-better-time-to-go-into-math-3blue1brown]]

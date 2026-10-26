@@ -3,8 +3,8 @@ title: Quality Proxy Collapse
 type: concept
 tags: [ai, software-quality, slop, verification]
 created: 2026-07-03
-updated: 2026-09-24
-sources: [eternal-sloptember.md, claude-text-watermarking-squintist.md, teepagorn-claude-code-adoption-nobody-reading.md]
+updated: 2026-10-23
+sources: [eternal-sloptember.md, claude-text-watermarking-squintist.md, teepagorn-claude-code-adoption-nobody-reading.md, never-been-better-time-to-go-into-math-3blue1brown.md]
 ---
 
 # Quality Proxy Collapse / สัญญาณคุณภาพเดิมใช้ไม่ได้
@@ -50,6 +50,14 @@ LLM ทำให้ assumption นี้พัง. งานอาจดูด�
 
 **ได้อะไร:** checklist แบบ "มี test มี docs" ไม่พอ ต้องถามว่า test มาจากแหล่งที่แยกจาก code หรือเปล่า
 
+## เคสคณิตศาสตร์: proof ยังถูก แต่ไม่บอกว่าใครเข้าใจ
+
+[[3blue1brown|3Blue1Brown]] (ช่อง YouTube สอนคณิตศาสตร์) เล่าใน [[never-been-better-time-to-go-into-math-3blue1brown|วิดีโอเรื่องอนาคตของคณิตศาสตร์]] ว่าวงการคณิตศาสตร์ใช้ proof เป็นตัวแทนของความเข้าใจมาตลอด พอเครื่องสร้าง proof ได้ ตัวแทนนี้ก็ใช้วัดความเข้าใจของคนไม่ได้แล้ว
+
+เคสนี้ต่างจากเคส code ข้างบนตรงที่ proof ไม่ได้ปลอม มันยังถูกจริงและตรวจได้ ที่หายไปคือข้อมูลว่ามีคนเข้าใจมันหรือเปล่า เขาเสนอให้มอง proof เป็นข้อมูลดิบ แล้ววัดคนจากการสร้างทฤษฎีและการนำเสนอด้วยปากแทน (ดู [[proof-as-raw-data]])
+
+**ได้อะไร:** proxy พังได้สองแบบ แบบแรกคือหน้าตาดีแต่ข้างในไม่ดี แบบที่สองคือข้างในดีจริง แต่ไม่ได้บอกอะไรเกี่ยวกับคนแล้ว ทั้งสองแบบต้องหา signal ใหม่
+
 ## See also
 
 - [[ai-slop]]
@@ -60,3 +68,5 @@ LLM ทำให้ assumption นี้พัง. งานอาจดูด�
 - [[llm-text-watermarking]]
 - [[ai-text-detectors]]
 - [[teepagorn-claude-code-adoption-nobody-reading]]
+- [[proof-as-raw-data]]
+- [[never-been-better-time-to-go-into-math-3blue1brown]]

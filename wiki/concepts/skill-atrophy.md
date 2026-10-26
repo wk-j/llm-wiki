@@ -3,8 +3,8 @@ title: Skill Atrophy
 type: concept
 tags: [psychology, ai, learning]
 created: 2026-05-05
-updated: 2026-09-24
-sources: [dhh-strategies-programming-with-ai-agents-lex-clips.md, agentic-coding-trap.md, How to Keep Shipping When You Walk Away from Your Desk — Zack Proser, WorkOS.md, code-isnt-free-mario-zechner-hard-truths-coding-ai.md, teepagorn-claude-code-adoption-nobody-reading.md]
+updated: 2026-10-23
+sources: [dhh-strategies-programming-with-ai-agents-lex-clips.md, agentic-coding-trap.md, How to Keep Shipping When You Walk Away from Your Desk — Zack Proser, WorkOS.md, code-isnt-free-mario-zechner-hard-truths-coding-ai.md, teepagorn-claude-code-adoption-nobody-reading.md, never-been-better-time-to-go-into-math-3blue1brown.md]
 ---
 
 # Skill Atrophy / ภาวะทักษะถดถอย
@@ -57,6 +57,18 @@ sources: [dhh-strategies-programming-with-ai-agents-lex-clips.md, agentic-coding
 
 **ผลคือ:** skill atrophy ไม่ได้เกิดแค่ในหัวคนเดียว มันเกิดได้ที่ทางส่งต่อทักษะระหว่างรุ่นด้วย ข้อนี้ยังเป็นการคาดการณ์ ยังไม่มีข้อมูลว่า junior ในทีมแบบนี้โตช้าลงจริง
 
+## มุมจากคณิตศาสตร์: เครื่องยกได้หนักกว่า ไม่ได้ทำให้การเข้า gym ไร้ค่า
+
+[[3blue1brown|3Blue1Brown]] (ช่อง YouTube สอนคณิตศาสตร์) ใช้ภาพเปรียบที่ตอบคำถามว่า "ถ้าเครื่องทำได้ดีกว่า จะฝึกเองไปทำไม" ไว้ใน [[never-been-better-time-to-go-into-math-3blue1brown|วิดีโอเรื่องอนาคตของคณิตศาสตร์]]
+
+เขาบอกว่าการฝึกพิสูจน์เหมือนเข้า gym เครื่องยกน้ำหนักได้มากกว่าเรา แต่ประโยชน์ที่เราได้จากการยกเองยังอยู่ครบ คุณค่าชั้นนี้ต้องให้คนลงมือเองเสมอ เลยไม่ขึ้นกับว่าเครื่องเก่งแค่ไหน เขาไล่ดูทุกกรณีตั้งแต่เครื่องเก่งกว่าแค่เรื่องพิสูจน์ ไปจนถึงเก่งกว่าทุกเรื่อง ข้อนี้ไม่เปลี่ยนเลย (ดู [[career-value-stack]])
+
+ส่วนวิธีใช้ AI ตอนเรียน เขาเทียบกับตำราที่มีเฉลยท้ายเล่ม ยังทำโจทย์เองก่อน ติดเมื่อไรค่อยเปิดดู แนวนี้เข้ากับหลักของ Zack Proser ข้างบน
+
+สิ่งที่เขาเห็นว่าต้องเปลี่ยนคือวิธีฝึกและวิธีวัด "assigning and grading problem sets on its own doesn't really make sense right now" และเขาเสนอให้ย้ายไปวัดความเข้าใจจากการนำเสนอด้วยปากมากขึ้น
+
+**ผลคือ:** เหตุผลที่ต้องฝึกเองไม่ใช่เพราะเครื่องยังทำไม่ได้ แต่เพราะผลของการฝึกตกอยู่กับคนที่ฝึกเท่านั้น
+
 ## See also
 
 - [[cognitive-debt]]
@@ -69,3 +81,5 @@ sources: [dhh-strategies-programming-with-ai-agents-lex-clips.md, agentic-coding
 - [[dhh-strategies-programming-with-ai-agents-lex-clips]]
 - [[make-it-simpler]]
 - [[teepagorn-claude-code-adoption-nobody-reading]]
+- [[never-been-better-time-to-go-into-math-3blue1brown]]
+- [[career-value-stack]]
