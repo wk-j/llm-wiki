@@ -3,8 +3,8 @@ title: Comprehension Debt
 type: concept
 tags: [ai, software-engineering, code-review, cognition, agents]
 created: 2026-06-16
-updated: 2026-09-24
-sources: ["Loop Engineering..md", Agentic Code Review.md, teepagorn-claude-code-adoption-nobody-reading.md]
+updated: 2026-11-05
+sources: ["Loop Engineering..md", Agentic Code Review.md, teepagorn-claude-code-adoption-nobody-reading.md, critical-thinking-when-agents-do-the-work-osmani.md]
 ---
 
 # Comprehension Debt / หนี้ความเข้าใจ
@@ -54,6 +54,14 @@ Review เคยทำหน้าที่สองอย่างพร้อ�
 ผู้เขียนเสนอให้วัดว่า "คนในทีมยังอธิบายสิ่งที่ตัวเองส่งขึ้น production ได้ไหม" แทนการวัดอัตรา adoption
 
 **ผลคือ:** ต้องมีอย่างน้อยหนึ่งชั้นที่ไม่ได้มาจากแหล่งเดียวกับ code เช่น คนเขียน acceptance criteria เอง หรือใช้ [[behavioral-verifier|behavioral verifier]] ที่ไม่ได้อ่าน spec ของ AI
+
+## สร้างความเข้าใจกลับมาเฉพาะส่วนได้ไหม
+
+ใน [[critical-thinking-when-agents-do-the-work-osmani]] (2026-11-03) Addy ให้เครดิตคำ comprehension debt กับ Jeremy Twei และเล่าว่าทีม Claude Code สร้างความเข้าใจเฉพาะส่วนกลับมาเมื่อต้องใช้ ไม่ได้ถือ mental model ของระบบทั้งหมดไว้ตลอดเวลา นี่เป็นคำบอกเล่าของผู้เขียน ไม่ใช่ผลทดสอบว่าทุกทีมทำได้เหมือนกัน
+
+มุมนี้ไม่ได้ลบข้อกังวลจากโพสต์ของ @teepagorn ข้างบน การถาม agent จะช่วยได้ต่อเมื่อคนสร้างความเข้าใจและอธิบายผลได้จริง ถ้ายังอธิบายไม่ได้แม้ให้ agent ช่วย ก็ยังไม่ได้คืน ownership การให้ agent แจกแจงสมมติฐานและทดสอบความเข้าใจท้ายงานช่วยเช็กเส้นแบ่งนี้ได้
+
+**ผลคือ:** ไม่ต้องจำทั้ง codebase แต่ต้องรู้ช่องว่างของตัวเองและมีวิธีกู้ความเข้าใจที่ตรวจได้
 
 ## See also
 

@@ -3,13 +3,13 @@ title: Addy Osmani
 type: entity
 tags: [ai, software-engineering, web, google, agents]
 created: 2026-05-10
-updated: 2026-08-16
-sources: [Agent Harness Engineering.md, 5 Agent Design patterns for Long-running AI Agents.md, The Orchestration Tax.md, "Loop Engineering..md", Agentic Code Review.md, the-new-software-lifecycle.md]
+updated: 2026-11-05
+sources: [Agent Harness Engineering.md, 5 Agent Design patterns for Long-running AI Agents.md, The Orchestration Tax.md, "Loop Engineering..md", Agentic Code Review.md, the-new-software-lifecycle.md, critical-thinking-when-agents-do-the-work-osmani.md]
 ---
 
 # Addy Osmani
 
-[[google-cloud|Google Cloud]] / Google engineer และผู้เขียนด้าน web performance, software engineering, และ agent architecture. ใน wiki นี้ Addy สำคัญเพราะช่วยจัดภาษาของวงการ agent จาก "เลือก model" ไปสู่ "ออกแบบ runtime และ harness"
+ผู้เขียนด้าน web performance, software engineering, และ agent architecture; แหล่งเก่าบันทึกบทบาทที่ [[google-cloud|Google Cloud]] / Google ส่วนโปรไฟล์ X ที่อ่านวันที่ 2026-11-05 ระบุ Claude Code ที่ Anthropic. ใน wiki นี้ Addy สำคัญเพราะช่วยจัดภาษาของวงการ agent จาก "เลือก model" ไปสู่ "ออกแบบ runtime และ harness"
 
 ## บทบาทใน wiki นี้
 
@@ -30,6 +30,12 @@ sources: [Agent Harness Engineering.md, 5 Agent Design patterns for Long-running
 - [[coding-harness]] — prompt, tools, filesystem, sandbox, memory, hooks, subagent, และ observability รอบ model
 - [[harness-ratchet]] — ทุก mistake ของ agent ควรกลายเป็น rule/hook/test ที่กัน failure class เดิม
 - [[ai-driven-sdlc]] — วงจรพัฒนาที่เอา harness, context, output/trajectory eval และ model routing มาวางเป็นระบบเดียว
+
+## Critical thinking เมื่อ agent ทำงานแทน
+
+ใน [[critical-thinking-when-agents-do-the-work-osmani]] (2026-11-03) Addy เสนอให้รักษาการตั้งสมมติฐาน การตรวจหลักฐาน และความรับผิดชอบไว้กับคน แม้ agent จะทำทั้ง implementation และตรวจงานได้มากขึ้น เชื่อม [[cognitive-surrender]] กับ [[comprehension-debt]] โดยไม่เรียกร้องให้คนจำระบบทั้งก้อน แต่ต้องสร้างความเข้าใจเฉพาะส่วนกลับมาได้
+
+ข้อมูลโปรไฟล์ที่มากับโพสต์นี้ระบุ Claude Code ที่ Anthropic ต่างจากแหล่งเก่าในหน้านี้ที่กล่าวถึงบทบาท Google; แหล่งนี้ไม่ได้ระบุวันย้ายงาน
 
 ## See also
 

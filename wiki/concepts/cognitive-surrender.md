@@ -3,8 +3,8 @@ title: Cognitive Surrender
 type: concept
 tags: [ai, psychology, developer-experience, attention, code-review]
 created: 2026-05-29
-updated: 2026-09-24
-sources: [The Orchestration Tax.md, Agentic Code Review.md, techsauce-ai-brain-fry.md, eternal-sloptember.md, i-was-replaced-by-ai-typecraft.md, state-of-technology-and-joy-of-making-phoomparin-mano.md, teepagorn-claude-code-adoption-nobody-reading.md]
+updated: 2026-11-05
+sources: [The Orchestration Tax.md, Agentic Code Review.md, techsauce-ai-brain-fry.md, eternal-sloptember.md, i-was-replaced-by-ai-typecraft.md, state-of-technology-and-joy-of-making-phoomparin-mano.md, teepagorn-claude-code-adoption-nobody-reading.md, critical-thinking-when-agents-do-the-work-osmani.md]
 ---
 
 # Cognitive Surrender / การยอมแพ้ทางความคิด
@@ -76,6 +76,14 @@ Cognitive surrender ไม่ได้เกิดจากความขี้
 เคสนี้ต่างจาก attention หมดแบบ orchestration tax นิดหนึ่ง คนยังอ่านอยู่ แต่อ่านแล้วเชื่อหน้าตางาน ยิ่ง AI ทำงานเก่ง ยิ่งเผลออนุมัติง่าย ดู [[quality-proxy-collapse]] ในองค์กรที่เขาเล่าต่อ ปัญหาขยายเป็น "AI ตัวหนึ่งสรุปงานของ AI อีกตัวให้มนุษย์กด approve"
 
 **ผลคือ:** ความครบของ artifact อาจเร่ง surrender มากกว่าช่วยกัน ถ้าเราใช้ความครบแทนการตั้งความเห็นเอง
+
+## มุมเพิ่มเติมจาก Addy ในเดือนพฤศจิกายน 2026
+
+ใน [[critical-thinking-when-agents-do-the-work-osmani]] Addy ให้เครดิตคำ cognitive surrender กับ Steven Shaw และ Gideon Nave จาก Wharton และแยกสามขั้น: ฝากงานแต่ยังรับผิดชอบผล → เลิกมองคำตอบเป็นสมมติฐาน → รับคำตอบมาเป็นความคิดตัวเองโดยไม่ตรวจ
+
+คำอธิบายช่วงต้นหน้านี้เน้น attention หมดตามบทความเก่า แต่บทความใหม่ขยายว่า ความไว้ใจ ความสะดวก และคำตอบที่มักดูถูกต้องก็ทำให้คนลดการตรวจได้ ไม่จำเป็นต้องเหนื่อยจนหมดแรงเสมอไป ผู้เขียนเสนอให้ตั้งสมมติฐานก่อนถาม และตรวจว่าผล test พิสูจน์อะไรกับยังไม่ครอบคลุมอะไร
+
+**ผลคือ:** จำนวนงานที่รับไหวเป็นเพียงด้านหนึ่ง อีกด้านคือรู้ตัวว่าเมื่อไรเราหยุดตั้งความเห็นของตัวเอง
 
 ## See also
 

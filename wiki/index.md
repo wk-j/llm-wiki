@@ -1,6 +1,7 @@
 # Index
 
 ## Sources
+- [[critical-thinking-when-agents-do-the-work-osmani]] — Addy Osmani: ฝากงานให้ agent แต่ยังตั้งสมมติฐาน ตรวจหลักฐาน และรับผิดชอบผล; test ผ่านไม่ได้แปลว่าครอบคลุมทุกอย่าง
 - [[math-of-procedural-generation-dekwit]] — DekWit (YouTube ไทย, 2026-09-12): โลกในเกมเป็นฟังก์ชันไม่ใช่ข้อมูล; seed + LCG, seed ซ้อนชั้นของ No Man's Sky, Perlin noise, fractal noise, density function (Minecraft 1.18, ดาวทรงกลม), domain warping; Terraria สร้างโลกทีละขั้นแลกกับโลกมีขอบ; เก็บคำถามเปิดเรื่อง Minecraft ก่อน 1.18 ใช้ heightmap จริงไหม
 - [[never-been-better-time-to-go-into-math-3blue1brown]] — 3Blue1Brown (YouTube, 2026-10-16): AI ทำคณิตศาสตร์เก่งขึ้นแต่คุณค่าและเงินทุนของคณิตศาสตร์แทบไม่สะเทือน; แยกงาน/คุณค่า/เงินทุน, proof เป็นข้อมูลดิบ, ระบบเครดิตต้องเปลี่ยน, คำแนะนำให้ PhD (ฝึกพูด, เดินคุยกับเพื่อน)
 - [[what-is-codemode-armin-ronacher]] — บล็อก Armin Ronacher (2026-10-06): Pi 1.0 เพิ่ม MCP ผ่าน Codemode; bash ต่อได้แค่โปรแกรมที่รันได้ งานที่ต้องแตะ harness (รูป, subagent, model อื่น) เลยต้องมี JavaScript ใน sandbox ฝั่ง harness (QuickJS/WASM ไม่มี network/FS); แยก brain (harness) กับ hands (execution environment); ตัวอย่าง image generation, Jev จำแนก issue และขับเกม, Sentry MCP; ปัญหา Codemode ซ้อน Codemode ของ Cloudflare MCP; ขอ structured content, ผลคงที่, binary ใหญ่ และ tool search ข้าม server; durability กับ model เล็กยังค้าง
@@ -398,7 +399,7 @@
 - [[mf-piccolo]] — developer ผู้ออกแบบ iii; เขียน "The Harness is the Backend"
 - [[zed-industries]] — ทีมผู้สร้าง Zed editor กับ Agent Client Protocol (ACP)
 - [[google-cloud]] — ฝั่ง enterprise cloud ของ Google; ทำ Gemini Enterprise Agent Platform/Agent Runtime และวาง Agents CLI ให้ coding agent ทำวงจร build–eval–deploy ไป Agent Engine ได้ใน workflow เดียว โดยยังต้องเติม permission, governance และ observability ก่อนเชื่อว่า prototype พร้อม production
-- [[addy-osmani]] — ผู้เขียนด้าน software engineering และ agent architecture; เจ้าของงาน long-running agent patterns, Agent Harness Engineering, Orchestration Tax, Loop Engineering และ The New Software Lifecycle
+- [[addy-osmani]] — ผู้เขียนเรื่อง agent, harness, review และ critical thinking; แหล่งเดิมอยู่ Google ส่วนโปรไฟล์ X พฤศจิกายน 2026 ระบุ Claude Code ที่ Anthropic
 - [[birgitta-bockeler]] — engineer ที่ Thoughtworks; เขียนซีรีส์ "Exploring Gen AI" บน martinfowler.com; มอง user harness ของ coding agent เป็น control system ที่ประกอบจาก guides + sensors
 - [[thoughtworks]] — บริษัท consultancy ระดับโลก เบื้องหลัง CI/CD, evolutionary architecture, fitness functions และ Technology Radar; บ้านของงานเขียนเรื่อง harness ของ Böckeler และบล็อก Engineering the harness ที่เพิ่มด่านคนเฉพาะจุด
 - [[vtrivedy]] — นักเขียนบน X; Addy Osmani ยกเครดิตว่าเป็นคนบัญญัติคำ "harness engineering" จากสมการ Agent = Model + Harness
@@ -566,7 +567,7 @@
 - [[bitter-lesson]] — บทเรียน ML ของ Sutton (ระยะยาว compute ดิบชนะการจูนมือ); เป็น tension ในเรื่อง harness-vs-model: อย่าผูกตัวเองกับทริคของ model ตัวเดียว แต่ก็อย่านั่งรอ compute เฉยๆ — เดิมพันกับพื้นฐานและ harness ที่ไม่ยึดติดกับ agent ไหน
 - [[ralph]] — loop ต้นตำรับของ Jeffrey Huntley: while-loop รัน Claude Code ด้วย prompt เดิมซ้ำจนงานเสร็จ; จุดกำเนิดกระแส agentic loop; Pocock แย้งว่าจริงๆ มันคือ AFK agent และมองเป็น queue จะตรงกว่า
 - [[agentic-code-review]] — review code จาก agent ด้วย risk tier, intent/evidence, deterministic CI, AI sensor และ human ownership; Dillon เพิ่ม local Plannotator review ก่อน push พร้อม PR ราว 300–800 บรรทัด แต่การอ่านทุกบรรทัดยังไม่แทน verification
-- [[comprehension-debt]] — ช่องว่างระหว่างระบบทำงานจริงยังไง กับที่ทีมคิดว่ามันทำงานยังไง; โตขึ้นเรื่อยๆ เมื่อโค้ดจาก agent ไหลเร็วกว่าที่คนจะ review เก็บ intent และอัปเดต mental model ทัน
+- [[comprehension-debt]] — ช่องว่างระหว่างระบบจริงกับความเข้าใจของทีม; ต้องรู้สิ่งที่ไม่เข้าใจและสร้างความเข้าใจเฉพาะส่วนกลับมาได้
 - [[meta-harness]] — ชั้นควบคุมเหนือหลาย agent harness; ทำให้การประกอบงาน, policy แบบ stateful, การคุมต้นทุน/sandbox และ session ที่แชร์กัน เป็นมาตรฐานเดียว โดยยังสลับ model กับ harness ได้
 - [[developer-balance]] — ออกแบบ agent workflow ให้ attention สุขภาพ judgement และการเรียนรู้ยั่งยืน; นอกจากคุม WIP กับ context switch ต้องดู task mix ด้วย เพราะ implementation ที่หายอาจทำให้วันเหลือแต่ macro problem ต่อกัน
 - [[spec-driven-development]] — เขียน spec แล้วให้ agent generate code; `intent.md` แยก problem ออกจาก design และทำให้ตามรอยต้นทางง่ายขึ้น แต่ไม่ลบคำเตือนว่า prose ยังต้องให้ model ตีความ จึงต้องผูกกับ executable facts และ eval
@@ -584,7 +585,7 @@
 - [[agent-development-environment]] — "environment คือตัว product": dev environment ที่ครบคือปัจจัยใหญ่สุดต่อคุณภาพงานของ cloud agent; ของที่ขาดจะโผล่เป็นคุณภาพตกเงียบๆ (แล้วคนไปโทษ model) ไม่ใช่ crash; สุดท้ายต้องมี "enterprise IT สำหรับ agent" (redact secret, network policy, จัดการ credential)
 - [[self-healing-environments]] — ก้าวถัดจากการต้องเลือกว่าจะประคองมือหรือปล่อยเลย: ให้เครื่องมือ agent ไว้เข้าใจระบบตัวเอง รายงาน secret ที่หาย / network ที่โดนบล็อก แล้วซ่อมเองได้ ("autoinstall" ของ Cursor)
 - [[orchestration-tax]] — ช่องว่างระหว่างของที่ agent ผลิตได้กับที่คน review/merge ไหว; claim agent หลักพันยังไม่ลบภาษีถ้าไม่รู้ acceptance, defect, cost และเวลาคน วิธีแก้คือ scale fleet ตาม review rate ใช้ verifier ปิดงาน routine และเก็บ human lock ไว้กับ judgement
-- [[cognitive-surrender]] — รับโค้ดจาก agent ทั้งที่ยังไม่ได้มีความเห็นของตัวเอง เพราะ attention หมดแล้ว; เป็นอาการนำของ orchestration tax ก่อนจะโผล่บน dashboard; สะสมเป็น cognitive debt
+- [[cognitive-surrender]] — รับ output ของ AI โดยเลิกตั้งความเห็นเอง; เกิดได้ทั้งจาก attention หมดและความไว้ใจคำตอบที่ดูถูกต้อง
 - [[model-honesty]] — model ควรอ้างแค่เท่าที่หลักฐานรองรับ: ยอมรับความไม่แน่ใจ ไม่โม้ progress; จุดขายของ Opus 4.8 (ปล่อยบั๊กของตัวเองหลุดน้อยลง ~4 เท่า); เป็นยาแก้ weak-success-criteria / missed-requirement / reward-hacking
 - [[dynamic-workflows]] — research preview ของ Claude Code: algebra สำหรับประกอบ agent แบบ sequence/parallel หลาย stage; เคส Bun มี workflow/test/CI จริง ส่วนงาน Swift หลักพัน agent ยังเป็นการเดาและยังไม่เสร็จตอนสัมภาษณ์
 - [[system-in-messages]] — Claude Messages API (Opus 4.8): ใส่ `system` เข้าไปใน messages array เพื่ออัปเดตคำสั่ง / permission / token budget / environment กลางคันได้ โดยไม่พัง prompt cache และไม่ต้องปลอมเป็น user turn

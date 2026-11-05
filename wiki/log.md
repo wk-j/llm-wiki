@@ -1523,3 +1523,6 @@ User flagged `ความตึงที่ยังเปิดอยู่` a
 **เรื่องที่เก็บไว้ทั้งสองด้าน:** คลิปบอกว่า Minecraft ก่อน 1.18 ใช้ heightmap แต่ blog ของ Notch ปี 2011 เล่าว่าเปลี่ยนไปใช้ 3D noise แบบ density ตั้งแต่ช่วงแรก บันทึกเป็นคำถามเปิดใน `[[density-function-terrain]]`
 
 **Provenance:** ผู้ใช้ส่ง description และ transcript (auto-caption เพี้ยนมาก แก้ชื่อเฉพาะแล้ว) วันเผยแพร่ดึงจาก metadata หน้า YouTube สิ่งที่ตรวจแล้วคือ 2^64 (คลิปพูดผิดเป็น "18 ล้านล้าน"), `java.util.Random` ที่ใช้ seed 48 bit, noise caves ใน snapshot 21w06a และขนาดโลก Terraria ส่วนที่ยังไม่ได้ตรวจคือขนาดไฟล์ No Man's Sky กับวิธีปั้นดาวจริง ไม่ได้สร้าง entity ให้ Ken Perlin กับ Notch
+
+## [2026-11-05] ingest | Critical Thinking When Agents Do the Work
+อ่าน X Article ของ Addy Osmani ผ่าน FxTwitter API และเพิ่ม [[critical-thinking-when-agents-do-the-work-osmani]]. อัปเดต [[cognitive-surrender]], [[comprehension-debt]], [[addy-osmani]] พร้อม index และ hotcache; แยกมุมใหม่เรื่องความไว้ใจและการสร้างความเข้าใจกลับจากคำอธิบายเก่าเรื่อง attention หมด. X เปิดตรง ๆ ตอบ 403; ไม่ได้ตรวจงานวิจัยที่บทความอ้างหรือถอดภาพประกอบ.
