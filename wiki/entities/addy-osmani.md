@@ -9,7 +9,9 @@ sources: [Agent Harness Engineering.md, 5 Agent Design patterns for Long-running
 
 # Addy Osmani
 
-ผู้เขียนด้าน web performance, software engineering, และ agent architecture; แหล่งเก่าบันทึกบทบาทที่ [[google-cloud|Google Cloud]] / Google ส่วนโปรไฟล์ X ที่อ่านวันที่ 2026-11-05 ระบุ Claude Code ที่ Anthropic. ใน wiki นี้ Addy สำคัญเพราะช่วยจัดภาษาของวงการ agent จาก "เลือก model" ไปสู่ "ออกแบบ runtime และ harness"
+Addy Osmani เขียนเรื่องประสิทธิภาพเว็บ การพัฒนาซอฟต์แวร์ และการออกแบบระบบรอบ AI agent งานของเขาใน wiki นี้ช่วยอธิบายว่า การใช้ agent ให้ได้ผลต้องคิดไกลกว่าแค่เลือก model ต้องดูด้วยว่าจะจัดเครื่องมือ วิธีตรวจงาน และขั้นตอนทำงานอย่างไร
+
+แหล่งเก่าใน wiki กล่าวถึงเขาในบทบาทวิศวกรที่ Google และ [[google-cloud|Google Cloud]] ส่วนโปรไฟล์ X ที่อ่านวันที่ 2026-11-05 ระบุว่าเขาทำงานกับ Claude Code ที่ Anthropic
 
 ## บทบาทใน wiki นี้
 
@@ -31,11 +33,13 @@ sources: [Agent Harness Engineering.md, 5 Agent Design patterns for Long-running
 - [[harness-ratchet]] — ทุก mistake ของ agent ควรกลายเป็น rule/hook/test ที่กัน failure class เดิม
 - [[ai-driven-sdlc]] — วงจรพัฒนาที่เอา harness, context, output/trajectory eval และ model routing มาวางเป็นระบบเดียว
 
-## Critical thinking เมื่อ agent ทำงานแทน
+## เมื่อ agent ทำงานแทน เรายังต้องคิดเองตรงไหน
 
-ใน [[critical-thinking-when-agents-do-the-work-osmani]] (2026-11-03) Addy เสนอให้รักษาการตั้งสมมติฐาน การตรวจหลักฐาน และความรับผิดชอบไว้กับคน แม้ agent จะทำทั้ง implementation และตรวจงานได้มากขึ้น เชื่อม [[cognitive-surrender]] กับ [[comprehension-debt]] โดยไม่เรียกร้องให้คนจำระบบทั้งก้อน แต่ต้องสร้างความเข้าใจเฉพาะส่วนกลับมาได้
+ใน [[critical-thinking-when-agents-do-the-work-osmani|บทความวันที่ 2026-11-03]] Addy ชวนให้ตั้งสมมติฐานก่อนถาม AI และอ่านหลักฐานก่อนเชื่อว่างานเสร็จ แม้ agent จะช่วยทั้งเขียนโค้ดและตรวจงานได้ คนส่งงานก็ยังต้องอธิบายและรับผิดชอบผล
 
-ข้อมูลโปรไฟล์ที่มากับโพสต์นี้ระบุ Claude Code ที่ Anthropic ต่างจากแหล่งเก่าในหน้านี้ที่กล่าวถึงบทบาท Google; แหล่งนี้ไม่ได้ระบุวันย้ายงาน
+เขาเชื่อม [[cognitive-surrender|การเลิกคิดตรวจเอง]] กับ [[comprehension-debt|หนี้ความเข้าใจ]] โดยไม่ได้คาดหวังให้คนจำระบบทั้งหมด ขอให้รู้ว่าตรงไหนยังไม่เข้าใจ และกลับไปทำความเข้าใจส่วนนั้นได้เมื่อต้องใช้
+
+โปรไฟล์ที่มากับโพสต์ระบุว่าเขาทำงานกับ Claude Code ที่ Anthropic ส่วนแหล่งเก่าในหน้านี้กล่าวถึงบทบาทที่ Google ยังไม่ทราบวันย้ายงานจากแหล่งนี้
 
 ## See also
 

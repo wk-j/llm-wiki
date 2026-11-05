@@ -1526,3 +1526,6 @@ User flagged `ความตึงที่ยังเปิดอยู่` a
 
 ## [2026-11-05] ingest | Critical Thinking When Agents Do the Work
 อ่าน X Article ของ Addy Osmani ผ่าน FxTwitter API และเพิ่ม [[critical-thinking-when-agents-do-the-work-osmani]]. อัปเดต [[cognitive-surrender]], [[comprehension-debt]], [[addy-osmani]] พร้อม index และ hotcache; แยกมุมใหม่เรื่องความไว้ใจและการสร้างความเข้าใจกลับจากคำอธิบายเก่าเรื่อง attention หมด. X เปิดตรง ๆ ตอบ 403; ไม่ได้ตรวจงานวิจัยที่บทความอ้างหรือถอดภาพประกอบ.
+
+## [2026-11-05] edit | Natural Thai wording for Osmani critical thinking
+เรียบเรียง [[critical-thinking-when-agents-do-the-work-osmani]] ใหม่ตามที่ผู้ใช้ขอ ให้เป็นภาษาไทยที่อ่านเป็นธรรมชาติ พร้อมปรับส่วนที่เพิ่งเพิ่มใน [[cognitive-surrender]], [[comprehension-debt]] และ [[addy-osmani]]. คงสาระ ลิงก์อ้างอิง และข้อจำกัดของแหล่งข้อมูลไว้ พร้อมปรับ index และ hotcache.
