@@ -3,8 +3,8 @@ title: OpenAI
 type: entity
 tags: [ai, labs, models, organizations]
 created: 2026-04-24
-updated: 2026-10-23
-sources: [piyalitt-gpt-5-5-launch.md, microsoft-openai-partnership-2026.md, ryan-lopopolo-harness-engineering.md, https://openai.com/index/introducing-genebench-pro/, how-perplexity-lost-ai-war.md, how-ai-became-more-expensive-than-workers-it-replaced.md, piyalitt-codex-keynote-attention-not-token.md, claude-text-watermarking-squintist.md, never-been-better-time-to-go-into-math-3blue1brown.md]
+updated: 2026-11-06
+sources: [piyalitt-gpt-5-5-launch.md, microsoft-openai-partnership-2026.md, ryan-lopopolo-harness-engineering.md, https://openai.com/index/introducing-genebench-pro/, how-perplexity-lost-ai-war.md, how-ai-became-more-expensive-than-workers-it-replaced.md, piyalitt-codex-keynote-attention-not-token.md, claude-text-watermarking-squintist.md, never-been-better-time-to-go-into-math-3blue1brown.md, introducing-gpt-6-cyber-openai.md]
 ---
 
 # OpenAI / โอเพนเอไอ
@@ -85,6 +85,10 @@ AI lab ในสหรัฐฯ — สร้าง ChatGPT, ตระกูล 
 
 - **OpenAI Codex Community** ในไทยโปรโมทโดย [[piyalitt-ittichaiwong|Piyalitt]]
 - **Hackathon OpenAI × สมาคมปัญญาประดิษฐ์ประเทศไทย** (2026-04-25, credit รวมเป็นล้าน)
+
+## โมเดลเฉพาะทางด้านความปลอดภัยไซเบอร์
+
+[[gpt-6-cyber|GPT-6 Cyber]] เป็นรุ่นที่ฝึกต่อจาก GPT-6 Astra สำหรับงานตรวจความปลอดภัยที่ได้รับอนุญาต ดู [[introducing-gpt-6-cyber-openai|ประกาศและข้อจำกัดของผลทดสอบ]] สำหรับรายละเอียด โดยแยกความสามารถในการหาช่องโหว่ออกจากความน่าเชื่อถือในการทำตามขอบเขตงาน
 
 ## ดูเพิ่ม
 

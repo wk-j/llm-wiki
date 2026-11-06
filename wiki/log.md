@@ -1529,3 +1529,6 @@ User flagged `ความตึงที่ยังเปิดอยู่` a
 
 ## [2026-11-05] edit | Natural Thai wording for Osmani critical thinking
 เรียบเรียง [[critical-thinking-when-agents-do-the-work-osmani]] ใหม่ตามที่ผู้ใช้ขอ ให้เป็นภาษาไทยที่อ่านเป็นธรรมชาติ พร้อมปรับส่วนที่เพิ่งเพิ่มใน [[cognitive-surrender]], [[comprehension-debt]] และ [[addy-osmani]]. คงสาระ ลิงก์อ้างอิง และข้อจำกัดของแหล่งข้อมูลไว้ พร้อมปรับ index และ hotcache.
+
+## [2026-11-06] ingest | Introducing GPT-6 Cyber
+เพิ่ม [[introducing-gpt-6-cyber-openai]] และ [[gpt-6-cyber]] จากประกาศ OpenAI พร้อมตรวจ system card บางส่วนและประกาศแก้ไข Firefox ของ Mozilla. อัปเดต [[openai]], [[model-cyber-capability-emergence]], index และ hotcache; ปรับข้อสรุปเหมารวมเรื่อง emergence โดยคงที่มาของกรณี Mythos. คะแนนยังเป็นผลที่ผู้พัฒนารายงาน ไม่ได้รันทดสอบเอง.

@@ -1,6 +1,7 @@
 # Index
 
 ## Sources
+- [[introducing-gpt-6-cyber-openai]] — OpenAI เปิดตัวโมเดลหาช่องโหว่ที่ฝึกให้ทำตามขอบเขต พร้อมผลทดสอบ เงื่อนไขเข้าถึง และข้อจำกัดจาก system card
 - [[critical-thinking-when-agents-do-the-work-osmani]] — Addy Osmani: ยิ่ง AI ทำงานเก่ง เรายิ่งเผลอเชื่อตามง่าย; ตั้งความเห็นก่อนถาม และดูว่า test ตรวจอะไรจริง
 - [[math-of-procedural-generation-dekwit]] — DekWit (YouTube ไทย, 2026-09-12): โลกในเกมเป็นฟังก์ชันไม่ใช่ข้อมูล; seed + LCG, seed ซ้อนชั้นของ No Man's Sky, Perlin noise, fractal noise, density function (Minecraft 1.18, ดาวทรงกลม), domain warping; Terraria สร้างโลกทีละขั้นแลกกับโลกมีขอบ; เก็บคำถามเปิดเรื่อง Minecraft ก่อน 1.18 ใช้ heightmap จริงไหม
 - [[never-been-better-time-to-go-into-math-3blue1brown]] — 3Blue1Brown (YouTube, 2026-10-16): AI ทำคณิตศาสตร์เก่งขึ้นแต่คุณค่าและเงินทุนของคณิตศาสตร์แทบไม่สะเทือน; แยกงาน/คุณค่า/เงินทุน, proof เป็นข้อมูลดิบ, ระบบเครดิตต้องเปลี่ยน, คำแนะนำให้ PhD (ฝึกพูด, เดินคุยกับเพื่อน)
@@ -161,6 +162,7 @@
 - [[agent-client-protocol-docs]] — เอกสารทางการของ Agent Client Protocol (ACP): มาตรฐานเปิดให้ editor คุยกับ AI agent ผ่าน JSON-RPC 2.0 บน stdio (remote ผ่าน HTTP/WebSocket ยังทำอยู่) และใช้ JSON ของ MCP ซ้ำได้; ครอบ initialization, session และ prompt turn
 
 ## Entities
+- [[gpt-6-cyber]] — รุ่นที่ฝึกต่อจาก GPT-6 Astra สำหรับงานตรวจความปลอดภัยที่ได้รับอนุญาต
 - [[dekwit]] — ช่อง YouTube ไทยสายวิทยาศาสตร์และเทคโนโลยี; อธิบายคณิตศาสตร์ด้วยภาพเปรียบใกล้ตัว; ที่มาของ ingest เรื่อง procedural generation
 - [[minecraft]] — เกม sandbox แบบบล็อก; ตัวอย่างหลักของโลกเป็นฟังก์ชัน: seed + LCG (m = 2^48), slime chunk, ถ้ำจาก noise ใน 1.18, โลกไม่มีขอบเลยต้องถามพิกัดได้ทันที
 - [[no-mans-sky]] — เกมสำรวจอวกาศที่มีดาว 2^64 ดวงจาก seed 64 bit; seed ซ้อนชั้นจักรวาล→galaxy→ระบบสุริยะ→ดาว; ปั้นดาวทรงกลมด้วย noise แบบรัศมีแล้วต่อด้วย density
@@ -726,7 +728,7 @@
 - [[mixture-of-experts]] — MoE: route token ไปหา subnetwork บางส่วนเพื่อลด active compute; ตัวอย่างตั้งแต่ Mellum2/LongCat ถึง claim Kimi K3 3T ที่มี 896 experts และใช้ 16 ต่อ token แต่ยังใหญ่ระดับ enterprise
 - [[mla-attention]] — Multi-head Latent Attention: เทคนิคของ DeepSeek ที่ย่อขนาด KV cache
 - [[model-choice-by-expertise]] — heuristic เลือก model: เราเชี่ยวชาญโดเมนเองอยู่แล้ว Sonnet ก็พอ; ไม่รู้เรื่องเลยค่อยจ่ายค่า Opus
-- [[model-cyber-capability-emergence]] — ความสามารถ offensive/defensive cyber โผล่เป็นผลพลอยได้ของ intelligence ทั่วไป; กรอบ Demis Hassabis เพิ่มข้อเสนอให้ pre-release test capability ที่ไม่ได้ถูกโฆษณา รวม guardrail bypass/deception
+- [[model-cyber-capability-emergence]] — ความสามารถด้านไซเบอร์อาจมาพร้อมทักษะทั่วไปหรือเพิ่มด้วยการฝึกเฉพาะทาง ต้องแยกหลักฐานแต่ละกรณี
 - [[open-weight-models]] — model ที่แจก weights แต่ไม่จำเป็นต้อง open source เต็มตัว; Kimi K3 เพิ่มโจทย์ว่า model อาจ open และ frontier แต่ยังใหญ่เกิน local consumer ทำให้ privacy/post-training benefit กระจุกกับองค์กรที่มี compute
 - [[playback-pattern]] — ท่า alignment: ให้ agent ทวนก่อนลงมือ ว่าอะไรคือ "Stated, Inferred, Out-of-scope"
 - [[plugin-manager]] — เครื่องมือจัดการ lifecycle, version และ dependency ของ extension; ใน agent harness ยังต้องผูก contribution เข้ากับ plugin เพื่อ rebuild live state เมื่อเพิ่ม แก้ หรือลบไฟล์

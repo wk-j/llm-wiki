@@ -3,8 +3,8 @@ title: Model Cyber Capability Emergence
 type: concept
 tags: [ai, cybersecurity, emergence, ai-safety, anthropic]
 created: 2026-04-22
-updated: 2026-07-15
-sources: [Claude Mythos Preview.md, framework-frontier-ai-dawning-new-age.md]
+updated: 2026-11-06
+sources: [Claude Mythos Preview.md, framework-frontier-ai-dawning-new-age.md, introducing-gpt-6-cyber-openai.md]
 ---
 
 # Model Cyber Capability Emergence / ความสามารถด้าน cybersecurity ที่เกิดขึ้นเองจากโมเดล
@@ -13,7 +13,7 @@ sources: [Claude Mythos Preview.md, framework-frontier-ai-dawning-new-age.md]
 
 [[claude-mythos-preview|Claude Mythos Preview]] หา zero-day + เขียน exploit ได้ทุก OS ทุก browser อัตโนมัติ — **โดยไม่ได้ฝึกไว้เฉพาะเรื่อง security เลย** ความสามารถนี้ *emerged* ออกมาเองจากการที่โมเดลเก่งขึ้นทั่วไปในด้าน code / reasoning / autonomy
 
-ผลคือ: ต่อไปนี้ทุก frontier model ที่เก่งขึ้น จะเก่ง security ขึ้นด้วยโดยอัตโนมัติ — ทั้ง defensive (หา bug แก้) และ offensive (เขียน exploit) ไม่มีทางเลือกได้อย่าง
+ข้อสังเกตจากกรณี Mythos คือ ความสามารถด้านหาและใช้ช่องโหว่อาจพัฒนามาพร้อมทักษะเขียนโค้ดและให้เหตุผล แม้ไม่ได้ฝึกเรื่องนี้โดยเฉพาะ แต่กรณีเดียวไม่ได้ยืนยันว่า frontier model ทุกตัวจะพัฒนาแบบเดียวกัน
 
 ## เกิดอะไรขึ้นกับ Mythos Preview
 
@@ -64,9 +64,15 @@ Opus 4.6 "far better at identifying and fixing vulnerabilities than at exploitin
 
 **ผลคือ:** emergence ทำให้ test ตาม feature list ไม่พอ ต้องประเมิน capability ที่ model ไม่ได้ถูกโฆษณาว่ามีด้วย.
 
+## กรณีที่ฝึกเฉพาะทางเพิ่มเติม
+
+[[gpt-6-cyber|GPT-6 Cyber]] ต่างจากกรณี Mythos ที่หน้านี้อ้างว่าไม่ได้ฝึกด้านนี้โดยเฉพาะ: [system card](https://deploymentsafety.openai.com/gpt-6-cyber) ระบุว่ามีการฝึกต่อทั้งการหาช่องโหว่และการทำตามขอบเขตที่อนุญาต ดู [[introducing-gpt-6-cyber-openai]]
+
+จึงควรแยกความสามารถที่ติดมากับ model ทั่วไปออกจากผลของการฝึกเฉพาะทาง และไม่ใช้หลักฐานกรณีเดียวสรุปว่า model ทุกตัวจะพัฒนาเหมือนกัน ส่วนคะแนนไม่ออกนอกขอบเขตในห้องทดสอบก็ยังไม่ใช่เหตุให้เลิกจำกัดสิทธิ์ของเครื่องมือ
+
 ## ได้อะไร
 
-Offensive cyber capability ไม่ใช่ feature ที่ต้อง build แยก — มันเป็น **inevitable side effect** ของการทำโมเดลให้เก่งขึ้นทั่วไป. ทางเลือกไม่ใช่ "จะ train ให้เก่ง security ไหม" แต่เป็น "จะควบคุม/ปล่อยยังไง" — ซึ่งตรงกับที่ [[agent-runtime-untrusted]] บอก: scope by construction, don't rely on model restraint.
+ความสามารถด้านโจมตีอาจเกิดขึ้นแม้ไม่ได้ฝึกแยก และอาจพัฒนาเพิ่มด้วยการฝึกเฉพาะทางอย่าง GPT-6 Cyber สิ่งที่ต้องประเมินจึงมีทั้งความสามารถจริงและวิธีคุมการใช้งาน ตามหลัก [[agent-runtime-untrusted]] ควรจำกัดสิทธิ์ผ่านระบบ ไม่ฝากไว้กับการยับยั้งตัวเองของ model เพียงอย่างเดียว
 
 ## See also
 

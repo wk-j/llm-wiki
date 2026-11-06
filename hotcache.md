@@ -4,12 +4,12 @@ title: Hotcache
 
 # Hotcache
 
-Last updated: 2026-11-05 (Thai prose revision for Osmani critical thinking)
+Last updated: 2026-11-06 (ingest GPT-6 Cyber)
 
 Read this first each session. **Keep it under ~120 lines**: Recent activity holds the last 5 entries at 2–3 lines each, and the oldest drops off when a new one goes in. Full history lives in `wiki/log.md` and git.
 
 <!-- stats:start -->
-- **Pages:** 158 sources · 311 concepts · 288 entities · 0 analysis
+- **Pages:** 159 sources · 311 concepts · 289 entities · 0 analysis
 <!-- stats:end -->
 
 ## Working fast
@@ -50,8 +50,8 @@ Mostly AI-assisted software engineering, plus a few side clusters.
 
 ## Recent activity (last 5)
 
+- **2026-11-06 ingest** `[[introducing-gpt-6-cyber-openai]]` and `[[gpt-6-cyber]]` — OpenAI announcement plus selected system-card checks and Mozilla fix advisory. Updated OpenAI and cyber-emergence concept; benchmark scope and deployment limitations kept explicit.
 - **2026-11-05 edit** `[[critical-thinking-when-agents-do-the-work-osmani]]` — Rewrote the source and newly added related-page sections in natural Thai at user request; retained source claims and provenance.
 - **2026-11-05 ingest** `[[critical-thinking-when-agents-do-the-work-osmani]]` — Addy: delegate work, retain judgment; inspect test evidence and rebuild local understanding. Updated `[[cognitive-surrender]]`, `[[comprehension-debt]]`, `[[addy-osmani]]`; X article text retrieved via FxTwitter API (direct X returned 403).
 - **2026-10-26 ingest** `[[math-of-procedural-generation-dekwit]]` — DekWit (Thai YouTube): a game world is a function, not data. New `[[procedural-generation]]` plus 5 technique concepts and entities `[[minecraft]]`, `[[no-mans-sky]]`, `[[terraria]]`, `[[dekwit]]`. Open question in `[[density-function-terrain]]`: video says pre-1.18 Minecraft used a heightmap; Notch's 2011 blog says 3D density noise came early.
 - **2026-10-23 ingest** `[[never-been-better-time-to-go-into-math-3blue1brown]]` — 3Blue1Brown: if machines beat mathematicians step by step, value and funding barely move; credit assignment changes. New `[[proof-as-raw-data]]`, `[[career-value-stack]]`, `[[3blue1brown]]`. Open question kept in `[[ai-slop]]`: will model output get cleaner (3B1B) or not (`[[make-it-simpler]]`, `[[eternal-sloptember]]`).
-- **2026-10-11 maintenance** — cut this file from ~101 KB to under 8 KB; added `scripts/wiki.py`; backfilled 12 pages missing from the index; created `[[vercel]]` (the index pointed to it, but the page didn't exist); escaped 4 table pipes; fixed leaked words in `[[ai-3d-workflow]]` and `[[claude-opus-4-7]]`; added dates to 2 old sources.
