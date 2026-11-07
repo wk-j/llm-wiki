@@ -3,13 +3,13 @@ title: Dreaming
 type: concept
 tags: [agent-memory, anthropic, multi-agent, batch-process, self-learning]
 created: 2026-05-09
-updated: 2026-06-26
-sources: [memory-and-dreaming-self-learning-agents, Self Learning for Agents Clearly Explained.md]
+updated: 2026-11-07
+sources: [memory-and-dreaming-self-learning-agents, Self Learning for Agents Clearly Explained.md, components-of-agent-memory-anthropic.md]
 ---
 
 # Dreaming / การฝัน (กระบวนการจัด memory นอก session)
 
-**Dreaming** คือ batch process ที่ [[anthropic|Anthropic]] เปิด research preview ใน [[claude-managed-agents|Claude Managed Agents API]] วันที่ 2026-05-09 หน้าที่ของมันคืออ่าน transcript ของ agent หลายตัวจากช่วงที่ผ่านมา แล้วอัปเดต **memory store** ให้สด — ทำงาน **นอก hot path** ของ agent ตัวจริง ไม่เพิ่ม latency
+**Dreaming** คือการทบทวนและจัดความจำของ agent นอกงานหลัก หน้านี้เริ่มจาก talk เดือน พ.ค. 2026 ของ [[anthropic|Anthropic]] บริษัทผู้สร้าง Claude ซึ่งอธิบายฟีเจอร์ชื่อเดียวกันใน [[claude-managed-agents|Claude Managed Agents API]] แพลตฟอร์มรัน agent แบบ managed รายละเอียดสถานะและกลไกด้านล่างอ้างอิงช่วงนั้น ส่วนบทความเดือน พ.ย. ขยายภาพไปถึงการจัดความจำหลายชั้น
 
 ชื่อ "dreaming" สื่อถึงการที่มนุษย์นอนหลับแล้วสมอง consolidate ความจำ — ระหว่างที่ agent "ตื่น" ทำงาน memory ก็ถูก dreaming "ฝัน" ทบทวนในเบื้องหลัง
 
@@ -89,6 +89,14 @@ Memory คือ primitive ระดับล่าง ส่วน dreaming เ
 - **[[anthropic|Anthropic]] dreaming** (หน้านี้) — เวอร์ชันที่เด่นเรื่อง **cross-agent**: อ่าน transcript หลาย agent พร้อมกัน ไม่ใช่แค่ memory ของ agent เดียว
 
 แก่นร่วมที่ thread สรุปได้คม: **weight ชั่วคราว แต่ text อยู่ถาวร** — memory ที่ dreaming จัดเป็น text จึงย้ายข้าม model ได้และ roll back ได้ ต่างจาก fine-tune ที่ฝังความรู้ลง weight
+
+## หลักฐานเพิ่มเติมและความหมายที่กว้างขึ้น (พ.ย. 2026)
+
+[[components-of-agent-memory-anthropic|บทความใหม่ของ Anthropic]] ใช้ dreaming เป็นแนวทางทบทวนความจำที่กว้างกว่าชื่อฟีเจอร์ Managed Agents ด้านบน มันทำได้ทั้งแก้บันทึกจาก transcript สร้าง wiki และเลือกสิ่งที่โหลดเข้า session ถัดไป ดู [[agent-memory-hierarchy|ลำดับชั้นของ memory]]
+
+ผลทดลองช่วยเพิ่มเงื่อนไขให้คำอธิบายเดิม: ทำเบื้องหลังแล้วไม่ขวางงานหลัก แต่ยังเสีย compute และอาจส่งความรู้กลับมาไม่ทันใช้ ส่วน wiki ไม่ได้ช่วยทุกงาน โดยเฉพาะเมื่อค้นคำตอบจากเอกสารเดียวได้อยู่แล้ว
+
+**ผลคือ:** ต้องวัดงานปลายทางและต้นทุนรวม ไม่ใช่นับว่าทบทวนไปกี่รอบหรือสร้างกี่หน้า
 
 ## See also
 

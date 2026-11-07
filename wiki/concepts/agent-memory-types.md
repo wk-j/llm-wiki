@@ -3,8 +3,8 @@ title: Agent Memory Types (Semantic / Episodic / Procedural)
 type: concept
 tags: [ai, agents, agent-memory, context-engineering, self-learning]
 created: 2026-06-26
-updated: 2026-07-04
-sources: [Self Learning for Agents Clearly Explained.md, stop-building-ai-agents-old-way.md]
+updated: 2026-11-07
+sources: [Self Learning for Agents Clearly Explained.md, stop-building-ai-agents-old-way.md, components-of-agent-memory-anthropic.md]
 ---
 
 # Agent Memory Types / memory ของ agent มี 3 ชนิด
@@ -55,6 +55,12 @@ procedural memory คือจุดที่ [[learning-from-users|การเ
 - **[[memory-decay]]** / **[[memory-drift]]** — ปัญหา staleness และ drift ของ memory ที่สะสม
 - **[[learning-from-users]]** — ที่มาของ procedural memory คุณภาพสูง
 - **[[session-mining]]** — วิธีขุด run เก่าเพื่อกลั่น episodic memory เป็น procedural rule
+
+## ชนิดของ memory กับชั้นที่เก็บเป็นคนละแกน
+
+[[agent-memory-hierarchy|ลำดับชั้น memory]] จาก [[components-of-agent-memory-anthropic|บทความของ Anthropic]] แบ่งเป็นประวัติ บันทึก แผนที่ความรู้ และ context ที่โหลดล่วงหน้า กรอบนั้นถามว่า agent เข้าถึงความรู้ผ่านอะไร ส่วน semantic / episodic / procedural ถามว่าความรู้นั้นเป็นเรื่องแบบไหน
+
+**ได้อะไร:** กฎ procedural ข้อเดียวอาจปรากฏหลายชั้นได้ และต้องตามแก้ทุกจุดที่สำคัญเมื่อพบว่ากฎผิด
 
 ## See also
 

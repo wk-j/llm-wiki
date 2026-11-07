@@ -3,8 +3,8 @@ title: LLM Knowledge Bases
 type: concept
 tags: [llm, knowledge-management, obsidian, workflow, meta]
 created: 2026-04-12
-updated: 2026-04-23
-sources: [LLM Knowledge Bases Thread by @karpathy.md, "Karpathy's LLM Wiki The Complete Guide to His Idea File.md"]
+updated: 2026-11-07
+sources: [LLM Knowledge Bases Thread by @karpathy.md, "Karpathy's LLM Wiki The Complete Guide to His Idea File.md", components-of-agent-memory-anthropic.md]
 ---
 
 # LLM Knowledge Bases / ฐานความรู้ที่ดูแลโดย LLM
@@ -13,7 +13,7 @@ sources: [LLM Knowledge Bases Thread by @karpathy.md, "Karpathy's LLM Wiki The C
 
 Wiki นี้คือการ implement รูปแบบนี้ รูปแบบนี้ถูกอธิบายไว้ในรูปแบบ [[idea-file]] โดย [[andrej-karpathy]] ใน GitHub gist (เม.ย. 2026)
 
-## ทำไม wiki ถึงดีกว่า RAG
+## ข้อเสนอเดิม: wiki สะสมสิ่งที่การค้นแต่ละรอบพบ
 
 ประสบการณ์ส่วนใหญ่ของผู้คนกับ LLM และเอกสารคือ RAG: อัปโหลดไฟล์, ดึงข้อมูลเป็นส่วนๆ (chunks) ตอน query, แล้วสร้างคำตอบ ปัญหาคือ: "LLM ค้นพบความรู้ใหม่ตั้งแต่ต้นในทุกคำถาม ไม่มีการสะสม"
 
@@ -59,6 +59,16 @@ Wiki นี้คือการ implement รูปแบบนี้ รูป
 - เล็ก (< 50 แหล่งข้อมูล): ไฟล์ index เพียงพอสำหรับการนำทาง
 - ปานกลาง (~100 แหล่งข้อมูล, ~400K คำ): ยังคงทำงานได้กับไฟล์ index ตามที่ [[andrej-karpathy]] กล่าวไว้
 - ใหญ่: อาจต้องใช้ search engine — **qmd** (โดย Tobi Lütke, CEO ของ Shopify): การค้นหาแบบ hybrid BM25/vector/LLM-reranked, รันบนเครื่อง, มี CLI และ MCP server
+
+## หลักฐานใหม่: wiki เสริมการค้น ไม่ได้ชนะทุกงาน
+
+[[components-of-agent-memory-anthropic|Anthropic รายงานการทดลองเดือน พ.ย. 2026]] ว่า wiki ร่วมกับการค้นเอกสารให้ผลดีกว่าใช้แต่ละอย่างแยกกันในชุดคำถามภายในชุดหนึ่ง แต่เมื่อโจทย์ค้นจากเอกสารเดียวได้ ก็ไม่เห็นประโยชน์ชัด บาง wiki ยังโตจนใหญ่กว่าต้นฉบับด้วย
+
+ตรงนี้จำกัดข้อเสนอเดิมเรื่อง wiki เทียบกับ RAG: ตารางด้านบนอธิบายแนวคิดของ Karpathy ไม่ใช่ผลพิสูจน์ว่า wiki ดีกว่าทุกระบบค้นเอกสาร ต้องดูว่ามีงานเชื่อมหลายแหล่งให้ใช้ซ้ำมากพอจะคุ้มค่าดูแลหรือไม่
+
+มอง wiki เป็นชั้นหนึ่งใน [[agent-memory-hierarchy|ลำดับชั้นความจำ]] จะช่วยให้ยังเก็บทางกลับไปตรวจต้นฉบับ และใช้ [[dreaming|การทบทวนเบื้องหลัง]] แก้ข้อผิดพลาดกับลิงก์ที่ขาด
+
+**ได้อะไร:** เลือกใช้ wiki ในงานที่ได้ประโยชน์จากความรู้ที่เชื่อมไว้แล้ว โดยไม่ตัดความสามารถค้นแหล่งเดิมทิ้ง
 
 ## ความเชื่อมโยงทางประวัติศาสตร์
 

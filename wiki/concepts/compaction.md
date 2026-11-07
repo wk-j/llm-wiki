@@ -3,8 +3,8 @@ title: Compaction
 type: concept
 tags: [ai, context-management, claude-code, productivity]
 created: 2026-04-16
-updated: 2026-06-29
-sources: [Using Claude Code Session Management & 1M Context.md, matt-pocock-dumb-zone-compaction.md]
+updated: 2026-11-07
+sources: [Using Claude Code Session Management & 1M Context.md, matt-pocock-dumb-zone-compaction.md, components-of-agent-memory-anthropic.md]
 ---
 
 # Compaction / การย่อประวัติการสนทนา
@@ -48,6 +48,12 @@ Compaction และ `/clear` ทั้งคู่ลดน้ำหนัก�
 จุดสำคัญคือ compact ควรทำที่ **phase boundary** เช่น หลัง research จบ, หลัง debug เจอสาเหตุ, หรือหลังตัดสิน architecture แล้ว. ถ้า compact กลางความสับสน summary อาจเก็บ assumption ผิดและทิ้ง signal สำคัญ.
 
 ได้อะไร: `/compact` ที่ดีไม่ใช่แค่ลด token. มันเปลี่ยน transcript รก ๆ ให้เป็น task state ที่ agent ใช้ต่อได้.
+
+## ต่างจาก memory ที่ใช้ข้าม session อย่างไร
+
+[[components-of-agent-memory-anthropic|Anthropic แยกสองเรื่องนี้ไว้ชัดในบทความเดือน พ.ย. 2026]]: compaction ย่อประวัติเพื่อทำงานเดิมต่อ ส่วน agent memory ในบทความหมายถึงความรู้จากประสบการณ์ที่เก็บให้ session อื่นใช้ได้ ความรู้แบบหลังอาจผ่าน [[dreaming|การทบทวนเบื้องหลัง]] แล้วจัดลง [[agent-memory-hierarchy|memory หลายชั้น]]
+
+**ได้อะไร:** เวลาออกแบบระบบต้องตัดสินใจทั้งว่าจะส่งต่องานค้างอย่างไร และจะเก็บบทเรียนใดไว้ใช้กับงานถัดไป
 
 ## ดูเพิ่ม
 

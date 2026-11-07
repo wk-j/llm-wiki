@@ -3,8 +3,8 @@ title: Claude Managed Agents
 type: entity
 tags: [anthropic, agent-platform, managed-service, api]
 created: 2026-05-09
-updated: 2026-05-09
-sources: [memory-and-dreaming-self-learning-agents]
+updated: 2026-11-07
+sources: [memory-and-dreaming-self-learning-agents, components-of-agent-memory-anthropic.md]
 ---
 
 # Claude Managed Agents / Claude Managed Agents API
@@ -48,6 +48,12 @@ Trigger ผ่าน console (cron) หรือ API (event) ผลลัพธ�
 
 - **[[gemini-enterprise-agent-platform|Google Cloud Agent Runtime]]** — โฟกัส 7-day long-running, Memory Bank/Profiles เป็น layer แยก, governance triad (Identity/Registry/Gateway)
 - **OpenAI Managed Agents** (ถ้ามี) — ยังไม่ได้ map เข้ามาใน wiki นี้
+
+## การใช้ในงานทดสอบ memory (พ.ย. 2026)
+
+[[components-of-agent-memory-anthropic|บทความ The Components of Agent Memory]] ใช้ Managed Agents รันงานฐานข้อมูลของ CL-Bench 1.0 โดยเริ่ม session ใหม่ทุกคำถาม และส่งต่อโฟลเดอร์ memory ผลจึงช่วยดูว่าบทเรียนจากรอบก่อนมีประโยชน์หรือไม่ โดยไม่พึ่งประวัติใน context เดิม
+
+บทความยังแยก [[agent-memory-hierarchy|ชั้นของ memory]] ออกจากกลไกจัดเก็บและ [[dreaming|การทบทวนเบื้องหลัง]] ข้อมูลนี้เพิ่มกรณีใช้งาน แต่ไม่ได้ยืนยันใหม่ว่าสถานะ beta/preview ในหัวข้อเดือน พ.ค. ด้านบนยังเหมือนเดิม
 
 ## See also
 

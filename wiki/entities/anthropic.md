@@ -3,8 +3,8 @@ title: Anthropic
 type: entity
 tags: [company, ai, ai-safety, claude]
 created: 2026-04-16
-updated: 2026-09-14
-sources: [Introducing Claude Opus 4.7.md, The advisor strategy Give Sonnet an intelligence boost with Opus.md, Using Claude Code Session Management & 1M Context.md, opencode-vs-claude-code-morph.md, Claude Mythos Preview.md, improved-15-llms-harness-changed.md, Piyalitt Ittichaiwong - Opus 4.8 Launch Recap.md, how-ai-became-more-expensive-than-workers-it-replaced.md, claude-in-microsoft-foundry.md, bun-in-rust.md, bringing-mcp-2026-07-28-to-claude.md, claude-text-watermarking-squintist.md, claude-codes-new-intent-md-rob-shocks.md, boris-cherny-cut-80-percent-claude-code-prompt.md, ai-native-sdlc-playbook.md]
+updated: 2026-11-07
+sources: [Introducing Claude Opus 4.7.md, The advisor strategy Give Sonnet an intelligence boost with Opus.md, Using Claude Code Session Management & 1M Context.md, opencode-vs-claude-code-morph.md, Claude Mythos Preview.md, improved-15-llms-harness-changed.md, Piyalitt Ittichaiwong - Opus 4.8 Launch Recap.md, how-ai-became-more-expensive-than-workers-it-replaced.md, claude-in-microsoft-foundry.md, bun-in-rust.md, bringing-mcp-2026-07-28-to-claude.md, claude-text-watermarking-squintist.md, claude-codes-new-intent-md-rob-shocks.md, boris-cherny-cut-80-percent-claude-code-prompt.md, ai-native-sdlc-playbook.md, components-of-agent-memory-anthropic.md]
 ---
 
 # Anthropic
@@ -123,6 +123,12 @@ Anthropic ได้บล็อก [[opencode|OpenCode]] ไม่ให้ใ�
 **อัปเดต timeline (28 พ.ค. 2026, จากบทความเปิดตัว [[claude-opus-4-8|Opus 4.8]]):** Anthropic บอกว่ากำลังทำสองทางต่อ — (1) โมเดลความสามารถใกล้ Opus แต่ราคาถูกลง, และ (2) โมเดลที่ **ฉลาดกว่า Opus** (ระดับ Mythos) ตอนนี้องค์กรจำนวนหนึ่งใช้ [[claude-mythos-preview|Mythos Preview]] สำหรับงาน cybersecurity อยู่แล้วภายใต้ [[project-glasswing|Project Glasswing]] และการพัฒนามาตรการป้องกัน cyber ที่จำเป็น "คืบหน้าอย่างรวดเร็ว" คาดว่าจะ **นำโมเดลระดับ Mythos มาให้ลูกค้าทุกคนได้ภายในไม่กี่สัปดาห์ข้างหน้า** (เดิมบอกแค่ว่าจะปล่อยมาตรการป้องกันใหม่ "พร้อม Opus model ที่กำลังจะมาถึง" ซึ่งก็คือ Opus 4.8 นี่เอง)
 
 [[project-glasswing|Project Glasswing]] (ที่เปิดตัวพร้อม [[claude-mythos-preview|Mythos Preview]]) คือหน่วยปฏิบัติการของกลยุทธ์นี้: Mythos Preview จะค้นหาช่องโหว่ในซอฟต์แวร์ที่สำคัญในสเกลใหญ่, ประสานงานการเปิดเผยข้อมูลอย่างรับผิดชอบ (responsible disclosure), และแบ่งปันการเข้าถึงให้กับพาร์ทเนอร์ที่ผ่านการตรวจสอบแล้ว ในบล็อกระบุว่าความพยายามนี้เป็น "ช่วงเวลาแห่งการเปลี่ยนแปลง" — ความสามารถด้าน cyber เกิดขึ้นมาเองโดยไม่ได้ตั้งใจฝึก แต่เป็นผลพลอยได้จากการพัฒาความสามารถโดยรวมของโมเดล สามารถค้นพบช่องโหว่ความรุนแรงสูง/วิกฤตหลายพันรายการ; มีความเห็นตรงกับผู้ตรวจสอบที่เป็นมนุษย์ถึง 89% ในเรื่องระดับความรุนแรง; และไม่เคยมี false positive เลยในการตรวจจับ memory corruption (ใช้ ASan เป็น oracle)
+
+## ส่วนประกอบของ agent memory (2026-11-06)
+
+ใน [[components-of-agent-memory-anthropic|The Components of Agent Memory]] Lance Martin อธิบาย [[agent-memory-hierarchy|ความจำสี่ชั้น]] ตั้งแต่ transcript จนถึง context ที่โหลดทุก session พร้อมผลทดลองเรื่องการเลือกจด การตรวจบันทึกผิด และ wiki ร่วมกับการค้นต้นฉบับ
+
+บทความขยาย [[dreaming|การทบทวน memory เบื้องหลัง]] จากการจัดบันทึกไปถึงการสร้างแผนที่ความรู้ แต่ย้ำว่ายังต้องคุมต้นทุนและวัดว่าแต่ละงานได้ประโยชน์จริงหรือไม่ ผลเป็นรายงานของ Anthropic ไม่ใช่การทำซ้ำอิสระ
 
 ## ดูเพิ่ม
 

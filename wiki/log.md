@@ -1532,3 +1532,8 @@ User flagged `ความตึงที่ยังเปิดอยู่` a
 
 ## [2026-11-06] ingest | Introducing GPT-6 Cyber
 เพิ่ม [[introducing-gpt-6-cyber-openai]] และ [[gpt-6-cyber]] จากประกาศ OpenAI พร้อมตรวจ system card บางส่วนและประกาศแก้ไข Firefox ของ Mozilla. อัปเดต [[openai]], [[model-cyber-capability-emergence]], index และ hotcache; ปรับข้อสรุปเหมารวมเรื่อง emergence โดยคงที่มาของกรณี Mythos. คะแนนยังเป็นผลที่ผู้พัฒนารายงาน ไม่ได้รันทดสอบเอง.
+
+## [2026-11-07] ingest | The Components of Agent Memory
+Read Anthropic's full article dated 2026-11-06 and added a Thai source summary plus a memory-hierarchy concept, with primary-source attribution and evaluation limits. Qualified the older wiki-vs-RAG and newer-memory-wins claims, preserving their context.
+Created: [[components-of-agent-memory-anthropic]], [[agent-memory-hierarchy]]. Updated: [[dreaming]], [[llm-knowledge-bases]], [[memory-drift]], [[agent-memory-types]], [[compaction]], [[anthropic]], [[claude-managed-agents]], index, and hotcache.
+Caveat: Reported experiments were not independently reproduced; figure values use article alt text, and historical product status was not reverified.

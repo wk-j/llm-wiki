@@ -1,6 +1,7 @@
 # Index
 
 ## Sources
+- [[components-of-agent-memory-anthropic]] — Anthropic on four memory layers, salience, dreaming, and task-dependent benefits of wikis plus source search; evaluation limits kept explicit.
 - [[introducing-gpt-6-cyber-openai]] — OpenAI เปิดตัวโมเดลหาช่องโหว่ที่ฝึกให้ทำตามขอบเขต พร้อมผลทดสอบ เงื่อนไขเข้าถึง และข้อจำกัดจาก system card
 - [[critical-thinking-when-agents-do-the-work-osmani]] — Addy Osmani: ยิ่ง AI ทำงานเก่ง เรายิ่งเผลอเชื่อตามง่าย; ตั้งความเห็นก่อนถาม และดูว่า test ตรวจอะไรจริง
 - [[math-of-procedural-generation-dekwit]] — DekWit (YouTube ไทย, 2026-09-12): โลกในเกมเป็นฟังก์ชันไม่ใช่ข้อมูล; seed + LCG, seed ซ้อนชั้นของ No Man's Sky, Perlin noise, fractal noise, density function (Minecraft 1.18, ดาวทรงกลม), domain warping; Terraria สร้างโลกทีละขั้นแลกกับโลกมีขอบ; เก็บคำถามเปิดเรื่อง Minecraft ก่อน 1.18 ใช้ heightmap จริงไหม
@@ -329,7 +330,7 @@
 - [[jev]] — model ตัดสินใจของ Typesafe AI; รับ state กับ typed questions แล้วคืน choice, score หรือ yes-probability โดยไม่เขียนข้อความอิสระ
 - [[typesafe-ai]] — บริษัทผู้สร้าง Jev และใช้คำว่า System One Models; claim เรื่อง architecture, parallel sampler และ RLCD ยังไม่มี paper ในแหล่งที่ ingest
 - [[sam-witteveen]] — creator/practitioner สาย AI ที่ทดลอง model ผ่าน workflow จริง; source ของบทวิเคราะห์ Granite Speech 4.1 และ Jev
-- [[claude-managed-agents]] — platform managed agents ของ Anthropic; มี Memory (public beta) กับ Dreaming (research preview); มาพร้อม permission scopes, optimistic concurrency, audit log
+- [[claude-managed-agents]] — Anthropic's managed agent platform; historical memory and dreaming capabilities plus fresh-session CL-Bench memory evaluations.
 - [[harvey-ai]] — AI ด้านกฎหมาย; ลูกค้ารุ่นแรกๆ ของ Dreaming; รายงานว่าทำงานเสร็จเพิ่ม 6 เท่าบน legal benchmark
 - [[arrowhead-game-studios]] — สตูดิโอเกมสวีเดน ผู้สร้าง Helldivers 2; โดนวิจารณ์เรื่อง balance แบบ "Monkey Paw" กับเนื้อหา late-game ที่ย่ำอยู่กับที่ในปี 2026
 - [[helldivers-2]] — เกมยิงเล่นเป็นทีมจาก Arrowhead; ปี 2026 รีวิว Steam ร่วงถึง "Mostly Negative" เพราะบริหาร live-service พลาด
@@ -351,7 +352,7 @@
 - [[github]] — platform จัดการ source code ที่ใหญ่ที่สุดในโลก; กำลังขยับไปเป็น developer platform แบบ AI-first
 - [[github-copilot]] — ผู้ช่วยเขียนโค้ด AI ที่กำลังกลายร่างเป็น "Agentic Platform" คิดเงินตามการใช้งาน
 - [[andrej-karpathy]] — นักวิจัย AI; ต้นตำรับ pattern LLM knowledge bases กับข้อสังเกตเรื่องจุดพลาดของ LLM ตอนเขียนโค้ด
-- [[anthropic]] — lab ด้าน AI safety; ผู้สร้าง Claude, Claude Code และ MCP; บทสัมภาษณ์ล่าสุดเพิ่ม Opus 5, การตัด prompt 80% และ prompt-injection defense สามชั้น แต่ยังคงเป็น first-party claim ขณะที่ AI-Native SDLC ใช้ hooks, eval และ human gate คุม autonomy
+- [[anthropic]] — AI research company behind Claude, Claude Code, MCP, and Managed Agents; agent-memory evaluations complement its harness and SDLC guidance.
 - [[claude]] — ตระกูล model ของ Anthropic: Opus, Sonnet, Haiku, Fable และ Mythos preview; Opus 5 ถูกเพิ่มตามบทสัมภาษณ์ Boris แต่ยังไม่มี release note/system card ใน wiki และยังไม่รวมเข้ากับ Fable 5
 - [[claude-opus-4-7]] — model เรือธงของ Anthropic (2026-04-16); อัปเกรดจาก Opus 4.6 เน้นงาน SWE
 - [[claude-code]] — coding agent ของ Anthropic บน CLI, desktop, web และ IDE; harness เปลี่ยนตาม model และทีมอ้างว่าลบ system prompt ของ Opus 5 ได้ราว 80% ด้วย ablation ส่วน skills/hooks/test/worktree/permission ยังแยกบทบาทระหว่าง behavior กับ deterministic gate
@@ -453,6 +454,7 @@
 - [[claude-context]] — เครื่องมือ open-source ที่บล็อก Milvus เสนอ เพิ่ม semantic search ให้ Claude Code ผ่าน MCP ด้วย AST-based chunking กับ Merkle tree sync; claim ว่าลด token ได้ 40%+
 
 ## Concepts
+- [[agent-memory-hierarchy]] — Transcripts, notes, linked representations, and injected context; separates access layers from memory types and storage choices.
 - [[procedural-generation]] — สร้างเนื้อหาจากกฎกับ seed แทนเก็บในไฟล์: โลกเป็นฟังก์ชัน; ชิ้นส่วน PRNG/noise/fractal/density/domain warping; เทียบทางฟังก์ชัน (Minecraft, No Man's Sky) กับลำดับเหตุการณ์ (Terraria) ว่าแต่ละทางยอมเสียอะไร
 - [[pseudorandom-number-generator]] — สูตรที่ให้เลขดูสุ่มแต่ตายตัวตาม seed; LCG `X(n+1) = (aX(n)+c) mod m`, คาบถูกจำกัดด้วย m; java.util.Random ใช้ seed 48 bit ตรงกับที่คลิปบอกเรื่อง Minecraft
 - [[perlin-noise]] — noise ต่อเนื่องของ Ken Perlin: สุ่มลูกศรความชันที่จุดตารางแทนความสูง แล้วเกลี่ย dot product จาก 4 มุม; แก้รอยพับของการสุ่มความสูงตรง ๆ (value noise)
@@ -558,7 +560,7 @@
 - [[bring-your-own-agent]] — กลยุทธ์ product: เก็บ agent ในแอปไว้ให้ผู้ใช้ทั่วไป แต่เปิดความเชี่ยวชาญของ product ออกมาเป็น skills, docs, MCP/API/CLI, resources และ deeplinks ให้ power user เอา model+harness+local context ของตัวเองมาใช้
 - [[dumb-zone]] — จุดที่ agent ยังมี context เหลือแต่คิดแย่ลง เพราะ active context เริ่มปนเปื้อน; ใช้ `/rewind` + `/compact` ที่รอยต่อ phase เพื่อเช็คและลดอาการ
 - [[three-learning-layers]] — Harrison Chase แบ่งจุดที่ agent เรียนรู้ได้เป็นสามชั้น: model (weights, ทำได้เฉพาะ lab) / harness (scaffold, พร้อมทำเป็น product) / context (memory+skills, เรียนจากผู้ใช้); แต่ละชั้นพัฒนาแยกกันได้ และทุกชั้นต้องมี scorer (คะแนนแบบ computational ที่ฟรี vs ให้คนตัดสิน); model เป็นของ lab ส่วน harness+context เป็นของเรา
-- [[agent-memory-types]] — memory ของ agent มี 3 แบบ: semantic (ข้อเท็จจริง) / episodic (ประสบการณ์ที่ผ่านมา) / procedural (วิธีรับมือแต่ละเคส); agent ที่พัฒนาตัวเองได้ต้องมีสองแบบหลัง แต่ setup ส่วนใหญ่มีแค่ semantic; ข้อความชุดเดียวใช้ได้ทั้งกับ agent, ผู้ใช้ หรือทั้งทีม
+- [[agent-memory-types]] — Semantic, episodic, and procedural memory describe knowledge type, independently of its storage or access layer.
 - [[learning-from-users]] — สัญญาณที่แทบไม่มีใครเก็บ: การตัดสินใจจริงของคนที่ใช้ product; เก็บที่รอยต่อ agent↔user แล้วป้อนกลับเป็น procedural memory; ต้องแยกจาก behavioral biometrics ที่ใช้ click/keystroke คล้ายกันเพื่อจำแนก identity/risk ไม่ใช่เรียนเหตุผลที่คนแก้ agent
 - [[queues-over-loops]] — มองงานเป็น queue ที่มี stage และ checkpoint แทน loop เดียววิ่งไม่จบ; Matt เน้น AFK node ส่วน Dillon เห็น queue แบบ human-steered และเตือนว่า lab-style loop ยังแพงและไม่สม่ำเสมอสำหรับ median developer
 - [[afk-agents]] — งานแบบ away-from-keyboard: ส่งงานที่ scope ชัดให้ agent แล้วเลิกเฝ้า; ได้ "ตัวเราหลายตัว" ทำงานขนานกัน; งานที่ยังไม่ scope หรืองานวางแผนยังต้องมีคนอยู่ใน loop; จังหวะที่ AFK เข้าที่ = output ระเบิด; เพดานใหม่คือ bandwidth ของการ review
@@ -625,7 +627,7 @@
 - [[keyword-biasing]] — เทคนิค prompt/ควบคุม ASR ให้เอนไปทางชื่อ ตัวย่อ และศัพท์เฉพาะโดเมนที่เราป้อนให้
 - [[speaker-attributed-asr]] — ASR ที่ติด speaker label/diarization มาด้วย; เหมาะกับ meeting, podcast, งานสัมภาษณ์ และสายโทร
 - [[word-error-rate]] — metric มาตรฐานวัดความแม่นของ ASR: นับ substitution, deletion, insertion เทียบกับ transcript อ้างอิง
-- [[dreaming]] — กระบวนการ batch ของ Anthropic: อ่าน transcript ข้ามหลาย agent แล้วออก diff ที่คัดกรองแล้วไปปรับ memory; ทำนอกรอบ (out-of-band) จากมุมมองข้าม agent — เหมือนให้ agent "ฝัน" เพื่อเกลา memory ตัวเอง
+- [[dreaming]] — Background memory review across sessions; corrects notes, builds representations, and curates injected context, with compute and freshness tradeoffs.
 - [[agent-memory-filesystem]] — memory ที่จำลองเป็น file system ให้ Claude จัดการเองด้วย bash/grep; มี permission scope, optimistic concurrency และ version history
 - [[self-learning-agents]] — คำว่า Agent “เรียนรู้เอง” อาจหมายถึงอ่าน memory ใหม่, เปลี่ยน harness หรือฝึก model; ครอบคลุม Memory+Dreaming, AlphaEvolve/GPT-5.6 และ Kimi เป็น base สำหรับ post-training โดยแยก model learning ออกจาก product harness
 - [[live-service-stagnation]] — สภาวะวิกฤตของเกม live service: การดูแลระบบหลักกับ endgame progression หยุดนิ่ง เพราะไปทุ่มให้ monetization ระยะสั้น
@@ -643,7 +645,7 @@
 - [[eh-gland]] — ต่อมเอ๊ะ: สัญชาตญาณเชิงวิศวกรรมไว้จับ error ของ AI; จุดต่างสำคัญที่มนุษย์ยังมีเหนือกว่า
 - [[horror-vacui]] — ความกลัวพื้นที่ว่างใน UI (anti-pattern); นำไปสู่การอัดข้อมูลจนแน่นเกินไป (visual clutter)
 - [[jagged-intelligence]] — เก่งพุ่งในงานยากที่วัดผลได้ (โค้ด/คณิต) แต่ตกหลุมใน common sense (ผี vs สัตว์); ตัวขับคือ verifiability
-- [[llm-knowledge-bases]] — แพตเทิร์น wiki ส่วนตัวที่ให้ LLM ดูแลผ่าน Markdown/schema (wiki นี้ก็ทำตามแนวนี้)
+- [[llm-knowledge-bases]] — LLM-maintained knowledge bases; Karpathy's workflow plus Anthropic evidence for task-dependent wiki and search benefits.
 - [[local-optimization-trap]] — กับดัก efficiency: ไป optimize จุดที่ไม่ใช่คอขวด (เช่นการเขียนโค้ด) แต่ Lead Time ไม่ได้ดีขึ้น
 - [[agentic-usage]] — session AI แบบหลาย step รันยาว กิน compute หนัก; การย้ายจาก autocomplete ไปสู่แพลตฟอร์มแบบ agentic
 - [[ast-based-chunking]] — chunk โค้ดตามโครงสร้าง AST ด้วย tree-sitter เพื่อให้คุณภาพ RAG/retrieval ดีขึ้น
@@ -698,7 +700,7 @@
 - [[claude-md]] — CLAUDE.md: system prompt ระดับโปรเจกต์ของ Claude Code; ควรทบทวนเมื่อ model เปลี่ยน ลองลบกฎแล้วเพิ่มกลับจาก failure แต่ไม่เหมารวม hook ที่เป็น security gate กับ behavioral instruction
 - [[code-is-free]] — ธีสิสของ Lopopolo/Ball ว่า implementation ถูกลงจนไม่ใช่คอขวดเดิม; caveat จาก Economy Media/Mario คือ token, review, comprehension, ownership และ maintenance ยังไม่ฟรี
 - [[collaborative-ai-engineering]] — AI engineering แบบทีม เน้น alignment และ shared context; ACE เสนอ team coordination ส่วน DeltaDB เพิ่ม continuous shared worktree กับ provenance ระหว่าง conversation และ code โดย semantic conflict กับ governance ยังต้องแก้ใน workflow
-- [[compaction]] — การเก็บกวาด session ของ Claude Code: สรุปประวัติเพื่อกัน context เน่า; ได้ผลสุดตอนกำกับเองและทำที่รอยต่อ phase ไม่ใช่กลางความงง
+- [[compaction]] — Summarizing session history to continue ongoing work; distinct from experience retained for future sessions.
 - [[context-rot]] — ประสิทธิภาพตกลงเรื่อยๆ เมื่อ context window เต็มขึ้น; รวมถึง "dumb zone" ที่ความจุยังเหลือแต่คุณภาพ active context ตก
 - [[delegation-mindset]] — เปลี่ยนจาก micromanage เป็นมอบหมายงานตามเป้า; ยัด intent ให้ครบตั้งแต่ต้นทาง
 - [[domain-to-ai-translator]] — role วิศวกรที่เน้นแปล business logic ให้เป็น prompt/harness ที่ AI อ่านรู้เรื่อง
@@ -722,7 +724,7 @@
 - [[long-running-agents]] — agent ที่ถืองาน/state ข้ามหลายวัน; Opus 5 เพิ่ม claim ว่ารันได้เป็นสัปดาห์หรือเดือน แต่เคส Swift ที่ยังไม่เสร็จชี้ว่าต้องวัด duration, ความคืบหน้าต่อ exit criteria และ proof ตอนจบแยกกัน
 - [[malleable-tools]] — เครื่องมือ minimal ที่แก้ตัวเองได้ (pi-agent) เทียบกับ agent สาย "ยานแม่" ตัวหนักๆ
 - [[memory-decay]] — concept ของ Mercury: ให้ memory ของเครื่องค่อยๆ จางไปตามเวลา เพื่อกัน context เน่า
-- [[memory-drift]] — failure mode: พฤติกรรมของ agent เพี้ยนไป เพราะสะสมประสบการณ์ผิดปกติเข้าไปเรื่อยๆ
+- [[memory-drift]] — Stale or initially incorrect memories can steer agents wrong; verify evidence rather than treating newer notes as automatically true.
 - [[memory-scoring]] — concept ของ Mercury: ให้คะแนนความสำคัญของเศษ memory ก่อนเลือกฉีดเข้า context
 - [[merkle-tree-sync]] — เรื่อง performance: sync codebase แบบ incremental ให้ agent ด้วย Merkle hash
 - [[mixture-of-experts]] — MoE: route token ไปหา subnetwork บางส่วนเพื่อลด active compute; ตัวอย่างตั้งแต่ Mellum2/LongCat ถึง claim Kimi K3 3T ที่มี 896 experts และใช้ 16 ต่อ token แต่ยังใหญ่ระดับ enterprise
