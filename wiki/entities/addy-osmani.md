@@ -21,7 +21,7 @@ Addy Osmani เขียนเรื่องประสิทธิภาพ�
 - เขียน [[loop-engineering-osmani]] — เสนอ [[loop-engineering|loop engineering]]: เลิกเป็นคนพิมพ์ prompt เอง ไปออกแบบ "ลูป" ที่พิมพ์ prompt ให้ agent แทน; ลูป = harness ที่รันบน timer + แตก helper + ป้อนงานตัวเอง; 5 ชิ้น + memory; อยู่ชั้นบนของ [[agent-harness-engineering]] หนึ่งชั้น
 - เขียน [[agentic-code-review]] — วางกรอบ [[agentic-code-review|agentic code review]]: เมื่อ agent ผลิตโค้ดเร็วกว่า human review capacity งานสำคัญย้ายไปที่ risk-tiered review, evidence intake, heterogeneous AI reviewers, deterministic gates, และมนุษย์ที่ยัง own merge
 - เขียน [[the-new-software-lifecycle]] จาก whitepaper ที่ร่วมเขียนกับ Google — เสนอ [[ai-driven-sdlc|AI-driven SDLC]] ว่า implementation เร็วขึ้นไม่เท่ากับ lifecycle ทั้งเส้นเร็วตาม; specification, architecture และ verification กลายเป็นคอขวดใหม่
-- เขียน [[your-coding-agents-made-you-a-manager-osmani]] — บอกว่าการใช้ coding agent ทั้งวันคือการจัดการแล้ว และรวบนิสัยจากงาน Claude Code ไว้ในแนวคิด [[managing-coding-agents]]
+- เขียน [[your-coding-agents-made-you-a-manager-osmani]] — แนะนำวิธีสั่งงาน ตรวจผล และกำหนดสิทธิ์ให้ coding agent โดยคนยังตัดสินใจว่าจะนำงานไหนไปใช้ ดู [[managing-coding-agents]]
 
 ## แนวคิดที่เชื่อมกับ Addy
 
@@ -33,7 +33,7 @@ Addy Osmani เขียนเรื่องประสิทธิภาพ�
 - [[coding-harness]] — prompt, tools, filesystem, sandbox, memory, hooks, subagent, และ observability รอบ model
 - [[harness-ratchet]] — ทุก mistake ของ agent ควรกลายเป็น rule/hook/test ที่กัน failure class เดิม
 - [[ai-driven-sdlc]] — วงจรพัฒนาที่เอา harness, context, output/trajectory eval และ model routing มาวางเป็นระบบเดียว
-- [[managing-coding-agents]] — ทักษะใช้ agent ให้ได้ผลคือทักษะจัดการ: ให้มันตรวจเอง ใส่บริบทที่ repo ไม่มี และอย่ามอบหมายการตัดสินใจ
+- [[managing-coding-agents]] — มอบหมายงานให้ชัด ให้ agent ตรวจข้อผิดพลาดพื้นฐานเอง และให้คนตรวจสิ่งที่กระทบผู้ใช้หรือความปลอดภัยก่อนอนุมัติ
 
 ## เมื่อ agent ทำงานแทน เรายังต้องคิดเองตรงไหน
 
@@ -46,9 +46,9 @@ Addy Osmani เขียนเรื่องประสิทธิภาพ�
 
 ## เมื่อ agent ทำให้เราทำงานแบบผู้จัดการ
 
-ใน [[your-coding-agents-made-you-a-manager-osmani|บทความวันที่ 2026-11-08]] Addy บอกว่า คนที่ได้ผลดีจาก coding agent ไม่จำเป็นต้องเก่ง prompt ที่สุด แต่เป็นคนที่เรียนรู้การจัดการ ไม่ว่าจะตั้งใจฝึกหรือไม่ เขาไม่ได้ชวนให้ IC ไปเป็นผู้จัดการที่จมอยู่ในปฏิทิน แต่ชวนให้เปิดทางให้งานเดินได้ ด้วยการให้ agent มีวิธีตรวจงานเอง ใส่บริบทที่อ่านจาก repo ไม่ได้ และยังถือการตัดสินใจสำคัญไว้เอง
+ใน [[your-coding-agents-made-you-a-manager-osmani|บทความวันที่ 2026-11-08]] Addy บอกว่านักพัฒนาที่ใช้ coding agent กำลังฝึกทักษะจัดการอยู่แล้ว ทั้งเลือกงาน อธิบายเป้าหมาย ติดตาม และตรวจผล เขาแนะนำให้บอกเหตุผลกับข้อจำกัดที่อ่านจากโค้ดไม่ได้ ให้ agent รันตรวจเอง และให้คนตัดสินใจเรื่องผลิตภัณฑ์ ความปลอดภัย และงานที่จะส่งให้ผู้ใช้
 
-เขาเชื่อมเรื่องนี้กับ [[orchestration-tax]] โดยให้ขยายการตรวจแทนการขยายความใส่ใจ และเตือนเรื่อง [[cognitive-surrender]] ว่า agent เต็มใจและมั่นใจ จึงเผลอเชื่อตามได้ง่าย แม้การเปรียบกับผู้จัดการจะใช้ไม่ได้ทุกจุด เช่น การรัน agent หลายตัวไม่ได้แปลว่าพร้อมจัดการคน
+เรื่องนี้เชื่อมกับ [[orchestration-tax|ภาระติดตามงานจากหลาย agent]] เพราะถ้าเปิดเพิ่มโดยไม่มีระบบช่วยตรวจ คนก็อ่านผลงานไม่ทัน เขายังเตือนเรื่อง [[cognitive-surrender|การเชื่อตาม AI โดยไม่ตรวจ]] และแยกให้ชัดว่าการคุมหลาย session ไม่ได้ฝึกเรื่องแรงจูงใจ ความขัดแย้ง หรือการพัฒนาทีมคน
 
 ## See also
 

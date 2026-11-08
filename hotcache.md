@@ -4,7 +4,7 @@ title: Hotcache
 
 # Hotcache
 
-Last updated: 2026-11-09 (ingest Addy Osmani managing coding agents)
+Last updated: 2026-11-09 (rewrite Addy Osmani managing coding agents)
 
 Read this first each session. **Keep it under ~120 lines**: Recent activity holds the last 5 entries at 2–3 lines each, and the oldest drops off when a new one goes in. Full history lives in `wiki/log.md` and git.
 
@@ -50,8 +50,8 @@ Mostly AI-assisted software engineering, plus a few side clusters.
 
 ## Recent activity (last 5)
 
+- **2026-11-09 edit** `[[your-coding-agents-made-you-a-manager-osmani]]` and `[[managing-coding-agents]]` rewritten from the verified full X article in concrete Thai. Clarified eight related additions, corrected earlier-blog provenance, and preserved existing agent-memory edits.
 - **2026-11-09 ingest** `[[your-coding-agents-made-you-a-manager-osmani]]` + `[[managing-coding-agents]]` — Addy: ใช้ coding agent ทั้งวันคือการจัดการแล้ว ให้มันตรวจเอง และอย่ามอบหมายการตัดสินใจ. Updated related Addy pages; X article text retrieved via FxTwitter API (direct X returned 403).
 - **2026-11-07 ingest** `[[components-of-agent-memory-anthropic]]` + `[[agent-memory-hierarchy]]` — Four memory layers; dreaming checks notes against evidence; wiki plus search helps some cross-document tasks. Updated seven related pages; qualified wiki-vs-RAG and newer-memory-wins claims.
 - **2026-11-06 ingest** `[[introducing-gpt-6-cyber-openai]]` and `[[gpt-6-cyber]]` — OpenAI announcement plus selected system-card checks and Mozilla fix advisory. Updated OpenAI and cyber-emergence concept; benchmark scope and deployment limitations kept explicit.
 - **2026-11-05 edit** `[[critical-thinking-when-agents-do-the-work-osmani]]` — Rewrote the source and newly added related-page sections in natural Thai at user request; retained source claims and provenance.
-- **2026-11-05 ingest** `[[critical-thinking-when-agents-do-the-work-osmani]]` — Addy: delegate work, retain judgment; inspect test evidence and rebuild local understanding. Updated `[[cognitive-surrender]]`, `[[comprehension-debt]]`, `[[addy-osmani]]`; X article text retrieved via FxTwitter API (direct X returned 403).

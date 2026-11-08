@@ -1540,3 +1540,7 @@ Caveat: Reported experiments were not independently reproduced; figure values us
 
 ## [2026-11-09] ingest | Your Coding Agents Made You a Manager
 อ่าน X Article ของ Addy Osmani ผ่าน FxTwitter API และเพิ่ม [[your-coding-agents-made-you-a-manager-osmani]] กับแนวคิด [[managing-coding-agents]]. อัปเดต [[addy-osmani]], [[orchestration-tax]], [[cognitive-surrender]], [[agentic-code-review]], [[loop-engineering]], [[harness-ratchet]], [[git-worktrees]], [[long-running-agents]] และ See also ของ [[critical-thinking-when-agents-do-the-work-osmani]] พร้อม index และ hotcache. X เปิดตรง ๆ ตอบ 403; ไม่ได้ตรวจงานวิจัยที่ Wharton, หนังสือของ Andy Grove หรือถอดภาพประกอบ. ไม่ได้สร้างหน้าแยกให้ Andy Grove เพราะถูกกล่าวถึงครั้งเดียว.
+
+## [2026-11-09] edit | Rewrite Your Coding Agents Made You a Manager
+Verified Addy Osmani's X post and article IDs through the full FxTwitter response, then rewrote the existing source summary and concept page instead of creating duplicates. Replaced literal metaphors with concrete Thai instructions, kept the author's claims distinct from independently verified behavior, and corrected the earlier blog's relationship to this article.
+Updated: [[your-coding-agents-made-you-a-manager-osmani]], [[managing-coding-agents]], [[agentic-code-review]], [[cognitive-surrender]], [[git-worktrees]], [[harness-ratchet]], [[long-running-agents]], [[loop-engineering]], [[orchestration-tax]], [[addy-osmani]], index, and hotcache. Preserved pre-existing agent-memory corrections and raw files.

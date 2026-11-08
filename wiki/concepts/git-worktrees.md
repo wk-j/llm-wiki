@@ -68,7 +68,7 @@ CRDT ลด conflict ระดับ replica แต่ไม่กำจัด s
 **ผลคือ:** “agent หลายตัว” ไม่ได้มี topology เดียว ทีมอาจเลือก isolate เพื่อ autonomy หรือ share เพื่อ coordination ตาม dependency ของงาน
 
 
-ใน [[your-coding-agents-made-you-a-manager-osmani]] เขายกคำสั่ง `/batch` ใน Claude Code ว่าเอางานกลไกก้อนใหญ่มาแบ่งเป็นหลายชิ้น แล้วรันใน worktree คนละอันพร้อมเปิด PR คนละใบ ความขนานที่ได้ผลยังมาจากการแยกงานไม่ทับกัน และให้ interface ที่ใช้ร่วมกันลงก่อน ไม่ใช่จากการเปิดเซสชันเพิ่มอย่างเดียว
+ใน [[your-coding-agents-made-you-a-manager-osmani|บทความของ Addy Osmani]] ผู้เขียนยก `/batch` ใน Claude Code สำหรับแบ่งงานแก้โค้ดแบบซ้ำ ๆ ให้แต่ละ agent ทำใน worktree ของตัวเอง แล้วเปิด PR แยกกัน คนยังต้องตรวจว่างานไม่ซ้ำกัน และทำ interface ที่ทุกงานต้องใช้ให้พร้อมก่อน ไม่เช่นนั้นแม้แต่ละตัวจะแก้ไฟล์คนละที่ ก็อาจต้องกลับมาแก้โค้ดให้ใช้ร่วมกันได้ภายหลัง
 
 ## See also
 
