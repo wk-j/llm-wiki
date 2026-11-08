@@ -3,8 +3,8 @@ title: Harness Ratchet
 type: concept
 tags: [ai, agents, harness, feedback-loop, software-engineering]
 created: 2026-05-10
-updated: 2026-09-30
-sources: [Agent Harness Engineering.md, ryan-lopopolo-harness-engineering.md, How to Keep Shipping When You Walk Away from Your Desk — Zack Proser, WorkOS.md, stop-building-ai-agents-old-way.md, engineering-the-harness-thoughtworks.md]
+updated: 2026-11-09
+sources: [Agent Harness Engineering.md, ryan-lopopolo-harness-engineering.md, How to Keep Shipping When You Walk Away from Your Desk — Zack Proser, WorkOS.md, stop-building-ai-agents-old-way.md, engineering-the-harness-thoughtworks.md, your-coding-agents-made-you-a-manager-osmani.md]
 ---
 
 # Harness Ratchet / กลไกล็อกความผิดพลาดไม่ให้เกิดซ้ำ
@@ -98,8 +98,13 @@ Ratchet ที่ดีควรขยับจาก failure จริง ไ�
 
 อีกจุดคือกฎต้องถอดได้ เมื่อ model หรือ tool ดีขึ้น กฎบางอย่างจะกลายเป็น scaffolding เก่า ถ้าไม่ prune harness จะกลายเป็นกอง legacy policy ที่ทำให้ context หนักและ debug ยาก
 
+
+ใน [[your-coding-agents-made-you-a-manager-osmani]] Addy ย้ำว่าถ้าแก้เรื่องเดิมเกินหนึ่งครั้ง ให้จดใน `CLAUDE.md` ของทีมหรือทำเป็น skill ที่ใช้ด้วยกันได้ แล้วคอยดูว่า model ใหม่ยังต้องการคำแก้พวกนี้ไหม แต่ละครั้งที่แก้จึงไม่จบแค่รอบนั้น แต่กลายเป็นกติกาที่รอบหน้าไม่ต้องสอนใหม่
+
 ## See also
 
+- [[your-coding-agents-made-you-a-manager-osmani]]
+- [[managing-coding-agents]]
 - [[agent-harness-engineering]]
 - [[coding-harness]]
 - [[harness-engineering]]

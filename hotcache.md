@@ -4,12 +4,12 @@ title: Hotcache
 
 # Hotcache
 
-Last updated: 2026-11-07 (ingest components of agent memory)
+Last updated: 2026-11-09 (ingest Addy Osmani managing coding agents)
 
 Read this first each session. **Keep it under ~120 lines**: Recent activity holds the last 5 entries at 2–3 lines each, and the oldest drops off when a new one goes in. Full history lives in `wiki/log.md` and git.
 
 <!-- stats:start -->
-- **Pages:** 160 sources · 312 concepts · 289 entities · 0 analysis
+- **Pages:** 161 sources · 313 concepts · 289 entities · 0 analysis
 <!-- stats:end -->
 
 ## Working fast
@@ -50,8 +50,8 @@ Mostly AI-assisted software engineering, plus a few side clusters.
 
 ## Recent activity (last 5)
 
+- **2026-11-09 ingest** `[[your-coding-agents-made-you-a-manager-osmani]]` + `[[managing-coding-agents]]` — Addy: ใช้ coding agent ทั้งวันคือการจัดการแล้ว ให้มันตรวจเอง และอย่ามอบหมายการตัดสินใจ. Updated related Addy pages; X article text retrieved via FxTwitter API (direct X returned 403).
 - **2026-11-07 ingest** `[[components-of-agent-memory-anthropic]]` + `[[agent-memory-hierarchy]]` — Four memory layers; dreaming checks notes against evidence; wiki plus search helps some cross-document tasks. Updated seven related pages; qualified wiki-vs-RAG and newer-memory-wins claims.
 - **2026-11-06 ingest** `[[introducing-gpt-6-cyber-openai]]` and `[[gpt-6-cyber]]` — OpenAI announcement plus selected system-card checks and Mozilla fix advisory. Updated OpenAI and cyber-emergence concept; benchmark scope and deployment limitations kept explicit.
 - **2026-11-05 edit** `[[critical-thinking-when-agents-do-the-work-osmani]]` — Rewrote the source and newly added related-page sections in natural Thai at user request; retained source claims and provenance.
 - **2026-11-05 ingest** `[[critical-thinking-when-agents-do-the-work-osmani]]` — Addy: delegate work, retain judgment; inspect test evidence and rebuild local understanding. Updated `[[cognitive-surrender]]`, `[[comprehension-debt]]`, `[[addy-osmani]]`; X article text retrieved via FxTwitter API (direct X returned 403).
-- **2026-10-26 ingest** `[[math-of-procedural-generation-dekwit]]` — DekWit (Thai YouTube): a game world is a function, not data. New `[[procedural-generation]]` plus 5 technique concepts and entities `[[minecraft]]`, `[[no-mans-sky]]`, `[[terraria]]`, `[[dekwit]]`. Open question in `[[density-function-terrain]]`: video says pre-1.18 Minecraft used a heightmap; Notch's 2011 blog says 3D density noise came early.

@@ -3,8 +3,8 @@ title: Cognitive Surrender
 type: concept
 tags: [ai, psychology, developer-experience, attention, code-review]
 created: 2026-05-29
-updated: 2026-11-05
-sources: [The Orchestration Tax.md, Agentic Code Review.md, techsauce-ai-brain-fry.md, eternal-sloptember.md, i-was-replaced-by-ai-typecraft.md, state-of-technology-and-joy-of-making-phoomparin-mano.md, teepagorn-claude-code-adoption-nobody-reading.md, critical-thinking-when-agents-do-the-work-osmani.md]
+updated: 2026-11-09
+sources: [The Orchestration Tax.md, Agentic Code Review.md, techsauce-ai-brain-fry.md, eternal-sloptember.md, i-was-replaced-by-ai-typecraft.md, state-of-technology-and-joy-of-making-phoomparin-mano.md, teepagorn-claude-code-adoption-nobody-reading.md, critical-thinking-when-agents-do-the-work-osmani.md, your-coding-agents-made-you-a-manager-osmani.md]
 ---
 
 # Cognitive Surrender / การยอมแพ้ทางความคิด
@@ -87,8 +87,13 @@ Addy เสนอให้ลองคิดคำตอบของตัวเ
 
 **สิ่งที่ต้องระวัง:** แค่มีเวลาอ่านงานยังไม่พอ ต้องสังเกตด้วยว่าเราอ่านแล้วคิดตาม หรืออ่านเพื่อกดยอมรับเท่านั้น
 
+
+ใน [[your-coding-agents-made-you-a-manager-osmani|บทความเรื่องการจัดการ coding agent]] เขาชี้จุดที่เปรียบกับผู้จัดการใช้ไม่ได้ข้อหนึ่งว่า agent เต็มใจและมั่นใจ ถ้าสั่งวิศวกรเก่งให้ทำผิด เขาจะเถียงกลับ แต่ agent มักทำตาม งานวิจัยที่ Wharton เรื่อง cognitive surrender ซึ่งบทความนี้กล่าวถึง พบว่าผู้ร่วมวิจัยรับคำตอบที่ผิดของ AI เป็นส่วนใหญ่ และยิ่งมั่นใจขึ้นด้วย วิธีที่เขาเสนอคือให้มันโต้แย้งคำตอบของตัวเอง ข้อนี้ยังไม่ได้ตรวจจากเปเปอร์ต้นทางในรอบนี้ จึงเก็บในฐานะคำเล่าของผู้เขียน
+
 ## See also
 
+- [[your-coding-agents-made-you-a-manager-osmani]]
+- [[managing-coding-agents]]
 - [[orchestration-tax]]
 - [[ai-brain-fry]]
 - [[techsauce-ai-brain-fry]]

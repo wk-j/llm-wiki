@@ -3,8 +3,8 @@ title: Long-running Agents / Agent ที่อยู่ข้ามวัน
 type: concept
 tags: [ai, agents, long-running, architecture, memory, orchestration]
 created: 2026-04-23
-updated: 2026-09-10
-sources: [google-cloud-long-running-agent-patterns.md, l8-principals-agentic-engineering-workflow-kun-chen.md, aom-fable-elysia-2-audit.md, stop-building-ai-agents-old-way.md, boris-cherny-cut-80-percent-claude-code-prompt.md]
+updated: 2026-11-09
+sources: [google-cloud-long-running-agent-patterns.md, l8-principals-agentic-engineering-workflow-kun-chen.md, aom-fable-elysia-2-audit.md, stop-building-ai-agents-old-way.md, boris-cherny-cut-80-percent-claude-code-prompt.md, your-coding-agents-made-you-a-manager-osmani.md]
 ---
 
 # Long-running Agents / Agent ที่อยู่ข้ามวัน
@@ -171,8 +171,13 @@ Addy ให้คำถามตัดสินใจง่าย ๆ:
 
 **ผลคือ:** “ไม่หยุด” เป็น capability หนึ่ง แต่ระบบที่ดีต้องรู้ด้วยว่าเมื่อไรควรหยุดและส่งอะไรมาให้คนตัดสิน
 
+
+ใน [[your-coding-agents-made-you-a-manager-osmani]] Addy ชี้พรมแดนถัดไปว่าระบบเริ่มเอง ตรวจเอง และเรียกคนเฉพาะตอนต้องตัดสินใจ ก่อนปล่อยงานข้ามคืน ต้องมีนิยามว่าเสร็จเมื่อไร วิธีตรวจ ขอบเขต ราวกั้น และจุดที่คนอนุมัติ
+
 ## See also
 
+- [[your-coding-agents-made-you-a-manager-osmani]]
+- [[managing-coding-agents]]
 - [[google-cloud-long-running-agent-patterns]]
 - [[gemini-enterprise-agent-platform]]
 - [[google-cloud]]

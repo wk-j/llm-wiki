@@ -3,8 +3,8 @@ title: Agentic Code Review
 type: concept
 tags: [ai, agents, code-review, verification, software-engineering]
 created: 2026-06-16
-updated: 2026-09-30
-sources: [Agentic Code Review.md, aom-fable-elysia-2-audit.md, bun-in-rust.md, dhh-ai-programming-setup-lex-clips.md, claude-codes-new-intent-md-rob-shocks.md, dillon-mulroy-ships-production-code-he-didnt-write.md, ai-native-sdlc-playbook.md, engineering-the-harness-thoughtworks.md]
+updated: 2026-11-09
+sources: [Agentic Code Review.md, aom-fable-elysia-2-audit.md, bun-in-rust.md, dhh-ai-programming-setup-lex-clips.md, claude-codes-new-intent-md-rob-shocks.md, dillon-mulroy-ships-production-code-he-didnt-write.md, ai-native-sdlc-playbook.md, engineering-the-harness-thoughtworks.md, your-coding-agents-made-you-a-manager-osmani.md]
 ---
 
 # Agentic Code Review / การ review โค้ดในยุค agent
@@ -174,8 +174,15 @@ Agentic code review = **risk tier + evidence intake + deterministic gates + hete
 
 **ผลคือ:** คนได้ใช้ความสนใจไปกับเรื่องที่ตัดสินใจยาก ส่วนเรื่องที่ตรวจซ้ำได้ก็ผลักไปให้เครื่องทำแทน
 
+
+## ตัวตรวจและการรับรองโค้ด
+
+ใน [[your-coding-agents-made-you-a-manager-osmani]] Addy แยกการมีตัวตรวจ เช่น test, การ build, ภาพหน้าจอ และ `/code-review` ที่ส่งให้ subagent ที่ไม่ได้เห็นบทสนทนา ออกจากการที่คนยังต้องดู diff เหมือนจะโดนเรียกตอนดึกถ้ามันพัง การอนุมัติ diff ใหญ่เพียงเพราะ test เขียวและชื่อดูสมเหตุสมผล คือการรับรองโค้ด ไม่ใช่ code review แนวนี้สรุปใน [[managing-coding-agents]]
+
 ## See also
 
+- [[your-coding-agents-made-you-a-manager-osmani]]
+- [[managing-coding-agents]]
 - [[agentic-code-review]]
 - [[addy-osmani]]
 - [[orchestration-tax]]

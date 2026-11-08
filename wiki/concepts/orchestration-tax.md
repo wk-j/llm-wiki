@@ -3,8 +3,8 @@ title: Orchestration Tax
 type: concept
 tags: [ai, agents, productivity, attention, orchestration, concurrency, bottleneck]
 created: 2026-05-29
-updated: 2026-09-10
-sources: [The Orchestration Tax.md, How to Keep Shipping When You Walk Away from Your Desk — Zack Proser, WorkOS.md, Agentic Code Review.md, "รู้จักกับ Loop Engineering — mikelopster transcript", techsauce-ai-brain-fry.md, l8-principals-agentic-engineering-workflow-kun-chen.md, aom-fable-elysia-2-audit.md, how-ai-became-more-expensive-than-workers-it-replaced.md, stop-building-ai-agents-old-way.md, code-isnt-free-mario-zechner-hard-truths-coding-ai.md, piyalitt-codex-keynote-attention-not-token.md, bun-in-rust.md, the-new-software-lifecycle.md, dhh-ai-programming-setup-lex-clips.md, boris-cherny-cut-80-percent-claude-code-prompt.md]
+updated: 2026-11-09
+sources: [The Orchestration Tax.md, How to Keep Shipping When You Walk Away from Your Desk — Zack Proser, WorkOS.md, Agentic Code Review.md, "รู้จักกับ Loop Engineering — mikelopster transcript", techsauce-ai-brain-fry.md, l8-principals-agentic-engineering-workflow-kun-chen.md, aom-fable-elysia-2-audit.md, how-ai-became-more-expensive-than-workers-it-replaced.md, stop-building-ai-agents-old-way.md, code-isnt-free-mario-zechner-hard-truths-coding-ai.md, piyalitt-codex-keynote-attention-not-token.md, bun-in-rust.md, the-new-software-lifecycle.md, dhh-ai-programming-setup-lex-clips.md, boris-cherny-cut-80-percent-claude-code-prompt.md, your-coding-agents-made-you-a-manager-osmani.md]
 ---
 
 # Orchestration Tax / ภาษีค่าควบคุมวง
@@ -132,8 +132,15 @@ failure mode ที่อันตรายที่สุดคือมัน�
 
 DHH เองก็ย้ำว่าจำนวนบรรทัดบอกได้เพียงปริมาณ output ไม่ได้บอกคุณค่า ผลคือ ควรดูทั้งความรู้สึกของคนและงานที่ปิดได้จริง โดยไม่ใช้จำนวน agent แทนสองเรื่องนี้
 
+
+## ขยายการตรวจ ไม่ใช่ขยายความใส่ใจ
+
+ใน [[your-coding-agents-made-you-a-manager-osmani|บทความเดือนพฤศจิกายน 2026]] Addy กลับมาที่ orchestration tax อีกครั้ง ว่าพ้น agent ไม่กี่ตัว แต่ละตัวถัดไปกินความใส่ใจมากกว่าตัวก่อน วันที่เขาใช้มักมี agent พื้นหลังสี่ถึงห้าตัวบวกเซสชันในเครื่อง และบางวันนั่นก็มากไปแล้ว ทางออกไม่ใช่การเฝ้าให้มากขึ้น แต่เป็นการยกการเฝ้าส่วนใหญ่ให้ตัวตรวจ เป้า และผู้ review ที่เริ่มด้วย context ใหม่ แล้ววัดคุณภาพ เช่น เวลาที่ PR ใช้จนจบ หรือความถี่ที่ต้อง revert อย่าวัดความสำเร็จจากร้อยละของโค้ดที่ AI เขียน เรื่องนี้ถูกสรุปต่อใน [[managing-coding-agents]]
+
 ## See also
 
+- [[your-coding-agents-made-you-a-manager-osmani]]
+- [[managing-coding-agents]]
 - [[agentic-code-review]]
 - [[the-orchestration-tax]]
 - [[agent-observability]]

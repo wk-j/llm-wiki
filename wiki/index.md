@@ -1,6 +1,7 @@
 # Index
 
 ## Sources
+- [[your-coding-agents-made-you-a-manager-osmani]] — Addy Osmani: ใช้ coding agent ทั้งวันคือการจัดการแล้ว ให้มันตรวจเอง และอย่ามอบหมายการตัดสินใจ
 - [[components-of-agent-memory-anthropic]] — Anthropic on four memory layers, salience, dreaming, and task-dependent benefits of wikis plus source search; evaluation limits kept explicit.
 - [[introducing-gpt-6-cyber-openai]] — OpenAI เปิดตัวโมเดลหาช่องโหว่ที่ฝึกให้ทำตามขอบเขต พร้อมผลทดสอบ เงื่อนไขเข้าถึง และข้อจำกัดจาก system card
 - [[critical-thinking-when-agents-do-the-work-osmani]] — Addy Osmani: ยิ่ง AI ทำงานเก่ง เรายิ่งเผลอเชื่อตามง่าย; ตั้งความเห็นก่อนถาม และดูว่า test ตรวจอะไรจริง
@@ -454,6 +455,7 @@
 - [[claude-context]] — เครื่องมือ open-source ที่บล็อก Milvus เสนอ เพิ่ม semantic search ให้ Claude Code ผ่าน MCP ด้วย AST-based chunking กับ Merkle tree sync; claim ว่าลด token ได้ 40%+
 
 ## Concepts
+- [[managing-coding-agents]] — ทักษะใช้ coding agent ให้ได้ผลคือทักษะจัดการ บริบท ตัวตรวจ แผน และการตัดสินใจที่คนยังถือไว้
 - [[agent-memory-hierarchy]] — Transcripts, notes, linked representations, and injected context; separates access layers from memory types and storage choices.
 - [[procedural-generation]] — สร้างเนื้อหาจากกฎกับ seed แทนเก็บในไฟล์: โลกเป็นฟังก์ชัน; ชิ้นส่วน PRNG/noise/fractal/density/domain warping; เทียบทางฟังก์ชัน (Minecraft, No Man's Sky) กับลำดับเหตุการณ์ (Terraria) ว่าแต่ละทางยอมเสียอะไร
 - [[pseudorandom-number-generator]] — สูตรที่ให้เลขดูสุ่มแต่ตายตัวตาม seed; LCG `X(n+1) = (aX(n)+c) mod m`, คาบถูกจำกัดด้วย m; java.util.Random ใช้ seed 48 bit ตรงกับที่คลิปบอกเรื่อง Minecraft

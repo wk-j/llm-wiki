@@ -3,8 +3,8 @@ title: Git Worktrees for Parallel Agents
 type: concept
 tags: [ai, agents, git, isolation, parallel, orchestration, worktree]
 created: 2026-06-09
-updated: 2026-08-15
-sources: ["Loop Engineering..md", l8-principals-agentic-engineering-workflow-kun-chen.md, bun-in-rust.md, software-is-made-between-commits.md]
+updated: 2026-11-09
+sources: ["Loop Engineering..md", l8-principals-agentic-engineering-workflow-kun-chen.md, bun-in-rust.md, software-is-made-between-commits.md, your-coding-agents-made-you-a-manager-osmani.md]
 ---
 
 # Git Worktrees for Parallel Agents / worktree สำหรับ agent ขนาน
@@ -67,8 +67,13 @@ CRDT ลด conflict ระดับ replica แต่ไม่กำจัด s
 
 **ผลคือ:** “agent หลายตัว” ไม่ได้มี topology เดียว ทีมอาจเลือก isolate เพื่อ autonomy หรือ share เพื่อ coordination ตาม dependency ของงาน
 
+
+ใน [[your-coding-agents-made-you-a-manager-osmani]] เขายกคำสั่ง `/batch` ใน Claude Code ว่าเอางานกลไกก้อนใหญ่มาแบ่งเป็นหลายชิ้น แล้วรันใน worktree คนละอันพร้อมเปิด PR คนละใบ ความขนานที่ได้ผลยังมาจากการแยกงานไม่ทับกัน และให้ interface ที่ใช้ร่วมกันลงก่อน ไม่ใช่จากการเปิดเซสชันเพิ่มอย่างเดียว
+
 ## See also
 
+- [[your-coding-agents-made-you-a-manager-osmani]]
+- [[managing-coding-agents]]
 - [[loop-engineering]]
 - [[loop-engineering-osmani]]
 - [[orchestration-tax]]

@@ -8,7 +8,7 @@ author: Addy Osmani
 published: 2026-11-03
 date_ingested: 2026-11-05
 created: 2026-11-05
-updated: 2026-11-05
+updated: 2026-11-09
 sources: ["https://x.com/addyosmani/status/2117512471930167377"]
 ---
 
@@ -103,6 +103,8 @@ Addy ยอมรับว่าในอนาคต model อาจจับ�
 
 ## See also
 
+- [[your-coding-agents-made-you-a-manager-osmani]]
+- [[managing-coding-agents]]
 - [[addy-osmani]]
 - [[cognitive-surrender]]
 - [[comprehension-debt]]

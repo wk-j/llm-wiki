@@ -3,8 +3,8 @@ title: Loop Engineering
 type: concept
 tags: [ai, agents, loops, harness, orchestration, automation, workflow]
 created: 2026-06-09
-updated: 2026-07-14
-sources: ["Loop Engineering..md", "Introducing Omnigent A Meta-Harness to Combine, Control and Share Your Agents.md", Agentic Code Review.md, "Matt Pocock’s Agentic Engineering Workflow (just copy him).md", Self Learning for Agents Clearly Explained.md, "รู้จักกับ Loop Engineering — mikelopster transcript", l8-principals-agentic-engineering-workflow-kun-chen.md, stop-building-ai-agents-old-way.md, piyalitt-codex-keynote-attention-not-token.md, gpt-5-6-sol-fable-killer-prompt-engineering.md]
+updated: 2026-11-09
+sources: ["Loop Engineering..md", "Introducing Omnigent A Meta-Harness to Combine, Control and Share Your Agents.md", Agentic Code Review.md, "Matt Pocock’s Agentic Engineering Workflow (just copy him).md", Self Learning for Agents Clearly Explained.md, "รู้จักกับ Loop Engineering — mikelopster transcript", l8-principals-agentic-engineering-workflow-kun-chen.md, stop-building-ai-agents-old-way.md, piyalitt-codex-keynote-attention-not-token.md, gpt-5-6-sol-fable-killer-prompt-engineering.md, your-coding-agents-made-you-a-manager-osmani.md]
 ---
 
 # Loop Engineering / วิศวกรรมลูป
@@ -173,8 +173,15 @@ feedback gate คือเกณฑ์ที่บอกว่า "ผ่าน�
 - **[[harness-ratchet]]** — finding ซ้ำ ๆ ที่ลูปเจอ ควรกลายเป็น skill/test/hook ถาวร
 - **[[meta-harness]]** — พื้นกลางสำหรับลูปที่ต้องประกอบ agent ต่าง harness, ใช้ policy ร่วมกัน และให้ทีมเข้าดู live session. Loop เน้นระบบที่ทำงานวนเอง ส่วน meta-harness เน้น interoperability และ control ข้ามเครื่องมือ
 
+
+## ลูปที่ไม่มีคนเฝ้า
+
+ใน [[your-coding-agents-made-you-a-manager-osmani]] Addy บอกว่าบทบาทย้ายจากการคุมเซสชันไปเป็นการออกแบบลูป ก่อนปล่อยงานที่ทำเองได้นาน ให้ถามว่ามันรู้ไหมว่างานเสร็จหน้าตาอย่างไร มีวิธีตรวจเองไหม ขอบเขตอยู่ที่ไหน ราวกั้นคืออะไร และผลโผล่ที่ไหนพร้อมใครอนุมัติจุดที่ย้อนไม่ได้ เรื่องนี้ถูกเก็บใน [[managing-coding-agents]] และใกล้ [[long-running-agents]]
+
 ## See also
 
+- [[your-coding-agents-made-you-a-manager-osmani]]
+- [[managing-coding-agents]]
 - [[loop-engineering-osmani]]
 - [[agentic-code-review]]
 - [[addy-osmani]]
