@@ -9,30 +9,30 @@ sources: [Agent Harness Engineering.md, 5 Agent Design patterns for Long-running
 
 # Addy Osmani
 
-Addy Osmani เขียนเรื่องประสิทธิภาพเว็บ การพัฒนาซอฟต์แวร์ และการออกแบบระบบรอบ AI agent งานของเขาใน wiki นี้ช่วยอธิบายว่า การใช้ agent ให้ได้ผลต้องคิดไกลกว่าแค่เลือก model ต้องดูด้วยว่าจะจัดเครื่องมือ วิธีตรวจงาน และขั้นตอนทำงานอย่างไร
+Addy Osmani เขียนเรื่องประสิทธิภาพเว็บและการพัฒนาซอฟต์แวร์ หลายบทความของเขาอธิบายวิธีใช้ coding agent ตั้งแต่เตรียมข้อมูลและเครื่องมือให้ agent ไปจนถึงตรวจโค้ดที่มันเขียนก่อนนำไปใช้
 
 แหล่งเก่าใน wiki กล่าวถึงเขาในบทบาทวิศวกรที่ Google และ [[google-cloud|Google Cloud]] ส่วนโปรไฟล์ X ที่อ่านวันที่ 2026-11-05 ระบุว่าเขาทำงานกับ Claude Code ที่ Anthropic
 
 ## บทบาทใน wiki นี้
 
-- เขียน [[google-cloud-long-running-agent-patterns]] ร่วมกับ Shubham Saboo — สรุป 5 pattern สำหรับ [[long-running-agents|agent ที่อยู่ข้ามวัน]]
-- เขียน [[agent-harness-engineering]] — สังเคราะห์แนวคิดว่า **Agent = Model + Harness** และเสนอให้มอง agent failure เป็นสัญญาณสำหรับปรับ harness
-- เขียน [[the-orchestration-tax]] — แกะแนวคิด [[orchestration-tax|orchestration tax]] (ชื่อที่ Richard Seroter ตั้งบน panel Google I/O): มนุษย์คือ serial resource ตัวเดียวที่ขนานไม่ได้ในวง agent ต้องออกแบบ attention เหมือนออกแบบระบบ concurrent
-- เขียน [[loop-engineering-osmani]] — เสนอ [[loop-engineering|loop engineering]]: เลิกเป็นคนพิมพ์ prompt เอง ไปออกแบบ "ลูป" ที่พิมพ์ prompt ให้ agent แทน; ลูป = harness ที่รันบน timer + แตก helper + ป้อนงานตัวเอง; 5 ชิ้น + memory; อยู่ชั้นบนของ [[agent-harness-engineering]] หนึ่งชั้น
-- เขียน [[agentic-code-review]] — วางกรอบ [[agentic-code-review|agentic code review]]: เมื่อ agent ผลิตโค้ดเร็วกว่า human review capacity งานสำคัญย้ายไปที่ risk-tiered review, evidence intake, heterogeneous AI reviewers, deterministic gates, และมนุษย์ที่ยัง own merge
-- เขียน [[the-new-software-lifecycle]] จาก whitepaper ที่ร่วมเขียนกับ Google — เสนอ [[ai-driven-sdlc|AI-driven SDLC]] ว่า implementation เร็วขึ้นไม่เท่ากับ lifecycle ทั้งเส้นเร็วตาม; specification, architecture และ verification กลายเป็นคอขวดใหม่
+- เขียน [[google-cloud-long-running-agent-patterns]] ร่วมกับ Shubham Saboo — เสนอ 5 วิธีออกแบบ [[long-running-agents|agent ที่ทำงานต่อเนื่องหลายวัน]] เช่น บันทึกความคืบหน้าเพื่อกลับมาทำต่อ หยุดรอคนอนุมัติ และแบ่งงานให้ agent หลายตัว
+- เขียน [[agent-harness-engineering]] — อธิบายว่า agent ต้องมีทั้ง model และ harness ซึ่งเป็นซอฟต์แวร์ที่ส่งข้อมูลให้ model จัดการการเรียกเครื่องมือ และนำผลกลับมาให้ model ทำงานต่อ เมื่อ agent พลาดซ้ำ ทีมอาจแก้คำแนะนำ เครื่องมือ หรือขั้นตอนตรวจงานได้โดยไม่ต้องรอ model รุ่นใหม่
+- เขียน [[the-orchestration-tax]] — อธิบาย [[orchestration-tax|ภาระติดตามและตรวจงานจากหลาย agent]] แม้ agent จะทำงานพร้อมกันได้ คนก็ยังอ่านและตัดสินใจได้ทีละเรื่อง ชื่อนี้มาจาก Richard Seroter บนเวที Google I/O
+- เขียน [[loop-engineering-osmani]] — เสนอ [[loop-engineering|การให้ agent เริ่มงานและทำงานต่อเองตามเงื่อนไขที่กำหนด]] เช่น เริ่มตามตารางเวลา แบ่งงานให้ agent อีกตัวตรวจ แล้วบันทึกสิ่งที่ทำเสร็จและงานที่ยังค้างไว้ใช้ในรอบถัดไป
+- เขียน [[agentic-code-review]] — เสนอวิธีตรวจโค้ดที่ agent เขียน โดยให้เวลาตรวจตามความเสียหายที่อาจเกิด ดูผล test และหลักฐานประกอบ ใช้ตัวตรวจหลายแบบ และให้คนตัดสินใจว่าจะ merge หรือไม่
+- เขียน [[the-new-software-lifecycle]] จาก whitepaper ที่ร่วมเขียนกับ Google — ชี้ว่าแม้ AI จะเขียนโค้ดเร็วขึ้น ทีมก็ยังต้องใช้เวลาตกลงความต้องการ ออกแบบ และตรวจผล ดู [[ai-driven-sdlc|กระบวนการพัฒนาซอฟต์แวร์เมื่อใช้ AI]]
 - เขียน [[your-coding-agents-made-you-a-manager-osmani]] — แนะนำวิธีสั่งงาน ตรวจผล และกำหนดสิทธิ์ให้ coding agent โดยคนยังตัดสินใจว่าจะนำงานไหนไปใช้ ดู [[managing-coding-agents]]
 
 ## แนวคิดที่เชื่อมกับ Addy
 
-- [[agentic-code-review]] — review ในยุค agent ต้องจัดตาม blast radius และ evidence ไม่ใช่อ่านทุก diff เท่ากัน
-- [[loop-engineering]] — ออกแบบระบบที่ prompt agent แทนเรา; 5 ชิ้น + memory; จุดงัดย้ายจาก prompt ไปเป็นลูป
-- [[git-worktrees]] — isolation เชิงกลไกของ agent ขนาน; worktree กันไฟล์ชน แต่ไม่เพิ่ม review bandwidth
-- [[orchestration-tax]] — ช่องว่างระหว่างของที่ agent ผลิตได้กับของที่มนุษย์ merge ได้จริง; เราคือ GIL ของ agent
-- [[long-running-agents]] — checkpoint/resume, delegated approval, memory-layered context, ambient processing, fleet orchestration
-- [[coding-harness]] — prompt, tools, filesystem, sandbox, memory, hooks, subagent, และ observability รอบ model
-- [[harness-ratchet]] — ทุก mistake ของ agent ควรกลายเป็น rule/hook/test ที่กัน failure class เดิม
-- [[ai-driven-sdlc]] — วงจรพัฒนาที่เอา harness, context, output/trajectory eval และ model routing มาวางเป็นระบบเดียว
+- [[agentic-code-review]] — เลือกวิธีตรวจจากสิ่งที่โค้ดนั้นอาจทำเสียหาย พร้อมดูผล test และหลักฐานว่าใช้งานได้จริง
+- [[loop-engineering]] — กำหนดว่า agent จะเริ่มงานเมื่อไร ตรวจผลอย่างไร และทำอะไรต่อ โดยไม่ต้องให้คนพิมพ์สั่งทุกครั้ง
+- [[git-worktrees]] — ให้แต่ละ agent แก้ไฟล์ใน working directory ของตัวเอง แต่คนยังต้องตรวจผลงานจากทุกตัว
+- [[orchestration-tax]] — เปิด agent เพิ่มแล้ว คนอาจตรวจงานและตัดสินใจไม่ทัน แม้แต่ละตัวจะเขียนโค้ดได้เร็ว
+- [[long-running-agents]] — ให้ agent ทำงานต่อเนื่อง โดยบันทึกความคืบหน้า เก็บข้อมูลที่ต้องใช้ต่อ และหยุดรอคนอนุมัติเมื่อจำเป็น
+- [[coding-harness]] — ซอฟต์แวร์ที่จัดการคำสั่ง ข้อมูล เครื่องมือ สิทธิ์ และบันทึกการทำงาน เพื่อให้ model อ่านไฟล์ แก้โค้ด และตรวจผลได้
+- [[harness-ratchet]] — นำข้อผิดพลาดที่เกิดซ้ำมาเขียนคำแนะนำหรือเพิ่ม test เพื่อช่วยป้องกันการพลาดแบบเดิม
+- [[ai-driven-sdlc]] — วางขั้นตอนใช้ AI ตั้งแต่กำหนดความต้องการ เตรียมข้อมูลและเครื่องมือ ไปจนถึงตรวจโค้ดและส่งให้ผู้ใช้
 - [[managing-coding-agents]] — มอบหมายงานให้ชัด ให้ agent ตรวจข้อผิดพลาดพื้นฐานเอง และให้คนตรวจสิ่งที่กระทบผู้ใช้หรือความปลอดภัยก่อนอนุมัติ
 
 ## เมื่อ agent ทำงานแทน เรายังต้องคิดเองตรงไหน
@@ -48,7 +48,7 @@ Addy Osmani เขียนเรื่องประสิทธิภาพ�
 
 ใน [[your-coding-agents-made-you-a-manager-osmani|บทความวันที่ 2026-11-08]] Addy บอกว่านักพัฒนาที่ใช้ coding agent กำลังฝึกทักษะจัดการอยู่แล้ว ทั้งเลือกงาน อธิบายเป้าหมาย ติดตาม และตรวจผล เขาแนะนำให้บอกเหตุผลกับข้อจำกัดที่อ่านจากโค้ดไม่ได้ ให้ agent รันตรวจเอง และให้คนตัดสินใจเรื่องผลิตภัณฑ์ ความปลอดภัย และงานที่จะส่งให้ผู้ใช้
 
-เรื่องนี้เชื่อมกับ [[orchestration-tax|ภาระติดตามงานจากหลาย agent]] เพราะถ้าเปิดเพิ่มโดยไม่มีระบบช่วยตรวจ คนก็อ่านผลงานไม่ทัน เขายังเตือนเรื่อง [[cognitive-surrender|การเชื่อตาม AI โดยไม่ตรวจ]] และแยกให้ชัดว่าการคุมหลาย session ไม่ได้ฝึกเรื่องแรงจูงใจ ความขัดแย้ง หรือการพัฒนาทีมคน
+เรื่องนี้เชื่อมกับ [[orchestration-tax|ภาระติดตามงานจากหลาย agent]] เพราะถ้าเปิดเพิ่มโดยยังต้องตรวจทุกอย่างเอง คนก็อาจอ่านผลงานไม่ทัน เขายังเตือนเรื่อง [[cognitive-surrender|การเชื่อตาม AI โดยไม่ตรวจ]] และย้ำว่าการใช้ agent หลายตัวไม่ได้สอนให้เราสร้างแรงจูงใจ แก้ความขัดแย้ง หรือช่วยให้เพื่อนร่วมทีมพัฒนาฝีมือ
 
 ## See also
 

@@ -403,7 +403,7 @@
 - [[mf-piccolo]] — developer ผู้ออกแบบ iii; เขียน "The Harness is the Backend"
 - [[zed-industries]] — ทีมผู้สร้าง Zed editor กับ Agent Client Protocol (ACP)
 - [[google-cloud]] — ฝั่ง enterprise cloud ของ Google; ทำ Gemini Enterprise Agent Platform/Agent Runtime และวาง Agents CLI ให้ coding agent ทำวงจร build–eval–deploy ไป Agent Engine ได้ใน workflow เดียว โดยยังต้องเติม permission, governance และ observability ก่อนเชื่อว่า prototype พร้อม production
-- [[addy-osmani]] — ผู้เขียนเรื่อง agent, harness, review และ critical thinking; แหล่งเดิมอยู่ Google ส่วนโปรไฟล์ X พฤศจิกายน 2026 ระบุ Claude Code ที่ Anthropic
+- [[addy-osmani]] — Web performance and software engineering with coding agents: instructions, tools, verification, and human review; historical Google roles and November 2026 Anthropic profile kept date-qualified.
 - [[birgitta-bockeler]] — engineer ที่ Thoughtworks; เขียนซีรีส์ "Exploring Gen AI" บน martinfowler.com; มอง user harness ของ coding agent เป็น control system ที่ประกอบจาก guides + sensors
 - [[thoughtworks]] — บริษัท consultancy ระดับโลก เบื้องหลัง CI/CD, evolutionary architecture, fitness functions และ Technology Radar; บ้านของงานเขียนเรื่อง harness ของ Böckeler และบล็อก Engineering the harness ที่เพิ่มด่านคนเฉพาะจุด
 - [[vtrivedy]] — นักเขียนบน X; Addy Osmani ยกเครดิตว่าเป็นคนบัญญัติคำ "harness engineering" จากสมการ Agent = Model + Harness
